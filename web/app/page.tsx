@@ -153,14 +153,30 @@ export default function Home() {
                                             <Stack gap="md">
                                               {/* 문제 */}
                                               {questionData && (
-                                                <Card withBorder bg="gray.0">
-                                                  <Stack gap="sm">
-                                                    <Text fw={700} size="md" c="blue">
-                                                      📝 문제 {q.question_number}번
-                                                    </Text>
-                                                    <Text style={{ whiteSpace: 'pre-wrap' }}>
-                                                      {questionData.question_text}
-                                                    </Text>
+                                                <>
+                                                  {/* 지문 */}
+                                                  {questionData.passage && (
+                                                    <Card withBorder bg="blue.0">
+                                                      <Stack gap="sm">
+                                                        <Text fw={700} size="md" c="blue">
+                                                          📖 지문
+                                                        </Text>
+                                                        <Text size="sm" style={{ whiteSpace: 'pre-wrap', lineHeight: 1.8 }}>
+                                                          {questionData.passage}
+                                                        </Text>
+                                                      </Stack>
+                                                    </Card>
+                                                  )}
+
+                                                  {/* 문제 */}
+                                                  <Card withBorder bg="gray.0">
+                                                    <Stack gap="sm">
+                                                      <Text fw={700} size="md" c="blue">
+                                                        📝 문제 {q.question_number}번
+                                                      </Text>
+                                                      <Text style={{ whiteSpace: 'pre-wrap' }}>
+                                                        {questionData.question_text}
+                                                      </Text>
 
                                                     {questionData.choices && questionData.choices.length > 0 && (
                                                       <Stack gap="xs" mt="sm">
@@ -193,8 +209,9 @@ export default function Home() {
                                                         })}
                                                       </Stack>
                                                     )}
-                                                  </Stack>
-                                                </Card>
+                                                    </Stack>
+                                                  </Card>
+                                                </>
                                               )}
 
                                               {/* 모델 답변 */}
