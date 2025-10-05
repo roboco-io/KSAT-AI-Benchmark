@@ -1,6 +1,6 @@
 'use client';
 
-import { Container, Title, Text, Stack, Group, Badge, Card, SimpleGrid, Accordion, Table } from '@mantine/core';
+import { Container, Title, Text, Stack, Group, Badge, Card, SimpleGrid, Accordion, Table, ScrollArea, Box } from '@mantine/core';
 import { useState, useEffect } from 'react';
 
 export default function Home() {
@@ -39,6 +39,21 @@ export default function Home() {
 
   const { totalExams, totalEvaluations, totalQuestions } = stats;
 
+  // 시험 목록 추출
+  const examsList = Object.values(examsData).map((exam: any) => ({
+    id: exam.exam_id,
+    title: exam.title,
+    subject: exam.subject,
+    year: exam.year,
+  }));
+
+  // 모델 목록 추출
+  const modelsList = leaderboard.map((entry) => ({
+    name: entry.model_name,
+    accuracy: entry.accuracy,
+    examsCount: entry.exams_count,
+  }));
+
   return (
     <Container size="xl" py="xl">
       <Stack gap="xl">
@@ -52,14 +67,47 @@ export default function Home() {
         </div>
 
         <SimpleGrid cols={{ base: 1, sm: 3 }} spacing="md">
+          {/* 평가된 시험 캐러솔 */}
           <Card shadow="sm" padding="lg" radius="md" withBorder>
             <Text size="sm" c="dimmed" mb="xs">평가된 시험</Text>
-            <Text size="xl" fw={700}>{totalExams}개</Text>
+            <Text size="xl" fw={700} mb="sm">{totalExams}개</Text>
+            <ScrollArea h={120} type="auto">
+              <Stack gap="xs">
+                {examsList.map((exam, idx) => (
+                  <Box key={exam.id} p="xs" style={{ 
+                    backgroundColor: 'var(--mantine-color-gray-0)', 
+                    borderRadius: '4px',
+                    border: '1px solid var(--mantine-color-gray-3)'
+                  }}>
+                    <Text size="sm" fw={600}>{idx + 1}. {exam.title}</Text>
+                    <Text size="xs" c="dimmed">{exam.year}년 · {exam.subject}</Text>
+                  </Box>
+                ))}
+              </Stack>
+            </ScrollArea>
           </Card>
+
+          {/* 총 평가 횟수 (모델별) 캐러솔 */}
           <Card shadow="sm" padding="lg" radius="md" withBorder>
             <Text size="sm" c="dimmed" mb="xs">총 평가 횟수</Text>
-            <Text size="xl" fw={700}>{totalEvaluations}회</Text>
+            <Text size="xl" fw={700} mb="sm">{totalEvaluations}회</Text>
+            <ScrollArea h={120} type="auto">
+              <Stack gap="xs">
+                {modelsList.map((model, idx) => (
+                  <Box key={model.name} p="xs" style={{ 
+                    backgroundColor: 'var(--mantine-color-blue-0)', 
+                    borderRadius: '4px',
+                    border: '1px solid var(--mantine-color-blue-3)'
+                  }}>
+                    <Text size="sm" fw={600}>{idx + 1}. {model.name}</Text>
+                    <Text size="xs" c="dimmed">{model.examsCount}회 평가 · {model.accuracy.toFixed(1)}%</Text>
+                  </Box>
+                ))}
+              </Stack>
+            </ScrollArea>
           </Card>
+
+          {/* 총 문제 수 */}
           <Card shadow="sm" padding="lg" radius="md" withBorder>
             <Text size="sm" c="dimmed" mb="xs">총 문제 수</Text>
             <Text size="xl" fw={700}>{totalQuestions}개</Text>
