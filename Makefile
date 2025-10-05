@@ -19,6 +19,14 @@ help:
 	@echo "  make answers-math     - 수학 정답 입력"
 	@echo "  make answers-all      - 모든 과목 정답 입력"
 	@echo ""
+	@echo "🎯 평가 실행:"
+	@echo "  make evaluate EXAM=<경로>           - 단일 시험 평가 (GPT-4o)"
+	@echo "  make evaluate EXAM=<경로> MODEL=<모델>  - 특정 모델로 평가"
+	@echo "  make evaluate-all EXAM=<경로>       - 모든 모델로 평가"
+	@echo "  make evaluate-all-exams             - 모든 시험, 모든 모델"
+	@echo "  make evaluate-test                  - 빠른 테스트"
+	@echo "  make summary                        - 평가 결과 요약"
+	@echo ""
 	@echo "🧪 테스트 및 검증:"
 	@echo "  make test             - 테스트 실행"
 	@echo "  make lint             - 코드 린트"
@@ -192,6 +200,11 @@ evaluate-all-exams:
 evaluate-test:
 	@echo "⚡ 빠른 테스트 평가..."
 	python src/evaluator/evaluate.py exams/parsed/2025-math-sat-p1-2.yaml --model gpt-4o
+
+# 결과 요약
+summary:
+	@echo "📊 평가 결과 요약..."
+	python src/evaluator/summary.py
 
 # =============================================================================
 # 테스트 및 검증
