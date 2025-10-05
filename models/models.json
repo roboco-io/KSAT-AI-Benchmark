@@ -95,6 +95,54 @@
       "temperature": 0.3,
       "timeout": 60,
       "enabled": false
+    },
+    {
+      "name": "solar-pro",
+      "provider": "upstage",
+      "model_id": "solar-pro",
+      "version": "2024-01",
+      "description": "Upstage Solar Pro - 한국어 특화 모델",
+      "api_key_env": "UPSTAGE_API_KEY",
+      "max_tokens": 4096,
+      "temperature": 0.3,
+      "timeout": 60,
+      "enabled": true
+    },
+    {
+      "name": "solar-mini",
+      "provider": "upstage",
+      "model_id": "solar-mini",
+      "version": "2024-01",
+      "description": "Upstage Solar Mini - 빠르고 효율적",
+      "api_key_env": "UPSTAGE_API_KEY",
+      "max_tokens": 4096,
+      "temperature": 0.3,
+      "timeout": 60,
+      "enabled": true
+    },
+    {
+      "name": "sonar-large",
+      "provider": "perplexity",
+      "model_id": "sonar-large-online",
+      "version": "2024-01",
+      "description": "Perplexity Sonar Large - 온라인 검색 기능",
+      "api_key_env": "PERPLEXITY_API_KEY",
+      "max_tokens": 4096,
+      "temperature": 0.3,
+      "timeout": 60,
+      "enabled": true
+    },
+    {
+      "name": "sonar-medium",
+      "provider": "perplexity",
+      "model_id": "sonar-medium-online",
+      "version": "2024-01",
+      "description": "Perplexity Sonar Medium - 균형잡힌 성능",
+      "api_key_env": "PERPLEXITY_API_KEY",
+      "max_tokens": 4096,
+      "temperature": 0.3,
+      "timeout": 60,
+      "enabled": true
     }
   ],
   "provider_configs": {
@@ -116,6 +164,20 @@
     "google": {
       "base_url": "https://generativelanguage.googleapis.com",
       "api_version": "v1"
+    },
+    "upstage": {
+      "base_url": "https://api.upstage.ai/v1",
+      "api_version": "v1",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    "perplexity": {
+      "base_url": "https://api.perplexity.ai",
+      "api_version": "v1",
+      "headers": {
+        "Content-Type": "application/json"
+      }
     }
   },
   "evaluation_settings": {
