@@ -17,7 +17,7 @@ questions:
   - '3'
   - '4'
   - '5'
-  correct_answer: null
+  correct_answer: 5
   points: 2
   explanation: null
 - question_id: q2
@@ -30,7 +30,7 @@ questions:
   - '3'
   - '4'
   - '5'
-  correct_answer: null
+  correct_answer: 4
   points: 2
   explanation: null
 - question_id: q3
@@ -43,7 +43,7 @@ questions:
   - '3'
   - '4'
   - '5'
-  correct_answer: null
+  correct_answer: 5
   points: 3
   explanation: null
 - question_id: q4
@@ -56,7 +56,7 @@ questions:
   - '8'
   - '9'
   - '10'
-  correct_answer: null
+  correct_answer: 2
   points: 3
   explanation: null
 - question_id: q5
@@ -69,7 +69,7 @@ questions:
   - '12'
   - '14'
   - '16'
-  correct_answer: null
+  correct_answer: 4
   points: 3
   explanation: null
 - question_id: q6
@@ -82,7 +82,7 @@ questions:
   - '0'
   - \sqrt{5}
   - '5'
-  correct_answer: null
+  correct_answer: 5
   points: 3
   explanation: null
 - question_id: q7
@@ -95,6 +95,6 @@ questions:
   - '11'
   - '13'
   - '15'
-  correct_answer: null
+  correct_answer: 3
   points: 3
   explanation: null
