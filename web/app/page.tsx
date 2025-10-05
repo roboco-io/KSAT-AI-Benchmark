@@ -12,7 +12,8 @@ export default function Home() {
   useEffect(() => {
     async function loadData() {
       try {
-        const response = await fetch('/data/evaluation-data.json');
+        const basePath = process.env.NODE_ENV === 'production' ? '/KSAT-AI-Benchmark' : '';
+        const response = await fetch(`${basePath}/data/evaluation-data.json`);
         const data = await response.json();
         setLeaderboard(data.leaderboard);
         setStats(data.stats);
