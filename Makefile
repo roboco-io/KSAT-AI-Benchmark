@@ -27,6 +27,12 @@ help:
 	@echo "  make evaluate-test                  - 빠른 테스트"
 	@echo "  make summary                        - 평가 결과 요약"
 	@echo ""
+	@echo "🌐 웹 배포:"
+	@echo "  make export-web                     - 평가 결과를 JSON으로 export"
+	@echo "  make web-build                      - Next.js 웹사이트 빌드"
+	@echo "  make web-dev                        - 개발 서버 실행"
+	@echo "  make deploy                         - 평가 결과 업데이트 및 배포"
+	@echo ""
 	@echo "🧪 테스트 및 검증:"
 	@echo "  make test             - 테스트 실행"
 	@echo "  make lint             - 코드 린트"
@@ -205,6 +211,36 @@ evaluate-test:
 summary:
 	@echo "📊 평가 결과 요약..."
 	python src/evaluator/summary.py
+
+# =============================================================================
+# 웹 배포
+# =============================================================================
+
+# 평가 결과를 웹용 JSON으로 export
+export-web:
+	@echo "📤 평가 결과를 JSON으로 export 중..."
+	python scripts/export_data.py
+
+# Next.js 웹사이트 빌드
+web-build:
+	@echo "🔨 웹사이트 빌드 중..."
+	cd web && npm run build
+
+# 개발 서버 실행
+web-dev:
+	@echo "🚀 개발 서버 시작..."
+	cd web && npm run dev
+
+# 평가 결과 업데이트 및 배포
+deploy: export-web
+	@echo "🚀 GitHub Pages에 배포 중..."
+	@echo "   1. JSON export 완료"
+	@echo "   2. Git에 커밋 및 푸시..."
+	git add web/public/data/evaluation-data.json
+	git commit -m "chore: 평가 결과 업데이트" || echo "변경사항 없음"
+	git push origin main
+	@echo "   3. GitHub Actions가 자동으로 배포합니다"
+	@echo "   ✅ 웹사이트: https://roboco.io/KSAT-AI-Benchmark/"
 
 # =============================================================================
 # 테스트 및 검증
