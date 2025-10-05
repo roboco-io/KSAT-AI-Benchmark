@@ -87,10 +87,10 @@ export default function Home() {
             </ScrollArea>
           </Card>
 
-          {/* 총 평가 횟수 (모델별) 캐러솔 */}
+          {/* 평가에 사용된 모델들 캐러솔 */}
           <Card shadow="sm" padding="lg" radius="md" withBorder>
-            <Text size="sm" c="dimmed" mb="xs">총 평가 횟수</Text>
-            <Text size="xl" fw={700} mb="sm">{totalEvaluations}회</Text>
+            <Text size="sm" c="dimmed" mb="xs">평가에 사용된 모델들</Text>
+            <Text size="xl" fw={700} mb="sm">{modelsList.length}개</Text>
             <ScrollArea h={120} type="auto">
               <Stack gap="xs">
                 {modelsList.map((model, idx) => (
