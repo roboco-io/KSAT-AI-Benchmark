@@ -155,6 +155,45 @@ english: parse-english answers-english
 	@echo "✅ 영어 처리 완료!"
 
 # =============================================================================
+# 평가 실행
+# =============================================================================
+
+# 단일 모델로 평가
+evaluate:
+	@if [ -z "$(EXAM)" ]; then \
+		echo "❌ 오류: EXAM 경로를 지정하세요."; \
+		echo "   사용법: make evaluate EXAM=exams/parsed/2025-korean-sat.yaml"; \
+		exit 1; \
+	fi
+	@if [ -z "$(MODEL)" ]; then \
+		echo "📝 기본 모델(gpt-4o)로 평가 중..."; \
+		python src/evaluator/evaluate.py $(EXAM); \
+	else \
+		echo "📝 $(MODEL) 모델로 평가 중..."; \
+		python src/evaluator/evaluate.py $(EXAM) --model $(MODEL); \
+	fi
+
+# 모든 모델로 평가
+evaluate-all:
+	@if [ -z "$(EXAM)" ]; then \
+		echo "❌ 오류: EXAM 경로를 지정하세요."; \
+		echo "   사용법: make evaluate-all EXAM=exams/parsed/2025-korean-sat.yaml"; \
+		exit 1; \
+	fi
+	@echo "🚀 모든 모델로 평가 중..."
+	python src/evaluator/evaluate.py $(EXAM) --all-models
+
+# 모든 시험 평가 (모든 모델)
+evaluate-all-exams:
+	@echo "🚀 모든 시험, 모든 모델로 평가 중..."
+	python src/evaluator/evaluate.py --all --all-models
+
+# 빠른 테스트 평가 (GPT-4o만)
+evaluate-test:
+	@echo "⚡ 빠른 테스트 평가..."
+	python src/evaluator/evaluate.py exams/parsed/2025-math-sat-p1-2.yaml --model gpt-4o
+
+# =============================================================================
 # 테스트 및 검증
 # =============================================================================
 

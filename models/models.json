@@ -1,6 +1,18 @@
 {
   "models": [
     {
+      "name": "gpt-4o",
+      "provider": "openai",
+      "model_id": "gpt-4o",
+      "version": "2024-08",
+      "description": "OpenAI GPT-4o - 최신 멀티모달 모델",
+      "api_key_env": "OPENAI_API_KEY",
+      "max_tokens": 4096,
+      "temperature": 0.3,
+      "timeout": 60,
+      "enabled": true
+    },
+    {
       "name": "gpt-4-turbo",
       "provider": "openai",
       "model_id": "gpt-4-turbo-preview",
@@ -10,7 +22,7 @@
       "max_tokens": 4096,
       "temperature": 0.3,
       "timeout": 60,
-      "enabled": true
+      "enabled": false
     },
     {
       "name": "gpt-4",
@@ -37,6 +49,18 @@
       "enabled": true
     },
     {
+      "name": "claude-3-5-sonnet-20241022",
+      "provider": "anthropic",
+      "model_id": "claude-3-5-sonnet-20241022",
+      "version": "2024-10",
+      "description": "Anthropic Claude 3.5 Sonnet - 최신 버전",
+      "api_key_env": "ANTHROPIC_API_KEY",
+      "max_tokens": 8192,
+      "temperature": 0.3,
+      "timeout": 60,
+      "enabled": true
+    },
+    {
       "name": "claude-3-opus",
       "provider": "anthropic",
       "model_id": "claude-3-opus-20240229",
@@ -46,7 +70,7 @@
       "max_tokens": 4096,
       "temperature": 0.3,
       "timeout": 60,
-      "enabled": true
+      "enabled": false
     },
     {
       "name": "claude-3-sonnet",
@@ -58,7 +82,7 @@
       "max_tokens": 4096,
       "temperature": 0.3,
       "timeout": 60,
-      "enabled": true
+      "enabled": false
     },
     {
       "name": "claude-3-haiku",
@@ -73,13 +97,13 @@
       "enabled": true
     },
     {
-      "name": "gemini-pro",
+      "name": "gemini-2.0-flash-exp",
       "provider": "google",
-      "model_id": "gemini-pro",
-      "version": "2024-01",
-      "description": "Google Gemini Pro 모델",
+      "model_id": "gemini-2.0-flash-exp",
+      "version": "2024-12",
+      "description": "Google Gemini 2.0 Flash (Experimental) - 최신 모델",
       "api_key_env": "GOOGLE_API_KEY",
-      "max_tokens": 2048,
+      "max_tokens": 8192,
       "temperature": 0.3,
       "timeout": 60,
       "enabled": true
@@ -90,6 +114,18 @@
       "model_id": "gemini-1.5-pro",
       "version": "2024-02",
       "description": "Google Gemini 1.5 Pro - 향상된 성능",
+      "api_key_env": "GOOGLE_API_KEY",
+      "max_tokens": 2048,
+      "temperature": 0.3,
+      "timeout": 60,
+      "enabled": false
+    },
+    {
+      "name": "gemini-pro",
+      "provider": "google",
+      "model_id": "gemini-pro",
+      "version": "2024-01",
+      "description": "Google Gemini Pro 모델",
       "api_key_env": "GOOGLE_API_KEY",
       "max_tokens": 2048,
       "temperature": 0.3,
@@ -121,6 +157,18 @@
       "enabled": true
     },
     {
+      "name": "sonar-pro",
+      "provider": "perplexity",
+      "model_id": "sonar-pro",
+      "version": "2024-11",
+      "description": "Perplexity Sonar Pro - 최신 모델",
+      "api_key_env": "PERPLEXITY_API_KEY",
+      "max_tokens": 4096,
+      "temperature": 0.3,
+      "timeout": 60,
+      "enabled": true
+    },
+    {
       "name": "sonar-large",
       "provider": "perplexity",
       "model_id": "sonar-large-online",
@@ -130,7 +178,7 @@
       "max_tokens": 4096,
       "temperature": 0.3,
       "timeout": 60,
-      "enabled": true
+      "enabled": false
     },
     {
       "name": "sonar-medium",
@@ -142,7 +190,7 @@
       "max_tokens": 4096,
       "temperature": 0.3,
       "timeout": 60,
-      "enabled": true
+      "enabled": false
     }
   ],
   "provider_configs": {
