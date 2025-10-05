@@ -1,0 +1,131 @@
+{
+  "models": [
+    {
+      "name": "gpt-4-turbo",
+      "provider": "openai",
+      "model_id": "gpt-4-turbo-preview",
+      "version": "2024-01",
+      "description": "OpenAI의 가장 강력한 GPT-4 Turbo 모델",
+      "api_key_env": "OPENAI_API_KEY",
+      "max_tokens": 4096,
+      "temperature": 0.3,
+      "timeout": 60,
+      "enabled": true
+    },
+    {
+      "name": "gpt-4",
+      "provider": "openai",
+      "model_id": "gpt-4",
+      "version": "2023-11",
+      "description": "OpenAI GPT-4 기본 모델",
+      "api_key_env": "OPENAI_API_KEY",
+      "max_tokens": 4096,
+      "temperature": 0.3,
+      "timeout": 60,
+      "enabled": true
+    },
+    {
+      "name": "gpt-3.5-turbo",
+      "provider": "openai",
+      "model_id": "gpt-3.5-turbo",
+      "version": "2023-11",
+      "description": "OpenAI GPT-3.5 Turbo 모델",
+      "api_key_env": "OPENAI_API_KEY",
+      "max_tokens": 4096,
+      "temperature": 0.3,
+      "timeout": 60,
+      "enabled": true
+    },
+    {
+      "name": "claude-3-opus",
+      "provider": "anthropic",
+      "model_id": "claude-3-opus-20240229",
+      "version": "2024-02",
+      "description": "Anthropic Claude 3 Opus - 가장 강력한 모델",
+      "api_key_env": "ANTHROPIC_API_KEY",
+      "max_tokens": 4096,
+      "temperature": 0.3,
+      "timeout": 60,
+      "enabled": true
+    },
+    {
+      "name": "claude-3-sonnet",
+      "provider": "anthropic",
+      "model_id": "claude-3-sonnet-20240229",
+      "version": "2024-02",
+      "description": "Anthropic Claude 3 Sonnet - 균형잡힌 모델",
+      "api_key_env": "ANTHROPIC_API_KEY",
+      "max_tokens": 4096,
+      "temperature": 0.3,
+      "timeout": 60,
+      "enabled": true
+    },
+    {
+      "name": "claude-3-haiku",
+      "provider": "anthropic",
+      "model_id": "claude-3-haiku-20240307",
+      "version": "2024-03",
+      "description": "Anthropic Claude 3 Haiku - 빠르고 효율적인 모델",
+      "api_key_env": "ANTHROPIC_API_KEY",
+      "max_tokens": 4096,
+      "temperature": 0.3,
+      "timeout": 60,
+      "enabled": true
+    },
+    {
+      "name": "gemini-pro",
+      "provider": "google",
+      "model_id": "gemini-pro",
+      "version": "2024-01",
+      "description": "Google Gemini Pro 모델",
+      "api_key_env": "GOOGLE_API_KEY",
+      "max_tokens": 2048,
+      "temperature": 0.3,
+      "timeout": 60,
+      "enabled": true
+    },
+    {
+      "name": "gemini-1.5-pro",
+      "provider": "google",
+      "model_id": "gemini-1.5-pro",
+      "version": "2024-02",
+      "description": "Google Gemini 1.5 Pro - 향상된 성능",
+      "api_key_env": "GOOGLE_API_KEY",
+      "max_tokens": 2048,
+      "temperature": 0.3,
+      "timeout": 60,
+      "enabled": false
+    }
+  ],
+  "provider_configs": {
+    "openai": {
+      "base_url": "https://api.openai.com/v1",
+      "api_version": "v1",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    },
+    "anthropic": {
+      "base_url": "https://api.anthropic.com",
+      "api_version": "2023-06-01",
+      "headers": {
+        "Content-Type": "application/json",
+        "anthropic-version": "2023-06-01"
+      }
+    },
+    "google": {
+      "base_url": "https://generativelanguage.googleapis.com",
+      "api_version": "v1"
+    }
+  },
+  "evaluation_settings": {
+    "default_temperature": 0.3,
+    "default_max_tokens": 2048,
+    "default_timeout": 60,
+    "max_retries": 3,
+    "retry_delay": 5,
+    "enable_caching": true
+  }
+}
+
+

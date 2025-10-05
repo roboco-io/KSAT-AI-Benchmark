@@ -1,0 +1,73 @@
+# Core Dependencies
+python-dotenv==1.0.0
+pydantic==2.5.0
+pydantic-settings==2.1.0
+
+# AI Model APIs
+openai==1.12.0
+anthropic==0.18.0
+google-generativeai==0.3.2
+cohere==4.47
+
+# HTTP & Networking
+requests==2.31.0
+httpx==0.26.0
+aiohttp==3.9.1
+
+# Data Processing
+pandas==2.1.4
+numpy==1.26.2
+
+# CLI & Progress
+click==8.1.7
+tqdm==4.66.1
+rich==13.7.0
+
+# Testing
+pytest==7.4.3
+pytest-asyncio==0.21.1
+pytest-cov==4.1.0
+pytest-mock==3.12.0
+
+# Code Quality
+black==23.12.1
+flake8==7.0.0
+mypy==1.8.0
+isort==5.13.2
+
+# Date & Time
+python-dateutil==2.8.2
+pytz==2023.3
+
+# JSON & YAML
+pyyaml==6.0.1
+jsonschema==4.20.0
+
+# Logging & Monitoring
+loguru==0.7.2
+
+# Utils
+tenacity==8.2.3  # Retry logic
+backoff==2.2.1   # Exponential backoff
+
+# Optional: Local Model Support
+# torch==2.1.2
+# transformers==4.36.2
+# sentence-transformers==2.2.2
+
+# Optional: Database
+# sqlalchemy==2.0.23
+# alembic==1.13.1
+
+# Optional: Async Support
+asyncio==3.4.3
+
+# Optional: Image Processing (for visual questions)
+# Pillow==10.1.0
+# opencv-python==4.9.0.80
+
+# Development Tools
+ipython==8.19.0
+jupyter==1.0.0
+
+
