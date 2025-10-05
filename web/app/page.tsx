@@ -113,23 +113,13 @@ export default function Home() {
                                       정답률: {result.summary.accuracy.toFixed(1)}% · 
                                       점수: {result.summary.total_score}/{result.summary.max_score}점
                                     </Text>
-                                    <Text size="xs" c="red">
-                                      Debug: exam_id={result.exam_id}, examInfo exists={examInfo ? 'YES' : 'NO'}, 
-                                      questions count={examInfo?.questions?.length || 0}
-                                    </Text>
                                   </div>
 
                                   <Accordion variant="separated">
                                     {result.results.map((q: any) => {
-                                      console.log('Searching for question:', q.question_id, 'in exam:', result.exam_id);
-                                      console.log('ExamInfo:', examInfo);
-                                      console.log('Questions:', examInfo?.questions);
-                                      
                                       const questionData = examInfo?.questions?.find(
                                         (eq: any) => eq.question_id === q.question_id || eq.question_number === q.question_number
                                       );
-                                      
-                                      console.log('Found questionData:', questionData);
 
                                       return (
                                         <Accordion.Item key={q.question_id} value={q.question_id}>
