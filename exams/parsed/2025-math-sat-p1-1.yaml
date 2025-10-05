@@ -1,0 +1,61 @@
+exam_id: 2025-math-sat-sample
+title: 2025학년도 수능 MATH (페이지 1-1)
+subject: math
+year: 2025
+parsing_info:
+  method: vision
+  model: gpt-4o
+  parsed_at: '2025-10-05T15:45:03.634869'
+questions:
+- question_id: q0
+  question_number: 0
+  question_text: ''
+  passage: null
+  choices:
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  correct_answer: null
+  points: 2
+  explanation: null
+- question_id: q0
+  question_number: 0
+  question_text: ''
+  passage: null
+  choices:
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  correct_answer: null
+  points: 2
+  explanation: null
+- question_id: q0
+  question_number: 0
+  question_text: ''
+  passage: null
+  choices:
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  correct_answer: null
+  points: 3
+  explanation: null
+- question_id: q0
+  question_number: 0
+  question_text: ''
+  passage: null
+  choices:
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '10'
+  correct_answer: null
+  points: 3
+  explanation: null

@@ -1,0 +1,67 @@
+{
+  "exam_metadata": {
+    "source_file": "수학영역_문제지_홀수형.pdf",
+    "parsing_method": "vision",
+    "model": "gpt-4o",
+    "page_range": [
+      1,
+      1
+    ]
+  },
+  "passage_groups": [],
+  "questions": [
+    {
+      "question_number": 1,
+      "question_text": "다음 중 \\( \\sqrt{5} \\times 25^{\\frac{1}{2}} \\)의 값은? [2점]",
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "points": 2,
+      "is_continued": false
+    },
+    {
+      "question_number": 2,
+      "question_text": "함수 \\( f(x) = x^2 - 8x + 7 \\)에 대하여 \\( \\lim_{h \\to 0} \\frac{f(2+h) - f(2)}{h} \\)의 값은? [2점]",
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "points": 2,
+      "is_continued": false
+    },
+    {
+      "question_number": 3,
+      "question_text": "첫째항과 공비가 모두 양수 k인 등비수열 \\( \\{a_n\\} \\)은 \\( \\frac{a_4}{a_2} + \\frac{a_2}{a_1} = 30 \\)을 만족시킬 때, k의 값은? [3점]",
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "points": 3,
+      "is_continued": false
+    },
+    {
+      "question_number": 4,
+      "question_text": "함수 \\( f(x) = \\begin{cases} 5x + a & (x < -2) \\\\ x^2 - a & (x \\geq -2) \\end{cases} \\)가 실수 전체의 집합에서 연속일 때, 상수 a의 값은? [3점]",
+      "choices": [
+        "6",
+        "7",
+        "8",
+        "9",
+        "10"
+      ],
+      "points": 3,
+      "is_continued": false
+    }
+  ],
+  "total_questions": 4
+}

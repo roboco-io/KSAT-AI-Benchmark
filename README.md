@@ -12,10 +12,10 @@ KSAT AI Benchmark는 대한민국 수학능력시험 문제를 활용하여 다�
 
 ### 주요 특징
 
-- 📄 **PDF 자동 파싱**: PDF 시험지를 업로드하면 자동으로 YAML로 변환
-- 🤖 **다양한 AI 모델 지원**: GPT-4, Claude, Gemini, Solar, Sonar 등 주요 AI 모델 평가
+- 🤖 **LLM 기반 지능형 파싱**: GPT-4o Vision API로 복잡한 수식, 그래프, 2단 레이아웃 완벽 처리
+- 🎯 **다양한 AI 모델 지원**: GPT-4, Claude, Gemini, Solar, Sonar 등 주요 AI 모델 평가
 - 📊 **상세한 결과 분석**: 정답률, 답변 선택 이유, 풀이 시간까지 모두 기록
-- ⚡ **완전 자동화**: PDF 업로드 → 파싱 → 평가 → 웹 배포까지 GitHub Actions로 자동화
+- ⚡ **완전 자동화**: PDF 업로드 → LLM 파싱 → 평가 → 웹 배포까지 GitHub Actions로 자동화
 - 🌐 **현대적인 웹 UI**: Next.js + Mantine UI로 구현된 아름다운 리더보드
 - 🔄 **지속적인 업데이트**: 새로운 시험이나 모델이 추가되면 자동으로 평가
 
@@ -31,13 +31,13 @@ KSAT AI Benchmark는 대한민국 수학능력시험 문제를 활용하여 다�
 ## 🔄 자동화 워크플로우
 
 ```
-PDF 업로드 → PDF 파싱 → YAML 생성 → 모델 평가 → 결과 YAML 저장 → 웹 배포
-   (1)         (2)         (3)        (4)          (5)            (6)
+PDF 업로드 → LLM 파싱 → YAML 생성 → 모델 평가 → 결과 YAML 저장 → 웹 배포
+   (1)       (GPT-4o)       (3)        (4)          (5)            (6)
 ```
 
 1. **PDF 업로드**: `exams/pdf/`에 시험지 PDF 추가
-2. **PDF 파싱**: Python으로 텍스트/이미지 추출 및 구조화
-3. **YAML 생성**: `exams/parsed/`에 구조화된 시험 데이터 저장
+2. **LLM 파싱**: GPT-4o Vision API로 수식, 그래프, 지문 지능형 추출
+3. **YAML 생성**: `exams/parsed/`에 구조화된 시험 데이터 저장 (LaTeX 수식 포함)
 4. **모델 평가**: 각 AI 모델이 문제를 풀고 이유와 시간 기록
 5. **결과 저장**: `results/`에 YAML 형식으로 평가 결과 저장
 6. **웹 배포**: Next.js로 빌드하여 GitHub Pages에 자동 배포
@@ -72,25 +72,33 @@ cp .env.example .env
 
 ### 새로운 시험 추가하기
 
-`exams/pdf/` 폴더에 PDF 형식의 시험지를 업로드합니다:
+#### 방법 1: PDF 자동 파싱 (LLM) ⭐️ **추천**
 
 ```bash
-# 1. PDF 파일 추가
-cp 2024-ksat-math.pdf exams/pdf/
+# 1. PDF 파싱 (로컬에서)
+# 텍스트 기반 (국어, 사회 등)
+python src/parser/parse_exam.py exams/pdf/2025/국어영역_문제지_홀수형.pdf
 
-# 2. Git에 추가 및 커밋
-git add exams/pdf/2024-ksat-math.pdf
-git commit -m "feat: 2024 수학 시험 추가"
+# Vision API (수학, 과학 등) - 수식과 그래프 완벽 인식
+python src/parser/parse_exam.py exams/pdf/2025/수학영역_문제지_홀수형.pdf --vision
+
+# 2. 생성된 YAML 파일 검토 및 정답 입력
+code exams/parsed/2025-math-sat.yaml
+
+# 3. Git에 추가 및 커밋
+git add exams/parsed/2025-math-sat.yaml
+git commit -m "feat: 2025 수학 시험 추가"
 git push
 
-# 3. GitHub Actions가 자동으로:
-#    - PDF 파싱하여 YAML 생성 (exams/parsed/)
+# 4. GitHub Actions가 자동으로:
 #    - 모든 AI 모델로 평가 실행
 #    - 결과를 results/에 저장
 #    - 웹사이트 업데이트
 ```
 
-**또는 수동으로 YAML 작성:**
+**파싱 가이드**: 상세한 파싱 방법은 [`docs/PARSER_GUIDE.md`](docs/PARSER_GUIDE.md)를 참고하세요.
+
+#### 방법 2: 수동 YAML 작성
 
 `exams/parsed/` 폴더에 YAML 파일을 직접 작성할 수도 있습니다:
 
