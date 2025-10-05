@@ -113,6 +113,10 @@ export default function Home() {
                                       정답률: {result.summary.accuracy.toFixed(1)}% · 
                                       점수: {result.summary.total_score}/{result.summary.max_score}점
                                     </Text>
+                                    <Text size="xs" c="red">
+                                      Debug: exam_id={result.exam_id}, examInfo exists={examInfo ? 'YES' : 'NO'}, 
+                                      questions count={examInfo?.questions?.length || 0}
+                                    </Text>
                                   </div>
 
                                   <Accordion variant="separated">
