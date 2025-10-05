@@ -3,6 +3,17 @@ python-dotenv==1.0.0
 pydantic==2.5.0
 pydantic-settings==2.1.0
 
+# PDF Processing
+pdfplumber==0.10.3
+PyPDF2==3.0.1
+pdf2image==1.16.3
+pytesseract==0.3.10
+Pillow==10.1.0
+
+# YAML Processing
+PyYAML==6.0.1
+ruamel.yaml==0.18.5
+
 # AI Model APIs
 openai==1.12.0
 anthropic==0.18.0
