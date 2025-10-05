@@ -7,6 +7,7 @@
 
 import json
 import sys
+import yaml
 from pathlib import Path
 
 # 프로젝트 루트를 sys.path에 추가
@@ -16,6 +17,26 @@ sys.path.insert(0, str(project_root))
 from src.evaluator.summary import load_results
 
 
+def load_exam_data():
+    """시험 문제 데이터 로드"""
+    exams_dir = project_root / 'exams' / 'parsed'
+    exams = {}
+    
+    if not exams_dir.exists():
+        return exams
+    
+    for yaml_file in exams_dir.glob('*.yaml'):
+        try:
+            with open(yaml_file, 'r', encoding='utf-8') as f:
+                exam_data = yaml.safe_load(f)
+                if exam_data and 'exam_id' in exam_data:
+                    exams[exam_data['exam_id']] = exam_data
+        except Exception as e:
+            print(f"⚠️  {yaml_file.name} 로드 실패: {e}")
+    
+    return exams
+
+
 def export_to_json():
     """평가 결과를 JSON으로 export"""
     
@@ -23,6 +44,9 @@ def export_to_json():
     
     # 결과 로드
     results = load_results()
+    
+    # 시험 문제 데이터 로드
+    exams = load_exam_data()
     
     if not results:
         print("⚠️  평가 결과가 없습니다.")
@@ -88,6 +112,7 @@ def export_to_json():
             'totalQuestions': total_questions,
         },
         'results': all_results_list,
+        'exams': exams,  # 시험 문제 데이터 추가
     }
     
     # web/public/data/ 디렉토리 생성

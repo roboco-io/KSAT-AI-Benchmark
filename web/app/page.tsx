@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
 export default function Home() {
   const [leaderboard, setLeaderboard] = useState<any[]>([]);
   const [results, setResults] = useState<any[]>([]);
-  const [exams, setExams] = useState<any[]>([]);
+  const [examsData, setExamsData] = useState<any>({});
   const [stats, setStats] = useState({ totalExams: 0, totalEvaluations: 0, totalQuestions: 0 });
   const [loading, setLoading] = useState(true);
 
@@ -18,20 +18,8 @@ export default function Home() {
         const data = await response.json();
         setLeaderboard(data.leaderboard);
         setResults(data.results || []);
+        setExamsData(data.exams || {});
         setStats(data.stats);
-        
-        // 시험 정보 추출
-        const examMap = new Map();
-        data.results?.forEach((result: any) => {
-          if (!examMap.has(result.exam_id)) {
-            examMap.set(result.exam_id, {
-              exam_id: result.exam_id,
-              exam_title: result.exam_title,
-              subject: result.subject,
-            });
-          }
-        });
-        setExams(Array.from(examMap.values()));
       } catch (error) {
         console.error('Failed to load data:', error);
       } finally {
@@ -113,77 +101,152 @@ export default function Home() {
 
                       <Accordion.Panel>
                         <Stack gap="md">
-                          {modelResults.map((result) => (
-                            <Card key={result.exam_id} withBorder>
-                              <Stack gap="md">
-                                <div>
-                                  <Text fw={600} size="lg">{result.exam_title}</Text>
-                                  <Text size="sm" c="dimmed">
-                                    정답률: {result.summary.accuracy.toFixed(1)}% · 
-                                    점수: {result.summary.total_score}/{result.summary.max_score}점
-                                  </Text>
-                                </div>
+                          {modelResults.map((result) => {
+                            const examInfo = examsData[result.exam_id];
+                            
+                            return (
+                              <Card key={result.exam_id} withBorder>
+                                <Stack gap="md">
+                                  <div>
+                                    <Text fw={600} size="lg">{result.exam_title}</Text>
+                                    <Text size="sm" c="dimmed">
+                                      정답률: {result.summary.accuracy.toFixed(1)}% · 
+                                      점수: {result.summary.total_score}/{result.summary.max_score}점
+                                    </Text>
+                                  </div>
 
-                                <Table striped>
-                                  <Table.Thead>
-                                    <Table.Tr>
-                                      <Table.Th style={{ width: '60px' }}>문제</Table.Th>
-                                      <Table.Th style={{ width: '80px' }}>결과</Table.Th>
-                                      <Table.Th style={{ width: '80px' }}>답변</Table.Th>
-                                      <Table.Th>선택 이유</Table.Th>
-                                      <Table.Th style={{ width: '80px' }}>시간</Table.Th>
-                                    </Table.Tr>
-                                  </Table.Thead>
-                                  <Table.Tbody>
-                                    {result.results.map((q: any) => (
-                                      <Table.Tr key={q.question_id}>
-                                        <Table.Td>
-                                          <Text fw={600}>{q.question_number}번</Text>
-                                          <Text size="xs" c="dimmed">{q.points}점</Text>
-                                        </Table.Td>
-                                        <Table.Td>
-                                          <Badge color={q.is_correct ? 'green' : 'red'} size="sm">
-                                            {q.is_correct ? '정답' : '오답'}
-                                          </Badge>
-                                        </Table.Td>
-                                        <Table.Td>
-                                          <div>
-                                            <Text size="sm" fw={600}>
-                                              {q.answer}번 {q.is_correct ? '✓' : '✗'}
-                                            </Text>
-                                            {!q.is_correct && (
-                                              <Text size="xs" c="dimmed">
-                                                (정답: {q.correct_answer}번)
-                                              </Text>
-                                            )}
-                                          </div>
-                                        </Table.Td>
-                                        <Table.Td>
-                                          <Text size="sm" style={{ whiteSpace: 'pre-wrap', maxWidth: '500px' }}>
-                                            {q.reasoning || '풀이 정보 없음'}
-                                          </Text>
-                                        </Table.Td>
-                                        <Table.Td>
-                                          <Text size="xs" c="dimmed">
-                                            {q.time_taken.toFixed(2)}초
-                                          </Text>
-                                        </Table.Td>
-                                      </Table.Tr>
-                                    ))}
-                                  </Table.Tbody>
-                                </Table>
+                                  <Accordion variant="separated">
+                                    {result.results.map((q: any) => {
+                                      const questionData = examInfo?.questions?.find(
+                                        (eq: any) => eq.question_id === q.question_id || eq.question_number === q.question_number
+                                      );
 
-                                <Group justify="space-between">
-                                  <Text size="sm" fw={600}>
-                                    총 {result.summary.correct_answers}개 정답 / {result.summary.total_questions}개 문제
-                                  </Text>
-                                  <Text size="sm" c="dimmed">
-                                    평균 응답 시간: {(result.results.reduce((sum: number, r: any) => sum + r.time_taken, 0) / result.results.length).toFixed(2)}초
-                                  </Text>
-                                </Group>
-                              </Stack>
-                            </Card>
-                          ))}
+                                      return (
+                                        <Accordion.Item key={q.question_id} value={q.question_id}>
+                                          <Accordion.Control>
+                                            <Group justify="space-between" mr="md">
+                                              <Group>
+                                                <Badge color={q.is_correct ? 'green' : 'red'} size="lg">
+                                                  {q.question_number}번
+                                                </Badge>
+                                                <Text fw={500}>
+                                                  {q.is_correct ? '✓ 정답' : '✗ 오답'} · {q.points}점
+                                                </Text>
+                                              </Group>
+                                              <Group gap="xs">
+                                                <Text size="sm" fw={600}>
+                                                  답변: {q.answer}번
+                                                </Text>
+                                                {!q.is_correct && (
+                                                  <Text size="sm" c="dimmed">
+                                                    (정답: {q.correct_answer}번)
+                                                  </Text>
+                                                )}
+                                                <Text size="xs" c="dimmed">
+                                                  {q.time_taken.toFixed(2)}초
+                                                </Text>
+                                              </Group>
+                                            </Group>
+                                          </Accordion.Control>
+
+                                          <Accordion.Panel>
+                                            <Stack gap="md">
+                                              {/* 문제 */}
+                                              {questionData && (
+                                                <Card withBorder bg="gray.0">
+                                                  <Stack gap="sm">
+                                                    <Text fw={700} size="md" c="blue">
+                                                      📝 문제 {q.question_number}번
+                                                    </Text>
+                                                    <Text style={{ whiteSpace: 'pre-wrap' }}>
+                                                      {questionData.question_text}
+                                                    </Text>
+
+                                                    {questionData.choices && questionData.choices.length > 0 && (
+                                                      <Stack gap="xs" mt="sm">
+                                                        <Text fw={600} size="sm">선택지:</Text>
+                                                        {questionData.choices.map((choice: string, idx: number) => {
+                                                          const choiceNum = idx + 1;
+                                                          const isModelAnswer = choiceNum === q.answer;
+                                                          const isCorrectAnswer = choiceNum === q.correct_answer;
+
+                                                          let badgeColor = 'gray';
+                                                          if (isCorrectAnswer && isModelAnswer) {
+                                                            badgeColor = 'green';
+                                                          } else if (isCorrectAnswer) {
+                                                            badgeColor = 'blue';
+                                                          } else if (isModelAnswer) {
+                                                            badgeColor = 'red';
+                                                          }
+
+                                                          return (
+                                                            <Group key={idx} gap="xs" align="flex-start">
+                                                              <Badge color={badgeColor} variant="light" size="lg" mt={4}>
+                                                                {choiceNum}
+                                                              </Badge>
+                                                              <Text style={{ flex: 1 }}>{choice}</Text>
+                                                              {isCorrectAnswer && <Text c="blue" fw={600}>✓ 정답</Text>}
+                                                              {isModelAnswer && !isCorrectAnswer && <Text c="red" fw={600}>✗ 선택</Text>}
+                                                              {isModelAnswer && isCorrectAnswer && <Text c="green" fw={600}>✓ 선택</Text>}
+                                                            </Group>
+                                                          );
+                                                        })}
+                                                      </Stack>
+                                                    )}
+                                                  </Stack>
+                                                </Card>
+                                              )}
+
+                                              {/* 모델 답변 */}
+                                              <Card withBorder bg={q.is_correct ? 'green.0' : 'red.0'}>
+                                                <Stack gap="sm">
+                                                  <Group justify="space-between">
+                                                    <Text fw={700} size="md">
+                                                      🤖 모델의 답변 및 풀이
+                                                    </Text>
+                                                    <Badge color={q.is_correct ? 'green' : 'red'} size="lg">
+                                                      {q.is_correct ? '정답' : '오답'} · {q.earned_points}/{q.points}점
+                                                    </Badge>
+                                                  </Group>
+
+                                                  <div>
+                                                    <Text size="sm" fw={600} mb="xs">선택한 답:</Text>
+                                                    <Text size="lg" fw={700}>
+                                                      {q.answer}번 {q.is_correct ? '✓' : '✗'}
+                                                    </Text>
+                                                  </div>
+
+                                                  <div>
+                                                    <Text size="sm" fw={600} mb="xs">풀이 과정:</Text>
+                                                    <Text style={{ whiteSpace: 'pre-wrap' }}>
+                                                      {q.reasoning || '풀이 정보 없음'}
+                                                    </Text>
+                                                  </div>
+
+                                                  <Text size="xs" c="dimmed">
+                                                    소요 시간: {q.time_taken.toFixed(2)}초
+                                                  </Text>
+                                                </Stack>
+                                              </Card>
+                                            </Stack>
+                                          </Accordion.Panel>
+                                        </Accordion.Item>
+                                      );
+                                    })}
+                                  </Accordion>
+
+                                  <Group justify="space-between" mt="md">
+                                    <Text size="sm" fw={600}>
+                                      총 {result.summary.correct_answers}개 정답 / {result.summary.total_questions}개 문제
+                                    </Text>
+                                    <Text size="sm" c="dimmed">
+                                      평균 응답 시간: {(result.results.reduce((sum: number, r: any) => sum + r.time_taken, 0) / result.results.length).toFixed(2)}초
+                                    </Text>
+                                  </Group>
+                                </Stack>
+                              </Card>
+                            );
+                          })}
                         </Stack>
                       </Accordion.Panel>
                     </Accordion.Item>
