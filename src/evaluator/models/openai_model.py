@@ -28,8 +28,24 @@ class OpenAIModel(BaseModel):
         start_time = time.time()
         
         try:
-            # 프롬프트 구성
-            system_prompt = """당신은 대한민국 수능 문제를 푸는 AI입니다.
+            # GPT-5 전용 프롬프트와 설정
+            is_gpt5 = "gpt-5" in self.model_name.lower()
+            
+            if is_gpt5:
+                # GPT-5: response_format 없이 더 강력한 프롬프트 사용
+                system_prompt = """당신은 대한민국 수능 문제를 푸는 AI입니다.
+
+아래와 같은 JSON 형식으로만 답변하세요. 다른 텍스트는 절대 포함하지 마세요:
+
+{"answer": 3, "reasoning": "답을 선택한 이유..."}
+
+규칙:
+1. answer는 반드시 1~5 사이의 숫자
+2. reasoning은 한글로 구체적이고 논리적으로 작성
+3. JSON 외에는 어떤 텍스트도 포함하지 않음"""
+            else:
+                # 기존 모델용 프롬프트
+                system_prompt = """당신은 대한민국 수능 문제를 푸는 AI입니다.
 
 문제를 신중하게 분석하고 반드시 JSON 형식으로 답변하세요:
 
@@ -52,17 +68,18 @@ class OpenAIModel(BaseModel):
                 "messages": [
                     {"role": "system", "content": system_prompt},
                     {"role": "user", "content": user_prompt}
-                ],
-                "response_format": {"type": "json_object"}
+                ]
             }
             
-            # GPT-5는 max_completion_tokens와 temperature=1 사용
-            if "gpt-5" in self.model_name.lower():
+            # GPT-5는 max_completion_tokens, temperature=1, response_format 없음
+            if is_gpt5:
                 api_params["max_completion_tokens"] = self.max_tokens
                 api_params["temperature"] = 1  # GPT-5는 1만 지원
+                # response_format 사용하지 않음
             else:
                 api_params["max_tokens"] = self.max_tokens
                 api_params["temperature"] = self.temperature
+                api_params["response_format"] = {"type": "json_object"}
             
             response = self.client.chat.completions.create(**api_params)
             
@@ -70,6 +87,15 @@ class OpenAIModel(BaseModel):
             
             # 응답 파싱
             content = response.choices[0].message.content
+            
+            # GPT-5의 경우 JSON을 추출하는 더 강력한 로직 사용
+            if is_gpt5:
+                # JSON 코드 블록이나 다른 텍스트가 포함된 경우 JSON만 추출
+                import re
+                json_match = re.search(r'\{[^{}]*"answer"[^{}]*"reasoning"[^{}]*\}', content, re.DOTALL)
+                if json_match:
+                    content = json_match.group(0)
+            
             try:
                 result = json.loads(content)
                 answer = int(result.get('answer', 0))
@@ -104,9 +130,10 @@ class OpenAIModel(BaseModel):
                 # JSON 파싱 실패시 텍스트에서 추출 시도
                 answer = self._extract_answer_from_text(content) or 0
                 
+                # reasoning은 content를 그대로 사용 (빈 문자열이 아닌)
                 return ModelResponse(
                     answer=answer,
-                    reasoning=content,
+                    reasoning=content if content else f"파싱 실패: {e}",
                     time_taken=time_taken,
                     raw_response=content,
                     model_name=self.model_name,

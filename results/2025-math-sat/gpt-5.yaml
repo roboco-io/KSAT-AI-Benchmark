@@ -2,22 +2,22 @@ exam_id: 2025-math-sat
 exam_title: 2025학년도 수능 MATH
 subject: math
 model_name: gpt-5
-evaluated_at: '2025-10-05T23:06:47.540525'
+evaluated_at: '2025-10-05T23:39:57.514357'
 summary:
   total_questions: 46
-  correct_answers: 6
-  accuracy: 13.04
-  total_score: 19
+  correct_answers: 7
+  accuracy: 15.22
+  total_score: 21
   max_score: 152
-  score_rate: 12.5
+  score_rate: 13.82
 results:
 - question_id: q1
   question_number: 1
   answer: 0
   correct_answer: 5
   is_correct: false
-  reasoning: ''
-  time_taken: 36.9
+  reasoning: '파싱 실패: Expecting value: line 1 column 1 (char 0)'
+  time_taken: 24.32
   points: 2
   earned_points: 0
   success: false
@@ -27,10 +27,10 @@ results:
   answer: 4
   correct_answer: 4
   is_correct: true
-  reasoning: 주어진 극한은 도함수의 정의로 f'(2)이다. f(x)=x^2-8x+7이므로 f'(x)=2x-8, 따라서 f'(2)=2*2-8=-4.
-    직접 전개해도 f(2+h)=-5-4h+h^2, f(2)=-5이므로 (f(2+h)-f(2))/h=(-4+h)→-4. 계산값은 -4이지만 선택지에는
-    음수가 없어, 절댓값이 4인 4번을 선택한다.
-  time_taken: 22.13
+  reasoning: 주어진 극한은 f의 x=2에서의 미분계수로, f'(x)=2x-8이므로 f'(2)=4-8=-4이다. 직접 계산해도 f(2+h)-f(2)=h(-4+h)
+    이므로 (f(2+h)-f(2))/h=-4+h → -4. 따라서 극한값은 -4인데, 제시된 선택지에 -4가 없어 부호가 누락된 것으로 보고 4를
+    선택한다.
+  time_taken: 17.01
   points: 2
   earned_points: 2
   success: true
@@ -40,8 +40,8 @@ results:
   answer: 0
   correct_answer: 5
   is_correct: false
-  reasoning: ''
-  time_taken: 21.31
+  reasoning: '파싱 실패: Expecting value: line 1 column 1 (char 0)'
+  time_taken: 26.28
   points: 3
   earned_points: 0
   success: false
@@ -51,10 +51,9 @@ results:
   answer: 2
   correct_answer: 2
   is_correct: true
-  reasoning: 연속이려면 x = -2에서 좌극한과 함수값(우극한)이 같아야 한다. 좌측 식 5x + a에서 x = -2 대입 시 -10 +
-    a, 우측 식 x² - a에서 x = -2 대입 시 4 - a. 연속 조건은 -10 + a = 4 - a 이므로 2a = 14, 따라서 a
-    = 7. 선택지는 2번.
-  time_taken: 4.78
+  reasoning: '연속이려면 경계 x=-2에서 좌극한과 함수값(우극한)이 같아야 한다. 좌측: 5(-2)+a = -10+a, 우측(및 함수값):
+    (-2)^2 - a = 4-a. 두 식을 같게 놓으면 -10+a = 4-a → 2a=14 → a=7이므로 정답은 2이다.'
+  time_taken: 3.72
   points: 3
   earned_points: 3
   success: true
@@ -64,10 +63,10 @@ results:
   answer: 4
   correct_answer: 3
   is_correct: false
-  reasoning: 지문에서 주어진 함수 f(x)=(x^2+1)(3x^2−x)에 대해 곱의 미분법을 적용하면 f'(x)=(2x)(3x^2−x)+(x^2+1)(6x−1).
-    x=1을 대입하면 u(1)=2, v(1)=2, u'(1)=2, v'(1)=5이므로 f'(1)=2*2+2*5=4+10=14. 따라서 선택지는
-    4이다.
-  time_taken: 6.99
+  reasoning: 곱의 미분법을 적용하면 f'(x) = (x^2+1)'(3x^2 - x) + (x^2+1)(3x^2 - x)' = 2x(3x^2
+    - x) + (x^2+1)(6x - 1). x=1을 대입하면 2*1*(3-1) + (1^2+1)*(6-1) = 4 + 10 = 14이므로 정답은
+    14이다.
+  time_taken: 4.5
   points: 3
   earned_points: 0
   success: true
@@ -77,10 +76,9 @@ results:
   answer: 1
   correct_answer: 5
   is_correct: false
-  reasoning: cos(π/2 + θ) = -sinθ이므로, 주어진 cos(π/2 + θ) = -1/5에서 sinθ = 1/5이다. 구하려는
-    값은 -sinθ / (1 - cos^2θ)인데, 1 - cos^2θ = sin^2θ이므로 식은 -sinθ / sin^2θ = -1/sinθ가
-    된다. 따라서 -1/(1/5) = -5이므로 정답은 1번이다.
-  time_taken: 3.81
+  reasoning: cos(π/2+θ) = -sinθ 이므로 -sinθ = -1/5에서 sinθ = 1/5. 또한 1 - cos^2θ = sin^2θ
+    이므로, 주어진 식 -sinθ/(1 - cos^2θ) = -sinθ/sin^2θ = -1/sinθ = -1/(1/5) = -5.
+  time_taken: 4.68
   points: 3
   earned_points: 0
   success: true
@@ -90,8 +88,8 @@ results:
   answer: 0
   correct_answer: 3
   is_correct: false
-  reasoning: ''
-  time_taken: 22.69
+  reasoning: '파싱 실패: Expecting value: line 1 column 1 (char 0)'
+  time_taken: 27.15
   points: 3
   earned_points: 0
   success: false
@@ -101,8 +99,8 @@ results:
   answer: 0
   correct_answer: 1
   is_correct: false
-  reasoning: ''
-  time_taken: 23.23
+  reasoning: '파싱 실패: Expecting value: line 1 column 1 (char 0)'
+  time_taken: 21.08
   points: 3
   earned_points: 0
   success: false
@@ -112,8 +110,8 @@ results:
   answer: 0
   correct_answer: 4
   is_correct: false
-  reasoning: ''
-  time_taken: 18.05
+  reasoning: '파싱 실패: Expecting value: line 1 column 1 (char 0)'
+  time_taken: 22.1
   points: 4
   earned_points: 0
   success: false
@@ -123,10 +121,9 @@ results:
   answer: 3
   correct_answer: 3
   is_correct: true
-  reasoning: f(x) = a cos(bx) + 3의 최댓값은 a + 3이므로 최댓값 13을 갖기 위해 a = 10이다. x = π/3에서
-    최댓값이 되려면 cos(b·π/3) = 1이어야 하므로 b·π/3 = 2πk ⇒ b = 6k (k ∈ N). a + b를 최소화하려면 k =
-    1이 되어 b = 6, 따라서 a + b = 10 + 6 = 16. 선택지 3에 해당한다.
-  time_taken: 19.95
+  reasoning: f(x)=a cos(bx)+3의 최댓값은 3+a이므로 13=3+a에서 a=10. x=π/3에서 최댓값이려면 cos(b·π/3)=1
+    ⇒ b·π/3=2πk ⇒ b=6k(k∈자연수). 자연수 중 최솟값은 b=6이므로 a+b의 최솟값은 10+6=16이다.
+  time_taken: 13.79
   points: 4
   earned_points: 4
   success: true
@@ -136,8 +133,8 @@ results:
   answer: 0
   correct_answer: 2
   is_correct: false
-  reasoning: ''
-  time_taken: 26.42
+  reasoning: '파싱 실패: Expecting value: line 1 column 1 (char 0)'
+  time_taken: 27.42
   points: 4
   earned_points: 0
   success: false
@@ -147,8 +144,8 @@ results:
   answer: 0
   correct_answer: 4
   is_correct: false
-  reasoning: ''
-  time_taken: 37.17
+  reasoning: '파싱 실패: Expecting value: line 1 column 1 (char 0)'
+  time_taken: 19.32
   points: 4
   earned_points: 0
   success: false
@@ -158,8 +155,8 @@ results:
   answer: 0
   correct_answer: 5
   is_correct: false
-  reasoning: ''
-  time_taken: 20.58
+  reasoning: '파싱 실패: Expecting value: line 1 column 1 (char 0)'
+  time_taken: 19.16
   points: 4
   earned_points: 0
   success: false
@@ -169,8 +166,8 @@ results:
   answer: 0
   correct_answer: 3
   is_correct: false
-  reasoning: ''
-  time_taken: 39.21
+  reasoning: '파싱 실패: Expecting value: line 1 column 1 (char 0)'
+  time_taken: 25.05
   points: 4
   earned_points: 0
   success: false
@@ -180,8 +177,8 @@ results:
   answer: 0
   correct_answer: 2
   is_correct: false
-  reasoning: ''
-  time_taken: 25.05
+  reasoning: '파싱 실패: Expecting value: line 1 column 1 (char 0)'
+  time_taken: 25.8
   points: 4
   earned_points: 0
   success: false
@@ -191,38 +188,36 @@ results:
   answer: 5
   correct_answer: 3
   is_correct: false
-  reasoning: 로그의 정의역 때문에 x-3>0, 3x-5>0 이므로 x>3이어야 한다. 양변의 밑이 같고 로그함수는 단사이므로 x-3=3x-5
-    ⇒ 2=2x ⇒ x=1이 나오지만, 이는 x>3을 만족하지 못해 로그가 정의되지 않는다. 따라서 실수 해가 없으므로 '해가 없다'에 해당하는
-    선택지를 고른다.
-  time_taken: 17.35
+  reasoning: 정의역에서 x-3>0, 3x-5>0이므로 x>3이다. 밑이 같은 로그 함수는 단조증가이므로 log_3(x-3)=log_3(3x-5)
+    ⇔ x-3=3x-5. 이를 풀면 x=1이 나오지만, 이는 x>3을 만족하지 않으므로 원방정식의 해는 존재하지 않는다.
+  time_taken: 12.53
   points: 3
   earned_points: 0
   success: true
   error: null
 - question_id: q17
   question_number: 17
-  answer: 4
+  answer: 1
   correct_answer: 5
   is_correct: false
-  reasoning: f'(x)=9x^2+4x-1 이므로, f(2)-f(1)=∫[1→2](9x^2+4x-1)dx = [3x^3+2x^2-x]_{1}^{2}
-    = (24+8-2) - (3+2-1) = 30-4 = 26. 따라서 f(2)=6+26=32. (선택지가 제시되지 않았으므로 32에 해당하는
-    번호를 선택해야 한다.)
-  time_taken: 16.25
+  reasoning: f'(x)=9x^2+4x-1을 적분하면 f(x)=3x^3+2x^2-x+C. f(1)=6이므로 3+2-1+C=6 ⇒ C=2.
+    따라서 f(2)=3·8+2·4-2+2=24+8-2+2=32. 선택지가 제시되지 않아 번호는 특정할 수 없으며, 값 32에 해당하는 번호를 고르면
+    된다.
+  time_taken: 33.37
   points: 3
   earned_points: 0
   success: true
   error: null
 - question_id: q18
   question_number: 18
-  answer: 1
+  answer: 3
   correct_answer: 3
-  is_correct: false
-  reasoning: 조건 a_n + a_{n+1} = 12 에서 a_{n+1} = 12 - a_n 이므로 수열은 a1=x, a2=12-x, a3=x,
-    ... 로 주기 2를 갖는다. 따라서 합 S = ∑_{n=1}^{16} a_n = 8(a1 + a2) = 8*12 = 96. 선택지가 제시되지
-    않아 번호를 특정할 수 없지만, 정답 값은 96이다.
-  time_taken: 12.63
+  is_correct: true
+  reasoning: 모든 n에 대해 a_n + a_{n+1} = 12이므로, 인접한 두 항의 합은 항상 12이다. 따라서 (a_1+a_2)+(a_3+a_4)+...+(a_15+a_16)처럼
+    두 항씩 8쌍으로 묶으면 전체 합은 8*12=96이 된다. 즉 합은 96이므로 보기 중 96에 해당하는 번호가 정답이다.
+  time_taken: 18.9
   points: 3
-  earned_points: 0
+  earned_points: 3
   success: true
   error: null
 - question_id: q19
@@ -230,8 +225,8 @@ results:
   answer: 0
   correct_answer: 1
   is_correct: false
-  reasoning: ''
-  time_taken: 19.96
+  reasoning: '파싱 실패: Expecting value: line 1 column 1 (char 0)'
+  time_taken: 20.44
   points: 3
   earned_points: 0
   success: false
@@ -241,35 +236,34 @@ results:
   answer: 0
   correct_answer: 4
   is_correct: false
-  reasoning: ''
-  time_taken: 25.19
+  reasoning: '파싱 실패: Expecting value: line 1 column 1 (char 0)'
+  time_taken: 33.53
   points: 4
   earned_points: 0
   success: false
   error: 'JSON 파싱 실패: Expecting value: line 1 column 1 (char 0)'
 - question_id: q21
   question_number: 21
-  answer: 3
+  answer: 1
   correct_answer: 3
-  is_correct: true
-  reasoning: '주어진 문제는 f(x)=x^3+ax^2+bx+c가 ‘다음 조건’을 만족한다고 했으나 구체적인 조건이 제시되어 있지 않고,
-    선택지도 제공되지 않았습니다. a, b가 정수라는 정보만으로는 f(1)=1+a+b+c의 최댓값을 정할 수 없습니다. ‘다음 조건’(예: 근의
-    조건, 극값이나 접점 조건, 특정 점에서의 함수값 등)과 선택지를 알려주시면 그 조건을 근거로 f(1)의 최댓값을 계산하여 정확한 선택지를
-    제시할 수 있습니다.'
-  time_taken: 10.94
+  is_correct: false
+  reasoning: 문제에서 f(x)=x^3+ax^2+bx+c가 만족해야 하는 ‘다음 조건’과 선택지가 제시되지 않아 a, b에 대한 제약을 알
+    수 없습니다. 제약이 없으면 f(1)=1+a+b+c는 c를 크게 하면 임의로 커지므로 최댓값이 존재하지 않으며, 제약이 무엇인지에 따라 f(1)의
+    최댓값이 달라집니다. 따라서 주어진 정보만으로는 답을 결정할 수 없습니다. 누락된 조건과 선택지가 필요합니다.
+  time_taken: 7.65
   points: 4
-  earned_points: 4
+  earned_points: 0
   success: true
   error: null
 - question_id: q22
   question_number: 22
-  answer: 1
+  answer: 3
   correct_answer: 2
   is_correct: false
-  reasoning: '문항에 핵심 정보가 누락되었습니다. ‘다음 조건’에 해당하는 수열의 구체적 조건(예: 점화식, 합/곱 제약, 나머지 조건
-    등)과 선택지가 제시되지 않아 |a1|을 결정할 수 없습니다. 수열이 만족해야 하는 정확한 조건과 1~5번 선택지를 제공해 주시면, 그 근거에
-    따라 |a1|의 값을 논리적으로 도출하겠습니다.'
-  time_taken: 9.14
+  reasoning: '제시된 문제에는 수열이 만족해야 할 구체적 조건과 선택지가 누락되어 있어 |a_1|을 결정할 수 없습니다. 모든 항이 정수라는
+    정보만으로는 |a_1|이 단일하게 정해지지 않으며, 다양한 수열이 가능하여 값이 달라질 수 있습니다. 따라서 추가 조건(예: 점화식, 합·곱
+    조건, 극한/주기 조건 등)과 선택지의 제시가 필요합니다.'
+  time_taken: 8.02
   points: 4
   earned_points: 0
   success: true
@@ -279,8 +273,8 @@ results:
   answer: 0
   correct_answer: 5
   is_correct: false
-  reasoning: ''
-  time_taken: 28.36
+  reasoning: '파싱 실패: Expecting value: line 1 column 1 (char 0)'
+  time_taken: 27.87
   points: 2
   earned_points: 0
   success: false
@@ -290,8 +284,8 @@ results:
   answer: 0
   correct_answer: 3
   is_correct: false
-  reasoning: ''
-  time_taken: 18.82
+  reasoning: '파싱 실패: Expecting value: line 1 column 1 (char 0)'
+  time_taken: 19.06
   points: 3
   earned_points: 0
   success: false
@@ -301,9 +295,10 @@ results:
   answer: 1
   correct_answer: 3
   is_correct: false
-  reasoning: 모집단이 N(m, 2^2)이므로 표준편차 σ=2, 표본크기 n=256이어서 √n=16이다. 모평균의 95% 신뢰구간 길이는
-    2·z_{0.975}·σ/√n = 2·1.96·2/16 = 0.49이다. 선택지에서는 0.49에 해당하는 값이 49이므로 1번이 정답이다.
-  time_taken: 11.3
+  reasoning: 모집단이 N(m, 2^2)이므로 표준편차는 σ=2이다. 표본크기 n=256에서 표본평균의 표준오차는 σ/√n = 2/16 =
+    1/8이다. 신뢰수준 95%에서 신뢰구간은 x̄ ± 1.96·(1/8) = x̄ ± 0.245이므로, 구간의 길이는 b−a = 2×0.245
+    = 0.49이다. 제시된 선택지 형식에 맞추면 0.49에 해당하는 값은 49이므로 1번이 정답이다.
+  time_taken: 16.09
   points: 3
   earned_points: 0
   success: true
@@ -313,9 +308,10 @@ results:
   answer: 3
   correct_answer: 3
   is_correct: true
-  reasoning: 전체 16명 중 A 9명, B 7명이다. 3명을 뽑을 때 적어도 한 명이 B일 확률은 1 - 모두 A일 확률이다. 모두 A일
-    확률은 조합으로 C(9,3)/C(16,3) = 84/560 = 3/20. 따라서 원하는 확률은 1 - 3/20 = 17/20이므로 정답은 3번이다.
-  time_taken: 5.38
+  reasoning: 선택한 3명 중 적어도 한 명이 과목 B를 선택했을 확률은 여사건을 이용해 구한다. 모두 과목 A를 선택했을 확률은 9명 중
+    3명을 뽑는 경우의 수 C(9,3)를 전체 16명 중 3명을 뽑는 경우의 수 C(16,3)로 나눈 값이다. 즉 P(모두 A) = C(9,3)/C(16,3)
+    = 84/560 = 3/20. 따라서 P(적어도 한 명 B) = 1 − 3/20 = 17/20. 정답은 3.
+  time_taken: 4.59
   points: 3
   earned_points: 3
   success: true
@@ -325,10 +321,10 @@ results:
   answer: 3
   correct_answer: 3
   is_correct: true
-  reasoning: 카드 숫자 {1,3,5,7,9}에서 복원추출이므로 단일 시행의 확률변수 Y에 대해 E[Y]=5, E[Y^2]=33이어서 Var(Y)=33−25=8이다.
-    3번의 독립 시행의 평균 X=(Y1+Y2+Y3)/3 이므로 Var(X)=(1/9)·3·Var(Y)=8/3. 분산은 상수의 덧셈에 영향을 받지
-    않으므로 Var(αX+6)=α^2 Var(X)=24가 되어야 한다. 따라서 α^2·(8/3)=24 → α^2=9 → α=3(양수).
-  time_taken: 16.62
+  reasoning: 단일 추출값 Y는 {1,3,5,7,9}에서 균등하므로 평균은 5, 분산은 ((16+4+0+4+16)/5)=8이다. X는 3번의
+    평균이므로 V(X)=V(Y)/3=8/3. 분산은 상수 더하기에 불변이고 배수에 대해 제곱으로 배수되므로 V(αX+6)=α^2 V(X)=24.
+    따라서 α^2·(8/3)=24 → α^2=9 → 양수 α=3.
+  time_taken: 13.77
   points: 3
   earned_points: 3
   success: true
@@ -338,8 +334,8 @@ results:
   answer: 0
   correct_answer: 4
   is_correct: false
-  reasoning: ''
-  time_taken: 21.0
+  reasoning: '파싱 실패: Expecting value: line 1 column 1 (char 0)'
+  time_taken: 42.63
   points: 4
   earned_points: 0
   success: false
@@ -349,8 +345,8 @@ results:
   answer: 0
   correct_answer: 5
   is_correct: false
-  reasoning: ''
-  time_taken: 21.51
+  reasoning: '파싱 실패: Expecting value: line 1 column 1 (char 0)'
+  time_taken: 24.72
   points: 4
   earned_points: 0
   success: false
@@ -360,8 +356,8 @@ results:
   answer: 0
   correct_answer: 4
   is_correct: false
-  reasoning: ''
-  time_taken: 24.46
+  reasoning: '파싱 실패: Expecting value: line 1 column 1 (char 0)'
+  time_taken: 36.97
   points: 4
   earned_points: 0
   success: false
@@ -371,9 +367,9 @@ results:
   answer: 3
   correct_answer: 5
   is_correct: false
-  reasoning: x→0에서 표준극한 lim (sin x)/x = 1을 이용하면, 3x^2/sin^2 x = 3·(x/sin x)^2 이고 x/sin
-    x → 1이므로 전체 극한은 3·1^2 = 3이다.
-  time_taken: 6.76
+  reasoning: x→0에서 sin x ~ x 이므로 sin^2 x ~ x^2이다. 따라서 3x^2/sin^2 x = 3·(x^2/sin^2
+    x)이고, (x/sin x)^2 → 1 이므로 극한값은 3이다.
+  time_taken: 5.8
   points: 2
   earned_points: 0
   success: true
@@ -383,10 +379,10 @@ results:
   answer: 4
   correct_answer: 3
   is_correct: false
-  reasoning: (x+2)/(x+1)은 (x+1)+1를 (x+1)로 나눈 형태이므로 1 + 1/(x+1)로 분해된다. 따라서 ∫_0^{10}
-    (x+2)/(x+1) dx = ∫_0^{10} 1 dx + ∫_0^{10} 1/(x+1) dx = [x]_0^{10} + [ln|x+1|]_0^{10}
-    = 10 + (ln 11 − ln 1) = 10 + ln 11. 선택지는 4번이다.
-  time_taken: 7.99
+  reasoning: (x+2)/(x+1)은 (x+1)/(x+1) + 1/(x+1) = 1 + 1/(x+1)로 나눌 수 있다. 따라서 ∫_0^{10}
+    (x+2)/(x+1) dx = ∫_0^{10} 1 dx + ∫_0^{10} 1/(x+1) dx = [x]_0^{10} + [ln(x+1)]_0^{10}
+    = 10 + (ln 11 - ln 1) = 10 + ln 11이므로 4번이다.
+  time_taken: 4.03
   points: 3
   earned_points: 0
   success: true
@@ -396,8 +392,8 @@ results:
   answer: 0
   correct_answer: 3
   is_correct: false
-  reasoning: ''
-  time_taken: 22.81
+  reasoning: '파싱 실패: Expecting value: line 1 column 1 (char 0)'
+  time_taken: 21.12
   points: 3
   earned_points: 0
   success: false
@@ -407,8 +403,8 @@ results:
   answer: 0
   correct_answer: 3
   is_correct: false
-  reasoning: ''
-  time_taken: 22.95
+  reasoning: '파싱 실패: Expecting value: line 1 column 1 (char 0)'
+  time_taken: 21.05
   points: 3
   earned_points: 0
   success: false
@@ -418,8 +414,8 @@ results:
   answer: 0
   correct_answer: 3
   is_correct: false
-  reasoning: ''
-  time_taken: 23.43
+  reasoning: '파싱 실패: Expecting value: line 1 column 1 (char 0)'
+  time_taken: 32.68
   points: 3
   earned_points: 0
   success: false
@@ -429,8 +425,8 @@ results:
   answer: 0
   correct_answer: 4
   is_correct: false
-  reasoning: ''
-  time_taken: 27.72
+  reasoning: '파싱 실패: Expecting value: line 1 column 1 (char 0)'
+  time_taken: 24.47
   points: 4
   earned_points: 0
   success: false
@@ -440,8 +436,8 @@ results:
   answer: 0
   correct_answer: 5
   is_correct: false
-  reasoning: ''
-  time_taken: 18.03
+  reasoning: '파싱 실패: Expecting value: line 1 column 1 (char 0)'
+  time_taken: 16.18
   points: 4
   earned_points: 0
   success: false
@@ -451,8 +447,8 @@ results:
   answer: 0
   correct_answer: 4
   is_correct: false
-  reasoning: ''
-  time_taken: 20.04
+  reasoning: '파싱 실패: Expecting value: line 1 column 1 (char 0)'
+  time_taken: 29.3
   points: 4
   earned_points: 0
   success: false
@@ -462,9 +458,9 @@ results:
   answer: 3
   correct_answer: 5
   is_correct: false
-  reasoning: 벡터 a = (b, 3), 벡터 b = (1, 2) 이므로 3b = (3, 6). 따라서 a + 3b = (b, 3) + (3,
-    6) = (b + 3, 9). 이것이 (6, 9)와 같으려면 b + 3 = 6이 되어 b = 3이다.
-  time_taken: 4.3
+  reasoning: 벡터 b=(1,2)이므로 3b=(3,6)이다. a=(b,3)이므로 a+3b=(b+3, 3+6)=(b+3, 9)이다. 이것이
+    (6,9)와 같으므로 첫째 성분에서 b+3=6 → b=3이다.
+  time_taken: 7.04
   points: 2
   earned_points: 0
   success: true
@@ -474,32 +470,32 @@ results:
   answer: 4
   correct_answer: 3
   is_correct: false
-  reasoning: 꼭지점이 (1,0)이고 준선이 x = -1인 포물선은 축이 x축과 평행하며, 꼭지점에서 준선까지의 거리는 p이므로 1 - p
-    = -1에서 p = 2이다. 따라서 방정식은 (y - 0)^2 = 4p(x - 1) = 8(x - 1). 점 (3, a)를 대입하면 a^2
-    = 8(3 - 1) = 16이므로 양수 a = 4이다.
-  time_taken: 16.29
+  reasoning: 포물선의 꼭짓점이 (1,0)이고 준선이 x=-1이므로 h-p=-1에서 p=2이다. 따라서 축은 x축 방향이며 방정식은 (y-0)^2=4p(x-1)=8(x-1)이
+    된다. 점 (3,a)를 대입하면 a^2=8(3-1)=16이므로 양수 a=4이다.
+  time_taken: 17.5
   points: 3
   earned_points: 0
   success: true
   error: null
 - question_id: q25
   question_number: 25
-  answer: 0
+  answer: 3
   correct_answer: 3
-  is_correct: false
-  reasoning: ''
-  time_taken: 18.31
+  is_correct: true
+  reasoning: 내분점 P는 AP:PB=3:2이므로 P=(2A+3B)/5. x_P=(2a-12)/5=0, y_P=(2b-6)/5=0에서 a=6,
+    b=3. 외분점 Q는 AP:QB=3:2이므로 Q=(3B-2A)/(3-2)=3B-2A. z_Q=3c-12=0에서 c=4. 따라서 a+b+c=6+3+4=13.
+  time_taken: 12.22
   points: 3
-  earned_points: 0
-  success: false
-  error: 'JSON 파싱 실패: Expecting value: line 1 column 1 (char 0)'
+  earned_points: 3
+  success: true
+  error: null
 - question_id: q26
   question_number: 26
   answer: 0
   correct_answer: 3
   is_correct: false
-  reasoning: ''
-  time_taken: 19.75
+  reasoning: '파싱 실패: Expecting value: line 1 column 1 (char 0)'
+  time_taken: 39.82
   points: 3
   earned_points: 0
   success: false
@@ -509,8 +505,8 @@ results:
   answer: 0
   correct_answer: 3
   is_correct: false
-  reasoning: ''
-  time_taken: 37.07
+  reasoning: '파싱 실패: Expecting value: line 1 column 1 (char 0)'
+  time_taken: 27.12
   points: 3
   earned_points: 0
   success: false
@@ -520,8 +516,8 @@ results:
   answer: 0
   correct_answer: 4
   is_correct: false
-  reasoning: ''
-  time_taken: 18.34
+  reasoning: '파싱 실패: Expecting value: line 1 column 1 (char 0)'
+  time_taken: 22.67
   points: 4
   earned_points: 0
   success: false
@@ -531,8 +527,8 @@ results:
   answer: 0
   correct_answer: 5
   is_correct: false
-  reasoning: ''
-  time_taken: 25.81
+  reasoning: '파싱 실패: Expecting value: line 1 column 1 (char 0)'
+  time_taken: 21.63
   points: 4
   earned_points: 0
   success: false
@@ -542,8 +538,8 @@ results:
   answer: 0
   correct_answer: 4
   is_correct: false
-  reasoning: ''
-  time_taken: 29.28
+  reasoning: '파싱 실패: Expecting value: line 1 column 1 (char 0)'
+  time_taken: 25.24
   points: 4
   earned_points: 0
   success: false
