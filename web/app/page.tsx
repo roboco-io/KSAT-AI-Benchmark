@@ -159,7 +159,7 @@ export default function Home() {
                                           </div>
                                         </Table.Td>
                                         <Table.Td>
-                                          <Text size="sm" lineClamp={2} style={{ maxWidth: '400px' }}>
+                                          <Text size="sm" style={{ whiteSpace: 'pre-wrap', maxWidth: '500px' }}>
                                             {q.reasoning || '풀이 정보 없음'}
                                           </Text>
                                         </Table.Td>
