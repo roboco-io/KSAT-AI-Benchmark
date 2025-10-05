@@ -173,6 +173,7 @@ def main():
             
             # API 키 가져오기
             provider = model_config['provider']
+            model_id = model_config.get('model_id', args.model)  # model_id가 없으면 name 사용
             api_key_var = f"{provider.upper()}_API_KEY"
             api_key = os.getenv(api_key_var)
             
@@ -180,12 +181,14 @@ def main():
                 print(f"❌ 오류: {api_key_var} 환경변수가 설정되지 않았습니다.")
                 sys.exit(1)
             
-            # 모델 생성
+            # 모델 생성 (model_id 사용)
             model = evaluator.create_model(
                 provider=provider,
-                model_name=args.model,
+                model_name=model_id,  # API용 실제 model_id 전달
                 api_key=api_key
             )
+            # 표시용 이름
+            model.display_name = args.model
             
             # 평가 실행
             evaluator.evaluate_exam(

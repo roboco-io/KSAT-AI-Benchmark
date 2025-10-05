@@ -248,6 +248,7 @@ class Evaluator:
         for model_config in models:
             provider = model_config['provider']
             model_name = model_config['name']
+            model_id = model_config.get('model_id', model_name)  # model_id가 없으면 name 사용
             
             # API 키 가져오기
             api_key_var = f"{provider.upper()}_API_KEY"
@@ -258,12 +259,14 @@ class Evaluator:
                 continue
             
             try:
-                # 모델 생성
+                # 모델 생성 (model_id를 전달)
                 model = self.create_model(
                     provider=provider,
-                    model_name=model_name,
+                    model_name=model_id,  # API용 실제 model_id 전달
                     api_key=api_key
                 )
+                # 표시용 이름은 model_name 사용
+                model.display_name = model_name
                 
                 # 평가 실행
                 result = self.evaluate_exam(exam_path, model)

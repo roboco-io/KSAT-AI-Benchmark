@@ -61,11 +61,23 @@
       "enabled": true
     },
     {
-      "name": "claude-3-5-sonnet-20241022",
+      "name": "claude-opus-4-1",
+      "provider": "anthropic",
+      "model_id": "claude-opus-4-1-20250805",
+      "version": "2025-08",
+      "description": "Anthropic Claude Opus 4.1 - 에이전트 작업, 코딩, 추론 능력 대폭 강화",
+      "api_key_env": "ANTHROPIC_API_KEY",
+      "max_tokens": 8192,
+      "temperature": 0.3,
+      "timeout": 60,
+      "enabled": true
+    },
+    {
+      "name": "claude-3-5-sonnet",
       "provider": "anthropic",
       "model_id": "claude-3-5-sonnet-20241022",
       "version": "2024-10",
-      "description": "Anthropic Claude 3.5 Sonnet - 최신 버전",
+      "description": "Anthropic Claude 3.5 Sonnet - 속도와 정확도 균형, 코딩 능력 우수",
       "api_key_env": "ANTHROPIC_API_KEY",
       "max_tokens": 8192,
       "temperature": 0.3,

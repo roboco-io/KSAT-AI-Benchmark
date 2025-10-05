@@ -2,31 +2,42 @@
   "leaderboard": [
     {
       "model_name": "gpt-4o",
-      "accuracy": 50.91,
-      "score_rate": 45.61,
-      "total_score": 78,
-      "max_score": 171,
-      "total_questions": 55,
-      "correct_answers": 28,
-      "avg_time": 4.57,
-      "exams_count": 2
+      "accuracy": 45.65,
+      "score_rate": 42.11,
+      "total_score": 64,
+      "max_score": 152,
+      "total_questions": 46,
+      "correct_answers": 21,
+      "avg_time": 4.94,
+      "exams_count": 1
+    },
+    {
+      "model_name": "claude-opus-4-1-20250805",
+      "accuracy": 18.37,
+      "score_rate": 18.18,
+      "total_score": 22,
+      "max_score": 121,
+      "total_questions": 49,
+      "correct_answers": 9,
+      "avg_time": 11.73,
+      "exams_count": 1
     },
     {
       "model_name": "gpt-5",
-      "accuracy": 21.82,
-      "score_rate": 18.13,
-      "total_score": 31,
-      "max_score": 171,
-      "total_questions": 55,
-      "correct_answers": 12,
-      "avg_time": 20.11,
-      "exams_count": 2
+      "accuracy": 15.22,
+      "score_rate": 13.82,
+      "total_score": 21,
+      "max_score": 152,
+      "total_questions": 46,
+      "correct_answers": 7,
+      "avg_time": 20.2,
+      "exams_count": 1
     }
   ],
   "stats": {
     "totalExams": 2,
-    "totalEvaluations": 4,
-    "totalQuestions": 110
+    "totalEvaluations": 3,
+    "totalQuestions": 141
   },
   "results": [
     {
@@ -1260,32 +1271,32 @@
       ]
     },
     {
-      "exam_id": "2025-korean-sat-sample",
-      "exam_title": "2025학년도 수능 국어영역 (샘플 - 첫 3페이지)",
+      "exam_id": "2025-korean-sat",
+      "exam_title": "2025학년도 수능 KOREAN",
       "subject": "korean",
-      "model_name": "gpt-5",
-      "evaluated_at": "2025-10-05T22:51:30.596048",
+      "model_name": "claude-opus-4-1-20250805",
+      "evaluated_at": "2025-10-06T00:20:34.153279",
       "summary": {
-        "total_questions": 9,
-        "correct_answers": 5,
-        "accuracy": 55.56,
-        "total_score": 10,
-        "max_score": 19,
-        "score_rate": 52.63
+        "total_questions": 49,
+        "correct_answers": 9,
+        "accuracy": 18.37,
+        "total_score": 22,
+        "max_score": 121,
+        "score_rate": 18.18
       },
       "results": [
         {
           "question_id": "q1",
           "question_number": 1,
-          "answer": 3,
+          "answer": 0,
           "correct_answer": 3,
-          "is_correct": true,
-          "reasoning": "지문은 밑줄 긋기가 일반적 독서와 학습 상황에서 유용하고(‘일반적인 독서 상황뿐 아니라 학습 상황에서도 유용’), 표시한 부분이 시각적 단서가 되어 회상에 도움을 주며(‘시각적 자극… 떠올리는 데 단서’), 색인처럼 작동해 다시 찾아보기에 용이하다고 했다(‘일종의 색인… 다시 찾아보는 데 용이’). 또한 밑줄 이외의 기호를 쓰는 개인 표시 체계도 가능하다고 명시했다(‘밑줄 이외에 다른 기호도 사용할 수 있다’). 반면 ‘누구나 연습 없이도 능숙하게 사용할 수 있다’는 내용은 지문에서 그런 오해가 있었으나 본질적으로 단순하지 않다고 반박하므로 일치하지 않는다.",
-          "time_taken": 12.86,
+          "is_correct": false,
+          "reasoning": "문제를 해결하기 위한 지문이 제공되지 않아 답을 선택할 수 없습니다. '윗글'에 해당하는 본문을 제공해 주시면 밑줄 긋기에 대한 내용을 분석하여 일치하지 않는 선택지를 찾아드리겠습니다.",
+          "time_taken": 8.06,
           "points": 2,
-          "earned_points": 2,
-          "success": true,
-          "error": null
+          "earned_points": 0,
+          "success": false,
+          "error": "유효하지 않은 답"
         },
         {
           "question_id": "q2",
@@ -1293,235 +1304,621 @@
           "answer": 4,
           "correct_answer": 4,
           "is_correct": true,
-          "reasoning": "지문은 효과적인 밑줄 긋기 방법으로 ① 중요도 판단 전에는 밑줄을 잠시 미루고 주요 정보에만 밑줄을 긋을 것, ② 독자 스스로 표시 체계를 만들어 밑줄 외 기호나 번호 등을 활용할 것을 제시한다. 4번은 ‘자신이 만든 밑줄 긋기 표시 체계에 따라 주요 정보를 추리는’ 방법으로 지문의 권고와 정확히 일치한다. 반면 1번은 밑줄이 많아지면 효과가 줄어든다는 지문과 배치되고, 2번은 밑줄을 아예 하지 말라는 내용으로 지문의 ‘유용성’ 및 ‘잠시 늦춘 뒤 수행’과 어긋난다. 3번은 잘못 표시를 되돌리느라 독서 흐름이 방해된다는 지문과 반대이며, 5번은 바로바로 밑줄을 긋는 방식으로 ‘상대적 중요도 판단 후 밑줄’이라는 지침에 어긋난다.",
-          "time_taken": 11.86,
-          "points": 2,
-          "earned_points": 2,
+          "reasoning": "효과적인 독서와 학습 전략에서는 체계적인 밑줄 긋기를 권장합니다. 자신만의 밑줄 긋기 표시 체계(예: 주제문-직선, 근거-물결선, 예시-점선 등)를 만들어 사용하면 나중에 글을 다시 읽을 때 정보의 성격과 중요도를 빠르게 파악할 수 있습니다. 이는 일반적으로 권장되는 효과적인 독서 전략입니다.",
+          "time_taken": 14.16,
+          "points": 3,
+          "earned_points": 3,
           "success": true,
           "error": null
         },
         {
           "question_id": "q3",
           "question_number": 3,
-          "answer": 2,
+          "answer": 0,
           "correct_answer": 5,
           "is_correct": false,
-          "reasoning": "지문은 밑줄 긋기를 효과적으로 하기 위해 ‘자신만의 밑줄 긋기 표시 체계’를 세우고, 밑줄 이외에도 기호를 사용할 수 있으며, 예로 ‘하나의 기준으로 묶을 수 있는 정보들에 동일한 기호를 붙이거나 순차적인 번호를 붙이는 것’을 제시한다. 따라서 1문단에서 순차적인 번호로 표시한 것을 ‘적절하지 않다’고 평가하는 2번은 지문의 원칙과 직접 배치되어 부적절한 평가이다. 반면 다른 선택지들은 독서 목적에 따른 주요 정보 선택, 누락 지적 등 지문에서 제시한 원칙(독서 목적 고려, 상대적 중요도 판단, 표시의 체계성)과 충돌한다고 단정할 근거가 부족하므로, 지문과 명백히 어긋나는 것은 2번이다.",
-          "time_taken": 15.98,
+          "reasoning": "이 문제를 정확히 풀기 위해서는 반드시 '윗글'의 내용과 학생이 실제로 어떻게 밑줄을 그었는지에 대한 정보가 필요합니다. 원문과 학생의 밑줄 긋기 결과 없이는 어떤 평가가 적절하거나 적절하지 않은지 판단할 수 없습니다. 문제 해결을 위해 누락된 지문과 밑줄 긋기 예시를 제공해 주시기 바랍니다.",
+          "time_taken": 12.28,
           "points": 3,
+          "earned_points": 0,
+          "success": false,
+          "error": "유효하지 않은 답"
+        },
+        {
+          "question_id": "q4",
+          "question_number": 4,
+          "answer": 3,
+          "correct_answer": 4,
+          "is_correct": false,
+          "reasoning": "선택지 3번의 '과학의 문제로 하락하고'라는 표현이 문법적으로 어색하며, '하락'이라는 단어 사용이 부적절해 보입니다. 일반적으로 '환원하다', '귀결시키다', '간주하다' 등의 표현이 더 적절할 것입니다. 또한 '과학적 승리'라는 표현도 맥락상 어색합니다. 다른 선택지들은 개항 이후 서양 과학 수용, 유학의 재구성, 과학 정신과 경제적 변혁, 전통 가치와 근대 과학의 관계 등 한국 근대화 과정에서 실제로 논의되었을 법한 주제들을 다루고 있어 상대적으로 자연스럽습니다. 하지만 정확한 답변을 위해서는 반드시 원문 지문을 확인해야 합니다.",
+          "time_taken": 9.87,
+          "points": 2,
           "earned_points": 0,
           "success": true,
           "error": null
         },
         {
-          "question_id": "q4",
-          "question_number": 4,
-          "answer": 0,
-          "correct_answer": 4,
-          "is_correct": false,
-          "reasoning": "",
-          "time_taken": 28.27,
-          "points": 2,
-          "earned_points": 0,
-          "success": false,
-          "error": "JSON 파싱 실패: Expecting value: line 1 column 1 (char 0)"
-        },
-        {
           "question_id": "q5",
           "question_number": 5,
-          "answer": 0,
+          "answer": 3,
           "correct_answer": 5,
           "is_correct": false,
-          "reasoning": "",
-          "time_taken": 23.59,
+          "reasoning": "3번 선택지는 문법적으로 심각한 오류가 있어 의미 파악이 어렵습니다. '첫 인식이 계획 개념은'이라는 주어 구조가 비문법적이며, '왕을 제외의 첫 목표로'라는 표현도 '제외의'라는 잘못된 조사 사용으로 인해 의미가 불명확합니다. 다른 선택지들은 다소 어색한 표현이 있더라도 의미 전달이 가능한 반면, 3번은 문장 구조 자체가 성립하지 않아 계획 개념에 대한 적절한 설명이라고 볼 수 없습니다.",
+          "time_taken": 15.71,
           "points": 2,
           "earned_points": 0,
-          "success": false,
-          "error": "JSON 파싱 실패: Expecting value: line 1 column 1 (char 0)"
+          "success": true,
+          "error": null
         },
         {
           "question_id": "q6",
           "question_number": 6,
-          "answer": 3,
+          "answer": 4,
           "correct_answer": 3,
-          "is_correct": true,
-          "reasoning": "(나)에서 천두슈는 ‘제1차 세계 대전의 비극은 과학을 이용해 저지른 죄악의 결과일 뿐 과학 자체의 죄악이 아니다’라고 하며 과학 자체(특히 과학적 방법)를 부정하지 않았다. 또한 사회와 인간 연구에도 과학적 방법을 적용해야 한다고 보았다. 장쥔마이는 통제되지 않은 과학의 역작용을 비판하면서도 ‘과학적 방법을 부정하지는’ 않았고, 다만 인생관 문제에는 과학적 방법을 적용할 수 없다고 한정했다. 두 사람 모두 ‘과학을 사용하는 과정에서 문제가 발생하더라도 과학(과학적 방법) 자체를 부정할 수 없다’는 점에서 합치하므로 3이 가장 적절하다.",
-          "time_taken": 22.24,
+          "is_correct": false,
+          "reasoning": "제시된 선택지들 중 4번이 '사회의 과학 정신을 전제적으로 도입하면 합법한 국가의 계획을 충실히 목표할 수 있다'는 내용으로, 공동체 구성원들이 과학 정신이라는 공통된 가치관을 바탕으로 국가적 목표를 공유할 수 있다는 점에서 '나', '친구들', '장래희망'의 동일성과 가장 연관될 수 있습니다. 다른 선택지들은 문장 구조가 불완전하거나 주제와의 연관성이 더욱 불명확합니다.",
+          "time_taken": 15.77,
           "points": 2,
-          "earned_points": 2,
+          "earned_points": 0,
           "success": true,
           "error": null
         },
         {
           "question_id": "q7",
           "question_number": 7,
-          "answer": 3,
+          "answer": 0,
           "correct_answer": 3,
-          "is_correct": true,
-          "reasoning": "㉠은 박은식의 입장으로, 문명의 물질적 측면(과학)은 서양에서 수용하되 정신적 측면(철학)은 유학을 혁신해 재구성해야 하며, ‘생존과 편리 증진을 위해 과학 연구가 시급’하다고 한 대목이 명시되어 있다. ㉡은 천두슈 등 신문화운동 지식인의 입장으로, ‘과학의 근거 위에서만 민주 정치의 실현이 가능’하고 ‘사상이나 철학이 과학의 방법을 이용하지 않으면 공상에 그칠 뿐’이라며 비과학적 사상·철학을 부정했다. 따라서 ㉠은 과학 연구의 시급성을, ㉡은 과학 방법에 영향 받지 않는 사상·철학의 부정을 말하므로 3이 가장 적절하다.",
-          "time_taken": 23.89,
+          "is_correct": false,
+          "reasoning": "",
+          "time_taken": 10.68,
           "points": 2,
-          "earned_points": 2,
-          "success": true,
-          "error": null
+          "earned_points": 0,
+          "success": false,
+          "error": "int() argument must be a string, a bytes-like object or a real number, not 'NoneType'"
         },
         {
           "question_id": "q8",
           "question_number": 8,
-          "answer": 0,
-          "correct_answer": 2,
-          "is_correct": false,
-          "reasoning": "",
-          "time_taken": 28.67,
-          "points": 2,
-          "earned_points": 0,
-          "success": false,
-          "error": "JSON 파싱 실패: Expecting value: line 1 column 1 (char 0)"
+          "answer": 3,
+          "correct_answer": 3,
+          "is_correct": true,
+          "reasoning": "3번 선택지는 '계획에 푸바리러지 보였다'라는 명백히 비문법적이고 의미를 알 수 없는 표현을 포함하고 있습니다. '푸바리러지'는 한국어 단어가 아니며, 이는 오타나 오류로 보입니다. 또한 전체 문장 구조도 '공론이론의 자본관계에 인식 계획을 가부로 전쟁을 위한 합리성이'라는 부분에서 주어와 서술어의 관계가 불명확하고 문법적으로 성립하지 않습니다. 따라서 이 선택지가 '적절하지 않은 것'에 해당합니다.",
+          "time_taken": 14.64,
+          "points": 3,
+          "earned_points": 3,
+          "success": true,
+          "error": null
         },
         {
           "question_id": "q9",
           "question_number": 9,
-          "answer": 2,
+          "answer": 0,
           "correct_answer": 2,
-          "is_correct": true,
-          "reasoning": "지문에서 ⓐ는 '공상(空想)에 그칠 뿐'에서 쓰였으며, 이는 어떤 일이 더 나아가지 못하고 '…에 머무르다/한정되다'라는 의미다. 선택지 2의 '우리 학교는 이번에 16강에 그쳤다' 역시 성과가 16강에 '머무르다(한정되다)'는 뜻으로 쓰여 문맥상 의미가 가장 가깝다. 나머지 선택지(1, 3, 4, 5)는 '그치다'가 '멈추다/중단되다'의 의미로 쓰였다.",
-          "time_taken": 9.28,
+          "is_correct": false,
+          "reasoning": "",
+          "time_taken": 6.93,
           "points": 2,
-          "earned_points": 2,
-          "success": true,
-          "error": null
-        }
-      ]
-    },
-    {
-      "exam_id": "2025-korean-sat-sample",
-      "exam_title": "2025학년도 수능 국어영역 (샘플 - 첫 3페이지)",
-      "subject": "korean",
-      "model_name": "gpt-4o",
-      "evaluated_at": "2025-10-05T20:33:11.826091",
-      "summary": {
-        "total_questions": 9,
-        "correct_answers": 7,
-        "accuracy": 77.78,
-        "total_score": 14,
-        "max_score": 19,
-        "score_rate": 73.68
-      },
-      "results": [
+          "earned_points": 0,
+          "success": false,
+          "error": "int() argument must be a string, a bytes-like object or a real number, not 'NoneType'"
+        },
         {
-          "question_id": "q1",
-          "question_number": 1,
+          "question_id": "q10",
+          "question_number": 10,
           "answer": 3,
           "correct_answer": 3,
           "is_correct": true,
-          "reasoning": "지문에서는 밑줄 긋기가 연습 없이 능숙하게 사용할 수 있다고 오해되어 온 경향이 있다고 언급하며, 본질적으로 밑줄 긋기는 주요한 정보가 무엇인지에 대한 판단이 선행되어야 한다고 설명하고 있습니다. 따라서 밑줄 긋기는 누구나 연습 없이도 능숙하게 사용할 수 있는 전략이라는 선택지는 지문 내용과 일치하지 않습니다.",
-          "time_taken": 1.71,
+          "reasoning": "확산 모델에서 노이즈(noise)는 무작위로 추가되는 잡음을 의미하며, 이는 특정한 '주제'를 가지지 않습니다. '노이즈의 주제가 표현의 성능에 미치는 영향'이라는 표현은 개념적으로 잘못되었습니다. 노이즈는 무작위성을 띠는 것이 본질이며, 주제나 의미를 담지 않습니다. 따라서 이 선택지는 확산 모델의 노이즈 개념을 잘못 이해한 것으로, 적절하지 않은 내용입니다.",
+          "time_taken": 17.0,
           "points": 2,
           "earned_points": 2,
           "success": true,
           "error": null
         },
         {
-          "question_id": "q2",
-          "question_number": 2,
-          "answer": 4,
-          "correct_answer": 4,
+          "question_id": "q11",
+          "question_number": 11,
+          "answer": 1,
+          "correct_answer": 1,
           "is_correct": true,
-          "reasoning": "지문에서는 밑줄 긋기의 효과를 높이기 위해 주요한 정보를 추리고, 자신만의 밑줄 긋기 표시 체계를 세워 사용하는 것이 중요하다고 설명하고 있습니다. 선택지 4번은 이러한 내용을 반영하여 '주요한 정보를 추릴 수 있도록 자신이 만든 밑줄 긋기 표시 체계에 따라 밑줄 긋기를 한다'고 제시하고 있어, ㉠에 해당하는 내용으로 가장 적절합니다.",
-          "time_taken": 1.45,
+          "reasoning": "확산 모델의 일반적인 작동 원리를 고려할 때, 노이즈 생성기는 순방향 확산 과정(forward diffusion process)에서 이미지에 점진적으로 노이즈를 추가하는 역할을 합니다. 역확산 과정에서는 노이즈를 제거하는 것이 목적이므로 노이즈 생성기가 작동하지 않습니다. 다른 선택지들은 확산 모델의 원리와 맞지 않습니다: 학습은 역확산 과정 자체가 아닌 훈련 단계에서 이루어지고(2번 오류), 노이즈 예측기는 노이즈를 예측하지 이미지를 출력하지 않으며(3번 오류), 학습 시 정답은 실제 추가된 노이즈이지 예측된 노이즈가 아니고(4번 오류), 역확산 과정에서는 원본과의 유사성이 증가합니다(5번 오류).",
+          "time_taken": 19.89,
           "points": 2,
           "earned_points": 2,
           "success": true,
           "error": null
         },
         {
-          "question_id": "q3",
-          "question_number": 3,
-          "answer": 4,
+          "question_id": "q12",
+          "question_number": 12,
+          "answer": 2,
           "correct_answer": 5,
           "is_correct": false,
-          "reasoning": "지문에서는 밑줄 긋기를 할 때 독서 목적에 따라 주요한 정보를 선택해야 한다고 설명하고 있습니다. 선택지 4번은 '지느러미는 배를 젓는 노와 같은 형태'에 밑줄을 누락했다고 평가하고 있는데, 이는 지문에서 언급된 내용과 관련이 없으며, 독서 목적에 따라 주요한 정보가 달라질 수 있다는 점을 고려하지 않은 평가입니다. 따라서 적절하지 않은 평가입니다.",
-          "time_taken": 2.23,
+          "reasoning": "선택지 2번이 가장 적절하지 않습니다. 확산 모델의 역확산 과정(reverse diffusion process)은 노이즈가 추가된 이미지에서 점진적으로 노이즈를 제거하여 깨끗한 이미지를 생성하는 과정입니다. '출력된 이미지에 노이즈가 더해진다'는 설명은 역확산 과정의 목적과 정반대이며, 실제로는 노이즈를 제거(denoising)하는 과정입니다. 또한 '단편적 예측하는'이라는 표현도 문법적으로 어색하고 의미가 불명확합니다.",
+          "time_taken": 16.28,
+          "points": 2,
+          "earned_points": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "question_id": "q13",
+          "question_number": 13,
+          "answer": 5,
+          "correct_answer": 3,
+          "is_correct": false,
+          "reasoning": "확산 모델에서 노이즈 생성기(Noise Generator)의 역할은 무작위 노이즈를 '생성'하는 것이지 '예측'하는 것이 아닙니다. 노이즈를 예측하는 것은 일반적으로 훈련된 신경망 모델의 역할입니다. 따라서 5번 선택지의 '노이즈 생성기에서 예측한 노이즈'라는 표현은 노이즈 생성기의 기능을 잘못 이해한 것으로 보입니다.",
+          "time_taken": 15.25,
           "points": 3,
           "earned_points": 0,
           "success": true,
           "error": null
         },
         {
-          "question_id": "q4",
-          "question_number": 4,
+          "question_id": "q14",
+          "question_number": 14,
+          "answer": 0,
+          "correct_answer": 1,
+          "is_correct": false,
+          "reasoning": "",
+          "time_taken": 8.28,
+          "points": 2,
+          "earned_points": 0,
+          "success": false,
+          "error": "int() argument must be a string, a bytes-like object or a real number, not 'NoneType'"
+        },
+        {
+          "question_id": "q15",
+          "question_number": 15,
+          "answer": 0,
+          "correct_answer": 2,
+          "is_correct": false,
+          "reasoning": "문제를 분석하기 위해 (다) 지문이 필요합니다. 현재 (다) 지문이 제공되지 않아 정확한 답변을 드릴 수 없습니다.\n\n다만, 선택지들을 보면 인터넷 ID와 자기 정체성의 관계에 대한 다양한 관점을 다루고 있습니다:\n\n1번 - 정체성의 단일성과 고정성\n2번 - ID 접근권의 개인 제한\n3번 - 온라인과 오프라인 정체성의 상호작용\n4번 - 복수 ID를 통한 복합적 정체성 구성\n5번 - ID별 상이한 정체성\n\n정확한 답변을 위해 (다) 지문을 제공해 주시기 바랍니다. 지문 내용을 확인해야 어떤 관점을 취하고 있는지 판단할 수 있습니다.",
+          "time_taken": 7.49,
+          "points": 3,
+          "earned_points": 0,
+          "success": false,
+          "error": "답 추출 실패"
+        },
+        {
+          "question_id": "q16",
+          "question_number": 16,
+          "answer": 0,
+          "correct_answer": 2,
+          "is_correct": false,
+          "reasoning": "",
+          "time_taken": 9.74,
+          "points": 3,
+          "earned_points": 0,
+          "success": false,
+          "error": "int() argument must be a string, a bytes-like object or a real number, not 'NoneType'"
+        },
+        {
+          "question_id": "q17",
+          "question_number": 17,
+          "answer": 1,
+          "correct_answer": 3,
+          "is_correct": false,
+          "reasoning": "지문이 제공되지 않아 정확한 판단이 불가능합니다. 일반적으로 '앙대하다'는 '우러러보다, 존경하다'의 의미로 사용되므로, 원문에서 이와 유사한 의미를 가진 표현을 찾아야 하는데, 현재 제공된 정보만으로는 어떤 표현을 바꿔야 하는지 알 수 없습니다.",
+          "time_taken": 10.41,
+          "points": 3,
+          "earned_points": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "question_id": "q18",
+          "question_number": 18,
+          "answer": 0,
+          "correct_answer": 2,
+          "is_correct": false,
+          "reasoning": "제시된 문제에 지문이 없어 각 선택지의 적절성을 판단할 수 없습니다. 선택지들이 '윗글'을 참조하고 있으나 실제 지문이 제공되지 않았으므로, 내용의 적절성을 평가할 근거가 없습니다. 정확한 답변을 위해서는 관련 지문이 반드시 필요합니다.",
+          "time_taken": 10.58,
+          "points": 2,
+          "earned_points": 0,
+          "success": false,
+          "error": "유효하지 않은 답"
+        },
+        {
+          "question_id": "q19",
+          "question_number": 19,
+          "answer": 0,
+          "correct_answer": 4,
+          "is_correct": false,
+          "reasoning": "",
+          "time_taken": 11.06,
+          "points": 3,
+          "earned_points": 0,
+          "success": false,
+          "error": "int() argument must be a string, a bytes-like object or a real number, not 'NoneType'"
+        },
+        {
+          "question_id": "q20",
+          "question_number": 20,
+          "answer": 5,
+          "correct_answer": 1,
+          "is_correct": false,
+          "reasoning": "5번 선택지의 '기이적으로 알아 누웠겠다는'이라는 표현이 가장 비문법적이고 의미가 불명확합니다. '기이적'이라는 표현은 한국어에서 일반적이지 않으며, '알아 누웠겠다는'도 문법적으로 어색한 구조입니다. 다른 선택지들도 문제가 있지만, 5번이 가장 명백하게 부적절한 표현을 포함하고 있습니다.",
+          "time_taken": 11.26,
+          "points": 3,
+          "earned_points": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "question_id": "q21",
+          "question_number": 21,
+          "answer": 2,
+          "correct_answer": 4,
+          "is_correct": false,
+          "reasoning": "2번 선택지는 문장이 완결되지 않고 '알 수 있고'로 끝나는 명백한 문법적 오류를 포함하고 있습니다. 다른 선택지들도 다소 어색한 표현을 포함하고 있지만, 최소한 완전한 문장 구조를 갖추고 있는 반면, 2번은 문장 자체가 미완성 상태로 끝나 있어 가장 적절하지 않은 선택지입니다.",
+          "time_taken": 11.56,
+          "points": 3,
+          "earned_points": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "question_id": "q22",
+          "question_number": 22,
+          "answer": 0,
+          "correct_answer": 2,
+          "is_correct": false,
+          "reasoning": "죄송하지만 (가)~(다)의 지문이 제공되지 않아 문제를 풀 수 없습니다. \n\n이 문제는 여러 작품이나 텍스트를 비교하여 공통점을 찾는 문제로 보입니다. 정확한 답변을 위해서는 (가), (나), (다)에 해당하는 지문이나 작품의 내용이 필요합니다.\n\n지문을 제공해 주시면 다음과 같은 분석을 통해 답변드리겠습니다:\n- 각 지문의 주요 특징 파악\n- 세 지문의 공통적 요소 분석\n- 선택지와의 연관성 검토\n\n지문을 추가로 제공해 주시기 바랍니다.",
+          "time_taken": 7.57,
+          "points": 3,
+          "earned_points": 0,
+          "success": false,
+          "error": "답 추출 실패"
+        },
+        {
+          "question_id": "q23",
+          "question_number": 23,
+          "answer": 4,
+          "correct_answer": 5,
+          "is_correct": false,
+          "reasoning": "4번 선택지의 '벽과 나누기 쉽게 통한다가 감식 무대가 가려운다'는 문장은 문법적으로 완전히 파괴되어 있고 의미 파악이 불가능합니다. 다른 선택지들도 어색한 표현이 있지만, 4번은 아예 한국어 문장으로서 성립하지 않는 수준입니다. 따라서 (가)에 대한 이해로 가장 적절하지 않은 것은 4번입니다.",
+          "time_taken": 13.22,
+          "points": 2,
+          "earned_points": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "question_id": "q24",
+          "question_number": 24,
+          "answer": 1,
+          "correct_answer": 2,
+          "is_correct": false,
+          "reasoning": "1번 선택지는 '말투에 가까운 있는 매개로 존재이다'라는 비문법적인 표현을 사용하고 있습니다. '가까운 있는'이라는 표현은 한국어 문법에 맞지 않으며, 전체적으로 의미가 불명확합니다. 이는 시의 '당신'에 대한 적절한 설명이 될 수 없으므로 정답입니다.",
+          "time_taken": 14.45,
+          "points": 2,
+          "earned_points": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "question_id": "q25",
+          "question_number": 25,
+          "answer": 2,
+          "correct_answer": 3,
+          "is_correct": false,
+          "reasoning": "2번 선택지는 '상처의 기억, 내 적격..., 당신을 부유하는 발음의 폭포를 침묵을 향수로 치유하고'와 같이 문법적으로 어색하고 의미가 불분명한 표현들로 구성되어 있습니다. '발음의 폭포', '침묵을 향수로 치유' 등의 표현은 논리적 연결성이 부족하고, 전체적으로 문장 구조가 혼란스러워 적절한 작품 감상이라고 보기 어렵습니다.",
+          "time_taken": 14.95,
+          "points": 3,
+          "earned_points": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "question_id": "q26",
+          "question_number": 26,
+          "answer": 0,
+          "correct_answer": 2,
+          "is_correct": false,
+          "reasoning": "",
+          "time_taken": 10.0,
+          "points": 2,
+          "earned_points": 0,
+          "success": false,
+          "error": "int() argument must be a string, a bytes-like object or a real number, not 'NoneType'"
+        },
+        {
+          "question_id": "q27",
+          "question_number": 27,
+          "answer": 4,
+          "correct_answer": 3,
+          "is_correct": false,
+          "reasoning": "문제를 풀기 위한 필수 정보인 (다) 지문과 <보기>가 제공되지 않아 정답을 판단할 수 없습니다. 또한 선택지의 문장들이 불완전하거나 중복되어 있어(2번과 4번) 정확한 분석이 불가능합니다.",
+          "time_taken": 9.75,
+          "points": 3,
+          "earned_points": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "question_id": "q28",
+          "question_number": 28,
+          "answer": 0,
+          "correct_answer": 4,
+          "is_correct": false,
+          "reasoning": "제시된 지문 없이는 서술 방식을 판단할 수 없습니다. 문제를 풀기 위해 필요한 '윗글'이 제공되지 않았으므로 정답을 선택할 수 없습니다.",
+          "time_taken": 7.83,
+          "points": 3,
+          "earned_points": 0,
+          "success": false,
+          "error": "유효하지 않은 답"
+        },
+        {
+          "question_id": "q29",
+          "question_number": 29,
+          "answer": 0,
+          "correct_answer": 3,
+          "is_correct": false,
+          "reasoning": "",
+          "time_taken": 11.02,
+          "points": 2,
+          "earned_points": 0,
+          "success": false,
+          "error": "int() argument must be a string, a bytes-like object or a real number, not 'NoneType'"
+        },
+        {
+          "question_id": "q30",
+          "question_number": 30,
+          "answer": 1,
+          "correct_answer": 5,
+          "is_correct": false,
+          "reasoning": "지문 없이 선택지만으로 판단할 때, 1번의 '실물적 관점에서 서사적 사상을 통해 도식적인 의미로 발전해 간다'는 표현이 가장 비논리적이고 모호합니다. '실물적 관점'과 '서사적 사상'이라는 서로 다른 차원의 개념이 어떻게 연결되어 '도식적 의미'로 발전하는지 설명이 불가능하며, 문장 자체가 의미를 제대로 전달하지 못하고 있습니다. 다른 선택지들도 문제가 있지만, 1번이 가장 명백하게 부적절한 진술로 보입니다.",
+          "time_taken": 13.03,
+          "points": 3,
+          "earned_points": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "question_id": "q31",
+          "question_number": 31,
+          "answer": 3,
+          "correct_answer": 1,
+          "is_correct": false,
+          "reasoning": "모든 선택지가 비문법적이고 의미가 불명확하지만, 3번 선택지가 가장 논리적 일관성이 떨어집니다. '비평적인 연관성이 이해하는 것'이라는 표현 자체가 주어와 서술어의 관계가 성립하지 않으며, '무주무반'이라는 용어와 '실용하고 추상적인'이라는 상반된 개념을 동시에 사용하는 것은 명백한 모순입니다. 또한 '심리라가 된다'는 표현도 문법적으로 성립하지 않습니다. 다른 선택지들도 문제가 있지만, 3번이 가장 심각한 논리적 오류와 문법적 오류를 포함하고 있어 '적절하지 않은 것'에 해당합니다.",
+          "time_taken": 10.21,
+          "points": 3,
+          "earned_points": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "question_id": "q32",
+          "question_number": 32,
+          "answer": 0,
+          "correct_answer": 2,
+          "is_correct": false,
+          "reasoning": "죄송하지만, 제시된 문제를 풀기 위해서는 \"(가)\"에 해당하는 지문이 필요합니다. \n\n현재 문제에서는 \"(가)\"라고만 언급되어 있고 실제 지문 내용이 제공되지 않았습니다. \"(가)\"의 내용을 확인할 수 있도록 지문을 제공해 주시면, 각 선택지가 지문의 특징을 적절하게 설명하는지 분석하여 정확한 답변을 드릴 수 있습니다.\n\n지문을 추가로 제공해 주시기 바랍니다.",
+          "time_taken": 6.03,
+          "points": 3,
+          "earned_points": 0,
+          "success": false,
+          "error": "답 추출 실패"
+        },
+        {
+          "question_id": "q33",
+          "question_number": 33,
+          "answer": 0,
+          "correct_answer": 5,
+          "is_correct": false,
+          "reasoning": "",
+          "time_taken": 7.89,
+          "points": 3,
+          "earned_points": 0,
+          "success": false,
+          "error": "int() argument must be a string, a bytes-like object or a real number, not 'NoneType'"
+        },
+        {
+          "question_id": "q34",
+          "question_number": 34,
+          "answer": 2,
+          "correct_answer": 2,
+          "is_correct": true,
+          "reasoning": "제시된 선택지 중에서 2번이 가장 완전한 문장 구조를 가지고 있으며, 화자의 의도와 작품 해석에 대한 구체적인 설명을 담고 있습니다. 3, 4, 5번은 동일한 내용의 반복이고, 1번은 문장이 불완전합니다. 다만, 원문 지문 없이는 정확한 판단이 어려우므로, 문장의 완성도를 기준으로 판단했습니다.",
+          "time_taken": 21.44,
+          "points": 3,
+          "earned_points": 3,
+          "success": true,
+          "error": null
+        },
+        {
+          "question_id": "q38",
+          "question_number": 38,
           "answer": 4,
           "correct_answer": 4,
           "is_correct": true,
-          "reasoning": "지문에서 (나) 부분은 과학 정신이 사회에 자리 잡기 위해서는 정치적 변혁이 선행되어야 한다는 주장을 제기하지 않았습니다. 오히려 과학 정신이 전제되지 않으면 정치적 변혁이 뿌리내릴 수 없다고 주장하고 있습니다. 따라서 4번 선택지는 지문 내용과 일치하지 않으며 적절하지 않은 이해입니다.",
-          "time_taken": 1.96,
+          "reasoning": "제시된 지문 (가)가 없어 ㉠~㉢이 구체적으로 무엇을 지칭하는지 알 수 없습니다. 정확한 답변을 위해서는 (가) 지문의 내용과 ㉠~㉢이 표시된 부분을 확인해야 합니다. 선택지만으로는 어떤 것이 적절하지 않은 설명인지 판단할 수 없습니다.",
+          "time_taken": 8.76,
           "points": 2,
           "earned_points": 2,
           "success": true,
           "error": null
         },
         {
-          "question_id": "q5",
-          "question_number": 5,
+          "question_id": "q39",
+          "question_number": 39,
+          "answer": 0,
+          "correct_answer": 5,
+          "is_correct": false,
+          "reasoning": "",
+          "time_taken": 9.47,
+          "points": 2,
+          "earned_points": 0,
+          "success": false,
+          "error": "int() argument must be a string, a bytes-like object or a real number, not 'NoneType'"
+        },
+        {
+          "question_id": "q40",
+          "question_number": 40,
+          "answer": 0,
+          "correct_answer": 4,
+          "is_correct": false,
+          "reasoning": "제시된 지문 (가)의 [A]~[D] 내용과 (나)의 실제 내용이 누락되어 있어 정확한 답변이 불가능합니다. 문제를 정확히 풀기 위해서는 반드시 (가)와 (나)의 전체 내용, 그리고 내용 전개 과정이 필요합니다.",
+          "time_taken": 11.79,
+          "points": 3,
+          "earned_points": 0,
+          "success": false,
+          "error": "유효하지 않은 답"
+        },
+        {
+          "question_id": "q41",
+          "question_number": 41,
+          "answer": 0,
+          "correct_answer": 3,
+          "is_correct": false,
+          "reasoning": "",
+          "time_taken": 10.3,
+          "points": 2,
+          "earned_points": 0,
+          "success": false,
+          "error": "int() argument must be a string, a bytes-like object or a real number, not 'NoneType'"
+        },
+        {
+          "question_id": "q42",
+          "question_number": 42,
+          "answer": 1,
+          "correct_answer": 2,
+          "is_correct": false,
+          "reasoning": "문제에서 참조하는 (나)의 5문단 초고와 친구의 조언이 제시되지 않아 정확한 답을 도출할 수 없습니다. 다만 선택지들을 분석해보면, 1번 '학교 구성원 간의 공정성과 신뢰성'이 일반적으로 학교 관련 글에서 중요하게 다뤄지는 주제이며, 친구의 조언으로 추가될 가능성이 높은 내용으로 보입니다. 하지만 이는 추측에 불과하며, 정확한 답변을 위해서는 (나)의 5문단 초고와 친구의 조언 내용이 반드시 필요합니다.",
+          "time_taken": 8.39,
+          "points": 2,
+          "earned_points": 0,
+          "success": true,
+          "error": null
+        },
+        {
+          "question_id": "q43",
+          "question_number": 43,
+          "answer": 0,
+          "correct_answer": 1,
+          "is_correct": false,
+          "reasoning": "",
+          "time_taken": 9.19,
+          "points": 2,
+          "earned_points": 0,
+          "success": false,
+          "error": "int() argument must be a string, a bytes-like object or a real number, not 'NoneType'"
+        },
+        {
+          "question_id": "q44",
+          "question_number": 44,
           "answer": 5,
           "correct_answer": 5,
           "is_correct": true,
-          "reasoning": "지문에 따르면, 󰡔대한매일신보󰡕 등의 개화 개념은 국가 구성원 전체를 실행 주체로 하여 근대 국가 주권을 향해 그들을 조직하고 동원하는 것을 의미했다고 설명하고 있습니다. 이는 국가의 주권과 결부한 개화 개념이 이미 󰡔대한매일신보󰡕 이전에도 존재했음을 시사합니다. 따라서 󰡔대한매일신보󰡕의 발간에 이르러서야 국가의 주권과 결부한 개화 개념이 제기되었다는 선택지는 적절하지 않습니다.",
-          "time_taken": 3.19,
-          "points": 2,
-          "earned_points": 2,
+          "reasoning": "선택지들이 모두 지속 가능한 항공유와 탄소 배출량 감축을 다루고 있는 가운데, 5번이 가장 균형 잡힌 결론을 제시합니다. SAF 사용 확대라는 정책적 제안과 함께 '비행기를 타야 한다면, 되도록 탄소 배출량이 더 적은 항공편을 이용하면 어떨까?'라는 개인 차원의 실천 방안을 의문문 형태로 부드럽게 제안하고 있어, 글의 마무리 부분에 적합한 구조를 갖추고 있습니다.",
+          "time_taken": 15.7,
+          "points": 3,
+          "earned_points": 3,
           "success": true,
           "error": null
         },
         {
-          "question_id": "q6",
-          "question_number": 6,
-          "answer": 3,
-          "correct_answer": 3,
-          "is_correct": true,
-          "reasoning": "지문에서 천두슈는 과학적 방법을 이용하지 않으면 공상에 그칠 뿐이라고 주장하며, 과학의 방법에 근거한 문화가 필요하다고 보았다. 또한, 제1차 세계 대전의 비극은 과학을 이용해 저지른 죄악의 결과일 뿐 과학 자체의 죄악이 아니라고 주장했다. 장쥔마이는 과학적 방법을 부정하지 않았지만, 인생관의 문제에는 과학적 방법이 적용될 수 없다고 지적했다. 두 인물 모두 과학적 방법 자체를 부정하지 않는다는 점에서 동의할 수 있다. 따라서 과학을 이용하는 과정에서 문제가 발생했다고 해도 과학적 방법을 부정할 수 없다는 진술이 가장 적절하다.",
-          "time_taken": 2.63,
-          "points": 2,
-          "earned_points": 2,
-          "success": true,
-          "error": null
-        },
-        {
-          "question_id": "q7",
-          "question_number": 7,
-          "answer": 3,
-          "correct_answer": 3,
-          "is_correct": true,
-          "reasoning": "지문에서 ㉠은 박은식의 견해로, 그는 과학의 물질적 측면을 수용하여 생존과 편리 증진을 강조하면서도 철학의 정신적 측면을 중시하여 인격 수양을 강조하고 있다. 이는 과학 연구의 시급성을 강조하는 입장이다. ㉡은 천두슈의 견해로, 그는 과학의 방법에 근거한 문화의 중요성을 강조하며, 과학적 사유 능력을 중시한다. 이는 과학의 방법에 영향 받지 않는 사상이나 철학을 부인하는 입장이다. 따라서 ㉠과 ㉡의 입장을 가장 잘 설명하는 선택지는 3번이다.",
-          "time_taken": 2.94,
-          "points": 2,
-          "earned_points": 2,
-          "success": true,
-          "error": null
-        },
-        {
-          "question_id": "q8",
-          "question_number": 8,
-          "answer": 3,
-          "correct_answer": 2,
+          "question_id": "q38",
+          "question_number": 38,
+          "answer": 1,
+          "correct_answer": 4,
           "is_correct": false,
-          "reasoning": "(가)에서 박은식은 과학과 철학을 구분하여 과학은 서양으로부터 수용하되 철학은 유학을 혁신하여 재구성해야 한다고 보았습니다. 그는 가치관 정립과 인격 수양을 위해 철학이 필수적이라고 강조했습니다. 따라서 <보기>에서 젊은이들의 자문화에 대한 인식 변화가 가치관 정립을 위한 철학의 부재 때문이라고 보는 것은 박은식의 입장과 부합합니다. 따라서 3번 선택지는 적절하지 않은 반응입니다.",
-          "time_taken": 3.05,
+          "reasoning": "문제에서 <작용 활동>의 구체적인 내용이 제시되지 않아 정확한 분석이 불가능합니다. 다만 일반적인 한국어 자음 교체 현상을 고려할 때, 비음화(ㅂ→ㅁ, ㄷ→ㄴ, ㄱ→ㅇ)나 유음화(ㄴ→ㄹ) 등 다양한 교체 현상이 존재하며, 이들은 조음 위치와 조음 방법이 모두 변하거나 일부만 변하는 경우가 혼재합니다. 따라서 '모두'라는 전칭 명제보다는 일부 사례를 설명하는 1번이 가장 일반적인 답일 가능성이 높습니다. 정확한 답변을 위해서는 <작용 활동>의 구체적인 내용이 필요합니다.",
+          "time_taken": 16.06,
           "points": 2,
           "earned_points": 0,
           "success": true,
           "error": null
         },
         {
-          "question_id": "q9",
-          "question_number": 9,
+          "question_id": "q39",
+          "question_number": 39,
+          "answer": 0,
+          "correct_answer": 5,
+          "is_correct": false,
+          "reasoning": "문제를 풀기 위한 필수 정보인 <보기>와 <자료>가 제시되지 않아 답을 선택할 수 없습니다. 이 문제는 인용 표현과 관련된 문법 문제로 보이며, 정확한 판단을 위해서는 반드시 <보기>의 설명과 <자료>의 예문이 필요합니다.",
+          "time_taken": 10.72,
+          "points": 3,
+          "earned_points": 0,
+          "success": false,
+          "error": "유효하지 않은 답"
+        },
+        {
+          "question_id": "q40",
+          "question_number": 40,
+          "answer": 0,
+          "correct_answer": 4,
+          "is_correct": false,
+          "reasoning": "",
+          "time_taken": 9.57,
+          "points": 2,
+          "earned_points": 0,
+          "success": false,
+          "error": "int() argument must be a string, a bytes-like object or a real number, not 'NoneType'"
+        },
+        {
+          "question_id": "q41",
+          "question_number": 41,
+          "answer": 3,
+          "correct_answer": 3,
+          "is_correct": true,
+          "reasoning": "선택지 3번은 '국제 표준 규제를 제정하는 것이 가능함에 대해 반항을 요청하였습니다'라고 서술되어 있는데, 이는 논리적으로 모순된 표현입니다. 어떤 것이 '가능하다'고 언급하면서 동시에 그것에 대해 '반항을 요청'한다는 것은 의미상 일관성이 없습니다. 또한 문법적으로도 '가능함에 대해 반항을 요청'이라는 표현은 부자연스럽습니다. 따라서 이 설명이 적절하지 않은 것으로 판단됩니다.",
+          "time_taken": 14.81,
+          "points": 2,
+          "earned_points": 2,
+          "success": true,
+          "error": null
+        },
+        {
+          "question_id": "q42",
+          "question_number": 42,
           "answer": 2,
           "correct_answer": 2,
           "is_correct": true,
-          "reasoning": "지문에서 ⓐ '그칠 뿐'이라는 표현은 천두슈가 과학의 방법을 이용하지 않으면 공상에 그칠 뿐이라고 주장한 부분에서 사용되었습니다. 이는 어떤 목표나 이상이 실현되지 못하고 중도에 멈추거나 제한된 상태에 머무른다는 의미로 사용되었습니다. 선택지 중에서 '우리 학교는 이번에 16강에 그쳤다'는 표현이 목표를 달성하지 못하고 중도에 멈춘다는 의미로 ⓐ와 가장 유사한 문맥적 의미를 가지고 있습니다.",
-          "time_taken": 4.94,
+          "reasoning": "영상의 출처를 '글자수 기준으로 제시'한다는 것은 정보 제시 방식으로 적절하지 않습니다. 출처는 일반적으로 URL, 제작자명, 게시 날짜, 플랫폼 등의 정보로 제시되며, 글자수는 출처 제시의 기준이 될 수 없습니다. 이는 논리적으로 타당하지 않은 정보 제시 방식입니다.",
+          "time_taken": 12.53,
           "points": 2,
           "earned_points": 2,
+          "success": true,
+          "error": null
+        },
+        {
+          "question_id": "q43",
+          "question_number": 43,
+          "answer": 0,
+          "correct_answer": 1,
+          "is_correct": false,
+          "reasoning": "",
+          "time_taken": 10.05,
+          "points": 2,
+          "earned_points": 0,
+          "success": false,
+          "error": "int() argument must be a string, a bytes-like object or a real number, not 'NoneType'"
+        },
+        {
+          "question_id": "q44",
+          "question_number": 44,
+          "answer": 0,
+          "correct_answer": 5,
+          "is_correct": false,
+          "reasoning": "",
+          "time_taken": 9.51,
+          "points": 2,
+          "earned_points": 0,
+          "success": false,
+          "error": "int() argument must be a string, a bytes-like object or a real number, not 'NoneType'"
+        },
+        {
+          "question_id": "q45",
+          "question_number": 45,
+          "answer": 1,
+          "correct_answer": 2,
+          "is_correct": false,
+          "reasoning": "1번 선택지의 '음식의 이기적 사용'이라는 표현이 문맥상 부적절하고 비논리적입니다. '세계 음식 체험' 게시판에서 음식 정보 제공의 유용성을 다루면서 '이기적 사용'을 제시한다는 것은 상호 모순되는 내용입니다. 일반적으로 음식 체험 게시판은 정보 공유와 문화 교류를 목적으로 하는데, '이기적 사용'은 이러한 목적과 배치됩니다. 다른 선택지들은 각 게시판의 목적과 기능이 논리적으로 연결되어 있는 반면, 1번만 내용상 일관성이 없습니다.",
+          "time_taken": 13.42,
+          "points": 3,
+          "earned_points": 0,
           "success": true,
           "error": null
         }
@@ -2200,28 +2597,28 @@
         }
       ]
     },
-    "2025-korean-sat-sample": {
-      "exam_id": "2025-korean-sat-sample",
-      "title": "2025학년도 수능 국어영역 (샘플 - 첫 3페이지)",
+    "2025-korean-sat": {
+      "exam_id": "2025-korean-sat",
+      "title": "2025학년도 수능 KOREAN",
       "subject": "korean",
       "year": 2025,
       "parsing_info": {
-        "method": "text",
+        "method": "vision",
         "model": "gpt-4o",
-        "parsed_at": "2025-10-05T15:46:34.369649"
+        "parsed_at": "2025-10-06T00:08:47.744859"
       },
       "questions": [
         {
           "question_id": "q1",
           "question_number": 1,
           "question_text": "윗글의 내용과 일치하지 않는 것은?",
-          "passage": "밑줄 긋기는 일상적으로 유용하게 활용할 수 있는 독서 전략이다. 밑줄 긋기는 정보를 머릿속에 저장하고 기억한 내용을 떠올리는 데 도움이 된다. 독자로 하여금 표시한 부분에 주의를 기울이도록 해 정보를 머릿속에 저장하도록 돕고, 표시한 부분이 독자에게 시각적 자극을 주어 기억한 내용을 떠올리는 데 단서가 되기 때문이다. 이러한 점에서 밑줄 긋기는 일반적인 독서 상황뿐 아니라 학습 상황에서도 유용하다. 또한 밑줄 긋기는 방대한 정보들 가운데 주요한 정보를 추리는 데에도 효과적이며, 표시한 부분이 일종의 색인과 같은 역할을 하여 독자가 내용을 다시 찾아보는 데에도 용이하다. 통상적으로 독자는 글을 읽는 중에 바로바로 밑줄 긋기를 한다. 그러다 보면 밑줄이 많아지고 복잡해져 밑줄 긋기의 효과가 줄어든다. 또한 밑줄 긋기를 신중하게 하지 않으면 잘못 표시한 밑줄을 삭제하기 위해 되돌아가느라 독서의 흐름이 방해받게 되므로 효과적으로 밑줄 긋기를 하는 것이 중요하다. 밑줄 긋기의 효과를 얻기 위한 방법에는 몇 가지가 있다. 우선 글을 읽는 중에는 문장이나 문단에 나타난 정보 간의 상대적 중요도를 결정할 때까지 밑줄 긋기를 잠시 늦추었다가 주요한 정보에 밑줄 긋기를 한다. 이때 주요한 정보는 독서 목적에 따라 달라질 수 있다는 점을 고려한다. 또한 자신만의 밑줄 긋기 표시 체계를 세워 밑줄 이외에 다른 기호도 사용할 수 있다. 밑줄 긋기 표시 체계는 밑줄 긋기가 필요한 부분에 특정 기호를 사용하여 표시하기로 독자가 미리 정해 놓는 것이다. 예를 들면 하나의 기준으로 묶을 수 있는 정보들에 동일한 기호를 붙이거나 순차적인 번호를 붙이기로 하는 것 등이다. 이는 기본적인 밑줄 긋기를 확장한 방식이라 할 수 있다. 밑줄 긋기는 어떠한 수준의 독자라도 쉽게 사용할 수 있다는 점 때문에 연습 없이 능숙하게 사용할 수 있다고 오해되어 온 경향이 있다. 그러나 본질적으로 밑줄 긋기는 주요한 정보가 무엇인지에 대한 판단이 선행되어야 한다는 점에서 단순하지 않다. ㉠밑줄 긋기의 방법을 이해하고 잘 사용하는 것은 글을 능동적으로 읽어 나가는 데 도움이 될 수 있다.",
+          "passage": "",
           "choices": [
             "밑줄 긋기는 일반적인 독서 상황에서 도움이 된다.",
-            "밑줄 이외의 다른 기호를 밑줄 긋기에 사용하는 것이 가능하다.",
-            "밑줄 긋기는 누구나 연습 없이도 능숙하게 사용할 수 있는 전략이다.",
+            "밑줄 긋기의 기초로 밑줄 긋기에 사용하는 것이 가능하다.",
+            "밑줄 긋기는 누구나 쉽게 따라 할 수 있는 전략이다.",
             "밑줄 긋기로 표시한 부분은 독자가 내용을 다시 찾아보는 데 유용하다.",
-            "밑줄 긋기로 표시한 부분이 독자에게 시각적인 자극을 주어 기억한 내용을 떠올리는 데 도움이 된다."
+            "밑줄 긋기로 표시한 부분이 독서에서 시각적인 자극을 주어 기억할 내용을 떠올리는 데 도움이 된다."
           ],
           "correct_answer": 3,
           "points": 2,
@@ -2230,30 +2627,30 @@
         {
           "question_id": "q2",
           "question_number": 2,
-          "question_text": "㉠에 해당하는 내용으로 가장 적절한 것은?",
-          "passage": "밑줄 긋기는 일상적으로 유용하게 활용할 수 있는 독서 전략이다. 밑줄 긋기는 정보를 머릿속에 저장하고 기억한 내용을 떠올리는 데 도움이 된다. 독자로 하여금 표시한 부분에 주의를 기울이도록 해 정보를 머릿속에 저장하도록 돕고, 표시한 부분이 독자에게 시각적 자극을 주어 기억한 내용을 떠올리는 데 단서가 되기 때문이다. 이러한 점에서 밑줄 긋기는 일반적인 독서 상황뿐 아니라 학습 상황에서도 유용하다. 또한 밑줄 긋기는 방대한 정보들 가운데 주요한 정보를 추리는 데에도 효과적이며, 표시한 부분이 일종의 색인과 같은 역할을 하여 독자가 내용을 다시 찾아보는 데에도 용이하다. 통상적으로 독자는 글을 읽는 중에 바로바로 밑줄 긋기를 한다. 그러다 보면 밑줄이 많아지고 복잡해져 밑줄 긋기의 효과가 줄어든다. 또한 밑줄 긋기를 신중하게 하지 않으면 잘못 표시한 밑줄을 삭제하기 위해 되돌아가느라 독서의 흐름이 방해받게 되므로 효과적으로 밑줄 긋기를 하는 것이 중요하다. 밑줄 긋기의 효과를 얻기 위한 방법에는 몇 가지가 있다. 우선 글을 읽는 중에는 문장이나 문단에 나타난 정보 간의 상대적 중요도를 결정할 때까지 밑줄 긋기를 잠시 늦추었다가 주요한 정보에 밑줄 긋기를 한다. 이때 주요한 정보는 독서 목적에 따라 달라질 수 있다는 점을 고려한다. 또한 자신만의 밑줄 긋기 표시 체계를 세워 밑줄 이외에 다른 기호도 사용할 수 있다. 밑줄 긋기 표시 체계는 밑줄 긋기가 필요한 부분에 특정 기호를 사용하여 표시하기로 독자가 미리 정해 놓는 것이다. 예를 들면 하나의 기준으로 묶을 수 있는 정보들에 동일한 기호를 붙이거나 순차적인 번호를 붙이기로 하는 것 등이다. 이는 기본적인 밑줄 긋기를 확장한 방식이라 할 수 있다. 밑줄 긋기는 어떠한 수준의 독자라도 쉽게 사용할 수 있다는 점 때문에 연습 없이 능숙하게 사용할 수 있다고 오해되어 온 경향이 있다. 그러나 본질적으로 밑줄 긋기는 주요한 정보가 무엇인지에 대한 판단이 선행되어야 한다는 점에서 단순하지 않다. ㉠밑줄 긋기의 방법을 이해하고 잘 사용하는 것은 글을 능동적으로 읽어 나가는 데 도움이 될 수 있다.",
+          "question_text": "②에 해당하는 내용으로 가장 적절한 것은?",
+          "passage": "",
           "choices": [
-            "글을 다시 읽을 때를 대비해서 되도록 많은 부분에 밑줄 긋기를 하며 읽는다.",
+            "글을 다시 읽을 때 대비해서 되도록 많은 부분에 밑줄 긋기를 해야 한다.",
             "글 전체에 주의를 기울일 수 있도록 글을 읽고 있을 때에는 밑줄 긋기를 하지 않는다.",
-            "정보의 중요도를 판정하기 어려우면 우선 밑줄 긋기를 한 후 잘못 그은 밑줄을 삭제한다.",
-            "주요한 정보를 추릴 수 있도록 자신이 만든 밑줄 긋기 표시 체계에 따라 밑줄 긋기를 한다.",
-            "글에 반복되는 어휘나 의미가 비슷한 문장이 나올 때마다 바로바로 밑줄 긋기를 하며 글을 읽는다."
+            "정보의 중요도를 판별하기 어려우면 우선 밑줄 긋기를 한 후 중요한 내용을 선택한다.",
+            "주요한 정보를 찾을 수 있도록 자신이 만든 밑줄 긋기 표시 체계에 따라 밑줄 긋기를 한다.",
+            "글에 반복되는 어휘나 의미가 비슷한 문장이 나올 때마다 바꿔가며 밑줄 긋기를 하며 글을 읽는다."
           ],
           "correct_answer": 4,
-          "points": 2,
+          "points": 3,
           "explanation": null
         },
         {
           "question_id": "q3",
           "question_number": 3,
-          "question_text": "윗글을 바탕으로 학생이 다음과 같이 밑줄 긋기를 했다고 할 때, 이에 대한 평가로 적절하지 않은 것은?",
-          "passage": "밑줄 긋기는 일상적으로 유용하게 활용할 수 있는 독서 전략이다. 밑줄 긋기는 정보를 머릿속에 저장하고 기억한 내용을 떠올리는 데 도움이 된다. 독자로 하여금 표시한 부분에 주의를 기울이도록 해 정보를 머릿속에 저장하도록 돕고, 표시한 부분이 독자에게 시각적 자극을 주어 기억한 내용을 떠올리는 데 단서가 되기 때문이다. 이러한 점에서 밑줄 긋기는 일반적인 독서 상황뿐 아니라 학습 상황에서도 유용하다. 또한 밑줄 긋기는 방대한 정보들 가운데 주요한 정보를 추리는 데에도 효과적이며, 표시한 부분이 일종의 색인과 같은 역할을 하여 독자가 내용을 다시 찾아보는 데에도 용이하다. 통상적으로 독자는 글을 읽는 중에 바로바로 밑줄 긋기를 한다. 그러다 보면 밑줄이 많아지고 복잡해져 밑줄 긋기의 효과가 줄어든다. 또한 밑줄 긋기를 신중하게 하지 않으면 잘못 표시한 밑줄을 삭제하기 위해 되돌아가느라 독서의 흐름이 방해받게 되므로 효과적으로 밑줄 긋기를 하는 것이 중요하다. 밑줄 긋기의 효과를 얻기 위한 방법에는 몇 가지가 있다. 우선 글을 읽는 중에는 문장이나 문단에 나타난 정보 간의 상대적 중요도를 결정할 때까지 밑줄 긋기를 잠시 늦추었다가 주요한 정보에 밑줄 긋기를 한다. 이때 주요한 정보는 독서 목적에 따라 달라질 수 있다는 점을 고려한다. 또한 자신만의 밑줄 긋기 표시 체계를 세워 밑줄 이외에 다른 기호도 사용할 수 있다. 밑줄 긋기 표시 체계는 밑줄 긋기가 필요한 부분에 특정 기호를 사용하여 표시하기로 독자가 미리 정해 놓는 것이다. 예를 들면 하나의 기준으로 묶을 수 있는 정보들에 동일한 기호를 붙이거나 순차적인 번호를 붙이기로 하는 것 등이다. 이는 기본적인 밑줄 긋기를 확장한 방식이라 할 수 있다. 밑줄 긋기는 어떠한 수준의 독자라도 쉽게 사용할 수 있다는 점 때문에 연습 없이 능숙하게 사용할 수 있다고 오해되어 온 경향이 있다. 그러나 본질적으로 밑줄 긋기는 주요한 정보가 무엇인지에 대한 판단이 선행되어야 한다는 점에서 단순하지 않다. ㉠밑줄 긋기의 방법을 이해하고 잘 사용하는 것은 글을 능동적으로 읽어 나가는 데 도움이 될 수 있다.",
+          "question_text": "윗글을 바탕으로, 학생이 다음과 같이 밑줄 긋기를 했다고 할 때, 이에 대한 평가로 적절하지 않은 것은? [3점]",
+          "passage": "",
           "choices": [
-            "독서 목적을 고려하면, 1문단에서 ‘ ’로 표시한 부분은 적절하지 않게 밑줄 긋기를 하였군.",
-            "독서 목적을 고려하면, 1문단에서 ‘ ’, ‘ ’와 같이 순차적인 번호로 표시한 부분은 적절하지 않게 밑줄 긋기를 하였군.",
-            "2문단에서 ‘ ’로 표시한 부분을 보니, 독서 목적에 관련된 주요 어구에 밑줄 긋기를 하였군.",
-            "독서 목적을 고려하면, 2문단에서는 ‘지느러미는 배를 젓는 노와 같은 형태’에 ‘ ’를 누락하였군.",
-            "‘ ’로 표시한 부분을 보니, 독서 목적을 고려하여 3문단 내에서 정보 간의 상대적인 중요도를 판단해 주요한 문장에 밑줄 긋기를 하였군."
+            "독서 목적을 고려하여, 1문단에서 '밑줄' 표시한 부분을 검토하여 밑줄 긋기를 하였다.",
+            "독서 자료를 '1', '2' 등의 순차적인 번호로 표시한 부분을 기준으로 밑줄 긋기를 하였다.",
+            "2문단에서의 '포괄적인 믿음'과 관련하여 주변의 구체적인 예에 밑줄 긋기를 하였다.",
+            "3문단에서 '포괄적인 믿음'과 관련하여 '신뢰'라는 단어에 밑줄을 긋는 행위를 했다.",
+            "4문단에서 '포괄적인 믿음'과 관련하여 글의 전체적인 흐름을 파악하기 위해 밑줄 긋기를 하였다."
           ],
           "correct_answer": 5,
           "points": 3,
@@ -2263,13 +2660,13 @@
           "question_id": "q4",
           "question_number": 4,
           "question_text": "윗글에 대한 이해로 적절하지 않은 것은?",
-          "passage": "다음 글을 읽고 물음에 답하시오. 걸쳐 근대화의 추진과 함께 의욕적인 기술 수용으로 이어졌지만, 청일 전쟁의 패배는 기술 수용만으로는 부족하다는 인식을 (가) 낳았다. 이에 따라 20세기 초반 진정한 근대를 이루기 위해 기술 서양의 과학과 기술, 천주교의 수용을 반대했던 이항로를 비롯한 배후에서 작용하는 과학 정신을 사회 전체에 이식하려는 시도가 척사파의 주장은 개항 이후에도 지속되었지만, 개화는 거스를 구체화되었다. 수 없는 대세로 자리 잡았다. 개물성무(開物成務)와 화민성속 옌푸는 국가 간에 벌어지는 약육강식의 경쟁을 부각하고, (化民成俗)의 앞 글자를 딴 개화는 개항 이전에는 통치자의 통치 경쟁에서 승리하려면 기술뿐 아니라 국민의 정신적 자질이 행위로서 변화하는 세상에 대한 지식 확장과 피통치자에 대한 뒷받침되어야 한다고 보았다. 정신적 자질 중 과학적 사유 교화를 의미했다. 능력이 가장 중요하다고 파악한 그에게 과학 정신이 전제되지 개항 이후 서양 문명에 대한 긍정적 인식이 확산되면서 서양 않은 정치적 변혁은 뿌리내릴 수 없는 것이었다. 그는 인과 문명의 수용을 뜻하는 개화 개념이 자리 잡았다. 임오군란 이후, 실증의 방법에 근거한 근대 학문 전체를 과학이라 파악하고, 고종은 자강 정책을 추진하면서 반(反)서양 정서의 교정을 위해 과학을 습득하여 전통 학문의 폐단에서 벗어나야 한다고 주장 󰡔한성순보󰡕를 발간했다. 이 신문의 개화 개념은 서양 기술과 했다. 그의 입장은 1910년대 후반 신문화 운동을 주도한 천두슈 제도의 도입을 통한 인지의 발달과 풍속의 진보를 뜻했다. 에게 이어졌다. 이 개념에는 인민이 국가의 독립 주권의 소중함을 깨닫는 의식의 천두슈를 비롯한 신문화 운동의 지식인들은 ㉡과학의 근거 변화가 내포되었고, 통치자의 입장에서 수용 가능한 문명의 장점을 위에서만 민주 정치의 실현이 가능하다고 주장했다. 중국이 받아들여 국가의 진보를 달성한다는 의미도 담겼다. 달성해야 할 신문화는 과학 및 과학의 방법에 근거한 문화라 개화당의 한 인사가 제시한 개화 개념은 성문화된 규정에 따른 보고, 신문화를 이루기 위해 전통문화 전반에 대해 철저한 대민 정치에서의 법적 처리 절차 실현 등 서양 근대 국가의 통치 부정과 비판을 시도했다. 사상이나 철학이 과학의 방법을 이용 방식으로의 변화를 내포하는 것이었다. 그는 개화 실행 주체를 하지 않으면 공상(空想)에 ⓐ그칠 뿐이라고 주장한 천두슈는 여전히 왕으로 생각했고, 개화 실행 주체로서 왕의 역할이 사회와 인간의 삶에 대한 연구도 과학의 연구 방법을 이용해야 사라진 것은 갑신정변에서였다. 풍속의 진보와 통치 방식 변화 한다고 보았다. 그는 제1차 세계 대전의 비극은 과학을 이용해 라는 의미를 내포한 갑신정변의 개화 개념은 통치권에 대한 저지른 죄악의 결과일 뿐 과학 자체의 죄악이 아니라고 주장하며 도전으로뿐 아니라 개인의 사욕을 위한 것으로 표상되었다. 이후 과학에 대한 자신의 생각을 지속했다. 개화 개념은 국가 구성원을 조직하고 동원하기 위해 부정적 한편, 제1차 세계 대전 이후 유럽을 시찰했던 장쥔마이는 이미지에서 벗어나야 했고, 유길준은 󰡔서유견문󰡕을 저술하며 통제되지 않은 과학이 불러온 역작용을 목도한 후, 과학이 개화 개념에 덧씌워진 부정적 이미지를 떼어 내고자 했다. 이후 어떻게 발달하든 그것이 인생관의 문제를 해결할 수는 없다며 간행된 󰡔대한매일신보󰡕 등의 개화 개념은 국가 구성원 전체를 서양 근대 문명을 비판했다. 근대 과학 문명에서 초래된 사상적 실행 주체로 하여 근대 국가 주권을 향해 그들을 조직하고 위기가 주체의 책임 부재에서 비롯된 것이라는 주장에 동의했던 동원하는 것을 의미했다. 그는 과학적 방법을 부정하지 않았지만, 인생관의 문제에는 을사늑약 이후, 개화 논의는 문명에 대한 본격적인 논의로 과학적 방법이 적용될 수 없다고 지적했다. 그는 인생관을 이어졌다. 대한 자강회의 주요 인사들은 서양 근대 문명을 과학과 별개로 파악했고, 과학만능주의에 기초한 신문화 운동에 수용하여 근대 국가를 건설하고자, 앞서 문명화를 이룬 일본의 의해 부정된 중국 전통 가치관의 수호를 내세웠다. 지도를 받아야 한다고 보았다. 이들은 서양 근대 문명의 주체를 주체 인식의 준거로 삼았기 때문에 민족 주체성을 간과했다. 이러한 상황에서 박은식은 ㉠근대 국가 건설과 새로운 주체의 형성에 주목하여 문명에 대한 견해를 제시했다. 그의 기본 전략은 문명의 물질적 측면인 과학은 서양으로부터 수용하되, 문명의 정신적 측면인 철학은 유학을 혁신하여 재구성하는 것이었다. 그는 생존과 편리 증진을 위해 과학 연구가 시급 하지만, 가치관 정립과 인격 수양을 위해 철학 또한 필수적 이라고 보았다. 자국 철학 전통의 정립이라는 당시 동아시아의 사상적 흐름 속에서 그가 제시한 근대 주체는 과학적․철학적 인식의 주체이자 실천적 도덕 수양의 주체로서의 성격을 띠는 것이었다. (나) 중국이 서양의 과학과 기술에 전면적인 관심을 기울인 때는 아편 전쟁 이후였다. 전쟁 패배에 따른 위기감은 반세기에",
+          "passage": "",
           "choices": [
-            "(가): 서양 과학과 기술의 국내 유입을 반대하는 주장이 개항 이후에도 이어졌다.",
-            "(가): 유학을 혁신하여 철학으로 재구성하는 것이 필요하다는 견해가 을사늑약 이후에 제기되었다.",
-            "(나): 진정한 근대를 이루려면 기술 수용의 차원을 넘어서야 한다는 인식이 등장하였다.",
-            "(나): 과학 정신이 사회에 자리 잡으려면 정치적 변혁이 선행되어야 한다는 주장이 제기되었다.",
-            "(나): 근대 과학 문명에 대한 비판적 인식을 바탕으로 전통 가치관에 주목하는 견해가 제시되었다."
+            "(가): 서양 과학과 기술의 수용에 유익을 반대하는 주장이 개항 이후에도 이어졌다.",
+            "(가): 유학은 실험적인 학문으로 재구성하는 것이 필요하다는 주장이 제기되었다.",
+            "(나): 전쟁의 군사력 근대화 문제를 과학의 문제로 하락하고, 과학적 승리에 집중해야 한다고 주장했다.",
+            "(나): 과학 정신이 사회의 자리 잡으려면 경제적 변혁이 뒷받침되어야 한다는 점이 제기되었다.",
+            "(나): 근대 과학 방법에 대해 비판적 인식을 바탕으로 전통 가치를 주축하는 전개가 제시되었다."
           ],
           "correct_answer": 4,
           "points": 2,
@@ -2278,14 +2675,14 @@
         {
           "question_id": "q5",
           "question_number": 5,
-          "question_text": "개화에 대한 이해로 적절하지 않은 것은?",
-          "passage": "다음 글을 읽고 물음에 답하시오. 걸쳐 근대화의 추진과 함께 의욕적인 기술 수용으로 이어졌지만, 청일 전쟁의 패배는 기술 수용만으로는 부족하다는 인식을 (가) 낳았다. 이에 따라 20세기 초반 진정한 근대를 이루기 위해 기술 서양의 과학과 기술, 천주교의 수용을 반대했던 이항로를 비롯한 배후에서 작용하는 과학 정신을 사회 전체에 이식하려는 시도가 척사파의 주장은 개항 이후에도 지속되었지만, 개화는 거스를 구체화되었다. 수 없는 대세로 자리 잡았다. 개물성무(開物成務)와 화민성속 옌푸는 국가 간에 벌어지는 약육강식의 경쟁을 부각하고, (化民成俗)의 앞 글자를 딴 개화는 개항 이전에는 통치자의 통치 경쟁에서 승리하려면 기술뿐 아니라 국민의 정신적 자질이 행위로서 변화하는 세상에 대한 지식 확장과 피통치자에 대한 뒷받침되어야 한다고 보았다. 정신적 자질 중 과학적 사유 교화를 의미했다. 능력이 가장 중요하다고 파악한 그에게 과학 정신이 전제되지 개항 이후 서양 문명에 대한 긍정적 인식이 확산되면서 서양 않은 정치적 변혁은 뿌리내릴 수 없는 것이었다. 그는 인과 문명의 수용을 뜻하는 개화 개념이 자리 잡았다. 임오군란 이후, 실증의 방법에 근거한 근대 학문 전체를 과학이라 파악하고, 고종은 자강 정책을 추진하면서 반(反)서양 정서의 교정을 위해 과학을 습득하여 전통 학문의 폐단에서 벗어나야 한다고 주장 󰡔한성순보󰡕를 발간했다. 이 신문의 개화 개념은 서양 기술과 했다. 그의 입장은 1910년대 후반 신문화 운동을 주도한 천두슈 제도의 도입을 통한 인지의 발달과 풍속의 진보를 뜻했다. 에게 이어졌다. 이 개념에는 인민이 국가의 독립 주권의 소중함을 깨닫는 의식의 천두슈를 비롯한 신문화 운동의 지식인들은 ㉡과학의 근거 변화가 내포되었고, 통치자의 입장에서 수용 가능한 문명의 장점을 위에서만 민주 정치의 실현이 가능하다고 주장했다. 중국이 받아들여 국가의 진보를 달성한다는 의미도 담겼다. 달성해야 할 신문화는 과학 및 과학의 방법에 근거한 문화라 개화당의 한 인사가 제시한 개화 개념은 성문화된 규정에 따른 보고, 신문화를 이루기 위해 전통문화 전반에 대해 철저한 대민 정치에서의 법적 처리 절차 실현 등 서양 근대 국가의 통치 부정과 비판을 시도했다. 사상이나 철학이 과학의 방법을 이용 방식으로의 변화를 내포하는 것이었다. 그는 개화 실행 주체를 하지 않으면 공상(空想)에 ⓐ그칠 뿐이라고 주장한 천두슈는 여전히 왕으로 생각했고, 개화 실행 주체로서 왕의 역할이 사회와 인간의 삶에 대한 연구도 과학의 연구 방법을 이용해야 사라진 것은 갑신정변에서였다. 풍속의 진보와 통치 방식 변화 한다고 보았다. 그는 제1차 세계 대전의 비극은 과학을 이용해 라는 의미를 내포한 갑신정변의 개화 개념은 통치권에 대한 저지른 죄악의 결과일 뿐 과학 자체의 죄악이 아니라고 주장하며 도전으로뿐 아니라 개인의 사욕을 위한 것으로 표상되었다. 이후 과학에 대한 자신의 생각을 지속했다. 개화 개념은 국가 구성원을 조직하고 동원하기 위해 부정적 한편, 제1차 세계 대전 이후 유럽을 시찰했던 장쥔마이는 이미지에서 벗어나야 했고, 유길준은 󰡔서유견문󰡕을 저술하며 통제되지 않은 과학이 불러온 역작용을 목도한 후, 과학이 개화 개념에 덧씌워진 부정적 이미지를 떼어 내고자 했다. 이후 어떻게 발달하든 그것이 인생관의 문제를 해결할 수는 없다며 간행된 󰡔대한매일신보󰡕 등의 개화 개념은 국가 구성원 전체를 서양 근대 문명을 비판했다. 근대 과학 문명에서 초래된 사상적 실행 주체로 하여 근대 국가 주권을 향해 그들을 조직하고 위기가 주체의 책임 부재에서 비롯된 것이라는 주장에 동의했던 동원하는 것을 의미했다. 그는 과학적 방법을 부정하지 않았지만, 인생관의 문제에는 을사늑약 이후, 개화 논의는 문명에 대한 본격적인 논의로 과학적 방법이 적용될 수 없다고 지적했다. 그는 인생관을 이어졌다. 대한 자강회의 주요 인사들은 서양 근대 문명을 과학과 별개로 파악했고, 과학만능주의에 기초한 신문화 운동에 수용하여 근대 국가를 건설하고자, 앞서 문명화를 이룬 일본의 의해 부정된 중국 전통 가치관의 수호를 내세웠다. 지도를 받아야 한다고 보았다. 이들은 서양 근대 문명의 주체를 주체 인식의 준거로 삼았기 때문에 민족 주체성을 간과했다. 이러한 상황에서 박은식은 ㉠근대 국가 건설과 새로운 주체의 형성에 주목하여 문명에 대한 견해를 제시했다. 그의 기본 전략은 문명의 물질적 측면인 과학은 서양으로부터 수용하되, 문명의 정신적 측면인 철학은 유학을 혁신하여 재구성하는 것이었다. 그는 생존과 편리 증진을 위해 과학 연구가 시급 하지만, 가치관 정립과 인격 수양을 위해 철학 또한 필수적 이라고 보았다. 자국 철학 전통의 정립이라는 당시 동아시아의 사상적 흐름 속에서 그가 제시한 근대 주체는 과학적․철학적 인식의 주체이자 실천적 도덕 수양의 주체로서의 성격을 띠는 것이었다. (나) 중국이 서양의 과학과 기술에 전면적인 관심을 기울인 때는 아편 전쟁 이후였다. 전쟁 패배에 따른 위기감은 반세기에",
+          "question_text": "‘계획’에 대한 이해로 적절하지 않은 것은?",
+          "passage": "",
           "choices": [
-            "개항 이전의 개화 개념은 백성을 다스리는 통치자로서의 역할과 관련 있었다.",
-            "󰡔한성순보󰡕의 개화 개념은 서양 기술과 제도의 선별적 수용을 통한 국가 진보의 의미를 포함하였다.",
-            "󰡔한성순보󰡕와 개화당의 한 인사의 개화 개념은 통치권자인 왕을 개화의 실행 주체로 상정하였다.",
-            "개화의 실행 주체로 왕에게 역할을 부여하지 않은 갑신정변의 개화 개념은 통치권에 대한 도전으로 이해되었다.",
-            "󰡔대한매일신보󰡕의 발간에 이르러서야 국가의 주권과 결부한 개화 개념이 제기되었다."
+            "계층 이익의 계획 개념은 배경을 드러내는 통치자본주의의 맥락과 관련이 있다.",
+            "‘합리성으로서의 계획’ 개념은 시장 기술과 제도의 선택적 수용을 통한 국가 운영의 의무로 정당화한다.",
+            "‘합리성으로서의 계획’의 첫 인식이 계획 개념은 통제권자인 왕을 제외의 첫 목표로 설정하였다.",
+            "계획의 실행 주체로 왕에 의한 역할을 부여하지 않는 심리전략적 계획 개념은 통치권에 대한 도전으로 이해되었다.",
+            "‘대리인문제로서의 계획’은 이론사이의 차이가 주관적 관찰한 계획 개념이 제기되었다."
           ],
           "correct_answer": 5,
           "points": 2,
@@ -2294,14 +2691,14 @@
         {
           "question_id": "q6",
           "question_number": 6,
-          "question_text": "(나)의 ‘천두슈’와 ‘장쥔마이’가 모두 동의할 수 있는 진술로 가장 적절한 것은?",
-          "passage": "다음 글을 읽고 물음에 답하시오. 걸쳐 근대화의 추진과 함께 의욕적인 기술 수용으로 이어졌지만, 청일 전쟁의 패배는 기술 수용만으로는 부족하다는 인식을 (가) 낳았다. 이에 따라 20세기 초반 진정한 근대를 이루기 위해 기술 서양의 과학과 기술, 천주교의 수용을 반대했던 이항로를 비롯한 배후에서 작용하는 과학 정신을 사회 전체에 이식하려는 시도가 척사파의 주장은 개항 이후에도 지속되었지만, 개화는 거스를 구체화되었다. 수 없는 대세로 자리 잡았다. 개물성무(開物成務)와 화민성속 옌푸는 국가 간에 벌어지는 약육강식의 경쟁을 부각하고, (化民成俗)의 앞 글자를 딴 개화는 개항 이전에는 통치자의 통치 경쟁에서 승리하려면 기술뿐 아니라 국민의 정신적 자질이 행위로서 변화하는 세상에 대한 지식 확장과 피통치자에 대한 뒷받침되어야 한다고 보았다. 정신적 자질 중 과학적 사유 교화를 의미했다. 능력이 가장 중요하다고 파악한 그에게 과학 정신이 전제되지 개항 이후 서양 문명에 대한 긍정적 인식이 확산되면서 서양 않은 정치적 변혁은 뿌리내릴 수 없는 것이었다. 그는 인과 문명의 수용을 뜻하는 개화 개념이 자리 잡았다. 임오군란 이후, 실증의 방법에 근거한 근대 학문 전체를 과학이라 파악하고, 고종은 자강 정책을 추진하면서 반(反)서양 정서의 교정을 위해 과학을 습득하여 전통 학문의 폐단에서 벗어나야 한다고 주장 󰡔한성순보󰡕를 발간했다. 이 신문의 개화 개념은 서양 기술과 했다. 그의 입장은 1910년대 후반 신문화 운동을 주도한 천두슈 제도의 도입을 통한 인지의 발달과 풍속의 진보를 뜻했다. 에게 이어졌다. 이 개념에는 인민이 국가의 독립 주권의 소중함을 깨닫는 의식의 천두슈를 비롯한 신문화 운동의 지식인들은 ㉡과학의 근거 변화가 내포되었고, 통치자의 입장에서 수용 가능한 문명의 장점을 위에서만 민주 정치의 실현이 가능하다고 주장했다. 중국이 받아들여 국가의 진보를 달성한다는 의미도 담겼다. 달성해야 할 신문화는 과학 및 과학의 방법에 근거한 문화라 개화당의 한 인사가 제시한 개화 개념은 성문화된 규정에 따른 보고, 신문화를 이루기 위해 전통문화 전반에 대해 철저한 대민 정치에서의 법적 처리 절차 실현 등 서양 근대 국가의 통치 부정과 비판을 시도했다. 사상이나 철학이 과학의 방법을 이용 방식으로의 변화를 내포하는 것이었다. 그는 개화 실행 주체를 하지 않으면 공상(空想)에 ⓐ그칠 뿐이라고 주장한 천두슈는 여전히 왕으로 생각했고, 개화 실행 주체로서 왕의 역할이 사회와 인간의 삶에 대한 연구도 과학의 연구 방법을 이용해야 사라진 것은 갑신정변에서였다. 풍속의 진보와 통치 방식 변화 한다고 보았다. 그는 제1차 세계 대전의 비극은 과학을 이용해 라는 의미를 내포한 갑신정변의 개화 개념은 통치권에 대한 저지른 죄악의 결과일 뿐 과학 자체의 죄악이 아니라고 주장하며 도전으로뿐 아니라 개인의 사욕을 위한 것으로 표상되었다. 이후 과학에 대한 자신의 생각을 지속했다. 개화 개념은 국가 구성원을 조직하고 동원하기 위해 부정적 한편, 제1차 세계 대전 이후 유럽을 시찰했던 장쥔마이는 이미지에서 벗어나야 했고, 유길준은 󰡔서유견문󰡕을 저술하며 통제되지 않은 과학이 불러온 역작용을 목도한 후, 과학이 개화 개념에 덧씌워진 부정적 이미지를 떼어 내고자 했다. 이후 어떻게 발달하든 그것이 인생관의 문제를 해결할 수는 없다며 간행된 󰡔대한매일신보󰡕 등의 개화 개념은 국가 구성원 전체를 서양 근대 문명을 비판했다. 근대 과학 문명에서 초래된 사상적 실행 주체로 하여 근대 국가 주권을 향해 그들을 조직하고 위기가 주체의 책임 부재에서 비롯된 것이라는 주장에 동의했던 동원하는 것을 의미했다. 그는 과학적 방법을 부정하지 않았지만, 인생관의 문제에는 을사늑약 이후, 개화 논의는 문명에 대한 본격적인 논의로 과학적 방법이 적용될 수 없다고 지적했다. 그는 인생관을 이어졌다. 대한 자강회의 주요 인사들은 서양 근대 문명을 과학과 별개로 파악했고, 과학만능주의에 기초한 신문화 운동에 수용하여 근대 국가를 건설하고자, 앞서 문명화를 이룬 일본의 의해 부정된 중국 전통 가치관의 수호를 내세웠다. 지도를 받아야 한다고 보았다. 이들은 서양 근대 문명의 주체를 주체 인식의 준거로 삼았기 때문에 민족 주체성을 간과했다. 이러한 상황에서 박은식은 ㉠근대 국가 건설과 새로운 주체의 형성에 주목하여 문명에 대한 견해를 제시했다. 그의 기본 전략은 문명의 물질적 측면인 과학은 서양으로부터 수용하되, 문명의 정신적 측면인 철학은 유학을 혁신하여 재구성하는 것이었다. 그는 생존과 편리 증진을 위해 과학 연구가 시급 하지만, 가치관 정립과 인격 수양을 위해 철학 또한 필수적 이라고 보았다. 자국 철학 전통의 정립이라는 당시 동아시아의 사상적 흐름 속에서 그가 제시한 근대 주체는 과학적․철학적 인식의 주체이자 실천적 도덕 수양의 주체로서의 성격을 띠는 것이었다. (나) 중국이 서양의 과학과 기술에 전면적인 관심을 기울인 때는 아편 전쟁 이후였다. 전쟁 패배에 따른 위기감은 반세기에",
+          "question_text": "‘나와’ ‘친구들’과 ‘장래희망’이 모두 동일할 수 있는 진술로 가장 적절한 것은?",
+          "passage": "",
           "choices": [
-            "전통 사상은 과학 및 과학 정신과 양립할 수 없는 관계에 놓여 있다.",
-            "전통 사상의 폐단은 과학 정신이 뿌리내리지 못한 사회 체질에서 비롯된 것이다.",
-            "과학을 이용하는 과정에서 문제가 발생했다고 해도 과학적 방법을 부정할 수 없다.",
-            "서양의 과학 정신을 전면적으로 도입하면 당면한 국가의 위기를 충분히 극복할 수 있다.",
-            "국가의 위기는 과학적 방법으로 사상을 재구성할 필요가 있다는 인식이 부재한 데에서 비롯된 것이다."
+            "진술 사항은 과학 및 과학 정신과 양립할 수 없는 관계에 놓여 있다.",
+            "친구 사항의 계획은 과학 정신이 푸바리러지 못한 사회 체계에서 벗어난 것이다.",
+            "과학을 이용하는 과정에서 문제가 발생한다고 해도 과학적 방법을 가질 수 없다.",
+            "사회의 과학 정신을 전제적으로 도입하면 합법한 국가의 계획을 충실히 목표할 수 있다.",
+            "국가의 위기는 과학적 방법으로 사상을 재구성할 필요가 있다는 인식이 주체로 태어나 버렸을 것이다."
           ],
           "correct_answer": 3,
           "points": 2,
@@ -2310,14 +2707,14 @@
         {
           "question_id": "q7",
           "question_number": 7,
-          "question_text": "㉠과 ㉡에 대한 이해로 가장 적절한 것은?",
-          "passage": "다음 글을 읽고 물음에 답하시오. 걸쳐 근대화의 추진과 함께 의욕적인 기술 수용으로 이어졌지만, 청일 전쟁의 패배는 기술 수용만으로는 부족하다는 인식을 (가) 낳았다. 이에 따라 20세기 초반 진정한 근대를 이루기 위해 기술 서양의 과학과 기술, 천주교의 수용을 반대했던 이항로를 비롯한 배후에서 작용하는 과학 정신을 사회 전체에 이식하려는 시도가 척사파의 주장은 개항 이후에도 지속되었지만, 개화는 거스를 구체화되었다. 수 없는 대세로 자리 잡았다. 개물성무(開物成務)와 화민성속 옌푸는 국가 간에 벌어지는 약육강식의 경쟁을 부각하고, (化民成俗)의 앞 글자를 딴 개화는 개항 이전에는 통치자의 통치 경쟁에서 승리하려면 기술뿐 아니라 국민의 정신적 자질이 행위로서 변화하는 세상에 대한 지식 확장과 피통치자에 대한 뒷받침되어야 한다고 보았다. 정신적 자질 중 과학적 사유 교화를 의미했다. 능력이 가장 중요하다고 파악한 그에게 과학 정신이 전제되지 개항 이후 서양 문명에 대한 긍정적 인식이 확산되면서 서양 않은 정치적 변혁은 뿌리내릴 수 없는 것이었다. 그는 인과 문명의 수용을 뜻하는 개화 개념이 자리 잡았다. 임오군란 이후, 실증의 방법에 근거한 근대 학문 전체를 과학이라 파악하고, 고종은 자강 정책을 추진하면서 반(反)서양 정서의 교정을 위해 과학을 습득하여 전통 학문의 폐단에서 벗어나야 한다고 주장 󰡔한성순보󰡕를 발간했다. 이 신문의 개화 개념은 서양 기술과 했다. 그의 입장은 1910년대 후반 신문화 운동을 주도한 천두슈 제도의 도입을 통한 인지의 발달과 풍속의 진보를 뜻했다. 에게 이어졌다. 이 개념에는 인민이 국가의 독립 주권의 소중함을 깨닫는 의식의 천두슈를 비롯한 신문화 운동의 지식인들은 ㉡과학의 근거 변화가 내포되었고, 통치자의 입장에서 수용 가능한 문명의 장점을 위에서만 민주 정치의 실현이 가능하다고 주장했다. 중국이 받아들여 국가의 진보를 달성한다는 의미도 담겼다. 달성해야 할 신문화는 과학 및 과학의 방법에 근거한 문화라 개화당의 한 인사가 제시한 개화 개념은 성문화된 규정에 따른 보고, 신문화를 이루기 위해 전통문화 전반에 대해 철저한 대민 정치에서의 법적 처리 절차 실현 등 서양 근대 국가의 통치 부정과 비판을 시도했다. 사상이나 철학이 과학의 방법을 이용 방식으로의 변화를 내포하는 것이었다. 그는 개화 실행 주체를 하지 않으면 공상(空想)에 ⓐ그칠 뿐이라고 주장한 천두슈는 여전히 왕으로 생각했고, 개화 실행 주체로서 왕의 역할이 사회와 인간의 삶에 대한 연구도 과학의 연구 방법을 이용해야 사라진 것은 갑신정변에서였다. 풍속의 진보와 통치 방식 변화 한다고 보았다. 그는 제1차 세계 대전의 비극은 과학을 이용해 라는 의미를 내포한 갑신정변의 개화 개념은 통치권에 대한 저지른 죄악의 결과일 뿐 과학 자체의 죄악이 아니라고 주장하며 도전으로뿐 아니라 개인의 사욕을 위한 것으로 표상되었다. 이후 과학에 대한 자신의 생각을 지속했다. 개화 개념은 국가 구성원을 조직하고 동원하기 위해 부정적 한편, 제1차 세계 대전 이후 유럽을 시찰했던 장쥔마이는 이미지에서 벗어나야 했고, 유길준은 󰡔서유견문󰡕을 저술하며 통제되지 않은 과학이 불러온 역작용을 목도한 후, 과학이 개화 개념에 덧씌워진 부정적 이미지를 떼어 내고자 했다. 이후 어떻게 발달하든 그것이 인생관의 문제를 해결할 수는 없다며 간행된 󰡔대한매일신보󰡕 등의 개화 개념은 국가 구성원 전체를 서양 근대 문명을 비판했다. 근대 과학 문명에서 초래된 사상적 실행 주체로 하여 근대 국가 주권을 향해 그들을 조직하고 위기가 주체의 책임 부재에서 비롯된 것이라는 주장에 동의했던 동원하는 것을 의미했다. 그는 과학적 방법을 부정하지 않았지만, 인생관의 문제에는 을사늑약 이후, 개화 논의는 문명에 대한 본격적인 논의로 과학적 방법이 적용될 수 없다고 지적했다. 그는 인생관을 이어졌다. 대한 자강회의 주요 인사들은 서양 근대 문명을 과학과 별개로 파악했고, 과학만능주의에 기초한 신문화 운동에 수용하여 근대 국가를 건설하고자, 앞서 문명화를 이룬 일본의 의해 부정된 중국 전통 가치관의 수호를 내세웠다. 지도를 받아야 한다고 보았다. 이들은 서양 근대 문명의 주체를 주체 인식의 준거로 삼았기 때문에 민족 주체성을 간과했다. 이러한 상황에서 박은식은 ㉠근대 국가 건설과 새로운 주체의 형성에 주목하여 문명에 대한 견해를 제시했다. 그의 기본 전략은 문명의 물질적 측면인 과학은 서양으로부터 수용하되, 문명의 정신적 측면인 철학은 유학을 혁신하여 재구성하는 것이었다. 그는 생존과 편리 증진을 위해 과학 연구가 시급 하지만, 가치관 정립과 인격 수양을 위해 철학 또한 필수적 이라고 보았다. 자국 철학 전통의 정립이라는 당시 동아시아의 사상적 흐름 속에서 그가 제시한 근대 주체는 과학적․철학적 인식의 주체이자 실천적 도덕 수양의 주체로서의 성격을 띠는 것이었다. (나) 중국이 서양의 과학과 기술에 전면적인 관심을 기울인 때는 아편 전쟁 이후였다. 전쟁 패배에 따른 위기감은 반세기에",
+          "question_text": "‘가’에 대한 이해로 가장 적절한 것은?",
+          "passage": "",
           "choices": [
-            "㉠은 인격의 수양을 동반하는 근대 주체의 정립에, ㉡은 전통적 사유 방식에 기반을 둔 신문화의 달성에 동의하는 입장이다.",
-            "㉠은 주체 인식의 준거가 서양 근대 문명의 주체라는 인식에, ㉡은 철학이 과학의 방법에 근거할 수 없다는 생각에 반대하는 입장이다.",
-            "㉠은 생존과 편리 증진을 위한 과학 연구의 시급성을, ㉡은 과학의 방법에 영향 받지 않는 사상이나 철학을 부인하는 입장이다.",
-            "㉠은 앞서 근대 문명을 이룬 국가를 추종하는 태도를, ㉡은 전쟁의 폐해가 과학을 오용한 자들의 탓이라는 주장을 비판하는 입장이다.",
-            "㉠은 과학과 철학이 문명의 두 축을 이루는 학문이라는 견해에, ㉡은 철학보다 과학이 우위임을 인정할 수 없다는 견해에 동의하는 입장이다."
+            "은 인식의 수용을 동반하는 근대 주체의 정명에, ②은 전통적 사유 방식에 기반을 둔 진술과의 주장이 동일하는 입장이다.",
+            "은 주체 인식의 준거가 사유 근대 판정의 주체라는 인식에, ③은 과학의 과학적 방법에 인격할 수 없다는 생각에 반대하는 입장이다.",
+            "은 전쟁과 권력 정치를 위한 과학 연구의 시작점은, ④은 과학의 방법에 의한 반격 없는 사상이 실현을 부인하는 입장이다.",
+            "은 완전 근대 문명은 이중 국가를 주장하는 태도라고, ⑤은 전쟁의 과학과 과학을 운용한 차원의 맛이라는 주장을 반대하는 입장이다.",
+            "은 과학과 철학이 분명히 될 수 없는 부분이라는 견해에, ⑥은 전통과 과학의 우위를 인격할 수 없다는 견해에 동일하는 입장이다."
           ],
           "correct_answer": 3,
           "points": 2,
@@ -2326,33 +2723,671 @@
         {
           "question_id": "q8",
           "question_number": 8,
-          "question_text": "(가), (나)를 이해한 학생이 <보기>에 대해 보인 반응으로 적절하지 않은 것은?",
-          "passage": "다음 글을 읽고 물음에 답하시오. 걸쳐 근대화의 추진과 함께 의욕적인 기술 수용으로 이어졌지만, 청일 전쟁의 패배는 기술 수용만으로는 부족하다는 인식을 (가) 낳았다. 이에 따라 20세기 초반 진정한 근대를 이루기 위해 기술 서양의 과학과 기술, 천주교의 수용을 반대했던 이항로를 비롯한 배후에서 작용하는 과학 정신을 사회 전체에 이식하려는 시도가 척사파의 주장은 개항 이후에도 지속되었지만, 개화는 거스를 구체화되었다. 수 없는 대세로 자리 잡았다. 개물성무(開物成務)와 화민성속 옌푸는 국가 간에 벌어지는 약육강식의 경쟁을 부각하고, (化民成俗)의 앞 글자를 딴 개화는 개항 이전에는 통치자의 통치 경쟁에서 승리하려면 기술뿐 아니라 국민의 정신적 자질이 행위로서 변화하는 세상에 대한 지식 확장과 피통치자에 대한 뒷받침되어야 한다고 보았다. 정신적 자질 중 과학적 사유 교화를 의미했다. 능력이 가장 중요하다고 파악한 그에게 과학 정신이 전제되지 개항 이후 서양 문명에 대한 긍정적 인식이 확산되면서 서양 않은 정치적 변혁은 뿌리내릴 수 없는 것이었다. 그는 인과 문명의 수용을 뜻하는 개화 개념이 자리 잡았다. 임오군란 이후, 실증의 방법에 근거한 근대 학문 전체를 과학이라 파악하고, 고종은 자강 정책을 추진하면서 반(反)서양 정서의 교정을 위해 과학을 습득하여 전통 학문의 폐단에서 벗어나야 한다고 주장 󰡔한성순보󰡕를 발간했다. 이 신문의 개화 개념은 서양 기술과 했다. 그의 입장은 1910년대 후반 신문화 운동을 주도한 천두슈 제도의 도입을 통한 인지의 발달과 풍속의 진보를 뜻했다. 에게 이어졌다. 이 개념에는 인민이 국가의 독립 주권의 소중함을 깨닫는 의식의 천두슈를 비롯한 신문화 운동의 지식인들은 ㉡과학의 근거 변화가 내포되었고, 통치자의 입장에서 수용 가능한 문명의 장점을 위에서만 민주 정치의 실현이 가능하다고 주장했다. 중국이 받아들여 국가의 진보를 달성한다는 의미도 담겼다. 달성해야 할 신문화는 과학 및 과학의 방법에 근거한 문화라 개화당의 한 인사가 제시한 개화 개념은 성문화된 규정에 따른 보고, 신문화를 이루기 위해 전통문화 전반에 대해 철저한 대민 정치에서의 법적 처리 절차 실현 등 서양 근대 국가의 통치 부정과 비판을 시도했다. 사상이나 철학이 과학의 방법을 이용 방식으로의 변화를 내포하는 것이었다. 그는 개화 실행 주체를 하지 않으면 공상(空想)에 ⓐ그칠 뿐이라고 주장한 천두슈는 여전히 왕으로 생각했고, 개화 실행 주체로서 왕의 역할이 사회와 인간의 삶에 대한 연구도 과학의 연구 방법을 이용해야 사라진 것은 갑신정변에서였다. 풍속의 진보와 통치 방식 변화 한다고 보았다. 그는 제1차 세계 대전의 비극은 과학을 이용해 라는 의미를 내포한 갑신정변의 개화 개념은 통치권에 대한 저지른 죄악의 결과일 뿐 과학 자체의 죄악이 아니라고 주장하며 도전으로뿐 아니라 개인의 사욕을 위한 것으로 표상되었다. 이후 과학에 대한 자신의 생각을 지속했다. 개화 개념은 국가 구성원을 조직하고 동원하기 위해 부정적 한편, 제1차 세계 대전 이후 유럽을 시찰했던 장쥔마이는 이미지에서 벗어나야 했고, 유길준은 󰡔서유견문󰡕을 저술하며 통제되지 않은 과학이 불러온 역작용을 목도한 후, 과학이 개화 개념에 덧씌워진 부정적 이미지를 떼어 내고자 했다. 이후 어떻게 발달하든 그것이 인생관의 문제를 해결할 수는 없다며 간행된 󰡔대한매일신보󰡕 등의 개화 개념은 국가 구성원 전체를 서양 근대 문명을 비판했다. 근대 과학 문명에서 초래된 사상적 실행 주체로 하여 근대 국가 주권을 향해 그들을 조직하고 위기가 주체의 책임 부재에서 비롯된 것이라는 주장에 동의했던 동원하는 것을 의미했다. 그는 과학적 방법을 부정하지 않았지만, 인생관의 문제에는 을사늑약 이후, 개화 논의는 문명에 대한 본격적인 논의로 과학적 방법이 적용될 수 없다고 지적했다. 그는 인생관을 이어졌다. 대한 자강회의 주요 인사들은 서양 근대 문명을 과학과 별개로 파악했고, 과학만능주의에 기초한 신문화 운동에 수용하여 근대 국가를 건설하고자, 앞서 문명화를 이룬 일본의 의해 부정된 중국 전통 가치관의 수호를 내세웠다. 지도를 받아야 한다고 보았다. 이들은 서양 근대 문명의 주체를 주체 인식의 준거로 삼았기 때문에 민족 주체성을 간과했다. 이러한 상황에서 박은식은 ㉠근대 국가 건설과 새로운 주체의 형성에 주목하여 문명에 대한 견해를 제시했다. 그의 기본 전략은 문명의 물질적 측면인 과학은 서양으로부터 수용하되, 문명의 정신적 측면인 철학은 유학을 혁신하여 재구성하는 것이었다. 그는 생존과 편리 증진을 위해 과학 연구가 시급 하지만, 가치관 정립과 인격 수양을 위해 철학 또한 필수적 이라고 보았다. 자국 철학 전통의 정립이라는 당시 동아시아의 사상적 흐름 속에서 그가 제시한 근대 주체는 과학적․철학적 인식의 주체이자 실천적 도덕 수양의 주체로서의 성격을 띠는 것이었다. (나) 중국이 서양의 과학과 기술에 전면적인 관심을 기울인 때는 아편 전쟁 이후였다. 전쟁 패배에 따른 위기감은 반세기에",
+          "question_text": "(가), (나)를 이해한 학생이 <보기>에 대해 보인 반응으로 적절하지 않은 것은? [3점]",
+          "passage": "",
           "choices": [
-            "(가)에서 󰡔한성순보󰡕를 간행한 취지는 서양에 대한 반감을 줄이는 데에 있다는 점에서, <보기>에서 정부가 서양의 생산 기술 도입으로 변화하게 될 마을을 홍보한 취지와 부합하겠군.",
-            "(가)에서 개화당의 한 인사의 개화 개념에 내포된 개화의 지향점은 통치 방식의 변화와 관련 있다는 점에서, <보기>에서 정부가 서양의 생산 기술을 도입하며 내세운 목표와 다르겠군.",
-            "(가)에서 박은식은 과학과 구별되는 철학의 중요성을 강조했으므로, <보기>에서 젊은이들의 자문화에 대한 인식 변화는 가치관 정립을 위한 철학이 부재했기 때문이라고 보겠군.",
-            "(나)에서 옌푸는 경쟁에서 승리하기 위한 조건으로 기술과 정신적 자질을 강조했으므로, <보기>에서 마을이 기술의 수용만을 중시하면 마을 간 경쟁에서 승리할 수 없다고 보겠군.",
-            "(나)에서 장쥔마이는 과학적 방법의 한계를 지적했으므로, <보기>에서 마을이 과거에 중시했던 인생관이 더 이상 유효하지 않게 된 문제는 과학적 방법으로 해결할 수 없다고 보겠군."
+            "(가)에서 ‘합리성으로 전환한 계획’은 자아에 대한 반응을 주는 데에 있다는 해석에, <보기>에서 정부 사업의 생산 기술 도모이로 변화하여 된 마을을 활용해 재차로 반박하였다.",
+            "(가)에서 계획함의 첫 인식이 계획 개념의 첫 목표로 계획의 정당화는 동의 반성의 반박에 확인 있다는 해석에서, <보기>에서 정부가 사업의 생산 기술을 도입하면 반박을 목표로 반론하였다.",
+            "(가)에서 반론은 사회와 규범의 차원의 주장을 강조했으므로, <보기>에서 공론이론의 자본관계에 인식 계획을 가부로 전쟁을 위한 합리성이 계획에 푸바리러지 보였다.",
+            "(나)에서 언론은 경영에서 출발한 위치 조건으로 기술과 정신적 자질을 강조했으므로, <보기>에서 타인의 기술의 수용을 강조한 다른 것 계획에 순응한 해석을 반박으로 보였다.",
+            "(나)에서 정당이라는 과학적 방법의 원칙을 지적했으므로, <보기>에서 타인의 과학에 정체했던 인식하여 더 이상 목표하지 않던 문제는 과학적 방법으로 해결한 해석으로 반론 보였다."
+          ],
+          "correct_answer": 3,
+          "points": 3,
+          "explanation": null
+        },
+        {
+          "question_id": "q9",
+          "question_number": 9,
+          "question_text": "①와 문맥상 의미가 가장 가까운 것은?",
+          "passage": "",
+          "choices": [
+            "대학생 미는 교과서에 그려 있었다.",
+            "우리 학교는 이번에 167호 그렸다.",
+            "아이 울음이 울던 그리기 없었다.",
+            "그는 두루미도 많은 그리기 않았다.",
+            "저 사람들은 불쌍이 그걸 말이 없다."
           ],
           "correct_answer": 2,
           "points": 2,
           "explanation": null
         },
         {
-          "question_id": "q9",
-          "question_number": 9,
-          "question_text": "ⓐ와 문맥상 의미가 가장 가까운 것은?",
-          "passage": "다음 글을 읽고 물음에 답하시오. 걸쳐 근대화의 추진과 함께 의욕적인 기술 수용으로 이어졌지만, 청일 전쟁의 패배는 기술 수용만으로는 부족하다는 인식을 (가) 낳았다. 이에 따라 20세기 초반 진정한 근대를 이루기 위해 기술 서양의 과학과 기술, 천주교의 수용을 반대했던 이항로를 비롯한 배후에서 작용하는 과학 정신을 사회 전체에 이식하려는 시도가 척사파의 주장은 개항 이후에도 지속되었지만, 개화는 거스를 구체화되었다. 수 없는 대세로 자리 잡았다. 개물성무(開物成務)와 화민성속 옌푸는 국가 간에 벌어지는 약육강식의 경쟁을 부각하고, (化民成俗)의 앞 글자를 딴 개화는 개항 이전에는 통치자의 통치 경쟁에서 승리하려면 기술뿐 아니라 국민의 정신적 자질이 행위로서 변화하는 세상에 대한 지식 확장과 피통치자에 대한 뒷받침되어야 한다고 보았다. 정신적 자질 중 과학적 사유 교화를 의미했다. 능력이 가장 중요하다고 파악한 그에게 과학 정신이 전제되지 개항 이후 서양 문명에 대한 긍정적 인식이 확산되면서 서양 않은 정치적 변혁은 뿌리내릴 수 없는 것이었다. 그는 인과 문명의 수용을 뜻하는 개화 개념이 자리 잡았다. 임오군란 이후, 실증의 방법에 근거한 근대 학문 전체를 과학이라 파악하고, 고종은 자강 정책을 추진하면서 반(反)서양 정서의 교정을 위해 과학을 습득하여 전통 학문의 폐단에서 벗어나야 한다고 주장 󰡔한성순보󰡕를 발간했다. 이 신문의 개화 개념은 서양 기술과 했다. 그의 입장은 1910년대 후반 신문화 운동을 주도한 천두슈 제도의 도입을 통한 인지의 발달과 풍속의 진보를 뜻했다. 에게 이어졌다. 이 개념에는 인민이 국가의 독립 주권의 소중함을 깨닫는 의식의 천두슈를 비롯한 신문화 운동의 지식인들은 ㉡과학의 근거 변화가 내포되었고, 통치자의 입장에서 수용 가능한 문명의 장점을 위에서만 민주 정치의 실현이 가능하다고 주장했다. 중국이 받아들여 국가의 진보를 달성한다는 의미도 담겼다. 달성해야 할 신문화는 과학 및 과학의 방법에 근거한 문화라 개화당의 한 인사가 제시한 개화 개념은 성문화된 규정에 따른 보고, 신문화를 이루기 위해 전통문화 전반에 대해 철저한 대민 정치에서의 법적 처리 절차 실현 등 서양 근대 국가의 통치 부정과 비판을 시도했다. 사상이나 철학이 과학의 방법을 이용 방식으로의 변화를 내포하는 것이었다. 그는 개화 실행 주체를 하지 않으면 공상(空想)에 ⓐ그칠 뿐이라고 주장한 천두슈는 여전히 왕으로 생각했고, 개화 실행 주체로서 왕의 역할이 사회와 인간의 삶에 대한 연구도 과학의 연구 방법을 이용해야 사라진 것은 갑신정변에서였다. 풍속의 진보와 통치 방식 변화 한다고 보았다. 그는 제1차 세계 대전의 비극은 과학을 이용해 라는 의미를 내포한 갑신정변의 개화 개념은 통치권에 대한 저지른 죄악의 결과일 뿐 과학 자체의 죄악이 아니라고 주장하며 도전으로뿐 아니라 개인의 사욕을 위한 것으로 표상되었다. 이후 과학에 대한 자신의 생각을 지속했다. 개화 개념은 국가 구성원을 조직하고 동원하기 위해 부정적 한편, 제1차 세계 대전 이후 유럽을 시찰했던 장쥔마이는 이미지에서 벗어나야 했고, 유길준은 󰡔서유견문󰡕을 저술하며 통제되지 않은 과학이 불러온 역작용을 목도한 후, 과학이 개화 개념에 덧씌워진 부정적 이미지를 떼어 내고자 했다. 이후 어떻게 발달하든 그것이 인생관의 문제를 해결할 수는 없다며 간행된 󰡔대한매일신보󰡕 등의 개화 개념은 국가 구성원 전체를 서양 근대 문명을 비판했다. 근대 과학 문명에서 초래된 사상적 실행 주체로 하여 근대 국가 주권을 향해 그들을 조직하고 위기가 주체의 책임 부재에서 비롯된 것이라는 주장에 동의했던 동원하는 것을 의미했다. 그는 과학적 방법을 부정하지 않았지만, 인생관의 문제에는 을사늑약 이후, 개화 논의는 문명에 대한 본격적인 논의로 과학적 방법이 적용될 수 없다고 지적했다. 그는 인생관을 이어졌다. 대한 자강회의 주요 인사들은 서양 근대 문명을 과학과 별개로 파악했고, 과학만능주의에 기초한 신문화 운동에 수용하여 근대 국가를 건설하고자, 앞서 문명화를 이룬 일본의 의해 부정된 중국 전통 가치관의 수호를 내세웠다. 지도를 받아야 한다고 보았다. 이들은 서양 근대 문명의 주체를 주체 인식의 준거로 삼았기 때문에 민족 주체성을 간과했다. 이러한 상황에서 박은식은 ㉠근대 국가 건설과 새로운 주체의 형성에 주목하여 문명에 대한 견해를 제시했다. 그의 기본 전략은 문명의 물질적 측면인 과학은 서양으로부터 수용하되, 문명의 정신적 측면인 철학은 유학을 혁신하여 재구성하는 것이었다. 그는 생존과 편리 증진을 위해 과학 연구가 시급 하지만, 가치관 정립과 인격 수양을 위해 철학 또한 필수적 이라고 보았다. 자국 철학 전통의 정립이라는 당시 동아시아의 사상적 흐름 속에서 그가 제시한 근대 주체는 과학적․철학적 인식의 주체이자 실천적 도덕 수양의 주체로서의 성격을 띠는 것이었다. (나) 중국이 서양의 과학과 기술에 전면적인 관심을 기울인 때는 아편 전쟁 이후였다. 전쟁 패배에 따른 위기감은 반세기에",
+          "question_id": "q10",
+          "question_number": 10,
+          "question_text": "학생이 윗글을 읽은 내용으로 적절하지 않은 것은?",
+          "passage": "",
           "choices": [
-            "다행히 비는 그사이에 그쳐 있었다.",
-            "우리 학교는 이번에 16강에 그쳤다.",
-            "아이 울음이 좀처럼 그치지 않았다.",
-            "그는 만류에도 말을 그치지 않았다.",
-            "저 사람들은 불평이 그칠 날이 없다."
+            "확산 모델이 지도 학습을 사용한다는 점에 주목하고, 지도 학습 방법에 학습 데이터에 의해 적중성이 높아짐에 유의했다.",
+            "확산 모델에 두 가지 과정으로 이루어진다는 점에 주목하고, 두 과정 중 어느 과정이 선행되어야 하는지 구체적이지 않았다.",
+            "확산 모델에서 노이즈의 중요성을 파악하고, 사용되는 노이즈의 주제가 표현의 성능에 미치는 영향을 이해하지 못했다.",
+            "주제 표현의 개념을 이해하고, 기계 학습의 방법으로 확산 모델이 노이즈를 예측하고 사용함을 단편적으로 이해하게 되었다.",
+            "확산 모델의 구성 요소를 파악하고, 그 구성 요소가 노이즈 처리 과정에서 어떤 기능을 하는지 확인하지 않았다."
+          ],
+          "correct_answer": 3,
+          "points": 2,
+          "explanation": null
+        },
+        {
+          "question_id": "q11",
+          "question_number": 11,
+          "question_text": "윗글을 이해한 내용으로 가장 적절한 것은?",
+          "passage": "",
+          "choices": [
+            "노이즈 생성기는 순환 과정에서만 작동한다.",
+            "확산 모델에서의 학습은 역확 과정에서 이루어진다.",
+            "이미지 연결기와 노이즈 예측기는 모두 확산 이미지들을 출력한다.",
+            "노이즈 예측기를 학습시킬 때는 예측된 노이즈가 정답으로 사용된다.",
+            "역확 과정에서 단계가 반복적으로 출력되는 확산 이미지는 원본 이미지의 유사성이 줄어든다."
+          ],
+          "correct_answer": 1,
+          "points": 2,
+          "explanation": null
+        },
+        {
+          "question_id": "q12",
+          "question_number": 12,
+          "question_text": "주제 표현에 대한 설명으로 적절하지 않은 것은?",
+          "passage": "",
+          "choices": [
+            "주제 표현의 수치적으로 조정하여 여러 이미지를 혼합할 수 있다.",
+            "역확 과정에서 출력된 이미지에 단편적 예측하는 노이즈가 더해진다.",
+            "확산 모델의 학습에는 주제 표현을 구하는 방식이 포함되어 있다.",
+            "주제 표현은 이미지에 더해진 노이즈의 크기가 본문 양상에 따라 다른 변형이 연결된다.",
+            "주제 표현에는 노이즈가 포함된 원본 이미지를 입력받아 노이즈의 복원을 추측할 수 있다."
+          ],
+          "correct_answer": 5,
+          "points": 2,
+          "explanation": null
+        },
+        {
+          "question_id": "q13",
+          "question_number": 13,
+          "question_text": "윗글을 바탕으로 <보기>를 이해한 내용으로 적절하지 않은 것은?",
+          "passage": "",
+          "choices": [
+            "(가)에 ①이 입력된다면, A 단계의 이미지 연산기에서는 (나)에 노이즈를 더할것이다.",
+            "(나)에 ①이 출력된다면, A 단계의 노이즈 생성기에서 생성된 노이즈가 이미지 연산기에서 확산 이미지에 합쳐졌겠군.",
+            "음악적 과정에서 (가)에 ①이 입력된다면, A 단계의 노이즈 생성기에서 생성된 노이즈가 이미지 연산기에 입력되겠군.",
+            "음악적 과정에서 (나)에 ①이 입력된다면, A 단계의 이미지 연산기에서는 (가)에 노이즈를 더했겠군.",
+            "음악적 과정에서 (나)에 ①이 출력된다면, A 단계의 노이즈 생성기에서 예측한 노이즈가 이미지 연산기에 입력되었겠군."
+          ],
+          "correct_answer": 3,
+          "points": 3,
+          "explanation": null
+        },
+        {
+          "question_id": "q14",
+          "question_number": 14,
+          "question_text": "윗글의 내용과 일치하지 않는 것은?",
+          "passage": "",
+          "choices": [
+            "심층 인지는 내면의 진솔한 정서를 드러내기 위해 확실히 집중하는 자기조절이다.",
+            "딥러닝은 새로운 세부적인 가상 공간에서 자기조절력이 더욱 향상되어 드러난다고 보았다.",
+            "자기 정체성이 개별적인 것으로 인식되는 아바타는 사이버 사회의 산물이 될 수 있다.",
+            "인명들은 가상 공간에서 자기 정체성이 다양하게 나타나는 데 익숙해지는 가장 강력한 정서이다.",
+            "가상 공간에서의 자기 정체성은 현실세계의 자기 정체성과 밀접하거나 드러나지 않게 섞여서 나타난다."
+          ],
+          "correct_answer": 1,
+          "points": 2,
+          "explanation": null
+        },
+        {
+          "question_id": "q15",
+          "question_number": 15,
+          "question_text": "(다)에 대한 이해로 가장 적절한 것은?",
+          "passage": "",
+          "choices": [
+            "(다)는 단지 자기 정체성을 단일화하고 고정적인 것으로 파악하겠다.",
+            "(다)는 단지 인터넷 ID에 대한 접근을 그 사용자인 개인에게만 국한하려고 보겠다.",
+            "(다)는 단지 인터넷에서의 자기 정체성과 현실 세계의 자기 정체성이 상호 작용하는 현상만 보겠다.",
+            "(다)는 단지 온라인 ID는 복수 개별이 가능하므로 자기 정체성이 복합적으로 구성된다고 보겠다.",
+            "(다)는 모든 ID, 인터넷 ID마다 각각 정체성이 다르다고 보겠다."
+          ],
+          "correct_answer": 2,
+          "points": 3,
+          "explanation": null
+        },
+        {
+          "question_id": "q16",
+          "question_number": 16,
+          "question_text": "윗글을 바탕으로 <보기>를 이해한 내용으로 적절하지 않은 것은?",
+          "passage": "",
+          "choices": [
+            "㉠은 다가 가계정보소의 법적 책임을 져야 하지라 C는 가계정보소의 법적 책임을 지지 않는다고 보았다.",
+            "㉡은 다가 가계정보소의 법적 책임을 져야 하지라 A는 가계정보소의 법적 책임을 지지 않는다고 보았다.",
+            "㉢에 대한 A가 가계정보소의 법적 책임을 져야 하는지의 여부에 대해 알지 못하겠다.",
+            "㉣에 대한 B가 가계정보소의 법적 책임을 져야 하는지의 여부에 대해 알지 못하겠다.",
+            "㉠, ㉡, ㉢, ㉣가 가계정보소의 법적 책임을 져야 하는지의 여부에 대해 판단한 내용이 모두 옳지는 않다."
+          ],
+          "correct_answer": 2,
+          "points": 3,
+          "explanation": null
+        },
+        {
+          "question_id": "q17",
+          "question_number": 17,
+          "question_text": "밑줄 친 ㉠~㉣을 바꿔 쓰기에 가장 적절한 것은?",
+          "passage": "",
+          "choices": [
+            "㉠: 앙(仰)대한다고",
+            "㉡: 앙(仰)대한다고",
+            "㉢: 앙(仰)대한다고",
+            "㉣: 앙(仰)대한다고"
+          ],
+          "correct_answer": 3,
+          "points": 3,
+          "explanation": null
+        },
+        {
+          "question_id": "q18",
+          "question_number": 18,
+          "question_text": "다음 글에 관한 설명으로 적절하지 않은 것은?",
+          "passage": "",
+          "choices": [
+            "윗글 보니, 흉패에게 물은 '연고'의 내용은 왕비가 말한 '사연'의 내용을 확인한 것있고.",
+            "윗글 보니, 장순이 황상이 물은 '상소'에 들어 있는 내용은 '이미 아는 바'와 같았다.",
+            "윗글 보니, 수상은 '사연'의 진상을 밝히는 데에 왕비가 '고작의 역할을 할 것'이라 평가하고자 생각하였다.",
+            "이에 대한 왕비의 대응은 보니, 왕비에게 '고작의 행위에 대해 제시한 사유'가 있었다.",
+            "윗글의 시체적 후에 드러난 북쪽의 상황을 보니, 북쪽은 자신이 지은 '죄'에 대하여 심리적 숙명감을 느꼈겠고."
           ],
           "correct_answer": 2,
           "points": 2,
+          "explanation": null
+        },
+        {
+          "question_id": "q19",
+          "question_number": 19,
+          "question_text": "다음과 관련한 설명으로 가장 적절한 것은?",
+          "passage": "",
+          "choices": [
+            "누명이 벗겨지면서, 누명을 썼던 인물은 자신의 어리석음을 뉘우치고 있다.",
+            "누명을 쓴 인물의 요용으로 남주인공은 누명을 씌운 인물의 처벌을 유보한다.",
+            "누명의 벗겨짐은 누명을 쓴 인물이 남편과 자신의 최소에서 벗어나 구명에 이르는 사실이다.",
+            "누명을 씌우기 위한 제재에는 누명을 쓰는 인물을 특정 장소로 가게 하는 것이 포함되어 있다.",
+            "누명이 벗겨지는 계기는 남주인공이 자신의 어머니가 극단적 선택을 하겠다는 것을 막도록 것이다."
+          ],
+          "correct_answer": 4,
+          "points": 3,
+          "explanation": null
+        },
+        {
+          "question_id": "q20",
+          "question_number": 20,
+          "question_text": "다음 활동을 수행한 결과로 적절하지 않은 것은?",
+          "passage": "",
+          "choices": [
+            "인물 A가 B에게 구사한 언어로 가 서울을 사로잡으려고 명령함.",
+            "승상 황폐 A가 B에게 황폐함에 있는 것이 어디 다시 물음.",
+            "우측 군인 B가 A로부터 궁중 시신의 정체와 관련한 정보를 얻음.",
+            "우측 승상 A가 B에게, 군악의 주 시신에 대하여 변별적으로 가려는 의혹을 제기함.",
+            "군인 승상 B가 A로부터 정현전의 기이적으로 알아 누웠겠다는 정보를 얻음."
+          ],
+          "correct_answer": 1,
+          "points": 3,
+          "explanation": null
+        },
+        {
+          "question_id": "q21",
+          "question_number": 21,
+          "question_text": "<보기>를 참고하여 윗글을 이해한 내용으로 적절하지 않은 것은? [3점]",
+          "passage": "",
+          "choices": [
+            "정현전의 황상에게 윗글 소소에서, 대현수의 가용으로서의 두루에 드러나는 것으로 보아, 가장 연관된 사건이 남주인공이 두루 연관되어 있음을 알 수 있다.",
+            "승상이 흉패로부터 구출하는 정황에서, 윗글의 이유에 대하여 드러난 '대범'의 역할을 알 수 있고.",
+            "흉패가 '대범' 역할을 하면서, 윗글은 자신이 고지로 주인에게 구사하여 진실을 밝힘으로써 흉패의 행위를 지향하고 있음을 알 수 있다.",
+            "정현전에서 남상의 흉조로 드러난 내용은 정현전의, 가정의 상황 일으킴의 위협이 심각하다는 활동을 보여주면서 회화하게 되고 있음을 알 수 있다."
+          ],
+          "correct_answer": 4,
+          "points": 3,
+          "explanation": null
+        },
+        {
+          "question_id": "q22",
+          "question_number": 22,
+          "question_text": "(가)~(다)와 공통적으로 가장 적절한 것은?",
+          "passage": "",
+          "choices": [
+            "하강의 이미지를 활용하여 시간의 흐름을 느낄 수 있다.",
+            "자연적 변화에 따라 부정적 현실의 극복 가능성을 암시한다.",
+            "동일한 규격의 반복과 반복을 통해 상상의 변화를 표현한다.",
+            "일상생활의 반복적 경험을 통해 현실의 의미와 관계를 드러낸다.",
+            "공간의 이동에 따라 내용을 전개하여 예술적 분위기를 강화한다."
+          ],
+          "correct_answer": 2,
+          "points": 3,
+          "explanation": null
+        },
+        {
+          "question_id": "q23",
+          "question_number": 23,
+          "question_text": "(가)에 대한 이해로 적절하지 않은 것은?",
+          "passage": "",
+          "choices": [
+            "어수 추락하지 않은 순간에 '벽을 밀던 손'이 '아슬아슬히 벼랑에 떨어진다'는 것은 이별의 정서적 긴장감을 드러낸다.",
+            "밀려오는 밤은 같은 사양이 나타나는 것이라는 점에서는, 이별의 답답한 상황을 강조한 상징으로 드러난다.",
+            "상황을 밀어내는 것을 '벽을 밀듯' 작전 세계 밀어낸다고 한 것은 이별의 마음을 밀어 내리는 화자의 태도를 드러낸다.",
+            "벽과 나누기 쉽게 통한다가 감식 무대가 가려운다는 것은 이별의 슬픔이 찾아오는 사양이 있음을 드러낸다.",
+            "밀려들어 오는 밤에는 '아무 소리 없이' 다시 돌아온 배라는 점에서, 대상자의 체제가 애처롭고 이국적으로 드러난다."
+          ],
+          "correct_answer": 5,
+          "points": 2,
+          "explanation": null
+        },
+        {
+          "question_id": "q24",
+          "question_number": 24,
+          "question_text": "(나)의 '당신'에 대한 설명으로 적절하지 않은 것은?",
+          "passage": "",
+          "choices": [
+            "화자의 '말투'에 가까운 있는 매개로 존재이다.",
+            "화자의 내면에 살고 있는 방백과 연인의 대상이다.",
+            "화자의 눈앞에 있지만 '무릎으로서' 환기되는 대상이다.",
+            "화자가 '널' 앞에 있고 '무릎 수도 없는' 상황의 존재이다.",
+            "화자의 '사랑'과 '슬픔'을 정형화해 주는 이중적 존재이다."
+          ],
+          "correct_answer": 2,
+          "points": 2,
+          "explanation": null
+        },
+        {
+          "question_id": "q25",
+          "question_number": 25,
+          "question_text": "<보기>를 참고하여 (나)를 감상한 내용으로 적절하지 않은 것은? [3점]",
+          "passage": "",
+          "choices": [
+            "일각은 반복적으로 순환하는 웃음의 의상으로서, 사양과 슬픔이 내재된 화자의 복합적인 정서를 생생하게 드러내는 표현이라고.",
+            "상처의 기억, 내 적격..., 당신을 부유하는 발음의 폭포를 침묵을 향수로 치유하고, 상상의 고독으로 인하여 사양의 기억이 회피되는 화자의 심적 상태를 보여 주는 표현이라고.",
+            "연기라면서 색채에 대해 웃은 사양과 상처는, 막막이 떨어 보이는 구조물들이 뒤에 이어진 서술로, 감정들이 뒤섞인 화자의 내면을 보여 주는 것으로 보인다.",
+            "어두운 구름이 화자의 심적 상태를 형상화한 사유로서, 사양의 고뇌를 안고 살아야 하는 화자의 내면을 내포한 표현이라고.",
+            "이별을 내면화..., 당신이라는 한 걸음으로는, 밀려온 듯이 아슬아슬한 색조로서, 벼랑에서 사양의 감정을 품고 있는 화자의 내면을 보여 주는 표현이라고."
+          ],
+          "correct_answer": 3,
+          "points": 3,
+          "explanation": null
+        },
+        {
+          "question_id": "q26",
+          "question_number": 26,
+          "question_text": "(다)에 대한 이해로 가장 적절한 것은?",
+          "passage": "",
+          "choices": [
+            "어느 시점의 노래로도 환부가 사라지는 것은 아니라는 화자의 인식을 말한다.",
+            "어느 화자가 대상의 아픔을 발현함으로써 자신의 환부를 의식하지 않게 되었다고 말한다.",
+            "어느 사양의 인격자가 상처를 향한 표현일 때, 취약과 위의에서 벗어날 수 없음을 말한다.",
+            "어느 한 나쁜 자질로 드러내려는 욕망이라므로 상처를 폭록하는 긴장을 없애고 있음을 말한다.",
+            "아이 모두 모두, 아픔을 겪는 아니 고백을 하는 이가 그 아픔이나 고백의 실체를 지각하지 못함을 말한다."
+          ],
+          "correct_answer": 2,
+          "points": 2,
+          "explanation": null
+        },
+        {
+          "question_id": "q27",
+          "question_number": 27,
+          "question_text": "<보기>를 바탕으로 (다)를 이해한 내용으로 적절하지 않은 것은?",
+          "passage": "",
+          "choices": [
+            "어명령의 유무를 '통제할 수 없다'는 것을 상대로 향함 '그의 사양이 응원된 것이어서 사양을 향한 응원을 말한다는.",
+            "어떤 순간 그만큼 사랑한다는 것을 말하는 것은 그나마 사양의 상실을 극복 '또 다른 연인을 말한다는.",
+            "연인의 정착하여 이별을 돌아보라는 것은 화자가 상실을 향한 '조우의 가능'을 하지 못하고 자기 정체에 고착해 있음을 말한다.",
+            "어떤 순간 그만큼 사랑한다는 것을 말하는 것은 그나마 사양의 상실을 극복 '또 다른 연인을 말한다는.",
+            "자신의 비유적으로 같은 것이 실감한다는 것은 실제 사양의 정착한 사양의 지주를 자각한 '그가 꾸물거림에 빠져 있음을 말한다는."
+          ],
+          "correct_answer": 3,
+          "points": 3,
+          "explanation": null
+        },
+        {
+          "question_id": "q28",
+          "question_number": 28,
+          "question_text": "윗글의 서술 방식에 대한 설명으로 가장 적절한 것은?",
+          "passage": "",
+          "choices": [
+            "누구의 생각을 누가 말하듯이 명시한 표현을 나타내어 서술하고 있다.",
+            "인물의 생각을 서술자가 평가하며 그 심화된 의미를 함축하여 서술하고 있다.",
+            "인물의 의식을 일곱 자식의 생활적 묘사로 통해 서술하고 있다.",
+            "인물의 상황에 관련된 정보를 누차하여 서술하고 있다.",
+            "인물 행동의 전개 과정을 순차적으로 서술하고 있다."
+          ],
+          "correct_answer": 4,
+          "points": 3,
+          "explanation": null
+        },
+        {
+          "question_id": "q29",
+          "question_number": 29,
+          "question_text": "밑글의 서사적 기능으로 가장 적절한 것은?",
+          "passage": "",
+          "choices": [
+            "자의 신념을 인물에 들어가 본 결과로, 새로운 세계관을 바탕으로 하는 주제를 형상화한다.",
+            "현의 인간관계를 인물이 성찰하는 전환점으로, 갈등으로 인한 위기감을 유발한다.",
+            "일상적이지 않은 직업을 인물이 의식한다는 표지로, 인물의 심리적 동요를 부각한다.",
+            "상황을 이해하려는 인물이 조정하는 단서로, 심화된 사회적 갈등을 해소한다.",
+            "가정의 전시에 인물이 저항한다는 신호로, 돌발적 사건의 발생을 알린다."
+          ],
+          "correct_answer": 3,
+          "points": 2,
+          "explanation": null
+        },
+        {
+          "question_id": "q30",
+          "question_number": 30,
+          "question_text": "‘희망’을 중심으로 윗글을 이해한 내용으로 적절하지 않은 것은?",
+          "passage": "",
+          "choices": [
+            "희망은 ‘실물적 관점에서 서사적 사상’을 통해 도식적인 의미로 발전해 간다.",
+            "희망은 ‘실물’이 동에서 그 기능을 하지 않는다는 것을 알고 일단 안도감을 느끼게 된다.",
+            "희망은 ‘사상’을 빌미로 하여 자신의 현재 상황에 대해 다른 인물상에서 접근하고자 한다.",
+            "희망은 ‘상상하는 실상’의 원인에 대해 궁금해하면서 ‘세상 사상’들에게 주의를 기울이게 된다.",
+            "희망은 ‘실상’에 대한 인식은 ‘실상 사상’들과 공존하게 되면서, 그것이 없는 ‘사상’은 더 이상 지속하지 않게 된다."
+          ],
+          "correct_answer": 5,
+          "points": 3,
+          "explanation": null
+        },
+        {
+          "question_id": "q31",
+          "question_number": 31,
+          "question_text": "‘<보기>’를 참고하여 윗글을 감상한 내용으로 적절하지 않은 것은? [3점]",
+          "passage": "",
+          "choices": [
+            "‘의식의 판’이 ‘김도덕’글에서 주관이 비정상적 문제 상황에 지속적으로 주목하게 될 것이고.",
+            "의식 수준을 ‘보편화’된 것과 바꾼이 사라진 상황은, 주관이 없이 변화된 모습을 보이게 된다고 할 수 있겠고.",
+            "‘비평적’인 연관성이 이해하는 것은, 개인이 관련된 생각을 ‘무주무반’다는 ‘실용하고 추상적인’ 생각으로 생각하는 심리라가 된다고 할 수 있겠고.",
+            "그의 사상이 도달한 ‘비평적’ 확고한 경지는 사소한 것의 소소의 의미를 탐색할 때 알 수 있으며, 그 사소한 것에 의미없이 잡는 자료들은 상황에서 실현이 가능해졌고.",
+            "기고한 한탄은, ‘비평하기’가 ‘안정화되는 상황이 되었지만 ‘사실’을 나타내는 현상을 두고 일론을 많이라고 할 수 있겠고."
+          ],
+          "correct_answer": 1,
+          "points": 3,
+          "explanation": null
+        },
+        {
+          "question_id": "q32",
+          "question_number": 32,
+          "question_text": "(가)에 대한 설명으로 적절하지 않은 것은?",
+          "passage": "",
+          "choices": [
+            "대구 표현으로 의향을 묘사하여 대상의 성격을 드러낸다.",
+            "행위의 실황을 기록하여 서정적 감정을 환기한다.",
+            "의문의 표현을 사용하여 상황에 대해 의심한다.",
+            "과거의 행적을 대입하여 현재의 처지를 보여 준다.",
+            "구체적 수치를 제시하여 감정하기 힘든 현실을 드러낸다."
+          ],
+          "correct_answer": 2,
+          "points": 3,
+          "explanation": null
+        },
+        {
+          "question_id": "q33",
+          "question_number": 33,
+          "question_text": "(나)에 대한 이해로 가장 적절한 것은?",
+          "passage": "",
+          "choices": [
+            "다른 인물과는 화자가 말을 전하는 상대에게 노동의 대가로 주는 모습이다.",
+            "다른 인물과는 화자가 말을 전하는 상대에게 노동의 대가로 주는 모습이다.",
+            "다른 인물 모두, 각자는 연희하는 화자가 유흥을 목적으로 구술하는 방식이다.",
+            "다른 인물 모두, 각자는 연희하는 화자가 표현하여 성취의 도모를 유효로 바라본다.",
+            "다른 인물 모두, 각자는 연희하는 화자가 보기에 성취가 없으니 하는 행위의 대상이다."
+          ],
+          "correct_answer": 5,
+          "points": 3,
+          "explanation": null
+        },
+        {
+          "question_id": "q34",
+          "question_number": 34,
+          "question_text": "<보기>를 참고하여 (가), (나)를 잘못한 내용으로 적절하지 않은 것은? [3점]",
+          "passage": "",
+          "choices": [
+            "(가)의 '그대가' '나'의 실력과 다른 원유를 통으로서 '자네'가 포하여 사연은, 당시 전차 변형이 격음은 적한 고풍을 사격으로 보여 주군.",
+            "(가)의 '이내' 말은, 화자는 이방의 내배와 사회적 지원을 구체적으로 연구하여 실상의 부조리함을 고찰하고, '그대' 연합하여 그 의의의 상용을 보려는 기저이다.",
+            "(나)는 실현하는 화자가 '그대'를 뉴대에 두려다, 논리와 병치하여 양양한 완전한 표현을 보이는 경우, 이 사연이 '이내'의 성취의 양상이 무루한다는 것을 드러내려는 것이다.",
+            "(나)는 실현하는 화자는 '그대'를 뉴대에 두려다, 논리와 병치하여 양양한 완전한 표현을 보이는 경우, 이 사연이 '이내'의 성취의 양상이 무루한다는 것을 드러내려는 것이다.",
+            "(나)는 실현하는 화자는 '그대'를 뉴대에 두려다, 논리와 병치하여 양양한 완전한 표현을 보이는 경우, 이 사연이 '이내'의 성취의 양상이 무루한다는 것을 드러내려는 것이다."
+          ],
+          "correct_answer": 2,
+          "points": 3,
+          "explanation": null
+        },
+        {
+          "question_id": "q38",
+          "question_number": 38,
+          "question_text": "(가)의 ㉠~㉢에 대한 설명으로 적절하지 않은 것은?",
+          "passage": "",
+          "choices": [
+            "㉠: 학생이 학교 내에서 어떤 정보를 공유하고 있다.",
+            "㉡: 학생이 학생회 수장으로 자신의 정체성을 제시하고 있다.",
+            "㉢: 학생이 교훈 변경에 대해 새로운 제안을 하고 있다.",
+            "㉠: 학생이 제시한 내용에 대해 새로운 제안을 하고 있다.",
+            "㉡: 학생의 생각과 다른 자신의 의견을 제시하고 있다."
+          ],
+          "correct_answer": 4,
+          "points": 2,
+          "explanation": null
+        },
+        {
+          "question_id": "q39",
+          "question_number": 39,
+          "question_text": "다음은 학생들이 '학교장 회의'를 준비하면서 (가)의 대화 내용을 정리한 메모의 일부이다. 메모의 내용으로 적절하지 않은 것은?",
+          "passage": "",
+          "choices": [
+            "우리 학교 교훈 변경: ○○고는 개교 60주년을 맞고 시대에 맞지 않는 교가 가사를 변경. → 오히려 교훈 변경을 논의하면 좋을 듯함.",
+            "교과목: ○○고는 독립을 서두르는 대신 여유를 가짐. → 오히려 동문 선배들의 의견을 반영한 여러 의견을 경청해야 함.",
+            "우리과학 영 입: 교훈 변경 주저. → 다른 학교를 주어야 함.",
+            "학생회 임원: 교훈 변경 주저. → 교훈 변경 주저. → 교훈 변경 주저. → 교훈 변경 주저.",
+            "교훈 변경 주저. → 교훈 변경 주저. → 교훈 변경 주저. → 교훈 변경 주저."
+          ],
+          "correct_answer": 5,
+          "points": 2,
+          "explanation": null
+        },
+        {
+          "question_id": "q40",
+          "question_number": 40,
+          "question_text": "다음은 (나)를 쓸 때 계획한 내용 전개 과정이다. (가)의 [A]~[D]와 (나)를 고려하여 (나)에 반영되었다고 할 때, 이에 대한 설명으로 가장 적절한 것은? [3점]",
+          "passage": "",
+          "choices": [
+            "○○고의 예전 교가 가사에 담긴 가치의 중요도가 지금은 달라졌다는 [A]의 내용은, 학생들의 의견을 수렴하여 교훈 변경을 추진하자는 제안으로 반영되었다.",
+            "교훈 내용이 변화가 있다는 [B]의 내용은, 학생들의 의견을 수렴하여 교훈 변경을 추진하자는 제안으로 반영되었다.",
+            "교과목과 교훈을 구분하여 이해한다는 [C]의 내용은, 학생들의 의견을 수렴하여 교훈 변경을 추진하자는 제안으로 반영되었다.",
+            "학생들의 의견을 수렴하여 교훈 변경을 추진하자는 제안으로 반영되었다.",
+            "교훈 변경을 추진하자는 제안으로 반영되었다."
+          ],
+          "correct_answer": 4,
+          "points": 3,
+          "explanation": null
+        },
+        {
+          "question_id": "q41",
+          "question_number": 41,
+          "question_text": "(나)의 [○○]에 대한 설명으로 적절하지 않은 것은?",
+          "passage": "",
+          "choices": [
+            "글의 부속을 고려하여 전개의 주제를 제시했다.",
+            "글의 심상을 높이기 위해 예화를 제시했다.",
+            "설득력을 높이기 위해 예화성 있는 반론을 제시했다.",
+            "설득력을 높이기 위해 예화성 있는 반론을 제시했다.",
+            "전개 내용을 실현하기 위해 계획하는 과정을 제시했다."
+          ],
+          "correct_answer": 3,
+          "points": 2,
+          "explanation": null
+        },
+        {
+          "question_id": "q42",
+          "question_number": 42,
+          "question_text": "다음은 (나)의 5문단 초고와 그에 대한 친구의 조언이다. 친구의 조언이 (나)에 반영되었다고 할 때, (나)에 들어간 내용으로 가장 적절한 것은?",
+          "passage": "",
+          "choices": [
+            "학교 구성원 간의 공정성과 신뢰성",
+            "다른 학교가 참고할 수 있는 유용한 정보",
+            "교훈 내용이 학교표준화의 계기가 된다는 점",
+            "지역 사회에서 학교의 위상이 정착한다는 유익",
+            "전원을 받는 대상이 학생의 성장을 이룰 수 있다는 점"
+          ],
+          "correct_answer": 2,
+          "points": 2,
+          "explanation": null
+        },
+        {
+          "question_id": "q43",
+          "question_number": 43,
+          "question_text": "학생의 초고에 활용된 글쓰기 방식으로 가장 적절한 것은?",
+          "passage": "",
+          "choices": [
+            "지속 가능한 항공유를 기존 항공유에 대비하여 설명하였다.",
+            "지속 가능한 항공유의 생산 과정을 비교하고 서술하였다.",
+            "지속 가능한 항공유의 장점과 단점을 함께 비교하고 서술하였다.",
+            "지속 가능한 항공유의 도입 과정에서 예상되는 문제점을 시기별로 서술하였다.",
+            "지속 가능한 항공유를 사용할 때의 경제적 효과를 국가별로 분석하여 서술하였다."
+          ],
+          "correct_answer": 1,
+          "points": 2,
+          "explanation": null
+        },
+        {
+          "question_id": "q44",
+          "question_number": 44,
+          "question_text": "다음은 학생이 초고를 작성하며 떠올린 생각이다. 이를 고려할 때 [A]에 들어갈 내용으로 가장 적절한 것은?",
+          "passage": "",
+          "choices": [
+            "앞으로 항공산업 전반에 대한 비용보다는 환경을 고려해 본질적 의미로 지속 가능한 항공유를 사용하는 비행기를 선택한다면 지구 온난화를 줄일 수 있다.",
+            "이제는 일상생활에서의 탄소 배출량을 줄이기 위한 노력이 필요할 시기이며, 비행기로 여행할 때 수화물의 무게를 줄여 환경을 위한 발걸음에 동참하여야 한다.",
+            "지속 가능한 항공유를 통한 항공 부문 탄소 배출량은 더 많이 감축할 수 있다. 항공업을 위해 지속 가능한 항공유의 도입을 한층 더 확대하는 것은 어떤가?",
+            "많은 국가들이 지속 가능한 항공유의 사용에 동참한다면 화석 연료 사용량을 줄일 수 있다. 화석 연료 사용량이 줄어들면 지구는 더 건강해질 수 있지 않을까?",
+            "지속 가능한 항공유의 사용을 확대하면 탄소 배출량을 줄여 기후 위기에 대응할 수 있다. 비행기를 타야 한다면, 되도록 탄소 배출량이 더 적은 항공편을 이용하면 어떨까?"
+          ],
+          "correct_answer": 5,
+          "points": 3,
+          "explanation": null
+        },
+        {
+          "question_id": "q38",
+          "question_number": 38,
+          "question_text": "<작용 활동>을 수행한 결과로 적절한 것은?",
+          "passage": "",
+          "choices": [
+            "예는 조음 위치와 조음 방법이 모두 변하는 자음 교체가 있다.",
+            "예에는 조음 위치는 변하고 조음 방법은 변하지 않는 자음 교체가 있다.",
+            "예에 나타나는 자음 교체는 모두, 조음 위치와 조음 방법이 변한다.",
+            "예에 나타나는 자음 교체는 모두, 조음 위치와 조음 방법이 변하지 않는다.",
+            "예에 나타나는 자음 교체는 모두, 조음 위치는 변하지 않고 조음 방법만 변한다."
+          ],
+          "correct_answer": 4,
+          "points": 2,
+          "explanation": null
+        },
+        {
+          "question_id": "q39",
+          "question_number": 39,
+          "question_text": "<보기>를 바탕으로 <자료>를 이해한 내용으로 적절한 것은?",
+          "passage": "",
+          "choices": [
+            "은은 '모래놀이'라는 부사어를 가진 발화를 인용한 것일 수 있다.",
+            "'모래놀이'는 직접 인용한 것일 수 있다.",
+            "은은 조경의 주어를 가진 발화를 인용한 것일 수 있다.",
+            "'모래놀이'는 '하얀바람'을 직접 인용한 것일 수 있다.",
+            "은은 '메시지'에 해당하는 가장 발화를 인용한 것일 수 없다."
+          ],
+          "correct_answer": 5,
+          "points": 3,
+          "explanation": null
+        },
+        {
+          "question_id": "q40",
+          "question_number": 40,
+          "question_text": "(나)에 대한 설명으로 적절하지 않은 것은?",
+          "passage": "",
+          "choices": [
+            "은 시간과 방송이 이어지고 있는 제일 아래의 회의의 휴수 상태에 제시하였습니다.",
+            "은 시간과 방송이 다른 내용을 드러내는 차안에 제시하였습니다.",
+            "은 시간과 방송이 흥미에 시간과 대화창이 보이도록 제시하였습니다.",
+            "은 시간과 방송의 전환과 함께 나타나는 대화창에 제시하였습니다.",
+            "은 청취자가 실시간 방송 내용과 관련하여 남긴 질문에 대해 답을 찾아볼 수 있도록 실시간 대화창에 링크가 제시하였습니다."
+          ],
+          "correct_answer": 4,
+          "points": 2,
+          "explanation": null
+        },
+        {
+          "question_id": "q41",
+          "question_number": 41,
+          "question_text": "(A)~(C)에서 알 수 있는 시청자들의 반응에 대한 설명으로 적절하지 않은 것은?",
+          "passage": "",
+          "choices": [
+            "은 가수는 자신의 여행 경험을 언급하며 '표준과 콘셉트' 규정의 차이로 인해 반항하는 반항을 드러내었습니다.",
+            "은 '표준과 콘셉트' 문제의 규제에 대한 배경지식을 언급하며 '표준과 콘셉트'의 규제가 국가에 따라 단일되지 않기에 대해 설명하였습니다.",
+            "은 '표준'은 국제 표준 규제 제정의 효과를 언급하며 '표준과 콘셉트'의 국제 표준 규제를 제정하는 것이 가능함에 대해 반항을 요청하였습니다.",
+            "은 '표준과 콘셉트' 규제의 차이로 인해 반항하는 반항을 드러내었습니다.",
+            "은 '표준과 콘셉트' 규정에 대해 자신의 이해 내용이 맞는지 확인을 요청하였습니다."
+          ],
+          "correct_answer": 3,
+          "points": 2,
+          "explanation": null
+        },
+        {
+          "question_id": "q42",
+          "question_number": 42,
+          "question_text": "(나)의 정보 제시 방식으로 적절하지 않은 것은?",
+          "passage": "",
+          "choices": [
+            "은 A의 용지의 국제 표준 규제에 관한 내용을 명확분명 소제목으로 분석 제시하였습니다.",
+            "은 '표준과 콘셉트'에 관한 '다시 보기' 영상의 출처를 글자수 기준으로 제시하였습니다.",
+            "은 A의 용지의 제목에 대한 이해를 돕기 위해 A의 용지 규격을 보여 주는 이미지를 제시하였습니다.",
+            "은 '표준과 콘셉트' 규제 차이에 대한 내용을 영상에서 찾을 수 있도록 해당 내용이 시작되는 장면을 제시하였습니다.",
+            "은 규격이 표준으로 정해져 있는지, 표준의 규격을 준수하기 위해 탐색 자료를 첨부 파일로 제시하였습니다."
+          ],
+          "correct_answer": 2,
+          "points": 2,
+          "explanation": null
+        },
+        {
+          "question_id": "q43",
+          "question_number": 43,
+          "question_text": "(C)에 대한 설명으로 가장 적절한 것은?",
+          "passage": "",
+          "choices": [
+            "은 영상 안에 '다각'을 사용하여, 일본 여행을 간 것이 일본에서 이루어지는 것에 대해 조리있음을 나타냅니다.",
+            "은 '표준 용지 규정'과 '다각'의 관계에 대해 '나'를 사용하여, '표준과 콘셉트'의 내용이 상호 관계를 이루는 것을 나타냅니다.",
+            "은 A4의 박막에 영상과 '다각'을 사용하여, 송출 사항에 대한 규격의 차이를 명확히 하는 것을 강조하였습니다.",
+            "은 영상 안에 '다각'을 사용하여, 송출 시점의 시간이 많이 도달하는 사항을 조치에 확인하고 있음을 나타냅니다.",
+            "은 용도와 구성이 '표준'에 따라 '표준과 콘셉트'를 사용하여, 영상을 제작에 올려줄 뻔 가능성이 있음을 나타냅니다."
+          ],
+          "correct_answer": 1,
+          "points": 2,
+          "explanation": null
+        },
+        {
+          "question_id": "q44",
+          "question_number": 44,
+          "question_text": "(가)에 대한 설명으로 적절하지 않은 것은?",
+          "passage": "",
+          "choices": [
+            "각 행사별 진행 절차를 순서대로 정리해 놓아 주고 있다.",
+            "안전을 위한 유의사항을 QR 코드로 통해 제시하고 있다.",
+            "동아리 부스와 관련한 내용을 확인할 수 있도록 QR 코드를 제시하고 있다.",
+            "각 행사별 진행하는 장소를 손가락으로 지시하는 모양의 기호를 활용하여 알려 주고 있다.",
+            "동아리 부스 참여에 참여하는 동아리별로 활동 유형에 따라 구분하여 제시하고 있다."
+          ],
+          "correct_answer": 5,
+          "points": 2,
+          "explanation": null
+        },
+        {
+          "question_id": "q45",
+          "question_number": 45,
+          "question_text": "(나)와 대화 내용을 바탕으로 아래와 같이 게시판을 구성했다고 할 때, 이에 대한 설명으로 적절하지 않은 것은? [3점]",
+          "passage": "",
+          "choices": [
+            "‘세계 음식 체험’에서는 음식 정보, 제공의 유용성에 대해 ‘동우’와 ‘혜림’ 대화로 반영하여 음식의 이기적 사용을 제시하였다.",
+            "‘여러분의 영상물 보기’는 직접 제작, 감상한 후 ‘나경’과 ‘준수’의 대화를 반영하여 조리법을 확인할 수 있는 화면을 올려 두었다.",
+            "‘토론 한마당’은 본질 전환 협의 중요성을 반영해 ‘승윤’과 ‘혜림’의 대화를 반영하여 게시판에 게시할 수 있는 자료를 배포로 제시하였다.",
+            "‘영상물 통해 고민해 보세요!’는 관련 주제에 따른 ‘나경’과 ‘준수’의 대화를 반영하여 예상 주제에 투표할 수 있는 기능을 구현하였다.",
+            "‘여러분의 영상’은 영상 제작 후 ‘준수’와 ‘승윤’의 대화를 반영하여 발표 소감 및 영상 업로드 상황을 추가로 담았다."
+          ],
+          "correct_answer": 2,
+          "points": 3,
           "explanation": null
         }
       ]
