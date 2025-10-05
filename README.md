@@ -28,6 +28,32 @@ KSAT AI Benchmark는 대한민국 수학능력시험 문제를 활용하여 다�
 3. **풀이 시간**: 각 문제를 푸는데 소요된 시간 (초 단위)
 4. **과목별 성적**: 국어, 수학, 영어, 탐구 영역별 점수
 
+## ⚡ Makefile 빠른 시작
+
+```bash
+# 도움말
+make help
+
+# 국어 파싱 + 정답 입력
+make korean
+
+# 수학 파싱 + 정답 입력 (Vision API)
+make math
+
+# 모든 과목 처리
+make all
+
+# 커스텀 PDF 파싱
+make parse PDF=exams/pdf/2025/국어영역_문제지_홀수형.pdf
+make parse-vision PDF=exams/pdf/2025/수학영역_문제지_홀수형.pdf
+
+# YAML 검증
+make validate
+
+# 정리
+make clean
+```
+
 ## 🔄 자동화 워크플로우
 
 ```
@@ -72,7 +98,26 @@ cp .env.example .env
 
 ### 새로운 시험 추가하기
 
-#### 방법 1: PDF 자동 파싱 (LLM) ⭐️ **추천**
+#### 방법 1: Makefile 사용 ⭐️ **가장 간편!**
+
+```bash
+# 국어 파싱 + 정답 입력 (한 번에)
+make korean
+
+# 수학 파싱 + 정답 입력 (한 번에)
+make math
+
+# 영어 파싱 + 정답 입력 (한 번에)
+make english
+
+# 모든 과목 처리
+make all
+
+# 도움말 보기
+make help
+```
+
+#### 방법 2: Python 스크립트 직접 실행
 
 ```bash
 # 1. PDF 파싱 (로컬에서)
@@ -82,8 +127,10 @@ python src/parser/parse_exam.py exams/pdf/2025/국어영역_문제지_홀수형.
 # Vision API (수학, 과학 등) - 수식과 그래프 완벽 인식
 python src/parser/parse_exam.py exams/pdf/2025/수학영역_문제지_홀수형.pdf --vision
 
-# 2. 생성된 YAML 파일 검토 및 정답 입력
-code exams/parsed/2025-math-sat.yaml
+# 2. 정답표 파싱 및 자동 입력
+python src/parser/parse_answer_key.py \
+  exams/pdf/2025/수학영역_정답표.pdf \
+  exams/parsed/2025-math-sat.yaml
 
 # 3. Git에 추가 및 커밋
 git add exams/parsed/2025-math-sat.yaml
