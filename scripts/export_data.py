@@ -1,0 +1,110 @@
+#!/usr/bin/env python3
+"""
+평가 결과를 웹용 JSON으로 export
+
+웹 프론트엔드가 static하게 로드할 수 있도록 데이터를 JSON으로 변환합니다.
+"""
+
+import json
+import sys
+from pathlib import Path
+
+# 프로젝트 루트를 sys.path에 추가
+project_root = Path(__file__).parent.parent
+sys.path.insert(0, str(project_root))
+
+from src.evaluator.summary import load_results
+
+
+def export_to_json():
+    """평가 결과를 JSON으로 export"""
+    
+    print("📤 평가 결과를 JSON으로 export 중...")
+    
+    # 결과 로드
+    results = load_results()
+    
+    if not results:
+        print("⚠️  평가 결과가 없습니다.")
+        return
+    
+    # 리더보드 생성
+    leaderboard = []
+    all_results_list = []
+    
+    for exam_id, exam_results in results.items():
+        for result in exam_results:
+            all_results_list.append(result)
+    
+    # 모델별로 그룹화
+    model_map = {}
+    for result in all_results_list:
+        model_name = result['model_name']
+        if model_name not in model_map:
+            model_map[model_name] = []
+        model_map[model_name].append(result)
+    
+    # 리더보드 엔트리 생성
+    for model_name, model_results in model_map.items():
+        total_questions = sum(r['summary']['total_questions'] for r in model_results)
+        correct_answers = sum(r['summary']['correct_answers'] for r in model_results)
+        total_score = sum(r['summary']['total_score'] for r in model_results)
+        max_score = sum(r['summary']['max_score'] for r in model_results)
+        total_time = sum(
+            sum(q['time_taken'] for q in r['results'])
+            for r in model_results
+        )
+        
+        accuracy = (correct_answers / total_questions * 100) if total_questions > 0 else 0
+        score_rate = (total_score / max_score * 100) if max_score > 0 else 0
+        avg_time = total_time / total_questions if total_questions > 0 else 0
+        
+        leaderboard.append({
+            'model_name': model_name,
+            'accuracy': round(accuracy, 2),
+            'score_rate': round(score_rate, 2),
+            'total_score': total_score,
+            'max_score': max_score,
+            'total_questions': total_questions,
+            'correct_answers': correct_answers,
+            'avg_time': round(avg_time, 2),
+            'exams_count': len(model_results),
+        })
+    
+    # 정확도 순으로 정렬
+    leaderboard.sort(key=lambda x: x['accuracy'], reverse=True)
+    
+    # 통계
+    total_exams = len(results)
+    total_evaluations = len(all_results_list)
+    total_questions = sum(r['summary']['total_questions'] for r in all_results_list)
+    
+    # JSON 데이터 생성
+    data = {
+        'leaderboard': leaderboard,
+        'stats': {
+            'totalExams': total_exams,
+            'totalEvaluations': total_evaluations,
+            'totalQuestions': total_questions,
+        },
+        'results': all_results_list,
+    }
+    
+    # web/public/data/ 디렉토리 생성
+    output_dir = project_root / 'web' / 'public' / 'data'
+    output_dir.mkdir(parents=True, exist_ok=True)
+    
+    # JSON 파일로 저장
+    output_file = output_dir / 'evaluation-data.json'
+    with open(output_file, 'w', encoding='utf-8') as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+    
+    print(f"✅ Export 완료: {output_file}")
+    print(f"   - 리더보드 엔트리: {len(leaderboard)}개")
+    print(f"   - 전체 평가 결과: {total_evaluations}개")
+    print(f"   - 총 문제 수: {total_questions}개")
+
+
+if __name__ == '__main__':
+    export_to_json()
+
