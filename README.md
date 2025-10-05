@@ -12,28 +12,48 @@ KSAT AI Benchmark는 대한민국 수학능력시험 문제를 활용하여 다�
 
 ### 주요 특징
 
-- 🤖 **다양한 AI 모델 지원**: GPT-4, Claude, Gemini 등 주요 AI 모델 평가
-- 📊 **상세한 결과 분석**: 정답률뿐만 아니라 답변 이유와 소요 시간까지 기록
-- ⚡ **자동화된 평가**: GitHub Actions를 통한 완전 자동화된 평가 시스템
-- 🌐 **실시간 리더보드**: GitHub Pages를 통한 평가 결과 실시간 공개
+- 📄 **PDF 자동 파싱**: PDF 시험지를 업로드하면 자동으로 YAML로 변환
+- 🤖 **다양한 AI 모델 지원**: GPT-4, Claude, Gemini, Solar, Sonar 등 주요 AI 모델 평가
+- 📊 **상세한 결과 분석**: 정답률, 답변 선택 이유, 풀이 시간까지 모두 기록
+- ⚡ **완전 자동화**: PDF 업로드 → 파싱 → 평가 → 웹 배포까지 GitHub Actions로 자동화
+- 🌐 **현대적인 웹 UI**: Next.js + Mantine UI로 구현된 아름다운 리더보드
 - 🔄 **지속적인 업데이트**: 새로운 시험이나 모델이 추가되면 자동으로 평가
 
 ## 🎯 평가 지표
 
 각 AI 모델은 다음 기준으로 평가됩니다:
 
-1. **정답률**: 정답을 맞힌 문제의 비율
-2. **답변 근거**: 해당 답을 선택한 이유와 논리
-3. **풀이 시간**: 각 문제를 푸는데 소요된 시간
+1. **정답률 & 점수**: 정답을 맞힌 문제의 비율과 획득 점수
+2. **답변 선택 이유**: 해당 답을 선택한 상세한 논리와 설명
+3. **풀이 시간**: 각 문제를 푸는데 소요된 시간 (초 단위)
 4. **과목별 성적**: 국어, 수학, 영어, 탐구 영역별 점수
+
+## 🔄 자동화 워크플로우
+
+```
+PDF 업로드 → PDF 파싱 → YAML 생성 → 모델 평가 → 결과 YAML 저장 → 웹 배포
+   (1)         (2)         (3)        (4)          (5)            (6)
+```
+
+1. **PDF 업로드**: `exams/pdf/`에 시험지 PDF 추가
+2. **PDF 파싱**: Python으로 텍스트/이미지 추출 및 구조화
+3. **YAML 생성**: `exams/parsed/`에 구조화된 시험 데이터 저장
+4. **모델 평가**: 각 AI 모델이 문제를 풀고 이유와 시간 기록
+5. **결과 저장**: `results/`에 YAML 형식으로 평가 결과 저장
+6. **웹 배포**: Next.js로 빌드하여 GitHub Pages에 자동 배포
 
 ## 🚀 빠른 시작
 
 ### 필요 조건
 
 - Python 3.10 이상
-- Node.js 18 이상 (웹 인터페이스 개발 시)
-- AI 모델 API 키 (OpenAI, Anthropic, Google 등)
+- Node.js 18 이상
+- AI 모델 API 키:
+  - OpenAI (GPT-4, GPT-3.5)
+  - Anthropic (Claude)
+  - Google (Gemini)
+  - Upstage (Solar)
+  - Perplexity (Sonar)
 
 ### 설치
 
@@ -52,24 +72,40 @@ cp .env.example .env
 
 ### 새로운 시험 추가하기
 
-`exams/` 폴더에 JSON 형식의 시험 파일을 추가합니다:
+`exams/pdf/` 폴더에 PDF 형식의 시험지를 업로드합니다:
 
-```json
-{
-  "exam_id": "2024-ksat-math",
-  "title": "2024학년도 수학능력시험 - 수학",
-  "subject": "math",
-  "year": 2024,
-  "questions": [
-    {
-      "question_id": "q1",
-      "question_text": "다음 중 옳은 것은?",
-      "choices": ["1", "2", "3", "4", "5"],
-      "correct_answer": "3",
-      "difficulty": "medium"
-    }
-  ]
-}
+```bash
+# 1. PDF 파일 추가
+cp 2024-ksat-math.pdf exams/pdf/
+
+# 2. Git에 추가 및 커밋
+git add exams/pdf/2024-ksat-math.pdf
+git commit -m "feat: 2024 수학 시험 추가"
+git push
+
+# 3. GitHub Actions가 자동으로:
+#    - PDF 파싱하여 YAML 생성 (exams/parsed/)
+#    - 모든 AI 모델로 평가 실행
+#    - 결과를 results/에 저장
+#    - 웹사이트 업데이트
+```
+
+**또는 수동으로 YAML 작성:**
+
+`exams/parsed/` 폴더에 YAML 파일을 직접 작성할 수도 있습니다:
+
+```yaml
+exam_id: 2024-ksat-math
+title: 2024학년도 수학능력시험 - 수학
+subject: math
+year: 2024
+questions:
+  - question_id: q1
+    question_number: 1
+    question_text: "다음 중 옳은 것은?"
+    choices: ["1", "2", "3", "4", "5"]
+    correct_answer: "3"
+    points: 2
 ```
 
 ### 새로운 모델 추가하기
@@ -94,6 +130,9 @@ cp .env.example .env
 ### 로컬에서 평가 실행
 
 ```bash
+# PDF 파싱
+python -m src.parser.main --input exams/pdf/2024-ksat-math.pdf
+
 # 모든 모델로 모든 시험 평가
 python -m src.evaluator.main
 
@@ -101,48 +140,106 @@ python -m src.evaluator.main
 python -m src.evaluator.main --model gpt-4-turbo --exam 2024-ksat-math
 ```
 
+### 웹 인터페이스 로컬 실행
+
+```bash
+cd web
+npm install
+npm run dev
+# http://localhost:3000 접속
+```
+
 ## 📁 프로젝트 구조
 
 ```
 KSAT-AI-Benchmark/
 ├── .github/
-│   └── workflows/          # GitHub Actions 워크플로우
-├── exams/                  # 시험 문제 데이터
-├── models/                 # AI 모델 설정
+│   └── workflows/              # GitHub Actions 워크플로우
+│       ├── parse-and-evaluate.yml
+│       └── deploy-pages.yml
+├── exams/
+│   ├── pdf/                    # 원본 PDF 시험지
+│   └── parsed/                 # 파싱된 YAML 파일
+├── models/                     # AI 모델 설정
 ├── src/
-│   ├── evaluator/         # 평가 시스템 코어
-│   └── models/            # 모델 인터페이스
-├── results/               # 평가 결과 (자동 생성)
-├── web/                   # 웹 프론트엔드
-├── docs/                  # 프로젝트 문서
-└── tests/                 # 테스트 코드
+│   ├── parser/                 # PDF 파싱 시스템
+│   ├── evaluator/              # 평가 시스템
+│   └── models/                 # 모델 인터페이스
+├── results/                    # 평가 결과 YAML
+├── web/                        # Next.js 프론트엔드
+│   ├── app/                    # App Router 페이지
+│   ├── components/             # React 컴포넌트
+│   └── lib/                    # YAML 로더 등
+├── docs/                       # 프로젝트 문서
+└── tests/                      # 테스트 코드
 ```
 
-## 🔄 자동화 워크플로우
+## ⚙️ GitHub Actions 워크플로우
 
-이 프로젝트는 GitHub Actions를 통해 완전히 자동화되어 있습니다:
+### 1. PDF 파싱 및 평가 (`parse-and-evaluate.yml`)
 
-1. **새로운 시험 추가 감지**: `exams/` 폴더에 새 파일이 추가되면
-2. **새로운 모델 추가 감지**: `models/models.json`이 수정되면
-3. **자동 평가 실행**: 등록된 모든 모델로 자동으로 문제 풀이
-4. **결과 저장**: 평가 결과를 `results/` 폴더에 저장
-5. **웹사이트 업데이트**: GitHub Pages에 최신 결과 반영
+**트리거:**
+- `exams/pdf/`에 새 PDF 추가
+- `models/models.json` 수정
+- 수동 실행
+
+**프로세스:**
+```
+Job 1: PDF 파싱
+  - PDF 텍스트/이미지 추출
+  - YAML 생성
+  - exams/parsed/에 커밋
+
+Job 2: 모델 평가 (Job 1 완료 후)
+  - YAML 로드
+  - 각 모델로 문제 풀이
+  - 결과 YAML 저장
+  - results/에 커밋
+```
+
+### 2. 웹사이트 배포 (`deploy-pages.yml`)
+
+**트리거:**
+- `results/` 폴더 변경
+- `exams/parsed/` 폴더 변경
+- `web/` 폴더 변경
+
+**프로세스:**
+```
+- YAML 데이터를 public/data/로 복사
+- Next.js 빌드 (npm run build)
+- 정적 HTML 생성
+- GitHub Pages에 배포
+```
 
 ## 🌐 결과 확인
 
 평가 결과는 [GitHub Pages](https://roboco-io.github.io/KSAT-AI-Benchmark)에서 확인할 수 있습니다.
 
-### 리더보드
+### 주요 페이지
 
-- 전체 모델 순위
-- 과목별 점수 비교
-- 평균 풀이 시간
+#### 1. 리더보드 (메인)
+- 모델별 전체 순위 테이블
+- 과목별 점수 필터링
+- 정답률과 평균 풀이 시간
 
-### 상세 결과
+#### 2. 문제 목록 페이지
+- 시험의 모든 문제 표시
+- 각 문제별로 모든 모델의 답안 그리드
+- 정답(초록) / 오답(빨강) 색상 구분
+- 답안 클릭 → 상세 모달 팝업
 
-- 모델별 문제 풀이 과정
-- 각 문제에 대한 답변 이유
-- 시험별 정답률 분석
+#### 3. 답안 상세 모달
+- 선택한 답안
+- **답변 선택 이유** (전체 설명)
+- 풀이 소요 시간
+- 획득 점수
+
+#### 4. 모델별 상세 페이지
+- 해당 모델의 전체 성적
+- 과목별 탭
+- 문제별 정답/오답 상세
+- 차트 및 통계
 
 ## 🤝 기여하기
 
@@ -165,11 +262,13 @@ KSAT-AI-Benchmark/
 
 현재 지원하는 AI 모델:
 
-- **OpenAI**: GPT-4, GPT-4 Turbo, GPT-3.5 Turbo
-- **Anthropic**: Claude 3 Opus, Claude 3 Sonnet, Claude 3 Haiku
-- **Google**: Gemini Pro, Gemini Ultra
-- **Meta**: Llama 2, Llama 3
-- 기타 OpenAI API 호환 모델
+| 제공사 | 모델 | 상태 |
+|--------|------|------|
+| **OpenAI** | GPT-4 Turbo, GPT-4, GPT-3.5 Turbo | ✅ |
+| **Anthropic** | Claude 3 Opus, Sonnet, Haiku | ✅ |
+| **Google** | Gemini Pro, Gemini 1.5 Pro | ✅ |
+| **Upstage** | Solar Pro, Solar Mini | ✅ |
+| **Perplexity** | Sonar Large, Sonar Medium | ✅ |
 
 새로운 모델 추가 요청은 [이슈](https://github.com/roboco-io/KSAT-AI-Benchmark/issues)로 남겨주세요.
 
@@ -187,18 +286,17 @@ KSAT-AI-Benchmark/
 `.env` 파일에 다음 환경 변수를 설정해주세요:
 
 ```bash
-# OpenAI
+# AI Model API Keys
 OPENAI_API_KEY=your_openai_api_key
-
-# Anthropic
 ANTHROPIC_API_KEY=your_anthropic_api_key
-
-# Google
 GOOGLE_API_KEY=your_google_api_key
+UPSTAGE_API_KEY=your_upstage_api_key
+PERPLEXITY_API_KEY=your_perplexity_api_key
 
-# 기타 설정
+# Evaluation Settings
 MAX_RETRIES=3
 TIMEOUT=60
+API_CALL_DELAY=1
 ```
 
 ## 🧪 테스트
@@ -248,19 +346,24 @@ Source: https://github.com/roboco-io/KSAT-AI-Benchmark
 
 ### 2025 Q4
 - [x] 프로젝트 초기 설정
+- [x] PDF 파싱 시스템 설계
+- [x] YAML 데이터 형식 정의
+- [ ] PDF 파서 구현
 - [ ] 기본 평가 시스템 구현
 - [ ] GitHub Actions 자동화
-- [ ] 웹 인터페이스 v1.0
 
 ### 2026 Q1
+- [ ] Next.js + Mantine UI 웹 인터페이스
+- [ ] 문제 목록 및 답안 그리드
+- [ ] 답안 상세 모달
 - [ ] 과거 수능 문제 데이터베이스 확장
 - [ ] 더 많은 AI 모델 지원
-- [ ] 상세 분석 리포트 기능
 
 ### 2026 Q2
-- [ ] 다국어 시험 지원 (SAT 등)
+- [ ] 상세 분석 리포트 기능
+- [ ] 차트 및 시각화 고도화
+- [ ] 다국어 시험 지원 (SAT, 가오카오 등)
 - [ ] API 서비스 제공
-- [ ] 커뮤니티 기여 시스템
 
 ## ⭐ Star History
 
