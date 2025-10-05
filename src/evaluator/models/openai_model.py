@@ -31,7 +31,7 @@ class OpenAIModel(BaseModel):
             # 프롬프트 구성
             system_prompt = """당신은 대한민국 수능 문제를 푸는 AI입니다.
 
-문제를 신중하게 분석하고 다음 형식으로 답변하세요:
+문제를 신중하게 분석하고 반드시 JSON 형식으로 답변하세요:
 
 {
   "answer": 3,
@@ -39,6 +39,7 @@ class OpenAIModel(BaseModel):
 }
 
 주의사항:
+- 반드시 JSON 형식으로만 답변하세요
 - answer는 1~5 사이의 숫자여야 합니다
 - reasoning은 구체적이고 논리적이어야 합니다
 - 지문이 있다면 반드시 지문 내용을 근거로 답변하세요"""

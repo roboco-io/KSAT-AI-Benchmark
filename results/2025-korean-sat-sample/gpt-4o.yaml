@@ -1,0 +1,132 @@
+exam_id: 2025-korean-sat-sample
+exam_title: 2025학년도 수능 국어영역 (샘플 - 첫 3페이지)
+subject: korean
+model_name: gpt-4o
+evaluated_at: '2025-10-05T20:33:11.826091'
+summary:
+  total_questions: 9
+  correct_answers: 7
+  accuracy: 77.78
+  total_score: 14
+  max_score: 19
+  score_rate: 73.68
+results:
+- question_id: q1
+  question_number: 1
+  answer: 3
+  correct_answer: 3
+  is_correct: true
+  reasoning: 지문에서는 밑줄 긋기가 연습 없이 능숙하게 사용할 수 있다고 오해되어 온 경향이 있다고 언급하며, 본질적으로 밑줄 긋기는 주요한
+    정보가 무엇인지에 대한 판단이 선행되어야 한다고 설명하고 있습니다. 따라서 밑줄 긋기는 누구나 연습 없이도 능숙하게 사용할 수 있는 전략이라는
+    선택지는 지문 내용과 일치하지 않습니다.
+  time_taken: 1.71
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
+- question_id: q2
+  question_number: 2
+  answer: 4
+  correct_answer: 4
+  is_correct: true
+  reasoning: 지문에서는 밑줄 긋기의 효과를 높이기 위해 주요한 정보를 추리고, 자신만의 밑줄 긋기 표시 체계를 세워 사용하는 것이 중요하다고
+    설명하고 있습니다. 선택지 4번은 이러한 내용을 반영하여 '주요한 정보를 추릴 수 있도록 자신이 만든 밑줄 긋기 표시 체계에 따라 밑줄 긋기를
+    한다'고 제시하고 있어, ㉠에 해당하는 내용으로 가장 적절합니다.
+  time_taken: 1.45
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
+- question_id: q3
+  question_number: 3
+  answer: 4
+  correct_answer: 5
+  is_correct: false
+  reasoning: 지문에서는 밑줄 긋기를 할 때 독서 목적에 따라 주요한 정보를 선택해야 한다고 설명하고 있습니다. 선택지 4번은 '지느러미는
+    배를 젓는 노와 같은 형태'에 밑줄을 누락했다고 평가하고 있는데, 이는 지문에서 언급된 내용과 관련이 없으며, 독서 목적에 따라 주요한 정보가
+    달라질 수 있다는 점을 고려하지 않은 평가입니다. 따라서 적절하지 않은 평가입니다.
+  time_taken: 2.23
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q4
+  question_number: 4
+  answer: 4
+  correct_answer: 4
+  is_correct: true
+  reasoning: 지문에서 (나) 부분은 과학 정신이 사회에 자리 잡기 위해서는 정치적 변혁이 선행되어야 한다는 주장을 제기하지 않았습니다.
+    오히려 과학 정신이 전제되지 않으면 정치적 변혁이 뿌리내릴 수 없다고 주장하고 있습니다. 따라서 4번 선택지는 지문 내용과 일치하지 않으며
+    적절하지 않은 이해입니다.
+  time_taken: 1.96
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
+- question_id: q5
+  question_number: 5
+  answer: 5
+  correct_answer: 5
+  is_correct: true
+  reasoning: 지문에 따르면, 󰡔대한매일신보󰡕 등의 개화 개념은 국가 구성원 전체를 실행 주체로 하여 근대 국가 주권을 향해 그들을 조직하고
+    동원하는 것을 의미했다고 설명하고 있습니다. 이는 국가의 주권과 결부한 개화 개념이 이미 󰡔대한매일신보󰡕 이전에도 존재했음을 시사합니다. 따라서
+    󰡔대한매일신보󰡕의 발간에 이르러서야 국가의 주권과 결부한 개화 개념이 제기되었다는 선택지는 적절하지 않습니다.
+  time_taken: 3.19
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
+- question_id: q6
+  question_number: 6
+  answer: 3
+  correct_answer: 3
+  is_correct: true
+  reasoning: 지문에서 천두슈는 과학적 방법을 이용하지 않으면 공상에 그칠 뿐이라고 주장하며, 과학의 방법에 근거한 문화가 필요하다고 보았다.
+    또한, 제1차 세계 대전의 비극은 과학을 이용해 저지른 죄악의 결과일 뿐 과학 자체의 죄악이 아니라고 주장했다. 장쥔마이는 과학적 방법을 부정하지
+    않았지만, 인생관의 문제에는 과학적 방법이 적용될 수 없다고 지적했다. 두 인물 모두 과학적 방법 자체를 부정하지 않는다는 점에서 동의할 수
+    있다. 따라서 과학을 이용하는 과정에서 문제가 발생했다고 해도 과학적 방법을 부정할 수 없다는 진술이 가장 적절하다.
+  time_taken: 2.63
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
+- question_id: q7
+  question_number: 7
+  answer: 3
+  correct_answer: 3
+  is_correct: true
+  reasoning: 지문에서 ㉠은 박은식의 견해로, 그는 과학의 물질적 측면을 수용하여 생존과 편리 증진을 강조하면서도 철학의 정신적 측면을 중시하여
+    인격 수양을 강조하고 있다. 이는 과학 연구의 시급성을 강조하는 입장이다. ㉡은 천두슈의 견해로, 그는 과학의 방법에 근거한 문화의 중요성을
+    강조하며, 과학적 사유 능력을 중시한다. 이는 과학의 방법에 영향 받지 않는 사상이나 철학을 부인하는 입장이다. 따라서 ㉠과 ㉡의 입장을 가장
+    잘 설명하는 선택지는 3번이다.
+  time_taken: 2.94
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
+- question_id: q8
+  question_number: 8
+  answer: 3
+  correct_answer: 2
+  is_correct: false
+  reasoning: (가)에서 박은식은 과학과 철학을 구분하여 과학은 서양으로부터 수용하되 철학은 유학을 혁신하여 재구성해야 한다고 보았습니다.
+    그는 가치관 정립과 인격 수양을 위해 철학이 필수적이라고 강조했습니다. 따라서 <보기>에서 젊은이들의 자문화에 대한 인식 변화가 가치관 정립을
+    위한 철학의 부재 때문이라고 보는 것은 박은식의 입장과 부합합니다. 따라서 3번 선택지는 적절하지 않은 반응입니다.
+  time_taken: 3.05
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q9
+  question_number: 9
+  answer: 2
+  correct_answer: 2
+  is_correct: true
+  reasoning: 지문에서 ⓐ '그칠 뿐'이라는 표현은 천두슈가 과학의 방법을 이용하지 않으면 공상에 그칠 뿐이라고 주장한 부분에서 사용되었습니다.
+    이는 어떤 목표나 이상이 실현되지 못하고 중도에 멈추거나 제한된 상태에 머무른다는 의미로 사용되었습니다. 선택지 중에서 '우리 학교는 이번에
+    16강에 그쳤다'는 표현이 목표를 달성하지 못하고 중도에 멈춘다는 의미로 ⓐ와 가장 유사한 문맥적 의미를 가지고 있습니다.
+  time_taken: 4.94
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
