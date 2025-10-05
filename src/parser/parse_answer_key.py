@@ -51,13 +51,22 @@ def extract_answer_key_with_llm(pdf_path: str, api_key: str = None, use_vision: 
         images = convert_from_path(pdf_path, dpi=300)
         print(f"✅ {len(images)}개 페이지 변환 완료")
         
-        # 첫 페이지를 base64로 변환
+        # 모든 페이지를 base64로 변환
         if not images:
             raise ValueError("PDF에서 이미지를 추출할 수 없습니다.")
         
-        buffered = BytesIO()
-        images[0].save(buffered, format="PNG")
-        image_base64 = base64.b64encode(buffered.getvalue()).decode()
+        image_contents = []
+        for idx, image in enumerate(images):
+            buffered = BytesIO()
+            image.save(buffered, format="PNG")
+            image_base64 = base64.b64encode(buffered.getvalue()).decode()
+            image_contents.append({
+                "type": "image_url",
+                "image_url": {
+                    "url": f"data:image/png;base64,{image_base64}",
+                    "detail": "high"
+                }
+            })
         
         # Vision API로 정답 추출
         system_prompt = """당신은 수능 정답표를 분석하는 전문가입니다.
@@ -75,6 +84,13 @@ def extract_answer_key_with_llm(pdf_path: str, api_key: str = None, use_vision: 
 
         user_prompt = """정답표 이미지를 분석하여 모든 문제의 정답을 추출해주세요.
 
+수학 영역은 총 46문제이며, 다음과 같이 구성됩니다:
+- 공통과목: 1~22번 (22문제)
+- 선택과목:
+  * 확률과 통계: 23~30번 (8문제)
+  * 미적분: 23~30번 (8문제)
+  * 기하: 23~30번 (8문제)
+
 JSON 형식으로 응답하세요:
 {{
   "answers": {{
@@ -86,29 +102,25 @@ JSON 형식으로 응답하세요:
 }}
 
 주의사항:
-- 모든 문제 번호와 정답을 빠짐없이 포함
+- 모든 문제 번호와 정답을 빠짐없이 포함 (총 46개)
 - 정답은 1~5 사이의 숫자
-- 문제 번호는 순차적 (1, 2, 3, ...)
+- 문제 번호는 1부터 시작
 - 홀수형 정답만 추출
+- 여러 페이지에 걸쳐 있는 경우 모두 통합하여 추출
 """
 
         print("🤖 Vision API로 정답표 분석 중...")
+        
+        # 모든 이미지를 content에 포함
+        content = [{"type": "text", "text": user_prompt}] + image_contents
+        
         response = client.chat.completions.create(
             model="gpt-4o",
             messages=[
                 {"role": "system", "content": system_prompt},
                 {
                     "role": "user",
-                    "content": [
-                        {"type": "text", "text": user_prompt},
-                        {
-                            "type": "image_url",
-                            "image_url": {
-                                "url": f"data:image/png;base64,{image_base64}",
-                                "detail": "high"
-                            }
-                        }
-                    ]
+                    "content": content
                 }
             ],
             temperature=0.0,
