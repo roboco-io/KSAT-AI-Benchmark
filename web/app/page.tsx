@@ -117,9 +117,15 @@ export default function Home() {
 
                                   <Accordion variant="separated">
                                     {result.results.map((q: any) => {
+                                      console.log('Searching for question:', q.question_id, 'in exam:', result.exam_id);
+                                      console.log('ExamInfo:', examInfo);
+                                      console.log('Questions:', examInfo?.questions);
+                                      
                                       const questionData = examInfo?.questions?.find(
                                         (eq: any) => eq.question_id === q.question_id || eq.question_number === q.question_number
                                       );
+                                      
+                                      console.log('Found questionData:', questionData);
 
                                       return (
                                         <Accordion.Item key={q.question_id} value={q.question_id}>
