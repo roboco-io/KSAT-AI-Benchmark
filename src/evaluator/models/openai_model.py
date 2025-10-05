@@ -46,17 +46,25 @@ class OpenAIModel(BaseModel):
 
             user_prompt = self._build_prompt(question_text, choices, passage)
             
-            # API 호출
-            response = self.client.chat.completions.create(
-                model=self.model_name,
-                messages=[
+            # API 호출 파라미터 설정
+            api_params = {
+                "model": self.model_name,
+                "messages": [
                     {"role": "system", "content": system_prompt},
                     {"role": "user", "content": user_prompt}
                 ],
-                temperature=self.temperature,
-                max_tokens=self.max_tokens,
-                response_format={"type": "json_object"}
-            )
+                "response_format": {"type": "json_object"}
+            }
+            
+            # GPT-5는 max_completion_tokens와 temperature=1 사용
+            if "gpt-5" in self.model_name.lower():
+                api_params["max_completion_tokens"] = self.max_tokens
+                api_params["temperature"] = 1  # GPT-5는 1만 지원
+            else:
+                api_params["max_tokens"] = self.max_tokens
+                api_params["temperature"] = self.temperature
+            
+            response = self.client.chat.completions.create(**api_params)
             
             time_taken = time.time() - start_time
             

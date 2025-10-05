@@ -1,6 +1,18 @@
 {
   "models": [
     {
+      "name": "gpt-5",
+      "provider": "openai",
+      "model_id": "gpt-5",
+      "version": "2025",
+      "description": "OpenAI GPT-5 - 수학/과학 능력 대폭 향상",
+      "api_key_env": "OPENAI_API_KEY",
+      "max_tokens": 4096,
+      "temperature": 0.3,
+      "timeout": 60,
+      "enabled": true
+    },
+    {
       "name": "gpt-4o",
       "provider": "openai",
       "model_id": "gpt-4o",
