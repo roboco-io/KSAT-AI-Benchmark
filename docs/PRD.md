@@ -20,21 +20,32 @@
 
 ### 2.1 시험지 관리
 #### 2.1.1 시험지 등록
-- **요구사항**: 지정된 폴더에 새로운 시험지 파일을 추가하면 자동으로 인식
-- **파일 형식**: JSON 형식으로 구조화된 문제 데이터
+- **요구사항**: PDF 형식의 수능 시험지를 `exams/pdf/` 폴더에 업로드
+- **트리거**: PDF 파일 업로드 시 GitHub Actions 자동 실행
+- **파일 형식**: 
+  - **입력**: PDF (원본 시험지)
+  - **출력**: YAML (파싱된 구조화 데이터)
 - **필수 정보**:
   - 문제 ID
   - 문제 텍스트
   - 선택지 (객관식의 경우)
   - 정답
   - 문제 유형 (국어, 수학, 영어, 탐구 등)
-  - 난이도 (선택)
+  - 배점
   - 이미지/도표 (선택)
 
-#### 2.1.2 시험지 검증
-- 파일 형식 검증
-- 필수 필드 존재 여부 확인
-- 정답 형식 검증
+#### 2.1.2 PDF 파싱
+- **파서**: Python 기반 PDF 파싱 엔진
+- **라이브러리**: PyPDF2, pdfplumber, 또는 OCR (Tesseract)
+- **기능**:
+  - 문제 번호 자동 추출
+  - 선택지 식별
+  - 이미지 영역 감지 및 추출
+  - YAML 형식으로 변환
+- **검증**:
+  - 파싱 정확도 확인
+  - 필수 필드 존재 여부 검증
+  - 정답 형식 검증
 
 ### 2.2 AI 모델 관리
 #### 2.2.1 모델 등록
@@ -64,13 +75,16 @@
   - 스케줄 실행 (선택)
 
 #### 2.3.2 평가 프로세스
-1. 각 모델에 대해 모든 문제를 순차적으로 실행
-2. 각 문제마다 다음 정보를 수집:
-   - 모델의 답변
-   - 정답 여부
-   - 답변 선택 이유 (모델의 설명)
-   - 풀이 시간 (초 단위)
+1. 파싱된 YAML 파일을 읽어서 문제 로드
+2. 각 모델에 대해 모든 문제를 순차적으로 실행
+3. 각 문제마다 다음 정보를 수집:
+   - 모델의 선택 답안
+   - 정답 여부 (자동 채점)
+   - 답변 선택 이유 (모델의 상세 설명)
+   - 풀이 시간 (초 단위, 밀리초 정밀도)
+   - 획득 점수 (배점 × 정답 여부)
    - API 응답 메타데이터
+4. 결과를 YAML 형식으로 저장
 
 #### 2.3.3 타임아웃 및 에러 처리
 - 문제당 최대 실행 시간 설정
@@ -78,55 +92,122 @@
 - 에러 로그 기록
 
 ### 2.4 결과 저장 및 관리
-#### 2.4.1 결과 데이터 구조
-```json
-{
-  "model_name": "gpt-4",
-  "model_version": "2024-01",
-  "exam_id": "2024-ksat-math",
-  "timestamp": "2024-11-15T10:30:00Z",
-  "total_score": 85,
-  "max_score": 100,
-  "results": [
-    {
-      "question_id": "q1",
-      "is_correct": true,
-      "student_answer": "2",
-      "correct_answer": "2",
-      "reasoning": "...",
-      "time_taken": 3.5
-    }
-  ]
-}
+#### 2.4.1 결과 데이터 구조 (YAML)
+```yaml
+model_name: gpt-4
+model_version: 2024-01
+exam_id: 2024-ksat-math
+timestamp: 2024-11-15T10:30:00Z
+total_score: 85
+max_score: 100
+accuracy: 85.0
+average_time: 3.2
+results:
+  - question_id: q1
+    question_number: 1
+    is_correct: true
+    student_answer: "2"
+    correct_answer: "2"
+    reasoning: |
+      이 문제는 미적분의 극한 개념을 다루고 있습니다.
+      주어진 함수에서 x가 0으로 접근할 때...
+    time_taken: 3.5
+    points_earned: 2
+    points_possible: 2
 ```
 
 #### 2.4.2 결과 파일 관리
 - `results/` 폴더에 모델별, 시험별로 저장
-- 파일명 규칙: `{model_name}_{exam_id}_{timestamp}.json`
+- 파일명 규칙: `{model_name}_{exam_id}_{timestamp}.yaml`
 - Git에 커밋하여 버전 관리
+- 자동 백업 및 히스토리 추적
 
-### 2.5 GitHub Pages 공개
-#### 2.5.1 리더보드
-- 모델별 전체 점수 순위
-- 과목별 점수
+### 2.5 GitHub Pages 공개 (Next.js + TypeScript)
+
+#### 2.5.1 기술 스택
+- **프레임워크**: Next.js 14+ (App Router)
+- **언어**: TypeScript
+- **UI 컴포넌트**: Mantine UI
+- **스타일링**: Mantine 내장 스타일 시스템
+- **배포**: GitHub Pages (Static Export)
+
+#### 2.5.2 메인 페이지 (리더보드)
+**기능:**
+- 모델별 전체 점수 순위 테이블
+- 과목별 점수 비교
 - 평균 풀이 시간
 - 최종 업데이트 시간
+- 실시간 필터링 및 정렬
 
-#### 2.5.2 상세 결과 페이지
-- 모델별 상세 페이지
-  - 문제별 정답/오답
-  - 각 문제에 대한 답변 이유
-  - 문제별 소요 시간
-- 시험별 상세 페이지
-  - 각 모델의 성적 비교
-  - 문제별 정답률
+**Mantine 컴포넌트:**
+- `Table` - 리더보드 표시
+- `Badge` - 순위 뱃지
+- `Group`, `Stack` - 레이아웃
+- `Text`, `Title` - 텍스트 요소
 
-#### 2.5.3 UI/UX 요구사항
-- 반응형 디자인 (모바일/태블릿/데스크톱)
-- 직관적인 네비게이션
-- 필터링 기능 (모델, 시험, 과목별)
-- 차트 및 시각화 (점수 분포, 시간 비교 등)
-- 다크 모드 지원 (선택)
+#### 2.5.3 문제 목록 페이지
+**기능:**
+- 시험 문제 전체 목록 표시
+- 각 문제별로 모든 모델의 답안 비교
+- 정답 여부를 색상으로 표시
+  - 정답: 초록색
+  - 오답: 빨간색
+- 각 모델의 점수 합계
+
+**Mantine 컴포넌트:**
+- `Card` - 문제 카드
+- `Grid` - 모델별 답안 그리드
+- `Badge` - 정답/오답 표시
+- `ActionIcon` - 상세 보기 버튼
+
+#### 2.5.4 답안 상세 모달
+**기능:**
+- 답안 클릭 시 모달 팝업
+- 선택한 답안
+- 정답 여부
+- 답안 선택 이유 (전체 텍스트)
+- 풀이 소요 시간
+- 획득 점수
+
+**Mantine 컴포넌트:**
+- `Modal` - 상세 정보 모달
+- `Text` - 이유 텍스트 (줄바꿈 보존)
+- `Divider` - 섹션 구분
+- `Timeline` - 풀이 과정 시각화 (선택)
+
+#### 2.5.5 모델별 상세 페이지
+**기능:**
+- 특정 모델의 전체 성적
+- 문제별 정답/오답 상세 내역
+- 과목별 점수 차트
+- 평균 응답 시간
+
+**Mantine 컴포넌트:**
+- `Tabs` - 과목별 탭
+- `Progress` - 정답률 진행바
+- `RingProgress` - 원형 점수 표시
+- `BarChart` - 점수 분포 (Recharts 연동)
+
+#### 2.5.6 시험별 비교 페이지
+**기능:**
+- 한 시험에 대한 모든 모델 성적 비교
+- 문제별 정답률 통계
+- 가장 많이 틀린 문제 하이라이트
+- 평균 풀이 시간 비교
+
+**Mantine 컴포넌트:**
+- `SegmentedControl` - 시험 선택
+- `Paper` - 컨텐츠 컨테이너
+- `LineChart` - 문제별 정답률 추이
+
+#### 2.5.7 UI/UX 요구사항
+- ✅ 반응형 디자인 (Mantine의 Grid 시스템 활용)
+- ✅ 다크/라이트 모드 전환 (Mantine ColorScheme)
+- ✅ 직관적인 네비게이션 (AppShell, Navbar)
+- ✅ 로딩 상태 표시 (Loader, Skeleton)
+- ✅ 빠른 필터링 및 검색 (Select, TextInput)
+- ✅ 접근성 준수 (Mantine 기본 지원)
+- ✅ 애니메이션 및 트랜지션 (Mantine Transition)
 
 ## 3. 비기능 요구사항
 
@@ -160,16 +241,27 @@
 ### 4.1 백엔드 (평가 시스템)
 - **언어**: Python 3.10+
 - **주요 라이브러리**:
-  - `openai`, `anthropic`, `google-generativeai`: AI 모델 API 클라이언트
-  - `requests`: HTTP 요청
-  - `pydantic`: 데이터 검증
-  - `pytest`: 테스팅
+  - **AI 모델 API**: `openai`, `anthropic`, `google-generativeai`
+  - **PDF 파싱**: `pdfplumber`, `PyPDF2`, `pytesseract` (OCR)
+  - **YAML 처리**: `PyYAML`, `ruamel.yaml`
+  - **HTTP 요청**: `requests`, `httpx`
+  - **데이터 검증**: `pydantic`
+  - **이미지 처리**: `Pillow`, `pdf2image`
+  - **테스팅**: `pytest`
 
 ### 4.2 프론트엔드 (GitHub Pages)
-- **프레임워크**: React 또는 Vue.js (정적 빌드)
-- **스타일링**: Tailwind CSS
-- **차트**: Chart.js 또는 Recharts
-- **빌드 도구**: Vite 또는 Next.js (static export)
+- **프레임워크**: Next.js 14+ (App Router, Static Export)
+- **언어**: TypeScript 5.0+
+- **UI 컴포넌트**: Mantine UI 7.0+
+  - `@mantine/core` - 핵심 컴포넌트
+  - `@mantine/hooks` - 커스텀 훅
+  - `@mantine/notifications` - 알림
+  - `@mantine/modals` - 모달 관리
+- **차트**: Recharts (Mantine 통합)
+- **스타일링**: Mantine 내장 스타일 시스템
+- **아이콘**: `@tabler/icons-react`
+- **YAML 파싱**: `js-yaml`
+- **빌드**: Next.js Static HTML Export
 
 ### 4.3 인프라
 - **CI/CD**: GitHub Actions
@@ -177,9 +269,11 @@
 - **버전 관리**: Git/GitHub
 
 ### 4.4 데이터 형식
-- **시험 데이터**: JSON
-- **설정 파일**: JSON/YAML
-- **결과 데이터**: JSON
+- **원본 시험**: PDF
+- **파싱된 시험 데이터**: YAML
+- **모델 설정 파일**: JSON
+- **평가 결과 데이터**: YAML
+- **GitHub Actions 설정**: YAML
 
 ## 5. 프로젝트 구조
 
@@ -187,44 +281,76 @@
 KSAT-AI-Benchmark/
 ├── .github/
 │   └── workflows/
-│       ├── evaluate.yml          # 평가 워크플로우
-│       └── deploy-pages.yml      # GitHub Pages 배포
-├── exams/                        # 시험지 데이터
-│   ├── 2024-ksat-korean.json
-│   ├── 2024-ksat-math.json
-│   └── ...
+│       ├── parse-and-evaluate.yml    # PDF 파싱 및 평가
+│       └── deploy-pages.yml          # GitHub Pages 배포
+├── exams/
+│   ├── pdf/                          # 원본 PDF 시험지
+│   │   ├── 2024-ksat-korean.pdf
+│   │   ├── 2024-ksat-math.pdf
+│   │   └── ...
+│   └── parsed/                       # 파싱된 YAML 파일
+│       ├── 2024-ksat-korean.yaml
+│       ├── 2024-ksat-math.yaml
+│       └── ...
 ├── models/
-│   └── models.json               # 모델 설정
+│   └── models.json                   # 모델 설정
 ├── src/
-│   ├── evaluator/                # 평가 시스템
+│   ├── parser/                       # PDF 파서
 │   │   ├── __init__.py
-│   │   ├── exam_loader.py
+│   │   ├── pdf_parser.py
+│   │   ├── image_extractor.py
+│   │   └── yaml_converter.py
+│   ├── evaluator/                    # 평가 시스템
+│   │   ├── __init__.py
+│   │   ├── yaml_loader.py
 │   │   ├── model_runner.py
 │   │   ├── result_collector.py
 │   │   └── utils.py
-│   └── models/                   # 모델 인터페이스
+│   └── models/                       # 모델 인터페이스
 │       ├── __init__.py
 │       ├── base.py
 │       ├── openai_model.py
 │       ├── anthropic_model.py
+│       ├── upstage_model.py
+│       ├── perplexity_model.py
 │       └── ...
-├── results/                      # 평가 결과 (자동 생성)
+├── results/                          # 평가 결과 (YAML)
+│   ├── gpt-4_2024-ksat-math.yaml
 │   └── ...
-├── web/                          # 웹 프론트엔드
+├── web/                              # Next.js 프론트엔드
+│   ├── app/                          # App Router
+│   │   ├── layout.tsx
+│   │   ├── page.tsx                  # 메인 (리더보드)
+│   │   ├── exams/
+│   │   │   └── [id]/page.tsx        # 문제 목록
+│   │   ├── models/
+│   │   │   └── [name]/page.tsx      # 모델 상세
+│   │   └── compare/page.tsx         # 비교 페이지
+│   ├── components/
+│   │   ├── Leaderboard.tsx
+│   │   ├── QuestionList.tsx
+│   │   ├── AnswerModal.tsx
+│   │   ├── ModelChart.tsx
+│   │   └── ...
+│   ├── lib/
+│   │   ├── yamlLoader.ts
+│   │   ├── dataProcessor.ts
+│   │   └── types.ts
 │   ├── public/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   └── utils/
+│   │   └── data/                     # 결과 YAML 파일 복사본
 │   ├── package.json
+│   ├── tsconfig.json
+│   ├── next.config.js
 │   └── ...
-├── docs/                         # 문서
+├── docs/                             # 문서
 │   ├── PRD.md
+│   ├── ARCHITECTURE.md
 │   └── API.md
-├── tests/                        # 테스트
+├── tests/                            # 테스트
+│   ├── test_parser.py
 │   ├── test_evaluator.py
 │   └── ...
-├── requirements.txt              # Python 의존성
+├── requirements.txt                  # Python 의존성
 ├── .gitignore
 ├── README.md
 └── LICENSE
@@ -232,25 +358,45 @@ KSAT-AI-Benchmark/
 
 ## 6. 구현 단계
 
-### Phase 1: 기본 인프라 구축 (2주)
+### Phase 1: PDF 파싱 시스템 (2주)
 - [x] 프로젝트 구조 설정
-- [ ] 시험지 JSON 스키마 정의
-- [ ] 모델 설정 스키마 정의
-- [ ] 기본 평가 스크립트 작성
+- [ ] PDF 파서 구현
+  - [ ] 텍스트 추출
+  - [ ] 문제 번호 인식
+  - [ ] 선택지 파싱
+  - [ ] 이미지 추출
+- [ ] YAML 스키마 정의
+- [ ] YAML 변환기 구현
+- [ ] 파싱 검증 로직
 
 ### Phase 2: 평가 시스템 구현 (3주)
+- [ ] YAML 로더 구현
 - [ ] 모델 인터페이스 구현
 - [ ] 각 AI 모델 API 연동
-- [ ] 결과 수집 및 저장 로직
+  - [ ] OpenAI
+  - [ ] Anthropic
+  - [ ] Google Gemini
+  - [ ] Upstage Solar
+  - [ ] Perplexity Sonar
+- [ ] 결과 수집 및 YAML 저장 로직
 - [ ] 에러 처리 및 재시도 로직
+- [ ] 시간 측정 및 채점 로직
 - [ ] GitHub Actions 워크플로우 구성
 
-### Phase 3: 웹 인터페이스 개발 (3주)
+### Phase 3: Next.js 웹 인터페이스 (3주)
+- [ ] Next.js 프로젝트 설정 (TypeScript, Mantine)
+- [ ] YAML 데이터 로더
 - [ ] 리더보드 페이지
+- [ ] 문제 목록 페이지
+  - [ ] 모델별 답안 그리드
+  - [ ] 정답/오답 색상 표시
+- [ ] 답안 상세 모달
+  - [ ] 선택 이유 표시
+  - [ ] 풀이 시간 표시
 - [ ] 모델별 상세 페이지
-- [ ] 시험별 상세 페이지
-- [ ] 데이터 시각화
-- [ ] 반응형 디자인
+- [ ] 시험별 비교 페이지
+- [ ] 차트 및 시각화
+- [ ] 다크 모드 구현
 
 ### Phase 4: 테스트 및 최적화 (2주)
 - [ ] 단위 테스트 작성
