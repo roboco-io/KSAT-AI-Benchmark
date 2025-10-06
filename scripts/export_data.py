@@ -121,7 +121,6 @@ def export_to_json():
                 'score_rate': round(score_rate, 2),
                 'total_score': total_score,
                 'max_score': max_score,
-                'total_questions': total_questions,
                 'correct_answers': correct_answers,
                 'avg_time': round(avg_time, 2),
                 'exams_count': len(model_results),
