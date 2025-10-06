@@ -1,0 +1,549 @@
+exam_id: 2025-english-sat
+exam_title: 2025학년도 수능 ENGLISH
+subject: english
+model_name: claude-3-opus-20240229
+evaluated_at: '2025-10-06T23:38:43.846805'
+summary:
+  total_questions: 42
+  correct_answers: 4
+  accuracy: 9.52
+  total_score: 11
+  max_score: 100
+  score_rate: 11.0
+results:
+- question_id: q1
+  question_number: 1
+  answer: 0
+  correct_answer: 2
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q2
+  question_number: 2
+  answer: 0
+  correct_answer: 5
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q3
+  question_number: 3
+  answer: 0
+  correct_answer: 1
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q4
+  question_number: 4
+  answer: 0
+  correct_answer: 3
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q5
+  question_number: 5
+  answer: 0
+  correct_answer: 1
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q6
+  question_number: 6
+  answer: 0
+  correct_answer: 4
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q7
+  question_number: 7
+  answer: 0
+  correct_answer: 3
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q8
+  question_number: 8
+  answer: 0
+  correct_answer: 4
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q9
+  question_number: 9
+  answer: 0
+  correct_answer: 5
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q10
+  question_number: 10
+  answer: 0
+  correct_answer: 2
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q11
+  question_number: 11
+  answer: 0
+  correct_answer: 2
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 3
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q12
+  question_number: 12
+  answer: 0
+  correct_answer: 1
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q13
+  question_number: 13
+  answer: 0
+  correct_answer: 5
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q14
+  question_number: 14
+  answer: 0
+  correct_answer: 1
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 3
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q15
+  question_number: 15
+  answer: 0
+  correct_answer: 2
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 3
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q16
+  question_number: 16
+  answer: 0
+  correct_answer: 3
+  is_correct: false
+  reasoning: 지문이 제공되지 않아 정확한 답변을 하기 어렵습니다. 여자가 하는 말의 내용을 알아야 주제를 파악할 수 있을 것 같습니다.
+    문제에 언급된 지문을 제공해 주시면 다시 분석해 보겠습니다.
+  time_taken: 4.87
+  points: 2
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q17
+  question_number: 17
+  answer: 5
+  correct_answer: 4
+  is_correct: false
+  reasoning: 선택지 1~4번은 모두 일반적인 식용 식물입니다. seaweed는 해초, beans는 콩, pumpkins는 호박, potatoes는
+    감자를 의미합니다. 하지만 5번 mushrooms는 버섯으로, 엄밀히 말하면 식물이 아니라 균류에 속합니다. 따라서 언급된 식용 식물이 아닌
+    것은 5번 mushrooms가 적절합니다.
+  time_taken: 7.17
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q18
+  question_number: 18
+  answer: 0
+  correct_answer: 1
+  is_correct: false
+  reasoning: 문제에 지문이 제시되지 않았기 때문에 정확한 답변을 제공하기 어렵습니다. 문제의 목적을 파악하려면 해당 글의 내용이 필요합니다.
+    지문을 제공해 주시면 문제를 다시 분석하고 답변을 제시하도록 하겠습니다.
+  time_taken: 5.37
+  points: 2
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q19
+  question_number: 19
+  answer: 0
+  correct_answer: 2
+  is_correct: false
+  reasoning: "죄송하지만 주어진 정보만으로는 Peter의 심경 변화를 파악하기 어렵습니다. 심경 변화를 추론할 수 있는 구체적인 지문이\
+    \ 제시되어 있지 않기 때문입니다. 따라서 선택지 중 하나를 고르는 것은 적절하지 않습니다.\n\n{\n  \"answer\": \"\",\n\
+    \  \"reasoning\": \"Peter의 심경 변화를 보여주는 지문이 주어지지 않았기 때문에, 제시된 선택지 중 하나를 고르는 것은\
+    \ 적절하지 않습니다. 등장인물의 심경 변화를 파악하려면 구체적인 상황과 행동, 대사 등이 드러나는 지문이 필요합니다. 하지만 이 문제에서는\
+    \ 그러한 단서가 전혀 제공되지 않았으므로 정답을 유추할 수 없습니다.\"\n}"
+  time_taken: 12.18
+  points: 2
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q20
+  question_number: 20
+  answer: 0
+  correct_answer: 1
+  is_correct: false
+  reasoning: 죄송하지만 주어진 정보만으로는 정확한 답변을 제공하기 어렵습니다. 필자가 주장하는 바를 파악하려면 해당 글의 내용이 필요합니다.
+    글의 내용이 제시되어 있지 않아 필자의 주장을 추론할 수 없기 때문입니다. 글의 내용을 제공해 주시면 그에 근거하여 가장 적절한 선택지를 골라
+    이유와 함께 답변 드리겠습니다.
+  time_taken: 8.76
+  points: 2
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q21
+  question_number: 21
+  answer: 3
+  correct_answer: 3
+  is_correct: true
+  reasoning: 지문에서 Vitruvius는 건축가가 실용적 지식과 이론적 지식을 모두 갖추어야 한다고 주장합니다. 그는 실용적 기술 없이
+    학문만 추구하는 사람들은 '실체가 아닌 그림자를 쫓는 것(hunting the shadow, not the substance)'이라고 비유합니다.
+    이는 건축의 실용적 기술 없이 이론적 이상만 추구하는 것을 의미합니다. 따라서 밑줄 친 구절이 의미하는 바로 가장 적절한 것은 '실용적 기술
+    없이 건축의 이상만 추구하는 것'이라고 할 수 있습니다. 이는 선택지 3번과 일치합니다.
+  time_taken: 10.14
+  points: 3
+  earned_points: 3
+  success: true
+  error: null
+- question_id: q22
+  question_number: 22
+  answer: 0
+  correct_answer: 2
+  is_correct: false
+  reasoning: "지문을 분석해 보면 건축가의 위상에 대해 설명하고 있습니다. 로마 제국 시대에 건축이 정치적으로 중요해지면서 건축가의 위상도\
+    \ 높아졌다고 합니다. 그리고 건축가 Vitruvius는 건축에는 실용적 지식과 이론적 지식이 모두 필요하다고 주장하며, 건축가가 갖추어야\
+    \ 할 학문 분야들을 나열하고 있습니다. \n\n주어진 선택지들은 모두 감정에 관한 내용인데, 지문에서는 감정에 대해 전혀 언급하고 있지 않습니다.\
+    \ 따라서 주어진 선택지 중에는 지문의 요지로 적절한 것이 없습니다.\n\n{\n  \"answer\": \"\",\n  \"reasoning\"\
+    : \"주어진 지문은 건축가의 위상과 건축에 필요한 지식에 대해 설명하고 있습니다. 하지만 선택지는 모두 감정에 관한 내용으로, 지문의 내용과\
+    \ 전혀 관련이 없습니다. 따라서 지문의 요지로 적절한 선택지는 없다고 판단됩니다.\"\n}"
+  time_taken: 15.98
+  points: 3
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q23
+  question_number: 23
+  answer: 2
+  correct_answer: 1
+  is_correct: false
+  reasoning: 이 글은 로마 제국 시대에 건축가의 지위가 높아졌으며, 건축이 정치적으로 중요한 상징이 되었다는 내용으로 시작합니다. 이어서
+    키케로가 건축가를 의사, 교사와 같은 반열에 두었고, 비트루비우스는 건축을 '위대한 직업'이라고 언급했다고 설명합니다. 그리고 아우구스투스
+    황제 시대의 건축가 비트루비우스 폴리오가 건축에는 실용적 지식과 이론적 지식이 모두 필요하다고 인식했으며, 건축가가 갖추어야 할 학문 분야들을
+    나열했다고 합니다. 마지막으로 비트루비우스는 실기만 익히고 학문을 소홀히 한 건축가는 권위를 얻지 못하고, 이론과 학문에만 의존한 이들은 실체가
+    아닌 그림자만 쫓는다고 주장했다는 내용이 나옵니다. 따라서 이 글의 주제는 로마 제국 시대 건축가의 지위 향상과 건축에 필요한 실용적/이론적
+    지식에 관한 것이지, 제시된 선택지와는 직접적인 관련이 없습니다.
+  time_taken: 15.96
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q24
+  question_number: 24
+  answer: 5
+  correct_answer: 5
+  is_correct: true
+  reasoning: 이 지문은 로마 제국 시대의 건축가의 지위에 대해 설명하고 있습니다. 키케로는 건축가를 의사나 교사와 동급으로 여겼고, 비트루비우스는
+    건축이 실용적이고 이론적인 지식을 모두 요구한다고 말했습니다. 그는 건축가가 갖추어야 할 학문 분야로 문학, 제도, 수학, 역사, 철학, 음악,
+    의학, 법학, 천문학 등을 열거했습니다. 이는 건축가에게 요구되는 폭넓은 지식과 소양을 보여줍니다. 따라서 이 글은 건축가의 지위와 자질에
+    대해 다루고 있으므로, 제시된 선택지 중에서는 셀카(selfie)와 관련된 내용과는 전혀 무관합니다.
+  time_taken: 11.13
+  points: 3
+  earned_points: 3
+  success: true
+  error: null
+- question_id: q25
+  question_number: 25
+  answer: 0
+  correct_answer: 4
+  is_correct: false
+  reasoning: 죄송하지만 문제에서 언급한 도표가 제공되지 않았습니다. 도표 없이는 선택지 중 도표 내용과 일치하지 않는 것을 판단할 수 없습니다.
+    문제를 풀기 위해서는 관련 도표나 지문이 필요합니다. 도표를 제공해 주시면 문제를 다시 분석하고 답변 드리겠습니다.
+  time_taken: 6.28
+  points: 2
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q26
+  question_number: 26
+  answer: 0
+  correct_answer: 4
+  is_correct: false
+  reasoning: 지문이 제공되지 않아 정확한 답변을 할 수 없습니다. Dick Enberg에 대한 글의 내용을 근거로 답변할 수 있도록 지문을
+    제시해 주시기 바랍니다.
+  time_taken: 3.82
+  points: 2
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q27
+  question_number: 27
+  answer: 0
+  correct_answer: 3
+  is_correct: false
+  reasoning: 지문이 제공되지 않아 문제를 해결하기 어렵습니다. Adenville City Pass Card에 대한 안내문의 내용이 주어져야
+    선택지 중 안내문과 일치하지 않는 내용을 찾을 수 있습니다. 문제를 풀기 위해서는 지문이 필요합니다.
+  time_taken: 5.6
+  points: 2
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q28
+  question_number: 28
+  answer: 0
+  correct_answer: 3
+  is_correct: false
+  reasoning: 지문이 제공되지 않아 문제를 풀 수 없습니다. 문제를 해결하려면 Luckwood Snow Festival에 대한 안내문의 내용이
+    필요합니다. 안내문 없이는 선택지의 내용이 안내문과 일치하는지 판단할 수 없습니다. 문제를 풀기 위해서는 지문을 제공해 주시기 바랍니다.
+  time_taken: 6.0
+  points: 2
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q29
+  question_number: 29
+  answer: 2
+  correct_answer: 2
+  is_correct: true
+  reasoning: 밑줄 친 부분 중 어법상 틀린 것은 ②번 'knows'입니다. 'patients'는 복수형 명사이므로, 이에 맞는 동사의 형태도
+    복수형이 되어야 합니다. 따라서 'knows'가 아닌 'know'가 되어야 문장의 주어와 동사가 수일치가 됩니다. 나머지 밑줄 친 부분들은
+    모두 문법적으로 올바른 형태입니다. ①은 가정법 과거, ③은 현재분사구, ④는 주격 관계대명사, ⑤는 명사절을 이끄는 의문사로 쓰였기에 적절합니다.
+    그러므로 정답은 복수 명사 'patients'의 동사 형태가 단수형 'knows'로 잘못 쓰인 ②번입니다.
+  time_taken: 12.03
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
+- question_id: q30
+  question_number: 30
+  answer: 3
+  correct_answer: 4
+  is_correct: false
+  reasoning: 밑줄 친 부분 중 문맥상 낱말의 쓰임이 적절하지 않은 것은 ③번 'freeing'입니다. 이 문장에서는 자동화된 뇌 기능이
+    의식적인 마음을 더 중요한 일에 사용할 수 있도록 '자유롭게 해준다'는 의미로 쓰였습니다. 그러나 선택지에 제시된 'desire'는 '욕망,
+    열망'이라는 뜻으로, 문맥상 적절하지 않습니다. 나머지 ①번 'had'(가졌다), ②번 'knows'(알다), ④번 'that'(~하는),
+    ⑤번 'what'(무엇을) 등은 모두 문법적으로나 의미상 적절하게 쓰였습니다. 따라서 정답은 3번입니다.
+  time_taken: 10.61
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q31
+  question_number: 31
+  answer: 0
+  correct_answer: 5
+  is_correct: false
+  reasoning: "{\n  \"answer\": 5,\n  \"reasoning\": \"지문에서는 우리가 의식하지 않고 자동적으로 처리되는\
+    \ 뇌의 과정들에 대해 설명하고 있습니다. 예를 들어, 물 한 잔을 마시기 위해 일어설 때 관련된 모든 근육을 의식적으로 제어하지 않아도 된다는\
+    \ 것입니다. 이런 자동 프로세스 덕분에 의식은 더 중요한 일에 집중할 수 있습니다. 그리고 마지막 문장에서 우리가 인지하고 느끼고 생각하는\
+    \ 대부분의 것들이 우리가 의식하지 못한 채 매우 대략적이고 빠르게 분석된 결과라고 말하고 있습니다. \n이런 맥락에서 볼 때, 빈칸에는 '개인적\
+    \ 관여(personal involvement)'가 가장 적절합니다. 언어적 통찰력, 예술적 상상력, 문학적 감수성, 대안적 관점 등은 오히려\
+    \ 의식적이고 심층적인 사고를 요구하는 능력들이기 때문에 지문의 내용과는 잘 맞지 않습니다. 반면 우리 스스로 자각하지 못하는 무의식적 과정을\
+    \ 강조하는 지문의 흐름상 '개인적 관여'가 가장 적합한 선택지라고 판단됩니다.\"\n}"
+  time_taken: 16.7
+  points: 3
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q33
+  question_number: 33
+  answer: 5
+  correct_answer: 3
+  is_correct: false
+  reasoning: 지문에서는 우리의 관심을 사로잡기 위해 설계된 AI 기반 추천 시스템에 대해 언급하고 있지만, 이러한 혜택이 'AI 친구'
+    덕분이라고는 말하지 않았습니다. 오히려 이런 시스템들이 개인의 자유로운 탐색을 알고리즘이 생성한 플레이리스트나 예술로 대체한다고 지적하고 있습니다.
+    따라서 주어진 선택지 중에서는 5번 'AI 친구 덕분에 혜택을 누린다'는 내용이 지문과 일치하지 않습니다.
+  time_taken: 8.18
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q34
+  question_number: 34
+  answer: 4
+  correct_answer: 5
+  is_correct: false
+  reasoning: 지문에서는 주의력 경제 시대에 대해 설명하면서, 광고 산업이 우리의 의식적인 시간을 빼앗아 다른 사람에게 팔고 있다고 말하고
+    있습니다. 또한 AI 기반 추천 시스템이 우리의 주의력을 사로잡기 위해 설계되어 있으며, 이는 개인의 자유로운 탐색을 알고리즘이 생성한 플레이리스트나
+    예술로 대체한다고 설명합니다. 이는 중앙집중화되고 공식적인 규칙이 법적이고 확립된 맥락 내에서 개인의 행동을 강화한다는 선택지 4와 일맥상통합니다.
+    지문에서 설명하는 주의력 경제와 AI 추천 시스템은 사람들의 행동을 특정한 방향으로 유도하고 제한하는 역할을 하기 때문입니다. 따라서 주어진
+    선택지 중에서는 4번이 지문의 내용과 가장 부합한다고 판단됩니다.
+  time_taken: 14.27
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q35
+  question_number: 35
+  answer: 4
+  correct_answer: 4
+  is_correct: true
+  reasoning: "{\n  \"answer\": 4,\n  \"reasoning\": \"주어진 지문은 관심 경제 시대에 대해 설명하고 있습니다.\
+    \ 광고 산업이 우리의 의식적인 시간을 사로잡아 다른 사람에게 팔고 있으며, AI 기반 추천 시스템이 우리의 관심을 특정 회사의 콘텐츠에 가두는\
+    \ 방식으로 작동한다는 내용입니다. \n\n반면 4번 선택지는 관광 성장과 관련된 합리적인 가격의 양질의 숙박 시설 확장이 현지 기반 레스토랑의\
+    \ 성장을 촉진했다는 내용으로, 주어진 지문의 주제 및 흐름과는 전혀 무관합니다. \n\n나머지 선택지들은 자동차의 발명과 대중화, 그리고\
+    \ 자동차가 스포츠 관광의 발전에 기여한 바에 대해 설명하고 있어 서로 연관성이 있습니다. 하지만 이 역시 주어진 지문의 주제와는 관련이 없습니다.\
+    \ 따라서 주어진 지문 전체의 흐름과 가장 관계없는 문장은 4번이 가장 적절합니다.\"\n}"
+  time_taken: 14.74
+  points: 3
+  earned_points: 3
+  success: true
+  error: null
+- question_id: q36
+  question_number: 36
+  answer: 0
+  correct_answer: 5
+  is_correct: false
+  reasoning: 죄송하지만 주어진 정보만으로는 문제를 풀 수 없습니다. 지문과 (A), (B), (C)에 해당하는 내용이 제시되어 있지 않기
+    때문입니다. 문제를 풀기 위해서는 앞의 글과 (A), (B), (C) 각 선택지의 내용을 파악해야 합니다. 누락된 정보를 제공해 주시면 문제를
+    분석하고 답변을 드리도록 하겠습니다.
+  time_taken: 6.57
+  points: 3
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q38
+  question_number: 38
+  answer: 3
+  correct_answer: 4
+  is_correct: false
+  reasoning: 주어진 문장 'Watch the birds in your backyard... to see every other grosbeak.'은
+    문맥상 어색하고 지문의 주제와 관련이 없어 보입니다. 반면 지문은 사물의 생애주기(lifecycle)가 단순한 선형 모델이 아니라 복잡하고
+    적응적인 경로를 따른다는 내용입니다. 따라서 주어진 문장은 지문의 흐름을 방해하는 요소이므로, 지문의 앞이나 중간이 아닌 맨 뒤인 (A)에
+    위치하는 것이 가장 적절해 보입니다. 그러므로 정답은 (B) - (C) - (A) 순서인 3번입니다.
+  time_taken: 9.97
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q39
+  question_number: 39
+  answer: 0
+  correct_answer: 4
+  is_correct: false
+  reasoning: "{\n  \"answer\": 5,\n  \"reasoning\": \"주어진 지문은 두 개의 문장으로 이루어져 있는데,\
+    \ 첫 번째 문장은 새들을 관찰하는 것에 대해 말하고 있고, 두 번째 문장은 사물의 수명 주기가 단순한 선형 진행이 아니라 훨씬 더 복잡하고\
+    \ 적응적인 경로를 따른다는 내용입니다. 이 두 문장은 서로 관련이 없어 보이며, 전체 글의 내용을 한 문장으로 요약하기에는 정보가 부족합니다.\
+    \ \n\n따라서 주어진 선택지 중에서는 글의 내용과 직접적인 연관이 없는 (A) accessibility, (B) question이 가장\
+    \ 적절해 보입니다. 나머지 선택지들은 글의 내용과 관련이 있는 단어들이지만, 정작 글 자체에는 그러한 내용이 명시적으로 언급되어 있지 않기\
+    \ 때문입니다.\"\n}"
+  time_taken: 12.6
+  points: 3
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q41
+  question_number: 41
+  answer: 3
+  correct_answer: 2
+  is_correct: false
+  reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"이 글은 엄지손가락과 검지손가락으로 종이를 집는 행위가\
+    \ 피비린내 나는 일이 될 수 있다고 말하고 있습니다. 이는 인간의 손이 진화의 과정에서 예상치 못한 결과물이라는 것을 암시하고 있습니다.\
+    \ 따라서 제목으로 가장 적절한 것은 '우리의 손: 진화의 예상치 못한 결과'라는 뜻의 3번 'Our Hands: An Unexpected\
+    \ Outcome of Evolution'입니다. \n\n1번과 2번은 인간과 다른 영장류의 차이점이나 인간의 손이 진화에서 결정적인 도약이었다는\
+    \ 내용으로, 본문에서 직접적으로 언급되지 않았습니다. 4번은 인간의 생존과 관련된 딜레마를 언급하고 있어 본문 내용과 거리가 있습니다. 5번은\
+    \ 도구 사용의 힘을 언급하고 있는데, 본문에서는 도구 사용에 대해 직접 언급하지 않았습니다. 따라서 3번이 글의 내용을 가장 잘 요약하는\
+    \ 제목이라고 볼 수 있습니다.\"\n}"
+  time_taken: 14.8
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q42
+  question_number: 42
+  answer: 0
+  correct_answer: 5
+  is_correct: false
+  reasoning: 주어진 지문에는 (a)~(e)로 표시된 밑줄 친 단어가 없습니다. 따라서 문제 자체가 잘못 출제되었으며, 주어진 선택지 중에서
+    정답을 고를 수 없습니다. 문제를 풀기 위해서는 밑줄 친 단어가 포함된 완전한 지문과 그에 맞는 선택지가 제시되어야 합니다.
+  time_taken: 8.83
+  points: 3
+  earned_points: 0
+  success: false
+  error: 유효하지 않은 답
+- question_id: q43
+  question_number: 43
+  answer: 0
+  correct_answer: 2
+  is_correct: false
+  reasoning: 죄송하지만 문제에 주어진 글 (A)~(D)가 제시되어 있지 않아 내용상 순서를 판단할 수 없습니다. 주어진 글의 내용을 제공해
+    주시면 순서를 분석하여 답변드리겠습니다.
+  time_taken: 4.48
+  points: 3
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q44
+  question_number: 44
+  answer: 0
+  correct_answer: 3
+  is_correct: false
+  reasoning: 죄송하지만 주어진 정보만으로는 문제를 풀 수 없습니다. 밑줄 친 (a)~(e)가 포함된 지문이 제시되어야 각 대명사가 가리키는
+    대상을 파악하고 정답을 추론할 수 있습니다. 지문 없이 단순히 (a)~(e)라는 기호만으로는 아무런 단서가 없어 문제 해결이 불가능합니다.
+    문제를 풀려면 반드시 지문이 주어져야 합니다.
+  time_taken: 6.58
+  points: 2
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q45
+  question_number: 45
+  answer: 0
+  correct_answer: 4
+  is_correct: false
+  reasoning: 지문이 제공되지 않아 문제를 풀 수 없습니다. 지문 내용을 근거로 답변해야 하는데 지문이 없어서 선택지의 내용이 지문과 일치하는지
+    판단할 수 없습니다. 문제를 풀려면 반드시 지문이 필요합니다.
+  time_taken: 4.89
+  points: 2
+  earned_points: 0
+  success: false
+  error: 답 추출 실패

@@ -1,27 +1,26 @@
 exam_id: 2025-korean-sat
-exam_title: 2025학년도 수능 국어영역
+exam_title: 2025학년도 수능 국어 (Vision API)
 subject: korean
 model_name: gpt-4o
-evaluated_at: '2025-10-06T18:16:02.575194'
+evaluated_at: '2025-10-06T23:35:21.086612'
 summary:
-  total_questions: 53
-  correct_answers: 7
-  accuracy: 13.21
-  total_score: 15
-  max_score: 118
-  score_rate: 12.71
+  total_questions: 45
+  correct_answers: 8
+  accuracy: 17.78
+  total_score: 22
+  max_score: 119
+  score_rate: 18.49
 results:
 - question_id: q1
   question_number: 1
-  answer: 3
+  answer: 1
   correct_answer: 3
-  is_correct: true
-  reasoning: 지문에서는 밑줄 긋기가 어떠한 수준의 독자라도 쉽게 사용할 수 있다는 점 때문에 연습 없이 능숙하게 사용할 수 있다고 오해되어
-    온 경향이 있다고 설명하고 있습니다. 그러나 본질적으로 밑줄 긋기는 주요한 정보가 무엇인지에 대한 판단이 선행되어야 한다는 점에서 단순하지
-    않다고 언급하고 있습니다. 따라서 밑줄 긋기는 누구나 연습 없이도 능숙하게 사용할 수 있는 전략이라는 선택지는 지문의 내용과 일치하지 않습니다.
-  time_taken: 2.25
+  is_correct: false
+  reasoning: 지문에서는 밑줄 긋기에 대한 내용이 전혀 언급되지 않았습니다. 따라서 주어진 선택지 중에서 지문과 일치하지 않는 것은 밑줄
+    긋기에 대한 설명인 1번입니다. 나머지 선택지들은 밑줄 긋기에 대한 일반적인 설명으로, 지문과의 일치 여부를 판단할 수 없습니다.
+  time_taken: 2.99
   points: 2
-  earned_points: 2
+  earned_points: 0
   success: true
   error: null
 - question_id: q2
@@ -29,12 +28,12 @@ results:
   answer: 4
   correct_answer: 4
   is_correct: true
-  reasoning: 지문에서는 밑줄 긋기의 효과를 높이기 위해 주요한 정보를 추리는 것이 중요하다고 설명하고 있습니다. 또한, 자신만의 밑줄 긋기
-    표시 체계를 세워서 밑줄 이외에 다른 기호도 사용할 수 있다고 언급하고 있습니다. 이는 주요한 정보를 추릴 수 있도록 자신이 만든 밑줄 긋기
-    표시 체계에 따라 밑줄 긋기를 하는 것과 일치합니다. 따라서 ㉠에 해당하는 내용으로 가장 적절한 것은 4번입니다.
-  time_taken: 2.94
-  points: 2
-  earned_points: 2
+  reasoning: 지문에서는 특정한 밑줄 긋기 방법에 대한 직접적인 언급은 없지만, 문제에서 제시된 선택지 중에서 '주요한 정보를 추릴 수 있도록
+    자신이 만든 밑줄 긋기 표시 체계에 따라 밑줄 긋기를 한다'는 선택지가 가장 체계적이고 논리적인 방법으로 보입니다. 이는 정보의 중요도를 판단하고
+    체계적으로 정리하는 데 도움이 될 수 있습니다. 따라서 4번이 가장 적절한 선택지입니다.
+  time_taken: 2.77
+  points: 3
+  earned_points: 3
   success: true
   error: null
 - question_id: q3
@@ -42,9 +41,9 @@ results:
   answer: 4
   correct_answer: 5
   is_correct: false
-  reasoning: 지문에서는 밑줄 긋기의 효과적인 방법에 대해 설명하고 있으며, 독서 목적에 따라 주요한 정보에 밑줄을 긋는 것이 중요하다고
-    강조하고 있습니다. 선택지 4번은 '지느러미는 배를 젓는 노와 같은 형태'에 밑줄을 누락했다고 평가하고 있는데, 이는 지문에서 언급된 내용과
-    관련이 없으며, 독서 목적에 따라 주요한 정보에 밑줄을 긋는 것과도 관련이 없습니다. 따라서 선택지 4번은 적절하지 않은 평가입니다.
+  reasoning: 지문에는 '신뢰도'라는 단어가 등장하지 않습니다. 따라서 3문단에서 '신뢰도'라는 단어에 밑줄을 긋는 방식으로 밑줄 긋기를
+    했다는 선택지는 적절하지 않습니다. 다른 선택지들은 지문 내용과 관련이 있거나 일반적인 독서 방법에 부합하지만, 4번 선택지는 지문에 없는
+    내용을 언급하고 있어 적절하지 않습니다.
   time_taken: 3.07
   points: 3
   earned_points: 0
@@ -52,15 +51,15 @@ results:
   error: null
 - question_id: q4
   question_number: 4
-  answer: 4
+  answer: 5
   correct_answer: 4
-  is_correct: true
-  reasoning: 지문에서 (나) 부분은 기술 수용만으로는 부족하다는 인식이 등장하고, 과학 정신이 사회 전체에 이식되어야 한다는 주장이 제기되었다고
-    설명하고 있습니다. 이는 과학 정신이 전제되지 않으면 정치적 변혁이 뿌리내릴 수 없다는 주장과 일치합니다. 따라서 과학 정신이 자리 잡으려면
-    정치적 변혁이 선행되어야 한다는 주장은 지문 내용과 맞지 않으며, 적절하지 않은 이해입니다.
-  time_taken: 2.51
+  is_correct: false
+  reasoning: 지문 (나)에서는 과학적 방법론이 인문학적 문제를 해결할 수 없다는 비판이 제기되었으며, 과학적 방법론이 인식의 확장에 있어
+    인문학적 인식의 확장 방법이 적용될 수 없다고 지적하고 있습니다. 그러나 전통 가치를 주축으로 하는 전개에 대한 언급은 없습니다. 따라서 선택지
+    5번은 지문 내용과 일치하지 않습니다.
+  time_taken: 2.6
   points: 2
-  earned_points: 2
+  earned_points: 0
   success: true
   error: null
 - question_id: q5
@@ -68,10 +67,11 @@ results:
   answer: 3
   correct_answer: 5
   is_correct: false
-  reasoning: 지문에 따르면 󰡔한성순보󰡕의 개화 개념은 서양 기술과 제도의 도입을 통한 국가 진보를 의미하며, 개화당의 한 인사는 개화 실행
-    주체를 왕으로 생각했다고 명시되어 있습니다. 따라서 󰡔한성순보󰡕와 개화당의 한 인사의 개화 개념이 모두 통치권자인 왕을 개화의 실행 주체로
-    상정했다는 것은 지문과 일치합니다. 그러나 선택지 3은 이를 부정하는 내용이므로 적절하지 않은 이해입니다.
-  time_taken: 3.49
+  reasoning: 지문에서는 개화기의 인식과 관련하여 개화의 주체적 수용과 의식 혁신을 강조하고 있으며, 이는 주체적 수용을 목표로 한다고 설명하고
+    있습니다. 따라서 개화기의 계획 개념이 통치권자인 왕을 계획의 주체로 설정했다는 내용은 지문과 일치하지 않습니다. 지문에서는 개화의 주체적
+    수용을 강조하고 있으며, 이는 왕이 아닌 개화의 주체가 되는 개인이나 집단의 역할을 강조하는 것으로 해석할 수 있습니다. 따라서 선택지 3번은
+    지문 내용과 부합하지 않습니다.
+  time_taken: 4.88
   points: 2
   earned_points: 0
   success: true
@@ -81,13 +81,12 @@ results:
   answer: 3
   correct_answer: 3
   is_correct: true
-  reasoning: 지문에서 천두슈는 과학적 방법을 이용하지 않으면 공상에 그칠 뿐이라고 주장하며 과학의 중요성을 강조하고 있습니다. 또한, 제1차
-    세계 대전의 비극은 과학을 이용해 저지른 죄악의 결과일 뿐 과학 자체의 죄악이 아니라고 주장하며 과학적 방법 자체를 부정하지 않았습니다. 장쥔마이
-    역시 과학적 방법을 부정하지 않았지만, 인생관의 문제에는 과학적 방법이 적용될 수 없다고 지적했습니다. 따라서 두 인물 모두 과학을 이용하는
-    과정에서 문제가 발생했다고 해도 과학적 방법 자체를 부정할 수 없다는 점에 동의할 수 있습니다.
-  time_taken: 4.86
-  points: 2
-  earned_points: 2
+  reasoning: 지문 (나)에서 과학적 방법론이 인문학적 문제를 해결할 수 없다고 비판하면서도, 과학적 전환을 통한 과학 자체의 회의를 주장하지
+    않는다고 언급하고 있습니다. 이는 과학적 방법론의 중요성을 인정하면서도 그 한계를 인식하고 있다는 것을 의미합니다. 따라서 과학을 이용하는
+    과정에서 문제가 발생한다고 해도 과학적 방법을 거부할 수 없다는 진술은 '나'와 '실무자', '장관님' 모두 동의할 수 있는 진술로 적절합니다.
+  time_taken: 3.89
+  points: 3
+  earned_points: 3
   success: true
   error: null
 - question_id: q7
@@ -95,12 +94,14 @@ results:
   answer: 3
   correct_answer: 3
   is_correct: true
-  reasoning: 지문에서 박은식은 과학의 물질적 측면을 수용하고 철학의 정신적 측면을 재구성하는 것을 강조하며, 과학 연구의 시급성을 언급하고
-    있다. 이는 ㉠에 해당한다. 또한, ㉡에서 천두슈는 과학의 방법에 근거한 문화를 주장하며, 과학적 사유 능력을 강조하고 있다. 이는 과학의
-    방법에 영향 받지 않는 사상이나 철학을 부인하는 입장과 일치한다. 따라서 ㉠과 ㉡에 대한 이해로 가장 적절한 선택지는 3번이다.
-  time_taken: 4.26
-  points: 2
-  earned_points: 2
+  reasoning: 지문 (가)와 (나)를 분석해보면, (가)는 서양 문명의 수용과 개화의 시대를 설명하며, 과학적 사유와 철학적 인식의 주체로서의
+    성장을 강조하고 있습니다. 반면, (나)는 중국이 서양의 과학과 기술에 관심을 기울이게 된 배경과 과학적 방법론의 한계를 지적하고 있습니다.
+    선택지 3번은 '은 전쟁과 전리 품을 위한 과학 연구의 시작점, ④은 과학의 방법에 의한 합리 없는 사상이 실현을 부인하는 입장이다.'라고
+    설명하고 있는데, 이는 (가)와 (나)의 내용과 가장 잘 부합합니다. (가)는 과학적 사유의 중요성을 강조하며, (나)는 과학적 방법론의 한계를
+    지적하고 있기 때문입니다.
+  time_taken: 4.81
+  points: 3
+  earned_points: 3
   success: true
   error: null
 - question_id: q8
@@ -108,643 +109,496 @@ results:
   answer: 3
   correct_answer: 3
   is_correct: true
-  reasoning: (가)에서 박은식은 과학과 철학을 구별하고 철학의 중요성을 강조했지만, 이는 가치관 정립과 인격 수양을 위한 철학의 필요성을
-    언급한 것이다. <보기>에서 젊은이들의 자문화에 대한 인식 변화가 가치관 정립을 위한 철학이 부재했기 때문이라고 보는 것은 박은식의 입장과
-    부합하지 않는다. 박은식은 철학의 부재가 아니라 철학의 혁신과 재구성을 통해 가치관을 정립해야 한다고 보았다. 따라서 3번 선택지는 적절하지
-    않다.
-  time_taken: 4.04
+  reasoning: 선택지 3번은 (가)에서 비유가 사양과 구별되는 계획의 중요성을 강조했다고 하지만, 지문 (가)에서는 비유에 대한 언급이 없으며,
+    사양과 구별되는 계획의 중요성을 강조한 내용도 없다. 따라서 선택지 3번은 지문 (가)의 내용과 일치하지 않으며, 적절하지 않은 반응이다.
+  time_taken: 2.51
   points: 3
   earned_points: 3
   success: true
   error: null
 - question_id: q9
   question_number: 9
-  answer: 0
-  correct_answer: 2
+  answer: 3
+  correct_answer: 1
   is_correct: false
-  reasoning: ''
-  time_taken: 6.43
-  points: 2
+  reasoning: 지문에서 ①은 '근대 국가 건설의 새로운 주체의 형성의 표출'이라는 문맥에서 사용되었습니다. 이는 기존의 틀에 머무르지 않고
+    새로운 주체를 형성하려는 시도를 의미합니다. 선택지 중에서 '아이 응용은 수학적 그치지 않았다'는 기존의 수학적 틀에 머무르지 않고 새로운
+    응용을 시도한다는 의미로, ①의 문맥과 가장 유사합니다.
+  time_taken: 3.0
+  points: 3
   earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Rate limit reached for gpt-4o
-    in organization org-Ax8Ra2OgrSAf366SC35guEOC on tokens per min (TPM): Limit 30000,
-    Used 30000, Requested 1727. Please try again in 3.454s. Visit https://platform.openai.com/account/rate-limits
-    to learn more.'', ''type'': ''tokens'', ''param'': None, ''code'': ''rate_limit_exceeded''}}'
+  success: true
+  error: null
 - question_id: q10
   question_number: 10
-  answer: 3
+  answer: 2
   correct_answer: 3
-  is_correct: true
-  reasoning: 문제에서 주어진 선택지들은 확산 모델에 대한 다양한 측면을 다루고 있습니다. 이 중에서 3번 선택지는 '확산 모델에서 노이즈의
-    중요성을 파악하고, 사용되는 노이즈의 종류가 모델의 성능에 미치는 영향을 이해하며 읽었다'고 명시하고 있습니다. 확산 모델은 일반적으로 노이즈를
-    추가하고 제거하는 과정을 통해 데이터를 생성하는 모델로, 노이즈의 종류와 그 처리 방식이 모델의 성능에 큰 영향을 미칩니다. 따라서 노이즈의
-    중요성과 그 종류가 모델의 성능에 미치는 영향을 이해하는 것이 확산 모델을 이해하는 데 핵심적이라고 할 수 있습니다. 이 점에서 3번 선택지가
-    가장 적절한 답변입니다.
-  time_taken: 3.85
-  points: 2
-  earned_points: 2
+  is_correct: false
+  reasoning: 지문에서는 확산 모델이 노이즈 생성기, 이미지 예측기, 노이즈 예측기로 구성되어 있으며, 노이즈를 추가하고 제거하는 과정을
+    통해 원본 이미지를 복원하는 방법을 설명하고 있습니다. 그러나 두 가지 과정 중 어느 과정이 선행되어야 하는지에 대한 내용은 지문에 언급되어
+    있지 않습니다. 따라서 선택지 2번은 지문 내용과 적절하지 않습니다.
+  time_taken: 2.65
+  points: 3
+  earned_points: 0
   success: true
   error: null
 - question_id: q11
   question_number: 11
-  answer: 0
+  answer: 5
   correct_answer: 1
   is_correct: false
-  reasoning: ''
-  time_taken: 1.96
-  points: 2
+  reasoning: 지문에 따르면 확산 모델은 원본 이미지에 노이즈를 단계별로 추가하여 노이즈 이미지로 변환하고, 이 과정에서 노이즈 예측기를
+    통해 노이즈를 예측하고 제거하여 원본 이미지를 복원하는 과정을 거칩니다. 선택지 5번은 '연합 과정에서 단계가 반복적으로 출력되는 확산 이미지는
+    원본 이미지와의 유사성이 줄어든다'고 설명하고 있는데, 이는 노이즈가 점진적으로 추가되면서 원본 이미지와의 유사성이 줄어드는 과정을 설명하는
+    것으로 지문 내용과 일치합니다. 따라서 가장 적절한 선택지는 5번입니다.
+  time_taken: 3.36
+  points: 3
   earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Rate limit reached for gpt-4o
-    in organization org-Ax8Ra2OgrSAf366SC35guEOC on tokens per min (TPM): Limit 30000,
-    Used 30000, Requested 245. Please try again in 489ms. Visit https://platform.openai.com/account/rate-limits
-    to learn more.'', ''type'': ''tokens'', ''param'': None, ''code'': ''rate_limit_exceeded''}}'
+  success: true
+  error: null
 - question_id: q12
   question_number: 12
-  answer: 0
+  answer: 4
   correct_answer: 5
   is_correct: false
-  reasoning: ''
-  time_taken: 1.86
-  points: 2
+  reasoning: 지문에서는 주제 표현이 노이즈 예측기의 학습 과정에서 중요한 역할을 한다고 설명하고 있습니다. 주제 표현은 노이즈 예측기가
+    이미지에 포함된 노이즈를 복원하고 예측하는 데 사용되는 수치적 표현입니다. 선택지 4는 '주제 표현은 이미지에 더해진 노이즈의 크기가 보통
+    양상에 따라 다른 단계에 연결된다'고 설명하고 있는데, 이는 지문에서 언급된 내용과 일치하지 않습니다. 지문에서는 주제 표현이 노이즈의 복원과
+    예측에 사용된다고 설명하고 있으며, 노이즈의 크기와 단계에 대한 연결성은 언급되지 않았습니다. 따라서 선택지 4는 주제 표현에 대한 설명으로
+    적절하지 않습니다.
+  time_taken: 5.28
+  points: 3
   earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Rate limit reached for gpt-4o
-    in organization org-Ax8Ra2OgrSAf366SC35guEOC on tokens per min (TPM): Limit 30000,
-    Used 30000, Requested 257. Please try again in 514ms. Visit https://platform.openai.com/account/rate-limits
-    to learn more.'', ''type'': ''tokens'', ''param'': None, ''code'': ''rate_limit_exceeded''}}'
+  success: true
+  error: null
 - question_id: q13
   question_number: 13
-  answer: 0
+  answer: 3
   correct_answer: 3
-  is_correct: false
-  reasoning: ''
-  time_taken: 2.11
+  is_correct: true
+  reasoning: 지문에 따르면, 노이즈 예측기는 이미지에 포함된 노이즈를 예측하고 이를 바탕으로 노이즈를 제거하는 역할을 합니다. 선택지 3번은
+    '음악적 과정에서 (가)에 (다)이 입력된다면, A 단계의 노이즈 예측기에서 예측한 노이즈가 이미지 연산기에 입력되겠고.'라고 되어 있습니다.
+    그러나 노이즈 예측기는 노이즈를 예측하여 제거하는 역할을 하므로, 예측한 노이즈가 이미지 연산기에 입력되는 것이 아니라, 예측한 노이즈를 바탕으로
+    노이즈를 제거하는 과정이 이루어져야 합니다. 따라서 선택지 3번은 적절하지 않습니다.
+  time_taken: 3.48
   points: 3
-  earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Rate limit reached for gpt-4o
-    in organization org-Ax8Ra2OgrSAf366SC35guEOC on tokens per min (TPM): Limit 30000,
-    Used 30000, Requested 331. Please try again in 662ms. Visit https://platform.openai.com/account/rate-limits
-    to learn more.'', ''type'': ''tokens'', ''param'': None, ''code'': ''rate_limit_exceeded''}}'
+  earned_points: 3
+  success: true
+  error: null
 - question_id: q14
   question_number: 14
-  answer: 0
+  answer: 4
   correct_answer: 1
   is_correct: false
-  reasoning: ''
-  time_taken: 1.98
-  points: 2
+  reasoning: 지문에서는 딥페이크가 자기 정체성이 다양하게 나타나는 데 영향을 미친다고 명시적으로 언급하지 않았습니다. 대신, 딥페이크는
+    사회적 성공과 창의성에서 자기정체성이 발전적으로 연장되는 과정의 일부로 언급되었습니다. 따라서 딥페이크가 가장 중요한 방식이라고 보기 어렵습니다.
+    나머지 선택지는 지문에서 언급된 내용과 일치합니다.
+  time_taken: 2.9
+  points: 3
   earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Rate limit reached for gpt-4o
-    in organization org-Ax8Ra2OgrSAf366SC35guEOC on tokens per min (TPM): Limit 30000,
-    Used 30000, Requested 298. Please try again in 596ms. Visit https://platform.openai.com/account/rate-limits
-    to learn more.'', ''type'': ''tokens'', ''param'': None, ''code'': ''rate_limit_exceeded''}}'
+  success: true
+  error: null
 - question_id: q15
   question_number: 15
-  answer: 0
+  answer: 3
   correct_answer: 2
   is_correct: false
-  reasoning: ''
-  time_taken: 2.04
-  points: 2
+  reasoning: 지문에서는 인터넷에서의 자기 표현과 현실에서의 자기 정체성의 관계에 대해 논의하고 있으며, 특히 인터넷 ID와 관련된 사이버
+    폭력의 문제를 언급하고 있습니다. 이는 인터넷에서의 자기 정체성과 현실 세계의 자기 정체성 간의 충돌을 인식하고 있다는 것을 의미합니다. 따라서
+    (다)에 대한 이해로 가장 적절한 것은 인터넷에서의 자기 정체성과 현실 세계의 자기 정체성의 충돌을 인식한다고 보는 것입니다.
+  time_taken: 3.27
+  points: 3
   earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Rate limit reached for gpt-4o
-    in organization org-Ax8Ra2OgrSAf366SC35guEOC on tokens per min (TPM): Limit 30000,
-    Used 30000, Requested 290. Please try again in 580ms. Visit https://platform.openai.com/account/rate-limits
-    to learn more.'', ''type'': ''tokens'', ''param'': None, ''code'': ''rate_limit_exceeded''}}'
+  success: true
+  error: null
 - question_id: q16
   question_number: 16
-  answer: 0
+  answer: 5
   correct_answer: 2
   is_correct: false
-  reasoning: ''
-  time_taken: 2.26
+  reasoning: 지문에서는 딥페이크와 자기정체성, 인터넷 ID와 관련된 내용이 주로 다루어지고 있으며, 가처분조치의 법적 책임에 대한 직접적인
+    언급은 없습니다. 따라서 1, 2, 3, 4번 선택지에서 언급된 가처분조치의 법적 책임에 대한 판단은 지문과 관련이 없으며, 5번 선택지의
+    내용이 적절하지 않습니다. 5번 선택지는 모든 판단이 잘못된 점이 없다고 하지만, 지문에서는 그러한 판단을 내릴 근거가 없기 때문에 적절하지
+    않습니다.
+  time_taken: 3.32
   points: 3
   earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Rate limit reached for gpt-4o
-    in organization org-Ax8Ra2OgrSAf366SC35guEOC on tokens per min (TPM): Limit 30000,
-    Used 30000, Requested 314. Please try again in 628ms. Visit https://platform.openai.com/account/rate-limits
-    to learn more.'', ''type'': ''tokens'', ''param'': None, ''code'': ''rate_limit_exceeded''}}'
+  success: true
+  error: null
 - question_id: q17
   question_number: 17
-  answer: 0
+  answer: 3
   correct_answer: 3
-  is_correct: false
-  reasoning: ''
-  time_taken: 1.51
+  is_correct: true
+  reasoning: 지문에서 '인터넷 ID'에 대한 사이비 폭력이 다양한 변수를 인식 못하고 있다는 내용이 있습니다. 이는 인터넷 ID가 사회적
+    평판과 명예의 수준도 인정을 할 수 있는가에 대한 문제 제기와 관련이 있습니다. 따라서, '알고 있는 상황에서'라는 문맥에 가장 적절한 부분은
+    ㉢입니다. ㉢은 '알(알다)라고'로 바꿔 쓰기에 적절합니다.
+  time_taken: 3.21
   points: 2
-  earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Rate limit reached for gpt-4o
-    in organization org-Ax8Ra2OgrSAf366SC35guEOC on tokens per min (TPM): Limit 30000,
-    Used 30000, Requested 183. Please try again in 366ms. Visit https://platform.openai.com/account/rate-limits
-    to learn more.'', ''type'': ''tokens'', ''param'': None, ''code'': ''rate_limit_exceeded''}}'
+  earned_points: 2
+  success: true
+  error: null
 - question_id: q18
   question_number: 18
-  answer: 0
+  answer: 3
   correct_answer: 2
   is_correct: false
-  reasoning: ''
-  time_taken: 2.32
+  reasoning: 지문에서는 승상이 왕비의 고증 역할에 대해 경계가 중요하다고 생각했다는 내용이 없습니다. 승상은 왕에게 상소를 올리고, 왕비가
+    사연의 내용을 확인하는 과정이 있었지만, 승상이 왕비의 고증 역할을 경계했다는 직접적인 언급은 없습니다. 따라서 3번 선택지가 적절하지 않습니다.
+  time_taken: 3.59
   points: 2
   earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Rate limit reached for gpt-4o
-    in organization org-Ax8Ra2OgrSAf366SC35guEOC on tokens per min (TPM): Limit 30000,
-    Used 30000, Requested 323. Please try again in 646ms. Visit https://platform.openai.com/account/rate-limits
-    to learn more.'', ''type'': ''tokens'', ''param'': None, ''code'': ''rate_limit_exceeded''}}'
+  success: true
+  error: null
 - question_id: q19
   question_number: 19
-  answer: 0
+  answer: 2
   correct_answer: 4
   is_correct: false
-  reasoning: ''
-  time_taken: 2.07
+  reasoning: 지문에서는 누명을 쓴 인물에 대한 이야기가 나오며, 왕이 그 인물을 죽이고 싶어하지만 황제의 명령 때문에 처벌을 유보하는 상황이
+    묘사되어 있습니다. 따라서 누명을 쓴 인물의 요용으로 인해 남주인공이 그 인물의 처벌을 유보했다는 설명이 가장 적절합니다.
+  time_taken: 2.84
   points: 2
   earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Rate limit reached for gpt-4o
-    in organization org-Ax8Ra2OgrSAf366SC35guEOC on tokens per min (TPM): Limit 30000,
-    Used 30000, Requested 293. Please try again in 586ms. Visit https://platform.openai.com/account/rate-limits
-    to learn more.'', ''type'': ''tokens'', ''param'': None, ''code'': ''rate_limit_exceeded''}}'
+  success: true
+  error: null
 - question_id: q20
   question_number: 20
-  answer: 0
+  answer: 3
   correct_answer: 5
   is_correct: false
-  reasoning: ''
-  time_taken: 1.95
+  reasoning: 지문에서는 승상과 군인 간의 대화와 명령에 대한 내용이 주를 이루고 있습니다. 선택지 3번은 '우측 군인 B가 A로부터 중수
+    시신의 적정에 관련한 정보를 얻음'이라고 되어 있는데, 지문에서는 시신에 대한 정보나 중수 시신에 대한 언급이 없습니다. 따라서 선택지 3번은
+    지문 내용과 관련이 없으며 적절하지 않은 결과입니다.
+  time_taken: 3.45
   points: 2
   earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Rate limit reached for gpt-4o
-    in organization org-Ax8Ra2OgrSAf366SC35guEOC on tokens per min (TPM): Limit 30000,
-    Used 30000, Requested 257. Please try again in 514ms. Visit https://platform.openai.com/account/rate-limits
-    to learn more.'', ''type'': ''tokens'', ''param'': None, ''code'': ''rate_limit_exceeded''}}'
+  success: true
+  error: null
 - question_id: q21
   question_number: 21
-  answer: 0
+  answer: 3
   correct_answer: 4
   is_correct: false
-  reasoning: ''
-  time_taken: 2.31
-  points: 3
-  earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Rate limit reached for gpt-4o
-    in organization org-Ax8Ra2OgrSAf366SC35guEOC on tokens per min (TPM): Limit 30000,
-    Used 30000, Requested 422. Please try again in 844ms. Visit https://platform.openai.com/account/rate-limits
-    to learn more.'', ''type'': ''tokens'', ''param'': None, ''code'': ''rate_limit_exceeded''}}'
-- question_id: q22
-  question_number: 22
-  answer: 0
-  correct_answer: 5
-  is_correct: false
-  reasoning: ''
-  time_taken: 1.88
-  points: 2
-  earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Rate limit reached for gpt-4o
-    in organization org-Ax8Ra2OgrSAf366SC35guEOC on tokens per min (TPM): Limit 30000,
-    Used 30000, Requested 233. Please try again in 466ms. Visit https://platform.openai.com/account/rate-limits
-    to learn more.'', ''type'': ''tokens'', ''param'': None, ''code'': ''rate_limit_exceeded''}}'
-- question_id: q23
-  question_number: 23
-  answer: 0
-  correct_answer: 3
-  is_correct: false
-  reasoning: ''
-  time_taken: 2.35
-  points: 2
-  earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Rate limit reached for gpt-4o
-    in organization org-Ax8Ra2OgrSAf366SC35guEOC on tokens per min (TPM): Limit 30000,
-    Used 30000, Requested 355. Please try again in 710ms. Visit https://platform.openai.com/account/rate-limits
-    to learn more.'', ''type'': ''tokens'', ''param'': None, ''code'': ''rate_limit_exceeded''}}'
-- question_id: q24
-  question_number: 24
-  answer: 0
-  correct_answer: 2
-  is_correct: false
-  reasoning: ''
-  time_taken: 1.74
-  points: 2
-  earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Rate limit reached for gpt-4o
-    in organization org-Ax8Ra2OgrSAf366SC35guEOC on tokens per min (TPM): Limit 30000,
-    Used 30000, Requested 250. Please try again in 500ms. Visit https://platform.openai.com/account/rate-limits
-    to learn more.'', ''type'': ''tokens'', ''param'': None, ''code'': ''rate_limit_exceeded''}}'
-- question_id: q25
-  question_number: 25
-  answer: 0
-  correct_answer: 3
-  is_correct: false
-  reasoning: ''
-  time_taken: 2.42
-  points: 3
-  earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Rate limit reached for gpt-4o
-    in organization org-Ax8Ra2OgrSAf366SC35guEOC on tokens per min (TPM): Limit 30000,
-    Used 30000, Requested 411. Please try again in 822ms. Visit https://platform.openai.com/account/rate-limits
-    to learn more.'', ''type'': ''tokens'', ''param'': None, ''code'': ''rate_limit_exceeded''}}'
-- question_id: q26
-  question_number: 26
-  answer: 0
-  correct_answer: 2
-  is_correct: false
-  reasoning: ''
-  time_taken: 2.11
-  points: 2
-  earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Rate limit reached for gpt-4o
-    in organization org-Ax8Ra2OgrSAf366SC35guEOC on tokens per min (TPM): Limit 30000,
-    Used 30000, Requested 299. Please try again in 598ms. Visit https://platform.openai.com/account/rate-limits
-    to learn more.'', ''type'': ''tokens'', ''param'': None, ''code'': ''rate_limit_exceeded''}}'
-- question_id: q27
-  question_number: 27
-  answer: 0
-  correct_answer: 2
-  is_correct: false
-  reasoning: ''
-  time_taken: 2.17
-  points: 2
-  earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Rate limit reached for gpt-4o
-    in organization org-Ax8Ra2OgrSAf366SC35guEOC on tokens per min (TPM): Limit 30000,
-    Used 30000, Requested 388. Please try again in 776ms. Visit https://platform.openai.com/account/rate-limits
-    to learn more.'', ''type'': ''tokens'', ''param'': None, ''code'': ''rate_limit_exceeded''}}'
-- question_id: q28
-  question_number: 28
-  answer: 0
-  correct_answer: 4
-  is_correct: false
-  reasoning: ''
-  time_taken: 2.04
-  points: 2
-  earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Rate limit reached for gpt-4o
-    in organization org-Ax8Ra2OgrSAf366SC35guEOC on tokens per min (TPM): Limit 30000,
-    Used 30000, Requested 247. Please try again in 494ms. Visit https://platform.openai.com/account/rate-limits
-    to learn more.'', ''type'': ''tokens'', ''param'': None, ''code'': ''rate_limit_exceeded''}}'
-- question_id: q29
-  question_number: 29
-  answer: 0
-  correct_answer: 3
-  is_correct: false
-  reasoning: ''
-  time_taken: 1.84
-  points: 2
-  earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Rate limit reached for gpt-4o
-    in organization org-Ax8Ra2OgrSAf366SC35guEOC on tokens per min (TPM): Limit 30000,
-    Used 30000, Requested 269. Please try again in 538ms. Visit https://platform.openai.com/account/rate-limits
-    to learn more.'', ''type'': ''tokens'', ''param'': None, ''code'': ''rate_limit_exceeded''}}'
-- question_id: q30
-  question_number: 30
-  answer: 0
-  correct_answer: 5
-  is_correct: false
-  reasoning: ''
-  time_taken: 2.04
-  points: 2
-  earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Rate limit reached for gpt-4o
-    in organization org-Ax8Ra2OgrSAf366SC35guEOC on tokens per min (TPM): Limit 30000,
-    Used 30000, Requested 306. Please try again in 612ms. Visit https://platform.openai.com/account/rate-limits
-    to learn more.'', ''type'': ''tokens'', ''param'': None, ''code'': ''rate_limit_exceeded''}}'
-- question_id: q31
-  question_number: 31
-  answer: 0
-  correct_answer: 1
-  is_correct: false
-  reasoning: ''
-  time_taken: 2.55
-  points: 2
-  earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Rate limit reached for gpt-4o
-    in organization org-Ax8Ra2OgrSAf366SC35guEOC on tokens per min (TPM): Limit 30000,
-    Used 30000, Requested 375. Please try again in 750ms. Visit https://platform.openai.com/account/rate-limits
-    to learn more.'', ''type'': ''tokens'', ''param'': None, ''code'': ''rate_limit_exceeded''}}'
-- question_id: q32
-  question_number: 32
-  answer: 0
-  correct_answer: 2
-  is_correct: false
-  reasoning: ''
-  time_taken: 1.57
-  points: 2
-  earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Rate limit reached for gpt-4o
-    in organization org-Ax8Ra2OgrSAf366SC35guEOC on tokens per min (TPM): Limit 30000,
-    Used 30000, Requested 238. Please try again in 476ms. Visit https://platform.openai.com/account/rate-limits
-    to learn more.'', ''type'': ''tokens'', ''param'': None, ''code'': ''rate_limit_exceeded''}}'
-- question_id: q33
-  question_number: 33
-  answer: 0
-  correct_answer: 5
-  is_correct: false
-  reasoning: ''
-  time_taken: 2.03
-  points: 2
-  earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Rate limit reached for gpt-4o
-    in organization org-Ax8Ra2OgrSAf366SC35guEOC on tokens per min (TPM): Limit 30000,
-    Used 30000, Requested 280. Please try again in 560ms. Visit https://platform.openai.com/account/rate-limits
-    to learn more.'', ''type'': ''tokens'', ''param'': None, ''code'': ''rate_limit_exceeded''}}'
-- question_id: q34
-  question_number: 34
-  answer: 0
-  correct_answer: 2
-  is_correct: false
-  reasoning: ''
-  time_taken: 2.55
-  points: 3
-  earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Rate limit reached for gpt-4o
-    in organization org-Ax8Ra2OgrSAf366SC35guEOC on tokens per min (TPM): Limit 30000,
-    Used 30000, Requested 412. Please try again in 824ms. Visit https://platform.openai.com/account/rate-limits
-    to learn more.'', ''type'': ''tokens'', ''param'': None, ''code'': ''rate_limit_exceeded''}}'
-- question_id: q35
-  question_number: 35
-  answer: 0
-  correct_answer: 2
-  is_correct: false
-  reasoning: ''
-  time_taken: 4.86
-  points: 2
-  earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Rate limit reached for gpt-4o
-    in organization org-Ax8Ra2OgrSAf366SC35guEOC on tokens per min (TPM): Limit 30000,
-    Used 30000, Requested 998. Please try again in 1.996s. Visit https://platform.openai.com/account/rate-limits
-    to learn more.'', ''type'': ''tokens'', ''param'': None, ''code'': ''rate_limit_exceeded''}}'
-- question_id: q35
-  question_number: 35
-  answer: 0
-  correct_answer: 2
-  is_correct: false
-  reasoning: ''
-  time_taken: 4.99
-  points: 2
-  earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Rate limit reached for gpt-4o
-    in organization org-Ax8Ra2OgrSAf366SC35guEOC on tokens per min (TPM): Limit 30000,
-    Used 30000, Requested 1043. Please try again in 2.086s. Visit https://platform.openai.com/account/rate-limits
-    to learn more.'', ''type'': ''tokens'', ''param'': None, ''code'': ''rate_limit_exceeded''}}'
-- question_id: q36
-  question_number: 36
-  answer: 0
-  correct_answer: 4
-  is_correct: false
-  reasoning: ''
-  time_taken: 5.06
-  points: 2
-  earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Rate limit reached for gpt-4o
-    in organization org-Ax8Ra2OgrSAf366SC35guEOC on tokens per min (TPM): Limit 30000,
-    Used 30000, Requested 1045. Please try again in 2.09s. Visit https://platform.openai.com/account/rate-limits
-    to learn more.'', ''type'': ''tokens'', ''param'': None, ''code'': ''rate_limit_exceeded''}}'
-- question_id: q36
-  question_number: 36
-  answer: 0
-  correct_answer: 4
-  is_correct: false
-  reasoning: ''
-  time_taken: 4.65
-  points: 3
-  earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Rate limit reached for gpt-4o
-    in organization org-Ax8Ra2OgrSAf366SC35guEOC on tokens per min (TPM): Limit 30000,
-    Used 30000, Requested 965. Please try again in 1.93s. Visit https://platform.openai.com/account/rate-limits
-    to learn more.'', ''type'': ''tokens'', ''param'': None, ''code'': ''rate_limit_exceeded''}}'
-- question_id: q37
-  question_number: 37
-  answer: 0
-  correct_answer: 3
-  is_correct: false
-  reasoning: ''
-  time_taken: 4.67
-  points: 2
-  earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Rate limit reached for gpt-4o
-    in organization org-Ax8Ra2OgrSAf366SC35guEOC on tokens per min (TPM): Limit 30000,
-    Used 30000, Requested 950. Please try again in 1.9s. Visit https://platform.openai.com/account/rate-limits
-    to learn more.'', ''type'': ''tokens'', ''param'': None, ''code'': ''rate_limit_exceeded''}}'
-- question_id: q37
-  question_number: 37
-  answer: 0
-  correct_answer: 3
-  is_correct: false
-  reasoning: ''
-  time_taken: 3.92
-  points: 2
-  earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Rate limit reached for gpt-4o
-    in organization org-Ax8Ra2OgrSAf366SC35guEOC on tokens per min (TPM): Limit 30000,
-    Used 30000, Requested 789. Please try again in 1.578s. Visit https://platform.openai.com/account/rate-limits
-    to learn more.'', ''type'': ''tokens'', ''param'': None, ''code'': ''rate_limit_exceeded''}}'
-- question_id: q38
-  question_number: 38
-  answer: 0
-  correct_answer: 4
-  is_correct: false
-  reasoning: ''
-  time_taken: 1.74
-  points: 2
-  earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Rate limit reached for gpt-4o
-    in organization org-Ax8Ra2OgrSAf366SC35guEOC on tokens per min (TPM): Limit 30000,
-    Used 30000, Requested 246. Please try again in 492ms. Visit https://platform.openai.com/account/rate-limits
-    to learn more.'', ''type'': ''tokens'', ''param'': None, ''code'': ''rate_limit_exceeded''}}'
-- question_id: q38
-  question_number: 38
-  answer: 0
-  correct_answer: 4
-  is_correct: false
-  reasoning: ''
-  time_taken: 1.82
-  points: 2
-  earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Rate limit reached for gpt-4o
-    in organization org-Ax8Ra2OgrSAf366SC35guEOC on tokens per min (TPM): Limit 30000,
-    Used 30000, Requested 267. Please try again in 534ms. Visit https://platform.openai.com/account/rate-limits
-    to learn more.'', ''type'': ''tokens'', ''param'': None, ''code'': ''rate_limit_exceeded''}}'
-- question_id: q39
-  question_number: 39
-  answer: 0
-  correct_answer: 5
-  is_correct: false
-  reasoning: ''
-  time_taken: 1.93
-  points: 2
-  earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Rate limit reached for gpt-4o
-    in organization org-Ax8Ra2OgrSAf366SC35guEOC on tokens per min (TPM): Limit 30000,
-    Used 30000, Requested 256. Please try again in 512ms. Visit https://platform.openai.com/account/rate-limits
-    to learn more.'', ''type'': ''tokens'', ''param'': None, ''code'': ''rate_limit_exceeded''}}'
-- question_id: q40
-  question_number: 40
-  answer: 0
-  correct_answer: 4
-  is_correct: false
-  reasoning: ''
-  time_taken: 2.02
-  points: 2
-  earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Rate limit reached for gpt-4o
-    in organization org-Ax8Ra2OgrSAf366SC35guEOC on tokens per min (TPM): Limit 30000,
-    Used 30000, Requested 283. Please try again in 566ms. Visit https://platform.openai.com/account/rate-limits
-    to learn more.'', ''type'': ''tokens'', ''param'': None, ''code'': ''rate_limit_exceeded''}}'
-- question_id: q41
-  question_number: 41
-  answer: 0
-  correct_answer: 3
-  is_correct: false
-  reasoning: ''
-  time_taken: 2.53
-  points: 2
-  earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Rate limit reached for gpt-4o
-    in organization org-Ax8Ra2OgrSAf366SC35guEOC on tokens per min (TPM): Limit 30000,
-    Used 30000, Requested 393. Please try again in 786ms. Visit https://platform.openai.com/account/rate-limits
-    to learn more.'', ''type'': ''tokens'', ''param'': None, ''code'': ''rate_limit_exceeded''}}'
-- question_id: q42
-  question_number: 42
-  answer: 0
-  correct_answer: 2
-  is_correct: false
-  reasoning: ''
-  time_taken: 2.45
-  points: 2
-  earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Rate limit reached for gpt-4o
-    in organization org-Ax8Ra2OgrSAf366SC35guEOC on tokens per min (TPM): Limit 30000,
-    Used 30000, Requested 314. Please try again in 628ms. Visit https://platform.openai.com/account/rate-limits
-    to learn more.'', ''type'': ''tokens'', ''param'': None, ''code'': ''rate_limit_exceeded''}}'
-- question_id: q43
-  question_number: 43
-  answer: 0
-  correct_answer: 1
-  is_correct: false
-  reasoning: ''
-  time_taken: 1.98
-  points: 3
-  earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Rate limit reached for gpt-4o
-    in organization org-Ax8Ra2OgrSAf366SC35guEOC on tokens per min (TPM): Limit 30000,
-    Used 30000, Requested 266. Please try again in 532ms. Visit https://platform.openai.com/account/rate-limits
-    to learn more.'', ''type'': ''tokens'', ''param'': None, ''code'': ''rate_limit_exceeded''}}'
-- question_id: q43
-  question_number: 43
-  answer: 0
-  correct_answer: 1
-  is_correct: false
-  reasoning: ''
-  time_taken: 2.4
-  points: 2
-  earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Rate limit reached for gpt-4o
-    in organization org-Ax8Ra2OgrSAf366SC35guEOC on tokens per min (TPM): Limit 30000,
-    Used 30000, Requested 348. Please try again in 696ms. Visit https://platform.openai.com/account/rate-limits
-    to learn more.'', ''type'': ''tokens'', ''param'': None, ''code'': ''rate_limit_exceeded''}}'
-- question_id: q44
-  question_number: 44
-  answer: 0
-  correct_answer: 5
-  is_correct: false
-  reasoning: ''
-  time_taken: 1.96
-  points: 2
-  earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Rate limit reached for gpt-4o
-    in organization org-Ax8Ra2OgrSAf366SC35guEOC on tokens per min (TPM): Limit 30000,
-    Used 30000, Requested 259. Please try again in 518ms. Visit https://platform.openai.com/account/rate-limits
-    to learn more.'', ''type'': ''tokens'', ''param'': None, ''code'': ''rate_limit_exceeded''}}'
-- question_id: q44
-  question_number: 44
-  answer: 0
-  correct_answer: 5
-  is_correct: false
-  reasoning: ''
+  reasoning: 지문에서는 왕비가 '연고'를 제시하며 고증의 주인공으로서 진실을 밝히는 내용이 명확히 드러나지 않습니다. 따라서 3번 선택지는
+    지문 내용과 부합하지 않으며 적절하지 않은 것으로 판단됩니다.
   time_taken: 2.61
   points: 3
   earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Rate limit reached for gpt-4o
-    in organization org-Ax8Ra2OgrSAf366SC35guEOC on tokens per min (TPM): Limit 30000,
-    Used 30000, Requested 434. Please try again in 868ms. Visit https://platform.openai.com/account/rate-limits
-    to learn more.'', ''type'': ''tokens'', ''param'': None, ''code'': ''rate_limit_exceeded''}}'
-- question_id: q44
-  question_number: 44
-  answer: 0
+  success: true
+  error: null
+- question_id: q22
+  question_number: 22
+  answer: 4
   correct_answer: 5
   is_correct: false
-  reasoning: ''
-  time_taken: 1.81
+  reasoning: (가)에서는 배를 타는 경험을 통해 심리적 변화를 암시하고 있으며, (나)에서는 '당신'이라는 말의 반복을 통해 심리적 방황과
+    그로 인한 변화를 나타내고 있다. (다)에서는 편지를 쓰는 행위가 자신의 존재를 증명하던 시절을 회상하며 심리적 변화를 드러낸다. 따라서 (가)~(다)
+    모두 방황의 행위와 그로 인한 심리적 변화의 상관관계를 드러내고 있다.
+  time_taken: 3.21
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q23
+  question_number: 23
+  answer: 3
+  correct_answer: 2
+  is_correct: false
+  reasoning: '''손끝을 ''밀어내는 것''을 ''벽을 밀듯'' ''작고 세게 밀어낸다''고 한 것은 이번의 마음을 밀어 내리는 화자의
+    태도를 드러낸다.''라는 선택지는 지문 (가)에서 언급된 내용과 일치하지 않습니다. 지문 (가)에서는 ''배를 탄다''는 경험과 관련된 정적과
+    긴장감, 압박감 등을 다루고 있으며, ''벽을 밀듯''이라는 표현은 등장하지 않습니다. 따라서 이 선택지는 지문에 대한 이해로 적절하지 않습니다.'
+  time_taken: 4.27
   points: 2
   earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Rate limit reached for gpt-4o
-    in organization org-Ax8Ra2OgrSAf366SC35guEOC on tokens per min (TPM): Limit 30000,
-    Used 30000, Requested 253. Please try again in 505ms. Visit https://platform.openai.com/account/rate-limits
-    to learn more.'', ''type'': ''tokens'', ''param'': None, ''code'': ''rate_limit_exceeded''}}'
-- question_id: q45
-  question_number: 45
-  answer: 0
+  success: true
+  error: null
+- question_id: q24
+  question_number: 24
+  answer: 3
   correct_answer: 2
   is_correct: false
-  reasoning: ''
-  time_taken: 2.92
+  reasoning: '''당신''이라는 단어는 화자의 내면적 갈등과 복잡한 감정을 표현하는 데 사용됩니다. 선택지 1, 2, 4, 5는 모두 화자의
+    내면적 상태와 ''당신''의 역할을 설명하는 데 적절합니다. 그러나 선택지 3은 ''당신''이 화자의 ''눈앞에 있지만 무모함으로서 환기되는
+    대상''이라고 설명하고 있는데, 이는 지문에서 ''당신''이 화자의 내면적 갈등과 관련된 존재로 묘사된 것과 일치하지 않습니다. 따라서 선택지
+    3은 적절하지 않은 설명입니다.'
+  time_taken: 3.21
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q25
+  question_number: 25
+  answer: 2
+  correct_answer: 3
+  is_correct: false
+  reasoning: 선택지 2는 '일각은 반복적으로 순환하는 웃음의 의식으로서, 사상의 습관이 내재된 화자의 복합적인 정체성 생생하게 드러내는
+    표현이지만.'이라고 되어 있는데, 이는 문장이 완전하지 않으며, (나)에서 나타난 화자의 심적 상태나 표현 방식과 직접적으로 연결되지 않는
+    내용입니다. 다른 선택지들은 (나)의 내용과 관련된 화자의 심적 상태나 표현 방식을 설명하고 있습니다.
+  time_taken: 4.47
   points: 3
   earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Rate limit reached for gpt-4o
-    in organization org-Ax8Ra2OgrSAf366SC35guEOC on tokens per min (TPM): Limit 30000,
-    Used 30000, Requested 497. Please try again in 994ms. Visit https://platform.openai.com/account/rate-limits
-    to learn more.'', ''type'': ''tokens'', ''param'': None, ''code'': ''rate_limit_exceeded''}}'
-- question_id: q45
-  question_number: 45
-  answer: 0
+  success: true
+  error: null
+- question_id: q26
+  question_number: 26
+  answer: 1
   correct_answer: 2
   is_correct: false
-  reasoning: ''
-  time_taken: 2.33
+  reasoning: (다) 지문에서는 '그녀에게 편지를 쓰는 것이 자신의 존재를 증명하던 시절이 있었다'고 언급하며, 편지를 통해 자신의 존재를
+    확인하고자 했던 과거의 경험을 회상하고 있습니다. 이는 시점의 노련으로도 환부가 사라지는 것은 아니라는 화자의 인식을 반영한다고 볼 수 있습니다.
+    즉, 과거의 행동이나 경험이 현재의 상처나 문제를 해결해주지 않는다는 인식을 나타내고 있습니다. 따라서 1번 선택지가 가장 적절합니다.
+  time_taken: 5.74
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q27
+  question_number: 27
+  answer: 4
+  correct_answer: 2
+  is_correct: false
+  reasoning: (다) 지문에서는 편지를 쓰는 행위가 자신의 존재를 증명하는 것이라고 설명하고 있습니다. 이는 사랑하는 사람에게 보내는 편지로
+    표현되며, 자신을 이상화하려는 욕구와 관련이 있습니다. 선택지 4번은 '그녀 속의 그도 그녀를 사랑한다는 것은, 이상화된 그나마 사랑한 상처를
+    품고 '또 다른 연인을 향함을 말한다'고 설명하고 있는데, 이는 지문에서 언급된 내용과 일치하지 않습니다. 지문에서는 편지를 쓰는 행위가 자기
+    고백과 이상화된 자아 사이의 차이를 인식하게 한다고 설명하고 있으며, '또 다른 연인을 향함'이라는 내용은 지문에서 다루고 있지 않습니다.
+    따라서 선택지 4번이 적절하지 않은 내용입니다.
+  time_taken: 4.59
   points: 3
   earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Rate limit reached for gpt-4o
-    in organization org-Ax8Ra2OgrSAf366SC35guEOC on tokens per min (TPM): Limit 30000,
-    Used 30000, Requested 369. Please try again in 738ms. Visit https://platform.openai.com/account/rate-limits
-    to learn more.'', ''type'': ''tokens'', ''param'': None, ''code'': ''rate_limit_exceeded''}}'
+  success: true
+  error: null
+- question_id: q28
+  question_number: 28
+  answer: 3
+  correct_answer: 4
+  is_correct: false
+  reasoning: 지문은 인물의 내면 의식과 그에 따른 사건의 진행을 묵시적으로 서술하고 있습니다. 인물의 비밀과 그로 인한 내적 갈등, 그리고
+    그로 인해 변화하는 삶의 모습을 중심으로 이야기가 전개됩니다. 이는 인물의 의식을 중심으로 사건이 진행되는 방식으로, 선택지 3번이 가장 적절합니다.
+  time_taken: 3.18
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q29
+  question_number: 29
+  answer: 3
+  correct_answer: 3
+  is_correct: true
+  reasoning: 지문은 주인공이 비밀을 가지고 살아가며, 그 비밀이 그의 일상과 심리에 큰 영향을 미치고 있음을 보여준다. 주인공은 비밀을
+    통해 익숙해진 삶을 살고 있으며, 그로 인해 심리적 동요를 겪고 있다. 또한, 지문에서 주인공이 택배업계에 이르렀다는 점은 일상적이지 않은
+    직업을 의식하고 있음을 나타낸다. 따라서, 인물의 심리적 동요를 부각하는 기능이 가장 적절하다.
+  time_taken: 2.84
+  points: 3
+  earned_points: 3
+  success: true
+  error: null
+- question_id: q30
+  question_number: 30
+  answer: 2
+  correct_answer: 5
+  is_correct: false
+  reasoning: 지문에서 '희망'은 주인공의 비밀과 관련된 심리적 상태와 연결되어 있으며, 그가 비밀을 유지하면서 느끼는 안도감과 관련이 있습니다.
+    선택지 2번은 '희망'이 '실물'이 동에서 그 기능을 하지 않는다는 것을 안고 안도감을 느낀다고 했지만, 지문에서는 '희망'이 '실물적 관점에서
+    서사적 사상'을 통해 의미를 발견해 간다고 설명하고 있습니다. 따라서 선택지 2번은 지문 내용과 맞지 않습니다.
+  time_taken: 2.67
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q31
+  question_number: 31
+  answer: 5
+  correct_answer: 4
+  is_correct: false
+  reasoning: 지문에서는 주인공의 비밀과 그로 인한 삶의 변화, 그리고 비정상적인 문제 상황에 대한 지속적인 주목을 다루고 있습니다. 선택지
+    1, 2, 3, 4는 이러한 주제와 관련이 있으며, 주인공의 심리적 상태와 일상의 변화에 대한 설명으로 적절합니다. 그러나 선택지 5는 '기고한
+    한탄'과 '비평이 안정화되는 상황'에 대한 내용이 지문과 직접적으로 연결되지 않으며, 지문에서 다루고 있는 주제와 일치하지 않습니다. 따라서
+    선택지 5가 적절하지 않은 감상 내용입니다.
+  time_taken: 3.75
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q32
+  question_number: 32
+  answer: 4
+  correct_answer: 3
+  is_correct: false
+  reasoning: 지문에서는 과거의 행적을 대화하여 현재의 처지를 보여주는 내용이 없습니다. 대신, 대구 표현을 사용하여 의향을 묘사하고, 행위의
+    실황을 기록하여 서정적 감정을 환기하며, 의문의 표현을 사용하여 상황에 대해 의심하는 부분이 있습니다. 또한, 구체적 수치를 제시하여 현실을
+    드러내는 부분도 있습니다. 따라서 4번 선택지가 적절하지 않습니다.
+  time_taken: 3.13
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q33
+  question_number: 33
+  answer: 3
+  correct_answer: 5
+  is_correct: false
+  reasoning: 지문은 화자가 길을 가면서 별을 향해 나아가는 모습을 그리고 있습니다. 화자는 길을 가면서 여러 갈림길과 장애물을 만나지만,
+    결국 별을 향해 나아가고자 하는 의지를 보입니다. 선택지 3번은 '다른 은은 모두, 각자는 연합하는 화자가 유용을 목적으로 구실하는 모습이다'라고
+    설명하고 있는데, 이는 화자가 여러 갈림길과 장애물을 극복하며 별을 향해 나아가는 과정에서 다른 요소들과의 연합을 통해 목적을 이루고자 하는
+    모습을 잘 설명하고 있습니다. 따라서 선택지 3번이 가장 적절한 이해입니다.
+  time_taken: 3.47
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q34
+  question_number: 34
+  answer: 3
+  correct_answer: 2
+  is_correct: false
+  reasoning: 지문과 선택지를 분석한 결과, (나)는 화자의 요청에 대한 대화가 의외의 상황으로 발전을 기대한다는 내용이 없습니다. 다른
+    선택지들은 지문과 관련된 내용을 포함하고 있지만, 3번 선택지는 지문과의 직접적인 관련성이 부족합니다. 따라서 3번이 적절하지 않은 선택지입니다.
+  time_taken: 3.25
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q35
+  question_number: 35
+  answer: 5
+  correct_answer: 2
+  is_correct: false
+  reasoning: 지문에서 '동해어업권', '저작소양권', '원인 창작자'는 각각 다른 표기 방식을 취하고 있으며, 이들 간의 표준화가 동등하게
+    제기된다는 내용은 없습니다. 따라서 5번 선택지는 지문의 내용과 적절하지 않습니다.
+  time_taken: 2.77
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q36
+  question_number: 36
+  answer: 3
+  correct_answer: 4
+  is_correct: false
+  reasoning: 지문에서 '저작소양권'은 'ㄱ'을 채택한다고 명시되어 있으며, 'ㄴ', 'ㄷ', 'ㅂ'을 스스로 행한다고 되어 있습니다. 따라서
+    '저작소양권'이 [ㄱ+아]로 들어간다는 선택지는 지문과 일치하지 않습니다. 다른 선택지들은 지문에서 언급된 내용과 일치하거나 모순되지 않습니다.
+  time_taken: 2.52
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q37
+  question_number: 37
+  answer: 2
+  correct_answer: 3
+  is_correct: false
+  reasoning: 문제에서 '발굴 전 두 단어'가 <보기>의 ①~⑥에 해당하는 것을 찾으라는 지시가 있습니다. 선택지 중 '도중에 사발에 물을
+    담다.'는 '사발'과 '물'이라는 두 단어가 포함되어 있으며, 이는 <보기>의 ②와 ⑤에 해당할 수 있습니다. 다른 선택지들은 두 단어가 명확히
+    <보기>의 번호에 해당하지 않거나, 두 단어로 이루어져 있지 않습니다.
+  time_taken: 2.82
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q38
+  question_number: 38
+  answer: 4
+  correct_answer: 4
+  is_correct: true
+  reasoning: 지문에서 ㉠은 학생1이 교가 가사 변경에 대한 정보를 공유하는 부분입니다. ㉡은 학생들이 교훈의 문제점과 변경 필요성에 대해
+    논의하는 과정에서 자신의 정체성을 확립하는 부분입니다. ㉢은 학생들이 교훈 변경에 대한 의견을 제시하는 부분입니다. 선택지 4번은 ㉠에 대해
+    '학생이 제시한 내용에 대해 새로운 제안을 하고 있다'고 설명하고 있는데, 이는 ㉠의 내용과 맞지 않습니다. ㉠은 단순히 정보를 공유하는 부분이지
+    새로운 제안을 하는 부분이 아닙니다. 따라서 선택지 4번이 적절하지 않은 설명입니다.
+  time_taken: 7.8
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
+- question_id: q39
+  question_number: 39
+  answer: 3
+  correct_answer: 5
+  is_correct: false
+  reasoning: 지문에서는 교훈 변경과 관련된 문제 상황을 설명하고 있습니다. 특히, '우리 학교 교훈도 특정 역역만이 부각되고 있음'과 '많은
+    학생들이 교훈에 공감하기 어려움'이라는 부분에서 현재의 문제 상황을 제시하고 있습니다. 따라서 (나)의 빈칸에 들어갈 내용으로는 문제 상황
+    제시가 적절합니다.
+  time_taken: 2.34
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q40
+  question_number: 40
+  answer: 5
+  correct_answer: 4
+  is_correct: false
+  reasoning: 지문에서 전설은 일본과 우리나라의 시스템 차이를 설명하면서 '콘트레의 콘트레'와 관련된 보안과 시스템 구축에 대해 이야기하고
+    있습니다. 특히, 일본의 시스템이 '친구가 보낸다'는 점에서 차이가 있다고 언급합니다. 이는 전입을 받는 대상, 즉 학생들이 성장할 수 있는
+    환경을 조성하는 것과 관련이 있습니다. 따라서, '전입을 받는 대상이 학생의 성장을 이룰 수 있다는 점'이 가장 적절한 선택지입니다.
+  time_taken: 2.67
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q41
+  question_number: 41
+  answer: 1
+  correct_answer: 3
+  is_correct: false
+  reasoning: 지문에서는 '푸드과학 콘트레'와 관련된 대화가 이루어지고 있으며, '가수'라는 인물이 '플라스틱 콘텐츠' 규정의 차이로 인해
+    반항하는 반응을 드러냈다는 내용은 포함되어 있지 않습니다. 따라서 선택지 1은 지문과 관련이 없는 설명입니다.
+  time_taken: 2.77
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q42
+  question_number: 42
+  answer: 3
+  correct_answer: 2
+  is_correct: false
+  reasoning: 문제에서 (나)의 정보 제시 방식으로 적절하지 않은 것을 찾는 것입니다. 선택지 3은 'A4 용지의 제시를 위해 대화를 듣기
+    위해 A4 용지 규격을 보여 주는 이미지를 제시하였다'고 되어 있습니다. 이는 대화를 듣기 위해 이미지를 제시하는 방식으로, 정보 제시 방식으로
+    적절하지 않습니다. 대화를 듣기 위해 이미지를 보여주는 것은 정보 전달의 효율성을 떨어뜨릴 수 있기 때문입니다. 따라서 선택지 3이 적절하지
+    않은 정보 제시 방식입니다.
+  time_taken: 3.98
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q43
+  question_number: 43
+  answer: 3
+  correct_answer: 1
+  is_correct: false
+  reasoning: 지문에서는 '푸드과학 콘트레'와 관련된 대화가 이루어지고 있으며, 이 대화에서 일본과 우리나라의 시스템 차이, 그리고 '푸드과학
+    콘트레'의 필요성에 대해 논의하고 있습니다. 선택지 중에서 '지속 가능한 항공유의 장점과 단점을 함께 나열하고 서술하였다'는 방식이 지문에서
+    사용된 방식과 가장 유사합니다. 지문에서는 특정 주제에 대해 다양한 측면을 논의하고 있기 때문에, 장점과 단점을 나열하는 방식이 가장 적절합니다.
+  time_taken: 3.15
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q44
+  question_number: 44
+  answer: 3
+  correct_answer: 5
+  is_correct: false
+  reasoning: 문제에서 학생이 초고를 작성하며 떠올린 생각을 고려하여 [A]에 들어갈 내용을 선택해야 합니다. 선택지 중에서 지속 가능한
+    항공유의 도입을 확대하는 것에 대한 내용을 담고 있는 것은 3번입니다. 3번 선택지는 지속 가능한 항공유를 통한 항공 부문 탄소 배출량 감축과
+    도입 확대를 제안하고 있어, 학생이 초고를 작성하며 떠올린 생각과 가장 잘 맞아떨어집니다.
+  time_taken: 4.98
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q45
+  question_number: 45
+  answer: 3
+  correct_answer: 2
+  is_correct: false
+  reasoning: 문제에서 주어진 선택지 중에서 적절하지 않은 자료 활용 방안을 찾는 것입니다. 선택지 3번은 '각국 의무로 사용이 쉬워질 시점
+    중장기 부작용에 대한 의견을 가미하는 내용'이라고 되어 있으며, 이는 다른 선택지들과 달리 구체적인 보강 방안이나 주장을 제시하지 않고, 오히려
+    의무화의 부작용에 대한 의견을 추가하는 것으로, 초고의 보완을 위한 자료 활용 방안으로 적절하지 않습니다. 따라서 3번이 적절하지 않은 자료
+    활용 방안입니다.
+  time_taken: 11.62
+  points: 3
+  earned_points: 0
+  success: true
+  error: null

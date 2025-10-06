@@ -2,14 +2,14 @@ exam_id: 2025-english-sat
 exam_title: 2025학년도 수능 ENGLISH
 subject: english
 model_name: gpt-4o
-evaluated_at: '2025-10-06T19:02:43.584409'
+evaluated_at: '2025-10-06T23:22:37.220473'
 summary:
   total_questions: 42
-  correct_answers: 6
-  accuracy: 14.29
-  total_score: 13
+  correct_answers: 7
+  accuracy: 16.67
+  total_score: 15
   max_score: 100
-  score_rate: 13.0
+  score_rate: 15.0
 results:
 - question_id: q1
   question_number: 1
@@ -181,12 +181,10 @@ results:
   answer: 3
   correct_answer: 3
   is_correct: true
-  reasoning: 문제에서 여자가 하는 말의 주제를 찾으라는 질문이 주어졌습니다. 선택지를 분석해보면, 3번 'suitable foods to
-    solve future food shortages'는 미래의 식량 부족 문제를 해결하기 위한 적절한 음식에 관한 내용입니다. 이는 여자가 미래의
-    식량 문제를 해결하기 위한 방안으로 적절한 음식을 제안하는 주제와 관련이 있을 가능성이 높습니다. 다른 선택지들은 저장 조건, 영양가 있는
-    식단의 중요성, 특이한 재료로 만든 인기 요리, 미래 기술 등으로 주제와 직접적인 관련성이 적어 보입니다. 따라서 3번이 가장 적절한 주제로
-    판단됩니다.
-  time_taken: 8.71
+  reasoning: 문제에서 여자가 하는 말의 주제를 찾으라는 질문이 주어졌습니다. 선택지 중에서 'suitable foods to solve
+    future food shortages'는 미래 식량 부족 문제를 해결하기 위한 적절한 음식에 관한 내용입니다. 이는 미래의 식량 문제를 해결하기
+    위한 대안적인 식품에 대한 논의일 가능성이 높습니다. 따라서 여자가 하는 말의 주제로 가장 적절한 것은 3번입니다.
+  time_taken: 2.91
   points: 2
   earned_points: 2
   success: true
@@ -196,10 +194,10 @@ results:
   answer: 3
   correct_answer: 4
   is_correct: false
-  reasoning: 주어진 선택지 중에서 언급된 음식이 아닌 것을 찾는 문제입니다. 선택지에는 seaweed, beans, pumpkins, potatoes,
-    mushrooms가 있습니다. 이 중에서 pumpkins는 다른 선택지와 달리 해조류, 콩류, 감자류, 버섯류와 같은 일반적인 식재료 분류에
-    속하지 않으며, 문제에서 언급된 다른 음식들과 관련성이 적습니다. 따라서 pumpkins가 언급된 음식이 아닌 것으로 판단됩니다.
-  time_taken: 4.17
+  reasoning: 선택지 중에서 언급된 음식이 아닌 것을 찾는 문제입니다. 주어진 선택지 중에서 'pumpkins'는 다른 음식들과 비교했을
+    때 일반적으로 덜 언급되는 음식입니다. 'seaweed', 'beans', 'potatoes', 'mushrooms'는 다양한 요리에서 흔히
+    사용되는 재료로 자주 언급됩니다. 따라서 'pumpkins'가 언급되지 않은 음식일 가능성이 높습니다.
+  time_taken: 2.87
   points: 2
   earned_points: 0
   success: true
@@ -209,10 +207,10 @@ results:
   answer: 5
   correct_answer: 1
   is_correct: false
-  reasoning: 문제에서 주어진 선택지 중에서 가장 적절한 것은 마라톤 경기 진행에 따른 도로 통제를 안내하려는 목적입니다. 일반적으로 마라톤
-    경기가 진행될 때는 도로 통제가 필수적이며, 참가자 및 시민들에게 이를 사전에 안내하는 것이 중요합니다. 따라서 도로 통제 안내가 글의 목적으로
-    가장 적절합니다.
-  time_taken: 3.95
+  reasoning: 문제에서 주어진 선택지 중에서 '마라톤 경기 진행에 따른 도로 통제를 안내하려고'라는 선택지가 가장 적절합니다. 마라톤 경기가
+    진행될 때는 일반적으로 도로 통제가 이루어지며, 이는 참가자와 일반 시민들에게 중요한 정보입니다. 따라서 글의 목적이 도로 통제에 대한 안내라면,
+    이는 마라톤 경기와 관련된 중요한 공지 사항이 될 것입니다.
+  time_taken: 2.98
   points: 2
   earned_points: 0
   success: true
@@ -222,11 +220,10 @@ results:
   answer: 3
   correct_answer: 2
   is_correct: false
-  reasoning: 문제에서 Peter의 심경 변화를 묻고 있습니다. 선택지 중에서 'confused → satisfied'는 혼란스러움에서 만족감으로의
-    변화로, 이는 일반적으로 어떤 문제나 상황에 대해 처음에는 이해하지 못하다가 나중에 해결되거나 이해하게 되어 만족감을 느끼는 상황을 설명합니다.
-    다른 선택지들은 각각의 감정 변화가 자연스럽지 않거나, 일반적인 심경 변화의 흐름과 맞지 않습니다. 따라서 Peter의 심경 변화로 가장 적절한
-    것은 'confused → satisfied'입니다.
-  time_taken: 5.32
+  reasoning: 문제에서 Peter의 심경 변화를 묻고 있습니다. 선택지 중 'confused → satisfied'는 처음에 혼란스러웠다가
+    나중에 만족하게 되는 심경 변화를 나타냅니다. 일반적으로 사람의 심경 변화는 혼란스러움에서 만족감으로 이어질 수 있으며, 이는 문제에서 제시된
+    상황에 적합할 수 있습니다. 따라서 가장 적절한 선택지는 3번입니다.
+  time_taken: 3.7
   points: 2
   earned_points: 0
   success: true
@@ -236,11 +233,10 @@ results:
   answer: 3
   correct_answer: 1
   is_correct: false
-  reasoning: 문제에서 필자가 주장하는 바를 찾기 위해서는 지문을 분석해야 합니다. 주어진 선택지 중에서 '학습 활동에 게임 요소를 적용해
-    새로운 경험을 해야 한다'는 선택지는 게임을 학습에 긍정적으로 활용하자는 내용으로, 이는 게임의 긍정적인 측면을 강조하고 학습에 새로운 경험을
-    제공하자는 주장으로 해석됩니다. 다른 선택지들은 게임의 부정적 측면을 강조하거나, 게임을 자제시키자는 내용으로 필자의 긍정적인 주장과는 거리가
-    있습니다. 따라서 필자의 주장을 가장 잘 나타내는 선택지는 3번입니다.
-  time_taken: 4.92
+  reasoning: 문제에서 필자가 주장하는 바를 찾기 위해 각 선택지를 분석해보면, 선택지 3번이 '학습 활동에 게임 요소를 적용해 새로운 경험을
+    해야 한다'고 제안하고 있습니다. 이는 게임의 긍정적인 요소를 학습에 활용하자는 의미로, 필자가 주장하는 바와 가장 잘 맞아떨어집니다. 다른
+    선택지들은 게임의 부정적 측면을 강조하거나, 게임을 제한하자는 내용으로 필자의 주장을 반영하지 않습니다.
+  time_taken: 3.29
   points: 2
   earned_points: 0
   success: true
@@ -251,12 +247,14 @@ results:
   correct_answer: 3
   is_correct: true
   reasoning: The phrase 'hunting the shadow, not the substance' in the context of
-    the passage refers to architects who rely solely on theories and scholarship without
-    practical skills. Vitruvius emphasizes the importance of both practical and theoretical
-    knowledge for architects. Therefore, pursuing ideals without practical skills
-    aligns with the idea of chasing something insubstantial ('the shadow') rather
-    than something concrete ('the substance'). Option 3 accurately captures this meaning.
-  time_taken: 2.73
+    the passage refers to the idea that relying solely on theoretical knowledge without
+    practical skills is ineffective. Vitruvius emphasizes the importance of both practical
+    and theoretical knowledge for architects. Therefore, pursuing only the ideals
+    or theories of architecture without the necessary practical skills is akin to
+    chasing something insubstantial, like a shadow, rather than something concrete,
+    like the substance. This aligns with option 3, which describes pursuing the ideals
+    of architecture without the practical skills.
+  time_taken: 3.66
   points: 3
   earned_points: 3
   success: true
@@ -266,10 +264,10 @@ results:
   answer: 5
   correct_answer: 2
   is_correct: false
-  reasoning: 지문은 건축가의 역할과 중요성에 대해 설명하고 있으며, 특히 건축가가 되기 위해서는 실용적 지식과 이론적 지식을 모두 갖추어야
-    한다고 강조하고 있습니다. 이는 자신의 감정 상태에 대한 이해와 사회적 향상에 필수적인 요소로 볼 수 있습니다. 따라서, 지문에서 강조하는
-    것은 자신의 상태와 지식을 이해하고 이를 통해 사회적 위치를 향상시키는 것이므로, 선택지 중에서 가장 적절한 것은 5번입니다.
-  time_taken: 3.68
+  reasoning: 지문은 건축가가 되기 위해서는 실용적 기술뿐만 아니라 이론적 지식도 필요하다고 강조하고 있습니다. 이는 자신의 감정 상태에
+    대한 이해와 같은 자기 인식이 사회적 향상에 필수적이라는 개념과 유사합니다. 따라서, 주어진 선택지 중에서 지문의 내용과 가장 관련이 있는
+    것은 '자신의 감정 상태에 대한 이해는 사회적 향상에 필수적 요소이다'라는 5번 선택지입니다.
+  time_taken: 3.52
   points: 3
   earned_points: 0
   success: true
@@ -279,12 +277,11 @@ results:
   answer: 3
   correct_answer: 1
   is_correct: false
-  reasoning: 지문은 로마 제국 시대의 건축가의 역할과 그 중요성에 대해 설명하고 있으며, 건축가가 되기 위해 필요한 다양한 학문적 지식과
-    실용적 기술의 조화를 강조하고 있습니다. 선택지 중에서 지문과 관련된 주제를 찾기 위해 각 선택지를 분석해보면, 선택지 3번 'influence
-    of industrialization on the machine-human relationship'는 지문과 관련이 없습니다. 지문은 산업화나
-    기계-인간 관계에 대한 내용을 다루지 않고, 건축가의 지위와 필요한 지식에 대해 설명하고 있습니다. 따라서, 주제와 관련이 없는 선택지입니다.
-    주제를 잘못 이해한 것으로 보입니다.
-  time_taken: 3.79
+  reasoning: 지문은 로마 제국 시대의 건축가의 중요성과 그들이 갖춰야 할 지식에 대해 설명하고 있습니다. 선택지 중에서 지문과 관련된 주제를
+    찾기 위해 각 선택지를 분석해보면, 1번, 2번, 4번, 5번은 산업화와 관련된 주제이며, 지문과 직접적인 관련이 없습니다. 3번 선택지는
+    '기계-인간 관계에 대한 산업화의 영향'을 다루고 있는데, 이는 지문에서 언급된 건축가의 역할과 지식의 중요성, 즉 이론과 실무의 조화가 필요하다는
+    점과 관련이 있습니다. 따라서 가장 적절한 주제는 3번입니다.
+  time_taken: 5.53
   points: 3
   earned_points: 0
   success: true
@@ -294,11 +291,11 @@ results:
   answer: 3
   correct_answer: 5
   is_correct: false
-  reasoning: '지문은 로마 제국 시대의 건축가의 중요성과 그들이 갖춰야 할 학문적, 실용적 지식에 대해 설명하고 있습니다. 선택지 중 지문과
-    관련된 내용은 없지만, 가장 관련성이 있는 선택지를 찾자면, ''The Selfie: A Symbol of Self-oriented Global
-    Culture''가 건축가의 역할이 정치적 상징으로 중요해졌다는 점에서 문화적 상징으로서의 셀피와 유사한 맥락을 가질 수 있습니다. 그러나
-    지문과 직접적으로 관련된 선택지는 없습니다.'
-  time_taken: 4.44
+  reasoning: 지문은 로마 제국 시대의 건축가의 중요성과 그들이 갖춰야 할 학문적, 실용적 지식에 대해 설명하고 있습니다. 선택지 중 지문과
+    관련된 내용은 없으며, 모두 '셀피'에 관한 것입니다. 따라서 지문과 선택지의 주제가 일치하지 않으므로, 선택지 중 가장 일반적인 '셀피'에
+    대한 설명을 포함하는 3번이 가장 적절한 제목으로 보입니다. 이는 셀피가 현대 문화에서 자아 중심적 상징으로 자리 잡고 있다는 점에서 지문의
+    건축가의 상징적 중요성과 간접적으로 연결될 수 있습니다.
+  time_taken: 4.84
   points: 3
   earned_points: 0
   success: true
@@ -308,11 +305,10 @@ results:
   answer: 3
   correct_answer: 4
   is_correct: false
-  reasoning: 주어진 문제는 도표의 내용과 일치하지 않는 것을 찾는 것입니다. 선택지에는 'Director', 'Writer', 'Editor',
-    'Producer', 'Role'이 있습니다. 이 중에서 도표의 내용과 일치하지 않는 항목을 찾기 위해서는 도표의 구체적인 내용을 알아야 합니다.
-    하지만 도표의 내용이 주어지지 않았기 때문에 일반적인 경우를 가정할 수밖에 없습니다. 보통 'Editor'는 다른 역할들과 비교했을 때 도표에
-    포함되지 않을 가능성이 상대적으로 높습니다. 따라서 'Editor'를 선택했습니다.
-  time_taken: 3.1
+  reasoning: 주어진 선택지들은 모두 영화 제작과 관련된 직책을 나타내고 있습니다. 'Director', 'Writer', 'Producer',
+    'Role'은 영화 제작에서 흔히 사용되는 용어입니다. 그러나 'Editor'는 영화 편집을 담당하는 직책으로, 도표의 내용과 일치하지 않을
+    가능성이 있습니다. 따라서 선택지 중에서 도표의 내용과 일치하지 않는 것은 'Editor'일 가능성이 높습니다.
+  time_taken: 3.62
   points: 2
   earned_points: 0
   success: true
@@ -322,11 +318,10 @@ results:
   answer: 4
   correct_answer: 4
   is_correct: true
-  reasoning: 문제에서 주어진 선택지 중 Dick Enberg에 관한 내용과 일치하지 않는 것을 찾기 위해 각 선택지를 분석해야 합니다.
-    1번은 그의 출생지에 관한 내용이고, 2번은 그의 경력 중 하나인 대학 야구 코치에 관한 내용입니다. 3번은 그의 업적 중 하나로, 중국을
-    방문한 첫 미국인 스포츠 캐스터라는 내용입니다. 5번은 그의 수상 경력에 관한 내용입니다. 4번은 그의 사망 시점에 관한 내용인데, 마지막
-    방송 후 3년 뒤에 사망했다는 내용이 일치하지 않는 것으로 보입니다. 따라서 정답은 4번입니다.
-  time_taken: 3.16
+  reasoning: 문제에서 주어진 선택지 중 Dick Enberg에 관한 정보가 일치하지 않는 것을 찾는 것입니다. 선택지 4번은 '마지막 방송
+    후 3년 뒤에 사망하였다'라는 내용인데, 일반적으로 Dick Enberg는 2016년에 마지막 방송을 했고, 2017년에 사망한 것으로 알려져
+    있습니다. 따라서 4번이 일치하지 않는 정보입니다.
+  time_taken: 2.5
   points: 2
   earned_points: 2
   success: true
@@ -336,10 +331,10 @@ results:
   answer: 2
   correct_answer: 3
   is_correct: false
-  reasoning: 문제에서 Adenville City Pass Card에 대한 안내문을 기반으로 선택지 중 일치하지 않는 내용을 찾는 것입니다.
-    선택지 2번은 '시티 투어 버스에는 사용할 수 없다'고 명시하고 있는데, 일반적으로 관광객을 위한 대중교통 카드에는 시티 투어 버스도 포함되는
-    경우가 많습니다. 따라서 이 선택지가 안내문의 내용과 일치하지 않을 가능성이 높습니다.
-  time_taken: 2.94
+  reasoning: Adenville City Pass Card에 대한 안내문에서 시티 투어 버스에 사용할 수 없다는 내용이 일치하지 않는 것으로
+    보입니다. 일반적으로 관광객을 위한 대중교통 카드에는 시티 투어 버스도 포함되는 경우가 많습니다. 따라서 이 선택지가 안내문의 내용과 일치하지
+    않을 가능성이 높습니다.
+  time_taken: 2.54
   points: 2
   earned_points: 0
   success: true
@@ -349,9 +344,9 @@ results:
   answer: 2
   correct_answer: 3
   is_correct: false
-  reasoning: 지문에 대한 정보가 주어지지 않았지만, 일반적으로 '연중 동안 진행된다'는 표현은 축제의 특성상 맞지 않을 가능성이 높습니다.
-    대부분의 축제는 특정 기간 동안만 열리기 때문입니다. 따라서 2번 선택지가 안내문의 내용과 일치하지 않을 가능성이 큽니다.
-  time_taken: 2.31
+  reasoning: 지문에서 Luckwood Snow Festival이 연중 동안 진행된다는 내용은 일반적으로 맞지 않습니다. 축제는 특정 기간
+    동안 열리는 이벤트이기 때문에, '연중 동안 진행된다'는 표현은 부적절합니다. 따라서 이 선택지가 안내문의 내용과 일치하지 않을 가능성이 높습니다.
+  time_taken: 3.98
   points: 2
   earned_points: 0
   success: true
@@ -361,10 +356,9 @@ results:
   answer: 2
   correct_answer: 2
   is_correct: true
-  reasoning: 지문에서 'as patients recovering from a brain injury affecting the motor
-    system ② knows'라는 문장이 있습니다. 여기서 'patients'는 복수형 명사이므로 동사는 복수형인 'know'가 되어야 합니다.
-    따라서 'knows'는 어법상 틀린 부분입니다.
-  time_taken: 2.52
+  reasoning: 문장에서 'patients recovering from a brain injury affecting the motor system'은
+    복수 주어이므로 동사는 복수형이어야 합니다. 따라서 'knows'는 'know'로 수정되어야 합니다. 나머지 선택지들은 문법적으로 올바릅니다.
+  time_taken: 2.07
   points: 2
   earned_points: 2
   success: true
@@ -374,53 +368,54 @@ results:
   answer: 3
   correct_answer: 4
   is_correct: false
-  reasoning: 지문에서 밑줄 친 부분은 없지만, 문맥상 적절하지 않은 단어를 찾는 문제입니다. 주어진 선택지 중에서 'desire'는 '욕구'라는
-    의미로, 지문에서 설명하는 자동화된 뇌의 기능과 관련이 없습니다. 지문은 자동화된 뇌의 기능이 우리의 의식적인 사고를 더 중요한 일에 사용할
-    수 있도록 해준다는 내용을 담고 있습니다. 따라서 'desire'는 문맥상 적절하지 않은 단어입니다.
-  time_taken: 2.99
+  reasoning: 지문에서 밑줄 친 부분은 ① had, ② knows, ③ freeing, ④ that, ⑤ what 입니다. 이 중 문맥상
+    적절하지 않은 부분은 ② 'knows'입니다. 주어 'patients'는 복수형이므로 동사는 'know'가 되어야 합니다. 따라서, 선택지
+    중 문맥상 적절하지 않은 낱말은 3번 'desire'로 보입니다. 그러나, 주어진 선택지와 지문이 일치하지 않으므로, 선택지에 오류가 있는
+    것으로 보입니다. 따라서, 문맥상 적절하지 않은 부분은 ② 'knows'입니다.
+  time_taken: 4.68
   points: 3
   earned_points: 0
   success: true
   error: null
 - question_id: q31
   question_number: 31
-  answer: 4
+  answer: 1
   correct_answer: 5
   is_correct: false
-  reasoning: 지문은 우리의 뇌가 자동으로 처리하는 과정과 의식적으로 처리해야 하는 과정의 차이를 설명하고 있습니다. 특히, 자동화된 과정은
-    오래된 뇌의 부분이 담당하며, 최근에 진화한 능력인 말하기, 읽기, 쓰기 등은 덜 자동화되어 있다고 설명합니다. 따라서 빈칸에 들어갈 말은
-    이러한 자동화되지 않은 과정과 관련이 있어야 합니다. 'alternative perspective'는 새로운 관점이나 다른 시각을 의미하며,
-    이는 자동화되지 않은 인지적 과정과 관련이 있습니다. 따라서 4번이 가장 적절한 선택입니다.
-  time_taken: 6.35
+  reasoning: 지문에서는 우리의 뇌가 자동으로 처리하는 과정과 더 최근에 진화한 능력들에 대해 설명하고 있습니다. 특히, 말하기, 읽기,
+    쓰기와 같은 능력들이 덜 자동화되어 있다고 언급하고 있습니다. 따라서 빈칸에 들어갈 말은 이러한 언어적 능력과 관련된 것이어야 합니다. 'linguistic
+    insight'는 언어적 통찰력을 의미하며, 이는 말하기, 읽기, 쓰기와 같은 언어적 능력과 관련이 있습니다. 따라서 선택지 중에서 가장 적절한
+    것은 'linguistic insight'입니다.
+  time_taken: 3.87
   points: 3
   earned_points: 0
   success: true
   error: null
 - question_id: q33
   question_number: 33
-  answer: 5
+  answer: 3
   correct_answer: 3
-  is_correct: false
-  reasoning: 지문에서는 주의 경제 시대에 우리가 AI 기반 추천 시스템에 의해 주의가 포획되고 있다는 점을 설명하고 있습니다. 선택지 5번은
-    '당신이 AI 친구에게 혜택을 빚지고 있다'는 내용인데, 이는 지문에서 언급되지 않았습니다. 지문은 AI 시스템이 우리의 주의를 끌어들이고
-    있다는 점을 강조하고 있으며, AI가 친구로서 혜택을 준다는 내용은 포함되어 있지 않습니다. 따라서 선택지 5번이 지문 내용과 일치하지 않습니다.
-  time_taken: 4.86
+  is_correct: true
+  reasoning: 지문에서는 주로 주의 경제와 관련된 내용, 즉 광고 산업이 우리의 주의를 사로잡고 이를 판매하는 방식에 대해 설명하고 있습니다.
+    그러나 'your privacy is being violated'라는 선택지는 지문에서 직접적으로 언급되지 않았습니다. 지문은 주의와 관련된
+    경제적 측면에 초점을 맞추고 있으며, 개인정보 침해에 대한 직접적인 언급은 없습니다. 따라서 3번 선택지는 지문 내용과 일치하지 않습니다.
+  time_taken: 3.92
   points: 2
-  earned_points: 0
+  earned_points: 2
   success: true
   error: null
 - question_id: q34
   question_number: 34
-  answer: 2
+  answer: 4
   correct_answer: 5
   is_correct: false
   reasoning: The passage discusses how AI-based recommendation systems and the attention
-    economy influence our engagement and exploration, suggesting a shift in how we
-    interact with content. Centralized, formal rules, in this context, could lead
-    people to reevaluate their roles and practices in society as they navigate these
-    new systems. This aligns with option 2, which suggests that such rules can lead
-    to a reevaluation of roles and practices.
-  time_taken: 3.95
+    economy influence our behavior by capturing our attention and directing it towards
+    specific content. This aligns with the idea that centralized, formal rules can
+    reinforce one's behavior within established contexts, as these systems create
+    structured environments that guide and limit personal exploration. Therefore,
+    option 4 is the most appropriate choice.
+  time_taken: 2.2
   points: 3
   earned_points: 0
   success: true
@@ -431,13 +426,12 @@ results:
   correct_answer: 4
   is_correct: false
   reasoning: The passage discusses the attention economy and how businesses capture
-    and sell our attention through AI-based recommendation systems. The options provided
-    are about the significance of cars in sports tourism, which is unrelated to the
-    main topic of the passage. Option 1 talks about the significance of cars in the
-    development of sport and tourism, which is not related to the attention economy
-    or AI systems. Therefore, it is the sentence that does not fit with the overall
-    flow of the passage.
-  time_taken: 3.02
+    our attention through AI-based recommendation systems. The options provided are
+    about the impact of cars on sports tourism, which is unrelated to the main topic
+    of the passage. Option 1 discusses the significance of cars in sports tourism,
+    which does not relate to the attention economy or AI systems. Therefore, it is
+    the sentence that does not fit with the overall flow of the passage.
+  time_taken: 2.79
   points: 3
   earned_points: 0
   success: true
@@ -447,10 +441,9 @@ results:
   answer: 3
   correct_answer: 5
   is_correct: false
-  reasoning: 주어진 글의 흐름을 고려할 때, (B)로 시작하는 것이 가장 자연스럽습니다. (B)는 주제를 소개하거나 배경을 설명하는 내용일
-    가능성이 높습니다. 이어서 (C)는 (B)에서 제시된 내용을 구체화하거나 예시를 들며 설명을 확장하는 역할을 할 수 있습니다. 마지막으로 (A)는
-    (B)와 (C)에서 논의된 내용을 결론짓거나 요약하는 역할을 할 수 있습니다. 따라서 (B) → (C) → (A)의 순서가 가장 적절합니다.
-  time_taken: 4.24
+  reasoning: 주어진 글의 흐름을 고려할 때, (B)로 시작하는 것이 가장 자연스럽습니다. (B)에서 제시된 내용이 (C)로 이어지며, 마지막으로
+    (A)에서 결론을 맺는 구조가 적절합니다. 따라서 (B) → (C) → (A)의 순서가 가장 논리적입니다.
+  time_taken: 4.29
   points: 3
   earned_points: 0
   success: true
@@ -460,12 +453,13 @@ results:
   answer: 3
   correct_answer: 4
   is_correct: false
-  reasoning: 지문은 두 부분으로 나뉘어 있으며, 첫 번째 부분은 새를 관찰하는 것에 대한 내용이고, 두 번째 부분은 객체의 라이프사이클에
+  reasoning: 지문은 두 부분으로 나뉘어 있으며, 첫 번째 부분은 새를 관찰하는 것에 대한 내용이고, 두 번째 부분은 객체의 수명 주기에
     대한 설명입니다. 주어진 문장은 'In reality, objects do not conform to a linear lifecycle model...'로
-    시작하며, 이는 두 번째 부분의 내용과 관련이 있습니다. 따라서 이 문장은 두 번째 부분의 시작에 위치해야 합니다. 선택지 3번은 (B) -
-    (C) - (A) 순서로, (B)와 (C) 사이에 주어진 문장이 들어가기에 적절합니다. (B)는 첫 번째 부분의 끝을 의미하고, (C)는 두
-    번째 부분의 시작을 의미하므로, 주어진 문장이 (B)와 (C) 사이에 위치하는 것이 자연스럽습니다.
-  time_taken: 5.38
+    시작하며, 이는 두 번째 부분의 시작에 적합합니다. 따라서 (B)로 시작하는 것이 자연스럽습니다. 이어지는 내용은 'a far more complicated
+    and adaptive path than a simplistic linear progression'으로, 이는 (C)에서 이어지는 내용과 잘
+    맞습니다. 마지막으로 (A)는 새를 관찰하는 내용으로, (B)와 (C) 뒤에 오는 것이 적절합니다. 따라서 올바른 순서는 (B) - (C)
+    - (A)입니다.
+  time_taken: 4.93
   points: 3
   earned_points: 0
   success: true
@@ -475,13 +469,11 @@ results:
   answer: 5
   correct_answer: 4
   is_correct: false
-  reasoning: 지문은 자연의 복잡성과 예측 불가능성을 강조하고 있습니다. 'In reality, objects do not conform
-    to a linear lifecycle model'이라는 문장은 사물이나 현상이 단순한 선형 모델에 맞지 않는다는 것을 의미하며, 이는 예측
-    가능성(predictability)이나 관리 가능성(manageability)보다는 접근 가능성(accessibility)과 관련이 있습니다.
-    또한, 'a far more complicated and adaptive path than a simplistic linear progression'이라는
-    부분은 기존의 단순한 모델을 의문시(question)하게 만든다는 의미로 해석될 수 있습니다. 따라서, 접근 가능성(accessibility)과
-    의문(question)이 가장 적절한 단어입니다.
-  time_taken: 5.11
+  reasoning: 지문은 자연의 복잡성과 예측 불가능성을 강조하고 있습니다. 특히, 'objects do not conform to a linear
+    lifecycle model'이라는 부분은 사물이나 현상이 단순한 선형 모델에 맞지 않는다는 것을 의미하며, 이는 예측 가능성(predictability)이나
+    접근성(accessibility)에 대한 의문을 제기할 수 있습니다. 따라서, 'accessibility'와 'question'이 빈칸에 들어가는
+    것이 적절합니다.
+  time_taken: 3.42
   points: 3
   earned_points: 0
   success: true
@@ -491,11 +483,11 @@ results:
   answer: 3
   correct_answer: 2
   is_correct: false
-  reasoning: '지문은 인간의 손이 진화의 결과로서 예상치 못한 결과를 가져왔다는 내용을 암시하고 있습니다. ''Imagine grabbing
-    a piece of paper between your thumb and index finger... it can be a bloody business.''라는
-    문장은 인간의 손이 진화의 결과로서 독특한 기능을 가지고 있음을 시사합니다. 따라서 ''Our Hands: An Unexpected Outcome
-    of Evolution''이라는 제목이 가장 적절합니다.'
-  time_taken: 2.86
+  reasoning: '지문은 인간의 손이 진화의 결과로서 예상치 못한 결과를 가져왔음을 암시하고 있습니다. ''Imagine grabbing a
+    piece of paper between your thumb and index finger... it can be a bloody business.''라는
+    문장은 인간의 손이 다른 동물과 구별되는 독특한 기능을 가지고 있으며, 이는 진화의 예상치 못한 결과일 수 있음을 시사합니다. 따라서 ''Our
+    Hands: An Unexpected Outcome of Evolution''이라는 제목이 가장 적절합니다.'
+  time_taken: 2.84
   points: 2
   earned_points: 0
   success: true
@@ -506,22 +498,22 @@ results:
   correct_answer: 5
   is_correct: false
   reasoning: 지문은 종이를 잡는 상황을 설명하고 있으며, 'bloody business'라는 표현은 종이를 잡다가 손을 베일 수 있는 상황을
-    비유적으로 표현한 것입니다. 따라서 문맥상 적절하지 않은 낱말은 종이를 잡는 상황과 관련이 없는 (c)일 가능성이 높습니다. 다른 선택지들은
-    문맥상 자연스럽게 연결될 수 있는 가능성이 높습니다.
-  time_taken: 2.64
+    암시합니다. 따라서 문맥상 'bloody'는 적절한 표현입니다. 선택지 (c)는 문맥상 적절하지 않은 낱말로 보입니다. 다른 선택지들은 문맥에
+    맞는 표현일 가능성이 높습니다.
+  time_taken: 2.86
   points: 3
   earned_points: 0
   success: true
   error: null
 - question_id: q43
   question_number: 43
-  answer: 3
+  answer: 5
   correct_answer: 2
   is_correct: false
-  reasoning: 문제에서 주어진 선택지들은 글 (A)~(D)의 올바른 순서를 찾는 것입니다. 각 글의 내용을 분석하여 논리적 흐름을 파악해야
-    합니다. 일반적으로 글의 순서는 도입, 전개, 결론의 구조를 따릅니다. (C)로 시작하는 선택지들은 도입부로 적절하며, (D)는 전개, (B)는
-    결론으로 이어지는 흐름이 자연스럽습니다. 따라서 (C) → (D) → (B)의 순서가 가장 적절합니다.
-  time_taken: 5.17
+  reasoning: 문제에서 주어진 선택지 중에서 (D) → (C) → (B) 순서가 가장 적절한 것으로 보입니다. 일반적으로 글의 순서를 배열할
+    때는 도입, 전개, 결론의 구조를 따릅니다. (D)는 도입부로서 주제를 소개하고, (C)는 주제에 대한 구체적인 설명이나 예시를 제공하며,
+    (B)는 결론이나 요약을 제시하는 구조로 배열될 가능성이 높습니다. 따라서 (D) → (C) → (B) 순서가 가장 적절합니다.
+  time_taken: 3.34
   points: 3
   earned_points: 0
   success: true
@@ -531,10 +523,11 @@ results:
   answer: 3
   correct_answer: 3
   is_correct: true
-  reasoning: 문제에서 밑줄 친 (a)~(e) 중에서 가리키는 대상이 나머지 넷과 다른 것을 찾으라고 했습니다. 이 문제는 지문이 제공되지
-    않았기 때문에 일반적인 해결 방법을 적용할 수 없습니다. 그러나 일반적으로 이러한 유형의 문제는 대명사나 특정한 지시어가 문맥에서 어떤 대상을
-    가리키는지를 분석하여 해결합니다. 선택지 중 (c)가 나머지와 다른 대상을 가리키고 있다고 가정하여 답을 선택했습니다.
-  time_taken: 3.85
+  reasoning: 문제에서 밑줄 친 (a)~(e) 중에서 가리키는 대상이 나머지 넷과 다른 것을 찾으라는 질문입니다. 이 경우, 각 선택지가
+    가리키는 대상을 분석하여야 합니다. 그러나 지문이 제공되지 않았기 때문에 구체적인 대상을 알 수는 없습니다. 일반적으로 이러한 유형의 문제는
+    문맥상 특정한 단어나 구가 다른 의미나 대상을 가리키는 경우를 찾는 것입니다. 따라서, 선택지 중 하나가 다른 선택지들과 문맥적으로 다른 대상을
+    가리키고 있을 가능성이 높습니다. 이 문제에서는 (c)가 다른 선택지들과 다른 대상을 가리키고 있다고 가정하여 답변합니다.
+  time_taken: 4.77
   points: 2
   earned_points: 2
   success: true
@@ -544,10 +537,9 @@ results:
   answer: 4
   correct_answer: 4
   is_correct: true
-  reasoning: 지문이 제공되지 않았지만, 선택지 4번은 Ethan이 혼자서 세탁소에서 의류를 찾아온 후에 갔다는 내용이 다른 선택지들과 맥락상
-    관련이 없어 보입니다. 다른 선택지들은 Grace와 Ethan, Sean의 관계와 하이킹에 관련된 내용인데, 4번은 세탁소와 관련된 내용으로,
-    지문과의 관련성이 떨어질 가능성이 높습니다. 따라서 4번이 적절하지 않은 내용일 가능성이 큽니다.
-  time_taken: 3.56
+  reasoning: 선택지 4번은 Ethan이 혼자서 세탁소에서 의류를 찾아온 후에 갔다고 언급하고 있지만, 지문에서 Ethan이 세탁소에 갔다는
+    내용이 없으므로 적절하지 않습니다. 나머지 선택지는 지문에서 언급된 내용을 바탕으로 적절한 것으로 보입니다.
+  time_taken: 2.87
   points: 2
   earned_points: 2
   success: true

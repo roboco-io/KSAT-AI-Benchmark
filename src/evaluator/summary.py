@@ -182,8 +182,8 @@ def print_subject_analysis(results: Dict[str, List[Dict]]):
         }.get(subject, subject.upper())
 
         print(f"\n📚 {subject_name}")
-        print(f"{'모델':<30} {'평균 정답률':<15} {'평균 점수율':<15}")
-        print("-" * 65)
+        print(f"{'순위':<6} {'모델':<30} {'평균 정답률':<15} {'평균 점수율':<15}")
+        print("-" * 70)
 
         # 모델별 평균 계산
         model_avgs = []
@@ -199,8 +199,9 @@ def print_subject_analysis(results: Dict[str, List[Dict]]):
         # 정확도 순 정렬
         model_avgs.sort(key=lambda x: x['accuracy'], reverse=True)
 
-        for entry in model_avgs:
-            print(f"{entry['model']:<30} {entry['accuracy']:>6.2f}%{'':<8} {entry['score_rate']:>6.2f}%")
+        for rank, entry in enumerate(model_avgs, 1):
+            medal = "🥇" if rank == 1 else "🥈" if rank == 2 else "🥉" if rank == 3 else f"{rank:2d}."
+            print(f"{medal:<6} {entry['model']:<30} {entry['accuracy']:>6.2f}%{'':<8} {entry['score_rate']:>6.2f}%")
 
     print("\n" + "="*100)
 

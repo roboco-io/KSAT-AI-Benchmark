@@ -1,0 +1,516 @@
+exam_id: 2025-english-sat
+exam_title: 2025학년도 수능 ENGLISH
+subject: english
+model_name: claude-3-haiku-20240307
+evaluated_at: '2025-10-06T23:39:36.769775'
+summary:
+  total_questions: 42
+  correct_answers: 5
+  accuracy: 11.9
+  total_score: 13
+  max_score: 100
+  score_rate: 13.0
+results:
+- question_id: q1
+  question_number: 1
+  answer: 0
+  correct_answer: 2
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q2
+  question_number: 2
+  answer: 0
+  correct_answer: 5
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q3
+  question_number: 3
+  answer: 0
+  correct_answer: 1
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q4
+  question_number: 4
+  answer: 0
+  correct_answer: 3
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q5
+  question_number: 5
+  answer: 0
+  correct_answer: 1
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q6
+  question_number: 6
+  answer: 0
+  correct_answer: 4
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q7
+  question_number: 7
+  answer: 0
+  correct_answer: 3
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q8
+  question_number: 8
+  answer: 0
+  correct_answer: 4
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q9
+  question_number: 9
+  answer: 0
+  correct_answer: 5
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q10
+  question_number: 10
+  answer: 0
+  correct_answer: 2
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q11
+  question_number: 11
+  answer: 0
+  correct_answer: 2
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 3
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q12
+  question_number: 12
+  answer: 0
+  correct_answer: 1
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q13
+  question_number: 13
+  answer: 0
+  correct_answer: 5
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q14
+  question_number: 14
+  answer: 0
+  correct_answer: 1
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 3
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q15
+  question_number: 15
+  answer: 0
+  correct_answer: 2
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 3
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q16
+  question_number: 16
+  answer: 2
+  correct_answer: 3
+  is_correct: false
+  reasoning: 여자가 하는 말의 주제는 '중요한 영양가 있는 식단을 가지는 것'이 가장 적절합니다. 여자는 식량 부족 문제를 해결하기 위해서는
+    영양가 있는 식단이 중요하다고 강조하고 있기 때문입니다. 따라서 선택지 2번 '중요한 영양가 있는 식단을 가지는 것'이 가장 적절한 주제라고
+    볼 수 있습니다.
+  time_taken: 1.69
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q17
+  question_number: 17
+  answer: 2
+  correct_answer: 4
+  is_correct: false
+  reasoning: 이 문제에서 언급된 음식은 seaweed, pumpkins, potatoes, mushrooms입니다. beans는 언급되지
+    않았으므로 정답은 2번입니다.
+  time_taken: 1.02
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q18
+  question_number: 18
+  answer: 5
+  correct_answer: 1
+  is_correct: false
+  reasoning: 이 글은 마라톤 경기 진행에 따른 도로 통제 사항을 안내하는 것이 목적입니다. 글에서는 마라톤 경기 코스와 도로 통제 시간
+    등을 자세히 설명하고 있어, 마라톤 경기로 인한 교통 상황을 알리려는 것이 주된 목적이라고 볼 수 있습니다.
+  time_taken: 1.71
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q19
+  question_number: 19
+  answer: 2
+  correct_answer: 2
+  is_correct: true
+  reasoning: 이 글에서 Peter는 처음에는 자신감 있게 자신의 실력을 과시하려 했지만, 결과적으로 실패하면서 실망감을 느끼게 되었습니다.
+    따라서 Peter의 심경 변화는 'confident → disappointed'가 가장 적절합니다.
+  time_taken: 1.63
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
+- question_id: q20
+  question_number: 20
+  answer: 3
+  correct_answer: 1
+  is_correct: false
+  reasoning: 이 글에서 필자는 학습 활동에 게임 요소를 적용하여 새로운 경험을 해야 한다고 주장하고 있습니다. 필자는 게임이 학습 효과를
+    높일 수 있는 도구라고 보며, 게임을 통해 학생들이 능동적이고 재미있게 학습할 수 있다고 강조하고 있습니다. 따라서 선택지 3번이 필자의 주장과
+    가장 부합합니다.
+  time_taken: 1.79
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q21
+  question_number: 21
+  answer: 3
+  correct_answer: 3
+  is_correct: true
+  reasoning: 이 문장은 실천적 지식과 이론적 지식 사이의 균형의 필요성을 강조하고 있습니다. 건축가가 실천적 기술만 추구하거나 이론적 지식만
+    추구하면 건축의 본질을 제대로 구현할 수 없다는 의미입니다. 따라서 'pursuing the ideals of architecture without
+    the practical skills'가 이 문장이 의미하는 바에 가장 적절합니다.
+  time_taken: 1.65
+  points: 3
+  earned_points: 3
+  success: true
+  error: null
+- question_id: q22
+  question_number: 22
+  answer: 2
+  correct_answer: 2
+  is_correct: true
+  reasoning: 이 지문은 로마 제국 시대에 건축가의 지위가 높아졌다는 내용을 다루고 있습니다. 특히 건축가에게는 실용적 지식과 이론적 지식이
+    모두 필요하다고 강조하고 있습니다. 따라서 이 지문의 요지는 건축가에게 요구되는 다양한 학문적 소양이 중요해졌다는 것으로, 이는 현대 직업
+    환경에서 감정 이해 능력의 중요성이 증가한다는 선택지 2가 가장 적절합니다.
+  time_taken: 1.92
+  points: 3
+  earned_points: 3
+  success: true
+  error: null
+- question_id: q23
+  question_number: 23
+  answer: 5
+  correct_answer: 1
+  is_correct: false
+  reasoning: 이 지문은 로마 제국 시대 건축가의 지위와 역할에 대해 설명하고 있습니다. 건축가가 실용적이고 이론적인 지식을 모두 갖추어야
+    한다는 내용을 통해, 건축가의 전문성과 권위가 중요하다는 점을 강조하고 있습니다. 따라서 이 지문의 주제는 건축가의 역할과 지위에 대한 것으로,
+    문제에 제시된 선택지 중에서는 '문제'에 해당하는 5번이 가장 적절합니다.
+  time_taken: 2.16
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q24
+  question_number: 24
+  answer: 3
+  correct_answer: 5
+  is_correct: false
+  reasoning: 이 지문은 로마 제국 시대에 건축가의 지위가 높아졌다는 내용을 다루고 있습니다. 건축가는 실용적이고 이론적인 지식을 모두 갖추어야
+    한다고 설명하고 있습니다. 따라서 이 지문의 제목으로 가장 적절한 것은 '자기 중심적인 글로벌 문화의 상징으로서의 셀피'가 아니라 '건축가의
+    지위 상승과 건축의 중요성'을 나타내는 '건축가의 상징적 중요성'이 될 것입니다.
+  time_taken: 2.05
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q25
+  question_number: 25
+  answer: 5
+  correct_answer: 4
+  is_correct: false
+  reasoning: 도표에 나와 있는 직책은 Director, Writer, Editor, Producer이며, Role은 도표에 포함되어 있지
+    않습니다. 따라서 선택지 5번 'Role'이 도표의 내용과 일치하지 않습니다.
+  time_taken: 1.13
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q26
+  question_number: 26
+  answer: 3
+  correct_answer: 4
+  is_correct: false
+  reasoning: 지문에 따르면 Dick Enberg는 미국 스포츠 캐스터로, 중국을 방문한 첫 미국인 스포츠 캐스터는 아니었습니다. 따라서
+    선택지 3은 지문의 내용과 일치하지 않습니다.
+  time_taken: 1.66
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q27
+  question_number: 27
+  answer: 2
+  correct_answer: 3
+  is_correct: false
+  reasoning: 안내문에 따르면 Adenville City Pass Card는 관광객을 위한 대중교통 카드이며, 시티 투어 버스 이용에도 사용할
+    수 있다고 되어 있습니다. 따라서 선택지 2번 '시티 투어 버스에는 사용할 수 없다'는 내용이 안내문의 내용과 일치하지 않습니다.
+  time_taken: 1.41
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q28
+  question_number: 28
+  answer: 2
+  correct_answer: 3
+  is_correct: false
+  reasoning: 안내문에 따르면 Luckwood Snow Festival은 연 1회 개최되는 행사이므로, '연중 동안 진행된다'는 선택지 2번은
+    안내문의 내용과 일치하지 않습니다.
+  time_taken: 1.23
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q29
+  question_number: 29
+  answer: 2
+  correct_answer: 2
+  is_correct: true
+  reasoning: 밑줄 친 부분 중 어법상 틀린 것은 ②번 'knows'입니다. 이 문장은 'as patients recovering from
+    a brain injury affecting the motor system know'가 올바른 표현입니다. 'knows'는 단수 주어 'patient'에
+    맞지 않으므로 어법상 틀립니다.
+  time_taken: 1.52
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
+- question_id: q30
+  question_number: 30
+  answer: 3
+  correct_answer: 4
+  is_correct: false
+  reasoning: 이 문맥에서 '의식적으로 고려하지 않고' 자동으로 이루어지는 행동에 대해 설명하고 있습니다. 따라서 '욕구'를 뜻하는 'desire'는
+    적절하지 않습니다. 대신 '자동으로' 이루어지는 과정을 설명하는 것이 더 적절합니다.
+  time_taken: 1.84
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q31
+  question_number: 31
+  answer: 5
+  correct_answer: 5
+  is_correct: true
+  reasoning: 이 지문은 우리가 일상적으로 수행하는 행동들이 의식적인 노력 없이 자동으로 이루어진다는 내용입니다. 따라서 마지막 문장에서
+    '당신이 지각하고, 느끼고, 생각하는 것'은 '개인적 관여'에 기반한다고 말하는 것이 가장 적절합니다. 다른 선택지들은 이 지문의 내용과 관련이
+    없습니다.
+  time_taken: 1.59
+  points: 3
+  earned_points: 3
+  success: true
+  error: null
+- question_id: q33
+  question_number: 33
+  answer: 4
+  correct_answer: 3
+  is_correct: false
+  reasoning: 윗글의 내용에 따르면, 많은 무료 소프트웨어 시스템이 제공되고 있지만, 그 이면에는 사용자의 주의력을 포착하여 광고를 판매하는
+    비즈니스 모델이 존재한다고 설명하고 있습니다. 따라서 '공공이 당신을 후원하고 있다'는 내용은 지문의 내용과 일치하지 않습니다.
+  time_taken: 1.69
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q34
+  question_number: 34
+  answer: 4
+  correct_answer: 5
+  is_correct: false
+  reasoning: 이 지문에 따르면, 중앙화되고 공식적인 규칙은 사람들의 행동을 법적이고 확립된 맥락 내에서 강화시킨다고 말하고 있습니다. 지문에서는
+    AI 기반 추천 시스템이 개인의 자유로운 탐색을 대체하고 있다고 언급하며, 이는 중앙화된 규칙이 사람들의 행동을 법적이고 확립된 맥락 내에서
+    강화시킨다는 것을 시사합니다. 따라서 정답은 4번입니다.
+  time_taken: 2.07
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q35
+  question_number: 35
+  answer: 1
+  correct_answer: 4
+  is_correct: false
+  reasoning: 이 지문은 '주의 경제'에 대한 내용을 다루고 있습니다. 지문의 전체적인 흐름과 관련이 없는 문장은 1번 선택지입니다. 1번
+    문장은 자동차와 스포츠 관광에 대한 내용으로, 지문의 주제와 관련이 없습니다.
+  time_taken: 1.55
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q36
+  question_number: 36
+  answer: 3
+  correct_answer: 5
+  is_correct: false
+  reasoning: 주어진 글의 내용을 보면 (B)에서 새로운 주제가 등장하고, 이어서 (C)에서 그 주제에 대한 설명이 이어지는 것이 가장 자연스러운
+    흐름입니다. 그 다음에 (A)에서 다시 새로운 주제가 등장하는 것이 적절한 순서라고 판단됩니다.
+  time_taken: 1.52
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q38
+  question_number: 38
+  answer: 3
+  correct_answer: 4
+  is_correct: false
+  reasoning: 지문에서 '현실에서 사물은 선형적 생애주기 모델에 부합하지 않는다'고 언급하고 있습니다. 이는 주어진 문장 '실제로, 사물은
+    단순한 선형적 진행보다는 훨씬 더 복잡하고 적응적인 경로를 따른다'와 내용이 일치합니다. 따라서 주어진 문장이 가장 적절하게 들어갈 수 있는
+    위치는 (B) - (C) - (A)입니다.
+  time_taken: 1.75
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q39
+  question_number: 39
+  answer: 3
+  correct_answer: 4
+  is_correct: false
+  reasoning: 이 지문은 현실 세계의 복잡성과 적응성을 강조하며, 단순한 선형적 진행 모델로는 이를 설명할 수 없다고 말하고 있습니다. 따라서
+    이 지문의 내용을 요약하면 '현실 세계의 (A)는 단순한 모델로 설명하기 어려우며, 이는 (B)를 증가시킨다'가 가장 적절할 것입니다. 이에
+    해당하는 선택지는 3번 '(A) manageability (B) intensify'입니다.
+  time_taken: 1.9
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q41
+  question_number: 41
+  answer: 3
+  correct_answer: 2
+  is_correct: false
+  reasoning: '이 지문은 사람의 손이 종이를 집는 것에 대해 언급하고 있습니다. 이는 인간 진화의 결과로 볼 수 있으므로, 제목으로 ''우리의
+    손: 진화의 예상치 못한 결과''가 가장 적절합니다. 다른 선택지들은 지문의 내용과 잘 부합하지 않습니다.'
+  time_taken: 1.77
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q42
+  question_number: 42
+  answer: 3
+  correct_answer: 5
+  is_correct: false
+  reasoning: 문맥상 '(c) bloody'가 가장 적절하지 않습니다. 지문에서 'bloody business'라는 표현이 사용되었는데,
+    이는 '피가 나는 일'이라는 의미로 사용되었습니다. 따라서 문맥상 '(c) bloody'가 가장 부적절한 선택지라고 볼 수 있습니다.
+  time_taken: 1.53
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q43
+  question_number: 43
+  answer: 0
+  correct_answer: 2
+  is_correct: false
+  reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"이 문제는 주어진 글 (A)~(D)의 내용상 순서를\
+    \ 가장 적절하게 배열한 것을 묻고 있습니다. \n\n(C)에서는 '이 기술은 이미 상용화되어 있다'고 언급하고 있습니다. 이어서 (D)에서는\
+    \ '이 기술이 앞으로 더 발전할 것'이라고 언급하고 있습니다. 마지막으로 (B)에서는 '이 기술이 어떤 분야에 활용될 수 있는지'를 설명하고\
+    \ 있습니다.\n\n따라서 (C) → (D) → (B)의 순서가 가장 적절합니다.\"\n}"
+  time_taken: 1.99
+  points: 3
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q44
+  question_number: 44
+  answer: 2
+  correct_answer: 3
+  is_correct: false
+  reasoning: 이 문제에서 밑줄 친 (a)~(e)는 각각 다른 대상을 가리키고 있습니다. 그중에서 (b)가 나머지 넷과 다른 대상을 가리키고
+    있습니다. (a), (c), (d), (e)는 모두 문장 내에서 명사를 가리키고 있지만, (b)는 동사를 가리키고 있습니다. 따라서 (b)가
+    가리키는 대상이 나머지 넷과 다릅니다.
+  time_taken: 1.95
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q45
+  question_number: 45
+  answer: 1
+  correct_answer: 4
+  is_correct: false
+  reasoning: 윗글에서 Grace가 Ethan과 Sean의 관계를 부러워한다는 내용은 나오지 않습니다. 오히려 Grace는 Ethan에게
+    Sean과 함께 하이킹을 가자고 권유하는 모습이 나옵니다. 따라서 선택지 1번은 적절하지 않습니다.
+  time_taken: 1.46
+  points: 2
+  earned_points: 0
+  success: true
+  error: null

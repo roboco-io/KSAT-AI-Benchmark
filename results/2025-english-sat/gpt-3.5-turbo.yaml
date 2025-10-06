@@ -2,226 +2,215 @@ exam_id: 2025-english-sat
 exam_title: 2025학년도 수능 ENGLISH
 subject: english
 model_name: gpt-3.5-turbo
-evaluated_at: '2025-10-06T18:51:28.529538'
+evaluated_at: '2025-10-06T23:27:27.905881'
 summary:
   total_questions: 42
-  correct_answers: 7
-  accuracy: 16.67
-  total_score: 17
+  correct_answers: 6
+  accuracy: 14.29
+  total_score: 15
   max_score: 100
-  score_rate: 17.0
+  score_rate: 15.0
 results:
 - question_id: q1
   question_number: 1
-  answer: 3
+  answer: 0
   correct_answer: 2
-  is_correct: false
-  reasoning: 여자가 '동교 시간 변경을 안내하려고' 말한 것으로 보아, 가장 적절한 목적은 동교 시간 변경을 안내하는 것이기 때문에 3번이
-    정답입니다.
-  time_taken: 2.05
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
   points: 2
   earned_points: 0
-  success: true
-  error: null
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
 - question_id: q2
   question_number: 2
-  answer: 3
+  answer: 0
   correct_answer: 5
-  is_correct: false
-  reasoning: 드라마에서는 반복된 연습을 거친 동작들이 필요하므로, 남자의 의견으로는 3번이 가장 적절합니다. 연기는 반복된 연습을 통해
-    완성도를 높일 수 있기 때문에 이 의견이 가장 합리적이라고 볼 수 있습니다.
-  time_taken: 10.42
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
   points: 2
   earned_points: 0
-  success: true
-  error: null
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
 - question_id: q3
   question_number: 3
-  answer: 5
+  answer: 0
   correct_answer: 1
-  is_correct: false
-  reasoning: 여자가 하는 말에서 '예술 작품은 보는 사람에 따라 다양한 해석이 가능하다'는 내용이 가장 부합합니다. 다른 선택지들은 예술가나
-    예술 작품에 대한 설명이나 특징을 다루는 것이지만, 여자의 발언은 예술 작품의 해석에 대한 내용을 강조하고 있습니다.
-  time_taken: 12.63
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
   points: 2
   earned_points: 0
-  success: true
-  error: null
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
 - question_id: q4
   question_number: 4
-  answer: 2
+  answer: 0
   correct_answer: 3
-  is_correct: false
-  reasoning: 대화에서는 후원 기관에 대한 언급이 있지만, 프로그램에 대한 언급은 없습니다. 따라서 프로그램이 대화의 내용과 일치하지 않습니다.
-  time_taken: 10.98
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
   points: 2
   earned_points: 0
-  success: true
-  error: null
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
 - question_id: q5
   question_number: 5
-  answer: 2
+  answer: 0
   correct_answer: 1
-  is_correct: false
-  reasoning: 대화에서 남자가 '이메일 확인해야지'라고 말했기 때문에, 이메일 확인하기가 가장 적절한 일이다.
-  time_taken: 0.84
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
   points: 2
   earned_points: 0
-  success: true
-  error: null
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
 - question_id: q6
   question_number: 6
-  answer: 3
+  answer: 0
   correct_answer: 4
-  is_correct: false
-  reasoning: 여자가 지불할 금액은 180달러입니다. 주어진 선택지 중에서 가장 적은 금액인 180달러를 선택해야 합니다.
-  time_taken: 10.38
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
   points: 2
   earned_points: 0
-  success: true
-  error: null
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
 - question_id: q7
   question_number: 7
-  answer: 2
+  answer: 0
   correct_answer: 3
-  is_correct: false
-  reasoning: 대화에서 남자가 교과 방송 준비를 해야 한다고 언급했기 때문에 Streamline Broadcasting Workshop에
-    갈 수 없는 이유는 2번이다.
-  time_taken: 1.8
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
   points: 2
   earned_points: 0
-  success: true
-  error: null
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
 - question_id: q8
   question_number: 8
-  answer: 4
+  answer: 0
   correct_answer: 4
-  is_correct: true
-  reasoning: 문제에서 언급되지 않는 것을 고르라는데, 대화에서 'Outstanding Octopuses' 행사의 입장료에 대한 언급이 없었습니다.
-    따라서 입장료가 선택지 4로 올바른 답입니다.
-  time_taken: 1.94
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
   points: 2
-  earned_points: 2
-  success: true
-  error: null
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
 - question_id: q9
   question_number: 9
-  answer: 4
+  answer: 0
   correct_answer: 5
-  is_correct: false
-  reasoning: 2024 Grand Butterfly Circus는 온라인 쿠폰을 사용해서 다운로드할 수 있는 것이 아니라 현장에서 티켓을
-    구매해야 하므로, 일치하지 않는 설명은 4번이다.
-  time_taken: 0.9
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
   points: 2
   earned_points: 0
-  success: true
-  error: null
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
 - question_id: q10
   question_number: 10
-  answer: 2
+  answer: 0
   correct_answer: 2
-  is_correct: true
-  reasoning: 여자가 대화에서 'I want to grow some herbs in my kitchen'라고 말했기 때문에 식물 씨앗 키트
-    중 허브를 재배할 수 있는 B를 선택해아 합니다.
-  time_taken: 1.74
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
   points: 2
-  earned_points: 2
-  success: true
-  error: null
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
 - question_id: q11
   question_number: 11
-  answer: 1
+  answer: 0
   correct_answer: 2
-  is_correct: false
-  reasoning: 여자가 'Let's ask him to come to the party.'라고 말했기 때문에, 남자의 적절한 응답은 'Great
-    idea!'가 됩니다. 이는 여자의 제안에 긍정적으로 반응하는 것이기 때문입니다.
-  time_taken: 0.99
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
   points: 3
   earned_points: 0
-  success: true
-  error: null
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
 - question_id: q12
   question_number: 12
-  answer: 3
+  answer: 0
   correct_answer: 1
-  is_correct: false
-  reasoning: 여자가 'That's the best class we've ever taken.'이라고 말했기 때문에, 이에 대한 적절한 응답은
-    'That's the best class we've ever taken.'이라는 긍정적인 평가를 받아들이는 것인 3번이 가장 적절하다.
-  time_taken: 2.61
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
   points: 2
   earned_points: 0
-  success: true
-  error: null
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
 - question_id: q13
   question_number: 13
-  answer: 3
+  answer: 0
   correct_answer: 5
-  is_correct: false
-  reasoning: 대화 상황에서 남자가 여자에게 자신의 새 자전거를 빌려준 것으로 보여집니다. 따라서 여자의 적절한 응답은 'Awesome!
-    Thank you for lending me your new bike.'가 됩니다.
-  time_taken: 1.28
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
   points: 2
   earned_points: 0
-  success: true
-  error: null
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
 - question_id: q14
   question_number: 14
-  answer: 3
+  answer: 0
   correct_answer: 1
-  is_correct: false
-  reasoning: 여자가 'Great. Text me the dates of the competition.'이라고 말했기 때문에, 적절한 응답은
-    'Great. Text me the dates of the competition.'이다. 이는 여자의 요청에 맞게 대답하는 것이다.
-  time_taken: 1.75
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
   points: 3
   earned_points: 0
-  success: true
-  error: null
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
 - question_id: q15
   question_number: 15
-  answer: 3
+  answer: 0
   correct_answer: 2
-  is_correct: false
-  reasoning: Sophia가 Jack에게 자리를 바꿀 수 있도록 제안하는 것이 가장 적절합니다. 이는 두 사람이 함께 앉을 수 있게 하고,
-    즐거운 경험을 함께 할 수 있도록 도와줄 것입니다.
-  time_taken: 2.12
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
   points: 3
   earned_points: 0
-  success: true
-  error: null
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
 - question_id: q16
   question_number: 16
   answer: 2
   correct_answer: 3
   is_correct: false
-  reasoning: 여자가 하는 말의 주제로 '건강한 식습관의 중요성'이 가장 적절합니다. 다른 선택지들은 음식 저장 조건, 미래 식량 부족 대비
-    식품, 특이 재료로 만든 인기 요리, 미래 기술 등과 관련되어 있지만, 여자가 말하는 내용과 가장 일치하는 것은 올바른 영양섭취의 중요성입니다.
-  time_taken: 2.85
+  reasoning: 여자가 하는 말의 주제로 '영양이 풍부한 식단의 중요성'이 가장 적절합니다. 다른 선택지들은 음식 저장 조건, 미래 식량 부족
+    대비 식품, 특이 재료로 만든 인기 요리, 미래 기술 등과 관련되어 있지만, 여자가 말하는 내용과 가장 일치하는 것은 영양이 중요한 식단에
+    대한 이야기일 것입니다.
+  time_taken: 2.16
   points: 2
   earned_points: 0
   success: true
   error: null
 - question_id: q17
   question_number: 17
-  answer: 3
+  answer: 2
   correct_answer: 4
   is_correct: false
-  reasoning: 문제에서 '언급된 음식이 아닌 것'을 찾으라 했는데, seaweed, beans, potatoes, mushrooms은 모두
-    언급되었지만 pumpkins은 언급되지 않았습니다.
-  time_taken: 1.03
+  reasoning: 해조류(seaweed), 호박(pumpkins), 감자(potatoes), 버섯(mushrooms)은 모두 음식으로 소비되는
+    반면 콩(beans)은 채소로 분류되기 때문에 언급된 음식이 아닙니다.
+  time_taken: 2.97
   points: 2
   earned_points: 0
   success: true
   error: null
 - question_id: q18
   question_number: 18
-  answer: 2
+  answer: 1
   correct_answer: 1
-  is_correct: false
-  reasoning: 글의 내용에서는 '마라톤 경기 참가자들에게 주의를 당부하고 안전에 유의하도록 독려하는 내용'이 주를 이루고 있습니다. 따라서
-    가장 적절한 목적은 2번 '마라톤 경기 시작에 앞서 주의할 점을 독려하려고'입니다.
-  time_taken: 1.26
+  is_correct: true
+  reasoning: 글의 내용에서는 마라톤 경기가 취소되었음을 알리고 있습니다. 따라서 가장 적절한 목적은 '마라톤 경기 취소 사실을 공지하려고'하는
+    것입니다.
+  time_taken: 2.27
   points: 2
-  earned_points: 0
+  earned_points: 2
   success: true
   error: null
 - question_id: q19
@@ -229,9 +218,8 @@ results:
   answer: 2
   correct_answer: 2
   is_correct: true
-  reasoning: 글에서 Peter는 처음에 자신감 있게 시작했지만, 후에 실망을 느끼게 되었습니다. 따라서 'confident → disappointed'가
-    가장 적절한 변화입니다.
-  time_taken: 1.21
+  reasoning: Peter가 confident(자신감 있는)에서 disappointed(실망한)으로 변화했기 때문에 2번이 가장 적절합니다.
+  time_taken: 1.02
   points: 2
   earned_points: 2
   success: true
@@ -241,9 +229,9 @@ results:
   answer: 3
   correct_answer: 1
   is_correct: false
-  reasoning: 지문에서 필자는 학습 활동에 게임 요소를 적용해 새로운 경험을 하는 것이 중요하다고 주장하고 있습니다. 이를 통해 학습 효과를
-    높일 수 있을 뿐만 아니라 학생들에게 즐거운 학습 경험을 제공할 수 있을 것입니다.
-  time_taken: 1.53
+  reasoning: 지문에서 필자는 학습 활동에 게임 요소를 적용해 새로운 경험을 하는 것이 중요하다고 주장하고 있습니다. 이는 게임을 통해 학습
+    효과를 높일 수 있고 학생들에게 새로운 학습 경험을 제공할 수 있다는 의미입니다. 따라서 3번이 가장 적절한 선택지입니다.
+  time_taken: 1.39
   points: 2
   earned_points: 0
   success: true
@@ -253,10 +241,10 @@ results:
   answer: 3
   correct_answer: 3
   is_correct: true
-  reasoning: 해당 구절에서 'hunting the shadow, not the substance'는 실용적인 기술 없이 이상적인 아키텍처를
-    추구하는 것을 의미합니다. 즉, 실제적인 기술 없이 이상적인 이론만을 추구하는 것을 비판하고 있습니다. 따라서 3번인 'pursuing the
-    ideals of architecture without the practical skills'가 가장 적절한 해석입니다.
-  time_taken: 2.45
+  reasoning: 해당 구절에서 'hunting the shadow, not the substance'는 실용적인 기술 없이 이상적인 아키텍처
+    이론만 추구하는 것을 의미합니다. 즉, 실제적인 기술 없이 이상적인 것만을 추구하는 것을 뜻하므로 3번인 'pursuing the ideals
+    of architecture without the practical skills'가 가장 적절한 답이 됩니다.
+  time_taken: 1.58
   points: 3
   earned_points: 3
   success: true
@@ -266,22 +254,22 @@ results:
   answer: 3
   correct_answer: 2
   is_correct: false
-  reasoning: 주어진 지문에서는 Vitruvius가 건축가가 스승과 의사와 함께 위치되어야 한다고 언급하며, 건축가가 이론적 지식과 실용적
-    지식을 모두 갖춰야 한다고 강조합니다. 이는 타인의 감정 공감 능력이 자신의 감정 조절 능력을 향상시키는 것과 유사한 개념으로 연결될 수 있습니다.
-  time_taken: 2.61
+  reasoning: 주어진 지문에서는 Vitruvius가 건축가가 되기 위해 필요한 학문적 지식을 강조하고 있습니다. 그에 따르면, 타인의 감정
+    공감 능력을 향상시키는 것이 중요하다고 언급하고 있으며, 이는 자신의 감정 조절 능력을 향상시키는 데 도움이 될 것입니다.
+  time_taken: 2.98
   points: 3
   earned_points: 0
   success: true
   error: null
 - question_id: q23
   question_number: 23
-  answer: 3
+  answer: 4
   correct_answer: 1
   is_correct: false
-  reasoning: 주어진 지문은 고대 로마 시대 건축가의 역할과 중요성에 대해 다루고 있습니다. 따라서, 'influence of industrialization
-    on the machine-human relationship'이 가장 적절한 주제입니다. 지문에서는 건축가가 실용적이고 이론적인 지식을 모두
-    갖춰야 한다는 내용이 강조되고 있으며, 이는 산업화 시대의 기계와 인간 간의 관계에 대한 영향을 보여주고 있습니다.
-  time_taken: 1.7
+  reasoning: 주어진 지문은 고대 로마 시대의 건축가에 대한 이야기이며, 건축가가 가지고 있어야 할 지식과 역할에 대해 다루고 있습니다.
+    따라서, 'Industrial Age'와 관련된 내용이 아니라 'Industrial Age'에서 시간 가치를 효율적으로 증가시키는 방법에 대한
+    내용이 가장 적절합니다.
+  time_taken: 3.27
   points: 3
   earned_points: 0
   success: true
@@ -291,10 +279,9 @@ results:
   answer: 5
   correct_answer: 5
   is_correct: true
-  reasoning: 주어진 지문은 건축에 대한 역사적인 배경과 중요성에 관한 내용이며, 자아를 나타내는 새로운 형태인 '셀피(Selfie)'와는
-    직접적인 연관이 없습니다. 따라서, 'Selfies, the Latest Innovation in Representing Ourselves'가
-    가장 적절한 제목입니다.
-  time_taken: 2.59
+  reasoning: 주어진 지문은 건축가의 위치와 역할에 대해 다루고 있습니다. 따라서 'Selfies'와 관련된 내용이 아니라 '건축가'와 관련된
+    내용이므로, 'Selfies, the Latest Innovation in Representing Ourselves'가 가장 적절한 제목입니다.
+  time_taken: 2.38
   points: 3
   earned_points: 3
   success: true
@@ -304,9 +291,10 @@ results:
   answer: 5
   correct_answer: 4
   is_correct: false
-  reasoning: 도표에서는 Director, Writer, Editor, Producer와 같은 영화 제작에 관련된 역할들이 나열되어 있습니다.
-    하지만 'Role'은 영화 제작에 직접적으로 관련된 역할이 아니므로, 도표의 내용과 일치하지 않습니다.
-  time_taken: 1.17
+  reasoning: 도표에 나열된 직업들 중에서 'Role'은 실제 영화나 드라마 제작과 관련된 직종이 아닙니다. Director(감독), Writer(작가),
+    Editor(편집자), Producer(프로듀서)는 영화나 드라마 제작에 관련된 직종들이지만 'Role'은 특정한 역할을 나타내는 용어일 뿐이며,
+    직업을 나타내는 용어가 아닙니다.
+  time_taken: 8.64
   points: 2
   earned_points: 0
   success: true
@@ -318,7 +306,7 @@ results:
   is_correct: true
   reasoning: Dick Enberg은 마지막 방송 후 1년 뒤인 2017년에 사망하였습니다. 따라서, '마지막 방송 후 3년 뒤에 사망하였다'는
     사실과 일치하지 않습니다.
-  time_taken: 1.15
+  time_taken: 2.08
   points: 2
   earned_points: 2
   success: true
@@ -328,9 +316,9 @@ results:
   answer: 2
   correct_answer: 3
   is_correct: false
-  reasoning: 시티 투어 버스에 사용할 수 없다는 내용은 안내문과 일치하지 않습니다. 다른 선택지들은 안내문과 일치하는 내용이지만, 시티
-    투어 버스에 대한 언급은 없으므로 이 부분이 다른 것으로 판단됩니다.
-  time_taken: 1.24
+  reasoning: 시티 투어 버스에 사용할 수 없다는 내용은 안내문에 없습니다. 따라서, Adenville City Pass Card에 관한
+    다음 안내문의 내용과 일치하지 않는 것은 선택지 2번입니다.
+  time_taken: 1.11
   points: 2
   earned_points: 0
   success: true
@@ -342,7 +330,7 @@ results:
   is_correct: false
   reasoning: Luckwood Snow Festival은 2년에 한 번 열리는 행사이지만, 연중 동안 진행되는 것은 아닙니다. 따라서 연중
     동안 진행된다는 설명이 일치하지 않습니다.
-  time_taken: 1.78
+  time_taken: 1.17
   points: 2
   earned_points: 0
   success: true
@@ -352,8 +340,9 @@ results:
   answer: 3
   correct_answer: 2
   is_correct: false
-  reasoning: 주어와 동사 사이에 부정사를 삽입할 때는 to를 사용해야 하므로 freeing 대신에 to free가 되어야 합니다.
-  time_taken: 1.26
+  reasoning: 밑줄 친 부분 중 'freeing'은 동사 'free'의 현재분사형 'freeing'이 아닌 과거분사형 'freed'로 바꿔야
+    합니다.
+  time_taken: 1.01
   points: 2
   earned_points: 0
   success: true
@@ -363,9 +352,10 @@ results:
   answer: 5
   correct_answer: 4
   is_correct: false
-  reasoning: 앞 문맥을 고려할 때, 'altruistic'은 문맥상 적절하지 않습니다. 주어진 문단에서는 우리의 뇌가 자동으로 하는 행동들에
-    대해 이야기하고 있는데, 'altruistic'은 이와 관련이 없는 단어이기 때문입니다.
-  time_taken: 1.21
+  reasoning: 앞 문맥을 고려할 때, 'altruistic(이타적인)'이라는 낱말은 문맥상 적절하지 않습니다. 주어진 문단에서는 우리의 뇌가
+    자동으로 하는 행동들에 대해 이야기하고 있는데, '이타적인'이라는 단어는 이와 맥락상 어울리지 않습니다. 따라서 'altruistic'이 적절하지
+    않은 낱말입니다.
+  time_taken: 1.42
   points: 3
   earned_points: 0
   success: true
@@ -375,23 +365,22 @@ results:
   answer: 4
   correct_answer: 5
   is_correct: false
-  reasoning: 지문에서는 우리가 의식하지 않고도 자동으로 수행되는 행동들을 설명하고 있습니다. 이는 뇌의 자동 운동 시스템에 의해 지원되며,
-    이러한 자동적인 프로세스를 가능하게 하는 것은 뇌의 오래된 부분입니다. 따라서 'alternative perspective(대안적 시각)'이라는
-    표현이 가장 적절합니다.
-  time_taken: 1.36
+  reasoning: 지문에서 언급된 'older parts of our brain'이 'automatic processes'를 지원한다는 내용을
+    고려할 때, 'alternative perspective'가 가장 적절한 표현이라고 볼 수 있습니다. 이는 우리가 인식, 감정, 또는 생각하는
+    것에 대한 다양한 관점을 제공하고, 자동적인 프로세스를 지원하는 뇌의 구조를 설명하는 데 부합합니다.
+  time_taken: 2.77
   points: 3
   earned_points: 0
   success: true
   error: null
 - question_id: q33
   question_number: 33
-  answer: 4
+  answer: 5
   correct_answer: 3
   is_correct: false
-  reasoning: 지문에서는 사용자의 주의를 끌어 모은 후 이를 다른 사람에게 판매하는 attention economy에 대해 이야기하고 있습니다.
-    사용자의 주의가 다른 사람에게 판매되는 것이 강조되고 있으며, 무료로 제공되는 소프트웨어 시스템이 실제로는 누구를 위해 판매되는지 알 수 없다는
-    점이 강조되고 있습니다. 따라서 'the public may be sponsoring you'는 지문과 일치하지 않는 내용입니다.
-  time_taken: 2.95
+  reasoning: 지문에서는 AI가 주어진 상황에서 우리의 주의를 끌기 위해 사용되는 도구로 언급되었지만, 친구로서 혜택을 받는다는 내용은 언급되지
+    않았습니다. 따라서 5번이 윗글의 내용과 일치하지 않습니다.
+  time_taken: 1.23
   points: 2
   earned_points: 0
   success: true
@@ -402,9 +391,8 @@ results:
   correct_answer: 5
   is_correct: false
   reasoning: 중앙집중화된 형식적인 규칙은 법적이고 확립된 맥락 내에서 행동을 강화시키는 역할을 합니다. 이는 지문에서 언급된 AI 기반
-    추천 시스템이 우리의 주의를 끌기 위해 사용되는 것과 관련이 있습니다. 중앙집중화된 규칙은 우리의 행동을 특정 방향으로 유도하고 제한함으로써
-    우리의 주의를 특정한 방식으로 조절할 수 있습니다.
-  time_taken: 3.02
+    추천 시스템이 우리의 주의를 끌기 위해 사용되는 것과 관련이 있습니다.
+  time_taken: 1.48
   points: 3
   earned_points: 0
   success: true
@@ -414,9 +402,9 @@ results:
   answer: 4
   correct_answer: 4
   is_correct: true
-  reasoning: 4번 문장은 주제가 관련 없는 'accommodation associated with tourism growth'에 대해 다루고
-    있습니다. 나머지 선택지들은 자동차와 관련된 내용을 다루고 있으므로 전체 흐름과 관련이 있습니다.
-  time_taken: 1.17
+  reasoning: 4번 문장은 주제가 스포츠 관광과 관련이 없으며, 자동차의 중요성과 관련이 없는 내용이기 때문에 전체 흐름과 관계가 없습니다.
+    나머지 선택지들은 자동차와 관련된 내용이므로 텍스트와 관련이 있습니다.
+  time_taken: 2.36
   points: 3
   earned_points: 3
   success: true
@@ -426,9 +414,9 @@ results:
   answer: 3
   correct_answer: 5
   is_correct: false
-  reasoning: 주어진 글의 순서를 고려하면, 다음에 올 글은 (B)가 먼저 나와야 하고, 그 다음에 (C)가 나와야 합니다. 따라서 가장
-    적절한 순서는 (B) → (C)이므로 3번이 정답입니다.
-  time_taken: 2.21
+  reasoning: 주어진 글의 순서를 고려해보면, (A) 다음에는 (C)가 오는 것이 자연스럽고, 그 다음에 (B)가 오는 것이 가장 적절합니다.
+    따라서, (B) → (C) → (A)의 순서가 가장 적절하다고 판단됩니다.
+  time_taken: 1.53
   points: 3
   earned_points: 0
   success: true
@@ -438,11 +426,11 @@ results:
   answer: 3
   correct_answer: 4
   is_correct: false
-  reasoning: 주어진 문장에서 'objects do not conform to a linear lifecycle model'이후에 'a far
-    more complicated and adaptive path than a simplistic linear progression'이라는 내용이
-    이어지므로, 이 두 문장 사이에 들어갈 문장은 'Watch the birds in your backyard... to see every other
-    grosbeak.'이어야 합니다. 따라서, 가장 적절한 순서는 (B) - (C) - (A)입니다.
-  time_taken: 1.45
+  reasoning: 주어진 문장에서 'objects do not conform to a linear lifecycle model'와 'a far
+    more complicated and adaptive path than a simplistic linear progression'이라는 내용을
+    고려할 때, 먼저 선형적인 모델에 부합하지 않는다는 것을 강조한 후에 더 복잡하고 적응적인 경로를 설명하는 것이 논리적으로 가장 적절하다.
+    따라서 (B) - (C) - (A)의 순서가 가장 적절하다고 판단된다.
+  time_taken: 3.74
   points: 3
   earned_points: 0
   success: true
@@ -452,11 +440,10 @@ results:
   answer: 5
   correct_answer: 4
   is_correct: false
-  reasoning: 주어진 문장에서 'objects do not conform to a linear lifecycle model'와 'a far
+  reasoning: 주어진 지문에서 'objects do not conform to a linear lifecycle model'와 'a far
     more complicated and adaptive path than a simplistic linear progression'라는 내용을
-    종합하면, 물체들은 단순한 선형 진행보다 더 복잡하고 적응적인 경로를 따른다는 것을 의미합니다. 이에 따라 'accessibility'는 'question'과
-    가장 적절한 대립 관계를 가지고 있습니다. 따라서, 정답은 5번입니다.
-  time_taken: 3.01
+    종합하면, 예측 가능성(predictability)이 의문(questions)을 제기한다는 의미로 해석할 수 있습니다.
+  time_taken: 1.92
   points: 3
   earned_points: 0
   success: true
@@ -466,10 +453,10 @@ results:
   answer: 3
   correct_answer: 2
   is_correct: false
-  reasoning: '주어진 지문에서는 손가락으로 종이를 움켜쥐는 상황이 묘사되어 있습니다. 이는 진화의 예상치 못한 결과로써 손의 역할에 대한
-    내용을 시사하고 있습니다. 따라서 ''Our Hands: An Unexpected Outcome of Evolution''이 제목으로 가장
-    적절합니다.'
-  time_taken: 1.35
+  reasoning: '주어진 지문에서 ''grabbing a piece of paper between your thumb and index finger''
+    부분을 보면, 손의 진화와 관련된 내용임을 알 수 있습니다. 따라서, ''Our Hands: An Unexpected Outcome of Evolution''이
+    가장 적절한 제목입니다.'
+  time_taken: 1.25
   points: 2
   earned_points: 0
   success: true
@@ -479,9 +466,9 @@ results:
   answer: 3
   correct_answer: 5
   is_correct: false
-  reasoning: 주어진 문장에서 'it can be a bloody business'라는 표현을 고려할 때, 'bloody'는 '피를 흘리는'이라는
-    의미로 여기서는 부적절한 사용이므로 (c)가 쓰임이 적절하지 않습니다.
-  time_taken: 1.05
+  reasoning: (c)가 적절하지 않은 선택지입니다. 'a bloody business'는 '피가 나는 일'이라는 의미로, 'bloody'가
+    혈액을 의미하는 것과 어울리지 않는 'business'와 함께 사용되어 문맥상 이상합니다.
+  time_taken: 2.35
   points: 3
   earned_points: 0
   success: true
@@ -491,9 +478,9 @@ results:
   answer: 3
   correct_answer: 2
   is_correct: false
-  reasoning: 주어진 글의 내용을 순서대로 분석해보면, (C) 다음에 (D)가 오고, 마지막으로 (B)가 올 것입니다. 따라서, (C) →
-    (D) → (B)의 순서가 가장 적절합니다.
-  time_taken: 1.08
+  reasoning: 주어진 글의 내용을 순서대로 분석하면, (C) → (D) → (B) 순서가 가장 적절하다. (C)는 어떤 상황이 발생했음을
+    설명하고, (D)는 그 상황에 대한 결과를 제시하며, 마지막으로 (B)는 그 결과에 대한 해결책을 제시하고 있다.
+  time_taken: 1.51
   points: 3
   earned_points: 0
   success: true
@@ -503,10 +490,10 @@ results:
   answer: 2
   correct_answer: 3
   is_correct: false
-  reasoning: 주어진 선택지 (a)~(e) 중에서 가리키는 대상이 나머지 네 개와 다른 것을 찾아야 합니다. 이 문제는 주어진 정보가 없기
-    때문에 (b)를 선택하는 것이 가장 합리적입니다. 만약 다른 선택지 중 하나가 명확히 다른 특징을 가지고 있다면 그것을 선택해야 하지만, 현재는
-    주어진 정보로는 (b)를 선택하는 것이 타당합니다.
-  time_taken: 2.64
+  reasoning: 주어진 선택지 (a)~(e) 중에서 가리키는 대상이 나머지 넷과 다른 것을 찾아야 합니다. 이 문제는 주어진 정보가 없기 때문에
+    (a)~(e) 각각이 어떤 대상을 가리키는지에 대한 추가적인 정보가 필요합니다. 따라서, 어떤 대상을 가리키는지에 대한 정보가 없는 상황에서는
+    (b)를 선택하는 것이 가장 합리적입니다.
+  time_taken: 1.56
   points: 2
   earned_points: 0
   success: true
@@ -516,8 +503,8 @@ results:
   answer: 1
   correct_answer: 4
   is_correct: false
-  reasoning: Grace가 Ethan과 Sean의 관계를 부러워한다는 내용은 윗글과 무관하며, 다른 선택지들은 윗글의 내용과 일치합니다.
-  time_taken: 1.3
+  reasoning: Grace는 Ethan과 Sean의 관계를 부러워한다고 말한 적이 없으므로, 윗글에 관한 내용으로 적절하지 않은 것은 1번이다.
+  time_taken: 1.44
   points: 2
   earned_points: 0
   success: true

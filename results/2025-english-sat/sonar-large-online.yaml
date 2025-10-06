@@ -1,219 +1,189 @@
-exam_id: 2025-korean-sat
-exam_title: 2025학년도 수능 국어 (Vision API)
-subject: korean
+exam_id: 2025-english-sat
+exam_title: 2025학년도 수능 ENGLISH
+subject: english
 model_name: sonar-large-online
-evaluated_at: '2025-10-07T00:28:17.899564'
+evaluated_at: '2025-10-06T23:45:13.152967'
 summary:
-  total_questions: 45
+  total_questions: 42
   correct_answers: 0
   accuracy: 0.0
   total_score: 0
-  max_score: 119
+  max_score: 100
   score_rate: 0.0
 results:
 - question_id: q1
   question_number: 1
   answer: 0
-  correct_answer: 3
-  is_correct: false
-  reasoning: ''
-  time_taken: 0.31
+  correct_answer: 2
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
   points: 2
   earned_points: 0
   success: false
-  error: 'Error code: 400 - {''error'': {''message'': "Invalid model ''sonar-large-online''.
-    Permitted models can be found in the documentation at https://docs.perplexity.ai/getting-started/models.",
-    ''type'': ''invalid_model'', ''code'': 400}}'
+  error: 듣기 평가 문제는 평가하지 않음
 - question_id: q2
   question_number: 2
   answer: 0
-  correct_answer: 4
-  is_correct: false
-  reasoning: ''
-  time_taken: 0.32
-  points: 3
+  correct_answer: 5
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
   earned_points: 0
   success: false
-  error: 'Error code: 400 - {''error'': {''message'': "Invalid model ''sonar-large-online''.
-    Permitted models can be found in the documentation at https://docs.perplexity.ai/getting-started/models.",
-    ''type'': ''invalid_model'', ''code'': 400}}'
+  error: 듣기 평가 문제는 평가하지 않음
 - question_id: q3
   question_number: 3
   answer: 0
-  correct_answer: 5
-  is_correct: false
-  reasoning: ''
-  time_taken: 0.25
-  points: 3
+  correct_answer: 1
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
   earned_points: 0
   success: false
-  error: 'Error code: 400 - {''error'': {''message'': "Invalid model ''sonar-large-online''.
-    Permitted models can be found in the documentation at https://docs.perplexity.ai/getting-started/models.",
-    ''type'': ''invalid_model'', ''code'': 400}}'
+  error: 듣기 평가 문제는 평가하지 않음
 - question_id: q4
   question_number: 4
   answer: 0
-  correct_answer: 4
-  is_correct: false
-  reasoning: ''
-  time_taken: 0.36
+  correct_answer: 3
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
   points: 2
   earned_points: 0
   success: false
-  error: 'Error code: 400 - {''error'': {''message'': "Invalid model ''sonar-large-online''.
-    Permitted models can be found in the documentation at https://docs.perplexity.ai/getting-started/models.",
-    ''type'': ''invalid_model'', ''code'': 400}}'
+  error: 듣기 평가 문제는 평가하지 않음
 - question_id: q5
   question_number: 5
   answer: 0
-  correct_answer: 5
-  is_correct: false
-  reasoning: ''
-  time_taken: 0.27
+  correct_answer: 1
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
   points: 2
   earned_points: 0
   success: false
-  error: 'Error code: 400 - {''error'': {''message'': "Invalid model ''sonar-large-online''.
-    Permitted models can be found in the documentation at https://docs.perplexity.ai/getting-started/models.",
-    ''type'': ''invalid_model'', ''code'': 400}}'
+  error: 듣기 평가 문제는 평가하지 않음
 - question_id: q6
   question_number: 6
   answer: 0
-  correct_answer: 3
-  is_correct: false
-  reasoning: ''
-  time_taken: 0.25
-  points: 3
+  correct_answer: 4
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
   earned_points: 0
   success: false
-  error: 'Error code: 400 - {''error'': {''message'': "Invalid model ''sonar-large-online''.
-    Permitted models can be found in the documentation at https://docs.perplexity.ai/getting-started/models.",
-    ''type'': ''invalid_model'', ''code'': 400}}'
+  error: 듣기 평가 문제는 평가하지 않음
 - question_id: q7
   question_number: 7
   answer: 0
   correct_answer: 3
-  is_correct: false
-  reasoning: ''
-  time_taken: 0.25
-  points: 3
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
   earned_points: 0
   success: false
-  error: 'Error code: 400 - {''error'': {''message'': "Invalid model ''sonar-large-online''.
-    Permitted models can be found in the documentation at https://docs.perplexity.ai/getting-started/models.",
-    ''type'': ''invalid_model'', ''code'': 400}}'
+  error: 듣기 평가 문제는 평가하지 않음
 - question_id: q8
   question_number: 8
   answer: 0
-  correct_answer: 3
-  is_correct: false
-  reasoning: ''
-  time_taken: 0.36
-  points: 3
+  correct_answer: 4
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
   earned_points: 0
   success: false
-  error: 'Error code: 400 - {''error'': {''message'': "Invalid model ''sonar-large-online''.
-    Permitted models can be found in the documentation at https://docs.perplexity.ai/getting-started/models.",
-    ''type'': ''invalid_model'', ''code'': 400}}'
+  error: 듣기 평가 문제는 평가하지 않음
 - question_id: q9
   question_number: 9
   answer: 0
-  correct_answer: 1
-  is_correct: false
-  reasoning: ''
-  time_taken: 0.28
-  points: 3
+  correct_answer: 5
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
   earned_points: 0
   success: false
-  error: 'Error code: 400 - {''error'': {''message'': "Invalid model ''sonar-large-online''.
-    Permitted models can be found in the documentation at https://docs.perplexity.ai/getting-started/models.",
-    ''type'': ''invalid_model'', ''code'': 400}}'
+  error: 듣기 평가 문제는 평가하지 않음
 - question_id: q10
   question_number: 10
   answer: 0
-  correct_answer: 3
-  is_correct: false
-  reasoning: ''
-  time_taken: 0.24
-  points: 3
+  correct_answer: 2
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
   earned_points: 0
   success: false
-  error: 'Error code: 400 - {''error'': {''message'': "Invalid model ''sonar-large-online''.
-    Permitted models can be found in the documentation at https://docs.perplexity.ai/getting-started/models.",
-    ''type'': ''invalid_model'', ''code'': 400}}'
+  error: 듣기 평가 문제는 평가하지 않음
 - question_id: q11
   question_number: 11
   answer: 0
-  correct_answer: 1
-  is_correct: false
-  reasoning: ''
-  time_taken: 0.29
+  correct_answer: 2
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
   points: 3
   earned_points: 0
   success: false
-  error: 'Error code: 400 - {''error'': {''message'': "Invalid model ''sonar-large-online''.
-    Permitted models can be found in the documentation at https://docs.perplexity.ai/getting-started/models.",
-    ''type'': ''invalid_model'', ''code'': 400}}'
+  error: 듣기 평가 문제는 평가하지 않음
 - question_id: q12
   question_number: 12
   answer: 0
-  correct_answer: 5
-  is_correct: false
-  reasoning: ''
-  time_taken: 0.31
-  points: 3
+  correct_answer: 1
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
   earned_points: 0
   success: false
-  error: 'Error code: 400 - {''error'': {''message'': "Invalid model ''sonar-large-online''.
-    Permitted models can be found in the documentation at https://docs.perplexity.ai/getting-started/models.",
-    ''type'': ''invalid_model'', ''code'': 400}}'
+  error: 듣기 평가 문제는 평가하지 않음
 - question_id: q13
   question_number: 13
   answer: 0
-  correct_answer: 3
-  is_correct: false
-  reasoning: ''
-  time_taken: 0.27
-  points: 3
+  correct_answer: 5
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
   earned_points: 0
   success: false
-  error: 'Error code: 400 - {''error'': {''message'': "Invalid model ''sonar-large-online''.
-    Permitted models can be found in the documentation at https://docs.perplexity.ai/getting-started/models.",
-    ''type'': ''invalid_model'', ''code'': 400}}'
+  error: 듣기 평가 문제는 평가하지 않음
 - question_id: q14
   question_number: 14
   answer: 0
   correct_answer: 1
-  is_correct: false
-  reasoning: ''
-  time_taken: 0.34
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
   points: 3
   earned_points: 0
   success: false
-  error: 'Error code: 400 - {''error'': {''message'': "Invalid model ''sonar-large-online''.
-    Permitted models can be found in the documentation at https://docs.perplexity.ai/getting-started/models.",
-    ''type'': ''invalid_model'', ''code'': 400}}'
+  error: 듣기 평가 문제는 평가하지 않음
 - question_id: q15
   question_number: 15
   answer: 0
   correct_answer: 2
-  is_correct: false
-  reasoning: ''
-  time_taken: 0.31
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
   points: 3
   earned_points: 0
   success: false
-  error: 'Error code: 400 - {''error'': {''message'': "Invalid model ''sonar-large-online''.
-    Permitted models can be found in the documentation at https://docs.perplexity.ai/getting-started/models.",
-    ''type'': ''invalid_model'', ''code'': 400}}'
+  error: 듣기 평가 문제는 평가하지 않음
 - question_id: q16
   question_number: 16
   answer: 0
-  correct_answer: 2
+  correct_answer: 3
   is_correct: false
   reasoning: ''
-  time_taken: 0.31
-  points: 3
+  time_taken: 0.26
+  points: 2
   earned_points: 0
   success: false
   error: 'Error code: 400 - {''error'': {''message'': "Invalid model ''sonar-large-online''.
@@ -222,10 +192,10 @@ results:
 - question_id: q17
   question_number: 17
   answer: 0
-  correct_answer: 3
+  correct_answer: 4
   is_correct: false
   reasoning: ''
-  time_taken: 0.31
+  time_taken: 0.24
   points: 2
   earned_points: 0
   success: false
@@ -235,10 +205,10 @@ results:
 - question_id: q18
   question_number: 18
   answer: 0
-  correct_answer: 2
+  correct_answer: 1
   is_correct: false
   reasoning: ''
-  time_taken: 0.31
+  time_taken: 0.24
   points: 2
   earned_points: 0
   success: false
@@ -248,10 +218,10 @@ results:
 - question_id: q19
   question_number: 19
   answer: 0
-  correct_answer: 4
+  correct_answer: 2
   is_correct: false
   reasoning: ''
-  time_taken: 0.31
+  time_taken: 0.25
   points: 2
   earned_points: 0
   success: false
@@ -261,10 +231,10 @@ results:
 - question_id: q20
   question_number: 20
   answer: 0
-  correct_answer: 5
+  correct_answer: 1
   is_correct: false
   reasoning: ''
-  time_taken: 0.31
+  time_taken: 0.28
   points: 2
   earned_points: 0
   success: false
@@ -274,10 +244,10 @@ results:
 - question_id: q21
   question_number: 21
   answer: 0
-  correct_answer: 4
+  correct_answer: 3
   is_correct: false
   reasoning: ''
-  time_taken: 0.31
+  time_taken: 0.23
   points: 3
   earned_points: 0
   success: false
@@ -287,10 +257,10 @@ results:
 - question_id: q22
   question_number: 22
   answer: 0
-  correct_answer: 5
+  correct_answer: 2
   is_correct: false
   reasoning: ''
-  time_taken: 0.24
+  time_taken: 0.25
   points: 3
   earned_points: 0
   success: false
@@ -300,33 +270,7 @@ results:
 - question_id: q23
   question_number: 23
   answer: 0
-  correct_answer: 2
-  is_correct: false
-  reasoning: ''
-  time_taken: 0.24
-  points: 2
-  earned_points: 0
-  success: false
-  error: 'Error code: 400 - {''error'': {''message'': "Invalid model ''sonar-large-online''.
-    Permitted models can be found in the documentation at https://docs.perplexity.ai/getting-started/models.",
-    ''type'': ''invalid_model'', ''code'': 400}}'
-- question_id: q24
-  question_number: 24
-  answer: 0
-  correct_answer: 2
-  is_correct: false
-  reasoning: ''
-  time_taken: 0.26
-  points: 2
-  earned_points: 0
-  success: false
-  error: 'Error code: 400 - {''error'': {''message'': "Invalid model ''sonar-large-online''.
-    Permitted models can be found in the documentation at https://docs.perplexity.ai/getting-started/models.",
-    ''type'': ''invalid_model'', ''code'': 400}}'
-- question_id: q25
-  question_number: 25
-  answer: 0
-  correct_answer: 3
+  correct_answer: 1
   is_correct: false
   reasoning: ''
   time_taken: 0.26
@@ -336,13 +280,39 @@ results:
   error: 'Error code: 400 - {''error'': {''message'': "Invalid model ''sonar-large-online''.
     Permitted models can be found in the documentation at https://docs.perplexity.ai/getting-started/models.",
     ''type'': ''invalid_model'', ''code'': 400}}'
+- question_id: q24
+  question_number: 24
+  answer: 0
+  correct_answer: 5
+  is_correct: false
+  reasoning: ''
+  time_taken: 0.28
+  points: 3
+  earned_points: 0
+  success: false
+  error: 'Error code: 400 - {''error'': {''message'': "Invalid model ''sonar-large-online''.
+    Permitted models can be found in the documentation at https://docs.perplexity.ai/getting-started/models.",
+    ''type'': ''invalid_model'', ''code'': 400}}'
+- question_id: q25
+  question_number: 25
+  answer: 0
+  correct_answer: 4
+  is_correct: false
+  reasoning: ''
+  time_taken: 0.31
+  points: 2
+  earned_points: 0
+  success: false
+  error: 'Error code: 400 - {''error'': {''message'': "Invalid model ''sonar-large-online''.
+    Permitted models can be found in the documentation at https://docs.perplexity.ai/getting-started/models.",
+    ''type'': ''invalid_model'', ''code'': 400}}'
 - question_id: q26
   question_number: 26
   answer: 0
-  correct_answer: 2
+  correct_answer: 4
   is_correct: false
   reasoning: ''
-  time_taken: 0.23
+  time_taken: 0.27
   points: 2
   earned_points: 0
   success: false
@@ -352,11 +322,11 @@ results:
 - question_id: q27
   question_number: 27
   answer: 0
-  correct_answer: 2
+  correct_answer: 3
   is_correct: false
   reasoning: ''
-  time_taken: 0.24
-  points: 3
+  time_taken: 0.26
+  points: 2
   earned_points: 0
   success: false
   error: 'Error code: 400 - {''error'': {''message'': "Invalid model ''sonar-large-online''.
@@ -365,7 +335,7 @@ results:
 - question_id: q28
   question_number: 28
   answer: 0
-  correct_answer: 4
+  correct_answer: 3
   is_correct: false
   reasoning: ''
   time_taken: 0.27
@@ -378,11 +348,11 @@ results:
 - question_id: q29
   question_number: 29
   answer: 0
-  correct_answer: 3
+  correct_answer: 2
   is_correct: false
   reasoning: ''
-  time_taken: 0.28
-  points: 3
+  time_taken: 0.34
+  points: 2
   earned_points: 0
   success: false
   error: 'Error code: 400 - {''error'': {''message'': "Invalid model ''sonar-large-online''.
@@ -391,10 +361,10 @@ results:
 - question_id: q30
   question_number: 30
   answer: 0
-  correct_answer: 5
+  correct_answer: 4
   is_correct: false
   reasoning: ''
-  time_taken: 0.28
+  time_taken: 0.24
   points: 3
   earned_points: 0
   success: false
@@ -404,23 +374,10 @@ results:
 - question_id: q31
   question_number: 31
   answer: 0
-  correct_answer: 4
+  correct_answer: 5
   is_correct: false
   reasoning: ''
   time_taken: 0.27
-  points: 3
-  earned_points: 0
-  success: false
-  error: 'Error code: 400 - {''error'': {''message'': "Invalid model ''sonar-large-online''.
-    Permitted models can be found in the documentation at https://docs.perplexity.ai/getting-started/models.",
-    ''type'': ''invalid_model'', ''code'': 400}}'
-- question_id: q32
-  question_number: 32
-  answer: 0
-  correct_answer: 3
-  is_correct: false
-  reasoning: ''
-  time_taken: 0.26
   points: 3
   earned_points: 0
   success: false
@@ -430,11 +387,11 @@ results:
 - question_id: q33
   question_number: 33
   answer: 0
-  correct_answer: 5
+  correct_answer: 3
   is_correct: false
   reasoning: ''
-  time_taken: 0.33
-  points: 3
+  time_taken: 0.27
+  points: 2
   earned_points: 0
   success: false
   error: 'Error code: 400 - {''error'': {''message'': "Invalid model ''sonar-large-online''.
@@ -443,10 +400,10 @@ results:
 - question_id: q34
   question_number: 34
   answer: 0
-  correct_answer: 2
+  correct_answer: 5
   is_correct: false
   reasoning: ''
-  time_taken: 0.26
+  time_taken: 0.25
   points: 3
   earned_points: 0
   success: false
@@ -456,10 +413,10 @@ results:
 - question_id: q35
   question_number: 35
   answer: 0
-  correct_answer: 2
+  correct_answer: 4
   is_correct: false
   reasoning: ''
-  time_taken: 0.26
+  time_taken: 0.25
   points: 3
   earned_points: 0
   success: false
@@ -469,23 +426,10 @@ results:
 - question_id: q36
   question_number: 36
   answer: 0
-  correct_answer: 4
+  correct_answer: 5
   is_correct: false
   reasoning: ''
-  time_taken: 0.27
-  points: 3
-  earned_points: 0
-  success: false
-  error: 'Error code: 400 - {''error'': {''message'': "Invalid model ''sonar-large-online''.
-    Permitted models can be found in the documentation at https://docs.perplexity.ai/getting-started/models.",
-    ''type'': ''invalid_model'', ''code'': 400}}'
-- question_id: q37
-  question_number: 37
-  answer: 0
-  correct_answer: 3
-  is_correct: false
-  reasoning: ''
-  time_taken: 0.34
+  time_taken: 0.25
   points: 3
   earned_points: 0
   success: false
@@ -499,7 +443,7 @@ results:
   is_correct: false
   reasoning: ''
   time_taken: 0.25
-  points: 2
+  points: 3
   earned_points: 0
   success: false
   error: 'Error code: 400 - {''error'': {''message'': "Invalid model ''sonar-large-online''.
@@ -507,6 +451,32 @@ results:
     ''type'': ''invalid_model'', ''code'': 400}}'
 - question_id: q39
   question_number: 39
+  answer: 0
+  correct_answer: 4
+  is_correct: false
+  reasoning: ''
+  time_taken: 0.28
+  points: 3
+  earned_points: 0
+  success: false
+  error: 'Error code: 400 - {''error'': {''message'': "Invalid model ''sonar-large-online''.
+    Permitted models can be found in the documentation at https://docs.perplexity.ai/getting-started/models.",
+    ''type'': ''invalid_model'', ''code'': 400}}'
+- question_id: q41
+  question_number: 41
+  answer: 0
+  correct_answer: 2
+  is_correct: false
+  reasoning: ''
+  time_taken: 0.27
+  points: 2
+  earned_points: 0
+  success: false
+  error: 'Error code: 400 - {''error'': {''message'': "Invalid model ''sonar-large-online''.
+    Permitted models can be found in the documentation at https://docs.perplexity.ai/getting-started/models.",
+    ''type'': ''invalid_model'', ''code'': 400}}'
+- question_id: q42
+  question_number: 42
   answer: 0
   correct_answer: 5
   is_correct: false
@@ -518,21 +488,21 @@ results:
   error: 'Error code: 400 - {''error'': {''message'': "Invalid model ''sonar-large-online''.
     Permitted models can be found in the documentation at https://docs.perplexity.ai/getting-started/models.",
     ''type'': ''invalid_model'', ''code'': 400}}'
-- question_id: q40
-  question_number: 40
+- question_id: q43
+  question_number: 43
   answer: 0
-  correct_answer: 4
+  correct_answer: 2
   is_correct: false
   reasoning: ''
-  time_taken: 0.27
-  points: 2
+  time_taken: 0.25
+  points: 3
   earned_points: 0
   success: false
   error: 'Error code: 400 - {''error'': {''message'': "Invalid model ''sonar-large-online''.
     Permitted models can be found in the documentation at https://docs.perplexity.ai/getting-started/models.",
     ''type'': ''invalid_model'', ''code'': 400}}'
-- question_id: q41
-  question_number: 41
+- question_id: q44
+  question_number: 44
   answer: 0
   correct_answer: 3
   is_correct: false
@@ -544,53 +514,14 @@ results:
   error: 'Error code: 400 - {''error'': {''message'': "Invalid model ''sonar-large-online''.
     Permitted models can be found in the documentation at https://docs.perplexity.ai/getting-started/models.",
     ''type'': ''invalid_model'', ''code'': 400}}'
-- question_id: q42
-  question_number: 42
-  answer: 0
-  correct_answer: 2
-  is_correct: false
-  reasoning: ''
-  time_taken: 0.3
-  points: 2
-  earned_points: 0
-  success: false
-  error: 'Error code: 400 - {''error'': {''message'': "Invalid model ''sonar-large-online''.
-    Permitted models can be found in the documentation at https://docs.perplexity.ai/getting-started/models.",
-    ''type'': ''invalid_model'', ''code'': 400}}'
-- question_id: q43
-  question_number: 43
-  answer: 0
-  correct_answer: 1
-  is_correct: false
-  reasoning: ''
-  time_taken: 0.24
-  points: 2
-  earned_points: 0
-  success: false
-  error: 'Error code: 400 - {''error'': {''message'': "Invalid model ''sonar-large-online''.
-    Permitted models can be found in the documentation at https://docs.perplexity.ai/getting-started/models.",
-    ''type'': ''invalid_model'', ''code'': 400}}'
-- question_id: q44
-  question_number: 44
-  answer: 0
-  correct_answer: 5
-  is_correct: false
-  reasoning: ''
-  time_taken: 0.26
-  points: 3
-  earned_points: 0
-  success: false
-  error: 'Error code: 400 - {''error'': {''message'': "Invalid model ''sonar-large-online''.
-    Permitted models can be found in the documentation at https://docs.perplexity.ai/getting-started/models.",
-    ''type'': ''invalid_model'', ''code'': 400}}'
 - question_id: q45
   question_number: 45
   answer: 0
-  correct_answer: 2
+  correct_answer: 4
   is_correct: false
   reasoning: ''
-  time_taken: 0.26
-  points: 3
+  time_taken: 0.25
+  points: 2
   earned_points: 0
   success: false
   error: 'Error code: 400 - {''error'': {''message'': "Invalid model ''sonar-large-online''.

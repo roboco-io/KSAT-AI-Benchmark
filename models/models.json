@@ -82,6 +82,18 @@
       "max_tokens": 8192,
       "temperature": 0.3,
       "timeout": 60,
+      "enabled": false
+    },
+    {
+      "name": "claude-sonnet-4-5",
+      "provider": "perplexity",
+      "model_id": "claude-4.5-sonnet",
+      "version": "2025",
+      "description": "Claude Sonnet 4.5 via Perplexity API - 최신 추론 및 코딩 능력",
+      "api_key_env": "PERPLEXITY_API_KEY",
+      "max_tokens": 8192,
+      "temperature": 0.3,
+      "timeout": 60,
       "enabled": true
     },
     {
@@ -178,7 +190,7 @@
       "max_tokens": 4096,
       "temperature": 0.3,
       "timeout": 60,
-      "enabled": false
+      "enabled": true
     },
     {
       "name": "solar-mini",
@@ -202,7 +214,7 @@
       "max_tokens": 4096,
       "temperature": 0.3,
       "timeout": 60,
-      "enabled": false
+      "enabled": true
     },
     {
       "name": "sonar-large",

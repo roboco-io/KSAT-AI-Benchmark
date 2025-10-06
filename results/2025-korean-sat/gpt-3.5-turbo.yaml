@@ -1,26 +1,26 @@
 exam_id: 2025-korean-sat
-exam_title: 2025학년도 수능 KOREAN
+exam_title: 2025학년도 수능 국어 (Vision API)
 subject: korean
 model_name: gpt-3.5-turbo
-evaluated_at: '2025-10-06T09:42:00.089829'
+evaluated_at: '2025-10-06T23:45:59.568426'
 summary:
-  total_questions: 49
-  correct_answers: 12
-  accuracy: 24.49
-  total_score: 29
-  max_score: 121
-  score_rate: 23.97
+  total_questions: 45
+  correct_answers: 16
+  accuracy: 35.56
+  total_score: 44
+  max_score: 119
+  score_rate: 36.97
 results:
 - question_id: q1
   question_number: 1
-  answer: 2
+  answer: 3
   correct_answer: 3
-  is_correct: false
-  reasoning: 밑줄 긋기의 기초로 밑줄 긋기에 사용하는 것이 가능하다는 문장은 모순되는 내용입니다. 밑줄 긋기의 기초로는 텍스트를 읽고 중요한
-    내용을 강조하기 위해 사용하는 것이 올바른 설명입니다.
-  time_taken: 1.19
+  is_correct: true
+  reasoning: 주어진 지문에서는 밑줄 긋기에 대한 언급이 없으며, 밑줄 긋기와 관련된 내용이 전혀 등장하지 않습니다. 따라서, 밑줄 긋기는
+    누구나 쉽게 이용하여 사용할 수 있는 전략이라는 내용은 일치하지 않습니다.
+  time_taken: 1.23
   points: 2
-  earned_points: 0
+  earned_points: 2
   success: true
   error: null
 - question_id: q2
@@ -28,21 +28,21 @@ results:
   answer: 2
   correct_answer: 4
   is_correct: false
-  reasoning: 글 전체에 주의를 기울일 수 있도록 글을 읽고 있을 때에는 밑줄 긋기를 하지 않는 것이 가장 적절합니다. 밑줄을 그으면서 글을
-    읽게 되면 주의가 밑줄 그리는 행위에 집중되어 글의 내용을 제대로 이해하기 어렵기 때문입니다.
-  time_taken: 1.38
+  reasoning: 주어진 대화 내용에서는 '우리나라의 일상에서 비닐 봉다리 뿌우 뚜껑이 없었어요'라는 내용이 ①로 언급되었고, 이는 주요한 정보일
+    수 있습니다. 따라서, 글 전체에 주의를 기울일 수 있도록 글을 읽고 있을 때에는 밑줄 긋기를 하지 않는 것이 가장 적절합니다.
+  time_taken: 1.74
   points: 3
   earned_points: 0
   success: true
   error: null
 - question_id: q3
   question_number: 3
-  answer: 4
+  answer: 2
   correct_answer: 5
   is_correct: false
-  reasoning: 주어진 지문에서는 '포괄적인 믿음'과 관련하여 '신뢰'라는 단어에 대한 밑줄 긋기를 권고하지 않았습니다. 대신, 구체적인 예에
-    대한 밑줄 긋기를 권고하였으므로 4번이 적절하지 않습니다.
-  time_taken: 1.13
+  reasoning: 주어진 지문에서는 '밑줄 긋기'에 대한 구체적인 내용이 언급되지 않았으며, '1. 2. 3.'의 순서에 맞춰 표시한 부분을
+    바탕으로 밑줄 긋기를 한 것은 올바른 평가 기준이 아닙니다. 따라서 2번이 적절하지 않은 평가 기준입니다.
+  time_taken: 3.39
   points: 3
   earned_points: 0
   success: true
@@ -52,35 +52,36 @@ results:
   answer: 3
   correct_answer: 4
   is_correct: false
-  reasoning: 윗글은 서양 과학과 기술의 수용과 관련된 내용을 다루고 있는데, (나)의 전쟁의 군사력 근대화 문제를 과학의 문제로 하락하고,
-    과학적 승리에 집중해야 한다고 주장하는 내용은 주제와 맞지 않습니다.
-  time_taken: 2.25
+  reasoning: (나)의 내용은 중국이 서양의 과학과 기술에 관심을 기울인 시기와 관련이 있으며, 동양에서 근대적 전환과 관련된 내용이다.
+    반면, 윗글에서는 (가)와 관련된 내용이 주로 다루어졌기 때문에 (나)는 윗글에 대한 이해와는 상관없는 내용이다.
+  time_taken: 1.61
   points: 2
   earned_points: 0
   success: true
   error: null
 - question_id: q5
   question_number: 5
-  answer: 5
+  answer: 4
   correct_answer: 5
-  is_correct: true
-  reasoning: 주어진 선택지 중에서 '대리인문제로서의 계획'은 다른 선택지들과 달리 혼동을 일으킬 수 있는 개념으로, 계획에 대한 이해와는
-    직접적인 연관이 없습니다. 따라서 적절하지 않은 선택지입니다.
-  time_taken: 0.95
+  is_correct: false
+  reasoning: 삼강신변의 계획 개념은 통치권에 대한 도전으로 이해되었기 때문에, 계획의 실행 주체로 왕에 의한 역할을 부여하지 않은 것이
+    적절하지 않습니다.
+  time_taken: 1.96
   points: 2
-  earned_points: 2
+  earned_points: 0
   success: true
   error: null
 - question_id: q6
   question_number: 6
-  answer: 4
+  answer: 3
   correct_answer: 3
-  is_correct: false
-  reasoning: 국가의 계획을 충실히 목표할 수 있는 것은 사회의 과학 정신을 전제적으로 도입했을 때 가능하므로, '나와' '친구들'과 '장래희망'이
-    모두 동일한 진술으로 선택지 4가 가장 적절하다.
-  time_taken: 1.2
-  points: 2
-  earned_points: 0
+  is_correct: true
+  reasoning: 문제에서 '나와', '실무자', '장관님'이 모두 동의할 수 있는 진술을 선택해야 합니다. 과학을 이용하는 과정에서 문제가
+    발생한다고 해도 과학적 방법을 거부할 수 없다는 진술은 과학의 중요성을 인정하면서도 문제 발생 시에도 과학적 방법을 유지해야 한다는 측면에서
+    '나와', '실무자', '장관님'이 모두 동의할 수 있는 적절한 진술입니다.
+  time_taken: 2.02
+  points: 3
+  earned_points: 3
   success: true
   error: null
 - question_id: q7
@@ -88,12 +89,11 @@ results:
   answer: 3
   correct_answer: 3
   is_correct: true
-  reasoning: 주어진 선택지 중 '가'에 대한 이해를 가장 적절하게 설명하는 것은 3번이다. 이 선택지는 전쟁과 권력 정치를 위한 과학 연구의
-    시작점을 언급하면서, 과학의 방법에 의한 반격 없는 사상을 부정하는 입장을 나타내고 있다. 이는 '가'에 대한 이해를 다양한 측면에서 고려하고
-    있으며, 과학과 인식론의 관계를 탐구하고 있다.
-  time_taken: 1.64
-  points: 2
-  earned_points: 2
+  reasoning: 지문에서 '다'에 대한 이해로 가장 적절한 것은 전쟁과 전리 품을 위한 과학 연구의 시작점을 의미하는 3번이다. 3번은 전쟁
+    이후 중국이 서양의 과학과 기술에 관심을 기울인 시기를 설명하고 있으며, 이는 지문에서 다루고 있는 내용과 일치한다.
+  time_taken: 1.57
+  points: 3
+  earned_points: 3
   success: true
   error: null
 - question_id: q8
@@ -101,9 +101,9 @@ results:
   answer: 3
   correct_answer: 3
   is_correct: true
-  reasoning: (가)에서 반론은 사회와 규범의 차원의 주장을 강조했으므로, <보기>에서 공론이론의 자본관계에 인식 계획을 가부로 전쟁을 위한
-    합리성이 계획에 푸바리러지 보였다. 이 보기는 주어진 문맥과 맞지 않는 내용이므로 적절하지 않은 반응이다.
-  time_taken: 1.95
+  reasoning: (가)에서 비유는 사양과 구별되는 계획의 중요성을 강조했음으로, <보기>에서 공론이라는 자본화하여 된 인식 계획을 가부간 정향을
+    위한 계획이 사양에서 푸바리러지 보편화. 이 보기는 문맥과 상반되는 내용을 담고 있어 적절하지 않습니다.
+  time_taken: 2.21
   points: 3
   earned_points: 3
   success: true
@@ -111,12 +111,12 @@ results:
 - question_id: q9
   question_number: 9
   answer: 3
-  correct_answer: 2
+  correct_answer: 1
   is_correct: false
-  reasoning: ①와 '아이 울음이 울던 그리기 없었다.'는 모두 '그리기'에 관련된 내용이며, '그리기'가 주요 키워드이기 때문에 문맥상
-    가장 가까운 것은 3번이다.
-  time_taken: 1.97
-  points: 2
+  reasoning: ①와 문맥상 의미가 가장 가까운 것은 '아이 응용은 수학적 그치지 않았다.'입니다. 주어진 지문에서는 과학과 기술, 철학 등
+    다양한 분야에서의 발전과 변화에 대해 다루고 있으며, '응용'과 '수학적 그치지 않았다'라는 표현이 문맥상 가장 적합한 선택지입니다.
+  time_taken: 2.89
+  points: 3
   earned_points: 0
   success: true
   error: null
@@ -125,35 +125,35 @@ results:
   answer: 3
   correct_answer: 3
   is_correct: true
-  reasoning: 확산 모델에서 노이즈의 중요성을 파악하고, 사용되는 노이즈의 주제가 표현의 성능에 미치는 영향을 이해하지 못했다. 주제 표현의
-    성능과 노이즈의 관계를 이해하는 것이 확산 모델을 이해하는 데 중요한 요소이기 때문에 이는 적절하지 않은 내용이다.
-  time_taken: 1.41
-  points: 2
-  earned_points: 2
+  reasoning: 확산 모델에서는 노이즈의 중요성을 다루고, 사용되는 노이즈의 주제가 표현의 기능에 미치는 영향을 다루지 않습니다. 따라서 3번이
+    적절하지 않은 선택지입니다.
+  time_taken: 1.18
+  points: 3
+  earned_points: 3
   success: true
   error: null
 - question_id: q11
   question_number: 11
-  answer: 3
+  answer: 4
   correct_answer: 1
   is_correct: false
-  reasoning: 지문에서 언급된 내용을 종합해보면 이미지 연결기와 노이즈 예측기는 모두 확산 이미지들을 출력한다고 언급되었습니다. 따라서 3번이
-    가장 적절한 선택지입니다.
-  time_taken: 1.03
-  points: 2
+  reasoning: 노이즈 예측기를 학습시킬 때는 노이즈 생성기에서 만들어 넣어 준 노이즈가 포함된 원본 이미지의 노이즈의 역할은 노이즈 사이의
+    차이가 차이점으로 발생한다고 설명되어 있습니다. 따라서 노이즈 예측기를 학습시킬 때는 예측된 노이즈가 정답으로 사용된다는 설명이 적절합니다.
+  time_taken: 1.92
+  points: 3
   earned_points: 0
   success: true
   error: null
 - question_id: q12
   question_number: 12
-  answer: 5
+  answer: 1
   correct_answer: 5
-  is_correct: true
-  reasoning: 주제 표현은 이미지에 노이즈가 포함된 원본 이미지를 입력받아 노이즈의 복원을 추측하는 것이 아니라, 이미지의 주제를 표현하는
-    방식에 대한 설명이므로 5번이 적절하지 않습니다.
-  time_taken: 1.65
-  points: 2
-  earned_points: 2
+  is_correct: false
+  reasoning: 주제 표현은 이미지를 혼합하는 것이 아닌 이미지의 주제나 내용을 표현하는 것을 의미합니다. 따라서 주제 표현의 수치적으로 조정하여
+    이미지를 혼합하는 것은 올바르지 않은 설명입니다.
+  time_taken: 1.22
+  points: 3
+  earned_points: 0
   success: true
   error: null
 - question_id: q13
@@ -161,23 +161,24 @@ results:
   answer: 3
   correct_answer: 3
   is_correct: true
-  reasoning: 주어진 문제에서는 이미지 연산기와 노이즈 생성기의 관계에 대한 내용이 언급되어 있지만, 음악적 과정에서 노이즈 생성기와 이미지
-    연산기의 관계에 대한 내용은 언급되지 않았습니다. 따라서 3번이 적절하지 않은 선택지입니다.
-  time_taken: 2.24
+  reasoning: 주어진 지문에서는 확산 모델에 대한 설명이 주어지고 있으며, 노이즈 예측기는 이미지에 포함된 노이즈의 복원을 추측하고 노이즈를
+    예측하는 역할을 한다고 설명되어 있습니다. 하지만 문제에서는 '음악적 과정'이라는 용어가 등장하는데, 이는 지문에서 언급되지 않았기 때문에
+    적절하지 않은 내용입니다.
+  time_taken: 1.92
   points: 3
   earned_points: 3
   success: true
   error: null
 - question_id: q14
   question_number: 14
-  answer: 2
+  answer: 1
   correct_answer: 1
-  is_correct: false
-  reasoning: 주어진 문장들을 비교해보면, 2번은 다른 문장들과 일관성이 없습니다. 다른 문장들은 자기 정체성과 관련된 내용을 다루고 있는
-    반면, 2번은 딥러닝과 가상 공간에 대한 내용을 다루고 있습니다.
-  time_taken: 1.12
-  points: 2
-  earned_points: 0
+  is_correct: true
+  reasoning: 주어진 지문에서는 '심층 연기는 내면의 충격을 정서적 혼란보다는 자신의 정체성을 묻는 것이다'라고 설명되어 있으므로, 심층
+    연기는 정서를 드러내기 위한 것이 아니라 자신의 정체성을 탐구하는 것으로 나타납니다. 따라서, 1번이 윗글의 내용과 일치하지 않습니다.
+  time_taken: 2.7
+  points: 3
+  earned_points: 3
   success: true
   error: null
 - question_id: q15
@@ -185,10 +186,10 @@ results:
   answer: 4
   correct_answer: 2
   is_correct: false
-  reasoning: (다)에 대한 이해로서 '단지 온라인 ID는 복수 개별이 가능하므로 자기 정체성이 복합적으로 구성된다'는 것이 가장 적절합니다.
-    인터넷 상에서는 한 사람이 여러 개의 다른 ID를 가질 수 있고, 각 ID마다 다른 정체성을 형성할 수 있습니다. 이는 현실 세계의 자기 정체성과는
-    다른 복합적인 자기 정체성을 형성한다는 점에서 중요한 관점입니다.
-  time_taken: 2.66
+  reasoning: (다)는 딥러 인터넷 ID는 복수 개체가 가능하므로 자기 정체성이 복합적으로 구성된다고 보겠다. 이는 지문에서 '인터넷 ID'에
+    대한 사이비 폭력이 다양한 변수를 인식 못하고 있다고 언급하고 있으며, 현실에서의 자기 정체성을 알고자 그들은 인지체로 반응하면서 현실에서의
+    억압적 정서를 긍정적으로 드러내기도 한다는 내용과 일치합니다.
+  time_taken: 1.91
   points: 3
   earned_points: 0
   success: true
@@ -198,9 +199,9 @@ results:
   answer: 3
   correct_answer: 2
   is_correct: false
-  reasoning: ㉢에 대한 A가 가계정보소의 법적 책임을 져야 하는지의 여부에 대해 알지 못하겠다는 것은 적절하지 않습니다. 주어진 문맥에서
-    A는 가계정보소의 법적 책임을 지지 않는다고 보았다고 명시되어 있기 때문에, ㉢에 대한 A의 입장은 이미 명확하게 주장되고 있습니다.
-  time_taken: 1.74
+  reasoning: 주어진 지문에서는 가처분조치의 법적 책임에 대한 내용이 언급되지 않았습니다. 따라서 ㉢에 대한 A가 가처분조치의 법적 책임을
+    져야 하는지의 여부에 대해 알지 못하겠다는 내용은 적절하지 않습니다.
+  time_taken: 2.59
   points: 3
   earned_points: 0
   success: true
@@ -210,11 +211,11 @@ results:
   answer: 3
   correct_answer: 3
   is_correct: true
-  reasoning: ㉠~㉣은 한자 괄호 안의 한자를 바꿔 쓰는 문제이며, '앙(仰)대한다고'에서 '앙'은 '仰'으로 바꿔 써야 합니다. 따라서
-    ㉢가 가장 적절한 선택지입니다.
-  time_taken: 1.23
-  points: 3
-  earned_points: 3
+  reasoning: '주어진 문맥에서 ''알(알다)라고''는 ''알다''라는 동사의 명령형 형태로 사용되어야 합니다. 따라서 ''㉢: 알(알다)라고''가
+    가장 적절한 표현입니다.'
+  time_taken: 1.83
+  points: 2
+  earned_points: 2
   success: true
   error: null
 - question_id: q18
@@ -222,58 +223,58 @@ results:
   answer: 5
   correct_answer: 2
   is_correct: false
-  reasoning: 주어진 글에서는 북쪽이 자신이 지은 '죄'에 대해 심리적 숙명감을 느낀 것으로 나타나지 않습니다. 따라서 5번이 적절하지 않은
-    설명입니다.
-  time_taken: 0.99
+  reasoning: 윗글의 내용에서는 북쪽이 자신이 지은 죄에 대한 심리적 숙명감을 느낀 것과 관련된 내용은 나오지 않습니다. 따라서, 5번이
+    적절하지 않은 선택지입니다.
+  time_taken: 1.48
   points: 2
   earned_points: 0
   success: true
   error: null
 - question_id: q19
   question_number: 19
-  answer: 3
+  answer: 4
   correct_answer: 4
-  is_correct: false
-  reasoning: 지문에서 언급된 내용을 종합해 볼 때, 누명이 벗겨지면 누명을 쓴 인물이 남편과 자신의 최소에서 벗어나 구명에 이르는 사실이라는
-    것이 가장 적절한 설명이다.
-  time_taken: 1.48
-  points: 3
-  earned_points: 0
+  is_correct: true
+  reasoning: 지문에서 '누명을 쓰기 위한 제재에는 누명을 쓰는 인물을 특정 장소로 가게 하는 것이 포함되어 있다'라는 내용이 나오기 때문에
+    4번이 가장 적절한 설명입니다.
+  time_taken: 1.08
+  points: 2
+  earned_points: 2
   success: true
   error: null
 - question_id: q20
   question_number: 20
-  answer: 2
-  correct_answer: 1
+  answer: 3
+  correct_answer: 5
   is_correct: false
-  reasoning: 황폐한 상태에 있는 A가 B에게 황폐함이 어디에 있는지 물어보는 것은 모순된 행동입니다. 황폐한 상태에 있는 A가 황폐함을
-    인식하지 못할 것이기 때문에 적절하지 않은 활동입니다.
-  time_taken: 1.52
-  points: 3
+  reasoning: 지문에서는 우측 군인 B가 A로부터 중수 시신의 적정에 관련한 정보를 얻는 활동에 대해 언급되지 않았습니다. 따라서, 다른
+    활동들은 지문에 언급된 내용과 일치하나 3번 활동은 적절하지 않은 것으로 판단됩니다.
+  time_taken: 1.48
+  points: 2
   earned_points: 0
   success: true
   error: null
 - question_id: q21
   question_number: 21
-  answer: 3
+  answer: 4
   correct_answer: 4
-  is_correct: false
-  reasoning: 윗글에서 흉패가 '대범' 역할을 하면서, 윗글이 고지로 주인에게 구사하여 진실을 밝힘으로써 흉패의 행위를 지향하고 있다는 내용은
-    올바르지 않습니다. 오히려 윗글은 흉패의 행위를 비난하고 진실을 밝히려는 노력을 보이고 있습니다.
-  time_taken: 2.67
+  is_correct: true
+  reasoning: 윗글을 이해한 내용으로 적절하지 않은 것은 4번입니다. 주어진 지문에서는 정선전설과 관련된 내용이 주로 다루어지고 있지만,
+    '상상의 공로'와 '연하'에 대한 내용은 나오지 않았습니다. 따라서, 4번은 윗글을 이해한 내용과는 관련이 없는 선택지입니다.
+  time_taken: 1.9
   points: 3
-  earned_points: 0
+  earned_points: 3
   success: true
   error: null
 - question_id: q22
   question_number: 22
   answer: 4
-  correct_answer: 2
+  correct_answer: 5
   is_correct: false
-  reasoning: (가)~(다) 모두 일상적인 경험과 관련된 내용을 다루고 있지만, 가장 적절한 것은 4번입니다. 이유는 작품이 일상생활의 반복적
-    경험을 다루고 현실의 의미와 관계를 드러내기 때문입니다. 다양한 예술 작품들이 현실을 표현하고 해석하는 과정에서 반복적인 일상 속에서의 의미를
-    탐구하고자 하는 경향이 있습니다.
-  time_taken: 2.24
+  reasoning: (가)~(다)의 지문들은 모두 주인공들의 내적 성찰과 심리적 변화에 초점을 맞추고 있습니다. 각각의 지문에서는 주인공들이 자신의
+    존재, 상황, 감정 등에 대해 고민하고 변화하는 과정을 경험하고 있습니다. 따라서 이러한 내적 변화와 심리적 상관관계를 드러내는 방황의 행위가
+    공통적으로 적절한 선택지인 4번이 가장 적합합니다.
+  time_taken: 3.7
   points: 3
   earned_points: 0
   success: true
@@ -281,26 +282,27 @@ results:
 - question_id: q23
   question_number: 23
   answer: 4
-  correct_answer: 5
+  correct_answer: 2
   is_correct: false
-  reasoning: 감식 무대가 가려운다는 것은 이별의 슬픔이 찾아오는 사양이 있음을 드러내는 것이 아니라, 감식 무대가 가려운다는 것은 이별의
-    슬픔을 표현하는 방식이 모호하고 혼란스러움을 느끼게 한다는 의미이므로 적절하지 않은 해석이다.
-  time_taken: 2.25
+  reasoning: 가)에 대한 이해로 적절하지 않은 것은 4번이다. 지문에서는 '벽을 밀던 손'이 '아슬아슬히 벽에서 떨어져'간다는 것으로 정적과
+    긴장감을 드러내고 있지만, 벽과 나무가 생긴 '동화'가 '갑자기 무모한 가로막는다'는 내용은 상황을 찾아오는 것이 아니라 무모하게 가로막는
+    것으로 잘못 해석된 부분이다.
+  time_taken: 2.05
   points: 2
   earned_points: 0
   success: true
   error: null
 - question_id: q24
   question_number: 24
-  answer: 2
+  answer: 5
   correct_answer: 2
-  is_correct: true
-  reasoning: 나의 '당신'에 대한 설명으로 적절하지 않은 것은 2번입니다. '화자의 내면에 살고 있는 방백과 연인의 대상'은 '나'의 '당신'에
-    대한 설명으로는 적절하지 않습니다. '나'의 '당신'은 주로 외부에 있는 상대방을 가리키는 것이 일반적이지만, 내면에 살고 있는 방백과 연인의
-    대상으로 설명하는 것은 어색합니다.
-  time_taken: 1.64
+  is_correct: false
+  reasoning: '''당신''에 대한 설명으로 적절하지 않은 것은 5번입니다. 이유는 ''사랑''과 ''습관''을 정형화하는 이중적 존재라는
+    설명은 ''당신''에 대한 관계를 감정적이고 개인적인 측면으로 해석한 것이며, 원문에서 ''당신''은 ''무모함으로서 환기되는 대상''으로
+    묘사되었기 때문입니다.'
+  time_taken: 2.87
   points: 2
-  earned_points: 2
+  earned_points: 0
   success: true
   error: null
 - question_id: q25
@@ -308,10 +310,9 @@ results:
   answer: 2
   correct_answer: 3
   is_correct: false
-  reasoning: 나를 감상한 내용으로 적절하지 않은 것은 2번입니다. 이 보기는 단어들이 연결되어 있지만, 의미가 모호하고 혼란스럽습니다.
-    '상처의 기억', '내 적격', '당신을 부유하는 발음의 폭포를 침묵을 향수로 치유하고' 등의 문장은 이해하기 어렵고 일관성이 없는 표현입니다.
-    다른 보기들은 화자의 감정과 내면을 구체적으로 표현하고 있어 나를 감상한 내용으로 적절하다고 볼 수 있습니다.
-  time_taken: 2.15
+  reasoning: 선택지 2는 (나)에 대한 감상을 부정적으로 평가하고 있으며, 화자의 복합적인 정체성을 드러내는 측면을 부정하고 있다. 반면
+    다른 선택지들은 (나)에 대한 감상을 긍정적으로 해석하고 있으므로 선택지 2가 적절하지 않은 것으로 판단됩니다.
+  time_taken: 1.82
   points: 3
   earned_points: 0
   success: true
@@ -321,10 +322,10 @@ results:
   answer: 3
   correct_answer: 2
   is_correct: false
-  reasoning: 문제에서 '(다)'에 대한 이해를 묻고 있으며, 3번 선택지는 '어느 사양의 인격자가 상처를 향한 표현일 때, 취약과 위의에서
-    벗어날 수 없음을 말한다'는 내용으로 '(다)'에 대한 이해를 나타내고 있습니다. 다른 선택지들은 '(다)'에 대한 내용과는 연관성이 떨어져
-    있습니다.
-  time_taken: 1.54
+  reasoning: 지문에서 '그녀에게 편지를 쓰는 것이 자신의 존재를 증명하던 시절이 있었다. 사랑하는 사람에게 보내는 편지라고 표현된 유무로
+    붙어'라는 내용을 통해, 상처를 향한 표현이 취약과 위의에서 밀어낼 수 있음을 의미하는 것으로 해석할 수 있습니다. 따라서, 3번이 가장 적절한
+    선택지입니다.
+  time_taken: 1.87
   points: 2
   earned_points: 0
   success: true
@@ -332,11 +333,12 @@ results:
 - question_id: q27
   question_number: 27
   answer: 4
-  correct_answer: 3
+  correct_answer: 2
   is_correct: false
-  reasoning: 문장을 분석해보면, (4)번은 '또 다른 연인을 말한다는' 부분이 이해하기 어렵고 모호한 표현이므로 적절하지 않습니다. 다른
-    선택지들은 상대적으로 명확한 내용을 담고 있습니다.
-  time_taken: 1.94
+  reasoning: 선택지 4는 '그녀 속의 그도 그녀를 사랑한다는 것은, 이상화된 그나마 사랑한 상처를 품고 '또 다른 연인을 향함을 말한다'라고
+    설명하고 있습니다. 하지만 원문에서는 '그녀에게 편지를 쓰는 것이 자신의 존재를 증명하던 시절이 있었다'라고 언급되어 있어, '그도 그녀를
+    사랑한다'라는 내용은 나타나지 않습니다. 따라서 선택지 4가 적절하지 않은 것입니다.
+  time_taken: 3.27
   points: 3
   earned_points: 0
   success: true
@@ -346,10 +348,10 @@ results:
   answer: 3
   correct_answer: 4
   is_correct: false
-  reasoning: 문제에서 '인물의 의식을 일곱 자식의 생활적 묘사로 통해 서술하고 있다'라는 표현이 나오는데, 이는 인물의 내면적인 생각과
-    감정을 외부적인 사물이나 상황을 통해 표현하는 방식을 의미합니다. 따라서, 이에 해당하는 설명은 3번입니다.
-  time_taken: 1.72
-  points: 3
+  reasoning: 해당 지문은 인물의 의식을 일부 사건의 진행과 묵시적으로 통해 서술하고 있습니다. 인물의 내면적인 생각과 감정을 간접적으로
+    표현하면서 사건의 흐름을 통해 의미를 전달하고 있습니다.
+  time_taken: 1.36
+  points: 2
   earned_points: 0
   success: true
   error: null
@@ -358,58 +360,59 @@ results:
   answer: 3
   correct_answer: 3
   is_correct: true
-  reasoning: 일상적이지 않은 직업을 인물이 의식한다는 표지로, 인물의 심리적 동요를 부각하는 것이 밑글의 서사적 기능에 가장 적절합니다.
-    밑글은 인물의 내면을 드러내거나 새로운 면을 발견할 수 있는 중요한 역할을 하며, 일상에서 벗어나는 상황이나 직업을 통해 인물의 심리적 변화를
-    묘사하는 것이 주된 기능입니다.
-  time_taken: 2.07
-  points: 2
-  earned_points: 2
+  reasoning: 인물이 일상적이지 않은 직업을 의식하면서 심리적 동요를 부각시키고 있습니다. 주어진 지문에서는 인물이 불완전한 삶을 살아가면서
+    일상적이지 않은 직업인 택배업계에 들어가게 되는 상황이 묘사되고 있습니다.
+  time_taken: 1.81
+  points: 3
+  earned_points: 3
   success: true
   error: null
 - question_id: q30
   question_number: 30
-  answer: 5
+  answer: 4
   correct_answer: 5
-  is_correct: true
-  reasoning: 희망은 '실상'에 대한 인식이 '실상 사상'들과 공존하게 되면서 '사상'이 없어지는 것은 올바르지 않습니다. 희망은 현재 상황에
-    대한 긍정적인 태도나 희망을 품는 것으로 이해되어야 하며, '사상'이 없어지는 것은 오히려 희망을 상실하는 것과 관련이 있을 수 있습니다.
-  time_taken: 2.25
+  is_correct: false
+  reasoning: '''희망''을 중심으로 윗글을 이해한 내용을 살펴보면, ''희망''은 주변의 환경이나 현실에 대한 안도감을 느끼게 하거나
+    다른 안도감에서 접근하고자 하는 측면이 강조되고 있습니다. 하지만 ''희망''이 ''생산을 현실적 원인에 대해 궁극화하면서 ''세상 사상''들에게
+    주의를 기울이게 된다''는 내용은 윗글과는 조금 상이한 방향으로 이해될 수 있습니다. 따라서 4번이 적절하지 않은 선택지입니다.'
+  time_taken: 4.3
   points: 3
-  earned_points: 3
+  earned_points: 0
   success: true
   error: null
 - question_id: q31
   question_number: 31
   answer: 5
-  correct_answer: 1
+  correct_answer: 4
   is_correct: false
-  reasoning: 문장이 혼란스럽고 의미가 불분명하여 감상하기 어렵습니다. 다른 보기들은 주어진 문장을 조금 더 명확하게 이해하고 해석한 내용을
-    담고 있지만, 5번은 문장 구성이 어색하고 일관성이 없어서 적절하지 않은 것으로 판단됩니다.
-  time_taken: 1.36
+  reasoning: 다른 보기들은 주어진 지문의 내용과 연결지어 해석할 수 있지만, 5번 보기는 주어진 내용과는 상반된 내용을 담고 있습니다.
+    주인공의 한탄이 '비평이 안정화되는 상황이 되었다'고 설명하는 것은 올바르지 않습니다.
+  time_taken: 1.43
   points: 3
   earned_points: 0
   success: true
   error: null
 - question_id: q32
   question_number: 32
-  answer: 2
-  correct_answer: 2
-  is_correct: true
-  reasoning: 선택지 2는 (가)에 대한 설명으로 적절하지 않은 것입니다. (가)는 대상의 성격, 상황 등을 묘사하는 것이지만, 행위의 실황을
-    기록하여 서정적 감정을 환기하는 것은 (나)에 해당합니다. 따라서 선택지 2가 적절하지 않습니다.
-  time_taken: 2.02
+  answer: 1
+  correct_answer: 3
+  is_correct: false
+  reasoning: 주어진 지문은 대구 표현을 사용하여 대상의 성격을 드러내는 것이 아니라, 행위의 실황, 서정적 감정, 의문의 표현, 과거의
+    행적, 현실을 드러내는 방식으로 구성되어 있습니다. 따라서 (가)에 대한 설명으로 '대구 표현으로 의향을 묘사하여 대상의 성격을 드러낸다'는
+    설명이 적절하지 않습니다.
+  time_taken: 1.75
   points: 3
-  earned_points: 3
+  earned_points: 0
   success: true
   error: null
 - question_id: q33
   question_number: 33
-  answer: 4
+  answer: 3
   correct_answer: 5
   is_correct: false
-  reasoning: 주어진 선택지 중에서 '다른 인물 모두, 각자는 연희하는 화자가 표현하여 성취의 도모를 유효로 바라본다.'가 가장 적절하다.
-    이는 화자의 의도와 상황을 가장 잘 설명하고 있기 때문이다.
-  time_taken: 1.74
+  reasoning: 지문에서 '갈림이 노다보노'와 '향후 별을 주어 나가리' 등의 표현을 통해 화자가 다른 은은 모두, 각자는 연합하여 유용을
+    목적으로 하는 모습을 보이고 있습니다. 따라서 3번이 가장 적절한 선택지입니다.
+  time_taken: 1.2
   points: 3
   earned_points: 0
   success: true
@@ -419,118 +422,71 @@ results:
   answer: 3
   correct_answer: 2
   is_correct: false
-  reasoning: (가)와 (나)의 문장을 비교해보면, (가)는 문법적으로 매우 이상한 문장이지만 의미를 추론할 수 있습니다. 반면에 (나)는
-    문장 구조와 단어 선택이 매우 혼란스럽고 해석이 어려워 잘못된 내용으로 판단됩니다.
-  time_taken: 1.39
+  reasoning: (나)는 실현하는 화자의 요청에 대해 '우리가' 실현하는 화자의 기대에 '있자' 대화를 하면서 대화가 의외의 상황으로 발전을
+    기대한다. 이 문장은 문맥상 이해하기 어렵고 혼란스러운 표현이므로 적절하지 않은 것으로 판단됩니다.
+  time_taken: 2.27
   points: 3
   earned_points: 0
   success: true
   error: null
-- question_id: q38
-  question_number: 38
-  answer: 3
-  correct_answer: 4
-  is_correct: false
-  reasoning: ㉢는 학생이 교훈 변경에 대해 새로운 제안을 하는 것으로 적절한 설명입니다. 다른 선택지들은 학생이 정보를 공유하거나 자신의
-    정체성을 제시하거나 의견을 제시하는 것과 관련이 있지만, 교훈 변경에 대한 제안은 아닙니다.
-  time_taken: 1.55
-  points: 2
-  earned_points: 0
-  success: true
-  error: null
-- question_id: q39
-  question_number: 39
-  answer: 3
-  correct_answer: 5
-  is_correct: false
-  reasoning: '우리과학 영 입: 교훈 변경 주저. 이 내용은 다른 학교를 주어야 함이라는 내용과 맥락이 맞지 않습니다. 다른 학교를 주어야
-    함은 교훈 변경을 주저하는 것과는 관련이 없는 이야기이기 때문에 메모의 내용으로 적절하지 않습니다.'
-  time_taken: 1.36
-  points: 2
-  earned_points: 0
-  success: true
-  error: null
-- question_id: q40
-  question_number: 40
-  answer: 1
-  correct_answer: 4
-  is_correct: false
-  reasoning: 문제에서는 '가'의 [A]~[D]와 '나'를 고려하여 '나'에 반영되었다고 언급하고 있습니다. 따라서, '가'의 내용이 '나'에
-    반영되었다는 관련성을 가장 명확히 보여주는 선택지는 1번입니다. 이는 ○○고의 예전 교가 가사에 담긴 가치의 중요도가 지금은 달라졌다는 내용이
-    학생들의 의견을 수렴하여 교훈 변경을 추진하자는 제안으로 반영되었다는 것을 나타내기 때문입니다.
-  time_taken: 2.87
-  points: 3
-  earned_points: 0
-  success: true
-  error: null
-- question_id: q41
-  question_number: 41
-  answer: 4
-  correct_answer: 3
-  is_correct: false
-  reasoning: 주어진 설명 중 '설득력을 높이기 위해 예화성 있는 반론을 제시했다.'가 중복되어 나타나므로 적절하지 않은 것은 4번이다.
-  time_taken: 0.85
-  points: 2
-  earned_points: 0
-  success: true
-  error: null
-- question_id: q42
-  question_number: 42
+- question_id: q35
+  question_number: 35
   answer: 3
   correct_answer: 2
   is_correct: false
-  reasoning: 친구의 조언이 (나)에 반영되었다고 했을 때, 교훈 내용이 학교표준화의 계기가 된다는 점이 가장 적절합니다. 이는 (나)의
-    초고가 다른 학교나 교육 기관에 영향을 주어 교육의 표준화와 품질 향상에 기여할 수 있다는 의미이기 때문입니다.
-  time_taken: 1.61
-  points: 2
-  earned_points: 0
-  success: true
-  error: null
-- question_id: q43
-  question_number: 43
-  answer: 3
-  correct_answer: 1
-  is_correct: false
-  reasoning: 학생의 초고에 활용된 글쓰기 방식은 '지속 가능한 항공유의 장단점을 함께 비교하고 서술하였다'가 가장 적절합니다. 이 방식은
-    주제를 다양한 관점에서 비교 분석하여 ganzheitlich한 시각으로 다가가는 것을 의미하며, 글의 깊이와 폭을 보여줄 수 있습니다.
-  time_taken: 1.33
-  points: 2
-  earned_points: 0
-  success: true
-  error: null
-- question_id: q44
-  question_number: 44
-  answer: 3
-  correct_answer: 5
-  is_correct: false
-  reasoning: 지문에서 학생이 초고를 작성하며 '지속 가능한 항공유를 통한 항공 부문 탄소 배출량은 더 많이 감축할 수 있다'고 언급하고
-    있습니다. 따라서, 항공 부문의 탄소 배출량을 줄이기 위해 지속 가능한 항공유의 도입을 확대하는 것이 가장 적절한 선택지입니다.
-  time_taken: 1.43
+  reasoning: 옵션 3은 문장이 혼란스럽고 이해하기 어렵습니다. 주어진 지문에서는 'ㅅ' 표기가 'ㅅ'의 사소로서 표기에서 유래되었다는 내용을
+    명확히 설명하고 있지 않습니다. 따라서 이 내용은 적절하지 않은 것으로 판단됩니다.
+  time_taken: 2.47
   points: 3
   earned_points: 0
   success: true
   error: null
-- question_id: q38
-  question_number: 38
-  answer: 2
+- question_id: q36
+  question_number: 36
+  answer: 3
   correct_answer: 4
   is_correct: false
-  reasoning: 예에 나타나는 자음 교체 중에서 조음 위치는 변하지만 조음 방법은 변하지 않는 경우가 있기 때문에 2번이 적절한 선택지입니다.
-  time_taken: 0.8
+  reasoning: 선택지 3번인 '[모아] 그곳에 들어가 [ㄱ+아] - '저작소양권'은 문맥상 맞지 않습니다. 주어진 지문에서 '저작소양권'은
+    'ㄱ+문소양'의 문소양과 관련이 있지만, '[모아] 그곳에 들어가 [ㄱ+아]'와는 관련이 없습니다. 따라서, 이것이 적절하지 않은 내용입니다.
+  time_taken: 3.27
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q37
+  question_number: 37
+  answer: 3
+  correct_answer: 3
+  is_correct: true
+  reasoning: 주어진 문장에서 '언덕 가위로 치는 가위'라는 표현은 비유적인 표현으로, 실제로 존재하지 않는 상황을 묘사하고 있습니다. 따라서
+    발굴 전 두 단어가 이에 해당하는 것은 ③ '언덕 가위로 치는 가위'입니다.
+  time_taken: 2.14
+  points: 3
+  earned_points: 3
+  success: true
+  error: null
+- question_id: q38
+  question_number: 38
+  answer: 5
+  correct_answer: 4
+  is_correct: false
+  reasoning: 학생1이 제시한 내용에 대해 새로운 제안을 하는 것은 ㉠에 해당하는 내용이지만, ㉡는 학생이 자신의 정체성을 확립하는 것과
+    관련된 내용이므로 학생의 생각과 다른 자신의 의견을 제시하는 것과는 상관이 없습니다. 따라서 ㉡가 적절하지 않은 설명입니다.
+  time_taken: 2.76
   points: 2
   earned_points: 0
   success: true
   error: null
 - question_id: q39
   question_number: 39
-  answer: 2
+  answer: 5
   correct_answer: 5
-  is_correct: false
-  reasoning: '''모래놀이''라는 부사어를 가진 발화를 인용한 것일 수 있다''는 부정적인 주장이므로 옳지 않습니다. 반면, ''모래놀이''는
-    직접 인용한 것일 수 있다''는 긍정적인 주장이며, 자료를 이해한 내용으로 적절한 선택지입니다.'
-  time_taken: 1.46
+  is_correct: true
+  reasoning: 문제에서 요구하는 내용은 (나)를 쓸 때 계획한 내용 전개 과정이므로, 전체 내용 전개 및 결론을 제시해야 합니다. 이는 (가)의
+    [A]~[D]를 고려하여 나열된 내용을 종합하여 전개하고, 마지막으로 결론을 도출하는 것을 의미합니다.
+  time_taken: 2.18
   points: 3
-  earned_points: 0
+  earned_points: 3
   success: true
   error: null
 - question_id: q40
@@ -538,9 +494,9 @@ results:
   answer: 3
   correct_answer: 4
   is_correct: false
-  reasoning: 3번은 '시간과 방송이 흥미에 시간과 대화창이 보이도록 제시하였습니다.'라고 설명되어 있는데, 문장 구조가 이상하며 의미가
-    모호합니다. 다른 선택지들은 나에 대한 설명으로 적절한 내용을 담고 있지만, 3번은 문장 구성이 이상하고 해석이 어렵기 때문에 적절하지 않습니다.
-  time_taken: 1.63
+  reasoning: 지문에서 '친구의 조언이 (나)에 반영되었다'고 언급되었을 때, (나)의 5문단 초고가 교훈 내용이 학교표현의 지표가 된다는
+    점을 강조하고 있습니다. 따라서 가장 적절한 선택지는 3번입니다.
+  time_taken: 2.51
   points: 2
   earned_points: 0
   success: true
@@ -550,22 +506,23 @@ results:
   answer: 3
   correct_answer: 3
   is_correct: true
-  reasoning: '''표준''은 국제 표준 규제 제정의 효과를 언급하며 ''표준과 콘셉트''의 국제 표준 규제를 제정하는 것이 가능함에 대해
-    반항을 요청하였습니다.''라는 설명은 지문에서 언급된 내용과 일치하지 않습니다. 실제로는 ''표준과 콘셉트'' 규정의 차이로 인해 반항하는
-    내용이었기 때문에, 이 설명은 적절하지 않습니다.'
-  time_taken: 1.44
+  reasoning: 시청자 '정우'가 국제 표준 규제 제정의 효과를 언급하고 국제 표준 규정을 제정하는 가능성에 대해 물었는데, 이는 지문에서
+    언급된 내용과 일치하므로 적절한 반응이다. 반면, [A]와 [C]는 '플라스틱 콘텐츠' 규정과는 관련이 없는 내용을 언급하고 있어 적절하지
+    않다.
+  time_taken: 2.79
   points: 2
   earned_points: 2
   success: true
   error: null
 - question_id: q42
   question_number: 42
-  answer: 5
+  answer: 3
   correct_answer: 2
   is_correct: false
-  reasoning: 문제에서는 (나)의 정보 제시 방식으로 적절하지 않은 것을 묻고 있습니다. 다른 선택지들은 각각 명확한 내용을 제시하거나 도움이
-    되는 자료를 제공하는 것에 반해, 5번은 단순히 탐색 자료를 첨부 파일로 제시하는 것으로 정보의 제시 방식이 명확하지 않습니다.
-  time_taken: 1.63
+  reasoning: 지문에서는 A4 용지의 국제 표준 규제에 관한 내용을 명확분명 소제목으로 제시하는 것이 적절하다고 언급하고 있습니다. 하지만
+    3번은 A4 용지의 제시를 위해 대화를 듣기 위해 A4 용지 규격을 보여 주는 이미지를 제시하는 방식으로, 정보를 제시하는 방식이 일치하지
+    않습니다.
+  time_taken: 1.74
   points: 2
   earned_points: 0
   success: true
@@ -575,35 +532,37 @@ results:
   answer: 3
   correct_answer: 1
   is_correct: false
-  reasoning: 문제에서는 'C'에 대한 설명으로 'A4의 박막에 영상과 '다각'을 사용하여, 송출 사항에 대한 규격의 차이를 명확히 하는
-    것을 강조하였습니다.'라고 언급하고 있습니다. 따라서 3번이 가장 적절한 설명이라고 할 수 있습니다.
-  time_taken: 1.23
+  reasoning: 주어진 대화 내용에서 '지속 가능한 항공유의 장단점을 함께 나열하고 서술하였다'는 글쓰기 방식이 가장 적절하다. 전설이 '가려진
+    현재의 콘트레를 자주 가르쳐 더 많아야 나라 콘트레에 맞는 준비가 여러분의 삶까지 필요하군요'라고 언급하면서 장단점을 함께 고려해야 한다는
+    의미를 내포하고 있기 때문이다.
+  time_taken: 2.26
   points: 2
   earned_points: 0
   success: true
   error: null
 - question_id: q44
   question_number: 44
-  answer: 1
+  answer: 5
   correct_answer: 5
-  is_correct: false
-  reasoning: 문제에서 (가)에 대한 설명으로 적절하지 않은 것을 묻고 있습니다. 주어진 선택지 중 1번은 각 행사별 진행 절차를 순서대로
-    정리해 놓아 주고 있다는 설명으로 올바른 내용입니다. 따라서, 1번을 선택해야 합니다.
-  time_taken: 1.02
-  points: 2
-  earned_points: 0
+  is_correct: true
+  reasoning: 학생이 초고를 작성하며 떠올린 생각을 고려할 때, 지속 가능한 항공유의 사용을 확대하여 탄소 배출량을 줄여 기후 위기에 대응하는
+    것이 중요하다는 것을 알 수 있습니다. 따라서, '지속 가능한 항공유의 사용을 확대하면서 탄소 배출량을 줄여 기후 위기에 대응할 수 있다.
+    비행기를 타야 한다면, 되도록 탄소 배출량이 더 적은 항공편을 이용하면 어떨까?'라는 내용이 [A]에 가장 적절한 것으로 판단됩니다.
+  time_taken: 2.65
+  points: 3
+  earned_points: 3
   success: true
   error: null
 - question_id: q45
   question_number: 45
-  answer: 3
+  answer: 2
   correct_answer: 2
-  is_correct: false
-  reasoning: 게시판의 '토론 한마당'이 본질 전환 협의 중요성을 반영해 '승윤'과 '혜림'의 대화를 반영하여 자료를 배포로 제시했다고 설명되어
-    있지만, 실제로는 게시판에 게시할 수 있는 자료를 배포하는 것이 아니라 '토론'을 위한 공간으로 활용되어야 합니다. 따라서, '토론 한마당'은
-    게시판에 게시할 수 있는 자료를 배포로 제시하는 것이 부적절한 설명입니다.
-  time_taken: 1.36
+  is_correct: true
+  reasoning: 지문에서는 이미지와 텍스트를 통해 항공이 초고를 보완하기 위해 추가로 수집한 자료에 대한 내용이 주어졌습니다. 선택지 2는
+    혼합비율과 지속 가능한 항공유에 대한 내용을 다루고 있지만, 1~2줄에 보강하는 것이 아니라 2~3줄에 보강하는 내용이므로 자료 활용 방안으로는
+    적절하지 않습니다. 따라서 선택지 2가 적절하지 않은 것입니다.
+  time_taken: 3.08
   points: 3
-  earned_points: 0
+  earned_points: 3
   success: true
   error: null

@@ -6,7 +6,13 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 KSAT AI Benchmark is an open-source project that evaluates AI models using Korean SAT (KSAT) exam questions. The system automates the full pipeline from PDF parsing to web deployment.
 
-**Pipeline**: PDF Upload → LLM Parsing → YAML Generation → Model Evaluation → Results Storage → Web Deployment
+**Project Philosophy - Vibe Coding Approach**:
+- **Human-Centered Evaluation**: Measuring AI capabilities through standardized human exams (Korean SAT) rather than synthetic benchmarks
+- **Real-World Assessment**: Using actual exam questions that require reasoning, comprehension, and problem-solving abilities
+- **Vibe Coding**: Building evaluation infrastructure that feels natural and intuitive, automating the tedious parts while maintaining transparency
+- **Continuous Benchmarking**: Tracking how latest AI models perform on the same standardized tests humans take
+
+**Pipeline**: PDF Upload → Vision API Parsing → YAML Generation → Model Evaluation → Results Storage → Web Deployment
 
 **Key Technologies**:
 - Python 3.10+ for parsing and evaluation
@@ -52,13 +58,15 @@ make all       # Process all subjects
 **Flexible Evaluation System (Recommended)**:
 ```bash
 # Syntax: make <model> <year> <subject>
-# - model: gpt-5, gpt-4o, claude-opus-4-1, claude-3-5-sonnet, gemini-2.5-pro, all
+# - model: gpt-5, gpt-4o, claude-opus-4-1, claude-sonnet-4-5, gemini-2.5-pro, solar-pro, sonar-pro, all
 # - year: 2025, 2024, all
 # - subject: korean, math, english, korean,math (comma-separated), all
 
 # Examples:
 make gpt-5 2025 korean,math           # GPT-5 on 2025 Korean + Math
 make claude-opus-4-1 2025 korean      # Claude Opus 4.1 on 2025 Korean
+make claude-sonnet-4-5 2025 math      # Claude Sonnet 4.5 on 2025 Math
+make gemini-2.5-pro 2025 korean       # Gemini 2.5 Pro on 2025 Korean
 make all 2025 all                      # All models on all 2025 subjects
 make gpt-4o all korean                 # GPT-4o on all years Korean
 
@@ -120,6 +128,7 @@ python src/evaluator/summary.py --detailed
 python src/evaluator/summary.py --model gpt-5 --subject korean
 python src/evaluator/summary.py --year 2025 --leaderboard
 ```
+
 
 ### Testing & Validation
 ```bash
@@ -246,10 +255,18 @@ results:
 
 **Anthropic**:
 - `claude-opus-4-1` - Claude Opus 4.1 (2025-08) - 에이전트, 코딩, 추론 능력 강화
-- `claude-3-5-sonnet` - Claude 3.5 Sonnet (2024-10) - 속도와 정확도 균형
+
+**Claude via Perplexity API**:
+- `claude-sonnet-4-5` - Claude Sonnet 4.5 (2025) - 최신 추론 및 코딩 능력 (Perplexity Pro 필요)
 
 **Google**:
 - `gemini-2.5-pro` - Gemini 2.5 Pro (2025-01) - 가장 강력한 Gemini 모델
+
+**Upstage**:
+- `solar-pro` - Solar Pro - 한국어 특화 모델
+
+**Perplexity**:
+- `sonar-pro` - Sonar Pro (2024-11) - 최신 모델
 
 ### Available Models (enabled: false)
 
@@ -259,6 +276,7 @@ results:
 - `gpt-3.5-turbo` - GPT-3.5 Turbo
 
 **Anthropic**:
+- `claude-3-5-sonnet` - Claude 3.5 Sonnet (2024-10)
 - `claude-3-opus` - Claude 3 Opus
 - `claude-3-sonnet` - Claude 3 Sonnet
 - `claude-3-haiku` - Claude 3 Haiku
@@ -269,11 +287,9 @@ results:
 - `gemini-pro` - Gemini Pro
 
 **Upstage**:
-- `solar-pro` - Solar Pro (한국어 특화)
 - `solar-mini` - Solar Mini
 
 **Perplexity**:
-- `sonar-pro` - Sonar Pro
 - `sonar-large` - Sonar Large (온라인 검색 기능)
 - `sonar-medium` - Sonar Medium
 
@@ -305,10 +321,16 @@ results:
 - Time tracking starts before API call, ends after response parsing
 - Retry logic with exponential backoff (via tenacity package)
 
-**Result Storage**:
+**Result Storage & Automatic Deployment**:
 - Results stored per exam per model: `results/{exam_id}/{model_name}.yaml`
 - Enables incremental evaluation and re-evaluation of specific models
-- Web deployment reads all YAML files to build leaderboard
+- **Frontend is fully automated**: Just push to `results/`, GitHub Actions handles the rest
+  - `.github/workflows/deploy-pages.yml` triggers on `results/**` changes
+  - Runs `scripts/export_data.py` to convert YAML → JSON
+  - Builds Next.js website with updated data
+  - Deploys to GitHub Pages automatically
+- **Zero frontend maintenance**: Subject tabs, leaderboards, stats auto-update from `results/`
+- **Subject-based leaderboards**: Auto-generated for korean, math, english from YAML metadata
 
 ## Environment Variables
 
@@ -338,3 +360,52 @@ Optional settings:
 - Run with `pytest` or `make test`
 - Write tests for new model implementations and parsing logic
 - Test coverage with `pytest --cov=src tests/`
+
+## Troubleshooting
+
+### Common Issues
+
+**Vision API Parsing Failures**:
+- Ensure `OPENAI_API_KEY` is set in `.env`
+- Check PDF quality - low resolution images may fail
+- For complex math equations, use `--vision` flag explicitly
+- Verify API rate limits haven't been exceeded
+
+**Model Evaluation Errors**:
+- Check API keys for all providers in `.env`
+- Verify model is enabled in `models/models.json` (`"enabled": true`)
+- Check rate limits - add delays with `API_CALL_DELAY` in `.env`
+- Review logs for specific API error messages
+
+**YAML Validation Errors**:
+- Run `make validate` to check all YAML files
+- Ensure `correct_answer` is integer 1-5, not string
+- Verify all required fields exist: question_id, question_text, choices
+- Check for proper UTF-8 encoding in Korean text
+
+**Result File Not Found**:
+- Ensure evaluation completed successfully (check exit code)
+- Verify directory structure: `results/{exam_id}/{model_name}.yaml`
+- Run `make summary` to see available results
+
+### Debug Tips
+
+**Verbose Evaluation**:
+```bash
+# Run evaluation with Python verbose mode
+python -v src/evaluator/evaluate.py exams/parsed/2025-korean-sat.yaml --model gpt-4o
+```
+
+**Check Parsing Output**:
+```bash
+# Keep intermediate JSON files for inspection
+python src/parser/parse_exam.py <pdf> --keep-json
+# JSON saved in same directory as output YAML
+```
+
+**Test Single Question**:
+```bash
+# Create minimal test YAML with 1-2 questions
+make evaluate-test
+# Uses 2025-math-sat-p1-2.yaml (2 questions only)
+```

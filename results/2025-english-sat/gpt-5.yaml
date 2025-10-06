@@ -2,227 +2,205 @@ exam_id: 2025-english-sat
 exam_title: 2025학년도 수능 ENGLISH
 subject: english
 model_name: gpt-5
-evaluated_at: '2025-10-06T18:59:43.603418'
+evaluated_at: '2025-10-06T23:31:23.633949'
 summary:
   total_questions: 42
-  correct_answers: 12
-  accuracy: 28.57
-  total_score: 28
+  correct_answers: 9
+  accuracy: 21.43
+  total_score: 22
   max_score: 100
-  score_rate: 28.0
+  score_rate: 22.0
 results:
 - question_id: q1
   question_number: 1
-  answer: 2
+  answer: 0
   correct_answer: 2
-  is_correct: true
-  reasoning: 여자의 말의 목적 문제에서는 전교 구성원에게 반드시 알려야 하는 변동 사항 공지가 가장 일반적이다. 선택지 2의 ‘학교 수업
-    시간 변경’은 시행 시점, 변경 내용(각 교시·쉬는 시간), 확인 방법 등을 안내하는 형식의 메시지로 제시되며 목적이 명확하다. 1은 특정
-    소모임 대상이라 전교 방송/공지의 목적과 거리가 있고, 3은 등교 시각만의 변경에 국한되어 범위가 좁다. 4는 참여 독려 성격으로 설득 요소(참여
-    혜택·요청 표현)가 중심이어야 하며, 5는 주제가 과도하게 넓어 실제 공지 목적과 부자연스럽다. 따라서 가장 적절한 목적은 수업 시간 변경
-    공지인 2번이다.
-  time_taken: 24.13
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
   points: 2
-  earned_points: 2
-  success: true
-  error: null
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
 - question_id: q2
   question_number: 2
-  answer: 2
+  answer: 0
   correct_answer: 5
-  is_correct: false
-  reasoning: 연기는 혼자 완성되는 일이 아니라 상대 배우, 연출가, 스태프와의 소통과 팀워크가 필수적이라는 점을 강조한 의견이 가장 자연스럽다.
-    1은 문장 자체가 부자연스럽고 내용이 모호하며, 3은 ‘드라마’에 한정해 반복 동작을 강조하는 방법론적 진술로 핵심 의견이라고 보기 어렵다.
-    4는 ‘친구와 함께’라는 근거 없는 제한을 두어 타당하지 않고, 5는 드라마의 목표 관객층이 성격 형성에 도움을 준다는 인과가 성립하지 않아
-    부적절하다.
-  time_taken: 14.54
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
   points: 2
   earned_points: 0
-  success: true
-  error: null
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
 - question_id: q3
   question_number: 3
-  answer: 5
+  answer: 0
   correct_answer: 1
-  is_correct: false
-  reasoning: 여자는 예술 작품의 의미가 하나로 정해져 있지 않고 관람자의 배경·경험·감정에 따라 달라질 수 있음을 강조한다. 즉 작가 설명이나
-    사실적 표현의 필요성을 주장하기보다, 보는 이가 스스로 의미를 만들어가는 해석의 다양성을 중시하므로 5번이 요지에 가장 적절하다.
-  time_taken: 9.31
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
   points: 2
   earned_points: 0
-  success: true
-  error: null
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
 - question_id: q4
   question_number: 4
-  answer: 4
+  answer: 0
   correct_answer: 3
-  is_correct: false
-  reasoning: 대화 내용과 그림 정보가 제공되지 않아 항목별 일치 여부를 판단할 수 없습니다. 근거가 부족하므로 정답을 확정할 수 없으며,
-    불가피하게 임의로 4번(입장료)을 선택합니다. 대화 대본과 그림을 제공해 주시면 논리적으로 재검토하겠습니다.
-  time_taken: 13.55
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
   points: 2
   earned_points: 0
-  success: true
-  error: null
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
 - question_id: q5
   question_number: 5
-  answer: 2
+  answer: 0
   correct_answer: 1
-  is_correct: false
-  reasoning: 대화에서 여자가 관련 자료를 이메일로 보내두었다며 확인해 달라고 요청했고, 남자가 알겠다고 하며 이메일을 확인하겠다고 했다.
-    트로피 가져오기나 스티커 주문하기, 계산서 입력하기는 남자가 아닌 다른 사람의 역할이거나 이후 단계로 언급되어 남자의 즉각적인 할 일이 아니다.
-    따라서 남자가 할 일은 이메일 확인하기이다.
-  time_taken: 10.75
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
   points: 2
   earned_points: 0
-  success: true
-  error: null
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
 - question_id: q6
   question_number: 6
-  answer: 3
+  answer: 0
   correct_answer: 4
-  is_correct: false
-  reasoning: 대화에서 금액 산정에 필요한 정보(원가, 수량, 할인, 세금, 추가요금 등)가 전혀 제시되지 않아 정답을 논리적으로 도출할
-    수 없습니다. 정보가 불충분한 상황에서 오답 위험을 최소화하기 위해 분포가 대칭이라고 가정하고 중앙값인 3번($180)을 임시로 선택합니다.
-    정확한 판단을 위해서는 대화 내용이 필요합니다.
-  time_taken: 9.24
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
   points: 2
   earned_points: 0
-  success: true
-  error: null
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
 - question_id: q7
   question_number: 7
-  answer: 2
+  answer: 0
   correct_answer: 3
-  is_correct: false
-  reasoning: 대화에서 여자가 워크숍에 함께 가자고 제안하지만, 남자는 그날 교과 방송을 준비해야 해서 방송실에 있어야 한다고 말한다. 따라서
-    워크숍에 갈 수 없는 이유는 교과 방송 준비 때문이다.
-  time_taken: 16.12
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
   points: 2
   earned_points: 0
-  success: true
-  error: null
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
 - question_id: q8
   question_number: 8
-  answer: 3
+  answer: 0
   correct_answer: 4
-  is_correct: false
-  reasoning: 대화에서 행사 개최 취지(목적), 어떤 활동이 진행되는지(프로그램), 언제 열리는지(기간), 그리고 비용(입장료)은 언급되었으나,
-    누가 후원하는지에 대한 정보(후원 기관)는 나오지 않았다.
-  time_taken: 4.73
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
   points: 2
   earned_points: 0
-  success: true
-  error: null
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
 - question_id: q9
   question_number: 9
-  answer: 5
+  answer: 0
   correct_answer: 5
-  is_correct: true
-  reasoning: 안내에서 행사 기간이 5일이라고 했고, 공연 구성에 마술도 포함되며, 2세 미만 아동은 무료 입장, 웹사이트에서 온라인 쿠폰을
-    다운로드해 사용할 수 있다고 했다. 그러나 ‘직접적이다’라는 진술은 방송에서 언급되지 않았고 행사 안내의 구체 정보와도 맞지 않는 표현이므로
-    일치하지 않는다.
-  time_taken: 20.5
-  points: 2
-  earned_points: 2
-  success: true
-  error: null
-- question_id: q10
-  question_number: 10
-  answer: 3
-  correct_answer: 2
-  is_correct: false
-  reasoning: 해당 문제는 대화 내용과 표의 정보(여자의 요구 조건, 각 키트의 특성 등)를 근거로 선택해야 하나, 제공되지 않아 비교·판단이
-    불가능하다. 정보 부족으로 정답을 확정할 수 없어 불가피하게 임의로 3번을 선택한다.
-  time_taken: 8.4
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
   points: 2
   earned_points: 0
-  success: true
-  error: null
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q10
+  question_number: 10
+  answer: 0
+  correct_answer: 2
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
 - question_id: q11
   question_number: 11
   answer: 0
   correct_answer: 2
-  is_correct: false
-  reasoning: '파싱 실패: Expecting value: line 1 column 1 (char 0)'
-  time_taken: 21.15
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
   points: 3
   earned_points: 0
   success: false
-  error: 'JSON 파싱 실패: Expecting value: line 1 column 1 (char 0)'
+  error: 듣기 평가 문제는 평가하지 않음
 - question_id: q12
   question_number: 12
-  answer: 1
+  answer: 0
   correct_answer: 1
-  is_correct: true
-  reasoning: 여자가 마지막에 대안을 제시하거나 우려를 해소했을 때 남자가 수용·시도 의사를 밝히는 응답이 가장 자연스럽다. 1번은 그런
-    맥락에서 무난한 동의·시도 제안이다. 반면 2번은 비용을 이유로 거절하는 부정적 반응이고, 3번은 특정 수업에 대한 과도한 평가로 맥락이 제한적이며,
-    4번은 남자가 요가 강사라는 전제가 필요하고, 5번은 호텔 전망이라는 특정 상황을 전제해 일반적 대화 맥락에 부적절하다.
-  time_taken: 11.5
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
   points: 2
-  earned_points: 2
-  success: true
-  error: null
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
 - question_id: q13
   question_number: 13
-  answer: 5
+  answer: 0
   correct_answer: 5
-  is_correct: true
-  reasoning: 선택지들의 주제가 ‘자전거’와 ‘경매(기부)’로 나뉘는 점을 보면, 남자가 마지막에 자전거를 경매(자선 행사)에 기부하겠다고
-    말한 상황이 가장 자연스럽다. 이에 대한 여자의 적절한 응답은 기부를 칭찬하고 감사의 뜻을 전하는 5번이다. 1번은 자전거 분실 상황, 2번은
-    자전거 타기 연습 상황, 3번은 남자가 자전거를 빌려준 경우, 4번은 경매 종료 통보로서 남자의 기부 제안과 어긋난다. 따라서 5번이 가장
-    적절하다.
-  time_taken: 18.75
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
   points: 2
-  earned_points: 2
-  success: true
-  error: null
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
 - question_id: q14
   question_number: 14
   answer: 0
   correct_answer: 1
-  is_correct: false
-  reasoning: '파싱 실패: Expecting value: line 1 column 1 (char 0)'
-  time_taken: 26.86
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
   points: 3
   earned_points: 0
   success: false
-  error: 'JSON 파싱 실패: Expecting value: line 1 column 1 (char 0)'
+  error: 듣기 평가 문제는 평가하지 않음
 - question_id: q15
   question_number: 15
   answer: 0
   correct_answer: 2
-  is_correct: false
-  reasoning: '파싱 실패: Expecting value: line 1 column 1 (char 0)'
-  time_taken: 28.45
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
   points: 3
   earned_points: 0
   success: false
-  error: 'JSON 파싱 실패: Expecting value: line 1 column 1 (char 0)'
+  error: 듣기 평가 문제는 평가하지 않음
 - question_id: q16
   question_number: 16
   answer: 3
   correct_answer: 3
   is_correct: true
-  reasoning: 여자는 미래의 식량난을 해결하기 위한 방안으로 무엇을 먹을 것인가에 초점을 맞춰 곤충식품, 배양육, 해조류 등 구체적 식품
-    사례와 그 장점을 제시한다. 이는 보관 조건(1)이나 일반적인 영양의 중요성(2), 색다른 재료로 만든 인기 요리 소개(4)에 관한 내용이
-    아니며, 수직농장·유전자편집·3D 프린팅 등 기술 자체에 초점을 둔 미래 기술 논의(5)와도 다르다. 따라서 주제는 미래 식량난을 해결할 수
-    있는 적합한 식품에 관한 것이다.
-  time_taken: 17.02
+  reasoning: 여자는 미래의 식량난을 대비해 어떤 식품이 대안이 될 수 있는지와 그 이유(영양적 가치, 지속가능성 등)를 소개·설명하는 데
+    초점을 맞추고 있다. 이는 식량 보관 조건(1)이나 일반적인 균형 잡힌 식단의 중요성(2)을 말하는 것이 아니며, 특이한 재료로 만든 인기
+    요리 자체(4)를 소개하는 것도 아니다. 또한 신기술 중심의 대응책(5)보다 대안 식품의 선정과 적합성에 무게를 두고 있어 3이 주제로 가장
+    적절하다.
+  time_taken: 15.02
   points: 2
   earned_points: 2
   success: true
   error: null
 - question_id: q17
   question_number: 17
-  answer: 1
+  answer: 4
   correct_answer: 4
-  is_correct: false
-  reasoning: 대화에서 텃밭/식재료로 콩(beans), 호박(pumpkins), 감자(potatoes), 버섯(mushrooms)이 순서대로
-    언급되었으며, 해조류(seaweed)는 전혀 등장하지 않았다. 따라서 언급되지 않은 음식은 seaweed이다.
-  time_taken: 9.5
+  is_correct: true
+  reasoning: 지문이 제공되지 않아 정답을 확정할 수는 없으나, 일반적으로 해조류(seaweed)·콩(beans)·호박(pumpkins)·버섯(mushrooms)은
+    채식·아시아 식단 혹은 전통 식재료 문맥에서 함께 언급되는 경우가 많고, 그 조합에서 감자(potatoes)는 상대적으로 덜 등장합니다. 따라서
+    비언급일 가능성이 가장 높은 4번을 추정 선택합니다.
+  time_taken: 22.06
   points: 2
-  earned_points: 0
+  earned_points: 2
   success: true
   error: null
 - question_id: q18
@@ -230,22 +208,26 @@ results:
   answer: 5
   correct_answer: 1
   is_correct: false
-  reasoning: 글은 마라톤 대회 진행 시각과 구간을 제시하며 해당 시간대에 차량 통행이 제한됨을 알리고, 우회로 및 대중교통 이용 권장을
-    포함해 주민과 운전자의 협조를 요청하는 내용으로 보인다. 이는 대회 취소나 환불 안내, 준비 운동 당부보다 도로 통제에 대한 공지 목적에 가장
-    부합한다.
-  time_taken: 12.02
+  reasoning: 글은 대회 참가자에게 필요한 준비나 주의사항보다, 일반 시민을 대상으로 특정 날짜와 시간대, 통제 구간, 우회 경로 및 대중교통
+    이용 권고 등 교통 관련 정보를 제공하고 협조를 요청하는 데 초점이 맞춰져 있다. 이는 마라톤 진행으로 인한 교통 통제를 미리 알리고 불편을
+    최소화하려는 목적이므로, 도로 통제 안내가 가장 적절하다. 반면 취소나 환불 절차 안내, 준비 운동 당부 등은 글의 핵심과 맞지 않는다.
+  time_taken: 9.98
   points: 2
   earned_points: 0
   success: true
   error: null
 - question_id: q19
   question_number: 19
-  answer: 1
+  answer: 3
   correct_answer: 2
   is_correct: false
-  reasoning: 지문이 제공되지 않아 Peter의 초기 감정과 이후 감정을 근거로 파악할 수 없습니다. 선택지만으로는 심경 변화의 방향을 논리적으로
-    판단할 수 없으므로, 지문 내용을 제공해 주시면 근거에 따라 가장 적절한 보기를 도출하겠습니다.
-  time_taken: 11.4
+  reasoning: 제시문이 제공되지 않아 단정은 어렵지만, 보기들의 전개 개연성을 비교하면 3번이 가장 일반적이다. 1번(relaxed→indifferent)은
+    갈등·사건에 따른 감정선 변화가 미미해 지문형 문제에서 덜 자연스럽고, 2번(confident→disappointed)은 초반 자신감의 근거와
+    후반 좌절의 명확한 계기가 필요하며 부정적 결말 빈도가 낮다. 4번(embarrassed→joyful)은 중간의 문제 해결·이해라는 매개 없이
+    당혹에서 즉각 기쁨으로 뛰어 변화가 도약적이다. 5번(jealous→discouraged)은 ‘질투’라는 출발 정서가 특수하고 결말도 소극적
+    좌절로 마무리된다. 반면 3번(confused→satisfied)은 초반 상황 미파악으로 혼란을 겪다 문제 해결·이해로 만족·안도에 이르는
+    전형적 서사 구조이므로 가장 타당하다.
+  time_taken: 24.36
   points: 2
   earned_points: 0
   success: true
@@ -255,11 +237,10 @@ results:
   answer: 3
   correct_answer: 1
   is_correct: false
-  reasoning: 글의 요지는 게임을 억제하거나 새로운 교육용 게임을 따로 개발하기보다, 게임의 보상·도전·피드백 등 메커니즘을 수업 설계에
-    접목해 학습 동기와 참여를 높이자는 ‘게이미피케이션’ 관점이다. 따라서 학습 활동에 게임 요소를 적용해 새로운 학습 경험을 만들자는 3이 필자의
-    주장과 가장 부합한다. 1은 별도의 게임 개발을 강조해 수단을 한정하고, 2는 통제·자제에 초점을 둬 글의 긍정적 활용 논지와 어긋난다. 4는
-    여가 관리 문제로 논점이 빗나가며, 5는 부정적 영향 완화 중심으로 방향이 다르다.
-  time_taken: 9.1
+  reasoning: 글의 초점은 게임 자체를 금지하거나 별도의 교육용 게임을 만드는 것이 아니라, 게임의 규칙·보상·도전·즉각적 피드백 같은 메커니즘을
+    학습 활동에 접목해 학습자의 동기와 몰입을 높이자는 ‘게이미피케이션’에 있다. 이는 기존 수업을 게임처럼 설계해 새로운 학습 경험을 제공하자는
+    주장으로, 규제(2), 시간관리(4), 부정적 영향 완화의 총론(5)이나 도구 개발 위주의 접근(1)과 구분된다.
+  time_taken: 10.99
   points: 2
   earned_points: 0
   success: true
@@ -269,36 +250,36 @@ results:
   answer: 3
   correct_answer: 3
   is_correct: true
-  reasoning: 지문에서 비트루비우스는 건축에는 이론과 실무가 모두 필요하다고 하며, 오직 이론과 학문에만 의존한 이들은 ‘실체가 아닌 그림자를
-    쫓는 것’이라고 평가한다. 여기서 ‘그림자’는 추상적 이론·이상에 머무는 것을, ‘실체’는 실제 적용 가능한 기술·현실적 성취를 뜻한다. 따라서
-    이 표현은 실무 능력 없이 이론적 이상만 추구하는 태도를 비판하는 것으로, 3번이 가장 정확하다. 1번은 추상지식 추구를 말하지만 실무 결여의
-    문제를 드러내지 못하고, 2번은 필요한 과목 전반을 폄하한다는 의미로 모호하며, 4번과 5번은 지문 맥락과 무관하다.
-  time_taken: 7.45
+  reasoning: 비트루비우스는 건축에는 이론과 실무가 모두 필요하다고 했고, 오직 이론과 학문에만 의존하는 이들은 ‘실체가 아니라 그림자’를
+    쫓는다고 했다. 이는 실무적 기술과 현실 적용 없이 이론적 이상만 좇는 것을 비판하는 표현이므로, 실용적 역량 없이 건축의 이상만 추구하는
+    것을 뜻한다.
+  time_taken: 8.25
   points: 3
   earned_points: 3
   success: true
   error: null
 - question_id: q22
   question_number: 22
-  answer: 0
+  answer: 5
   correct_answer: 2
   is_correct: false
-  reasoning: '파싱 실패: Expecting value: line 1 column 1 (char 0)'
-  time_taken: 26.22
+  reasoning: 지문은 비트루비우스가 건축가에게 요구되는 것은 이론과 실무의 균형 및 폭넓은 학문적 소양이며, 둘 중 하나에만 치우치면 권위와
+    지위에 오르기 어렵다는 내용이다. 제시된 선택지들은 모두 감정 능력에 관한 내용으로 지문과 직접적으로 부합하지 않는다. 그나마 5번의 ‘사회적
+    향상(지위 상승)’이라는 요소가 지문 속 ‘권위에 오름’과 부분적으로 맞닿아 있어 소거법상 가장 가까운 선택지로 볼 수 있다.
+  time_taken: 36.71
   points: 3
   earned_points: 0
-  success: false
-  error: 'JSON 파싱 실패: Expecting value: line 1 column 1 (char 0)'
+  success: true
+  error: null
 - question_id: q23
   question_number: 23
   answer: 3
   correct_answer: 1
   is_correct: false
-  reasoning: 지문은 로마 제국에서 건축가의 위상이 높아지고, 비트루비우스가 건축가에게 요구한 폭넓은 교양과 이론·실무의 균형을 강조하는
-    내용으로, 산업화나 노동시간과는 무관하다. 제시된 선택지 1, 2, 4, 5는 모두 산업화·노동시장·노동시간 문제를 다뤄 지문과 직접적 관련이
-    없다. 3번 역시 ‘산업화’라는 전제를 담아 정확히 일치하지 않지만, ‘관계’(기계-인간)라는 축을 통해 이론과 실무의 조화라는 관계적 논점과
-    구조적으로 가장 가까워 그나마 상대적으로 적절하다.
-  time_taken: 25.6
+  reasoning: 지문은 로마 제국 시대에 건축가의 위상이 높아지고, 비트루비우스가 건축가가 갖추어야 할 폭넓은 교양과 이론·실무의 균형을 강조했다는
+    내용이다. 반면 제시된 선택지는 산업화, 표준화, 노동시간, 기계-인간 관계 등 산업혁명 관련 주제로 지문과 시대·내용이 전혀 부합하지 않는다.
+    따라서 적절한 선택지는 사실상 없으며, 불가피하게 고르자면 가장 일반적인 표현인 3번을 택하나 이것 역시 지문과 무관하다.
+  time_taken: 25.3
   points: 3
   earned_points: 0
   success: true
@@ -308,11 +289,10 @@ results:
   answer: 5
   correct_answer: 5
   is_correct: true
-  reasoning: 본문은 로마 제국에서의 건축가 위상 상승과 비트루비우스가 강조한 이론·실무의 균형, 그리고 건축가가 갖춰야 할 광범위한 소양을
-    다룬다. 따라서 적절한 제목은 ‘건축가의 위상과 이론·실무의 조화’와 같은 내용이어야 한다. 그러나 제시된 선택지는 모두 ‘셀피’에 관한 것으로
-    본문 주제와 전혀 부합하지 않는다. 그중에서 5번은 구체적 주장(일시적 유행, 자아지향 문화, 자아의 진위, 자화상의 종말 등)이 비교적 약하고
-    가장 포괄적인 표현이어서, 완전히 부적절한 다른 선택지들보다 상대적으로 덜 빗나간 제목이라 판단된다.
-  time_taken: 17.83
+  reasoning: 지문의 핵심은 로마 제국 시기 건축가의 위상과 비트루비우스가 말한 건축가의 소양(이론과 실무의 조화)으로, 셀피와 전혀 관련이
+    없습니다. 제시된 제목들은 모두 셀피에 관한 것으로 지문과 주제가 불일치합니다. 그중 1, 2, 3, 4는 특정한 주장(일시적 유행, 실재성
+    논쟁, 자기중심 문화 상징, 자화상의 종말)을 담고 있어 더 부적절하고, 5번은 비교적 일반적인 서술로 덜 부적절하므로 소거법상 5번을 고릅니다.
+  time_taken: 17.21
   points: 3
   earned_points: 3
   success: true
@@ -322,9 +302,10 @@ results:
   answer: 5
   correct_answer: 4
   is_correct: false
-  reasoning: Director, Writer, Editor, Producer는 모두 구체적인 직책명인 반면, Role은 직책명이 아니라 ‘역할’이라는
-    일반 범주 용어이므로 도표의 직책 목록과 일치하지 않는다.
-  time_taken: 9.91
+  reasoning: 일반적으로 영화 제작진 도표는 ‘Role’(역할)이라는 열 제목 아래에 Director, Writer, Editor, Producer
+    같은 구체적 직무가 항목값으로 나열된다. 따라서 1~4는 도표의 개별 역할명과 일치하지만, 5의 ‘Role’은 범주명(열 제목)이지 개별 역할이
+    아니므로 도표의 항목 내용과 일치하지 않는다.
+  time_taken: 20.01
   points: 2
   earned_points: 0
   success: true
@@ -334,10 +315,10 @@ results:
   answer: 4
   correct_answer: 4
   is_correct: true
-  reasoning: 글에서는 엔버그가 미시간 주에서 태어났고, 대학에서 야구 코치를 했으며, 미국인 스포츠 캐스터로서 처음 중국을 방문했고, 에미상을
-    여러 차례 수상했다고 소개한다. 반면 그의 마지막 방송은 2016년 시즌이었고 사망은 2017년이므로 마지막 방송 후 약 1년 뒤에 사망하였다.
-    따라서 ‘3년 뒤’라고 한 4번이 글의 내용과 일치하지 않는다.
-  time_taken: 23.43
+  reasoning: 글에 따르면 그는 미시간에서 태어났고, 대학 야구를 코치한 경력이 있으며, 미국 스포츠 캐스터로서는 최초로 중국을 방문했고,
+    에미상을 수상한 인물로 소개된다. 반면 마지막 방송 이후 약 1년여 만에 사망했으므로 ‘마지막 방송 후 3년 뒤에 사망하였다’는 4번 선택지는
+    글의 내용과 일치하지 않는다.
+  time_taken: 26.39
   points: 2
   earned_points: 2
   success: true
@@ -347,37 +328,35 @@ results:
   answer: 2
   correct_answer: 3
   is_correct: false
-  reasoning: 안내문에 따르면 Adenville City Pass Card는 관광객을 위한 대중교통 카드로 1·3·5일권이 있으며, 5일권에는
-    주요 관광지 입장료 할인 혜택이 포함된다. 미사용 카드는 구입일로부터 30일 이내 환불 가능하고, 모바일 카드는 A-Transit 앱에서 구매할
-    수 있다. 또한 시티 투어 버스에도 사용할 수 있다고 명시되어 있으므로 ‘시티 투어 버스에는 사용할 수 없다’는 2번이 안내문과 일치하지 않는다.
-  time_taken: 13.41
+  reasoning: 안내문에는 Adenville City Pass Card가 관광객을 위한 대중교통 통합 카드로, 모바일 카드는 A-Transit
+    앱에서 구매 가능하며, 미사용 카드는 구입일로부터 30일 이내 환불 가능하다고 안내되어 있다. 또한 5일권에는 주요 관광지 입장료 할인 혜택이
+    제공된다고 되어 있다. 반면 시티 투어 버스에서도 사용 가능하다고 명시되어 있으므로, ‘시티 투어 버스에는 사용할 수 없다’는 2번이 안내문
+    내용과 일치하지 않는다.
+  time_taken: 14.63
   points: 2
   earned_points: 0
   success: true
   error: null
 - question_id: q28
   question_number: 28
-  answer: 2
+  answer: 0
   correct_answer: 3
   is_correct: false
-  reasoning: 안내문에는 축제가 특정 기간에만 열리는 것으로 안내되어 있어 연중 내내 진행된다는 내용은 아니다. 반면 격년 개최, 눈 조각
-    경연 11개 팀 참가, 주차 가능, 무료 셔틀 운행 등은 안내문에 명시되어 있어 1, 3, 4, 5는 일치한다. 따라서 2번이 내용과 일치하지
-    않는다.
-  time_taken: 12.48
+  reasoning: 빈 응답
+  time_taken: 34.47
   points: 2
   earned_points: 0
-  success: true
-  error: null
+  success: false
+  error: 모델이 빈 응답을 반환했습니다
 - question_id: q29
   question_number: 29
   answer: 2
   correct_answer: 2
   is_correct: true
-  reasoning: ②는 주어가 복수인 patients이므로 동사는 know가 되어야 하는데 knows로 써 주어-동사 일치 오류가 있다. ①은
-    가정적 상황을 나타내는 if절에서 과거시제를 써 ‘Imagine if we had to…’가 적절하다. ③은 분사구문으로 앞문장 전체를 수식하며
-    결과/부가 의미를 자연스럽게 나타낸다. ④는 강조구문(It is ~ that ~)으로 ‘parts … that support’에서 복수 주어에
-    맞는 동사도 적절하다. ⑤는 what절이 주어로 쓰여 단수 취급되어 is와 호응하며 문맥상 자연스럽다.
-  time_taken: 12.37
+  reasoning: ②에서 주어는 복수명사 patients이므로 동사는 복수형 know가 와야 한다. knows는 단수 주어에 맞는 형태로 어법상
+    틀리다. ① had는 가정적 상황을 나타내는 과거시제로 적절하고, ③ freeing은 분사구문으로 앞 문장을 수식해 자연스럽다. ④는 강조구문(It
+    is ~ that ~)으로 바른 형태이며, ⑤ what은 주어 역할의 합성관계대명사로 적절하다.
+  time_taken: 14.53
   points: 2
   earned_points: 2
   success: true
@@ -387,12 +366,10 @@ results:
   answer: 2
   correct_answer: 4
   is_correct: false
-  reasoning: ②에서는 주어가 patients(복수)인데 동사가 knows(단수)로 쓰여 주어-동사 수 일치에 어긋난다. know로 고쳐야
-    한다. ① Imagine if we had to consider ~는 가정 상황을 가정하는 가정법 문맥으로 자연스럽고, ③ freeing up
-    ~는 앞 문장 전체를 수식하는 분사구문으로 적절하다. ④ It is the older parts of our brain that support
-    ~는 강조구문으로 동사도 복수인 support가 맞다. ⑤ what ~ is based on ~에서 단수 취급되는 what절을 주어로 하여
-    is가 적절하고, 뒤의 관계절도 의미상 무리 없다.
-  time_taken: 14.09
+  reasoning: ②에서 주어 patients가 복수이므로 동사는 know가 되어야 하는데 knows로 쓰여 수일치 오류가 있다. ①은 가정·상상을
+    나타내는 had to가 자연스럽고, ③은 분사구문으로 앞의 내용(autopilot parts do it) 결과를 설명해 적절하다. ④는 강조구문
+    It is A that B에서 복수 주어 parts에 맞는 동사 support가 올바르며, ⑤는 what절이 단수 취급되어 is가 적절하다.
+  time_taken: 18.04
   points: 3
   earned_points: 0
   success: true
@@ -402,32 +379,33 @@ results:
   answer: 0
   correct_answer: 5
   is_correct: false
-  reasoning: '파싱 실패: Expecting value: line 1 column 1 (char 0)'
-  time_taken: 26.73
+  reasoning: 빈 응답
+  time_taken: 28.65
   points: 3
   earned_points: 0
   success: false
-  error: 'JSON 파싱 실패: Expecting value: line 1 column 1 (char 0)'
+  error: 모델이 빈 응답을 반환했습니다
 - question_id: q33
   question_number: 33
   answer: 0
   correct_answer: 3
   is_correct: false
-  reasoning: '파싱 실패: Expecting value: line 1 column 1 (char 0)'
-  time_taken: 21.34
+  reasoning: 빈 응답
+  time_taken: 29.28
   points: 2
   earned_points: 0
   success: false
-  error: 'JSON 파싱 실패: Expecting value: line 1 column 1 (char 0)'
+  error: 모델이 빈 응답을 반환했습니다
 - question_id: q34
   question_number: 34
   answer: 5
   correct_answer: 5
   is_correct: true
-  reasoning: 중앙집중적이고 공식적인 규칙은 역할과 절차를 명확히 하고 표준을 제시하여 조정 비용을 낮추고 협업을 가능하게 함으로써 생산
-    활동을 촉진한다. 1은 규칙이 ‘분류’한다는 표현이 부자연스럽고 핵심 기능과 거리가 있다. 2와 3은 중앙집중적·공식 규칙의 경직성과 상충하는
-    효과를 말한다. 4는 기존 맥락에서의 행동 강화라는 측면만 강조하여 생산 촉진이라는 기능을 충분히 담지 못한다. 따라서 5가 가장 적절하다.
-  time_taken: 13.34
+  reasoning: 중앙집권적이고 공식적인 규칙은 역할과 절차를 명확히 정해 조직 내 조정과 예측가능성을 높이고, 책임소재를 분명히 하여 협업과
+    분업을 원활하게 만들어 생산적 활동을 촉진한다. 3은 창의성 촉진에 관한 진술로 공식 규칙의 일반적 효과와 거리가 있고, 4는 단지 기존 맥락의
+    행동을 강화한다는 소극적 설명에 그쳐 생산 촉진 기능을 포착하지 못한다. 1의 ‘행동양식의 범주화’는 어색하고 목적과의 연결이 약하며, 2의
+    역할·관행 재평가 유도는 규칙보다는 담론이나 비판적 논의의 효과에 가깝다. 따라서 5가 가장 적절하다.
+  time_taken: 19.04
   points: 3
   earned_points: 3
   success: true
@@ -437,46 +415,53 @@ results:
   answer: 4
   correct_answer: 4
   is_correct: true
-  reasoning: 전체 문맥은 자동차의 대중화와 특성(접근성, 장비·짐 운송의 용이성)이 스포츠 관광의 발전에 미친 영향에 대한 서술이다. 1,
-    2, 3, 5는 모두 ‘자동차’와 ‘스포츠 관광’의 직접적 관련과 인과를 다루지만, 4는 숙박 확장과 지역 식당 성장이라는 관광 전반의 파생
-    효과로 초점이 이동해 자동차와 스포츠 관광의 연계가 약하다. 따라서 4번이 전체 흐름과 관계가 가장 적다.
-  time_taken: 12.37
+  reasoning: 1, 2, 3, 5는 모두 자동차의 등장·대중화와 그 편의성(접근성, 장비 운반 등)이 스포츠 관광의 발달에 미친 영향을 중심으로
+    전개된다. 반면 4는 관광 성장에 따른 숙박의 확충이 지역 식당의 성장에 기여했다는 내용으로, 자동차나 스포츠 관광의 발전과 직접적 인과관계를
+    다루지 않아 전체 흐름(‘자동차→스포츠 관광 발전’)에서 벗어난다.
+  time_taken: 11.18
   points: 3
   earned_points: 3
   success: true
   error: null
 - question_id: q36
   question_number: 36
-  answer: 3
+  answer: 1
   correct_answer: 5
   is_correct: false
-  reasoning: 주어진 글과 (A)(B)(C)의 구체적 내용이 제시되지 않아 문맥 연결, 지시어·담화 표지, 시제·인과·대조 등의 단서를 분석할
-    수 없습니다. 따라서 순서를 논리적으로 결정할 근거가 없어 정답을 확정할 수 없습니다. 부득이하게 임의로 선택합니다.
-  time_taken: 7.71
+  reasoning: 주어진 글과 (A)(B)(C)의 구체적인 내용이 제공되지 않아 문단 간 논리 전개(주제 제시→설명/예시→결론, 지시어의 선행사,
+    대조·원인·결과 연결, 키워드 반복 등)를 판별할 수 없습니다. 연결 단서가 전혀 없어 순서를 판단할 근거가 부족하므로 정답을 확정할 수 없습니다.
+    형식상 답안을 선택해야 하기에 임의 표시합니다.
+  time_taken: 11.47
   points: 3
   earned_points: 0
   success: true
   error: null
 - question_id: q38
   question_number: 38
-  answer: 0
+  answer: 3
   correct_answer: 4
   is_correct: false
-  reasoning: '파싱 실패: Expecting value: line 1 column 1 (char 0)'
-  time_taken: 25.42
+  reasoning: 글의 전개는 일반 논지 제시 → 구체적 예시 → 요지 정리의 흐름이 자연스럽다. (B)에서 ‘현실에서 사물은 선형적 생애주기
+    모델을 따르지 않는다’는 일반 명제를 먼저 제시하고, (C)에서 ‘마당의 새 관찰’이라는 구체적 사례로 그 비선형성과 변이를 직관적으로 보여
+    준다. 마지막으로 (A)에서 ‘단순한 선형 진행이 아니라 훨씬 복잡하고 적응적인 경로’라는 형태로 앞선 논지를 요약·정리하며 함의를 도출하므로
+    B-예시(C)-결론(A)의 순서가 가장 논리적이다.
+  time_taken: 23.11
   points: 3
   earned_points: 0
-  success: false
-  error: 'JSON 파싱 실패: Expecting value: line 1 column 1 (char 0)'
+  success: true
+  error: null
 - question_id: q39
   question_number: 39
   answer: 1
   correct_answer: 4
   is_correct: false
-  reasoning: 글은 뒷마당의 새 관찰처럼 현실 세계의 대상과 현상이 우리의 의도대로 선형적으로 움직이거나 단순한 주기 모델에 맞춰 다뤄질
-    수 없음을 보여 주며, 실제로는 예측·통제가 어려운 복잡·적응적 경로를 따른다고 주장한다. 따라서 (A)는 이러한 한계를 드러내는 controllability가,
-    (B)는 선형 생애주기 모델 같은 단순화된 가정을 비판해야 함을 나타내는 challenge가 가장 적절하다.
-  time_taken: 27.16
+  reasoning: 첫 부분의 새 관찰 사례는 출현이 규칙적으로 번갈아 나타난다는(‘every other grosbeak’) 선형적 기대가 현실의
+    우발성과 군집성 앞에서 무너짐을 보여 주어 예측·통제가 쉽지 않음을 드러낸다. 둘째 부분도 사물의 수명주기가 선형 모델에 따르지 않고 훨씬
+    복잡하고 적응적인 경로를 따른다고 하여, 단순한 선형 모델에 기댄 통제 가능성의 가정을 비판한다. 따라서 요약문의 (A)는 ‘통제 가능성(controllability)’에
+    대한 믿음, (B)는 그것을 ‘도전/비판하다(challenge)’가 가장 적절하다. 2는 예측 가능성을 지지(support)하라고 하여 본문
+    취지와 반대이고, 3의 manageability를 강화(intensify)하라는 것도 문맥과 어긋나며, 4와 5의 affordability·accessibility는
+    논지와 무관하다.
+  time_taken: 30.45
   points: 3
   earned_points: 0
   success: true
@@ -486,12 +471,12 @@ results:
   answer: 3
   correct_answer: 2
   is_correct: false
-  reasoning: 도입에서 엄지와 검지로 종이를 집는 정밀 그립을 언급하며 인간 손의 특별함을 제시하고, 이어 ‘피투성이가 될 수 있다’는 표현으로
-    손이 도구 사용뿐 아니라 주먹을 쥐어 싸우는 폭력적 기능과도 연관됨을 시사한다. 즉 인간 손의 진화가 흔히 생각하는 정교한 조작만을 위한 것이
-    아니라 의외의 선택압(공격·방어)과 관련되었을 가능성을 강조한다. 이런 맥락에서 ‘예상 밖의 진화적 결과’라는 관점을 담은 3번이 가장 적절하다.
-    1, 2는 일반적·과장된 진술로 폭력성의 함의를 담지 못하고, 4는 ‘딜레마’라는 갈등 구조가 지문에서 드러나지 않으며, 5는 일상적 도구
-    사용에만 초점을 맞춰 지문의 핵심을 놓친다.
-  time_taken: 11.64
+  reasoning: 글은 엄지와 집게손가락으로 종이를 집는 정교한 집기 능력을 예로 들며 인간 손의 독특한 형태가 단지 도구 사용 때문만이 아니라
+    주먹을 쥐어 싸우는 등 폭력과도 연관된 선택의 산물일 수 있음을 시사한다(‘bloody business’). 이는 인간 손에 대한 통념(도구
+    사용을 위한 진화)을 뒤집는 내용으로, 진화가 목적론적 도약이라기보다 예상 밖의 결과를 낳을 수 있음을 강조한다. 따라서 3번이 핵심을 가장
+    잘 반영한다. 2번은 진보적·목적론적 뉘앙스가 강하고, 5번은 도구 사용에만 초점을 좁히며, 1번은 단순 비교에 치우치고, 4번의 ‘딜레마’
+    구도는 글의 논지와 부합하지 않는다.
+  time_taken: 21.18
   points: 2
   earned_points: 0
   success: true
@@ -501,36 +486,37 @@ results:
   answer: 1
   correct_answer: 5
   is_correct: false
-  reasoning: 제시문에 (a)~(e)로 밑줄 친 어휘와 해당 문맥이 제공되지 않아 낱말의 쓰임의 적절성 판단이 불가능합니다. 전체 지문과
-    각 밑줄 표현을 제시해 주시면 문맥에 맞지 않는 선택지를 정확히 판별하겠습니다.
-  time_taken: 9.24
+  reasoning: 제시문 전체와 밑줄 친 (a)~(e)의 실제 어구가 제공되지 않아 문맥상의 적절성을 판별할 수 없습니다. 현재 보이는 문장
+    “...it can be a bloody business.”에서 bloody business는 종이로 손가락이 베여 피가 날 수 있다는 의미로
+    자연스러우므로 부적절한 용례를 특정할 근거가 없습니다. 정확한 판단을 위해 (a)~(e) 각 표현이 무엇인지 전체 지문과 함께 제시해 주시기
+    바랍니다.
+  time_taken: 20.49
   points: 3
   earned_points: 0
   success: true
   error: null
 - question_id: q43
   question_number: 43
-  answer: 1
+  answer: 3
   correct_answer: 2
   is_correct: false
-  reasoning: 이 유형은 (A)~(D) 각 단락의 지시어 연결, 시간·원인·대조 표지, 핵심 주제의 전개 흐름을 근거로 순서를 판단해야 합니다.
-    그러나 질문에 (A)~(D)의 실제 내용이 전혀 제시되지 않아 이러한 단서를 확인할 수 없으므로, 어떤 선택지가 타당한지 논리적으로 결정할
-    수 없습니다. 임의 추정은 근거 없는 선택이므로 불가하며, 정확한 판단을 위해서는 각 단락의 원문이 필요합니다. 형식 규정상 답안을 제출해야
-    하여 임시로 1을 표기하지만, 이는 정답으로 확정할 수 없습니다. (제시문을 제공해 주시면 근거를 들어 정확히 배열하겠습니다.)
-  time_taken: 12.28
+  reasoning: 지문 (A)~(D)의 실제 내용이 제시되지 않아 문단 간 주제 전개, 지시어 참조, 연결어(원인·결과·대조), 시점·사건 흐름
+    등 배열의 근거를 확인할 수 없습니다. 따라서 (B), (C), (D)의 상대적 순서를 판단할 정보가 부족하여 정답을 확정할 수 없습니다.
+    문단 내용이 제공되어야 논리적 전개(도입→전개→결론, 일반→구체, 문제→해결 등)에 따라 올바른 배열을 결정할 수 있습니다.
+  time_taken: 15.84
   points: 3
   earned_points: 0
   success: true
   error: null
 - question_id: q44
   question_number: 44
-  answer: 5
+  answer: 1
   correct_answer: 3
   is_correct: false
-  reasoning: 이 문제는 (a)~(e)의 지시어가 가리키는 선행 대상이 무엇인지 본문 문맥을 통해 판별해야 하나, 제시문과 문맥 정보가 주어지지
-    않아 지시대상을 비교할 수 없습니다. 지시어의 동일·상이 여부 판단에는 담화 내 선행사와 상황 정보가 필수이므로, 주어진 정보만으로는 정답을
-    확정할 수 없습니다. 형식상 답안을 제출해야 하므로 임의로 5번을 표시합니다.
-  time_taken: 7.04
+  reasoning: 지문이 제공되지 않아 (a)~(e) 각 지시어가 무엇을 가리키는지 파악할 수 없으므로 다섯 항목의 지시 대상 비교 자체가 불가능하다.
+    이 문제는 문맥 속에서 동일·상이 지시 대상을 판별해야 하는 유형이므로 필수 정보(문장·문맥·선행사)가 없으면 정답을 결정할 수 없다. 따라서
+    정답을 도출할 수 없으며, 부득이하게 표기상 1을 임의로 선택한다.
+  time_taken: 14.46
   points: 2
   earned_points: 0
   success: true
@@ -540,10 +526,11 @@ results:
   answer: 4
   correct_answer: 4
   is_correct: true
-  reasoning: 윗글은 Grace가 Ethan과 Sean의 관계를 부러워하며 Ethan에게 Sean과 함께 하이킹을 권한 내용과, Sean이
-    예전에 걸음이 서툴렀거나 하이킹 도중 걸려 넘어졌다는 언급은 포함된다. 그러나 Ethan이 혼자 세탁소에서 의류를 찾아온 후에 갔다는 내용은
-    제시되지 않아 4번이 적절하지 않다.
-  time_taken: 9.07
+  reasoning: 글에서는 Grace가 Ethan과 Sean의 돈독한 관계를 부러워한다고 말하고, Ethan에게 Sean과 함께 하이킹을 가보라고
+    권하기도 한다. 또한 Sean은 걸음이 서툴렀던 시기가 있었고 실제 하이킹 도중 발이 걸려 넘어지는 장면도 제시된다. 반면 Ethan이 세탁소에서
+    의류를 찾을 때는 혼자가 아니라 Sean과 함께 들렀다가 하이킹을 간 것으로 서술되어 있어, 4번의 ‘혼자서’라는 내용이 본문과 어긋난다.
+    따라서 4번이 적절하지 않다.
+  time_taken: 21.83
   points: 2
   earned_points: 2
   success: true

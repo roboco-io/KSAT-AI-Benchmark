@@ -68,35 +68,56 @@ def export_to_json():
             model_map[model_name] = []
         model_map[model_name].append(result)
     
-    # 리더보드 엔트리 생성
-    for model_name, model_results in model_map.items():
-        total_questions = sum(r['summary']['total_questions'] for r in model_results)
-        correct_answers = sum(r['summary']['correct_answers'] for r in model_results)
-        total_score = sum(r['summary']['total_score'] for r in model_results)
-        max_score = sum(r['summary']['max_score'] for r in model_results)
-        total_time = sum(
-            sum(q['time_taken'] for q in r['results'])
-            for r in model_results
-        )
-        
-        accuracy = (correct_answers / total_questions * 100) if total_questions > 0 else 0
-        score_rate = (total_score / max_score * 100) if max_score > 0 else 0
-        avg_time = total_time / total_questions if total_questions > 0 else 0
-        
-        leaderboard.append({
-            'model_name': model_name,
-            'accuracy': round(accuracy, 2),
-            'score_rate': round(score_rate, 2),
-            'total_score': total_score,
-            'max_score': max_score,
-            'total_questions': total_questions,
-            'correct_answers': correct_answers,
-            'avg_time': round(avg_time, 2),
-            'exams_count': len(model_results),
-        })
-    
-    # 정확도 순으로 정렬
-    leaderboard.sort(key=lambda x: x['accuracy'], reverse=True)
+    # 과목별로 결과 분류
+    def create_leaderboard(model_map_filtered):
+        """주어진 모델 맵으로 리더보드 생성"""
+        board = []
+        for model_name, model_results in model_map_filtered.items():
+            if not model_results:
+                continue
+
+            total_questions = sum(r['summary']['total_questions'] for r in model_results)
+            correct_answers = sum(r['summary']['correct_answers'] for r in model_results)
+            total_score = sum(r['summary']['total_score'] for r in model_results)
+            max_score = sum(r['summary']['max_score'] for r in model_results)
+            total_time = sum(
+                sum(q['time_taken'] for q in r['results'])
+                for r in model_results
+            )
+
+            accuracy = (correct_answers / total_questions * 100) if total_questions > 0 else 0
+            score_rate = (total_score / max_score * 100) if max_score > 0 else 0
+            avg_time = total_time / total_questions if total_questions > 0 else 0
+
+            board.append({
+                'model_name': model_name,
+                'accuracy': round(accuracy, 2),
+                'score_rate': round(score_rate, 2),
+                'total_score': total_score,
+                'max_score': max_score,
+                'total_questions': total_questions,
+                'correct_answers': correct_answers,
+                'avg_time': round(avg_time, 2),
+                'exams_count': len(model_results),
+            })
+
+        board.sort(key=lambda x: x['accuracy'], reverse=True)
+        return board
+
+    # 전체 리더보드
+    leaderboard = create_leaderboard(model_map)
+
+    # 과목별 리더보드 생성
+    subject_leaderboards = {}
+    for subject in ['korean', 'math', 'english']:
+        subject_model_map = {}
+        for model_name, model_results in model_map.items():
+            subject_results = [r for r in model_results if r.get('subject') == subject]
+            if subject_results:
+                subject_model_map[model_name] = subject_results
+
+        if subject_model_map:
+            subject_leaderboards[subject] = create_leaderboard(subject_model_map)
     
     # 통계
     total_exams = len(results)
@@ -106,6 +127,7 @@ def export_to_json():
     # JSON 데이터 생성
     data = {
         'leaderboard': leaderboard,
+        'leaderboardBySubject': subject_leaderboards,  # 과목별 리더보드 추가
         'stats': {
             'totalExams': total_exams,
             'totalEvaluations': total_evaluations,

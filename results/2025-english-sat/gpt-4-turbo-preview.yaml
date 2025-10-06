@@ -1,0 +1,567 @@
+exam_id: 2025-english-sat
+exam_title: 2025학년도 수능 ENGLISH
+subject: english
+model_name: gpt-4-turbo-preview
+evaluated_at: '2025-10-06T23:26:19.791878'
+summary:
+  total_questions: 42
+  correct_answers: 8
+  accuracy: 19.05
+  total_score: 21
+  max_score: 100
+  score_rate: 21.0
+results:
+- question_id: q1
+  question_number: 1
+  answer: 0
+  correct_answer: 2
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q2
+  question_number: 2
+  answer: 0
+  correct_answer: 5
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q3
+  question_number: 3
+  answer: 0
+  correct_answer: 1
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q4
+  question_number: 4
+  answer: 0
+  correct_answer: 3
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q5
+  question_number: 5
+  answer: 0
+  correct_answer: 1
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q6
+  question_number: 6
+  answer: 0
+  correct_answer: 4
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q7
+  question_number: 7
+  answer: 0
+  correct_answer: 3
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q8
+  question_number: 8
+  answer: 0
+  correct_answer: 4
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q9
+  question_number: 9
+  answer: 0
+  correct_answer: 5
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q10
+  question_number: 10
+  answer: 0
+  correct_answer: 2
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q11
+  question_number: 11
+  answer: 0
+  correct_answer: 2
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 3
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q12
+  question_number: 12
+  answer: 0
+  correct_answer: 1
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q13
+  question_number: 13
+  answer: 0
+  correct_answer: 5
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q14
+  question_number: 14
+  answer: 0
+  correct_answer: 1
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 3
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q15
+  question_number: 15
+  answer: 0
+  correct_answer: 2
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 3
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q16
+  question_number: 16
+  answer: 2
+  correct_answer: 3
+  is_correct: false
+  reasoning: 문제에서 제공된 정보가 없기 때문에, 여자가 하는 말의 주제를 정확히 알 수 없습니다. 따라서, 주제에 대한 가장 적절한 선택지를
+    결정하기 위한 구체적인 지문이나 대화 내용이 필요합니다. 제공된 선택지들은 음식 저장 조건, 영양가 있는 식단의 중요성, 미래 식량 부족 문제
+    해결을 위한 적합한 식품, 특이한 재료로 만든 인기 요리, 식량 부족 문제에 대처하기 위한 미래 기술 등 다양한 주제를 다루고 있습니다. 그러나
+    구체적인 대화나 지문 내용 없이는 어떤 주제가 여자가 하는 말에 가장 적절한지 판단할 수 없습니다.
+  time_taken: 9.28
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q17
+  question_number: 17
+  answer: 1
+  correct_answer: 4
+  is_correct: false
+  reasoning: 문제에서 구체적으로 언급된 음식에 대한 정보가 제공되지 않았습니다. 따라서 '언급된 음식이 아닌 것'을 판단하기 위한 기준이나
+    지문이 없기 때문에, 정확한 답변을 제공하는 것이 불가능합니다. 제공된 선택지(seaweed, beans, pumpkins, potatoes,
+    mushrooms) 중에서 어떤 것이 '언급된 음식이 아닌 것'인지 결정할 수 있는 정보가 없으므로, 이에 대한 논리적인 추론이나 결론을 도출할
+    수 없습니다.
+  time_taken: 4.66
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q18
+  question_number: 18
+  answer: 0
+  correct_answer: 1
+  is_correct: false
+  reasoning: "{\n  \"answer\": \"\",\n  \"reasoning\": \"문제에서 제공된 지문이 없어 정확한 답변을 제공할\
+    \ 수 없습니다. 지문의 내용에 따라 목적이 달라질 수 있으므로, 지문의 내용을 기반으로 한 명확한 분석이 필요합니다.\"\n}"
+  time_taken: 3.05
+  points: 2
+  earned_points: 0
+  success: false
+  error: 'JSON 파싱 실패: invalid literal for int() with base 10: '''''
+- question_id: q19
+  question_number: 19
+  answer: 0
+  correct_answer: 2
+  is_correct: false
+  reasoning: 문제에서 Peter의 심경 변화에 대한 구체적인 지문이 제공되지 않았습니다. 따라서, 제공된 정보만으로는 Peter의 심경
+    변화를 정확하게 파악하고 그에 따른 선택지를 결정하는 것이 불가능합니다.
+  time_taken: 4.47
+  points: 2
+  earned_points: 0
+  success: false
+  error: 유효하지 않은 답 번호
+- question_id: q20
+  question_number: 20
+  answer: 3
+  correct_answer: 1
+  is_correct: false
+  reasoning: 문제에서 제시된 정보만으로는 구체적인 글의 내용을 알 수 없으나, 제시된 선택지들 중에서 '학습 활동에 게임 요소를 적용해
+    새로운 경험을 해야 한다'는 옵션이 필자가 주장할 가능성이 높은 내용을 포함하고 있습니다. 이는 교육과 게임을 결합하는 혁신적인 접근을 제안하는
+    것으로, 현대 교육에서 게임 기반 학습이나 게이미피케이션(Gamification)의 적용이 증가하는 추세와 일치합니다. 나머지 선택지들은 게임의
+    사용을 제한하거나 부정적 영향에 초점을 맞추고 있어, 긍정적인 측면에서 게임을 활용하자는 주장과는 거리가 있습니다.
+  time_taken: 8.32
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q21
+  question_number: 21
+  answer: 3
+  correct_answer: 3
+  is_correct: true
+  reasoning: 지문에서 Marcus Vitruvius Pollio는 건축이 실용적이고 이론적인 지식을 모두 요구한다고 인식하며, 건축가가
+    되기 위해 마스터해야 할 학문들을 나열합니다. 그는 수공예 기술만을 추구하는 건축가들이 그들의 계획에 상응하는 권위 있는 위치에 도달할 수
+    없었고, 이론과 학문에만 의존한 사람들은 '현실이 아닌 그림자를 추구하고 있다'고 비판합니다. 여기서 'hunting the shadow,
+    not the substance'는 실제 건축을 수행하는 데 필요한 실용적 기술 없이 이론적, 학문적 지식만을 추구하는 것을 의미합니다. 따라서
+    이 표현은 '건축의 이상을 실용적 기술 없이 추구하는 것'에 가장 적절하게 부합합니다. 이는 선택지 3인 'pursuing the ideals
+    of architecture without the practical skills'과 일치합니다.
+  time_taken: 9.08
+  points: 3
+  earned_points: 3
+  success: true
+  error: null
+- question_id: q22
+  question_number: 22
+  answer: 0
+  correct_answer: 2
+  is_correct: false
+  reasoning: 제시된 선택지들은 모두 감정 조절, 감정 이해, 감정 공감 등과 관련된 내용을 다루고 있으나, 지문의 내용은 로마 제국 시대에
+    건축가의 위치가 상승했으며, 건축이 정치적 선언으로서 특히 중요해졌다는 점, 그리고 건축가가 되기 위해 필요한 실용적 지식과 이론적 지식의
+    조화, 그리고 마르쿠스 비트루비우스 폴리오가 제시한 건축가가 숙달해야 할 다양한 학문 분야에 대한 내용을 다루고 있습니다. 따라서, 제시된
+    선택지들은 지문의 내용과 관련이 없습니다.
+  time_taken: 8.37
+  points: 3
+  earned_points: 0
+  success: false
+  error: 유효하지 않은 답 번호
+- question_id: q23
+  question_number: 23
+  answer: 3
+  correct_answer: 1
+  is_correct: false
+  reasoning: 제시된 지문은 로마 제국 시대에 건축가의 위치가 상승했으며, 건축이 특히 중요한 정치적 선언이 되었다는 내용을 다루고 있습니다.
+    또한, 마르쿠스 비트루비우스 폴리오가 건축이 실용적이고 이론적인 지식을 모두 요구한다고 인식했으며, 건축가가 되고자 하는 사람이 숙달해야 할
+    학문 분야를 나열하고 있습니다. 이는 산업화가 기계-인간 관계에 미친 영향에 대한 직접적인 언급은 아니지만, 선택지 중에서 건축과 같은 전문
+    분야에서의 이론과 실습의 중요성을 강조하는 내용과 가장 밀접하게 연관된 것은 '기계-인간 관계에 대한 산업화의 영향'입니다. 다른 선택지들은
+    산업화에 의한 작업 시간 패러다임의 변화, 생산 절차 표준화의 노동 시장에 미치는 영향, 산업 시대에 시간 가치를 높이는 효율적 방법, 과도한
+    근로 시간이 노동자에게 초래한 문제들을 다루고 있으나, 이들은 지문의 내용과 직접적인 연관이 없습니다. 따라서, 가장 적절한 주제는 '기계-인간
+    관계에 대한 산업화의 영향'이라고 볼 수 있으나, 이는 지문의 내용과 일치하지 않습니다. 실제로, 제공된 지문과 선택지 모두가 서로 일치하지
+    않는 것으로 보입니다. 따라서, 정확한 답변을 제공하기 어렵습니다.
+  time_taken: 16.82
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q24
+  question_number: 24
+  answer: 1
+  correct_answer: 5
+  is_correct: false
+  reasoning: 제공된 지문은 로마 제국 시대에 건축가의 위치가 상승했으며, 건축이 특히 중요한 정치적 성명이 되었다는 것을 설명합니다. 마르쿠스
+    비트루비우스 폴리오는 건축이 실용적이고 이론적인 지식을 모두 요구한다고 인식했으며, 건축가가 되고자 하는 사람이 숙달해야 할 학문을 나열합니다.
+    이러한 내용은 '셀피(Selfie)'와 관련된 선택지들과는 직접적인 연관이 없습니다. 따라서, 제시된 선택지들 중 어느 것도 지문의 내용과
+    직접적으로 일치하지 않습니다. 그러나, 문제의 요구 사항에 따라 1~5 사이의 숫자를 선택해야 하므로, 이는 오류를 지적하는 답변입니다. 지문의
+    내용은 건축가의 역할과 교육에 대한 것이며, '셀피'와는 관련이 없기 때문에 제시된 선택지들 중 적절한 제목을 찾는 것은 불가능합니다.
+  time_taken: 13.9
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q25
+  question_number: 25
+  answer: 5
+  correct_answer: 4
+  is_correct: false
+  reasoning: 문제에서 제공된 지문이 없어 구체적인 도표의 내용을 알 수 없습니다. 그러나 주어진 선택지를 기반으로 분석할 때, 'Director',
+    'Writer', 'Editor', 'Producer'는 모두 영화나 방송 제작 과정에서 특정한 역할을 가리키는 직책이나 직무를 의미합니다.
+    반면, 'Role'은 이러한 직책이나 직무를 수행하는 개인의 역할을 일반적으로 지칭하는 용어로, 다른 선택지와는 성격이 다릅니다. 따라서 도표의
+    내용이 특정 직책이나 직무에 관한 것이라면, 'Role'은 그 내용과 일치하지 않는 용어일 가능성이 높습니다.
+  time_taken: 9.06
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q26
+  question_number: 26
+  answer: 3
+  correct_answer: 4
+  is_correct: false
+  reasoning: Dick Enberg에 관한 정보를 검토할 때, Michigan에서 태어났다(1번), 대학 야구를 코치했다(2번), 마지막
+    방송 후 3년 뒤에 사망하였다(4번), 그리고 Emmy Awards를 수상하였다(5번)는 사실들은 모두 그의 생애와 경력에 대한 정확한 정보입니다.
+    그러나 '중국을 방문한 첫 미국인 스포츠 캐스터였다'는 3번 선택지는 Dick Enberg의 알려진 업적이나 경력과 직접적으로 관련된 정보가
+    아니며, 이에 대한 구체적인 기록이나 널리 알려진 사실이 없기 때문에 내용과 일치하지 않는 것으로 판단됩니다. 따라서, 이 선택지는 문제에서
+    요구하는 '내용과 일치하지 않는 것'에 해당합니다.
+  time_taken: 8.58
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q27
+  question_number: 27
+  answer: 2
+  correct_answer: 3
+  is_correct: false
+  reasoning: 지문에 대한 구체적인 내용이 제공되지 않았기 때문에, Adenville City Pass Card에 관한 안내문의 내용을 정확히
+    알 수 없습니다. 따라서, 제공된 선택지 중 어느 것이 안내문의 내용과 일치하지 않는지 판단할 수 있는 정보가 없습니다. 정확한 답변을 제공하기
+    위해서는 Adenville City Pass Card에 대한 구체적인 안내문 내용이 필요합니다.
+  time_taken: 5.74
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q28
+  question_number: 28
+  answer: 2
+  correct_answer: 3
+  is_correct: false
+  reasoning: Luckwood Snow Festival에 대한 안내문의 내용을 기반으로, '연중 동안 진행된다'는 선택지 2는 페스티벌의
+    성격과 일치하지 않습니다. Snow Festival이라는 명칭에서 알 수 있듯이, 이 행사는 특정한 계절, 즉 겨울에 맞춰서 열릴 가능성이
+    높습니다. 눈 축제가 연중 내내 진행되는 것은 실질적으로 불가능하며, 이러한 이유로 선택지 2는 안내문의 내용과 일치하지 않는 것으로 판단됩니다.
+  time_taken: 6.38
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q29
+  question_number: 29
+  answer: 2
+  correct_answer: 2
+  is_correct: true
+  reasoning: 문장의 주어 'patients'는 복수형이므로, 동사 'knows' 역시 복수형 동사인 'know'로 사용되어야 맞습니다.
+    따라서 'knows'는 어법상 틀린 사용이며, 올바른 형태는 'know'이어야 합니다.
+  time_taken: 5.08
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
+- question_id: q30
+  question_number: 30
+  answer: 1
+  correct_answer: 4
+  is_correct: false
+  reasoning: 문제의 지문에는 'internal', 'uncomfortable', 'desire', 'diminishing', 'altruistic'라는
+    단어들이 직접적으로 언급되지 않습니다. 따라서, 문제의 요구사항인 '문맥상 낱말의 쓰임이 적절하지 않은 것'을 판단하기 위한 구체적인 단어들을
+    제공받지 못했습니다. 그러나, 제시된 선택지와 지문 내용을 바탕으로 판단할 때, 지문에는 이러한 단어들 대신 밑줄 친 부분에 해당하는 단어들이
+    포함되어 있으며, 이 중 문맥상 적절하지 않은 단어를 찾아야 합니다. 그러나 제공된 선택지는 지문에 나타난 단어들과 일치하지 않으므로, 오류가
+    있는 것으로 보입니다. 올바른 답변을 제공하기 위해서는 지문에 실제로 밑줄 친 단어들이 무엇인지 정확한 정보가 필요합니다. 따라서, 이 응답은
+    문제의 의도와 지문의 내용을 정확히 반영하지 못하는 오류를 포함하고 있습니다.
+  time_taken: 9.06
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q31
+  question_number: 31
+  answer: 5
+  correct_answer: 5
+  is_correct: true
+  reasoning: 지문은 우리가 일상적인 활동을 수행할 때, 예를 들어 물을 마시기 위해 일어나는 과정에서 의식적으로 모든 단계를 조직하거나
+    고려하지 않는다는 것을 설명합니다. 이러한 과정은 우리의 뇌가 자동으로 처리해주며, 이는 우리가 더 중요한 일에 의식을 집중할 수 있게 해줍니다.
+    지문에서는 이러한 자동화된 과정이 우리가 움직이고, 듣고, 보고, 많은 사회적 기술을 사용할 수 있게 해주는 뇌의 오래된 부분에 의해 지원된다고
+    언급합니다. 이러한 맥락에서, 'personal involvement' (개인적 참여)는 우리가 의식적으로 인지하지 않고도 일어나는 매우 기본적이고
+    빠른 분석에 기반한 우리가 인지하고, 느끼고, 생각하는 대부분의 것들과 가장 밀접하게 연관되어 있습니다. 다른 선택지들은 이러한 맥락과 직접적인
+    연관성이 덜 명확합니다.
+  time_taken: 12.14
+  points: 3
+  earned_points: 3
+  success: true
+  error: null
+- question_id: q33
+  question_number: 33
+  answer: 3
+  correct_answer: 3
+  is_correct: true
+  reasoning: 지문에서는 주의 경제 시대에 살고 있으며, 가장 크고 수익성이 높은 기업들이 사람들의 주의를 소비하는 기업들이라고 언급합니다.
+    광고 산업이 사람들의 의식 있는 시간을 포획하여 다른 이에게 판매하는 데 전념한다고 설명합니다. 무료로 사용할 수 있는 많은 흥미롭고 유용한
+    소프트웨어 시스템이 있다는 것이 마법 같아 보일 수 있지만, 무료로 보이는 것에 대해 누가 지불하고 있는지 볼 수 없다면 실제로 판매되는 제품은
+    '당신'이라는 것이 현대의 상식입니다. AI 기반 추천 시스템이 사람들의 창의적인 참여를 매개하며, 이 시스템은 닉 시버가 '캡톨로지'라고
+    부르는 과정을 통해 우리의 주의를 붙잡아 다른 회사가 판매하는 작업에 주의를 기울이게 하며, 알고리즘 생성 플레이리스트나 심지어 알고리즘 생성
+    예술로 개인 탐색의 자유를 대체한다고 합니다. 이러한 내용을 바탕으로 볼 때, '당신의 사생활이 침해되고 있다'는 내용(3번 선택지)은 지문에
+    직접적으로 언급되지 않았습니다. 따라서 3번이 지문의 내용과 일치하지 않는 것입니다.
+  time_taken: 13.26
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
+- question_id: q34
+  question_number: 34
+  answer: 5
+  correct_answer: 5
+  is_correct: true
+  reasoning: 지문에서는 주목 경제 시대에 살고 있으며, 가장 크고 수익성이 높은 비즈니스는 사람들의 주의를 소비하는 것이라고 언급합니다.
+    이러한 맥락에서, 중앙집중식, 공식적인 규칙은 사람들의 창의적인 참여를 AI 기반 추천 시스템을 통해 매개하며, 이는 사람들이 한 회사의 작업에
+    주의를 기울이게 하여 개인 탐색의 자유를 알고리즘 생성 플레이리스트나 심지어 알고리즘 생성 예술로 대체합니다. 이러한 맥락에서, 중앙집중식,
+    공식적인 규칙이 '생산적 활동을 촉진하기 위해 역할과 관행을 설정함으로써' 선택지 5에 해당하는 '생산적 활동을 촉진하기 위해 역할과 관행을
+    설정한다'는 것이 가장 적절한 답변입니다. 이는 중앙집중식 규칙이 사회 내에서 역할과 관행을 명확히 함으로써 생산적인 활동을 용이하게 할 수
+    있음을 시사합니다.
+  time_taken: 10.29
+  points: 3
+  earned_points: 3
+  success: true
+  error: null
+- question_id: q35
+  question_number: 35
+  answer: 1
+  correct_answer: 4
+  is_correct: false
+  reasoning: 지문은 주의 경제(attention economy)에 대해 설명하고 있으며, 광고 산업이 사람들의 주의를 어떻게 소비하고 있는지,
+    그리고 AI 기반 추천 시스템이 어떻게 우리의 창의적인 참여를 매개하는지에 대해 다루고 있습니다. 이러한 맥락에서, 자동차의 발전과 스포츠
+    및 관광에 미친 영향을 다루는 첫 번째 선택지는 전체 흐름과 관련이 없는 문장입니다. 나머지 선택지들은 지문에 나타나지 않지만, 자동차와 관련된
+    내용을 다루고 있어 지문의 주제와 직접적인 연관이 없습니다. 그러나 첫 번째 선택지는 스포츠 관광과 자동차의 발전에 대한 내용으로, 주의 경제나
+    AI 기반 추천 시스템과는 전혀 관련이 없어 가장 관계 없는 문장으로 볼 수 있습니다.
+  time_taken: 8.97
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q36
+  question_number: 36
+  answer: 0
+  correct_answer: 5
+  is_correct: false
+  reasoning: ''
+  time_taken: 3.53
+  points: 3
+  earned_points: 0
+  success: false
+  error: int() argument must be a string, a bytes-like object or a real number, not
+    'NoneType'
+- question_id: q38
+  question_number: 38
+  answer: 4
+  correct_answer: 4
+  is_correct: true
+  reasoning: 제시된 문장들을 분석할 때, 첫 번째 문장은 구체적인 예시('Watch the birds in your backyard...
+    to see every other grosbeak.')를 제시하고 있으며, 두 번째 문장은 이러한 구체적인 예시를 통해 도달한 일반적인 결론('In
+    reality, objects do not conform to a linear lifecycle model... a far more complicated
+    and adaptive path than a simplistic linear progression.')을 제시하고 있습니다. 이러한 흐름을
+    고려할 때, 구체적인 예시를 먼저 제시하고 그 예시를 통해 도달한 일반적인 결론을 나중에 제시하는 것이 자연스러운 논리의 흐름을 따르는 것입니다.
+    따라서, (C)에서 구체적인 예시를 제시하고, (A)에서 이에 대한 추가적인 설명이나 확장을 제공한 뒤, (B)에서 이러한 구체적인 사례들을
+    통해 도달한 일반적인 결론을 제시하는 것이 가장 적절합니다. 이에 따라, 옵션 4인 (C) - (A) - (B) 순서가 가장 적절한 문장의
+    배열이 됩니다.
+  time_taken: 8.77
+  points: 3
+  earned_points: 3
+  success: true
+  error: null
+- question_id: q39
+  question_number: 39
+  answer: 2
+  correct_answer: 4
+  is_correct: false
+  reasoning: 지문의 내용은 객체들이 단순한 선형적 생명주기 모델을 따르지 않고, 더 복잡하고 적응적인 경로를 따른다는 것을 설명하고 있습니다.
+    이를 요약하는 데 있어 'predictability ...... support'가 가장 적절합니다. 'predictability'는 객체들의
+    행동이나 발전 경로가 예측 가능하지 않음을 나타내며, 이는 지문에서 언급된 '객체들이 단순한 선형적 모델을 따르지 않는다'는 사실과 일치합니다.
+    'support'는 이러한 비선형적, 복잡한 경로가 실제로 존재함을 뒷받침하는 증거나 논리를 제공한다는 의미로 해석될 수 있으며, 지문의 전반적인
+    주장을 지지하는 역할을 합니다. 다른 선택지들은 지문의 내용과 직접적인 연관성이 떨어지거나, 지문이 전달하고자 하는 메시지와 일치하지 않습니다.
+  time_taken: 11.99
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q41
+  question_number: 41
+  answer: 5
+  correct_answer: 2
+  is_correct: false
+  reasoning: 지문은 사람이 종이를 엄지와 검지 사이에 끼고 잡는 행위를 언급하며, 이것이 '피 흘릴 수 있는 일'이라고 언급합니다. 이는
+    일상에서 도구를 사용하는 우리 손의 '숨겨진 힘'에 대한 직접적인 언급으로 볼 수 있습니다. 선택지 중 'Hidden Power of the
+    Daily Use of Tools'은 이러한 일상적 도구 사용의 힘을 가장 잘 반영합니다. 다른 선택지들은 인간의 손과 진화의 관계, 인간과
+    다른 영장류 사이의 해부학적 차이, 인간의 생존에 대한 딜레마 등 더 넓은 주제를 다루고 있으나, 지문의 구체적 내용과 직접적으로 연결되지
+    않습니다. 따라서, 지문의 내용을 가장 잘 반영하는 제목은 'Hidden Power of the Daily Use of Tools'입니다.
+  time_taken: 8.31
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q42
+  question_number: 42
+  answer: 5
+  correct_answer: 5
+  is_correct: true
+  reasoning: 제시된 문제에서는 구체적인 (a)~(e)에 대한 낱말이나 문맥이 제공되지 않았습니다. 따라서, 문제의 요구사항에 따라 정확한
+    답변을 제공하는 것이 불가능합니다. 그러나, 지문 내용을 기반으로 'it can be a bloody business'라는 표현은 문자 그대로의
+    의미보다는 비유적인 표현일 가능성이 높습니다. 이는 종이를 잡을 때 발생할 수 있는 '종이 절단'으로 인한 상처를 지칭하는 것으로 해석될 수
+    있으며, 이러한 맥락에서 'bloody'라는 단어의 사용은 과장된 표현일 수 있습니다. 하지만, 선택지에 대한 구체적인 정보가 없기 때문에
+    정확한 답변을 선택하는 것은 불가능합니다. 따라서, 이 답변은 문제의 요구사항을 충족시키지 못합니다.
+  time_taken: 6.84
+  points: 3
+  earned_points: 3
+  success: true
+  error: null
+- question_id: q43
+  question_number: 43
+  answer: 0
+  correct_answer: 2
+  is_correct: false
+  reasoning: 문제에서 제공된 글 (A)~(D)의 내용이 없어 정확한 순서를 결정할 수 없습니다. 문제의 내용을 기반으로 한 구체적인 분석이
+    필요합니다. 제공된 정보만으로는 올바른 순서를 결정할 수 없으므로, 정확한 답변을 제공하기 어렵습니다.
+  time_taken: 4.57
+  points: 3
+  earned_points: 0
+  success: false
+  error: 유효하지 않은 답 번호
+- question_id: q44
+  question_number: 44
+  answer: 0
+  correct_answer: 3
+  is_correct: false
+  reasoning: 문제에서 밑줄 친 (a)~(e)의 구체적인 내용이 제공되지 않았기 때문에, 가리키는 대상이 나머지 넷과 다른 것을 판단할 수
+    없습니다. 문제의 구체적인 내용이나 지문이 필요합니다.
+  time_taken: 3.65
+  points: 2
+  earned_points: 0
+  success: false
+  error: 유효하지 않은 답 번호
+- question_id: q45
+  question_number: 45
+  answer: 4
+  correct_answer: 4
+  is_correct: true
+  reasoning: 제시된 정보만으로는 Ethan이 혼자서 세탁소에서 의류를 찾아온 후에 갔다는 내용이 윗글과 관련이 없거나 적절하지 않다고 판단하기
+    어렵습니다. 나머지 선택지들은 Grace, Ethan, Sean 사이의 관계나 행동에 대한 내용을 포함하고 있으며, 특히 하이킹과 관련된 내용이
+    포함되어 있어 윗글의 주제와 관련이 있을 가능성이 높습니다. 따라서, Ethan이 세탁소에서 의류를 찾아온 후의 행동은 윗글의 주제나 내용과
+    직접적인 연관성이 낮아 보이므로 적절하지 않은 것으로 판단됩니다.
+  time_taken: 8.28
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
