@@ -1,6 +1,6 @@
 'use client';
 
-import { Container, Title, Text, Stack, Group, Badge, Card, SimpleGrid, Accordion, Table, ScrollArea, Box } from '@mantine/core';
+import { Container, Title, Text, Stack, Group, Badge, Card, SimpleGrid, Accordion, Table, ScrollArea, Box, Anchor } from '@mantine/core';
 import { useState, useEffect } from 'react';
 
 export default function Home() {
@@ -61,9 +61,29 @@ export default function Home() {
           <Title order={1} mb="xs">
             🏆 KSAT AI Benchmark
           </Title>
-          <Text c="dimmed" size="lg">
+          <Text c="dimmed" size="lg" mb="sm">
             대한민국 수능 문제를 활용한 AI 모델 성능 평가
           </Text>
+          <Group gap="xs">
+            <Anchor 
+              href="https://github.com/roboco-io/KSAT-AI-Benchmark" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              size="sm"
+              fw={500}
+            >
+              📦 GitHub Repository
+            </Anchor>
+            <Text c="dimmed" size="sm">·</Text>
+            <Anchor 
+              href="https://github.com/roboco-io/KSAT-AI-Benchmark/issues" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              size="sm"
+            >
+              💬 이슈 제보
+            </Anchor>
+          </Group>
         </div>
 
         <SimpleGrid cols={{ base: 1, sm: 3 }} spacing="md">

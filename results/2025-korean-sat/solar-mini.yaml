@@ -1,0 +1,655 @@
+exam_id: 2025-korean-sat
+exam_title: 2025학년도 수능 KOREAN
+subject: korean
+model_name: solar-mini
+evaluated_at: '2025-10-06T10:08:46.142403'
+summary:
+  total_questions: 49
+  correct_answers: 15
+  accuracy: 30.61
+  total_score: 35
+  max_score: 121
+  score_rate: 28.93
+results:
+- question_id: q1
+  question_number: 1
+  answer: 1
+  correct_answer: 3
+  is_correct: false
+  reasoning: 본문에서는 '일반적인 독서 상황에서 도움이 되는 밑줄 긋기의 기초를 제시'한다고 언급하고 있습니다. 따라서 밑줄 긋기가 일반적인
+    독서 상황에서 도움이 된다는 내용은 본문의 내용과 일치합니다. 그러나 선택지 1은 '일반적인 독서 상황에서 도움이 된다'고만 언급하고 있어,
+    본문에서 강조하는 '밑줄 긋기의 기초'라는 구체적인 정보를 누락하고 있습니다. 따라서 선택지 1은 본문의 내용과 일치하지 않는 것으로 판단됩니다.
+  time_taken: 1.52
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q2
+  question_number: 2
+  answer: 4
+  correct_answer: 4
+  is_correct: true
+  reasoning: ②는 '정보의 중요도를 판별하기 어려우면 우선 밑줄 긋기를 한 후 중요한 내용을 선택한다.'는 내용으로, 이는 글을 읽을 때
+    중요한 정보를 찾기 위해 밑줄 긋기를 활용하는 전략을 설명하고 있습니다. 선택지 4는 이와 유사하게 자신이 만든 밑줄 긋기 표시 체계를 활용하여
+    주요한 정보를 찾을 수 있도록 밑줄 긋기를 하는 것이므로, ②에 해당하는 내용으로 가장 적절합니다. 다른 선택지들은 밑줄 긋기의 목적이나 방법에
+    대해 다른 관점을 제시하고 있어 ②와 직접적으로 연결되지 않습니다.
+  time_taken: 1.67
+  points: 3
+  earned_points: 3
+  success: true
+  error: null
+- question_id: q3
+  question_number: 3
+  answer: 2
+  correct_answer: 5
+  is_correct: false
+  reasoning: 제시된 지문에서는 학생이 '포괄적인 믿음'과 관련된 내용을 중심으로 밑줄을 그었다고 설명하고 있다. 하지만 선택지 2는 독서
+    자료에 '1', '2' 등의 순차적인 번호로 표시한 부분을 기준으로 밑줄을 그었다고 설명하고 있으므로, 제시된 지문의 내용과 관련이 없다.
+    따라서 적절하지 않은 평가이다.
+  time_taken: 1.3
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q4
+  question_number: 4
+  answer: 5
+  correct_answer: 4
+  is_correct: false
+  reasoning: 지문 (나)는 근대 과학의 수용을 통해 부국강병을 이루고자 하는 입장이며, 과학 정신을 사회 전반에 확산시켜야 한다고 주장한다.
+    따라서 근대 과학 방법에 대해 비판적인 것이 아니라 적극적으로 수용하고자 하는 입장이다. 그러므로 전통 가치를 주축으로 하는 전개가 제시되었다는
+    5번은 적절하지 않은 설명이다.
+  time_taken: 1.12
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q5
+  question_number: 5
+  answer: 5
+  correct_answer: 5
+  is_correct: true
+  reasoning: ‘대리인문제로서의 계획’은 계획의 실행 과정에서 발생하는 대리인(계획 실행자)과 주인(계획 의뢰자) 사이의 이해관계 상충 문제를
+    의미합니다. 이는 주관적 관찰에서 비롯된 것이 아니라, 객관적인 경영학 이론에서 유래한 개념입니다. 따라서 선택지 5의 '이론사이의 차이가
+    주관적 관찰한 계획 개념이 제기되었다'는 내용은 적절하지 않습니다.
+  time_taken: 1.27
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
+- question_id: q6
+  question_number: 6
+  answer: 4
+  correct_answer: 3
+  is_correct: false
+  reasoning: 이 문제는 '나와 친구들'의 장래희망이 모두 '과학자'일 때, 그 희망이 모두 동일할 수 있는 진술, 즉 과학적 방법이 사회에
+    적용되는 것에 대해 긍정적인 진술을 찾는 문제입니다. 선택지 4번은 '사회의 과학 정신을 전제적으로 도입하면 합법한 국가의 계획을 충실히 목표할
+    수 있다'는 내용으로, 과학 정신이 사회에 적용되는 것을 긍정적으로 평가하고 있습니다. 따라서 나와 친구들이 과학자가 되고자 하는 장래희망을
+    가지고 있을 때, 이 진술은 모두에게 동일하게 적용될 수 있습니다.
+  time_taken: 1.6
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q7
+  question_number: 7
+  answer: 2
+  correct_answer: 3
+  is_correct: false
+  reasoning: 지문 '가'는 과학의 정치적 중립성에 대한 의문을 제기하며, 과학이 전쟁과 권력 정치를 위한 도구로 사용될 수 있다는 점을
+    지적하고 있다. 선택지 2는 이러한 지문의 내용과 일치한다. 지문은 과학의 정치적 중립성을 의심하고, 과학이 정치적, 사회적 맥락에서 자유로울
+    수 없다고 주장한다. 이는 과학의 과학적 방법을 근대 주체의 정명으로 인식하는 것에 대한 의문을 제기하는 것이다. 따라서, 선택지 2가 '가'에
+    대한 이해로 가장 적절한 설명이다.
+  time_taken: 1.91
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q8
+  question_number: 8
+  answer: 2
+  correct_answer: 3
+  is_correct: false
+  reasoning: 2번 선택지는 <보기>에서 정부가 사업의 생산 기술을 도입하면 반박을 목표로 반론하였다고 해석하고 있으나, <보기>의 내용은
+    정부가 생산 기술을 도입한 것이 아니라, 마을이 생산 기술을 도모하기 위해 변화한 것에 대한 설명이므로 적절하지 않은 해석이다.
+  time_taken: 1.0
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q9
+  question_number: 9
+  answer: 2
+  correct_answer: 2
+  is_correct: true
+  reasoning: 문제의 ①은 '그려'로, 여기서는 '만들어 내다'라는 의미로 사용되었습니다. 각 선택지를 살펴보면, 2번 '우리 학교는 이번에
+    167호 그렸다'는 '167호라는 결과를 만들어 내다'라는 의미로 사용되어 있어, 문맥상 의미가 가장 가깝습니다. 1번, 3번, 4번은 '그리다'의
+    다른 의미(그림을 그리다)로 사용되었고, 5번은 '불쌍히 여기다'라는 의미로 사용되어 문맥상 거리가 멉니다.
+  time_taken: 1.62
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
+- question_id: q10
+  question_number: 10
+  answer: 3
+  correct_answer: 3
+  is_correct: true
+  reasoning: 윗글에서는 확산 모델에서 노이즈의 중요성을 설명하고 있지만, 사용되는 노이즈의 주제가 표현의 성능에 미치는 영향에 대해서는
+    구체적으로 언급하지 않았습니다. 따라서 학생은 노이즈의 주제가 표현의 성능에 미치는 영향을 이해하지 못했다고 볼 수 없습니다. 다른 선택지들은
+    윗글에서 언급된 내용을 기반으로 학생이 이해하지 못했을 가능성이 있는 내용들을 제시하고 있습니다.
+  time_taken: 1.2
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
+- question_id: q11
+  question_number: 11
+  answer: 4
+  correct_answer: 1
+  is_correct: false
+  reasoning: 지문에 따르면, 노이즈 예측기는 생성적 적대 신경망(GAN)의 판별기 역할을 하며, 노이즈 예측기를 학습시킬 때는 진짜 노이즈와
+    예측된 노이즈의 차이를 줄이는 방식으로 학습이 이루어진다. 이때 예측된 노이즈가 정답으로 사용되는 것이 맞다. 다른 선택지들은 지문에서 찾아볼
+    수 없는 내용이다.
+  time_taken: 1.23
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q12
+  question_number: 12
+  answer: 5
+  correct_answer: 5
+  is_correct: true
+  reasoning: 주제 표현은 이미지의 특정 특징이나 스타일을 나타내는 벡터로, 노이즈의 복원을 추측하는 기능과는 직접적인 관련이 없습니다.
+    주제 표현은 주로 이미지의 스타일이나 내용을 변화시키는 데 사용되며, 노이즈 제거 과정과는 별개의 개념입니다. 따라서 주제 표현에 노이즈가
+    포함된 원본 이미지를 입력받아 노이즈의 복원을 추측할 수 있다는 설명은 적절하지 않습니다.
+  time_taken: 1.33
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
+- question_id: q13
+  question_number: 13
+  answer: 5
+  correct_answer: 3
+  is_correct: false
+  reasoning: 제시된 지문에서는 음악적 과정에서 노이즈 생성기에서 예측한 노이즈가 이미지 연산기에 입력되는 것이 아니라, 노이즈 생성기에서
+    생성된 노이즈가 이미지 연산기에 입력되어 확산 이미지에 합쳐진다고 설명하고 있다. 따라서 <보기>의 ⑤, '음악적 과정에서 (나)에 ①이 출력된다면,
+    A 단계의 노이즈 생성기에서 예측한 노이즈가 이미지 연산기에 입력되었겠군.'은 적절하지 않은 설명이다.
+  time_taken: 1.54
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q14
+  question_number: 14
+  answer: 4
+  correct_answer: 1
+  is_correct: false
+  reasoning: 4번 문항은 '인명들은 가상 공간에서 자기 정체성이 다양하게 나타나는 데 익숙해지는 가장 강력한 정서이다.'라고 주장하고 있다.
+    그러나 제시문을 보면 가상 공간에서 자기 정체성이 다양하게 나타나는 것은 '익명성' 때문이라고 설명하고 있다. 따라서 4번은 제시문의 내용과
+    일치하지 않는다.
+  time_taken: 1.23
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q15
+  question_number: 15
+  answer: 5
+  correct_answer: 2
+  is_correct: false
+  reasoning: 지문 (다)는 인터넷 공간에서 개인이 여러 개의 ID를 가질 수 있으며, 각각의 ID는 서로 다른 정체성을 가질 수 있음을
+    설명하고 있다. 따라서 (다)는 모든 ID, 인터넷 ID마다 각각 정체성이 다르다고 보는 관점이라고 할 수 있다. 다른 선택지들은 (다)의
+    내용을 부분적으로만 설명하고 있거나, (다)의 내용을 왜곡하여 설명하고 있다.
+  time_taken: 1.22
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q16
+  question_number: 16
+  answer: 2
+  correct_answer: 2
+  is_correct: true
+  reasoning: 제시된 글에 따르면 ㉡은 ‘가사서비스 제공기관의 근로자’에 해당하며, ‘가사서비스 제공기관’은 ‘가사근로자’와 ‘가사서비스
+    이용자’ 사이에서 가사서비스의 제공에 관한 사무를 총괄하므로 ㉡은 가계정보소의 법적 책임을 져야 한다. 그러나 ㉡은 자신이 가계정보소의 법적
+    책임을 져야 한다고 생각하지 않는다. 따라서 ㉡은 가계정보소의 법적 책임을 져야 한다고 보았지만 A는 가계정보소의 법적 책임을 지지 않는다고
+    보았다는 진술은 적절하지 않다.
+  time_taken: 1.74
+  points: 3
+  earned_points: 3
+  success: true
+  error: null
+- question_id: q17
+  question_number: 17
+  answer: 2
+  correct_answer: 3
+  is_correct: false
+  reasoning: ㉡의 '우러러보다'는 '앙망(仰望)하다'로 바꿔 쓸 수 있다. '앙망(仰望)하다'는 '높고 바라볼 만한 대상이나 이상 등을
+    우러러보고 그리워하다.'라는 의미를 지니고 있으며, '우러러보다'와 유사한 의미를 가지고 있다. 따라서 ㉡을 '앙망(仰望)대한다고'로 바꿔
+    쓰는 것이 가장 적절하다.
+  time_taken: 1.74
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q18
+  question_number: 18
+  answer: 3
+  correct_answer: 2
+  is_correct: false
+  reasoning: 수상은 '사연'의 진상을 밝히는 데에 왕비가 '고작의 역할을 할 것'이라 평가한 것이 아니라, 왕비가 '고작의 역할을 할 것'이라
+    평가한 것은 흉패에게 물을 들은 후의 장순의 대응에 대한 평가입니다. 수상은 장순이 황상에게 올린 상소에 대해 '이미 아는 바'와 같다고 생각하며,
+    이는 장순이 '사연'의 진상을 밝히는 데에 고작의 역할을 할 것이라는 평가를 내포하고 있습니다.
+  time_taken: 1.47
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q19
+  question_number: 19
+  answer: 1
+  correct_answer: 4
+  is_correct: false
+  reasoning: 제시된 지문은 홍길동의 활빈당 활동이 사회적으로 어떤 영향을 미쳤는지를 설명하고 있다. 홍길동의 활빈당 활동은 탐관오리들의
+    탐학을 징치하고 백성들의 재물을 훔쳐 나눠주는 의적 활동으로, 사회적으로 부패한 지배층에 대한 백성들의 불만을 표출하고, 지배층의 부정을 바로잡으려는
+    민중들의 의지를 드러내는 사건이었다. 따라서 정답은 ① ‘탐관오리들의 탐학을 징치하고, 백성들의 재물을 훔쳐 나눠주었다.’이다.
+  time_taken: 1.6
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q20
+  question_number: 20
+  answer: 5
+  correct_answer: 1
+  is_correct: false
+  reasoning: 지문에서 '인물 A가 B에게 구사한 언어'라는 표현을 통해 A가 주체이고 B가 대상임을 알 수 있습니다. 또한 '우측 군인
+    B가 A로부터', '우측 승상 A가 B에게'라는 표현을 통해 A가 B보다 높은 지위에 있음을 알 수 있습니다. 따라서 '군인 승상 B가 A로부터'라는
+    표현은 A가 승상이고 B가 군인이라는 논리적 모순을 야기하므로 적절하지 않습니다.
+  time_taken: 1.43
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q21
+  question_number: 21
+  answer: 4
+  correct_answer: 4
+  is_correct: true
+  reasoning: 4번 선택지는 '정현전'과 '흉조', '가정'과 '상황 일으킴의 위협' 등의 내용이 지문에서 직접적으로 언급되지 않았기 때문에
+    적절하지 않습니다. 지문에서는 '정현전'과 '대범'의 역할, 그리고 '대현수'와 '가용'의 관계에 대한 설명이 주를 이루고 있습니다. 따라서
+    4번 선택지는 지문의 내용을 정확히 반영하지 못하고 있습니다.
+  time_taken: 1.53
+  points: 3
+  earned_points: 3
+  success: true
+  error: null
+- question_id: q22
+  question_number: 22
+  answer: 4
+  correct_answer: 2
+  is_correct: false
+  reasoning: 제시된 (가)는 '나태주', (나)는 '김종길', (다)는 '박목월'의 시이다. 이 시들은 모두 일상적인 경험을 통해 현실의
+    의미와 관계를 드러내고 있다. (가)의 '자세히 보아야 예쁘다'는 일상적인 사물을 자세히 관찰함으로써 그 의미를 새롭게 발견하는 것을 나타내고,
+    (나)의 '못 잊어 생각이 나겠지요'는 일상적인 경험을 통해 과거의 추억을 회상하는 것을 나타내며, (다)의 '강나루 건너서 밀밭 길을'은
+    일상적인 풍경을 통해 현실의 의미를 탐구하는 것을 나타낸다. 따라서 (가)~(다)와 공통적으로 가장 적절한 것은 '일상생활의 반복적 경험을
+    통해 현실의 의미와 관계를 드러낸다.'이다.
+  time_taken: 2.15
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q23
+  question_number: 23
+  answer: 5
+  correct_answer: 5
+  is_correct: true
+  reasoning: 밀려들어 오는 밤에 대한 설명은 이별의 상황을 더욱 답답하게 만드는 상징으로 사용되었으며, 대상자의 체제가 애처롭고 이국적으로
+    드러난다는 내용은 지문에서 직접적으로 드러나지 않습니다. 지문에서는 밀려오는 밤이 이별의 답답한 상황을 강조하는 상징으로 사용되었음을 알 수
+    있습니다.
+  time_taken: 1.1
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
+- question_id: q24
+  question_number: 24
+  answer: 2
+  correct_answer: 2
+  is_correct: true
+  reasoning: 화자의 '당신'은 화자의 내면에 존재하는 추상적인 존재로, 화자의 눈앞에 존재하는 구체적인 대상이 아니다. 따라서 '당신'이
+    화자의 내면에 살고 있는 방백과 연인의 대상이라는 설명은 적절하지 않다. '당신'은 화자의 내면에서 느껴지는 감정과 연결되어 있으며, 화자의
+    '말투'와 '사랑', '슬픔'을 매개하고 정형화하는 역할을 한다.
+  time_taken: 1.77
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
+- question_id: q25
+  question_number: 25
+  answer: 1
+  correct_answer: 3
+  is_correct: false
+  reasoning: 1번 선택지에서 '일각'은 (나)에서 찾아볼 수 없는 시어이다. '일각'이라는 시어를 통해 화자의 복합적인 정서를 파악하는
+    것은 (나)를 감상한 내용으로 적절하지 않다.
+  time_taken: 1.02
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q26
+  question_number: 26
+  answer: 1
+  correct_answer: 2
+  is_correct: false
+  reasoning: 지문 (다)는 '환부'를 드러내는 행위에 대한 시적 화자의 인식을 보여줍니다. '환부'는 개인의 아픔이나 상처를 의미하며,
+    이를 드러내는 것은 자신의 상처를 직시하고 인정하는 행위입니다. '노래'는 이러한 상처를 드러내는 매개체로 볼 수 있습니다. 선택지 1은 이러한
+    인식을 잘 포착하고 있습니다. 즉, 노래를 통해 상처를 드러내더라도 그 순간에만 아픔이 완화될 뿐, 근본적으로 상처가 사라지는 것은 아니라는
+    화자의 인식을 나타냅니다. 다른 선택지들은 지문의 내용을 정확히 반영하지 못하거나, 지문에서 직접적으로 지지되지 않는 해석을 제시합니다.
+  time_taken: 1.71
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q27
+  question_number: 27
+  answer: 1
+  correct_answer: 3
+  is_correct: false
+  reasoning: 선택지 1은 문장의 구조가 혼란스럽고 논리적 연결이 부족하여 (다)의 내용을 정확하게 반영하지 못하고 있습니다. 다른 선택지들은
+    (다)의 내용을 바탕으로 화자의 상황과 감정을 해석하고 있지만, 선택지 1은 명확한 해석을 제시하지 못합니다. 특히, '어명령의 유무를 통제할
+    수 없다'는 표현은 (다)의 내용과 관련이 없습니다.
+  time_taken: 1.36
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q28
+  question_number: 28
+  answer: 2
+  correct_answer: 4
+  is_correct: false
+  reasoning: 윗글은 내적 독백을 통해 인물의 생각을 직접적으로 드러내고 있으며, 서술자는 인물의 생각을 평가하고 그 의미를 심화하여 전달하고
+    있다. 특히, '그것은 하나의 도전이었다.'와 같은 표현을 통해 인물의 생각에 대한 서술자의 평가와 그 의미의 심화가 나타나고 있다.
+  time_taken: 1.13
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q29
+  question_number: 29
+  answer: 1
+  correct_answer: 3
+  is_correct: false
+  reasoning: 밑줄은 '그'가 '나'에게 자신의 신념을 이야기하는 부분으로, 이를 통해 작품의 주제가 형상화되고 있습니다. '그'는 자신의
+    신념을 실천하기 위해 먼 길을 떠나고, 그 과정에서 얻은 깨달음을 '나'에게 전달합니다. 이를 통해 작품은 새로운 세계관을 바탕으로 하는 주제를
+    전달하고 있습니다. 따라서 '자의 신념을 인물에 들어가 본 결과로, 새로운 세계관을 바탕으로 하는 주제를 형상화한다.'는 밑줄의 서사적 기능을
+    가장 적절하게 설명하고 있습니다.
+  time_taken: 1.95
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q30
+  question_number: 30
+  answer: 3
+  correct_answer: 5
+  is_correct: false
+  reasoning: 3번 선택지는 ‘희망’이 ‘사상’을 빌미로 다른 인물상에 접근하고자 한다고 설명하고 있으나, 이는 지문에서 찾아볼 수 없는
+    내용이다. 지문에서 ‘희망’은 ‘실상’과 ‘사상’의 관계 속에서 자신의 의미를 찾아가는데, 다른 인물상에 접근하고자 한다는 내용은 언급되지
+    않았다. 따라서 3번은 적절하지 않은 내용이다.
+  time_taken: 1.23
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q31
+  question_number: 31
+  answer: 3
+  correct_answer: 1
+  is_correct: false
+  reasoning: 3번 선택지는 문장의 의미가 명확하지 않고, 특정 개념들이 잘못 연결되어 있어 이해하기 어렵습니다. '비평적'인 연관성',
+    '무주무반', '실용하고 추상적인' 등의 표현들이 문맥상 적절하게 사용되지 않았으며, 이로 인해 선택지가 전달하려는 바를 파악하기 어렵습니다.
+    다른 선택지들은 <보기>와 윗글의 내용을 바탕으로 한 합리적인 감상이라고 볼 수 있습니다.
+  time_taken: 1.44
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q32
+  question_number: 32
+  answer: 5
+  correct_answer: 2
+  is_correct: false
+  reasoning: 제시된 시에서 (가)는 '가을바람이'이다. 이 시에서는 가을바람이 ‘쓸쓸하다’고 대구법을 사용하여 의향을 묘사하고 있으며,
+    이를 통해 대상인 가을바람의 성격을 드러내고 있다. 또한, 가을바람이 부는 행위의 실황을 기록하여 서정적 감정을 환기하고 있다. 과거의 행적을
+    대입하여 현재의 처지를 보여 주는 것은 '벌레 우는' 행위를 통해 드러나고 있다. 그러나 '구체적 수치를 제시'하는 표현은 나타나지 않는다.
+    따라서 정답은 5번이다.
+  time_taken: 1.55
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q33
+  question_number: 33
+  answer: 5
+  correct_answer: 5
+  is_correct: true
+  reasoning: 제시된 (가)는 판소리, (나)는 만담, (다)는 촌극이다. 판소리는 고수와 창자가 함께 연희하는 것으로, 고수는 북장단을
+    치며 창자의 소리를 받아주고, 창자는 이야기를 엮어 나가며 소리도 한다. 만담은 한 명의 만담꾼이 관객을 상대로 이야기를 구술하는 것으로,
+    만담꾼이 이야기를 하는 동시에 다양한 인물의 역할을 소화한다. 촌극은 여러 명의 연희자가 함께 연희하는 것으로, 각 연희자가 역할을 맡아 이야기를
+    엮어 나간다. (나)의 만담은 화자인 만담꾼이 관객에게 이야기를 구술하는 방식으로, 관객은 만담꾼이 구술하는 이야기를 듣는 대상이다. 따라서
+    만담을 하는 화자에게 관객은 '성취가 없으니 하는 행위의 대상'이라고 볼 수 있다.
+  time_taken: 2.14
+  points: 3
+  earned_points: 3
+  success: true
+  error: null
+- question_id: q34
+  question_number: 34
+  answer: 1
+  correct_answer: 2
+  is_correct: false
+  reasoning: 1번 선택지는 <보기>의 내용과 관련이 없는 내용이며, 문맥상 의미도 명확하지 않아 (가)를 잘못한 내용으로 적절하지 않다.
+    나머지 선택지들은 모두 <보기>를 참고하여 (가), (나)를 분석한 내용이다.
+  time_taken: 1.0
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q38
+  question_number: 38
+  answer: 5
+  correct_answer: 4
+  is_correct: false
+  reasoning: 지문에서 ㉡은 '학생회 수장'이라고 자신을 소개한 후 '교훈 변경에 대해 학생의 의견을 듣고 싶습니다'라고 말한 것으로 보아,
+    학생의 생각과 다른 의견을 제시한 것이 아니라 학생의 의견을 듣고자 하는 자세를 보이고 있다. 따라서 ㉡에 대한 설명으로 적절하지 않은 것은
+    5번이다.
+  time_taken: 1.16
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q39
+  question_number: 39
+  answer: 3
+  correct_answer: 5
+  is_correct: false
+  reasoning: 선택지 3은 '우리학교'가 아닌 '다른 학교'에 대한 내용을 언급하고 있어 (가)의 대화 내용과 관련이 없습니다. (가)의
+    대화는 '우리 학교'의 교훈 변경에 대한 내용을 다루고 있으므로, 선택지 3은 메모의 내용으로 적절하지 않습니다.
+  time_taken: 1.11
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q40
+  question_number: 40
+  answer: 1
+  correct_answer: 4
+  is_correct: false
+  reasoning: 제시된 (나)의 3문단에서 ‘교훈 변경 추진’을 위한 근거로 ‘옛 교가 가사에 담긴 가치의 중요도가 달라졌다’는 점을 들고
+    있다. 이는 (가)의 [A]의 내용과 연결되는 것으로, [A]의 내용이 (나)에 반영되었음을 알 수 있다.
+  time_taken: 1.13
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q41
+  question_number: 41
+  answer: 2
+  correct_answer: 3
+  is_correct: false
+  reasoning: 글의 심상을 높이기 위해 예화를 제시했다. - 이 설명은 (나)의 [○○]에 대한 설명으로 적절하지 않습니다. (나)의 [○○]는
+    글의 부속을 고려하여 전개의 주제를 제시하고, 설득력을 높이기 위해 예화성 있는 반론을 제시하며, 전개 내용을 실현하기 위한 계획을 제시하는
+    역할을 합니다. 글의 심상을 높이기 위한 예화 사용은 (나)의 [○○]의 주요 기능과 직접적으로 관련이 없습니다.
+  time_taken: 1.41
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q42
+  question_number: 42
+  answer: 2
+  correct_answer: 2
+  is_correct: true
+  reasoning: 친구 조언의 핵심은 '다른 사람이 참고할 수 있게'라는 부분에 있다. 이는 (나)의 내용이 다른 학교나 교육 기관에서도 참고할
+    수 있는 보편적이고 유용한 정보여야 함을 의미한다. 따라서 (나)에 들어간 내용으로 가장 적절한 것은 '다른 학교가 참고할 수 있는 유용한
+    정보'이다. 다른 선택지들은 친구의 조언에 직접적으로 연결되지 않는다.
+  time_taken: 1.25
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
+- question_id: q43
+  question_number: 43
+  answer: 1
+  correct_answer: 1
+  is_correct: true
+  reasoning: 학생의 초고는 지속 가능한 항공유의 필요성을 설명하고, 이를 위해 기존 항공유와 비교하여 지속 가능한 항공유의 장점을 부각시키고
+    있습니다. 따라서, 지속 가능한 항공유를 기존 항공유에 대비하여 설명하였다는 선택지 1이 가장 적절한 글쓰기 방식입니다. 다른 선택지들은 생산
+    과정 비교, 장단점 비교, 문제점 시기별 서술, 경제적 효과 분석 등으로, 초고의 내용과 직접적으로 연결되지 않습니다.
+  time_taken: 1.33
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
+- question_id: q44
+  question_number: 44
+  answer: 5
+  correct_answer: 5
+  is_correct: true
+  reasoning: 이 문제는 학생이 초고를 작성하며 떠올린 생각을 고려하여 [A]에 들어갈 내용을 선택하는 것입니다. 지문의 핵심은 '지속 가능한
+    항공유'의 사용을 통해 탄소 배출량을 줄이고 기후 위기에 대응할 수 있다는 것입니다. 선택지 5는 이러한 핵심을 직접적으로 반영하며, '비행기를
+    타야 한다면, 되도록 탄소 배출량이 더 적은 항공편을 이용하면 어떨까?'라는 구체적인 제안을 통해 초고의 내용을 보완하고 있습니다. 따라서
+    [A]에 들어갈 내용으로 가장 적절한 것은 5번입니다.
+  time_taken: 1.54
+  points: 3
+  earned_points: 3
+  success: true
+  error: null
+- question_id: q38
+  question_number: 38
+  answer: 2
+  correct_answer: 4
+  is_correct: false
+  reasoning: 언어에 작용 활동에 해당하는 음운 규칙이 적용되면, 자음의 조음 위치나 조음 방법이 변하는 자음 교체 현상이 나타날 수 있습니다.
+    예를 들어, 영어의 'p'는 양순음이고 't'는 치음인데, 'p'가 't'로 바뀌는 음운 규칙이 적용되면 조음 위치는 변하지만 조음 방법은
+    변하지 않습니다. 따라서 <작용 활동>의 결과로 적절한 것은 '조음 위치는 변하고 조음 방법은 변하지 않는 자음 교체'가 있는 경우입니다.
+  time_taken: 1.54
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q39
+  question_number: 39
+  answer: 2
+  correct_answer: 5
+  is_correct: false
+  reasoning: 지문에서 '은은 하얀바람이 한 말이라면서 다음과 같은 메시지를 보내왔다.'라는 문장을 통해 '모래놀이'가 하얀바람의 직접적인
+    말임을 알 수 있다. 따라서 '모래놀이'는 '하얀바람'을 직접 인용한 것일 수 있다는 선택지 4가 적절한 설명이다.
+  time_taken: 1.13
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q40
+  question_number: 40
+  answer: 1
+  correct_answer: 4
+  is_correct: false
+  reasoning: 지문 (나)에서는 제일 아래에 회의의 휴수 상태가 나타나 있지 않고, 시간과 방송이 이어지는 형태로 대화창이 제시되어 있습니다.
+    따라서 선택지 1은 (나)의 내용과 일치하지 않으므로 적절하지 않은 설명입니다.
+  time_taken: 1.02
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q41
+  question_number: 41
+  answer: 3
+  correct_answer: 3
+  is_correct: true
+  reasoning: 지문에서 은 '표준과 콘셉트'의 규제가 국가에 따라 단일되지 않음을 언급하며, 이러한 규제의 차이로 인해 반항하는 모습을 보였다고
+    설명하고 있습니다. 그러나 은 '표준'에 대한 언급을 하지 않았으며, 국제 표준 규제 제정에 대한 효과나 요청에 대해서도 언급하지 않았습니다.
+    따라서 3번 선택지는 적절하지 않은 설명입니다.
+  time_taken: 1.64
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
+- question_id: q42
+  question_number: 42
+  answer: 2
+  correct_answer: 2
+  is_correct: true
+  reasoning: 제시문 (나)의 '다시 보기' 영상 출처는 URL로 제시되어 있습니다. 글자수 기준으로 출처를 제시하는 방식은 일반적으로 사용되지
+    않으며, URL은 글자수로 제한되지 않기 때문에 적절하지 않은 설명입니다. 따라서, 답은 2번입니다.
+  time_taken: 1.13
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
+- question_id: q43
+  question_number: 43
+  answer: 3
+  correct_answer: 1
+  is_correct: false
+  reasoning: 지문에서 (C)는 A4 용지의 규격을 설명하기 위해 사용된 도형입니다. 'A4의 박막에 영상과 '다각'을 사용하여'라는 표현은
+    (C)가 A4 용지의 크기를 시각적으로 보여주고 있음을 나타냅니다. 또한, '송출 사항에 대한 규격의 차이를 명확히 하는 것을 강조하였습니다'라는
+    설명은 (C)가 A4 용지의 규격을 다른 용지 크기와 구분하여 명확히 보여주는 역할을 한다는 것을 의미합니다. 따라서, (C)는 A4 용지의
+    규격을 시각적으로 보여주고, 다른 용지 크기와 구분하여 명확히 하는 역할을 한다는 것을 알 수 있습니다.
+  time_taken: 1.82
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q44
+  question_number: 44
+  answer: 2
+  correct_answer: 5
+  is_correct: false
+  reasoning: 제시된 (가) 이미지를 살펴보면, QR 코드가 존재하지 않음을 확인할 수 있습니다. 따라서 QR 코드를 통해 정보를 제공한다는
+    설명은 적절하지 않습니다. 다른 선택지들은 (가) 이미지에서 확인할 수 있는 내용과 일치합니다. 예를 들어, 각 행사별 진행 절차가 순서대로
+    정리되어 있고(1), 동아리 부스와 관련된 QR 코드가 제시되어 있으며(3), 각 행사별 진행하는 장소가 손가락 모양의 기호를 통해 알려지고
+    있습니다(4). 또한, 동아리 부스 참여 동아리들이 활동 유형에 따라 구분되어 제시되어 있습니다(5).
+  time_taken: 1.67
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q45
+  question_number: 45
+  answer: 3
+  correct_answer: 2
+  is_correct: false
+  reasoning: 게시판 '토론 한마당'은 본질 전환의 협의 중요성을 반영하여 '승윤'과 '혜림'의 대화를 통해 토론 주제와 관련된 자료를 게시할
+    수 있는 기능을 제시하였습니다. 따라서 게시판에 게시할 수 있는 자료를 '배포'로 제시한 것은 적절하지 않습니다. 자료는 이미 게시판에 올려져
+    있는 상태이므로 '배포'라는 표현은 맞지 않습니다.
+  time_taken: 1.58
+  points: 3
+  earned_points: 0
+  success: true
+  error: null

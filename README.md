@@ -4,7 +4,9 @@
 
 [![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
-[![GitHub Pages](https://img.shields.io/badge/GitHub-Pages-brightgreen)](https://pages.github.com/)
+[![GitHub Pages](https://img.shields.io/badge/GitHub-Pages-brightgreen)](https://roboco.io/KSAT-AI-Benchmark/)
+
+**🌐 리더보드 바로가기:** [https://roboco.io/KSAT-AI-Benchmark/](https://roboco.io/KSAT-AI-Benchmark/)
 
 ## 📖 소개
 
@@ -269,7 +271,9 @@ Job 2: 모델 평가 (Job 1 완료 후)
 
 ## 🌐 결과 확인
 
-평가 결과는 [GitHub Pages](https://roboco-io.github.io/KSAT-AI-Benchmark)에서 확인할 수 있습니다.
+평가 결과는 다음 링크에서 확인할 수 있습니다:
+
+**👉 [https://roboco.io/KSAT-AI-Benchmark/](https://roboco.io/KSAT-AI-Benchmark/)**
 
 ### 주요 페이지
 
@@ -387,9 +391,9 @@ Source: https://github.com/roboco-io/KSAT-AI-Benchmark
 
 ## 📮 연락처
 
-- 프로젝트 링크: [https://github.com/roboco-io/KSAT-AI-Benchmark](https://github.com/roboco-io/KSAT-AI-Benchmark)
-- 이슈 트래커: [https://github.com/roboco-io/KSAT-AI-Benchmark/issues](https://github.com/roboco-io/KSAT-AI-Benchmark/issues)
-- 웹사이트: [https://roboco-io.github.io/KSAT-AI-Benchmark](https://roboco-io.github.io/KSAT-AI-Benchmark)
+- 📦 프로젝트 저장소: [https://github.com/roboco-io/KSAT-AI-Benchmark](https://github.com/roboco-io/KSAT-AI-Benchmark)
+- 💬 이슈 트래커: [https://github.com/roboco-io/KSAT-AI-Benchmark/issues](https://github.com/roboco-io/KSAT-AI-Benchmark/issues)
+- 🌐 리더보드 웹사이트: [https://roboco.io/KSAT-AI-Benchmark/](https://roboco.io/KSAT-AI-Benchmark/)
 
 ## 🙏 감사의 말
 

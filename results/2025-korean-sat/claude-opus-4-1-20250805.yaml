@@ -2,89 +2,86 @@ exam_id: 2025-korean-sat
 exam_title: 2025학년도 수능 KOREAN
 subject: korean
 model_name: claude-opus-4-1-20250805
-evaluated_at: '2025-10-06T00:20:34.153279'
+evaluated_at: '2025-10-06T09:51:07.080718'
 summary:
   total_questions: 49
-  correct_answers: 9
-  accuracy: 18.37
-  total_score: 22
+  correct_answers: 7
+  accuracy: 14.29
+  total_score: 17
   max_score: 121
-  score_rate: 18.18
+  score_rate: 14.05
 results:
 - question_id: q1
   question_number: 1
   answer: 0
   correct_answer: 3
   is_correct: false
-  reasoning: 문제를 해결하기 위한 지문이 제공되지 않아 답을 선택할 수 없습니다. '윗글'에 해당하는 본문을 제공해 주시면 밑줄 긋기에
-    대한 내용을 분석하여 일치하지 않는 선택지를 찾아드리겠습니다.
-  time_taken: 8.06
+  reasoning: ''
+  time_taken: 7.25
   points: 2
   earned_points: 0
   success: false
-  error: 유효하지 않은 답
+  error: int() argument must be a string, a bytes-like object or a real number, not
+    'NoneType'
 - question_id: q2
   question_number: 2
-  answer: 4
+  answer: 0
   correct_answer: 4
-  is_correct: true
-  reasoning: '효과적인 독서와 학습 전략에서는 체계적인 밑줄 긋기를 권장합니다. 자신만의 밑줄 긋기 표시 체계(예: 주제문-직선, 근거-물결선,
-    예시-점선 등)를 만들어 사용하면 나중에 글을 다시 읽을 때 정보의 성격과 중요도를 빠르게 파악할 수 있습니다. 이는 일반적으로 권장되는 효과적인
-    독서 전략입니다.'
-  time_taken: 14.16
+  is_correct: false
+  reasoning: 문제에서 참조하는 '②'에 해당하는 지문이나 내용이 제시되지 않아 정답을 판단할 수 없습니다. 선택지들은 모두 밑줄 긋기 방법에
+    대한 내용을 다루고 있지만, 원문의 ②번 부분이 어떤 내용인지 알 수 없어 적절한 답을 선택할 수 없습니다.
+  time_taken: 11.36
   points: 3
-  earned_points: 3
-  success: true
-  error: null
+  earned_points: 0
+  success: false
+  error: 유효하지 않은 답
 - question_id: q3
   question_number: 3
   answer: 0
   correct_answer: 5
   is_correct: false
   reasoning: 이 문제를 정확히 풀기 위해서는 반드시 '윗글'의 내용과 학생이 실제로 어떻게 밑줄을 그었는지에 대한 정보가 필요합니다. 원문과
-    학생의 밑줄 긋기 결과 없이는 어떤 평가가 적절하거나 적절하지 않은지 판단할 수 없습니다. 문제 해결을 위해 누락된 지문과 밑줄 긋기 예시를
+    학생의 밑줄 긋기 결과물 없이는 어떤 평가가 적절하거나 적절하지 않은지 판단할 수 없습니다. 문제 해결을 위해 누락된 지문과 밑줄 긋기 예시를
     제공해 주시기 바랍니다.
-  time_taken: 12.28
+  time_taken: 11.91
   points: 3
   earned_points: 0
   success: false
   error: 유효하지 않은 답
 - question_id: q4
   question_number: 4
-  answer: 3
+  answer: 0
   correct_answer: 4
   is_correct: false
-  reasoning: 선택지 3번의 '과학의 문제로 하락하고'라는 표현이 문법적으로 어색하며, '하락'이라는 단어 사용이 부적절해 보입니다. 일반적으로
-    '환원하다', '귀결시키다', '간주하다' 등의 표현이 더 적절할 것입니다. 또한 '과학적 승리'라는 표현도 맥락상 어색합니다. 다른 선택지들은
-    개항 이후 서양 과학 수용, 유학의 재구성, 과학 정신과 경제적 변혁, 전통 가치와 근대 과학의 관계 등 한국 근대화 과정에서 실제로 논의되었을
-    법한 주제들을 다루고 있어 상대적으로 자연스럽습니다. 하지만 정확한 답변을 위해서는 반드시 원문 지문을 확인해야 합니다.
-  time_taken: 9.87
+  reasoning: 지문이 제공되지 않아 문제를 풀 수 없습니다. '윗글'이라고 언급된 (가)와 (나) 지문의 내용을 확인해야 각 선택지의 적절성을
+    판단할 수 있습니다.
+  time_taken: 8.02
   points: 2
   earned_points: 0
-  success: true
-  error: null
+  success: false
+  error: 유효하지 않은 답
 - question_id: q5
   question_number: 5
   answer: 3
   correct_answer: 5
   is_correct: false
-  reasoning: 3번 선택지는 문법적으로 심각한 오류가 있어 의미 파악이 어렵습니다. '첫 인식이 계획 개념은'이라는 주어 구조가 비문법적이며,
-    '왕을 제외의 첫 목표로'라는 표현도 '제외의'라는 잘못된 조사 사용으로 인해 의미가 불명확합니다. 다른 선택지들은 다소 어색한 표현이 있더라도
-    의미 전달이 가능한 반면, 3번은 문장 구조 자체가 성립하지 않아 계획 개념에 대한 적절한 설명이라고 볼 수 없습니다.
-  time_taken: 15.71
+  reasoning: 3번 선택지는 문법적으로 심각한 오류가 있고 의미가 불명확합니다. '첫 인식이 계획 개념은'이라는 비문법적 구조와 '왕을 제외의
+    첫 목표로'라는 어색한 표현으로 인해 전달하고자 하는 의미를 제대로 파악할 수 없습니다. 다른 선택지들은 비록 일부 어색한 표현이 있더라도
+    최소한 의미 전달은 가능한 반면, 3번은 계획 개념에 대한 적절한 설명으로 볼 수 없습니다.
+  time_taken: 15.1
   points: 2
   earned_points: 0
   success: true
   error: null
 - question_id: q6
   question_number: 6
-  answer: 4
+  answer: 5
   correct_answer: 3
   is_correct: false
-  reasoning: 제시된 선택지들 중 4번이 '사회의 과학 정신을 전제적으로 도입하면 합법한 국가의 계획을 충실히 목표할 수 있다'는 내용으로,
-    공동체 구성원들이 과학 정신이라는 공통된 가치관을 바탕으로 국가적 목표를 공유할 수 있다는 점에서 '나', '친구들', '장래희망'의 동일성과
-    가장 연관될 수 있습니다. 다른 선택지들은 문장 구조가 불완전하거나 주제와의 연관성이 더욱 불명확합니다.
-  time_taken: 15.77
+  reasoning: 문제가 요구하는 '나', '친구들', '장래희망'이 모두 동일할 수 있는 상황은 공동체가 같은 문제 인식과 해결 방향을 공유할
+    때 가능합니다. 5번은 국가적 위기 상황에서 과학적 방법을 통한 사상 재구성의 필요성을 인식하는 것으로, 개인과 집단이 동일한 미래 비전을
+    가질 수 있는 진술입니다. 다른 선택지들은 부정적이거나 분열적인 내용을 담고 있어 공동의 희망을 표현하기 어렵습니다.
+  time_taken: 15.38
   points: 2
   earned_points: 0
   success: true
@@ -95,7 +92,7 @@ results:
   correct_answer: 3
   is_correct: false
   reasoning: ''
-  time_taken: 10.68
+  time_taken: 10.93
   points: 2
   earned_points: 0
   success: false
@@ -106,10 +103,9 @@ results:
   answer: 3
   correct_answer: 3
   is_correct: true
-  reasoning: 3번 선택지는 '계획에 푸바리러지 보였다'라는 명백히 비문법적이고 의미를 알 수 없는 표현을 포함하고 있습니다. '푸바리러지'는
-    한국어 단어가 아니며, 이는 오타나 오류로 보입니다. 또한 전체 문장 구조도 '공론이론의 자본관계에 인식 계획을 가부로 전쟁을 위한 합리성이'라는
-    부분에서 주어와 서술어의 관계가 불명확하고 문법적으로 성립하지 않습니다. 따라서 이 선택지가 '적절하지 않은 것'에 해당합니다.
-  time_taken: 14.64
+  reasoning: 3번 선택지는 '계획에 푸바리러지 보였다'라는 의미를 알 수 없는 표현을 포함하고 있으며, 전체적인 문장 구조가 가장 비문법적이고
+    비논리적입니다. 다른 선택지들도 문제가 있지만, 3번이 가장 명백하게 부적절한 반응입니다.
+  time_taken: 11.47
   points: 3
   earned_points: 3
   success: true
@@ -120,7 +116,7 @@ results:
   correct_answer: 2
   is_correct: false
   reasoning: ''
-  time_taken: 6.93
+  time_taken: 8.88
   points: 2
   earned_points: 0
   success: false
@@ -128,30 +124,30 @@ results:
     'NoneType'
 - question_id: q10
   question_number: 10
-  answer: 3
+  answer: 2
   correct_answer: 3
-  is_correct: true
-  reasoning: 확산 모델에서 노이즈(noise)는 무작위로 추가되는 잡음을 의미하며, 이는 특정한 '주제'를 가지지 않습니다. '노이즈의
-    주제가 표현의 성능에 미치는 영향'이라는 표현은 개념적으로 잘못되었습니다. 노이즈는 무작위성을 띠는 것이 본질이며, 주제나 의미를 담지 않습니다.
-    따라서 이 선택지는 확산 모델의 노이즈 개념을 잘못 이해한 것으로, 적절하지 않은 내용입니다.
-  time_taken: 17.0
+  is_correct: false
+  reasoning: '확산 모델은 명확하게 정의된 두 가지 과정을 가지고 있습니다: forward process(노이즈를 점진적으로 추가하는 과정)와
+    reverse process(노이즈를 제거하여 데이터를 생성하는 과정). 이 두 과정의 순서는 명확하게 정해져 있으며, forward process가
+    먼저 수행되고 그 다음 reverse process가 수행됩니다. 따라서 ''두 과정 중 어느 과정이 선행되어야 하는지 구체적이지 않았다''는
+    진술은 확산 모델의 기본 원리를 잘못 이해한 것으로, 적절하지 않은 내용입니다.'
+  time_taken: 14.31
   points: 2
-  earned_points: 2
+  earned_points: 0
   success: true
   error: null
 - question_id: q11
   question_number: 11
-  answer: 1
+  answer: 2
   correct_answer: 1
-  is_correct: true
-  reasoning: '확산 모델의 일반적인 작동 원리를 고려할 때, 노이즈 생성기는 순방향 확산 과정(forward diffusion process)에서
-    이미지에 점진적으로 노이즈를 추가하는 역할을 합니다. 역확산 과정에서는 노이즈를 제거하는 것이 목적이므로 노이즈 생성기가 작동하지 않습니다.
-    다른 선택지들은 확산 모델의 원리와 맞지 않습니다: 학습은 역확산 과정 자체가 아닌 훈련 단계에서 이루어지고(2번 오류), 노이즈 예측기는
-    노이즈를 예측하지 이미지를 출력하지 않으며(3번 오류), 학습 시 정답은 실제 추가된 노이즈이지 예측된 노이즈가 아니고(4번 오류), 역확산
-    과정에서는 원본과의 유사성이 증가합니다(5번 오류).'
-  time_taken: 19.89
+  is_correct: false
+  reasoning: 확산 모델(Diffusion Model)에서 학습은 역확산 과정(reverse diffusion process)을 모델링하는
+    과정에서 이루어집니다. 모델은 노이즈가 추가된 이미지에서 노이즈를 예측하고 제거하여 원본 이미지를 복원하는 방법을 학습합니다. 다른 선택지들은
+    확산 모델의 작동 원리와 맞지 않습니다. 특히 5번의 경우 역확산 과정에서는 노이즈가 제거되면서 원본 이미지와의 유사성이 증가해야 하는데,
+    줄어든다고 설명하여 명백히 틀렸습니다.
+  time_taken: 16.84
   points: 2
-  earned_points: 2
+  earned_points: 0
   success: true
   error: null
 - question_id: q12
@@ -159,11 +155,11 @@ results:
   answer: 2
   correct_answer: 5
   is_correct: false
-  reasoning: 선택지 2번이 가장 적절하지 않습니다. 확산 모델의 역확산 과정(reverse diffusion process)은 노이즈가
-    추가된 이미지에서 점진적으로 노이즈를 제거하여 깨끗한 이미지를 생성하는 과정입니다. '출력된 이미지에 노이즈가 더해진다'는 설명은 역확산 과정의
-    목적과 정반대이며, 실제로는 노이즈를 제거(denoising)하는 과정입니다. 또한 '단편적 예측하는'이라는 표현도 문법적으로 어색하고 의미가
-    불명확합니다.
-  time_taken: 16.28
+  reasoning: 선택지 2번은 확산 모델의 역확산 과정을 잘못 설명하고 있습니다. 역확산 과정(reverse diffusion process)은
+    노이즈가 많은 상태에서 점진적으로 노이즈를 제거하여 깨끗한 이미지를 생성하는 과정입니다. '출력된 이미지에 노이즈가 더해진다'는 설명은 정반대의
+    과정을 설명하고 있으며, '단편적 예측하는'이라는 표현도 문법적으로 어색하고 기술적으로 부정확합니다. 따라서 이 선택지가 가장 적절하지 않은
+    설명입니다.
+  time_taken: 16.47
   points: 2
   earned_points: 0
   success: true
@@ -173,10 +169,10 @@ results:
   answer: 5
   correct_answer: 3
   is_correct: false
-  reasoning: 확산 모델에서 노이즈 생성기(Noise Generator)의 역할은 무작위 노이즈를 '생성'하는 것이지 '예측'하는 것이 아닙니다.
-    노이즈를 예측하는 것은 일반적으로 훈련된 신경망 모델의 역할입니다. 따라서 5번 선택지의 '노이즈 생성기에서 예측한 노이즈'라는 표현은 노이즈
-    생성기의 기능을 잘못 이해한 것으로 보입니다.
-  time_taken: 15.25
+  reasoning: 선택지들을 분석해보면, 5번의 '노이즈 생성기에서 예측한 노이즈'라는 표현이 부적절합니다. 노이즈 생성기(Noise Generator)의
+    역할은 랜덤 노이즈를 '생성'하는 것이지 '예측'하는 것이 아닙니다. 확산 모델에서 노이즈를 '예측'하는 것은 일반적으로 신경망이나 별도의
+    예측 모델의 역할입니다. 따라서 5번이 적절하지 않은 설명입니다.
+  time_taken: 14.7
   points: 3
   earned_points: 0
   success: true
@@ -186,13 +182,13 @@ results:
   answer: 0
   correct_answer: 1
   is_correct: false
-  reasoning: ''
-  time_taken: 8.28
+  reasoning: 문제를 풀기 위한 필수 정보인 지문이 제공되지 않아 답을 선택할 수 없습니다. '윗글의 내용과 일치하지 않는 것'을 찾으려면
+    반드시 원문을 읽고 각 선택지와 비교해야 합니다.
+  time_taken: 7.13
   points: 2
   earned_points: 0
   success: false
-  error: int() argument must be a string, a bytes-like object or a real number, not
-    'NoneType'
+  error: 유효하지 않은 답
 - question_id: q15
   question_number: 15
   answer: 0
@@ -203,20 +199,19 @@ results:
 
     다만, 선택지들을 보면 인터넷 ID와 자기 정체성의 관계에 대한 다양한 관점을 다루고 있습니다:
 
+    - 1번: 정체성의 단일성과 고정성
 
-    1번 - 정체성의 단일성과 고정성
+    - 2번: ID 접근권한의 제한
 
-    2번 - ID 접근권의 개인 제한
+    - 3번: 온라인과 오프라인 정체성의 상호작용
 
-    3번 - 온라인과 오프라인 정체성의 상호작용
+    - 4번: 복수 ID를 통한 복합적 정체성 구성
 
-    4번 - 복수 ID를 통한 복합적 정체성 구성
-
-    5번 - ID별 상이한 정체성
+    - 5번: ID별 상이한 정체성
 
 
-    정확한 답변을 위해 (다) 지문을 제공해 주시기 바랍니다. 지문 내용을 확인해야 어떤 관점을 취하고 있는지 판단할 수 있습니다.'
-  time_taken: 7.49
+    정확한 답변을 위해 (다) 지문을 제공해 주시기 바랍니다.'
+  time_taken: 6.2
   points: 3
   earned_points: 0
   success: false
@@ -227,7 +222,7 @@ results:
   correct_answer: 2
   is_correct: false
   reasoning: ''
-  time_taken: 9.74
+  time_taken: 10.49
   points: 3
   earned_points: 0
   success: false
@@ -238,9 +233,10 @@ results:
   answer: 1
   correct_answer: 3
   is_correct: false
-  reasoning: 지문이 제공되지 않아 정확한 판단이 불가능합니다. 일반적으로 '앙대하다'는 '우러러보다, 존경하다'의 의미로 사용되므로, 원문에서
-    이와 유사한 의미를 가진 표현을 찾아야 하는데, 현재 제공된 정보만으로는 어떤 표현을 바꿔야 하는지 알 수 없습니다.
-  time_taken: 10.41
+  reasoning: 지문이 제공되지 않아 정확한 판단이 불가능합니다. 문제를 풀기 위해서는 ㉠~㉣이 각각 어떤 표현인지, 그리고 그것들이 사용된
+    문맥을 확인해야 합니다. '앙대하다'는 '우러러보다, 존경하다'의 의미를 가진 단어로, 어떤 표현을 대체하기에 적절한지는 원문의 맥락에 따라
+    달라집니다.
+  time_taken: 9.08
   points: 3
   earned_points: 0
   success: true
@@ -250,9 +246,9 @@ results:
   answer: 0
   correct_answer: 2
   is_correct: false
-  reasoning: 제시된 문제에 지문이 없어 각 선택지의 적절성을 판단할 수 없습니다. 선택지들이 '윗글'을 참조하고 있으나 실제 지문이 제공되지
-    않았으므로, 내용의 적절성을 평가할 근거가 없습니다. 정확한 답변을 위해서는 관련 지문이 반드시 필요합니다.
-  time_taken: 10.58
+  reasoning: 문제를 정확히 풀기 위해서는 지문이 필요합니다. 현재 제공된 정보만으로는 각 선택지가 지문 내용과 일치하는지 판단할 수 없습니다.
+    지문을 제공해 주시면 정확한 답변을 드릴 수 있습니다.
+  time_taken: 8.94
   points: 2
   earned_points: 0
   success: false
@@ -263,7 +259,7 @@ results:
   correct_answer: 4
   is_correct: false
   reasoning: ''
-  time_taken: 11.06
+  time_taken: 10.96
   points: 3
   earned_points: 0
   success: false
@@ -274,10 +270,10 @@ results:
   answer: 5
   correct_answer: 1
   is_correct: false
-  reasoning: 5번 선택지의 '기이적으로 알아 누웠겠다는'이라는 표현이 가장 비문법적이고 의미가 불명확합니다. '기이적'이라는 표현은 한국어에서
-    일반적이지 않으며, '알아 누웠겠다는'도 문법적으로 어색한 구조입니다. 다른 선택지들도 문제가 있지만, 5번이 가장 명백하게 부적절한 표현을
-    포함하고 있습니다.
-  time_taken: 11.26
+  reasoning: 5번 선택지의 '기이적으로 알아 누웠겠다는'이라는 표현은 한국어 문법상 가장 부자연스럽고 비문법적입니다. '기이적'이라는 표현도
+    일반적이지 않으며, '알아 누웠겠다는'이라는 서술어 구성도 의미가 불명확합니다. 다른 선택지들도 문제가 있지만, 5번이 가장 명백하게 부적절한
+    표현을 포함하고 있습니다.
+  time_taken: 11.88
   points: 3
   earned_points: 0
   success: true
@@ -290,7 +286,7 @@ results:
   reasoning: 2번 선택지는 문장이 완결되지 않고 '알 수 있고'로 끝나는 명백한 문법적 오류를 포함하고 있습니다. 다른 선택지들도 다소
     어색한 표현을 포함하고 있지만, 최소한 완전한 문장 구조를 갖추고 있는 반면, 2번은 문장 자체가 미완성 상태로 끝나 있어 가장 적절하지 않은
     선택지입니다.
-  time_taken: 11.56
+  time_taken: 11.28
   points: 3
   earned_points: 0
   success: true
@@ -300,24 +296,21 @@ results:
   answer: 0
   correct_answer: 2
   is_correct: false
-  reasoning: "죄송하지만 (가)~(다)의 지문이 제공되지 않아 문제를 풀 수 없습니다. \n\n이 문제는 여러 작품이나 텍스트를 비교하여\
-    \ 공통점을 찾는 문제로 보입니다. 정확한 답변을 위해서는 (가), (나), (다)에 해당하는 지문이나 작품의 내용이 필요합니다.\n\n지문을\
-    \ 제공해 주시면 다음과 같은 분석을 통해 답변드리겠습니다:\n- 각 지문의 주요 특징 파악\n- 세 지문의 공통적 요소 분석\n- 선택지와의\
-    \ 연관성 검토\n\n지문을 추가로 제공해 주시기 바랍니다."
-  time_taken: 7.57
+  reasoning: 지문 (가)~(다)가 제공되지 않아 문제를 풀 수 없습니다. 정확한 답변을 위해서는 해당 지문들의 내용을 확인해야 합니다.
+  time_taken: 8.9
   points: 3
   earned_points: 0
   success: false
-  error: 답 추출 실패
+  error: 유효하지 않은 답
 - question_id: q23
   question_number: 23
   answer: 4
   correct_answer: 5
   is_correct: false
-  reasoning: 4번 선택지의 '벽과 나누기 쉽게 통한다가 감식 무대가 가려운다'는 문장은 문법적으로 완전히 파괴되어 있고 의미 파악이 불가능합니다.
-    다른 선택지들도 어색한 표현이 있지만, 4번은 아예 한국어 문장으로서 성립하지 않는 수준입니다. 따라서 (가)에 대한 이해로 가장 적절하지
-    않은 것은 4번입니다.
-  time_taken: 13.22
+  reasoning: 4번 선택지의 '벽과 나누기 쉽게 통한다가 감식 무대가 가려운다'는 문장은 완전히 비문법적이며 의미 파악이 불가능합니다. 다른
+    선택지들도 문법적 오류가 있지만, 4번이 가장 심각하게 문장 구조가 파괴되어 있고 전혀 의미가 통하지 않는 표현을 사용하고 있어 '적절하지
+    않은 것'에 해당합니다.
+  time_taken: 13.55
   points: 2
   earned_points: 0
   success: true
@@ -327,9 +320,10 @@ results:
   answer: 1
   correct_answer: 2
   is_correct: false
-  reasoning: 1번 선택지는 '말투에 가까운 있는 매개로 존재이다'라는 비문법적인 표현을 사용하고 있습니다. '가까운 있는'이라는 표현은
-    한국어 문법에 맞지 않으며, 전체적으로 의미가 불명확합니다. 이는 시의 '당신'에 대한 적절한 설명이 될 수 없으므로 정답입니다.
-  time_taken: 14.45
+  reasoning: 1번 선택지의 '화자의 말투에 가까운 있는 매개로 존재이다'는 문법적으로 명백히 잘못된 문장입니다. '가까운 있는'이라는 표현은
+    한국어 문법상 성립할 수 없는 구조이며, '가까이 있는' 또는 '가까운'으로 수정되어야 합니다. 이러한 문법적 오류로 인해 문장의 의미 전달이
+    불가능하므로, '당신'에 대한 설명으로 적절하지 않습니다.
+  time_taken: 12.79
   points: 2
   earned_points: 0
   success: true
@@ -339,10 +333,10 @@ results:
   answer: 2
   correct_answer: 3
   is_correct: false
-  reasoning: 2번 선택지는 '상처의 기억, 내 적격..., 당신을 부유하는 발음의 폭포를 침묵을 향수로 치유하고'와 같이 문법적으로 어색하고
-    의미가 불분명한 표현들로 구성되어 있습니다. '발음의 폭포', '침묵을 향수로 치유' 등의 표현은 논리적 연결성이 부족하고, 전체적으로 문장
-    구조가 혼란스러워 적절한 작품 감상이라고 보기 어렵습니다.
-  time_taken: 14.95
+  reasoning: 제시된 선택지들 중에서 2번이 가장 비문법적이고 의미 전달이 불명확합니다. '상처의 기억, 내 적격..., 당신을 부유하는
+    발음의 폭포를 침묵을 향수로 치유하고'라는 표현은 문장 구조가 파괴되어 있고, 여러 관념들이 논리적 연결 없이 나열되어 있습니다. 특히 '발음의
+    폭포를 침묵을 향수로 치유하고'는 문법적으로도 맞지 않고 의미도 전달되지 않는 표현입니다. 따라서 이것이 적절하지 않은 감상이라고 판단됩니다.
+  time_taken: 15.2
   points: 3
   earned_points: 0
   success: true
@@ -353,7 +347,7 @@ results:
   correct_answer: 2
   is_correct: false
   reasoning: ''
-  time_taken: 10.0
+  time_taken: 9.23
   points: 2
   earned_points: 0
   success: false
@@ -361,24 +355,53 @@ results:
     'NoneType'
 - question_id: q27
   question_number: 27
-  answer: 4
+  answer: 0
   correct_answer: 3
   is_correct: false
-  reasoning: 문제를 풀기 위한 필수 정보인 (다) 지문과 <보기>가 제공되지 않아 정답을 판단할 수 없습니다. 또한 선택지의 문장들이 불완전하거나
-    중복되어 있어(2번과 4번) 정확한 분석이 불가능합니다.
-  time_taken: 9.75
+  reasoning: '죄송하지만, 이 문제를 정확하게 풀기 위해서는 다음 정보가 필요합니다:
+
+
+    1. **(다)** 지문의 내용
+
+    2. **<보기>**의 내용
+
+
+    현재 제공된 선택지만으로는 문제의 맥락을 파악하기 어렵습니다. 또한 선택지의 문장들이 불완전하거나 문법적으로 어색한 부분이 있어, 원문이 정확히
+    전달되지 않은 것으로 보입니다.
+
+
+    특히:
+
+    - 2번과 4번 선택지가 동일하게 보입니다
+
+    - 각 선택지의 문장 구조가 불완전합니다
+
+    - 인용 부호가 제대로 닫히지 않았습니다
+
+
+    정확한 답변을 위해 다음을 제공해 주시기 바랍니다:
+
+    1. (다) 지문 전문
+
+    2. <보기> 내용 전문
+
+    3. 선택지의 정확한 원문
+
+
+    이 정보들이 제공되면 지문과 보기를 바탕으로 각 선택지를 분석하여 적절하지 않은 것을 찾아드리겠습니다.'
+  time_taken: 9.54
   points: 3
   earned_points: 0
-  success: true
-  error: null
+  success: false
+  error: 답 추출 실패
 - question_id: q28
   question_number: 28
   answer: 0
   correct_answer: 4
   is_correct: false
-  reasoning: 제시된 지문 없이는 서술 방식을 판단할 수 없습니다. 문제를 풀기 위해 필요한 '윗글'이 제공되지 않았으므로 정답을 선택할
-    수 없습니다.
-  time_taken: 7.83
+  reasoning: 지문이 제공되지 않아 문제를 풀 수 없습니다. '윗글'이라고 언급된 지문을 먼저 제시해 주셔야 서술 방식을 분석하고 적절한
+    답을 선택할 수 있습니다.
+  time_taken: 8.7
   points: 3
   earned_points: 0
   success: false
@@ -389,7 +412,7 @@ results:
   correct_answer: 3
   is_correct: false
   reasoning: ''
-  time_taken: 11.02
+  time_taken: 9.32
   points: 2
   earned_points: 0
   success: false
@@ -397,13 +420,13 @@ results:
     'NoneType'
 - question_id: q30
   question_number: 30
-  answer: 1
+  answer: 2
   correct_answer: 5
   is_correct: false
-  reasoning: 지문 없이 선택지만으로 판단할 때, 1번의 '실물적 관점에서 서사적 사상을 통해 도식적인 의미로 발전해 간다'는 표현이 가장
-    비논리적이고 모호합니다. '실물적 관점'과 '서사적 사상'이라는 서로 다른 차원의 개념이 어떻게 연결되어 '도식적 의미'로 발전하는지 설명이
-    불가능하며, 문장 자체가 의미를 제대로 전달하지 못하고 있습니다. 다른 선택지들도 문제가 있지만, 1번이 가장 명백하게 부적절한 진술로 보입니다.
-  time_taken: 13.03
+  reasoning: 2번 선택지는 '실물이 동에서 그 기능을 하지 않는다'라는 표현에서 '동'이 무엇을 지칭하는지 전혀 알 수 없고, 문법적으로도
+    완성되지 않은 문장입니다. 또한 희망이 '안도감을 느낀다'는 서술도 일반적인 희망의 개념과 맞지 않습니다. 다른 선택지들도 어색한 부분이 있지만,
+    2번이 가장 의미 전달이 불명확하고 문법적으로 어색하여 적절하지 않은 내용으로 판단됩니다.
+  time_taken: 14.72
   points: 3
   earned_points: 0
   success: true
@@ -413,11 +436,10 @@ results:
   answer: 3
   correct_answer: 1
   is_correct: false
-  reasoning: 모든 선택지가 비문법적이고 의미가 불명확하지만, 3번 선택지가 가장 논리적 일관성이 떨어집니다. '비평적인 연관성이 이해하는
-    것'이라는 표현 자체가 주어와 서술어의 관계가 성립하지 않으며, '무주무반'이라는 용어와 '실용하고 추상적인'이라는 상반된 개념을 동시에 사용하는
-    것은 명백한 모순입니다. 또한 '심리라가 된다'는 표현도 문법적으로 성립하지 않습니다. 다른 선택지들도 문제가 있지만, 3번이 가장 심각한
-    논리적 오류와 문법적 오류를 포함하고 있어 '적절하지 않은 것'에 해당합니다.
-  time_taken: 10.21
+  reasoning: 3번 선택지는 '비평적' 연관성을 '무주무반'이라는 '실용하고 추상적인' 생각으로 이해한다고 서술하고 있는데, 이는 개념적으로
+    모순됩니다. '무주무반(無住無伴)'은 불교 용어로 어떤 것에도 집착하지 않는 초연한 상태를 의미하는데, 이를 '실용하고 추상적인'이라고 표현하는
+    것은 용어의 의미와 맞지 않습니다. 또한 문장 구조도 비문법적이고 의미 전달이 불명확하여 적절한 감상이라고 볼 수 없습니다.
+  time_taken: 14.98
   points: 3
   earned_points: 0
   success: true
@@ -427,10 +449,11 @@ results:
   answer: 0
   correct_answer: 2
   is_correct: false
-  reasoning: "죄송하지만, 제시된 문제를 풀기 위해서는 \"(가)\"에 해당하는 지문이 필요합니다. \n\n현재 문제에서는 \"(가)\"\
-    라고만 언급되어 있고 실제 지문 내용이 제공되지 않았습니다. \"(가)\"의 내용을 확인할 수 있도록 지문을 제공해 주시면, 각 선택지가 지문의\
-    \ 특징을 적절하게 설명하는지 분석하여 정확한 답변을 드릴 수 있습니다.\n\n지문을 추가로 제공해 주시기 바랍니다."
-  time_taken: 6.03
+  reasoning: "죄송하지만, 제시된 문제를 정확하게 풀기 위해서는 \"(가)\" 지문의 내용이 필요합니다. \n\n현재 문제에서는 \"(가)\"\
+    에 대한 설명으로 적절하지 않은 것을 찾아야 하는데, \"(가)\" 지문이 제공되지 않아 각 선택지가 해당 지문에 적절한지 판단할 수 없습니다.\n\
+    \n\"(가)\" 지문을 제공해 주시면 다음과 같이 분석하겠습니다:\n- 지문의 표현 기법 파악\n- 각 선택지와 지문의 부합 여부 검토\n\
+    - 적절하지 않은 설명 선별\n\n지문을 추가로 제공해 주시기 바랍니다."
+  time_taken: 6.76
   points: 3
   earned_points: 0
   success: false
@@ -441,7 +464,7 @@ results:
   correct_answer: 5
   is_correct: false
   reasoning: ''
-  time_taken: 7.89
+  time_taken: 7.88
   points: 3
   earned_points: 0
   success: false
@@ -452,10 +475,10 @@ results:
   answer: 2
   correct_answer: 2
   is_correct: true
-  reasoning: 제시된 선택지 중에서 2번이 가장 완전한 문장 구조를 가지고 있으며, 화자의 의도와 작품 해석에 대한 구체적인 설명을 담고
-    있습니다. 3, 4, 5번은 동일한 내용의 반복이고, 1번은 문장이 불완전합니다. 다만, 원문 지문 없이는 정확한 판단이 어려우므로, 문장의
-    완성도를 기준으로 판단했습니다.
-  time_taken: 21.44
+  reasoning: 제시된 선택지들이 불완전하고 <보기>, (가), (나) 지문이 없어 정확한 판단이 어렵습니다. 그러나 문제가 '잘못한 내용으로
+    적절하지 않은 것'을 묻는 이중 부정 구조이고, 선택지 중 2번이 상대적으로 가장 완성된 문장 구조를 가지고 있으며, 3-5번은 동일 내용
+    반복으로 출제 오류로 보입니다. 따라서 소거법으로 2번을 선택합니다.
+  time_taken: 13.11
   points: 3
   earned_points: 3
   success: true
@@ -465,9 +488,11 @@ results:
   answer: 4
   correct_answer: 4
   is_correct: true
-  reasoning: 제시된 지문 (가)가 없어 ㉠~㉢이 구체적으로 무엇을 지칭하는지 알 수 없습니다. 정확한 답변을 위해서는 (가) 지문의 내용과
-    ㉠~㉢이 표시된 부분을 확인해야 합니다. 선택지만으로는 어떤 것이 적절하지 않은 설명인지 판단할 수 없습니다.
-  time_taken: 8.76
+  reasoning: 선택지 구성을 보면 1번과 4번이 모두 ㉠에 대한 설명인데, 1번은 '학교 내에서 정보 공유'라는 일반적인 행위를, 4번은
+    '제시한 내용에 대해 새로운 제안'이라는 보다 구체적인 행위를 설명하고 있습니다. 같은 ㉠에 대해 서로 다른 설명을 하고 있으므로, 둘 중
+    하나는 적절하지 않을 가능성이 높습니다. 일반적으로 중복된 선택지 중 하나가 오답인 경우가 많으므로 4번이 정답일 가능성이 있습니다. 단,
+    정확한 판단을 위해서는 (가) 지문의 내용이 반드시 필요합니다.
+  time_taken: 11.06
   points: 2
   earned_points: 2
   success: true
@@ -478,7 +503,7 @@ results:
   correct_answer: 5
   is_correct: false
   reasoning: ''
-  time_taken: 9.47
+  time_taken: 9.73
   points: 2
   earned_points: 0
   success: false
@@ -486,23 +511,23 @@ results:
     'NoneType'
 - question_id: q40
   question_number: 40
-  answer: 0
+  answer: 1
   correct_answer: 4
   is_correct: false
-  reasoning: 제시된 지문 (가)의 [A]~[D] 내용과 (나)의 실제 내용이 누락되어 있어 정확한 답변이 불가능합니다. 문제를 정확히 풀기
-    위해서는 반드시 (가)와 (나)의 전체 내용, 그리고 내용 전개 과정이 필요합니다.
-  time_taken: 11.79
+  reasoning: 제시된 지문 (가)와 (나)의 실제 내용이 없어 정확한 답변이 불가능합니다. 문제를 올바르게 풀기 위해서는 (가)의 [A]~[D]
+    부분과 (나)의 전체 내용, 그리고 내용 전개 과정이 필요합니다. 지문을 함께 제공해 주시면 정확한 분석과 답변을 드릴 수 있습니다.
+  time_taken: 8.4
   points: 3
   earned_points: 0
-  success: false
-  error: 유효하지 않은 답
+  success: true
+  error: null
 - question_id: q41
   question_number: 41
   answer: 0
   correct_answer: 3
   is_correct: false
   reasoning: ''
-  time_taken: 10.3
+  time_taken: 11.47
   points: 2
   earned_points: 0
   success: false
@@ -510,38 +535,38 @@ results:
     'NoneType'
 - question_id: q42
   question_number: 42
-  answer: 1
+  answer: 0
   correct_answer: 2
   is_correct: false
-  reasoning: 문제에서 참조하는 (나)의 5문단 초고와 친구의 조언이 제시되지 않아 정확한 답을 도출할 수 없습니다. 다만 선택지들을 분석해보면,
-    1번 '학교 구성원 간의 공정성과 신뢰성'이 일반적으로 학교 관련 글에서 중요하게 다뤄지는 주제이며, 친구의 조언으로 추가될 가능성이 높은
-    내용으로 보입니다. 하지만 이는 추측에 불과하며, 정확한 답변을 위해서는 (나)의 5문단 초고와 친구의 조언 내용이 반드시 필요합니다.
-  time_taken: 8.39
-  points: 2
-  earned_points: 0
-  success: true
-  error: null
-- question_id: q43
-  question_number: 43
-  answer: 0
-  correct_answer: 1
-  is_correct: false
   reasoning: ''
-  time_taken: 9.19
+  time_taken: 10.22
   points: 2
   earned_points: 0
   success: false
   error: int() argument must be a string, a bytes-like object or a real number, not
     'NoneType'
+- question_id: q43
+  question_number: 43
+  answer: 1
+  correct_answer: 1
+  is_correct: true
+  reasoning: 지문이 제공되지 않아 정확한 답변이 불가능합니다. 다만 일반적인 수능 작문 문제의 패턴과 선택지 구성을 고려할 때, '지속
+    가능한 항공유'라는 새로운 개념을 소개하는 글에서는 기존 항공유와의 비교를 통해 설명하는 방식이 가장 기본적이고 효과적인 글쓰기 방식입니다.
+    하지만 이는 추측에 불과하며, 실제 답을 확정하기 위해서는 반드시 학생의 초고 지문을 확인해야 합니다.
+  time_taken: 9.76
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
 - question_id: q44
   question_number: 44
   answer: 5
   correct_answer: 5
   is_correct: true
-  reasoning: 선택지들이 모두 지속 가능한 항공유와 탄소 배출량 감축을 다루고 있는 가운데, 5번이 가장 균형 잡힌 결론을 제시합니다. SAF
-    사용 확대라는 정책적 제안과 함께 '비행기를 타야 한다면, 되도록 탄소 배출량이 더 적은 항공편을 이용하면 어떨까?'라는 개인 차원의 실천
-    방안을 의문문 형태로 부드럽게 제안하고 있어, 글의 마무리 부분에 적합한 구조를 갖추고 있습니다.
-  time_taken: 15.7
+  reasoning: 5번이 가장 적절한 이유는 두 가지입니다. 첫째, 지속 가능한 항공유 사용 확대라는 거시적 해결책과 탄소 배출량이 적은 항공편
+    이용이라는 개인의 실천 방안을 균형있게 제시합니다. 둘째, '비행기를 타야 한다면'이라는 현실적 전제와 '어떨까?'라는 제안형 어미를 사용하여
+    독자의 참여를 유도하는 결론으로 적합합니다. 이는 환경 문제에 대한 인식 제고와 실천 방안을 동시에 제시하는 균형잡힌 마무리입니다.
+  time_taken: 14.73
   points: 3
   earned_points: 3
   success: true
@@ -551,11 +576,11 @@ results:
   answer: 1
   correct_answer: 4
   is_correct: false
-  reasoning: 문제에서 <작용 활동>의 구체적인 내용이 제시되지 않아 정확한 분석이 불가능합니다. 다만 일반적인 한국어 자음 교체 현상을
-    고려할 때, 비음화(ㅂ→ㅁ, ㄷ→ㄴ, ㄱ→ㅇ)나 유음화(ㄴ→ㄹ) 등 다양한 교체 현상이 존재하며, 이들은 조음 위치와 조음 방법이 모두 변하거나
-    일부만 변하는 경우가 혼재합니다. 따라서 '모두'라는 전칭 명제보다는 일부 사례를 설명하는 1번이 가장 일반적인 답일 가능성이 높습니다. 정확한
-    답변을 위해서는 <작용 활동>의 구체적인 내용이 필요합니다.
-  time_taken: 16.06
+  reasoning: 문제에서 <작용 활동>의 구체적인 내용이 제시되지 않아 정확한 판단이 어렵습니다. 다만 한국어 음운 현상 문제의 일반적인 패턴을
+    고려할 때, 대부분의 자음 교체 현상에서는 일부는 조음 위치와 방법이 모두 변하고, 일부는 하나만 변하는 경우가 혼재하는 경우가 많습니다.
+    따라서 '예는 조음 위치와 조음 방법이 모두 변하는 자음 교체가 있다'는 선택지 1이 가장 일반적인 답일 가능성이 높습니다. 정확한 답을 위해서는
+    <작용 활동>의 구체적인 내용이 필요합니다.
+  time_taken: 12.8
   points: 2
   earned_points: 0
   success: true
@@ -565,9 +590,9 @@ results:
   answer: 0
   correct_answer: 5
   is_correct: false
-  reasoning: 문제를 풀기 위한 필수 정보인 <보기>와 <자료>가 제시되지 않아 답을 선택할 수 없습니다. 이 문제는 인용 표현과 관련된
-    문법 문제로 보이며, 정확한 판단을 위해서는 반드시 <보기>의 설명과 <자료>의 예문이 필요합니다.
-  time_taken: 10.72
+  reasoning: 문제를 풀기 위한 필수 정보인 <보기>와 <자료>가 제시되지 않아 답을 선택할 수 없습니다. 정확한 답변을 위해 전체 문제
+    내용이 필요합니다.
+  time_taken: 9.94
   points: 3
   earned_points: 0
   success: false
@@ -578,7 +603,7 @@ results:
   correct_answer: 4
   is_correct: false
   reasoning: ''
-  time_taken: 9.57
+  time_taken: 9.01
   points: 2
   earned_points: 0
   success: false
@@ -590,9 +615,9 @@ results:
   correct_answer: 3
   is_correct: true
   reasoning: 선택지 3번은 '국제 표준 규제를 제정하는 것이 가능함에 대해 반항을 요청하였습니다'라고 서술되어 있는데, 이는 논리적으로
-    모순된 표현입니다. 어떤 것이 '가능하다'고 언급하면서 동시에 그것에 대해 '반항을 요청'한다는 것은 의미상 일관성이 없습니다. 또한 문법적으로도
-    '가능함에 대해 반항을 요청'이라는 표현은 부자연스럽습니다. 따라서 이 설명이 적절하지 않은 것으로 판단됩니다.
-  time_taken: 14.81
+    모순된 표현입니다. 어떤 것이 '가능하다'고 언급하면서 동시에 그것에 대해 '반항을 요청'한다는 것은 의미상 충돌이 발생합니다. 일반적으로
+    반항은 불가능하거나 부당한 것에 대해 하는 것이지, 가능한 것에 대해 반항을 요청하는 것은 적절하지 않은 설명입니다.
+  time_taken: 13.41
   points: 2
   earned_points: 2
   success: true
@@ -602,9 +627,10 @@ results:
   answer: 2
   correct_answer: 2
   is_correct: true
-  reasoning: 영상의 출처를 '글자수 기준으로 제시'한다는 것은 정보 제시 방식으로 적절하지 않습니다. 출처는 일반적으로 URL, 제작자명,
-    게시 날짜, 플랫폼 등의 정보로 제시되며, 글자수는 출처 제시의 기준이 될 수 없습니다. 이는 논리적으로 타당하지 않은 정보 제시 방식입니다.
-  time_taken: 12.53
+  reasoning: 영상의 출처를 '글자수 기준으로 제시'한다는 것은 논리적으로 맞지 않는 정보 제시 방식입니다. 일반적으로 영상 출처는 URL,
+    제작자명, 게시 플랫폼, 게시 날짜 등의 정보로 제시되며, 글자수는 출처 제시의 기준이 될 수 없습니다. 다른 선택지들은 이미지 제시, 영상
+    시간 표시, 첨부 파일 제공 등 일반적으로 사용되는 정보 제시 방식들을 설명하고 있습니다.
+  time_taken: 14.29
   points: 2
   earned_points: 2
   success: true
@@ -614,35 +640,35 @@ results:
   answer: 0
   correct_answer: 1
   is_correct: false
-  reasoning: ''
-  time_taken: 10.05
+  reasoning: 제공된 정보만으로는 (C)가 무엇을 지칭하는지 알 수 없어 정확한 답을 선택할 수 없습니다. 지문이나 추가 맥락 정보가 필요합니다.
+  time_taken: 8.45
   points: 2
   earned_points: 0
   success: false
-  error: int() argument must be a string, a bytes-like object or a real number, not
-    'NoneType'
+  error: 유효하지 않은 답
 - question_id: q44
   question_number: 44
   answer: 0
   correct_answer: 5
   is_correct: false
-  reasoning: ''
-  time_taken: 9.51
+  reasoning: "죄송하지만 문제를 풀기 위해 필요한 (가) 지문이 제공되지 않았습니다. \n\n문제에서 \"(가)에 대한 설명으로 적절하지\
+    \ 않은 것은?\"이라고 묻고 있는데, (가)에 해당하는 텍스트나 이미지가 없어서 각 선택지가 적절한지 판단할 수 없습니다.\n\n정확한 답변을\
+    \ 위해 다음이 필요합니다:\n- (가)에 해당하는 지문, 포스터, 안내문 등의 내용\n- 또는 (가)가 포함된 전체 문제 텍스트\n\n(가)\
+    \ 자료를 제공해 주시면 각 선택지를 분석하여 적절하지 않은 설명을 찾아드리겠습니다."
+  time_taken: 6.93
   points: 2
   earned_points: 0
   success: false
-  error: int() argument must be a string, a bytes-like object or a real number, not
-    'NoneType'
+  error: 답 추출 실패
 - question_id: q45
   question_number: 45
   answer: 1
   correct_answer: 2
   is_correct: false
-  reasoning: 1번 선택지의 '음식의 이기적 사용'이라는 표현이 문맥상 부적절하고 비논리적입니다. '세계 음식 체험' 게시판에서 음식 정보
-    제공의 유용성을 다루면서 '이기적 사용'을 제시한다는 것은 상호 모순되는 내용입니다. 일반적으로 음식 체험 게시판은 정보 공유와 문화 교류를
-    목적으로 하는데, '이기적 사용'은 이러한 목적과 배치됩니다. 다른 선택지들은 각 게시판의 목적과 기능이 논리적으로 연결되어 있는 반면, 1번만
-    내용상 일관성이 없습니다.
-  time_taken: 13.42
+  reasoning: 1번 선택지의 '음식의 이기적 사용'이라는 표현이 가장 부적절해 보입니다. '세계 음식 체험' 게시판에서 음식 정보 제공의
+    유용성을 다루면서 '이기적 사용'을 제시한다는 것은 논리적으로 모순되며, 일반적인 음식 체험 게시판의 목적과도 맞지 않습니다. 다른 선택지들은
+    각 게시판의 목적과 기능이 비교적 자연스럽게 연결되어 있는 반면, 1번은 내용상 일관성이 부족합니다.
+  time_taken: 13.45
   points: 3
   earned_points: 0
   success: true

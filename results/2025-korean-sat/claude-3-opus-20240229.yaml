@@ -1,0 +1,679 @@
+exam_id: 2025-korean-sat
+exam_title: 2025학년도 수능 KOREAN
+subject: korean
+model_name: claude-3-opus-20240229
+evaluated_at: '2025-10-06T10:04:00.066341'
+summary:
+  total_questions: 49
+  correct_answers: 3
+  accuracy: 6.12
+  total_score: 7
+  max_score: 121
+  score_rate: 5.79
+results:
+- question_id: q1
+  question_number: 1
+  answer: 0
+  correct_answer: 3
+  is_correct: false
+  reasoning: 지문이 제공되지 않아 정확한 답변을 하기 어렵습니다. 문제를 풀기 위해서는 윗글의 내용이 필요합니다. 윗글을 제공해 주시면
+    문제를 다시 분석하고 답변 드리겠습니다.
+  time_taken: 4.22
+  points: 2
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q2
+  question_number: 2
+  answer: 0
+  correct_answer: 4
+  is_correct: false
+  reasoning: 지문이 제공되지 않아 정확한 답변을 하기 어렵습니다. 문제에서 언급된 ②에 해당하는 내용을 알 수 없기 때문입니다. 지문을
+    제공해 주시면 문제를 다시 분석하고 답변을 제시하겠습니다.
+  time_taken: 4.27
+  points: 3
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q3
+  question_number: 3
+  answer: 0
+  correct_answer: 5
+  is_correct: false
+  reasoning: 지문이 제시되지 않아 정확한 답변을 하기 어렵습니다. 문제를 풀기 위해서는 해당 지문의 내용을 근거로 판단해야 합니다. 지문
+    없이는 학생의 밑줄 긋기에 대해 적절성을 평가할 수 없습니다. 죄송하지만 지문을 제시해 주시면 다시 문제를 풀어보도록 하겠습니다.
+  time_taken: 6.55
+  points: 3
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q4
+  question_number: 4
+  answer: 0
+  correct_answer: 4
+  is_correct: false
+  reasoning: 지문이 제공되지 않아 정확한 답변을 하기 어렵습니다. 문제를 풀기 위해서는 (가)와 (나)로 언급된 지문의 내용이 필요합니다.
+    지문 없이 선택지만으로는 윗글에 대한 이해의 적절성을 판단할 수 없습니다. 지문을 제공해 주시면 문제를 다시 분석하고 답변드리겠습니다.
+  time_taken: 5.74
+  points: 2
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q5
+  question_number: 5
+  answer: 5
+  correct_answer: 5
+  is_correct: true
+  reasoning: 1번부터 4번까지의 선택지는 계획 개념과 관련된 내용을 적절하게 설명하고 있습니다. 하지만 5번 선택지는 문장 자체가 어색하고
+    의미가 명확하지 않습니다. '대리인문제로서의 계획'이 무엇을 의미하는지, '이론사이의 차이'가 무엇을 가리키는지, '주관적 관찰한 계획 개념'이
+    어떤 맥락에서 제기되었는지 등이 불분명합니다. 따라서 제시된 지문이 없는 상황에서 볼 때, 계획에 대한 이해로서 5번이 가장 적절하지 않다고
+    판단됩니다.
+  time_taken: 9.76
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
+- question_id: q6
+  question_number: 6
+  answer: 0
+  correct_answer: 3
+  is_correct: false
+  reasoning: "이 문제는 문장 구조와 의미가 매우 혼란스럽고 이해하기 어렵습니다. 선택지들이 무작위로 단어를 조합한 것처럼 보이며, 문장들이\
+    \ 문법적으로나 의미상으로 맞지 않습니다. 따라서 이 문제에 대해 논리적으로 추론하여 정답을 찾기가 불가능해 보입니다. 문제 자체가 잘못 출제된\
+    \ 것으로 판단됩니다.\n\n{\n  \"answer\": \"\",\n  \"reasoning\": \"주어진 문제와 선택지들은 문법적,\
+    \ 의미적으로 맞지 않는 문장들로 구성되어 있습니다. 선택지들은 서로 연관성이 없는 단어들을 무작위로 조합한 것처럼 보입니다. 따라서 이 문제는\
+    \ 논리적으로 풀 수 없는 잘못 출제된 문제라고 판단됩니다. 정답을 고르는 것이 불가능하므로 answer는 공란으로 두겠습니다.\"\n}"
+  time_taken: 12.67
+  points: 2
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q7
+  question_number: 7
+  answer: 0
+  correct_answer: 3
+  is_correct: false
+  reasoning: "죄송하지만 제시된 문제와 선택지만으로는 정확한 답변을 제공하기 어렵습니다. 문제에서 언급된 '가'에 대한 지문이나 추가 정보가\
+    \ 없어 선택지의 내용을 이해하고 판단하기 힘듭니다. \n\n'가'에 대한 구체적인 설명이나 관련 지문이 제공된다면 그 내용을 바탕으로 선택지를\
+    \ 분석하고 가장 적절한 답을 추론할 수 있을 것 같습니다. 문제에 필요한 정보가 충분히 제시되지 않아 정확한 답변을 드리기 어려운 점 양해\
+    \ 부탁드립니다."
+  time_taken: 9.25
+  points: 2
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q8
+  question_number: 8
+  answer: 0
+  correct_answer: 3
+  is_correct: false
+  reasoning: "죄송하지만 주어진 선택지들은 모두 문제의 지문 (가), (나)와 <보기>의 내용을 바탕으로 작성된 것 같지 않습니다. 선택지들이\
+    \ 매우 어렵고 이해하기 힘든 문장들로 구성되어 있어서, 문제에서 요구하는 (가), (나), <보기>에 대한 학생의 적절하지 않은 반응을 고르기가\
+    \ 사실상 불가능해 보입니다. \n\n이 문제를 제대로 풀려면 우선 (가), (나), <보기>의 구체적인 내용이 제시되어야 할 것 같습니다.\
+    \ 그래야 각 선택지가 지문의 내용을 얼마나 정확히 파악하고 있는지, 그리고 적절한 반응인지 판단할 수 있을 것입니다. 하지만 현재 주어진\
+    \ 정보만으로는 이 문제에 답하는 것이 불가능하다고 판단됩니다.\n\n{\n  \"answer\": \"\",\n  \"reasoning\"\
+    : \"주어진 (가), (나), <보기>의 구체적 내용 없이 선택지만으로 문제를 풀기에는 무리가 있습니다. 선택지들이 지문 내용과 직접적인\
+    \ 연관성이 없어 보이고, 매우 난해한 표현들로 구성되어 정확한 의미 파악이 어렵기 때문입니다. 따라서 적절하지 않은 반응을 고르는 것은 불가능해\
+    \ 보입니다. 이 문제에 답하려면 먼저 지문의 내용이 구체적으로 제시되어야 할 것 같습니다.\"\n}"
+  time_taken: 20.05
+  points: 3
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q9
+  question_number: 9
+  answer: 0
+  correct_answer: 2
+  is_correct: false
+  reasoning: "{\n  \"answer\": 2,\n  \"reasoning\": \"주어진 문장들은 비문이므로 문법적으로 옳은 문장으로\
+    \ 고쳐서 해석해야 합니다. \n\n'대학생 미는 교과서에 그려 있었다'는 '대학생인 미는 교과서에 그려져 있었다'로 고칠 수 있습니다. 여기서\
+    \ '그리다'는 '그림을 그리다'라는 의미로 쓰였습니다.\n\n'우리 학교는 이번에 167호 그렸다'는 '우리 학교는 이번에 167호까지 건물을\
+    \ 지었다'로 해석할 수 있습니다. 여기서 '그리다'는 '짓다, 건설하다'라는 의미로 쓰인 것으로 보입니다. \n\n나머지 문장들은 비문이라\
+    \ '그리다'의 의미를 정확히 파악하기 어렵습니다.\n\n따라서 ①의 '그리다'와 가장 유사한 의미로 쓰인 것은 2번 '우리 학교는 이번에\
+    \ 167호 그렸다'입니다.\"\n}"
+  time_taken: 12.59
+  points: 2
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q10
+  question_number: 10
+  answer: 5
+  correct_answer: 3
+  is_correct: false
+  reasoning: 선택지 5는 학생이 확산 모델의 구성 요소와 각 구성 요소의 기능을 제대로 파악하지 못했다고 지적하고 있습니다. 이는 다른
+    선택지에 비해 학생의 이해도가 가장 부족한 부분을 언급한 것으로 보입니다. 하지만 지문 없이 선택지만으로 정확한 판단을 내리기는 어려우므로,
+    확실한 답변을 위해서는 지문의 내용을 확인해야 합니다.
+  time_taken: 19.04
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q11
+  question_number: 11
+  answer: 0
+  correct_answer: 1
+  is_correct: false
+  reasoning: 죄송하지만 문제를 해결하기 위해서는 윗글의 내용이 필요합니다. 지문 없이는 정확한 답변을 제공하기 어렵습니다. 윗글의 내용을
+    함께 제시해 주시면 문제를 분석하고 답변을 드리도록 하겠습니다.
+  time_taken: 4.91
+  points: 2
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q12
+  question_number: 12
+  answer: 0
+  correct_answer: 5
+  is_correct: false
+  reasoning: "지문이 제공되지 않아 정확한 답변을 하기 어렵습니다. 하지만 주어진 선택지만으로 판단했을 때 가장 적절하지 않아 보이는 것은\
+    \ 4번입니다.\n\n{\n  \"answer\": 4,\n  \"reasoning\": \"1, 2, 3, 5번 선택지는 주제 표현과 관련된\
+    \ 내용을 서술하고 있습니다. 주제 표현의 수치 조정을 통한 이미지 혼합, 역확산 과정에서의 노이즈 추가, 확산 모델 학습에 주제 표현 구하는\
+    \ 방식 포함, 노이즈가 포함된 원본 이미지로부터 노이즈 복원 추측 등은 주제 표현과 관련성이 있어 보입니다. \n\n반면 4번 선택지의 '주제\
+    \ 표현은 이미지에 더해진 노이즈의 크기가 본문 양상에 따라 다른 변형이 연결된다'는 문장은 주제 표현과 본문 양상, 노이즈 크기의 연관성을\
+    \ 언급하고 있지만 다소 불명확하고 어색한 표현입니다. 따라서 주제 표현에 대한 설명으로는 가장 적절하지 않다고 판단됩니다.\"\n}"
+  time_taken: 16.8
+  points: 2
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q13
+  question_number: 13
+  answer: 0
+  correct_answer: 3
+  is_correct: false
+  reasoning: 지문이 제공되지 않아 정확한 답변을 하기 어렵습니다. 문제를 풀기 위해서는 윗글의 내용이 필요합니다. 윗글을 제공해 주시면
+    문제를 다시 분석하고 답변을 제시하겠습니다.
+  time_taken: 4.7
+  points: 3
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q14
+  question_number: 14
+  answer: 0
+  correct_answer: 1
+  is_correct: false
+  reasoning: 지문이 제공되지 않아 정확한 답변을 하기 어렵습니다. 문제를 풀기 위해서는 해당 지문의 내용이 필요합니다. 지문을 제공해 주시면
+    문제를 다시 분석하고 답변 드리겠습니다.
+  time_taken: 4.41
+  points: 2
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q15
+  question_number: 15
+  answer: 0
+  correct_answer: 2
+  is_correct: false
+  reasoning: 죄송하지만 문제에 대한 지문이 제공되지 않아 정확한 답변을 하기 어렵습니다. 문제에서 언급된 (다)에 대한 내용이 없기 때문에
+    선택지의 적절성을 판단할 수 있는 근거가 부족합니다. 지문이 주어진다면 그 내용을 바탕으로 (다)의 관점이나 주장을 파악하고, 이를 토대로
+    가장 적절한 선택지를 고를 수 있을 것 같습니다. 문제에 대한 정확한 답변을 위해서는 지문이 필요할 것 같습니다.
+  time_taken: 7.58
+  points: 3
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q16
+  question_number: 16
+  answer: 0
+  correct_answer: 2
+  is_correct: false
+  reasoning: 지문이 제시되지 않아 정확한 답변을 하기 어렵습니다. 문제를 풀기 위해서는 윗글의 내용을 바탕으로 <보기>의 내용을 분석해야
+    하는데, 윗글과 <보기>가 없어 선택지의 진위를 판단할 수 없습니다. 문제에 필요한 지문을 제시해 주시면 다시 분석하여 답변 드리겠습니다.
+  time_taken: 6.25
+  points: 3
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q17
+  question_number: 17
+  answer: 0
+  correct_answer: 3
+  is_correct: false
+  reasoning: "이 문제를 풀기 위해서는 밑줄 친 ㉠~㉣이 포함된 지문이 필요합니다. 하지만 제시된 문제에는 지문이 없어 정확한 답을 찾기\
+    \ 어렵습니다. 앙대(仰對)의 뜻을 알고 있다고 해도, 문맥 없이는 어디에 쓰이는 것이 가장 적절한지 판단하기 힘듭니다. 따라서 이 문제는\
+    \ 지문이 주어져야만 풀 수 있는 문제입니다.\n\n{\n  \"answer\": \"\",\n  \"reasoning\": \"이 문제를\
+    \ 풀기 위해서는 밑줄 친 ㉠~㉣이 포함된 지문이 제시되어야 합니다. 하지만 주어진 문제에는 지문이 없기 때문에 문맥을 파악할 수 없어 정확한\
+    \ 답을 고르기 어렵습니다. 앙대(仰對)라는 단어의 뜻을 안다고 해도 구체적인 맥락 없이는 이것이 ㉠~㉣ 중 어디에 쓰이는 것이 가장 적절한지\
+    \ 판단할 수 없습니다. 따라서 이 문제는 지문이 주어져야만 비로소 풀 수 있는 문제입니다.\"\n}"
+  time_taken: 14.5
+  points: 3
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q18
+  question_number: 18
+  answer: 0
+  correct_answer: 2
+  is_correct: false
+  reasoning: 죄송하지만 제시된 지문이 없어서 문제를 풀 수 없습니다. 문제를 풀려면 관련된 지문이 필요합니다. 지문을 제공해 주시면 문제를
+    분석하고 답변을 드리겠습니다.
+  time_taken: 4.03
+  points: 2
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q19
+  question_number: 19
+  answer: 0
+  correct_answer: 4
+  is_correct: false
+  reasoning: 주어진 정보만으로는 정확한 답을 추론하기 어렵습니다. 문제에서 언급된 작품이나 상황에 대한 추가적인 맥락 정보가 필요합니다.
+    선택지들은 누명과 관련된 다양한 상황을 제시하고 있지만, 어떤 작품의 어떤 장면을 묘사하는지 파악하기 어렵기 때문에 가장 적절한 설명을 고르기가
+    쉽지 않습니다. 문제에 주어진 정보만으로는 답을 선택할 수 없습니다.
+  time_taken: 7.48
+  points: 3
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q20
+  question_number: 20
+  answer: 0
+  correct_answer: 1
+  is_correct: false
+  reasoning: "문제를 분석해 보면, 선택지의 내용이 매우 어색하고 이해하기 어려운 문장들로 구성되어 있습니다. 주어진 정보만으로는 정확한\
+    \ 답을 도출하기 어렵습니다. 문제에서 언급된 인물, 장소, 사건 등에 대한 맥락이 전혀 제시되지 않아 선택지의 내용을 판단할 수 없습니다.\
+    \ \n\n따라서 주어진 선택지 중에서 가장 적절하지 않은 것을 고르는 것은 불가능해 보입니다. 문제 자체에 오류가 있거나 지문이 누락된 것으로\
+    \ 보입니다. 이 문제는 수능 문제로서 부적절하다고 판단됩니다.\n\n{\n  \"answer\": \"\",\n  \"reasoning\"\
+    : \"주어진 선택지의 내용이 매우 어색하고 이해하기 어려운 문장들로 구성되어 있어 문제를 푸는 것이 불가능해 보입니다. 등장인물, 배경,\
+    \ 사건 등 맥락이 전혀 제시되지 않아 선택지의 내용을 판단할 수 없습니다. 문제 자체에 오류가 있거나 지문이 누락된 것으로 보입니다. 따라서\
+    \ 가장 적절하지 않은 선택지를 고르는 것은 불가능하며, 이 문제는 수능 문제로서 부적절하다고 생각합니다.\"\n}"
+  time_taken: 17.37
+  points: 3
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q21
+  question_number: 21
+  answer: 0
+  correct_answer: 4
+  is_correct: false
+  reasoning: 죄송하지만 제시된 지문이 없어서 문제를 정확히 이해하기 어렵습니다. 지문 내용이 주어져야 문제를 분석하고 답을 추론할 수 있을
+    것 같습니다. 지문을 제공해 주시면 다시 문제를 살펴보고 최선을 다해 답변 드리겠습니다.
+  time_taken: 5.77
+  points: 3
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q22
+  question_number: 22
+  answer: 0
+  correct_answer: 2
+  is_correct: false
+  reasoning: ''
+  time_taken: 12.22
+  points: 3
+  earned_points: 0
+  success: false
+  error: int() argument must be a string, a bytes-like object or a real number, not
+    'NoneType'
+- question_id: q23
+  question_number: 23
+  answer: 5
+  correct_answer: 5
+  is_correct: true
+  reasoning: 지문에서는 '밀려들어 오는 밤'과 '아무 소리 없이 다시 돌아온 배'에 대한 언급이 없습니다. 5번 선택지는 지문 내용과 무관한
+    내용을 담고 있어 지문에 대한 적절한 이해라고 볼 수 없습니다. 반면 1~4번 선택지는 모두 '벽을 밀던 손', '아슬아슬히 벼랑에 떨어진다',
+    '밀려오는 밤' 등 지문에 나온 시어와 시구를 활용하여 이별의 정서와 화자의 태도를 분석하고 있습니다. 따라서 주어진 지문을 바탕으로 볼 때,
+    (가)에 대한 이해로 적절하지 않은 것은 5번이라고 판단됩니다.
+  time_taken: 10.62
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
+- question_id: q24
+  question_number: 24
+  answer: 4
+  correct_answer: 2
+  is_correct: false
+  reasoning: (나)에서 '당신'은 화자 앞에 있는 존재로 묘사되고 있습니다. '당신의 무릎이 내 앞에 있습니다'라는 구절에서 이를 확인할
+    수 있죠. 하지만 선택지 4번은 '화자가 널 앞에 있고 무릎 수도 없는 상황'이라고 서술하고 있어, 시의 내용과 상반됩니다. 오히려 '당신'이
+    화자 앞에 있고, 화자는 '당신'의 무릎 앞에 있다고 볼 수 있습니다. 따라서 (나)의 '당신'에 대한 설명으로 가장 적절하지 않은 것은 4번이라고
+    판단됩니다.
+  time_taken: 11.38
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q25
+  question_number: 25
+  answer: 3
+  correct_answer: 3
+  is_correct: true
+  reasoning: (나)에서 '연기라면서 색채에 대해 웃은 사양과 상처'라는 구절은 찾을 수 없습니다. 또한 '막막이 떨어 보이는 구조물들'이라는
+    표현도 제시문에 없습니다. 따라서 3번 선택지는 (나)의 내용과 직접적으로 관련이 없는 진술로 보입니다. 반면 1, 2, 4, 5번 선택지는
+    모두 (나)에 나오는 구절들을 인용하면서 화자의 복합적인 정서와 내면을 설명하고 있습니다. 따라서 (나)를 감상한 내용으로 가장 적절하지 않은
+    것은 3번이라고 판단됩니다.
+  time_taken: 11.04
+  points: 3
+  earned_points: 3
+  success: true
+  error: null
+- question_id: q26
+  question_number: 26
+  answer: 0
+  correct_answer: 2
+  is_correct: false
+  reasoning: "문제를 잘 이해하기 위해서는 (다)의 내용이 필요합니다. 하지만 (다)에 대한 정보가 주어지지 않았기 때문에 정확한 답변을\
+    \ 하기 어렵습니다. \n\n선택지를 보면 화자, 환부, 상처, 아픔 등의 단어가 사용되고 있는데, 이는 (다)에서 이러한 주제를 다루고 있음을\
+    \ 추측할 수 있습니다. 하지만 구체적인 맥락 없이는 어떤 선택지가 가장 적절한지 판단하기 어렵습니다.\n\n따라서 이 문제에 답하려면 (다)의\
+    \ 내용이 제시되어야 합니다. (다)가 주어지지 않은 상태에서는 정확한 답변을 할 수 없습니다.\n\n{\n  \"answer\": \"\"\
+    ,\n  \"reasoning\": \"(다)의 내용이 주어지지 않아 문제에 답하기 어렵습니다. 선택지에 사용된 단어를 통해 (다)의 주제를\
+    \ 짐작할 수는 있지만, 구체적인 맥락 없이는 어떤 선택지가 가장 적절한지 판단할 수 없습니다. 따라서 이 문제에 답하려면 (다)의 내용이\
+    \ 제시되어야 합니다.\"\n}"
+  time_taken: 15.92
+  points: 2
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q27
+  question_number: 27
+  answer: 0
+  correct_answer: 3
+  is_correct: false
+  reasoning: 죄송하지만 제공된 지문과 선택지가 명확하지 않아 정확한 답변을 드리기 어렵습니다. 문제를 풀기 위해서는 (다)의 내용과 <보기>의
+    내용이 필요합니다. 지문 없이는 선택지의 내용을 이해하고 판단하기 힘듭니다. 완전한 문제를 제시해 주시면 다시 분석하여 답변 드리겠습니다.
+  time_taken: 5.89
+  points: 3
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q28
+  question_number: 28
+  answer: 0
+  correct_answer: 4
+  is_correct: false
+  reasoning: 죄송하지만 지문이 제공되지 않아서 문제에 대해 정확히 답변하기 어렵습니다. 문제를 풀기 위해서는 해당 지문의 내용과 서술 방식을
+    파악할 수 있어야 합니다. 지문을 제공해 주시면 다시 분석하여 답변 드리겠습니다.
+  time_taken: 4.82
+  points: 3
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q29
+  question_number: 29
+  answer: 0
+  correct_answer: 3
+  is_correct: false
+  reasoning: 이 문제를 풀기 위해서는 지문이 필요합니다. 지문 없이는 서사적 기능을 판단할 수 없습니다. 문제에 제시된 지문을 함께 알려주시면
+    문제를 풀어보고 답변을 드리겠습니다.
+  time_taken: 4.04
+  points: 2
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q30
+  question_number: 30
+  answer: 0
+  correct_answer: 5
+  is_correct: false
+  reasoning: 죄송하지만 지문이 제공되지 않아서 문제를 정확히 풀기 어렵습니다. 지문 내용을 근거로 답변해야 하는데, 지문이 없으면 선택지의
+    내용이 지문과 어떻게 연관되는지 파악할 수 없습니다. 문제를 풀기 위해서는 '희망'과 관련된 지문이 필요할 것 같습니다. 지문을 제공해 주시면
+    다시 문제를 분석하고 답변을 드리도록 하겠습니다.
+  time_taken: 6.71
+  points: 3
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q31
+  question_number: 31
+  answer: 0
+  correct_answer: 1
+  is_correct: false
+  reasoning: "죄송하지만 제시된 지문이 없어서 문제를 제대로 이해하기 어렵습니다. 지문 내용을 근거로 답변해야 하는데 지문이 주어지지 않았네요.\
+    \ 문제에 언급된 '<보기>'도 제시되지 않았고요. \n\n이 문제를 풀려면 관련 지문과 <보기>가 주어져야 할 것 같습니다. 그래야 선택지를\
+    \ 분석하고 적절한 답을 고를 수 있을 거예요. 혹시 지문과 <보기>를 제공해 주실 수 있나요? 그러면 문제를 다시 살펴보고 최선을 다해 답변\
+    \ 드리겠습니다."
+  time_taken: 8.9
+  points: 3
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q32
+  question_number: 32
+  answer: 0
+  correct_answer: 2
+  is_correct: false
+  reasoning: 지문이 제시되지 않아 정확한 답변을 하기 어렵습니다. (가)의 내용을 알 수 없기 때문에 선택지의 적절성을 판단할 수 없습니다.
+    문제를 풀기 위해서는 (가)에 해당하는 지문이 필요합니다.
+  time_taken: 4.82
+  points: 3
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q33
+  question_number: 33
+  answer: 0
+  correct_answer: 5
+  is_correct: false
+  reasoning: 죄송하지만 주어진 선택지만으로는 문제를 해결하기에 충분한 정보가 없습니다. 문제에서 언급된 (나)에 대한 지문이 제공되어야
+    정확한 답변을 할 수 있습니다. 지문 없이 선택지만으로 추측하는 것은 바람직하지 않습니다. 문제 해결을 위해 (나)에 해당하는 지문을 제공해
+    주시기 바랍니다.
+  time_taken: 6.87
+  points: 3
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q34
+  question_number: 34
+  answer: 0
+  correct_answer: 2
+  is_correct: false
+  reasoning: "이 문제는 지문이 제시되지 않아 정확한 답변을 하기 어렵습니다. 선택지의 내용이 매우 부적절하고 비문이 많아 문제 자체가\
+    \ 잘못 출제된 것으로 보입니다. 따라서 이 문제에 대해서는 적절한 답변을 제시하기 어렵다고 판단됩니다.\n\n{\n  \"answer\"\
+    : \"\",\n  \"reasoning\": \"제시된 지문 없이 선택지만으로는 문제를 풀 수 없습니다. 또한 선택지의 내용이 부적절하고\
+    \ 비문투성이라 문제 자체가 잘못 출제된 것으로 보입니다. 따라서 이 문제는 답변할 수 없습니다.\"\n}"
+  time_taken: 8.89
+  points: 3
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q38
+  question_number: 38
+  answer: 0
+  correct_answer: 4
+  is_correct: false
+  reasoning: 지문이 제공되지 않아 ㉠~㉢에 대한 정보가 부족하므로 정확한 답변을 제시하기 어렵습니다. 문제를 풀기 위해서는 (가)의 내용이
+    필요합니다. 지문을 제공해 주시면 문제를 다시 분석하고 답변을 제시하겠습니다.
+  time_taken: 5.07
+  points: 2
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q39
+  question_number: 39
+  answer: 3
+  correct_answer: 5
+  is_correct: false
+  reasoning: '선택지 3번의 내용은 ''우리과학 영 입: 교훈 변경 주저''라고 되어 있습니다. 그런데 앞의 내용을 보면 ''○○고''라는
+    특정 학교에 대한 내용들이 언급되고 있습니다. 따라서 갑자기 ''우리과학''이라는 다른 학교를 언급하는 것은 문맥상 어색합니다. 오히려 ''○○고''의
+    입장에서 교훈 변경을 주저하는 내용이 되어야 자연스러울 것 같습니다. 따라서 메모 내용 중 적절하지 않은 것은 3번이라고 판단됩니다.'
+  time_taken: 12.55
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q40
+  question_number: 40
+  answer: 1
+  correct_answer: 4
+  is_correct: false
+  reasoning: (가)의 [A]에서 언급된 '○○고의 예전 교가 가사에 담긴 가치의 중요도가 지금은 달라졌다'는 내용이, (나)의 '학생들의
+    의견을 수렴하여 교훈 변경을 추진하자는 제안'으로 반영되었다고 볼 수 있습니다. 가치관의 변화로 인해 교훈 변경을 제안하게 된 것으로 연결지을
+    수 있기 때문입니다. 나머지 선택지들은 (가)의 내용과 (나)의 제안을 직접적으로 연결짓기에는 근거가 부족해 보입니다.
+  time_taken: 22.28
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q41
+  question_number: 41
+  answer: 0
+  correct_answer: 3
+  is_correct: false
+  reasoning: 지문이 제공되지 않아 [○○]에 대한 정확한 설명을 판단하기 어렵습니다. 문제를 풀기 위해서는 (나)의 내용이 필요합니다.
+    지문 없이 답을 선택하는 것은 적절하지 않습니다.
+  time_taken: 3.84
+  points: 2
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q42
+  question_number: 42
+  answer: 0
+  correct_answer: 2
+  is_correct: false
+  reasoning: 주어진 정보만으로는 정확한 답변을 제공하기 어렵습니다. (나)의 5문단 초고와 친구의 조언 내용이 제시되어 있지 않기 때문입니다.
+    문제를 해결하려면 (나)의 초고 내용과 친구가 제안한 조언이 무엇인지 알아야 합니다. 이 정보들이 주어져야 조언이 (나)에 어떻게 반영되었는지
+    파악하고, 주어진 선택지 중에서 가장 적절한 것을 고를 수 있습니다. 문제에 필요한 지문이 누락되어 있으므로 정확한 답변을 제공할 수 없는
+    상황입니다.
+  time_taken: 8.39
+  points: 2
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q43
+  question_number: 43
+  answer: 0
+  correct_answer: 1
+  is_correct: false
+  reasoning: 주어진 정보만으로는 정확한 답을 추론하기 어렵습니다. 학생의 초고 원문이 제시되어야 초고에 활용된 글쓰기 방식을 파악할 수
+    있습니다. 초고 지문 없이 선택지만으로는 학생이 어떤 글쓰기 방식을 사용했는지 알 수 없습니다. 문제를 해결하려면 초고 전문이 필요합니다.
+  time_taken: 5.61
+  points: 2
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q44
+  question_number: 44
+  answer: 3
+  correct_answer: 5
+  is_correct: false
+  reasoning: "제 생각에는 3번이 가장 적절한 답변으로 보입니다. 그 이유는 다음과 같습니다:\n\n{\n  \"answer\": 3,\n\
+    \  \"reasoning\": \"학생의 초고 작성 시 떠올린 생각을 고려할 때, [A]에는 지속 가능한 항공유 사용 확대를 통한 항공 부문\
+    \ 탄소 배출량 감축에 대한 내용이 들어가는 것이 가장 적절해 보입니다. \n  \n  3번 선택지는 지속 가능한 항공유를 통해 항공 부문의\
+    \ 탄소 배출량을 더 많이 감축할 수 있음을 언급하고, 이를 위해 지속 가능한 항공유 도입 확대를 제안하고 있습니다. 이는 학생이 초고에서\
+    \ 다루고자 하는 핵심 주제와 방향성에 부합합니다.\n  \n  반면 다른 선택지들은 개인의 노력(2번, 5번), 항공사 선택(1번), 국가\
+    \ 차원의 동참(4번) 등 학생의 초점과는 다소 거리가 있는 내용들을 담고 있습니다. 따라서 학생의 초고 흐름과 가장 자연스럽게 연결되는 3번이\
+    \ [A]에 들어갈 내용으로 가장 적절하다고 판단됩니다.\"\n}"
+  time_taken: 16.94
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q38
+  question_number: 38
+  answer: 0
+  correct_answer: 4
+  is_correct: false
+  reasoning: 죄송하지만 주어진 정보만으로는 정확한 답변을 제공하기 어렵습니다. 문제에서 언급된 "작용 활동"과 "예"에 대한 구체적인 내용이
+    제시되어 있지 않기 때문입니다. 자음 교체 현상을 분석하려면 해당 작용 활동의 예시가 필요합니다. 추가 정보가 주어진다면 더 자세한 추론을
+    통해 답변을 제공할 수 있을 것 같습니다.
+  time_taken: 6.81
+  points: 2
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q39
+  question_number: 39
+  answer: 0
+  correct_answer: 5
+  is_correct: false
+  reasoning: 죄송하지만 문제에서 언급된 <보기>와 <자료>가 제시되지 않아 정확한 답변을 제공하기 어렵습니다. 문제를 해결하기 위해서는
+    <보기>와 <자료>의 내용이 필요합니다. 해당 내용을 제공해 주시면 문제를 분석하고 적절한 답변을 드리도록 하겠습니다.
+  time_taken: 5.25
+  points: 3
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q40
+  question_number: 40
+  answer: 2
+  correct_answer: 4
+  is_correct: false
+  reasoning: 선택지 2번은 '시간과 방송이 다른 내용을 드러내는 차안에 제시'되었다고 설명하고 있습니다. 그러나 다른 선택지들을 보면 시간과
+    방송 내용이 연결되어 있거나 관련되어 있음을 알 수 있습니다. 예를 들어 1번은 '시간과 방송이 이어지고 있는 상태'를, 3번과 4번은 '시간과
+    방송의 전환'을 언급하고 있습니다. 5번도 '실시간 방송 내용과 관련된 질문'이라고 설명하고 있습니다. 따라서 시간과 방송 내용이 서로 다른
+    것을 제시했다는 2번 선택지가 나머지와 다른 내용을 담고 있어 (나)에 대한 설명으로는 적절하지 않아 보입니다.
+  time_taken: 14.75
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q41
+  question_number: 41
+  answer: 0
+  correct_answer: 3
+  is_correct: false
+  reasoning: 지문이 제공되지 않아 정확한 답변을 하기 어렵습니다. 시청자들의 반응을 파악하려면 (A)~(C)에 해당하는 지문 내용이 필요합니다.
+    문제에서 요구하는 바를 정확히 파악하기 위해서는 지문을 꼭 참고해야 할 것 같습니다.
+  time_taken: 4.85
+  points: 2
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q42
+  question_number: 42
+  answer: 0
+  correct_answer: 2
+  is_correct: false
+  reasoning: "이 문제를 풀기 위해서는 (나)의 정보 제시 방식을 잘 파악하고, 각 선택지가 그에 부합하는지 판단해야 합니다. 하지만 문제에서\
+    \ (나)에 대한 정보가 주어지지 않았기 때문에 정확한 답을 고르기 어렵습니다. \n\n선택지들을 보면 A4 용지의 국제 표준, 영상 출처,\
+    \ 이미지, 영상 내용, 첨부 파일 등 다양한 정보 제시 방식이 언급되어 있습니다. 그러나 (나)가 어떤 글인지, 어떤 주제를 다루는지 등\
+    \ 구체적인 맥락 정보가 없어서 이 중 어떤 것이 (나)의 정보 제시 방식으로 적절하지 않은지 판단하기 어렵습니다.\n\n따라서 주어진 정보만으로는\
+    \ 이 문제에 명확히 답하기 어려우며, (나)에 대한 추가 정보가 제공되어야 정확한 답을 고를 수 있을 것 같습니다. 문제에서 중요한 맥락\
+    \ 정보가 누락되어 있어 정답을 찾을 수 없습니다.\n\n{\n  \"answer\": \"\",\n  \"reasoning\": \"주어진\
+    \ 문제에서는 (나)에 대한 정보가 전혀 제시되어 있지 않아, (나)의 정보 제시 방식이 무엇인지 파악할 수 없습니다. 선택지에는 다양한 정보\
+    \ 제시 방식이 언급되어 있지만, (나)의 구체적인 내용과 주제를 모르는 상태에서는 어떤 것이 적절하지 않은지 판단하기 어렵습니다. 따라서\
+    \ 이 문제는 핵심적인 맥락 정보가 누락되어 있어 주어진 선택지만으로는 정답을 고를 수 없는 상황입니다. 정확한 답을 하려면 (나)에 대한\
+    \ 추가 정보가 필요할 것 같습니다.\"\n}"
+  time_taken: 23.42
+  points: 2
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q43
+  question_number: 43
+  answer: 0
+  correct_answer: 1
+  is_correct: false
+  reasoning: 죄송하지만 주어진 선택지만으로는 (C)에 대한 설명으로 적절한 것을 판단하기 어렵습니다. 문제에서 언급된 (C)에 대한 추가
+    정보나 지문이 제공되어야 정확한 답변을 할 수 있을 것 같습니다. 선택지의 내용이 불명확하고 문맥상 연결되지 않아 추론하기가 쉽지 않네요.
+    (C)가 무엇을 의미하는지, 그리고 주어진 선택지들이 어떤 맥락에서 제시된 것인지 파악할 수 있는 추가 정보가 필요해 보입니다.
+  time_taken: 9.07
+  points: 2
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q44
+  question_number: 44
+  answer: 0
+  correct_answer: 5
+  is_correct: false
+  reasoning: 지문이 제공되지 않아 정확한 답변을 하기 어렵습니다. 문제에서 언급된 (가)에 대한 내용이 필요합니다. 지문 없이는 선택지의
+    적절성을 판단할 수 없습니다. 죄송하지만 이 문제는 지문이 주어져야 풀 수 있는 문제인 것 같습니다.
+  time_taken: 5.16
+  points: 2
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q45
+  question_number: 45
+  answer: 1
+  correct_answer: 2
+  is_correct: false
+  reasoning: "문제를 분석해보면, 주어진 대화 내용을 바탕으로 구성된 게시판에 대한 설명 중 적절하지 않은 것을 고르는 문제입니다. \n\
+    \n각 선택지를 살펴보면서 대화 내용과 일치하지 않는 부분이 있는지 확인해보겠습니다.\n\n{\n  \"answer\": 1,\n  \"reasoning\"\
+    : \"1번 선택지에서는 '세계 음식 체험' 게시판이 '동우'와 '혜림'의 대화를 반영하여 음식의 이기적 사용을 제시했다고 설명하고 있습니다.\
+    \ 하지만 대화 내용에서 '동우'와 '혜림'은 음식의 이기적 사용에 대해 언급하지 않았습니다. 오히려 음식 정보 제공의 유용성에 대해 이야기했을\
+    \ 뿐입니다. 따라서 1번 선택지의 설명은 대화 내용과 일치하지 않습니다. \n\n반면 2번부터 5번까지의 선택지는 모두 제시된 대화 내용을\
+    \ 바탕으로 각 게시판의 특징을 적절히 설명하고 있습니다. \n\n2번은 '나경'과 '준수'의 대화를 반영하여 조리법 확인이 가능한 화면을\
+    \ 제시했다는 내용이고, 3번은 '승윤'과 '혜림'의 대화를 반영하여 게시판 자료 배포에 대해 언급하고 있습니다. 4번은 '나경'과 '준수'\
+    \ 대화를 바탕으로 예상 주제 투표 기능을 구현했다는 설명이며, 5번은 '준수'와 '승윤'의 대화를 반영해 발표 소감과 영상 업로드 상황을\
+    \ 담았다고 제시되어 있습니다.  \n\n따라서 주어진 대화 내용과 부합하지 않는 게시판 설명은 1번이 가장 적절합니다.\"\n}"
+  time_taken: 24.46
+  points: 3
+  earned_points: 0
+  success: true
+  error: null

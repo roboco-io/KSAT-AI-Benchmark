@@ -1,0 +1,638 @@
+exam_id: 2025-korean-sat
+exam_title: 2025학년도 수능 KOREAN
+subject: korean
+model_name: gpt-5
+evaluated_at: '2025-10-06T09:30:22.903988'
+summary:
+  total_questions: 49
+  correct_answers: 9
+  accuracy: 18.37
+  total_score: 21
+  max_score: 121
+  score_rate: 17.36
+results:
+- question_id: q1
+  question_number: 1
+  answer: 2
+  correct_answer: 3
+  is_correct: false
+  reasoning: 1, 3, 4, 5는 밑줄 긋기의 일반적 효용(독서 도움, 간단함, 재탐색의 용이성, 시각적 단서로서의 기억 촉진)과 부합한다.
+    반면 2는 ‘밑줄 긋기의 기초로 밑줄 긋기를 사용한다’는 자기지시적·순환적 진술로 의미가 성립하지 않으며, 밑줄 긋기의 원리나 절차를 설명하는
+    글의 내용과 맞지 않는다. 따라서 2가 일치하지 않는 진술이다.
+  time_taken: 8.78
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q2
+  question_number: 2
+  answer: 4
+  correct_answer: 4
+  is_correct: true
+  reasoning: ②는 밑줄 긋기의 효과를 높이기 위한 요령을 말하는 문맥으로, 핵심 정보를 빠르게 식별하고 재확인할 수 있도록 일관된 표시
+    체계를 마련해 활용하라는 취지에 가장 부합한다. 1은 과도한 밑줄로 핵심 선별을 방해하고, 2는 밑줄 자체를 금지해 전략과 모순되며, 3은
+    중요도 판단 없이 먼저 남발했다가 거르는 비효율적 방식이다. 5는 상황마다 표시를 바꾸어 체계성이 떨어져 정보 회수가 어렵다. 따라서 4가
+    가장 적절하다.
+  time_taken: 13.25
+  points: 3
+  earned_points: 3
+  success: true
+  error: null
+- question_id: q3
+  question_number: 3
+  answer: 0
+  correct_answer: 5
+  is_correct: false
+  reasoning: '파싱 실패: Expecting value: line 1 column 1 (char 0)'
+  time_taken: 20.84
+  points: 3
+  earned_points: 0
+  success: false
+  error: 'JSON 파싱 실패: Expecting value: line 1 column 1 (char 0)'
+- question_id: q4
+  question_number: 4
+  answer: 0
+  correct_answer: 4
+  is_correct: false
+  reasoning: '파싱 실패: Expecting value: line 1 column 1 (char 0)'
+  time_taken: 26.06
+  points: 2
+  earned_points: 0
+  success: false
+  error: 'JSON 파싱 실패: Expecting value: line 1 column 1 (char 0)'
+- question_id: q5
+  question_number: 5
+  answer: 5
+  correct_answer: 5
+  is_correct: true
+  reasoning: 5번은 ‘대리인 문제로서의 계획’의 핵심을 잘못 서술한다. 대리인 문제 관점은 본인-대리인 간 정보 비대칭과 유인·감시·계약
+    설계로 계획의 실행 왜곡을 설명하는데, 보기의 ‘이론 사이의 차이’나 ‘주관적 관찰’ 운운은 개념과 무관하고 문장도 비문에 가깝다. 반면 1번은
+    계획을 계층(계급) 이익과 결부해 국가/통치자본주의 맥락에서 읽는 비판적 관점으로 타당하며, 2번은 합리성으로서의 계획이 시장기술·제도의 선택적
+    수용을 통해 국가 운영을 정당화한다는 설명과 부합한다. 4번도 군주(왕)를 배제한 심리전략적 계획이 통치권에 대한 도전으로 인식될 수 있다는
+    취지로 이해 가능하다. 3번은 표현이 어색하지만, 개인 군주 통치로부터 관료적·합리적 기획으로의 전환이라는 맥락으로 수용 가능하다. 따라서
+    가장 부적절한 진술은 5번이다.
+  time_taken: 15.2
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
+- question_id: q6
+  question_number: 6
+  answer: 0
+  correct_answer: 3
+  is_correct: false
+  reasoning: '파싱 실패: Expecting value: line 1 column 1 (char 0)'
+  time_taken: 26.88
+  points: 2
+  earned_points: 0
+  success: false
+  error: 'JSON 파싱 실패: Expecting value: line 1 column 1 (char 0)'
+- question_id: q7
+  question_number: 7
+  answer: 0
+  correct_answer: 3
+  is_correct: false
+  reasoning: '파싱 실패: Expecting value: line 1 column 1 (char 0)'
+  time_taken: 17.54
+  points: 2
+  earned_points: 0
+  success: false
+  error: 'JSON 파싱 실패: Expecting value: line 1 column 1 (char 0)'
+- question_id: q8
+  question_number: 8
+  answer: 3
+  correct_answer: 3
+  is_correct: true
+  reasoning: 3번은 ‘공론이론의 자본관계’, ‘전쟁을 위한 합리성’ 등 서로 이질적이고 맥락상 연결이 불분명한 개념을 무리하게 결합하고,
+    ‘푸바리러지’처럼 의미를 파악할 수 없는 비문을 포함하여 논지 전개가 성립하지 않는다. 반면 1, 2, 4, 5는 표현이 다소 어색해도 (가)·(나)의
+    해석을 전제로 <보기>의 사례(정부의 생산 기술 도입, 타인의 기술/과학 수용 등)를 근거로 반박 혹은 해석을 시도하는 구조를 유지하고 있어
+    최소한의 논리적 연계가 있다. 따라서 적절하지 않은 반응은 3번이다.
+  time_taken: 10.27
+  points: 3
+  earned_points: 3
+  success: true
+  error: null
+- question_id: q9
+  question_number: 9
+  answer: 0
+  correct_answer: 2
+  is_correct: false
+  reasoning: '파싱 실패: Expecting value: line 1 column 1 (char 0)'
+  time_taken: 27.71
+  points: 2
+  earned_points: 0
+  success: false
+  error: 'JSON 파싱 실패: Expecting value: line 1 column 1 (char 0)'
+- question_id: q10
+  question_number: 10
+  answer: 3
+  correct_answer: 3
+  is_correct: true
+  reasoning: 확산 모델은 전방(노이즈 주입)과 역방(복원)의 두 과정으로 구성되고, 학습 시에는 주로 노이즈(또는 깨끗한 신호)를 예측하는
+    지도적 형태로 설명될 수 있다. 따라서 1, 2, 4, 5는 부분적·단편적 이해라는 점에서 윗글의 요지와 크게 어긋나지 않는다. 반면 3은
+    ‘노이즈의 주제’라는 표현이 개념적으로 부정확하며, 확산 모델의 성능에 영향을 주는 것은 노이즈의 분포와 스케줄 등이지 ‘노이즈의 주제’가
+    아니다. 또한 이를 ‘주제 표현의 성능’과 직접 연결하는 서술은 맥락상 타당하지 않아 부적절하다.
+  time_taken: 15.96
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
+- question_id: q11
+  question_number: 11
+  answer: 0
+  correct_answer: 1
+  is_correct: false
+  reasoning: '파싱 실패: Expecting value: line 1 column 1 (char 0)'
+  time_taken: 18.28
+  points: 2
+  earned_points: 0
+  success: false
+  error: 'JSON 파싱 실패: Expecting value: line 1 column 1 (char 0)'
+- question_id: q12
+  question_number: 12
+  answer: 0
+  correct_answer: 5
+  is_correct: false
+  reasoning: '파싱 실패: Expecting value: line 1 column 1 (char 0)'
+  time_taken: 17.71
+  points: 2
+  earned_points: 0
+  success: false
+  error: 'JSON 파싱 실패: Expecting value: line 1 column 1 (char 0)'
+- question_id: q13
+  question_number: 13
+  answer: 0
+  correct_answer: 3
+  is_correct: false
+  reasoning: '파싱 실패: Expecting value: line 1 column 1 (char 0)'
+  time_taken: 18.43
+  points: 3
+  earned_points: 0
+  success: false
+  error: 'JSON 파싱 실패: Expecting value: line 1 column 1 (char 0)'
+- question_id: q14
+  question_number: 14
+  answer: 0
+  correct_answer: 1
+  is_correct: false
+  reasoning: '파싱 실패: Expecting value: line 1 column 1 (char 0)'
+  time_taken: 22.84
+  points: 2
+  earned_points: 0
+  success: false
+  error: 'JSON 파싱 실패: Expecting value: line 1 column 1 (char 0)'
+- question_id: q15
+  question_number: 15
+  answer: 3
+  correct_answer: 2
+  is_correct: false
+  reasoning: (다)는 온라인과 현실 세계의 자아를 각각 고정·분리된 실체로 보지 않고, 두 영역의 정체성이 상호 영향을 주고받으며 구성된다는
+    점을 강조한다. 따라서 논의의 초점은 ‘상호 작용’의 양상과 그 결과에 있다. 1은 정체성을 단일·고정적 실체로 환원해 (다)의 역동적 관점과
+    어긋나고, 2는 기술적 접근 권한 문제로 논점이 다르며, 4는 온라인에서의 다중 ID만을 근거로 복합성을 설명해 오프라인과의 상호구성을 간과한다.
+    5는 각 ID마다 완전히 다른 정체성이라고 보는 과도한 분절론으로 (다)의 통합적 시각과 맞지 않는다. 따라서 3이 가장 적절하다.
+  time_taken: 13.11
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q16
+  question_number: 16
+  answer: 0
+  correct_answer: 2
+  is_correct: false
+  reasoning: '파싱 실패: Expecting value: line 1 column 1 (char 0)'
+  time_taken: 23.14
+  points: 3
+  earned_points: 0
+  success: false
+  error: 'JSON 파싱 실패: Expecting value: line 1 column 1 (char 0)'
+- question_id: q17
+  question_number: 17
+  answer: 0
+  correct_answer: 3
+  is_correct: false
+  reasoning: '파싱 실패: Expecting value: line 1 column 1 (char 0)'
+  time_taken: 26.22
+  points: 3
+  earned_points: 0
+  success: false
+  error: 'JSON 파싱 실패: Expecting value: line 1 column 1 (char 0)'
+- question_id: q18
+  question_number: 18
+  answer: 5
+  correct_answer: 2
+  is_correct: false
+  reasoning: 5번은 ‘북쪽’이 자신이 지은 ‘죄’에 대해 ‘심리적 숙명감’을 느꼈다고 단정하는 서술로, 텍스트에서 확인 가능한 사실(행위·진상·책임
+    추궁) 서술과 달리 집단의 내면 정서를 과도하게 추단하고 있다. ‘숙명감’은 운명에의 체념을 뜻해 죄책·반성과 결이 달라 ‘죄’의 인식과 연결하기도
+    부적절하다. 또한 ‘시체적 후’ 같은 표현 자체가 맥락상 어색해 원문 진술을 정확히 옮긴 것으로 보기 어렵다. 반면 1, 2는 질문·확인의
+    결과(흉패의 연고와 왕비의 사연 합치, 상소 내용이 이미 아는 바와 동일)를 사실적으로 진술하고, 3, 4도 진상 규명 과정에서 왕비의 역할과
+    그에 대한 왕비의 사유 제시라는 맥락을 기술한 것으로 원문 전개와 충돌이 적다.
+  time_taken: 23.16
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q19
+  question_number: 19
+  answer: 4
+  correct_answer: 4
+  is_correct: true
+  reasoning: 누명을 씌우는 전형적 계략에는 피해자를 특정한 시간·장소로 유인해 정황을 조작하거나 증거처럼 보이도록 만드는 장치가 포함되는
+    경우가 많다. 4번은 이러한 구체적 수법을 짚고 있어 타당하다. 반면 1번은 누명이 벗겨지는 국면의 핵심이 가해자의 악행 규명과 피해 회복인데,
+    피해자가 자신의 ‘어리석음’을 뉘우친다는 초점은 인과가 어색하다. 2번은 피해자의 요청으로 가해자 처벌을 유보한다는 서술 근거가 빈약하고 일반적
+    전개와도 맞지 않는다. 3번은 ‘최소/구명’ 등 표현이 모호해 의미가 성립하지 않고, 누명 해소를 부부관계 탈피와 연결하는 취지가 본질에서
+    벗어난다. 5번은 남주인공 어머니의 극단적 선택 저지가 누명 해명의 직접 계기라는 인과가 비약적이며, 통상 해결 계기는 증거 제시나 자백 등이다.
+  time_taken: 20.67
+  points: 3
+  earned_points: 3
+  success: true
+  error: null
+- question_id: q20
+  question_number: 20
+  answer: 5
+  correct_answer: 1
+  is_correct: false
+  reasoning: 보기 3과 4에서 A는 ‘우측 승상’, B는 ‘우측 군인’으로 신분이 일관되게 설정되어 있다. 활동 결과의 서술은 이 관계를
+    유지해야 하는데, 5번은 B를 ‘군인 승상’이라고 하여 군인과 승상 직함을 동시에 부여해 신분이 혼재·모순된다. 반면 1, 2, 3, 4는
+    문장이 어색한 부분이 있어도 A=승상, B=군인의 관계 자체는 훼손하지 않는다. 따라서 5번이 결과로 적절하지 않다.
+  time_taken: 16.69
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q21
+  question_number: 21
+  answer: 2
+  correct_answer: 4
+  is_correct: false
+  reasoning: 보기와 본문이 누락되어 내용 확인은 제한적이지만, 선택지 2는 문장이 연결어미 "-고"로 끝나는 미완결 구조로 제시되어 주장
+    자체가 완결되지 않았고, '승상이 흉패로부터 구출하는 정황'과 '대범의 역할' 사이의 인과와 근거가 제시되지 않아 논리적 타당성이 현저히 떨어진다.
+    반면 1, 3, 4는 비문이 섞여 있어도 최소한 완결된 서술 형태를 갖추고 있어 상대적으로 판단 근거를 구성할 여지가 있다. 따라서 2가 가장
+    적절하지 않다.
+  time_taken: 13.41
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q22
+  question_number: 22
+  answer: 4
+  correct_answer: 2
+  is_correct: false
+  reasoning: 공통성을 묻는 문항에서 지나치게 구체적이거나 특정 매체·기법에 한정된 보기는 배제한다. 1은 ‘하강’이라는 특정 이미지에 의존해
+    적용 범위가 협소하고, 2는 ‘자연적 변화’와 ‘부정적 현실 극복’이라는 주제·정조를 한정해 모든 글에 공통되기 어렵다. 3은 ‘동일한 규격의
+    반복’이라는 시각예술적 기법에 가까워 일반적인 텍스트 전개와 거리가 있다. 5는 공간 이동 중심의 서사 구조에 국한된다. 반면 4는 일상적
+    경험의 반복을 통해 현실의 의미와 관계를 드러내는 방식으로, 다양한 텍스트에 폭넓게 성립할 수 있어 (가)~(다)의 공통적 특징으로 가장 적절하다.
+  time_taken: 17.72
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q23
+  question_number: 23
+  answer: 0
+  correct_answer: 5
+  is_correct: false
+  reasoning: '파싱 실패: Expecting value: line 1 column 1 (char 0)'
+  time_taken: 20.52
+  points: 2
+  earned_points: 0
+  success: false
+  error: 'JSON 파싱 실패: Expecting value: line 1 column 1 (char 0)'
+- question_id: q24
+  question_number: 24
+  answer: 0
+  correct_answer: 2
+  is_correct: false
+  reasoning: '파싱 실패: Expecting value: line 1 column 1 (char 0)'
+  time_taken: 22.59
+  points: 2
+  earned_points: 0
+  success: false
+  error: 'JSON 파싱 실패: Expecting value: line 1 column 1 (char 0)'
+- question_id: q25
+  question_number: 25
+  answer: 2
+  correct_answer: 3
+  is_correct: false
+  reasoning: 보기의 해석 방식은 시적 이미지가 화자의 내면 정서를 구체화·심화하는 방향으로 읽어내는 것이다. 그런데 2번은 ‘발음의 폭포’처럼
+    텍스트와 무관한 음성적 이미지를 임의로 끌어오고, ‘침묵을 향수로 치유’와 ‘기억이 회피된다’는 진술이 인과·정서의 방향에서 서로 충돌하여
+    논리적 일관성이 없다. 결국 이미지→정서의 응집이라는 흐름을 깨뜨려, (나)의 심상과 정서를 설명하는 데 부적절한 해석이다.
+  time_taken: 16.37
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q26
+  question_number: 26
+  answer: 1
+  correct_answer: 2
+  is_correct: false
+  reasoning: (다)에서 화자는 상처를 노래하는 행위가 상처 자체를 지워주지 못한다는 자각을 드러낸다. 노래는 상처의 실재를 확인하고 견디게
+    하는 방식일 뿐, 환부를 소멸시키는 힘은 아니라는 인식이 중심이므로 1이 가장 적절하다. 2는 타자의 아픔을 말함으로써 자신의 환부를 ‘의식하지
+    않게 되었다’고 단정하는데, (다)의 자기 성찰적 태도와 배치된다. 3은 핵심 개념이 모호하고, 상처를 향한 표현이 필연적으로 취약성과 위선에서
+    벗어나지 못한다고 일반화해 (다)의 맥락을 벗어난다. 4는 상처의 폭로가 ‘긴장을 없앤다’는 역설적 진술로, 오히려 긴장을 고조시키는 상처
+    인식의 정조와 어긋난다. 5는 고백자가 아픔이나 고백의 실체를 지각하지 못한다고 하는데, (다)는 오히려 상처의 실체를 또렷이 응시하는 태도를
+    보이므로 부적절하다.
+  time_taken: 16.47
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q27
+  question_number: 27
+  answer: 2
+  correct_answer: 3
+  is_correct: false
+  reasoning: <보기>는 (다)에서 화자가 이별로 인한 상실의 정서 속에 머물며 과거에 대한 응시와 자기 고착을 드러낸다고 본다. 화자는
+    ‘조우의 가능’을 스스로 차단하고 상실을 극복하지 못한 상태에 가깝다. 그런데 2번은 ‘그만큼 사랑한다’는 진술을 상실의 극복과 ‘또 다른
+    연인’으로의 전환으로 해석하는데, 이는 상실의 지속과 집착을 핵심으로 하는 (다)의 정조와 상반된다. 따라서 2번은 (다)를 이해한 내용으로
+    적절하지 않다.
+  time_taken: 27.37
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q28
+  question_number: 28
+  answer: 5
+  correct_answer: 4
+  is_correct: false
+  reasoning: 윗글이 제시되지 않아 구체적 근거는 제한적이지만, 선택지의 표현 타당성을 비교하면 3은 ‘일곱 자식’이라는 과도하게 특정한
+    대상과 ‘…로 통해’라는 비문에 가까운 표현으로 일반적 서술 방식 설명에 부적절하다. 4의 ‘누차하여’는 불필요한 반복 제시를 전제해 보통의
+    서술 방식 설명으로 보기 어렵다. 1은 ‘누가 말하듯이 명시’라는 모호한 진술로 화법 유형이 불명확하며, 2는 서술자의 평가·논평 개입이 뚜렷해야
+    성립하는데 그런 전제가 없다. 반면 5는 인물의 행동을 시간 흐름에 따라 배열하는 가장 보편적이고 자연스러운 서술 방식으로, 특별한 장치가
+    언급되지 않은 상황에서 가장 적절하다.
+  time_taken: 18.02
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q29
+  question_number: 29
+  answer: 0
+  correct_answer: 3
+  is_correct: false
+  reasoning: '파싱 실패: Expecting value: line 1 column 1 (char 0)'
+  time_taken: 24.02
+  points: 2
+  earned_points: 0
+  success: false
+  error: 'JSON 파싱 실패: Expecting value: line 1 column 1 (char 0)'
+- question_id: q30
+  question_number: 30
+  answer: 2
+  correct_answer: 5
+  is_correct: false
+  reasoning: 희망에 관한 윗글의 전개는 ‘사상·상상·실상’ 사이를 매개하며 의미를 확장하거나 현실 인식과 긴장/공존하는 양상을 설명하는
+    것으로 보인다. 1, 3, 4, 5는 이러한 흐름 속에서 희망이 관념과 현실을 오가며 의미를 형성하는 과정을 말하지만, 2는 ‘실물’이 현실에서
+    기능하지 않음을 알고 ‘안도감’을 느낀다고 하여 정서와 인과가 뒤집혀 있다. 보통 현실적 기능 부재의 인지는 좌절·불안과 연결되며, 희망의
+    작동과도 배치된다. 또한 ‘동에서’ 등의 표현은 문맥상 부정확하여 희망의 성격을 설명하지 못한다. 따라서 2가 적절하지 않다.
+  time_taken: 16.12
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q31
+  question_number: 31
+  answer: 3
+  correct_answer: 1
+  is_correct: false
+  reasoning: 3번은 ‘무주무반’처럼 의미가 불분명한 표현과 ‘심리라가’ 같은 비문이 포함되어 있고, ‘실용하고 추상적인’이라는 상충되는
+    규정을 한 문장 안에 병치해 개념적으로도 모순된다. 또한 ‘비평적 연관성’을 개인의 생각을 특정 심리로 환원하는 진술은 윗글의 비평 맥락(주관·비평·사소한
+    것의 의미 탐색 등)과도 어긋난다. 반면 다른 선택지는 비문이 있더라도 주관, 비평성, 사소한 것의 의미 탐색 등으로 해석 가능한 감상의 틀을
+    유지하므로 상대적으로 타당하다.
+  time_taken: 15.35
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q32
+  question_number: 32
+  answer: 5
+  correct_answer: 2
+  is_correct: false
+  reasoning: 작품은 반복·대구, 의문형 표현, 과거 장면의 소환과 현재와의 대비, 그리고 동작 묘사로 현장감을 높여 정서를 환기하는 방식이
+    주가 된다. 반면 구체적 수치나 통계를 제시해 현실을 드러내는 논증적 방식은 사용되지 않으므로 5번이 (가)에 대한 설명으로 적절하지 않다.
+  time_taken: 19.85
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q33
+  question_number: 33
+  answer: 0
+  correct_answer: 5
+  is_correct: false
+  reasoning: '파싱 실패: Expecting value: line 1 column 1 (char 0)'
+  time_taken: 25.11
+  points: 3
+  earned_points: 0
+  success: false
+  error: 'JSON 파싱 실패: Expecting value: line 1 column 1 (char 0)'
+- question_id: q34
+  question_number: 34
+  answer: 1
+  correct_answer: 2
+  is_correct: false
+  reasoning: 1번은 (가)에 대한 설명에서 호칭을 ‘그대’와 ‘자네’로 혼용하고, ‘전차 변형’, ‘사격’ 같은 맥락 불명확한 현대적·기계적
+    어휘를 끌어와 작품 정서 및 주제와 무관한 내용을 단정하고 있어 근거성이 결여된다. 문장 구성도 비문에 가까워 <보기>에 근거한 해석으로 보기
+    어렵다. 반면 3, 4, 5는 (나)에 대한 동일한 설명을 제시하여 최소한 해석 틀이 일관되며, 2에 비해 1이 가장 명백히 작품 맥락과 어긋난
+    오독이므로 ‘적절하지 않은’ 선택지로 판단된다.
+  time_taken: 40.26
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q38
+  question_number: 38
+  answer: 4
+  correct_answer: 4
+  is_correct: true
+  reasoning: ㉠은 학교 내 사안에 대한 안내·공유 성격의 발화로 보는 것이 타당하다. ㉡은 ‘학생회 수장’임을 밝히는 정체성 제시가 이루어지며,
+    동시에 다른 학생의 견해와 다른 자신의 의견을 덧붙일 수도 있어 2와 5는 타당하다. ㉢은 교훈 변경과 관련한 구체적 제안을 담은 부분이므로
+    3도 타당하다. 반면 4처럼 ㉠을 ‘새로운 제안’으로 해석하는 것은 ㉠의 기능(정보 공유)과 맞지 않아 적절하지 않다.
+  time_taken: 21.18
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
+- question_id: q39
+  question_number: 39
+  answer: 3
+  correct_answer: 5
+  is_correct: false
+  reasoning: 3번은 ‘우리과학 영 입’ 같은 비문과 오탈자가 있어 주제와 주어가 불분명하고, ‘다른 학교를 주어야 함’ 역시 문맥상 뜻이
+    통하지 않아 회의 메모로서 부적절하다. 반면 1번은 타교의 교가 가사 변경 사례를 들며 우리 학교의 교훈 변경 논의를 제안하는 흐름이 성립하고,
+    2번도 독립을 서두르지 말고 동문 의견을 경청하자는 취지로 이해 가능하다. 4, 5번은 중복·반복이 있으나 ‘교훈 변경 주저’라는 입장을 정리한
+    것으로 볼 수 있다. 따라서 부적절한 것은 3번이다.
+  time_taken: 13.26
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q40
+  question_number: 40
+  answer: 2
+  correct_answer: 4
+  is_correct: false
+  reasoning: (나)에서 제안한 내용은 ‘학생들의 의견을 수렴하여 교훈 변경을 추진하자’는 것으로, (가)에서 교훈 자체의 내용이 시대에
+    따라 변할 수 있음을 말하는 [B]가 바로 그 근거로 반영된 것이다. [A]는 ‘교가’의 가치 변화에 관한 내용이라 대상이 달라 부적절하고,
+    [C]는 교과목과 교훈의 구분을 밝힌 것으로 변경 추진의 논거가 되지 않는다. 4와 5는 (가)와의 연계를 제시하지 않아 반영 설명으로 미흡하다.
+  time_taken: 22.41
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q41
+  question_number: 41
+  answer: 2
+  correct_answer: 3
+  is_correct: false
+  reasoning: 예화는 논설·설명 글에서 내용을 구체화하고 이해도와 설득력을 높이기 위한 장치로 쓰이며, 시·서정적 텍스트에서 말하는 ‘심상(이미지)’을
+    높이기 위한 장치로 설명하는 것은 부적절하다. 반면 1은 전개 주제 제시로 글의 구성에 부합하고, 3과 4의 반론 제시는 설득력 강화를 위한
+    타당한 전략이며, 5도 실행 계획 제시로 전개 내용을 실현하는 과정에 해당하므로 적절하다.
+  time_taken: 15.45
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q42
+  question_number: 42
+  answer: 0
+  correct_answer: 2
+  is_correct: false
+  reasoning: '파싱 실패: Expecting value: line 1 column 1 (char 0)'
+  time_taken: 23.84
+  points: 2
+  earned_points: 0
+  success: false
+  error: 'JSON 파싱 실패: Expecting value: line 1 column 1 (char 0)'
+- question_id: q43
+  question_number: 43
+  answer: 1
+  correct_answer: 1
+  is_correct: true
+  reasoning: 학생의 초고는 지속 가능한 항공유의 특성과 의의를 드러내기 위해 ‘기존 항공유와의 차이’를 중심으로 설명하는 대비‧대조의 방식이
+    가장 자연스럽다. 생산 공정 자체를 단계별로 비교하는 2번은 공정 기술에 초점이 맞춰져야 하는데, 일반적인 초고의 개요 수준과는 거리가 있다.
+    3번처럼 장단점을 병치했다면 단점 제시와 균형 잡힌 평가가 분명히 드러나야 하는데, 그러한 평가적 서술을 전제로 하지 않는다. 4번은 시기적
+    전개(도입 전–도입 중–도입 후)의 구조가 필요하고, 5번은 국가별 비교 통계나 사례가 필수적이다. 따라서 기존 항공유에 대비하여 개념과 효과를
+    설명하는 1번이 글쓰기 방식으로 가장 적절하다.
+  time_taken: 11.82
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
+- question_id: q44
+  question_number: 44
+  answer: 3
+  correct_answer: 5
+  is_correct: false
+  reasoning: 초고의 핵심 소재가 ‘지속 가능한 항공유(SAF)’이며, 이를 통해 항공 부문의 탄소 배출을 줄이고 도입을 확대하겠다는 방향일
+    때 [A]는 글의 마무리에서 핵심 주장을 다시 확인하고 실행을 제안하는 문장이 적절하다. 3번은 SAF가 탄소 감축에 효과적이라는 결론을 요약하고
+    ‘도입 확대’라는 구체적 행동을 제안해 글의 논지와 목적(확대 촉구)에 정확히 부합한다. 반면 5번은 독자 개인의 항공편 선택으로 논점을 분산시키고,
+    2번은 수하물 무게 등 SAF 주제에서 벗어난 생활 실천으로 이탈한다. 1번은 주체가 모호하고 표현이 어색하며, 4번은 국가 일반론과 수사적
+    질문에 그쳐 구체적 제안성이 약하다. 따라서 3번이 가장 적절하다.
+  time_taken: 25.46
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q38
+  question_number: 38
+  answer: 0
+  correct_answer: 4
+  is_correct: false
+  reasoning: '파싱 실패: Expecting value: line 1 column 1 (char 0)'
+  time_taken: 26.6
+  points: 2
+  earned_points: 0
+  success: false
+  error: 'JSON 파싱 실패: Expecting value: line 1 column 1 (char 0)'
+- question_id: q39
+  question_number: 39
+  answer: 0
+  correct_answer: 5
+  is_correct: false
+  reasoning: '파싱 실패: Expecting value: line 1 column 1 (char 0)'
+  time_taken: 22.34
+  points: 3
+  earned_points: 0
+  success: false
+  error: 'JSON 파싱 실패: Expecting value: line 1 column 1 (char 0)'
+- question_id: q40
+  question_number: 40
+  answer: 0
+  correct_answer: 4
+  is_correct: false
+  reasoning: '파싱 실패: Expecting value: line 1 column 1 (char 0)'
+  time_taken: 21.12
+  points: 2
+  earned_points: 0
+  success: false
+  error: 'JSON 파싱 실패: Expecting value: line 1 column 1 (char 0)'
+- question_id: q41
+  question_number: 41
+  answer: 3
+  correct_answer: 3
+  is_correct: true
+  reasoning: 3번은 ‘국제 표준 규제 제정의 효과’를 언급하고 ‘제정이 가능함’을 전제하면서 동시에 ‘반항을 요청’한다는 점에서 의미가
+    서로 충돌합니다. 시청자 반응으로 자연스러운 것은 반박·질문·확인 요청 등인데, ‘반항’ 요청은 맥락상 부적절하며 용어 선택도 어색합니다.
+    또한 ‘표준’이 주어가 되어 말하는 문장 구조도 비문에 가깝습니다. 반면 2번과 5번은 배경지식 제시나 이해 확인처럼 시청자 반응으로 타당하고,
+    1번과 4번은 표현이 다소 어색하나 규제 차이에 대한 불만·반발 표출로 해석 가능하므로 3번이 가장 부적절합니다.
+  time_taken: 18.3
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
+- question_id: q42
+  question_number: 42
+  answer: 2
+  correct_answer: 2
+  is_correct: true
+  reasoning: 출처 표시는 일반적으로 제목·제작자·게시처·링크(또는 타임스탬프) 등으로 제시하는 것이 적절한데, '글자수 기준으로' 출처를
+    제시한다는 것은 출처 표기의 관례와 목적에 부합하지 않습니다. 반면 1, 3, 4, 5는 소제목, 이미지, 영상의 시작 지점 안내, 첨부 자료
+    제공 등으로 정보 접근성과 이해를 높이는 타당한 제시 방식입니다.
+  time_taken: 14.44
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
+- question_id: q43
+  question_number: 43
+  answer: 2
+  correct_answer: 1
+  is_correct: false
+  reasoning: 선택지들 중 의미와 논리의 일관성이 가장 높은 것은 2입니다. 1은 ‘일본 여행을 간 것이 일본에서 이루어진다’는 자명한 진술을
+    ‘조리있음’으로 설명해 맥락상 부적절합니다. 3은 ‘A4의 박막’·영상·송출 규격을 혼합해 개념이 충돌합니다. 4는 ‘송출 시점의 시간이 많이
+    도달’처럼 비문이어서 의미 파악이 어렵습니다. 5는 ‘올려줄 뻔 가능성’ 등 표현이 어색하고 인과가 불명확합니다. 반면 2는 ‘표준 용지 규정–다각–표준과
+    콘셉트’ 사이의 관계를 설명하는 구조가 비교적 타당해 (C)의 설명으로 가장 적절합니다.
+  time_taken: 11.67
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q44
+  question_number: 44
+  answer: 1
+  correct_answer: 5
+  is_correct: false
+  reasoning: (가)에는 각 행사의 일시·장소 안내와 함께 손가락 지시 기호(☞)를 사용해 정보를 제시하고, 안전 유의사항 및 동아리 부스
+    관련 상세 안내를 QR 코드로 제공하며, 동아리 부스도 활동 유형별로 분류해 안내하고 있다. 그러나 각 행사별 ‘진행 절차’를 단계별로 상세히
+    나열한 내용은 보이지 않으므로 1번 설명이 (가)에 대한 내용으로는 부합하지 않는다.
+  time_taken: 13.52
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q45
+  question_number: 45
+  answer: 0
+  correct_answer: 2
+  is_correct: false
+  reasoning: '파싱 실패: Expecting value: line 1 column 1 (char 0)'
+  time_taken: 17.59
+  points: 3
+  earned_points: 0
+  success: false
+  error: 'JSON 파싱 실패: Expecting value: line 1 column 1 (char 0)'

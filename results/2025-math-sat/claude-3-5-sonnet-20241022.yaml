@@ -1,0 +1,1023 @@
+exam_id: 2025-math-sat
+exam_title: 2025학년도 수능 MATH
+subject: math
+model_name: claude-3-5-sonnet-20241022
+evaluated_at: '2025-10-06T08:09:36.416643'
+summary:
+  total_questions: 46
+  correct_answers: 9
+  accuracy: 19.57
+  total_score: 28
+  max_score: 152
+  score_rate: 18.42
+results:
+- question_id: q1
+  question_number: 1
+  answer: 5
+  correct_answer: 5
+  is_correct: true
+  reasoning: '이 문제를 단계별로 풀어보겠습니다.
+
+
+    1) 먼저 5√5 × 25의 1/3을 계산합니다.
+
+
+    2) 25는 5²이므로, 5√5 × 5²의 1/3이 됩니다.
+
+
+    3) 5√5 × 5² = 5 × √5 × 25 = 5 × √5 × 25 = 5³ × √5
+
+
+    4) 5³ × √5 = 125 × √5
+
+
+    5) (125 × √5)의 1/3 = 125의 1/3 × √5의 1/3
+
+
+    6) 125의 1/3 = 5 (125 ÷ 3 = 5)
+
+    √5의 1/3 = 1 (√5의 지수 1/2를 1/3로 나누면 지수가 1이 되어 1)
+
+
+    7) 따라서 5 × 1 = 5가 됩니다.
+
+
+    최종 답은 5입니다.'
+  time_taken: 5.4
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
+- question_id: q2
+  question_number: 2
+  answer: 0
+  correct_answer: 4
+  is_correct: false
+  reasoning: "{\n  \"answer\": 4,\n  \"reasoning\": \"이 문제는 미분계수의 정의를 이용하여 해결할 수 있습니다.\n\
+    \n1) lim (h→0) (f(2+h) - f(2))/h 는 x=2에서의 미분계수입니다.\n\n2) f(x) = x² - 8x + 7 이므로,\n\
+    \   f(2+h) = (2+h)² - 8(2+h) + 7\n   = 4 + 4h + h² - 16 - 8h + 7\n   = h² - 4h\
+    \ - 5\n\n3) f(2) = 2² - 8(2) + 7\n   = 4 - 16 + 7\n   = -5\n\n4) 따라서, (f(2+h)\
+    \ - f(2))/h\n   = (h² - 4h - 5 + 5)/h\n   = (h² - 4h)/h\n   = h - 4\n\n5) h가 0으로\
+    \ 접근할 때의 극한값은 0 - 4 = -4\n\n6) 문제에서 구하는 값은 절댓값이므로 4입니다.\n\n따라서 정답은 4입니다.\"\n}"
+  time_taken: 5.24
+  points: 2
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q3
+  question_number: 3
+  answer: 5
+  correct_answer: 5
+  is_correct: true
+  reasoning: "다음과 같은 단계로 풀이할 수 있습니다:\n\n1) 첫째항이 k이고 공비가 k인 등비수열에서:\n   a1 = k\n  \
+    \ a2 = k²\n\n2) 문제의 조건에 따라:\n   a1/a2 + a2/a1 = 30\n\n3) 이를 k로 표현하면:\n   k/k²\
+    \ + k²/k = 30\n   1/k + k = 30\n\n4) k > 0이므로:\n   (k² - 30k + 1 = 0)을 만족하는 양수\
+    \ k를 구하면 됩니다.\n\n5) 이차방정식을 풀면:\n   k = (30 ± √(900-4))/2\n   k = (30 ± √896)/2\n\
+    \   k = 15 ± √224\n\n6) k는 양수이므로:\n   k = 15 + √224 또는 k = 15 - √224\n\n7) k가\
+    \ 양수여야 하므로 k = 5\n\n따라서 k = 5가 정답입니다."
+  time_taken: 5.69
+  points: 3
+  earned_points: 3
+  success: true
+  error: null
+- question_id: q4
+  question_number: 4
+  answer: 0
+  correct_answer: 2
+  is_correct: false
+  reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"이 문제를 해결하기 위한 단계별 풀이:\n\n1)\
+    \ 함수가 실수 전체의 집합에서 연속이려면, x = -2에서 연속이어야 합니다.\n   즉, 좌극한과 우극한이 같고, 그 값이 함숫값과 같아야\
+    \ 합니다.\n\n2) x = -2에서 좌극한:\n   lim(x→-2⁻) f(x) = lim(x→-2⁻) (5x + a)\n   = 5(-2)\
+    \ + a = -10 + a\n\n3) x = -2에서 우극한:\n   lim(x→-2⁺) f(x) = lim(x→-2⁺) (x² - a)\n\
+    \   = (-2)² - a = 4 - a\n\n4) 연속이므로 좌극한 = 우극한:\n   -10 + a = 4 - a\n   -10 + a\
+    \ = 4 - a\n   -10 + 2a = 4\n   2a = 14\n   a = 8\n\n5) 검증:\n   x < -2일 때: 5x +\
+    \ 8\n   x ≥ -2일 때: x² - 8\n   x = -2에서: 5(-2) + 8 = -10 + 8 = -2\n   x = -2에서:\
+    \ (-2)² - 8 = 4 - 8 = -2\n   \n따라서 a = 8입니다.\"\n}"
+  time_taken: 6.0
+  points: 3
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q5
+  question_number: 5
+  answer: 2
+  correct_answer: 3
+  is_correct: false
+  reasoning: '이 문제는 다음과 같은 단계로 풀이할 수 있습니다:
+
+
+    1) 먼저 f(x)를 전개하면:
+
+    f(x) = (x^2+1)(3x^2-x)
+
+    = 3x^4-x^3+3x^2-x
+
+
+    2) f''(x)를 구하기 위해 각 항을 미분합니다:
+
+    - 3x^4의 미분: 12x^3
+
+    - -x^3의 미분: -3x^2
+
+    - 3x^2의 미분: 6x
+
+    - -x의 미분: -1
+
+
+    3) 따라서 f''(x) = 12x^3-3x^2+6x-1
+
+
+    4) f''(1)을 구하기 위해 x=1을 대입:
+
+    f''(1) = 12(1)^3-3(1)^2+6(1)-1
+
+    = 12-3+6-1
+
+    = 10
+
+
+    따라서 f''(1)의 값은 10입니다.'
+  time_taken: 4.53
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q6
+  question_number: 6
+  answer: 0
+  correct_answer: 5
+  is_correct: false
+  reasoning: "{\n  \"answer\": 5,\n  \"reasoning\": \"이 문제를 다음 단계로 풀어보겠습니다:\\n\\n1)\
+    \ 먼저, \\cos(\\frac{\\pi}{2} + \\theta) = -\\sin \\theta 이므로,\\n   -\\sin \\theta\
+    \ = -\\frac{1}{5}\\n   따라서, \\sin \\theta = \\frac{1}{5}\\n\\n2) 삼각함수의 기본 관계식에\
+    \ 의해,\\n   \\sin^2 \\theta + \\cos^2 \\theta = 1\\n   (\\frac{1}{5})^2 + \\cos^2\
+    \ \\theta = 1\\n   \\cos^2 \\theta = 1 - \\frac{1}{25} = \\frac{24}{25}\\n\\n3)\
+    \ 주어진 식 -\\frac{\\sin \\theta}{1 - \\cos^2 \\theta}를 계산하면,\\n   -\\frac{\\frac{1}{5}}{1\
+    \ - \\frac{24}{25}} = -\\frac{\\frac{1}{5}}{\\frac{1}{25}} = -\\frac{1}{5} \\\
+    cdot 25 = -5 \\cdot (-1) = 5\\n\\n따라서 답은 5입니다.\"\n}"
+  time_taken: 5.05
+  points: 3
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q7
+  question_number: 7
+  answer: 0
+  correct_answer: 3
+  is_correct: false
+  reasoning: "{\n  \"answer\": 1,\n  \"reasoning\": \"이 문제는 정적분과 미분의 관계를 이용하여 풀 수\
+    \ 있습니다. 풀이 과정은 다음과 같습니다:\n\n1) 주어진 식 \\( \\int_{0}^{x} f(t) \\, dt = 3x^2 + 2x\
+    \ \\) 에서,\n   이는 F(x) = 3x^2 + 2x 가 f(x)의 부정적분임을 의미합니다.\n\n2) 미적분학의 기본정리에 의하여,\n\
+    \   F'(x) = f(x) 입니다.\n\n3) F(x) = 3x^2 + 2x 를 미분하면,\n   F'(x) = f(x) = 6x + 2\n\
+    \n4) 따라서 f(1)을 구하려면 x = 1을 대입하면 됩니다.\n   f(1) = 6(1) + 2 = 6 + 2 = 7\n\n5) 따라서\
+    \ f(1) = 7 입니다.\n\n이는 선택지 1번에 해당합니다.\"\n}"
+  time_taken: 5.32
+  points: 3
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q8
+  question_number: 8
+  answer: 1
+  correct_answer: 1
+  is_correct: true
+  reasoning: "이 문제를 단계별로 풀어보겠습니다.\n\n1) 먼저 a를 계산해봅시다.\n   a = 2log(1/10) + log(20/10)\n\
+    \   = 2log(1/10) + log(2)\n   = 2(-1) + log(2)\n   = -2 + log(2)\n\n2) b는 이미 주어져\
+    \ 있습니다.\n   b = log(2)\n\n3) 따라서 a×b는\n   a×b = (-2 + log(2)) × log(2)\n   = -2log(2)\
+    \ + (log(2))²\n\n4) log(2)의 값은 약 0.301입니다.\n   따라서 -2(0.301) + (0.301)² \n   =\
+    \ -0.602 + 0.090601\n   ≈ -0.511399\n\n5) 이 값에 -1을 곱하면 약 1이 됩니다.\n\n따라서 a×b의 값은\
+    \ 1입니다."
+  time_taken: 4.64
+  points: 3
+  earned_points: 3
+  success: true
+  error: null
+- question_id: q9
+  question_number: 9
+  answer: 0
+  correct_answer: 4
+  is_correct: false
+  reasoning: "{\n  \"answer\": 5,\n  \"reasoning\": \"다음과 같은 단계로 풀이할 수 있습니다:\\n\\\
+    n1) \\(\\int_{-2}^{a} f(x)dx = \\int_{a}^{3} f(x)dx\\)는 \\(\\int_{-2}^{a} f(x)dx\
+    \ = -\\int_{a}^{-2} f(x)dx\\)와 같으므로,\\n\\n2) \\(\\int_{-2}^{a} f(x)dx = \\frac{1}{2}\\\
+    int_{-2}^{3} f(x)dx\\)\\n\\n3) F(x) = x³ - 8x² - 20x라 하면, F(x)는 f(x)의 부정적분\\n\\\
+    n4) \\(\\int_{-2}^{3} f(x)dx = F(3) - F(-2)\\)\\n   = (27 - 72 - 60) - (-8 - 32\
+    \ + 40)\\n   = -105 - 0\\n   = -105\\n\\n5) \\(\\int_{-2}^{a} f(x)dx = \\frac{1}{2}(-105)\\\
+    )\\n   = F(a) - F(-2)\\n   = (a³ - 8a² - 20a) - (-8 - 32 + 40)\\n   = a³ - 8a²\
+    \ - 20a + 0\\n   = -52.5\\n\\n6) a³ - 8a² - 20a + 52.5 = 0\\n\\n7) a가 양수이고 이 방정식을\
+    \ 만족하는 값은 8\\n\\n따라서 a = 8\"\n}"
+  time_taken: 7.42
+  points: 4
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q10
+  question_number: 10
+  answer: 3
+  correct_answer: 3
+  is_correct: true
+  reasoning: "다음과 같은 단계로 풀이할 수 있습니다:\n\n1) f(x) = acosbx + 3이 x = π/3에서 최댓값 13을 가지므로:\n\
+    \   - f(π/3) = acosb(π/3) + 3 = 13\n   - cos함수의 최댓값은 1이므로, a는 양수여야 함\n\n2) x =\
+    \ π/3에서 최댓값을 가지므로:\n   - b(π/3)가 2π의 배수여야 함 (cos함수가 최댓값 1을 가지는 지점)\n   - b(π/3)\
+    \ = 2πn (n은 자연수)\n   - b = 6n (n은 자연수)\n\n3) 최댓값 조건에서:\n   - acosb(π/3) + 3 =\
+    \ 13\n   - acos(2πn) + 3 = 13\n   - a·1 + 3 = 13\n   - a = 10\n\n4) b는 6의 배수이면서\
+    \ 자연수여야 하므로 가능한 최소값은 6\n\n5) 따라서 가능한 순서쌍 (a, b) 중 a + b가 최소가 되는 것은:\n   (10, 6)\n\
+    \n6) a + b = 10 + 6 = 16\n\n따라서 a + b의 최솟값은 16입니다."
+  time_taken: 7.12
+  points: 4
+  earned_points: 4
+  success: true
+  error: null
+- question_id: q11
+  question_number: 11
+  answer: 3
+  correct_answer: 2
+  is_correct: false
+  reasoning: '다음 단계로 문제를 해결하겠습니다:
+
+
+    1) 운동 방향이 바뀌는 시각은 속도가 0이 되는 시점입니다.
+
+
+    2) 속도는 위치의 시간에 대한 미분이므로:
+
+    v(t) = dx/dt = 3t² - 3t - 6
+
+
+    3) 속도가 0이 되는 시점을 구하기 위해:
+
+    3t² - 3t - 6 = 0
+
+    3(t² - t - 2) = 0
+
+    3(t + 1)(t - 2) = 0
+
+    t = -1 또는 t = 2
+
+
+    4) 문제에서 t ≥ 0이므로 t = 2일 때가 첫 번째 운동 방향 변화 시점입니다.
+
+
+    5) t = 2를 원래 위치 함수에 대입:
+
+    x = 2³ - (3/2)(2²) - 6(2)
+
+    x = 8 - 6 - 12
+
+    x = -10
+
+
+    6) 이후 t = -1은 조건에 맞지 않으므로 무시합니다.
+
+
+    7) 따라서 운동 방향이 바뀌는 시각에서의 위치의 절댓값은 12입니다.
+
+
+    절댓값이 12인 위치가 답이므로 3번이 정답입니다.'
+  time_taken: 6.41
+  points: 4
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q12
+  question_number: 12
+  answer: 0
+  correct_answer: 4
+  is_correct: false
+  reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"다음과 같은 단계로 풀이할 수 있습니다:\\n\\\
+    n1) 등차수열 {bn}의 일반항은 b₁ = 2이고, 공차를 d라 하면\\n   bn = 2 + (n-1)d\\n\\n2) 주어진 조건을 n\
+    \ = 1일 때 대입하면\\n   a₁/b₂ = 1/2\\n   2/(2+d) = 1/2\\n   따라서 d = 2\\n\\n3) bn =\
+    \ 2 + (n-1)2 = 2n\\n\\n4) 주어진 조건을 n에 대해 정리하면\\n   Σ(ak/b(k+1)) = n²/2\\n\\n5)\
+    \ n과 n-1에 대한 식의 차를 구하면\\n   an/b(n+1) = n\\n\\n6) b(n+1) = 2(n+1)이므로\\n   an/2(n+1)\
+    \ = n\\n   an = 2n(n+1)\\n\\n7) 따라서 수열 {an}의 처음 4항은\\n   a₁ = 2·1·2 = 4\\n   a₂\
+    \ = 2·2·3 = 12\\n   a₃ = 2·3·4 = 24\\n   a₄ = 2·4·5 = 40\\n\\n8) Σa(k) = 4 + 12\
+    \ + 24 + 40 = 130\\n\\n따라서 Σa(k)의 값은 130입니다.\"\n}"
+  time_taken: 7.57
+  points: 4
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q13
+  question_number: 13
+  answer: 3
+  correct_answer: 5
+  is_correct: false
+  reasoning: "다음 단계로 문제를 해결하겠습니다.\n\n1) 주어진 조건을 통해 f(x)를 구하면:\n   - f(1) = f(2) =\
+    \ 0이므로 (x-1)(x-2)가 인수로 포함됨\n   - 최고차항의 계수가 1이므로 f(x) = (x-1)(x-2)(ax+b) 형태\n \
+    \  - f'(0) = -7 조건을 이용하면 f(x) = (x-1)(x-2)(x+1)\n\n2) f(3) 계산:\n   f(3) = (3-1)(3-2)(3+1)\
+    \ = 2 × 1 × 4 = 8\n   따라서 P(3,8)\n\n3) Q점의 좌표 구하기:\n   - O와 P를 지나는 직선의 기울기는 8/3\n\
+    \   - y = (8/3)x와 f(x)의 교점 중 O와 P 사이의 점이 Q\n   - Q점은 (2,16/3)\n\n4) 넓이 구하기:\n\
+    \   - A는 O에서 Q까지 곡선과 직선으로 둘러싸인 넓이\n   - B는 Q에서 P까지 곡선과 직선으로 둘러싸인 넓이\n   - 적분을\
+    \ 통해 계산하면 B - A = 41/4\n\n따라서 B - A = 41/4"
+  time_taken: 7.48
+  points: 4
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q14
+  question_number: 14
+  answer: 3
+  correct_answer: 3
+  is_correct: true
+  reasoning: '다음 단계로 문제를 해결하겠습니다.
+
+
+    1) 먼저, 삼각형 ABC의 외접원 반지름이 7이므로, 사인법칙에 의해:
+
+    AB = 14sin(C)
+
+    AC = 14sin(B)
+
+    BC = 14sin(A)
+
+
+    2) sin(A) : sin(C) = 8 : 5이므로,
+
+    AB = 14 × 5k (k는 비례상수)
+
+    BC = 14 × 8k
+
+
+    3) AD : DB = 3 : 2이므로 D는 AB를 3:2로 내분하는 점입니다.
+
+    AD = (3/5)AB
+
+
+    4) 삼각형 ADE : 삼각형 ABE = 9 : 35이므로,
+
+    (AD × h) : (AB × h) = 9 : 35 (h는 높이)
+
+    (3/5)AB × h : AB × h = 9 : 35
+
+    따라서 3/5 = 9/35
+
+
+    5) 점 P가 점 E 위에 있을 때 삼각형 PBC의 넓이의 최댓값은
+
+    점 P가 원 O 위에서 움직일 때 발생합니다.
+
+
+    6) 계산을 통해 최댓값은 30 + 25√3이 됩니다.
+
+
+    이는 원의 성질과 삼각형의 넓이 공식을 이용하여 도출된 결과입니다.'
+  time_taken: 8.45
+  points: 4
+  earned_points: 4
+  success: true
+  error: null
+- question_id: q15
+  question_number: 15
+  answer: 0
+  correct_answer: 2
+  is_correct: false
+  reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"다음 단계로 문제를 해결하겠습니다.\\n\\n1)\
+    \ 조건 (가)에 의해 g(x)가 x=0에서 미분가능하므로:\\n   - g(0-)=g(0+) : x^3 + ax^2 + 15x + 7|_{x=0}\
+    \ = f(0)\\n   따라서 f(0) = 7\\n   - g'(0-)=g'(0+) : 3x^2 + 2ax + 15|_{x=0} = f'(0)\\\
+    n   따라서 f'(0) = 15\\n\\n2) 조건 (나)의 방정식 g(x)g(x-4) = 0의 해는 g(x) = 0 또는 g(x-4) =\
+    \ 0을 만족\\n\\n3) x ≤ 0 구간에서 g(x) = x^3 + ax^2 + 15x + 7 = 0의 해가 하나 있어야 함\\n   x\
+    \ > 0 구간에서 f(x) = 0의 해가 하나 있어야 함\\n\\n4) g(-2)를 구하면:\\n   g(-2) = (-2)^3 + a(-2)^2\
+    \ + 15(-2) + 7\\n   = -8 + 4a - 30 + 7\\n   = 4a - 31\\n\\n5) g(0) = 7 (앞에서 구함)\\\
+    n\\n6) 따라서 g(-2) + g(0) = (4a - 31) + 7 = 4a - 24\\n\\n7) a의 값을 구하면 a = 14.5\\\
+    n\\n8) 최종적으로 g(-2) + g(0) = 4(14.5) - 24 = 34\\n\\n따라서 g(-2) + g(0) = 34\"\n}"
+  time_taken: 7.83
+  points: 4
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q16
+  question_number: 16
+  answer: 0
+  correct_answer: 3
+  is_correct: false
+  reasoning: "{\n  \"answer\": 4,\n  \"reasoning\": \"이 문제를 다음과 같이 풀이할 수 있습니다:\\n\\\
+    n1) 로그의 성질에 의하면, 같은 밑을 가진 로그가 서로 같다면 진수도 서로 같습니다.\\n   즉, \\log_3 (x-3) = \\log_3\
+    \ (3x-5) 이면 x-3 = 3x-5\\n\\n2) 방정식을 풀면:\\n   x-3 = 3x-5\\n   x-3-3x = -5\\n  \
+    \ -2x = -2\\n   x = 1\\n\\n3) 그러나 로그의 진수는 반드시 양수여야 합니다.\\n   따라서 x-3 > 0 이고 3x-5\
+    \ > 0 을 만족해야 합니다.\\n\\n4) x-3 > 0 이면 x > 3\\n   3x-5 > 0 이면 x > 5/3\\n\\n5) 두\
+    \ 조건을 모두 만족하는 x > 3이어야 합니다.\\n\\n6) 따라서 x = 4가 원래 방정식의 유일한 해입니다.\"\n}"
+  time_taken: 5.93
+  points: 3
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q17
+  question_number: 17
+  answer: 0
+  correct_answer: 5
+  is_correct: false
+  reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"이 문제는 다음과 같은 단계로 해결할 수 있습니다:\n\
+    \n1) f'(x)가 주어졌으므로, f(x)를 구하기 위해서는 f'(x)를 적분해야 합니다.\n\n2) f'(x) = 9x² + 4x - 1을\
+    \ 적분하면:\n   f(x) = ∫(9x² + 4x - 1)dx\n   f(x) = 3x³ + 2x² - x + C\n\n3) f(1) =\
+    \ 6이라는 조건을 이용하여 적분상수 C를 구할 수 있습니다:\n   6 = 3(1)³ + 2(1)² - 1 + C\n   6 = 3 + 2\
+    \ - 1 + C\n   6 = 4 + C\n   따라서 C = 2\n\n4) 이제 f(x) = 3x³ + 2x² - x + 2 입니다.\n\
+    \n5) f(2)를 구하면:\n   f(2) = 3(2)³ + 2(2)² - 2 + 2\n   = 3(8) + 2(4) - 2 + 2\n \
+    \  = 24 + 8 - 2 + 2\n   = 32\n\n따라서 f(2) = 32입니다.\"\n}"
+  time_taken: 5.46
+  points: 3
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q18
+  question_number: 18
+  answer: 0
+  correct_answer: 3
+  is_correct: false
+  reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"이 문제를 다음과 같이 해결할 수 있습니다:\n\n\
+    1) a_n + a_{n+1} = 12 라는 조건은 연속된 두 항의 합이 항상 12라는 의미입니다.\n\n2) 이를 나열해보면:\n   a_1\
+    \ + a_2 = 12\n   a_2 + a_3 = 12\n   a_3 + a_4 = 12\n   ...\n   a_15 + a_16 = 12\n\
+    \   \n3) 여기서 중요한 패턴을 발견할 수 있습니다:\n   - a_2는 첫 번째와 두 번째 등식에 모두 나타납니다\n   - a_3는\
+    \ 두 번째와 세 번째 등식에 모두 나타납니다\n   - 이런 식으로 짝수 번째 항은 더해지고, 홀수 번째 항은 빼집니다\n\n4) 따라서\
+    \ a_1부터 a_16까지의 합은:\n   - 첫 번째 등식부터 마지막 등식까지 모두 더하면\n   - (a_1 + a_2) + (a_2 +\
+    \ a_3) + ... + (a_15 + a_16)\n   - = 12 × 15 = 180이 됩니다\n\n5) 이는 a_1부터 a_16까지의\
+    \ 합의 2배와 같습니다\n   (중간 항들이 두 번씩 더해졌기 때문)\n\n6) 따라서 \\sum_{n=1}^{16} a_n = 180 ÷\
+    \ 2 = 90\n\n답은 90입니다.\"\n}"
+  time_taken: 7.37
+  points: 3
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q19
+  question_number: 19
+  answer: 0
+  correct_answer: 1
+  is_correct: false
+  reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"다음과 같은 단계로 풀이할 수 있습니다:\n\n1)\
+    \ f(x)의 도함수를 구합니다.\n   f'(x) = 6x^2 - 6ax - 12a\n   f'(x) = 6(x^2 - ax - 2a)\n\
+    \n2) 극값을 가지는 x값을 찾기 위해 f'(x) = 0을 풉니다.\n   x^2 - ax - 2a = 0\n   이차방정식의 근을 구하면,\n\
+    \   x = \\frac{a ± \\sqrt{a^2 + 8a}}{2}\n\n3) 극댓값이 \\frac{7}{27}이므로, 이 x값을 원래\
+    \ 함수에 대입한 값이 \\frac{7}{27}입니다.\n   이때 a = 1이 됨을 확인할 수 있습니다.\n\n4) a = 1을 원래 함수에\
+    \ 대입하면:\n   f(x) = 2x^3 - 3x^2 - 12x\n\n5) f(3a) = f(3)를 계산하면:\n   f(3) = 2(27)\
+    \ - 3(9) - 12(3)\n   = 54 - 27 - 36\n   = -9\n\n따라서 f(3a) = -9입니다.\"\n}"
+  time_taken: 6.12
+  points: 3
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q20
+  question_number: 20
+  answer: 0
+  correct_answer: 4
+  is_correct: false
+  reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"이 문제를 단계별로 해결해보겠습니다.\n\n1) 먼저\
+    \ 곡선과 직선의 교점을 찾아야 합니다.\n   - y = (1/5)^(x-3) = 2x에서\n   - log를 취하면: (x-3)log(1/5)\
+    \ = log(2x)\n   - 이 방정식의 해가 k입니다.\n\n2) x > k일 때, f(x) = (1/5)^(x-3)이고 f'(x) =\
+    \ 3x라는 조건이 있습니다.\n   - (1/5)^(x-3)의 도함수는 ln(1/5)(1/5)^(x-3)입니다.\n   - 이것이 3x와\
+    \ 같아야 하므로\n   - ln(1/5)(1/5)^(x-3) = 3x\n\n3) 주어진 적분 \\int_{1}^{k} \\frac{1}{x^2\
+    \ \\times 5^{x^2}} dx를 살펴보면\n   - 이는 \\int_{1}^{k} \\frac{1}{x^2} \\times (\\\
+    frac{1}{5})^{x^2} dx 형태입니다.\n   - 치환적분을 사용하면 u = x^2로 두고\n   - du = 2x dx\n  \
+    \ - 적분의 결과는 -\\frac{1}{2} 입니다.\n\n4) 따라서 \\int_{1}^{k} \\frac{1}{x^2 \\times 5^{x^2}}\
+    \ dx = -\\frac{1}{2}\n\n이 문제의 답은 -1/2입니다.\"\n}"
+  time_taken: 7.97
+  points: 4
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q21
+  question_number: 21
+  answer: 0
+  correct_answer: 3
+  is_correct: false
+  reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"이 문제를 다음과 같이 풀이할 수 있습니다:\n\n\
+    1) 먼저 주어진 조건이 없는데, 이는 문제가 완전하지 않은 것 같습니다. 하지만 함수가 3차 함수이고 계수 a, b가 정수라는 조건만으로도\
+    \ 풀이를 시도해볼 수 있습니다.\n\n2) f(x) = x³ + ax² + bx + c 에서 f(1)을 구하면:\n   f(1) = 1 +\
+    \ a + b + c\n\n3) 그러나 c값도 주어지지 않았고, a와 b가 정수라는 조건만으로는 f(1)의 최댓값을 구할 수 없습니다.\n\n\
+    4) 이 문제는 필요한 조건이 누락된 것으로 보입니다. 예를 들어:\n   - f(x)의 극값에 대한 조건\n   - 함수의 증감에 대한 조건\n\
+    \   - 특정 점을 지나는 조건 등이 필요합니다.\n\n5) 현재 주어진 정보만으로는 f(1)의 최댓값을 정확히 구할 수 없습니다.\n\n\
+    따라서 이 문제는 조건이 불충분하여 정확한 답을 구할 수 없습니다. 추가 조건이 필요합니다.\"\n}"
+  time_taken: 7.38
+  points: 4
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q22
+  question_number: 22
+  answer: 0
+  correct_answer: 2
+  is_correct: false
+  reasoning: '죄송하지만 선택지가 제시되어 있지 않고, 문제의 조건도 완전히 제시되지 않은 것 같습니다. 정확한 답변을 위해서는 다음이
+    필요합니다:
+
+
+    1. 수열 {an}이 만족해야 하는 조건들
+
+    2. 1번부터 5번까지의 선택지
+
+
+    이 정보들을 제공해 주시면 문제를 정확하게 분석하고 답변해 드리겠습니다.'
+  time_taken: 2.97
+  points: 4
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q23
+  question_number: 23
+  answer: 3
+  correct_answer: 5
+  is_correct: false
+  reasoning: "이 문제를 해결하기 위해 다음과 같이 분석하겠습니다:\n\n1) (x^3 + 2x)^6을 이항정리로 전개할 때, x^6 항을\
+    \ 찾아야 합니다.\n\n2) 일반항은 ₆Cᵣ(x^3)^r(2x)^(6-r) 형태입니다.\n\n3) x^6을 만들기 위해서는 x^3과 x의\
+    \ 지수 합이 6이 되어야 합니다:\n   - x^3의 r승과 x의 (6-r)승의 합이 6이 되는 경우를 찾으면\n   - 3r + (6-r)\
+    \ = 6\n   - 3r + 6 - r = 6\n   - 2r = 0\n   - r = 0일 때와 r = 2일 때가 해당됩니다.\n\n4)\
+    \ 따라서 두 가지 경우의 합을 구해야 합니다:\n   - r = 2일 때: ₆C₂(x^3)^2(2x)^4 = 15 × 1 × 16 = 240\n\
+    \   - r = 0일 때: ₆C₀(x^3)^0(2x)^6 = 1 × 1 × 64 = 64\n\n5) x^6의 계수는 240 ÷ 4 + 64\
+    \ = 60 + 64 = 60입니다.\n\n따라서 x^6의 계수는 60입니다."
+  time_taken: 7.56
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q24
+  question_number: 24
+  answer: 0
+  correct_answer: 3
+  is_correct: false
+  reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"다음과 같은 단계로 풀이할 수 있습니다:\\n\\\
+    n1) 조건부확률의 정의에 의해\\nP(A|B) = \\frac{P(A∩B)}{P(B)} = P(A) - \\frac{1}{2}\\n\\n2)\
+    \ P(A∩B) = \\frac{1}{5}가 주어졌으므로\\n\\frac{\\frac{1}{5}}{P(B)} = P(A) - \\frac{1}{2}\\\
+    n\\n3) 이를 정리하면\\n\\frac{1}{5} = P(B)[P(A) - \\frac{1}{2}]\\n\\n4) P(A|B)가 확률이므로\
+    \ 0 ≤ P(A|B) ≤ 1\\n따라서 0 ≤ P(A) - \\frac{1}{2} ≤ 1\\n즉, \\frac{1}{2} ≤ P(A) ≤\
+    \ \\frac{3}{2}\\n\\n5) P(A∪B) = P(A) + P(B) - P(A∩B)\\n\\n6) 위의 조건들을 만족하는 값을 계산하면\\\
+    nP(A) = \\frac{7}{10}, P(B) = \\frac{2}{5}\\n\\n7) 따라서 P(A∪B) = \\frac{7}{10}\
+    \ + \\frac{2}{5} - \\frac{1}{5} = \\frac{7}{10}\\n\\n따라서 P(A∪B) = \\frac{7}{10}이\
+    \ 됩니다.\"\n}"
+  time_taken: 6.53
+  points: 3
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q25
+  question_number: 25
+  answer: 1
+  correct_answer: 3
+  is_correct: false
+  reasoning: "이 문제를 다음 단계로 풀어보겠습니다.\n\n1) 표본평균의 분포:\n   - 모집단이 N(m, 2²)을 따르므로\n  \
+    \ - 표본평균은 N(m, 2²/256)을 따릅니다.\n   - 표본평균의 표준편차 = 2/√256 = 2/16 = 0.125\n\n2) 신뢰구간\
+    \ 공식:\n   - 신뢰도 95%일 때 Z값은 ±1.96\n   - 신뢰구간은 표본평균 ± (1.96 × 표준편차)\n   - b-a는 신뢰구간의\
+    \ 길이 = 2 × 1.96 × 0.125\n\n3) 계산:\n   - b-a = 2 × 1.96 × 0.125\n   - = 0.49\n\
+    \   - = 49/100\n\n4) 선택지에서 49가 정답입니다.\n\n따라서 신뢰구간의 길이(b-a)는 0.49이므로, 이를 100을 곱한\
+    \ 49가 정답입니다."
+  time_taken: 5.9
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q26
+  question_number: 26
+  answer: 0
+  correct_answer: 3
+  is_correct: false
+  reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"이 문제는 여사건을 이용하여 해결할 수 있습니다.\n\
+    \n1) 전체 학생 16명 중 3명을 선택하는 경우의 수는 ¹⁶C₃입니다.\n\n2) '적어도 한 명이 과목 B를 선택한 학생일 확률'은 \n\
+    \   = 1 - '3명 모두 과목 A를 선택한 학생일 확률'입니다.\n\n3) 과목 A를 선택한 학생은 9명이므로, \n   3명 모두 과목\
+    \ A를 선택한 학생일 경우의 수는 ⁹C₃입니다.\n\n4) 따라서 구하는 확률은:\n   1 - (⁹C₃/¹⁶C₃)\n   = 1 - {(9×8×7)/(16×15×14)}×(6×5×4)/(3×2×1)\n\
+    \   = 1 - (504/560)\n   = 1 - 3/20\n   = 17/20\n\n따라서 정답은 17/20인 3번입니다.\"\n}"
+  time_taken: 5.52
+  points: 3
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q27
+  question_number: 27
+  answer: 3
+  correct_answer: 3
+  is_correct: true
+  reasoning: '이 문제를 다음 단계로 풀어보겠습니다:
+
+
+    1) X는 3번 뽑은 수의 평균이므로, X = (a+b+c)/3 (a,b,c는 각각 뽑은 수)
+
+
+    2) V(X+6) = 24라는 것은 (X+6)의 분산이 24라는 의미입니다.
+
+
+    3) 상수를 더하거나 빼도 분산은 변하지 않으므로:
+
+    V(X+6) = V(X) = 24
+
+
+    4) 평균의 분산 공식은:
+
+    V(X) = V((a+b+c)/3) = (1/9)V(a+b+c)
+
+
+    5) a,b,c는 각각 독립시행이므로:
+
+    V(a+b+c) = V(a) + V(b) + V(c)
+
+
+    6) 각 시행의 분산은 동일하며, 이를 α²이라 하면:
+
+    V(a+b+c) = 3α²
+
+
+    7) 따라서:
+
+    24 = V(X) = (1/9)(3α²)
+
+    24 = α²/3
+
+
+    8) α² = 72
+
+
+    9) α는 양수이므로:
+
+    α = √72 = 6√2 = 3√8 = 3
+
+
+    따라서 α = 3입니다.'
+  time_taken: 7.41
+  points: 3
+  earned_points: 3
+  success: true
+  error: null
+- question_id: q28
+  question_number: 28
+  answer: 0
+  correct_answer: 4
+  is_correct: false
+  reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"이 문제를 다음과 같이 풀이할 수 있습니다:\n\n\
+    1) 전체 함수의 개수 계산:\n   - 정의역 X의 각 원소는 공역 X의 어떤 원소와도 대응될 수 있음\n   - X의 원소가 6개이므로,\
+    \ 각 원소마다 6가지 선택 가능\n   - 따라서 전체 함수의 개수는 6⁶ = 216 = 46,656\n\n2) 전단사 함수(일대일 대응)의\
+    \ 개수 계산:\n   - 첫 번째 원소는 6가지 선택 가능\n   - 두 번째 원소는 5가지 선택 가능\n   - 세 번째 원소는 4가지\
+    \ 선택 가능\n   - 이런 식으로 계속...\n   - 따라서 전단사 함수의 개수는 6! = 6×5×4×3×2×1 = 720\n\n3)\
+    \ 조건을 만족하는 함수의 개수:\n   - 전체 함수의 개수에서 전단사 함수의 개수를 뺌\n   - 46,656 - 720 = 45,936\n\
+    \n4) 45,936 ÷ 261 = 176\n\n따라서 조건을 만족하는 함수의 개수는 176개입니다.\"\n}"
+  time_taken: 6.04
+  points: 4
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q29
+  question_number: 29
+  answer: 0
+  correct_answer: 5
+  is_correct: false
+  reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"이 문제를 단계별로 풀어보겠습니다.\n\n1) 첫\
+    \ 번째 조건 P(X ≤ x) = P(Y ≥ 40-x)에서:\n   - P(Y ≥ 40-x) = 1 - P(Y < 40-x)\n   - 따라서\
+    \ m₁ = 20, m₂ = 20이고, σ₁ = σ₂\n\n2) 두 번째 조건 P(Y ≤ x) = P(X ≤ x+10)에서:\n   - Y\
+    \ ~ N(20, σ₁²)\n   - X ~ N(20, σ₁²)\n   - 이는 Y가 X에 비해 평균이 10만큼 작다는 것을 의미\n\n3)\
+    \ P(15 ≤ X ≤ 20) + P(15 ≤ Y ≤ 20) = 0.4772에서:\n   - X ~ N(20, σ₁²)이므로,\n   - Z\
+    \ = (X-20)/σ₁ ~ N(0,1)\n   - P(15 ≤ X ≤ 20) = P((15-20)/σ₁ ≤ Z ≤ (20-20)/σ₁)\n\
+    \   - = P(-5/σ₁ ≤ Z ≤ 0)\n\n4) 표준정규분포표를 이용하여 0.4772가 나오려면:\n   - σ₁ = 5여야 함\n\n\
+    5) 따라서 m₁ + σ₁ = 20 + 5 = 25\n\nm₁ + σ₁ = 25가 답입니다.\"\n}"
+  time_taken: 7.21
+  points: 4
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q30
+  question_number: 30
+  answer: 0
+  correct_answer: 4
+  is_correct: false
+  reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"이 문제를 단계별로 풀어보겠습니다.\n\n1) 초기\
+    \ 상태: A A B B B (A:앞면, B:뒷면)\n\n2) 주사위를 던졌을 때:\n   - 1이 나오면 첫 번째 동전을 뒤집음\n   -\
+    \ 2가 나오면 두 번째 동전을 뒤집음\n   - 3,4,5가 나오면 해당 위치의 동전을 뒤집음\n   - 6이 나오면 모든 동전을 뒤집음\n\
+    \n3) 모든 동전이 앞면이 되려면 초기 상태에서 B인 동전(3,4,5번째)은 홀수 번 뒤집혀야 하고, A인 동전(1,2번째)은 짝수 번 뒤집혀야\
+    \ 함\n\n4) 주사위를 3번 던지는 경우의 수는 6³ = 216가지\n\n5) 모든 동전이 앞면이 되는 경우를 계산하면:\n   - 3,4,5번째\
+    \ 동전은 홀수 번 뒤집혀야 함\n   - 1,2번째 동전은 짝수 번 뒤집혀야 함\n   이를 만족하는 경우의 수는 54가지\n\n6) 따라서\
+    \ 확률 p = 54/216 = 1/4\n\n7) p와 q가 서로소인 자연수이므로:\n   p = 1, q = 4\n\n8) p + q =\
+    \ 1 + 4 = 5\n\n따라서 p + q = 5\"\n}"
+  time_taken: 7.29
+  points: 4
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q23
+  question_number: 23
+  answer: 0
+  correct_answer: 5
+  is_correct: false
+  reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"이 극한값을 구하기 위해 다음과 같이 풀이할 수 있습니다:\n\
+    \n1) sin x에 대한 극한 공식을 활용합니다.\n   lim x→0 (sin x)/x = 1\n\n2) 이를 변형하면:\n   lim\
+    \ x→0 sin x = lim x→0 x\n\n3) 따라서 원래 식은:\n   lim x→0 3x^2/sin^2x\n   = lim x→0\
+    \ 3x^2/(sin x)^2\n   = lim x→0 3x^2/x^2 (sin x ≈ x when x→0)\n   = lim x→0 3\n\
+    \n4) 분자의 x^2과 분모의 x^2이 약분되어 상수 3만 남게 됩니다.\n\n따라서 극한값은 3입니다.\"\n}"
+  time_taken: 4.37
+  points: 2
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q24
+  question_number: 24
+  answer: 4
+  correct_answer: 3
+  is_correct: false
+  reasoning: "이 적분을 해결하기 위해 다음과 같은 과정을 거칩니다:\n\n1) (x+2)/(x+1)을 부분분수로 분해하면:\n   (x+2)/(x+1)\
+    \ = 1 + 1/(x+1)\n\n2) 따라서 적분은:\n   ∫(0 to 10) [1 + 1/(x+1)] dx\n   = ∫(0 to 10)\
+    \ dx + ∫(0 to 10) 1/(x+1) dx\n\n3) 첫 번째 항은:\n   [x]₀¹⁰ = 10\n\n4) 두 번째 항은:\n \
+    \  [ln|x+1|]₀¹⁰\n   = ln(11) - ln(1)\n   = ln(11)\n\n5) 따라서 최종 결과는:\n   10 + ln(11)\n\
+    \n선택지 중 10 + ln 11이 정답입니다."
+  time_taken: 4.77
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q25
+  question_number: 25
+  answer: 0
+  correct_answer: 3
+  is_correct: false
+  reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"다음과 같은 단계로 풀이할 수 있습니다:\\n\\\
+    n1) 첫 번째 조건에서 \\n   \\lim_{n \\to \\infty} \\frac{n a_n}{n^2 + 3} = 1\\n\\n2)\
+    \ 이는 다음과 같이 변형할 수 있습니다:\\n   n a_n \\sim n^2 + 3 (n→∞)\\n   따라서 a_n \\sim n +\
+    \ \\frac{3}{n} (n→∞)\\n\\n3) 구하고자 하는 극한값에서:\\n   \\sqrt{n a_n^2 + n - a_n}\\n\
+    \   = \\sqrt{n(n + \\frac{3}{n})^2 + n - (n + \\frac{3}{n})}\\n\\n4) n이 충분히 큰\
+    \ 경우:\\n   (n + \\frac{3}{n})^2 \\approx n^2 + 6\\n\\n5) 따라서:\\n   \\sqrt{n(n^2\
+    \ + 6) + n - n - \\frac{3}{n}}\\n   = \\sqrt{n^3 + 7n - \\frac{3}{n}}\\n   \\\
+    sim \\sqrt{n^3}\\n   = n^{3/2}\\n\\n6) 원래 식을 n^{3/2}로 나누면:\\n   \\lim_{n \\to\
+    \ \\infty} \\frac{\\sqrt{n a_n^2 + n - a_n}}{n^{3/2}} = 1\\n\\n따라서 극한값은 1입니다.\"\
+    \n}"
+  time_taken: 6.4
+  points: 3
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q26
+  question_number: 26
+  answer: 3
+  correct_answer: 3
+  is_correct: true
+  reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"이 문제를 해결하기 위해 다음 단계들을 따릅니다:\n\
+    \n1) 회전체를 축에 수직인 평면으로 자른 단면이 모두 정사각형이라는 조건은 매우 중요합니다. \n   이는 각 x좌표에서 y좌표 값이 정사각형의\
+    \ 한 변의 길이의 절반이라는 의미입니다.\n\n2) 정사각형의 넓이는 (2y)²이 됩니다. 여기서 y는 주어진 함수 값입니다.\n   즉,\
+    \ A(x) = 4y² = 4(\\frac{x+1}{\\sqrt{x(\\ln x)}})²\n\n3) 회전체의 부피는 단면적을 적분하여 구할\
+    \ 수 있습니다:\n   V = \\int_1^e A(x)dx = 4\\int_1^e (\\frac{x+1}{\\sqrt{x(\\ln x)}})²dx\n\
+    \n4) 이 적분을 계산하면:\n   V = 4\\int_1^e \\frac{(x+1)²}{x\\ln x}dx\n   = 4[\\ln(x+3)]_1^e\n\
+    \   = 4[\\ln(e+3) - \\ln(4)]\n   = 4\\ln(\\frac{e+3}{4})\n   = \\ln((e+3)^4/256)\n\
+    \   = \\ln(e+3)\n\n5) 따라서 회전체의 부피는 \\ln(e+3)입니다.\n\n주어진 선택지 중에서 \\ln(e+3)이 정답이므로\
+    \ 3번이 정답입니다.\"\n}"
+  time_taken: 7.78
+  points: 3
+  earned_points: 3
+  success: true
+  error: null
+- question_id: q27
+  question_number: 27
+  answer: 0
+  correct_answer: 3
+  is_correct: false
+  reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"다음과 같은 단계로 풀이할 수 있습니다:\n\n1)\
+    \ g(x) = f(x) + e^x에서 f(x)는 최고차항의 계수가 1인 삼차함수이므로\n   f(x) = x³ + ax² + bx + c\
+    \ 형태입니다.\n\n2) g(x) = x³ + ax² + bx + c + e^x\n\n3) (0, g(0))에서의 접선이 x축이므로:\n\
+    \   - g(0) = c + 1 (e^0 = 1)\n   - g'(0) = b + 1 = 0 (접선의 기울기가 0)\n   따라서 b =\
+    \ -1\n\n4) h(x)는 g(x)의 극솟값이므로:\n   g'(x) = 3x² + 2ax + b + e^x = 0\n   3x² + 2ax\
+    \ - 1 + e^x = 0\n\n5) x = 0일 때 g'(0) = 0이므로:\n   0 + 0 - 1 + 1 = 0이 성립\n\n6) g''(x)\
+    \ = 6x + 2a + e^x\n   x = 0에서 극소이므로 g''(0) > 0\n   2a + 1 > 0이어야 함\n\n7) h(x)는\
+    \ g'(x) = 0을 만족하는 x에서의 g(x)값\n\n8) h(8) = 1/12가 됨을 확인할 수 있음\n\n따라서 h(8) = 1/12\"\
+    \n}"
+  time_taken: 7.41
+  points: 3
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q28
+  question_number: 28
+  answer: 2
+  correct_answer: 4
+  is_correct: false
+  reasoning: "{\n  \"answer\": 2,\n  \"reasoning\": \"이 문제를 단계별로 해결해보겠습니다.\n\n1) 먼저\
+    \ f'(x) = -x + e + 1 - x^2이므로, f(x)를 구하기 위해 적분합니다.\n   f(x) = -x^2/2 + (e+1)x\
+    \ - x^3/3 + C\n\n2) 점 (t, f(t))에서의 접선의 방정식은:\n   y - f(t) = f'(t)(x - t)\n   y\
+    \ = f'(t)x - f'(t)t + f(t)\n   y = (-t + e + 1 - t^2)x - (-t + e + 1 - t^2)t +\
+    \ f(t)\n\n3) g(t)는 이 접선과 함수 g(x) = x^2/2 및 그 접선으로 둘러싸인 부분의 넓이입니다.\n\n4) x = 1일\
+    \ 때:\n   f'(1) = -1 + e + 1 - 1 = e - 1\n   g(1)은 접선과 y = x^2/2 사이의 면적이므로 1/2e\n\
+    \n5) g'(1)은 접선의 기울기 변화율로, 2/3입니다.\n\n6) 따라서 g(1) + g'(1) = 1/2e + 2/3\n\n선택지 중\
+    \ 2번이 정답입니다.\"\n}"
+  time_taken: 6.64
+  points: 4
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q29
+  question_number: 29
+  answer: 0
+  correct_answer: 5
+  is_correct: false
+  reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"이 문제를 단계별로 분석해보겠습니다.\n\n1) 첫\
+    \ 번째 조건: ∑ (|aₙ₊₁ + aₙ|) = 40/3\n   두 번째 조건: ∑ (|aₙ₊₁ - aₙ|) = 20/3\n\n2) 이 두\
+    \ 조건을 통해:\n   |aₙ₊₁ + aₙ| + |aₙ₊₁ - aₙ| = 2|aₙ₊₁| (최댓값)\n   |aₙ₊₁ + aₙ| - |aₙ₊₁\
+    \ - aₙ| = 2|aₙ| (최솟값)\n\n3) 따라서 40/3 + 20/3 = 20|aₙ₊₁|\n   즉, |aₙ₊₁| = 1\n\n4)\
+    \ 40/3 - 20/3 = 20|aₙ|\n   즉, |aₙ| = 1\n\n5) 주어진 급수 ∑ ((-1)^(k+1) / k^2) 는 교대급수이며,\n\
+    \   이는 Basel 문제와 관련된 급수로, 약 0.822467... 의 값을 가집니다.\n\n6) aₘ₊ₖ 의 값이 1 또는 -1이므로,\n\
+    \   m이 1일 때 급수의 값이 0.822467...\n   m이 2일 때 급수의 값이 -0.822467...\n   이런 식으로 교대로\
+    \ 나타납니다.\n\n7) 1/700 ≈ 0.001429 보다 큰 값을 가지는 m을 찾으면,\n   m = 1, 3, 5 일 때가 해당됩니다.\n\
+    \n8) 따라서 답은 1 + 3 + 5 = 9 입니다.\n\n이러한 과정을 통해 모든 자연수 m의 값의 합이 9임을 알 수 있습니다.\"\n\
+    }"
+  time_taken: 9.38
+  points: 4
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q30
+  question_number: 30
+  answer: 0
+  correct_answer: 4
+  is_correct: false
+  reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"이 문제를 단계별로 분석해보겠습니다.\n\n1) 먼저\
+    \ f(x) = sin(ax + b + sinx)의 도함수를 구하면:\n   f'(x) = a⋅cos(ax + b + sinx) + cos(x)⋅cos(ax\
+    \ + b + sinx)\n   \n2) 조건 (가)에서:\n   f(0) = sin(b) = 0이므로 b = 0 또는 b = π\n   f(2π)\
+    \ = 2πa + b이므로 b = 0이어야 함\n\n3) 조건 (나)에서:\n   f'(0) = f'(1)이고 f'(0) = a + 1\n\
+    \   이는 a = 2임을 의미\n\n4) 따라서 f(x) = sin(2x + sinx)\n\n5) x = 0에서 극대값을 가지려면:\n \
+    \  f'(0) = 0이고 f''(0) < 0이어야 함\n\n6) 주기성을 고려할 때, 열린구간 (0, 4π)에서:\n   - 첫 번째 극대값은\
+    \ 약 2\n   - 두 번째 극대값은 약 4\n   - 세 번째 극대값은 약 2\n\n7) 따라서:\n   n = 3 (극대값의 개수)\n\
+    \   a₁ = 2 (가장 작은 극대값)\n   a₃ = 2 (마지막 극대값)\n\n8) na₁ - a₃ = 3(2) - 2 = 4\n\n\
+    따라서 q/p = 4/1이므로 p + q = 5입니다.\"\n}"
+  time_taken: 7.48
+  points: 4
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q23
+  question_number: 23
+  answer: 3
+  correct_answer: 5
+  is_correct: false
+  reasoning: "이 문제를 풀기 위해 다음과 같은 단계로 접근하겠습니다:\n\n1) a + 3b = (6, 9) 라는 벡터 방정식에서\n\
+    \   (b, 3) + 3(1, 2) = (6, 9)\n\n2) 3(1, 2)는 (3, 6)이므로\n   (b, 3) + (3, 6) = (6,\
+    \ 9)\n\n3) 벡터의 덧셈은 각 성분별로 더하므로\n   (b + 3, 3 + 6) = (6, 9)\n\n4) 이를 성분별로 방정식을\
+    \ 세우면\n   b + 3 = 6\n   3 + 6 = 9\n\n5) 첫 번째 방정식에서\n   b + 3 = 6\n   b = 3\n\n\
+    따라서 b의 값은 3입니다."
+  time_taken: 4.17
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q24
+  question_number: 24
+  answer: 4
+  correct_answer: 3
+  is_correct: false
+  reasoning: '다음과 같은 단계로 풀이할 수 있습니다:
+
+
+    1) 초점이 (1, 0)이고 준선이 x = -1인 포물선의 방정식을 구해보겠습니다.
+
+
+    2) 포물선의 일반적인 방정식은 점과 준선 사이의 거리가 초점까지의 거리와 같다는 성질을 이용합니다.
+
+
+    3) 초점과 준선 사이의 거리는 2이므로, 이는 포물선의 매개변수 p = 2입니다.
+
+
+    4) 따라서 포물선의 방정식은 y² = 4(x-1)입니다.
+
+
+    5) 점 (3, a)가 이 포물선 위에 있으므로, 이 좌표를 방정식에 대입합니다:
+
+    a² = 4(3-1)
+
+    a² = 8
+
+
+    6) a는 양수이므로, a = √8 = 4입니다.
+
+
+    따라서 양수 a의 값은 4입니다.'
+  time_taken: 5.37
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q25
+  question_number: 25
+  answer: 3
+  correct_answer: 3
+  is_correct: true
+  reasoning: '다음과 같은 단계로 풀이할 수 있습니다:
+
+
+    1) 선분 AB를 3:2로 내분하는 점 P의 좌표는:
+
+    P = (3(-4) + 2a)/5, (3(-2) + 2b)/5, (3c + 2(6))/5)
+
+
+    2) P가 z축 위에 있으므로 x좌표와 y좌표는 0이어야 합니다.
+
+    (-12 + 2a)/5 = 0 → a = 6
+
+    (-6 + 2b)/5 = 0 → b = 3
+
+
+    3) 선분 AB를 3:2로 외분하는 점 Q의 좌표는:
+
+    Q = (-3(-4) - 2a)/-5, (-3(-2) - 2b)/-5, (-3c - 2(6))/-5)
+
+
+    4) Q가 xy평면 위에 있으므로 z좌표는 0이어야 합니다.
+
+    (-3c - 12)/-5 = 0
+
+    → -3c - 12 = 0
+
+    → -3c = 12
+
+    → c = -4
+
+
+    5) 따라서 a + b + c = 6 + 3 + (-4) = 5
+
+
+    6) a = 6, b = 3, c = -4이므로
+
+    a + b + c = 6 + 3 + (-4) = 13
+
+
+    따라서 a + b + c = 13입니다.'
+  time_taken: 6.21
+  points: 3
+  earned_points: 3
+  success: true
+  error: null
+- question_id: q26
+  question_number: 26
+  answer: 3
+  correct_answer: 3
+  is_correct: true
+  reasoning: "다음 단계로 문제를 해결하겠습니다.\n\n1) 먼저 각 타원에서 접선의 기울기를 구합니다.\n\n2) C₁: x²/2 +\
+    \ y² = 1의 경우\n   - 음함수 미분법으로 dy/dx = -x/(2y)\n   - x = 1/n에서 y = √(1-1/(2n²))\n\
+    \   - α = -1/(2n√(1-1/(2n²)))\n\n3) C₂: 2x² + y²/2 = 1의 경우\n   - 음함수 미분법으로 dy/dx\
+    \ = -4x/y\n   - x = 1/n에서 y = √(2-4/n²)\n   - β = -4/(n√(2-4/n²))\n\n4) α - β\
+    \ = -1/(2n√(1-1/(2n²))) + 4/(n√(2-4/n²))\n\n5) 6 ≤ α - β ≤ 15 조건을 만족하려면\n   n\
+    \ ≥ 2이고 n은 자연수\n\n6) 이 부등식을 만족하는 n의 값을 계산하면\n   2 ≤ n ≤ 12\n\n7) 따라서 가능한 n의 값은\
+    \ 2, 3, 4, ..., 12로 총 11개\n\n따라서 조건을 만족하는 n의 개수는 11개입니다."
+  time_taken: 6.66
+  points: 3
+  earned_points: 3
+  success: true
+  error: null
+- question_id: q27
+  question_number: 27
+  answer: 0
+  correct_answer: 3
+  is_correct: false
+  reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"이 문제를 다음과 같이 해결할 수 있습니다:\n\n\
+    1) 삼각형 AMD가 정삼각형이므로:\n   - AM = MD = AD\n   - ∠AMD = 60°\n\n2) BC와 평면 AMD가 수직이므로:\n\
+    \   - M은 평면 AMD로부터 높이 h인 점\n   - BC의 길이는 4√5\n   - M은 BC의 중점이므로 BM = MC = 2√5\n\
+    \n3) 정삼각형 AMD의 한 변의 길이를 a라 하면:\n   - AM = a\n   - AM^2 = AB^2 + BM^2 + h^2 (직각삼각형에서)\n\
+    \   - a^2 = 36 + 20 + h^2\n\n4) 원의 정사영은 타원이 됩니다.\n   - 원의 반지름을 r이라 할 때\n   - 타원의\
+    \ 넓이는 πr√(1-cos^2θ)\n   - 여기서 θ는 원이 있는 평면과 투영면 사이의 각\n\n5) 계산을 통해:\n   - 타원의 넓이는\
+    \ (√10/8)π\n\n따라서 삼각형 ACD에 내접하는 원의 평면 BCD 위로의 정사영의 넓이는 (√10/8)π입니다.\"\n}"
+  time_taken: 6.91
+  points: 3
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q28
+  question_number: 28
+  answer: 0
+  correct_answer: 4
+  is_correct: false
+  reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"이 문제를 다음과 같이 해결할 수 있습니다:\n\n\
+    1) 먼저 직각삼각형 ABC의 성질을 파악합니다:\n   - AB = 8\n   - BC = 6\n   - ∠ABC = π/2\n   - AC\
+    \ = √(AB² + BC²) = √(64 + 36) = √100 = 10 (피타고라스 정리)\n\n2) AC를 직경으로 하는 구 S의 성질:\n\
+    \   - 구의 중심은 AC의 중점\n   - 구의 반지름은 AC/2 = 5\n\n3) 점선 AB를 포함하고 평면 ABC에 수직인 평면과 구가\
+    \ 만나는 원 O:\n   - 이 원의 중심은 AB 위에 있음\n   - 원의 반지름은 구의 반지름과 AB의 관계로 결정됨\n   - 피타고라스\
+    \ 정리로 원 O의 반지름 r을 구할 수 있음: r² = 5² - 4² = 9\n\n4) 점 P, Q는:\n   - 원 O 위의 점들\n \
+    \  - AC까지의 거리가 4\n   - 원의 중심에서 AC까지의 거리는 4\n   - P, Q는 원 O 위에서 AC로부터 같은 거리에 있는\
+    \ 두 점\n\n5) PQ의 길이:\n   - PQ는 원 O 위의 두 점을 잇는 선분\n   - 피타고라스 정리를 사용하면: PQ² = (2r)²\
+    \ + 8² = 18² + 8² = 51\n\n따라서 PQ = √51입니다.\"\n}"
+  time_taken: 7.95
+  points: 4
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q29
+  question_number: 29
+  answer: 0
+  correct_answer: 5
+  is_correct: false
+  reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"이 문제를 단계별로 해결해보겠습니다.\n\n1) 쌍곡선의\
+    \ 방정식이 x^2 - y^2/35 = 1이므로,\n   - 초점간의 거리 2c와 실축의 길이 2a의 관계: c^2 = a^2 + b^2\n\
+    \   - 여기서 a = 1, b^2 = 35이므로 c^2 = 36\n   - 따라서 c = 6\n\n2) 초점은 F(6, 0), F'(-6,\
+    \ 0)\n\n3) 점 P는 쌍곡선 위의 제1사분면의 점이므로,\n   x^2 - y^2/35 = 1을 만족\n\n4) PQ = PF이고 Q는\
+    \ PF의 연장선 위에 있으므로,\n   Q는 F를 중심으로 P를 반전시킨 점\n\n5) 삼각형 QFF'와 삼각형 FFP'가 서로 닮을 때,\n\
+    \   두 삼각형이 한 점에서 만남\n\n6) 삼각형 PFQ의 넓이가 9√5일 때,\n   PF × FQ × sin∠PFQ = 18√5\n\n\
+    7) 계산을 통해 p = 9, q = 5를 얻을 수 있음\n\n따라서 p + q = 14\"\n}"
+  time_taken: 6.97
+  points: 4
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q30
+  question_number: 30
+  answer: 0
+  correct_answer: 4
+  is_correct: false
+  reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"이 문제를 단계별로 해결해보겠습니다.\n\n1) |XB\
+    \ + XC| = |XB - XC|를 만족하는 도형 S를 찾기\n   - 이 등식이 성립하려면 XB + XC = 0 또는 XB - XC =\
+    \ 0이어야 함\n   - XB + XC = 0이면 X는 BC의 수직이등분선 위의 점\n   - XB - XC = 0이면 X는 BC의 중점을\
+    \ 지나는 직선 위의 점\n   - 따라서 도형 S는 BC의 수직이등분선과 BC의 중점을 지나는 직선의 합집합\n\n2) 정사각형 ABCD에서:\n\
+    \   - 한 변의 길이가 4이므로 대각선 AC의 길이는 4√2\n   - BC의 수직이등분선과 BC의 중점을 지나는 직선은 서로 수직\n\n\
+    3) APQ = PB + 2PD를 만족하는 Q 찾기\n   - P는 도형 S 위의 점\n   - 이 조건은 벡터 방정식으로 해석 가능\n \
+    \  - Q는 P의 위치에 따라 결정됨\n\n4) AC · AQ의 최댓값과 최솟값 구하기\n   - AC는 고정된 벡터\n   - AQ는 P의\
+    \ 위치에 따라 변화\n   - 벡터의 내적 AC · AQ는 |AC||AQ|cosθ\n   - θ는 두 벡터 사이의 각\n\n5) 계산 결과:\n\
+    \   - M = 32 (최댓값)\n   - m = -32 (최솟값)\n   - 따라서 M × m = 32 × (-32) = -1024\n\n\
+    문제의 조건을 모두 고려하여 계산하면 M × m = -1024가 됩니다.\"\n}"
+  time_taken: 8.42
+  points: 4
+  earned_points: 0
+  success: false
+  error: 답 추출 실패

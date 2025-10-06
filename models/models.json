@@ -46,7 +46,7 @@
       "max_tokens": 4096,
       "temperature": 0.3,
       "timeout": 60,
-      "enabled": true
+      "enabled": false
     },
     {
       "name": "gpt-3.5-turbo",
@@ -58,7 +58,7 @@
       "max_tokens": 4096,
       "temperature": 0.3,
       "timeout": 60,
-      "enabled": true
+      "enabled": false
     },
     {
       "name": "claude-opus-4-1",
@@ -118,6 +118,18 @@
       "max_tokens": 4096,
       "temperature": 0.3,
       "timeout": 60,
+      "enabled": false
+    },
+    {
+      "name": "gemini-2.5-pro",
+      "provider": "google",
+      "model_id": "gemini-2.5-pro",
+      "version": "2025-01",
+      "description": "Google Gemini 2.5 Pro - 가장 강력한 Gemini 모델",
+      "api_key_env": "GOOGLE_API_KEY",
+      "max_tokens": 8192,
+      "temperature": 0.3,
+      "timeout": 60,
       "enabled": true
     },
     {
@@ -130,7 +142,7 @@
       "max_tokens": 8192,
       "temperature": 0.3,
       "timeout": 60,
-      "enabled": true
+      "enabled": false
     },
     {
       "name": "gemini-1.5-pro",
@@ -166,7 +178,7 @@
       "max_tokens": 4096,
       "temperature": 0.3,
       "timeout": 60,
-      "enabled": true
+      "enabled": false
     },
     {
       "name": "solar-mini",
@@ -178,7 +190,7 @@
       "max_tokens": 4096,
       "temperature": 0.3,
       "timeout": 60,
-      "enabled": true
+      "enabled": false
     },
     {
       "name": "sonar-pro",
@@ -190,7 +202,7 @@
       "max_tokens": 4096,
       "temperature": 0.3,
       "timeout": 60,
-      "enabled": true
+      "enabled": false
     },
     {
       "name": "sonar-large",
