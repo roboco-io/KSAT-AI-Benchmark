@@ -17,6 +17,23 @@ sys.path.insert(0, str(project_root))
 from src.evaluator.summary import load_results
 
 
+def load_enabled_models():
+    """models.json에서 활성화된 모델 목록 로드"""
+    models_file = project_root / 'models' / 'models.json'
+    enabled_models = set()
+
+    try:
+        with open(models_file, 'r', encoding='utf-8') as f:
+            models_data = json.load(f)
+            for model in models_data.get('models', []):
+                if model.get('enabled', False):
+                    enabled_models.add(model['name'])
+    except Exception as e:
+        print(f"⚠️  models.json 로드 실패: {e}")
+
+    return enabled_models
+
+
 def load_exam_data():
     """시험 문제 데이터 로드"""
     exams_dir = project_root / 'exams' / 'parsed'
@@ -39,31 +56,40 @@ def load_exam_data():
 
 def export_to_json():
     """평가 결과를 JSON으로 export"""
-    
+
     print("📤 평가 결과를 JSON으로 export 중...")
-    
+
+    # 활성화된 모델 목록 로드
+    enabled_models = load_enabled_models()
+    print(f"   - 활성화된 모델: {len(enabled_models)}개")
+    if enabled_models:
+        print(f"     {', '.join(sorted(enabled_models))}")
+
     # 결과 로드
     results = load_results()
-    
+
     # 시험 문제 데이터 로드
     exams = load_exam_data()
-    
+
     if not results:
         print("⚠️  평가 결과가 없습니다.")
         return
-    
+
     # 리더보드 생성
     leaderboard = []
     all_results_list = []
-    
+
     for exam_id, exam_results in results.items():
         for result in exam_results:
             all_results_list.append(result)
-    
-    # 모델별로 그룹화
+
+    # 모델별로 그룹화 (활성화된 모델만)
     model_map = {}
     for result in all_results_list:
         model_name = result['model_name']
+        # enabled 모델만 포함
+        if enabled_models and model_name not in enabled_models:
+            continue
         if model_name not in model_map:
             model_map[model_name] = []
         model_map[model_name].append(result)
