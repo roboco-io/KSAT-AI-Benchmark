@@ -1,5 +1,8 @@
 name: Deploy to GitHub Pages
 
+# 자동 배포: results/, web/, scripts/export_data.py 변경 시 자동 실행
+# 수동 배포: Actions 탭에서 "Run workflow" 클릭
+
 on:
   push:
     branches:

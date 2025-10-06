@@ -89,28 +89,38 @@ make clean
 
 ## 🔄 자동화 워크플로우
 
-> ⚠️ **개발 중**: GitHub Actions를 통한 자동 배포는 현재 개발 단계입니다. 아래는 계획된 워크플로우입니다.
-
-**계획된 자동화 파이프라인:**
+**완전 자동화 파이프라인:**
 
 ```
 평가 실행 → results/ 저장 → Git Push → GitHub Actions → 자동 배포
-   (1)          (2)            (3)       (TODO)            (TODO)
+   (1)          (2)            (3)       (4)               (5)
+   ✅           ✅             ✅        ✅                ✅
 ```
 
-**자동화 목표:**
+**자동화 단계:**
 
-1. **로컬 평가**: `make gpt-5 2025 korean` 실행 → `results/` 디렉토리에 YAML 저장 ✅
-2. **Git 커밋/푸시**: `results/` 변경사항을 main 브랜치에 푸시 ✅
-3. **GitHub Actions 자동 실행** (TODO - `.github/workflows/deploy-pages.yml`):
-   ```yaml
-   - Python으로 YAML → JSON 변환 (scripts/export_data.py)
+1. **로컬 평가**: `make gpt-5 2025 korean` 실행 → `results/` 디렉토리에 YAML 저장
+2. **Git 커밋/푸시**: `results/` 변경사항을 main 브랜치에 푸시
+3. **GitHub Actions 자동 실행** (`.github/workflows/deploy-pages.yml`):
+   - Python으로 YAML → JSON 변환 (`scripts/export_data.py`)
    - Next.js 웹사이트 빌드
    - GitHub Pages 자동 배포
-   ```
 4. **웹사이트 자동 업데이트**: https://roboco.io/KSAT-AI-Benchmark/
 
-**현재 상태**: 로컬 평가 및 데이터 export는 완료. GitHub Actions 워크플로우 구현이 필요합니다.
+### 🚀 GitHub Pages 활성화 방법
+
+GitHub Actions 워크플로우가 작동하려면 GitHub Pages 설정이 필요합니다:
+
+1. **GitHub 저장소 → Settings → Pages**
+2. **Source**: "GitHub Actions" 선택
+3. 저장 후 자동으로 워크플로우 실행
+
+**수동 트리거 방법:**
+- GitHub 저장소 → Actions 탭 → "Deploy to GitHub Pages" → "Run workflow"
+
+**배포 상태 확인:**
+- Actions 탭에서 워크플로우 실행 상태 확인
+- 배포 완료 후 https://roboco.io/KSAT-AI-Benchmark/ 접속
 
 ### Vibe Coding in Action
 
