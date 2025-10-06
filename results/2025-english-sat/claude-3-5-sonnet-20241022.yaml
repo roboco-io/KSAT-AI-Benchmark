@@ -1,0 +1,701 @@
+exam_id: 2025-english-sat
+exam_title: 2025학년도 수능 ENGLISH
+subject: english
+model_name: claude-3-5-sonnet-20241022
+evaluated_at: '2025-10-06T18:50:33.910969'
+summary:
+  total_questions: 42
+  correct_answers: 3
+  accuracy: 7.14
+  total_score: 7
+  max_score: 100
+  score_rate: 7.0
+results:
+- question_id: q1
+  question_number: 1
+  answer: 0
+  correct_answer: 2
+  is_correct: false
+  reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"여자의 발화 내용을 분석해보면 다음과 같은 핵심 정보가\
+    \ 있습니다:\n\n1. '등교 시간이 변경된다'는 것이 주요 메시지입니다.\n2. 변경 사유는 학생들의 충분한 수면 시간 확보를 위해서입니다.\n\
+    3. 구체적인 변경 시간이 언급되었습니다.\n\n이러한 내용을 종합해볼 때, 이 발화의 주된 목적은 '등교 시간 변경을 안내하려고'임이 명확합니다.\
+    \ 다른 선택지들은:\n- 소모임 교체 계획 (언급되지 않음)\n- 수업 시간 변경 (등교 시간만 언급됨)\n- 신입생 환영회 (관련 내용\
+    \ 없음)\n- 학교 행사와 경영 절차 (해당 내용 없음)\n\n따라서 정답은 3번입니다.\"\n}"
+  time_taken: 5.4
+  points: 2
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q2
+  question_number: 2
+  answer: 0
+  correct_answer: 5
+  is_correct: false
+  reasoning: "{\n  \"answer\": 2,\n  \"reasoning\": \"이 문제에서 남자의 핵심 의견은 '좋은 연기를 위해서는\
+    \ 다른 사람과의 협력이 중요하다'입니다. 다음과 같은 근거로 이를 알 수 있습니다:\n\n1. 연기는 혼자 하는 것이 아니라 상대방과의 상호작용을\
+    \ 통해 이루어지는 활동입니다.\n\n2. 다른 선택지들은 남자의 주된 의견과 거리가 있습니다:\n- 1번은 시간 활용에 대한 내용으로 대화의\
+    \ 주제와 맞지 않습니다.\n- 3번은 반복 연습에 대한 것으로 협력의 중요성을 강조한 대화의 핵심과 다릅니다.\n- 4번은 관객을 위한 연기라는\
+    \ 점에서 초점이 다릅니다.\n- 5번은 관객층과 성격 발달의 관계로, 대화의 주제와 관련이 없습니다.\n\n따라서 남자의 의견으로 가장 적절한\
+    \ 것은 2번 '좋은 연기를 하려면 다른 사람과의 협력이 중요하다'입니다.\"\n}"
+  time_taken: 6.17
+  points: 2
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q3
+  question_number: 3
+  answer: 0
+  correct_answer: 1
+  is_correct: false
+  reasoning: "{\n  \"answer\": 5,\n  \"reasoning\": \"이 문제는 예술 작품의 해석과 관련된 내용을 다루고\
+    \ 있습니다. 선택지들을 분석해보면, 5번 '예술 작품은 보는 사람에 따라 다양한 해석이 가능하다'가 가장 적절한 답으로 판단됩니다. 이는\
+    \ 다음과 같은 이유들 때문입니다:\n\n1. 예술 작품은 객관적인 사실이나 정보를 전달하는 것이 아니라, 감상자의 주관적인 해석과 경험을\
+    \ 통해 의미가 만들어집니다.\n\n2. 다른 선택지들은 예술 작품의 표현 방식(3번), 예술가에 대한 이해(1번), 관리적 측면(2번),\
+    \ 또는 감상 방법(4번)에 초점을 맞추고 있어 지문의 핵심 내용과 거리가 있습니다.\n\n3. 5번 선택지는 예술 작품의 본질적인 특성인\
+    \ '다양한 해석 가능성'을 언급하고 있어, 여자가 말하고자 하는 예술 작품의 주관적 해석 가능성이라는 요지와 가장 잘 부합합니다.\"\n}"
+  time_taken: 6.41
+  points: 2
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q4
+  question_number: 4
+  answer: 0
+  correct_answer: 3
+  is_correct: false
+  reasoning: "{\n  \"answer\": 4,\n  \"reasoning\": \"대화의 내용을 분석해보면 다음과 같습니다:\n\n\
+    1. 목적: 대화에서 언급된 '청소년들의 과학적 사고력과 창의력 향상'이라는 목적이 일치합니다.\n\n2. 프로그램: '과학 실험 체험',\
+    \ '로봇 만들기', '과학 퀴즈 대회' 등이 언급되어 일치합니다.\n\n3. 후원 기관: 대화에서 언급된 '시 교육청과 과학기술협회'가 그림의\
+    \ 내용과 일치합니다.\n\n4. 입장료: 대화에서는 '무료'라고 했는데, 그림에는 '3,000원'으로 표시되어 있어 불일치합니다.\n\n\
+    5. 기간: 대화에서 언급된 '7월 15일부터 7월 20일까지'라는 기간이 그림의 내용과 일치합니다.\n\n따라서 대화 내용과 그림이 일치하지\
+    \ 않는 것은 4번 '입장료'입니다.\"\n}"
+  time_taken: 5.25
+  points: 2
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q5
+  question_number: 5
+  answer: 0
+  correct_answer: 1
+  is_correct: false
+  reasoning: "{\n  \"answer\": 4,\n  \"reasoning\": \"대화의 맥락을 분석해보면 다음과 같습니다:\n\n\
+    1. 여자가 스티커가 다 떨어졌다고 언급했습니다.\n2. 남자는 이를 확인하고 새로 주문해야 할 것 같다고 응답했습니다.\n3. 여자가 구체적으로\
+    \ 200개 정도가 필요하다고 수량을 제시했습니다.\n4. 남자는 이를 수락하고 스티커를 주문하겠다고 명확히 답변했습니다.\n\n대화에서 남자가\
+    \ 직접적으로 스티커를 주문하겠다고 약속했으므로, 남자가 앞으로 할 일은 '스티커 주문하기'가 가장 적절합니다. 다른 선택지들(트로피 가져오기,\
+    \ 이메일 확인하기, 계산서용 입력하기)은 대화 내용에서 언급되지 않았습니다.\"\n}"
+  time_taken: 5.01
+  points: 2
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q6
+  question_number: 6
+  answer: 0
+  correct_answer: 4
+  is_correct: false
+  reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"대화의 주요 내용을 분석해보면:\n  1. 기본 수리\
+    \ 비용이 $200임\n  2. 여자는 10% 할인 쿠폰을 가지고 있음\n  3. 할인 적용: $200 - (200 × 0.1) = $180\n\
+    \n따라서 여자가 최종적으로 지불해야 할 금액은 $180입니다. 기본 수리 비용에서 10% 할인이 적용되어 계산된 금액입니다.\"\n}"
+  time_taken: 3.34
+  points: 2
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q7
+  question_number: 7
+  answer: 2
+  correct_answer: 3
+  is_correct: false
+  reasoning: 대화에서 남자는 Streamline Broadcasting Workshop에 가고 싶지만, 교과 방송(school broadcast)
+    준비를 해야 하기 때문에 참석할 수 없다고 말합니다. 이는 선택지 2번 '교과 방송 준비를 해야 해서'와 정확히 일치합니다. 다른 선택지들인
+    동아리 공연, 야구 경기, 생일 파티, 친구를 만나는 것 등은 대화에서 전혀 언급되지 않았습니다. 따라서 남자가 워크샵에 참석할 수 없는 이유는
+    교과 방송 준비 때문이라는 것을 알 수 있습니다.
+  time_taken: 4.02
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q8
+  question_number: 8
+  answer: 0
+  correct_answer: 4
+  is_correct: false
+  reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"대화를 분석해보면 다음 내용들이 언급되었습니다:\n\
+    \n1. 목적: 해양 생물 보호와 교육을 위한 행사라고 언급됨\n2. 프로그램: 문어 먹이주기 체험, 문어 관찰하기 등의 프로그램이 소개됨\n\
+    4. 입장료: 성인 $10, 어린이 $5라고 구체적으로 언급됨\n5. 기간: 이번 주 토요일부터 다음 주 일요일까지라고 명시됨\n\n하지만\
+    \ '후원 기관'에 대해서는 대화 중 어떠한 언급도 없었습니다. 따라서 언급되지 않은 것은 '후원 기관'입니다.\"\n}"
+  time_taken: 4.19
+  points: 2
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q9
+  question_number: 9
+  answer: 0
+  correct_answer: 5
+  is_correct: false
+  reasoning: "{\n  \"answer\": 4,\n  \"reasoning\": \"이 문제는 주어진 정보가 매우 제한적입니다. 선택지들을\
+    \ 살펴보면:\n\n1. '5일 동안 진행된 것이다' - 서커스 공연의 일반적인 기간으로 타당할 수 있음\n2. '마술 공연도 포함한다' -\
+    \ 서커스에서 마술 공연은 일반적인 구성 요소임\n3. '2세 미만의 아이는 무료로 입장한다' - 많은 공연장의 일반적인 정책임\n4. '온라인\
+    \ 쿠폰을 사용해서 다운로드할 수 있다' - 문장 자체가 논리적으로 맞지 않음. 쿠폰을 다운로드할 수 있는 것이지, 쿠폰을 사용해서 다운로드하는\
+    \ 것은 말이 되지 않음\n5. '직접적이다' - 일반적인 서커스 공연의 특성으로 볼 수 있음\n\n따라서 4번 선택지가 논리적으로 맞지 않으며,\
+    \ 문장 구조 자체가 어색하므로 이것이 일치하지 않는 내용일 가능성이 가장 높습니다.\"\n}"
+  time_taken: 6.28
+  points: 2
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q10
+  question_number: 10
+  answer: 0
+  correct_answer: 2
+  is_correct: false
+  reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"대화의 내용과 여자가 원하는 조건을 분석해보면 다음과\
+    \ 같습니다:\n\n1. 가격 조건: 20달러 이하를 원함\n2. 씨앗 종류: 3종류 이상을 원함\n3. 배송 기간: 빠른 배송(3일 이내)을\
+    \ 원함\n\n각 제품을 이 조건과 대조해보면:\n- A: 가격은 적당하나 씨앗이 2종류뿐\n- B: 씨앗은 3종류지만 가격이 너무 비쌈\n\
+    - C: 가격 19달러, 씨앗 3종류, 2일 배송으로 모든 조건 충족\n- D: 배송이 5일로 너무 느림\n- E: 가격이 예산을 초과함\n\
+    \n따라서 모든 조건을 만족하는 C가 정답입니다.\"\n}"
+  time_taken: 5.41
+  points: 2
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q11
+  question_number: 11
+  answer: 4
+  correct_answer: 2
+  is_correct: false
+  reasoning: "{\n  \"answer\": 4,\n  \"reasoning\": \"대화의 마지막 부분에서 여자가 케이크에 관해 언급하고\
+    \ 있고, 특히 견과류(nuts)가 들어간 케이크를 제안하는 상황으로 보입니다. 이에 대한 가장 자연스러운 응답은 'No thanks. I\
+    \ don't really like cakes with nuts on them.'(아니요, 괜찮습니다. 저는 견과류가 올라간 케이크를 별로\
+    \ 좋아하지 않아요)입니다. \n\n다른 선택지들은 상황과 맞지 않습니다:\n1번: 파티에 누군가를 초대하는 내용\n2번: 주문 변경에 관한\
+    \ 내용\n3번: 테니스 경기 승리에 관한 내용\n5번: 알레르기 반응에 관한 내용\n\n따라서 케이크의 견과류 토핑에 대한 선호도를 표현하는\
+    \ 4번이 가장 적절한 응답입니다.\"\n}"
+  time_taken: 5.17
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q12
+  question_number: 12
+  answer: 1
+  correct_answer: 1
+  is_correct: true
+  reasoning: "{\n  \"answer\": 1,\n  \"reasoning\": \"대화의 흐름을 분석해보면, 여자가 어떤 제안이나 권유를\
+    \ 했고 남자가 그것을 수락하는 상황으로 보입니다. 'In that case, let's give it a try'(그렇다면, 한번 해보죠)는\
+    \ 제안에 대한 긍정적인 반응을 나타내는 자연스러운 응답입니다. \n\n다른 선택지들을 보면:\n2번은 가격에 대한 불만을 표현하고,\n3번은\
+    \ 이미 수강한 수업에 대한 평가이며,\n4번은 요가를 가르치겠다는 제안이고,\n5번은 호텔 전망에 대한 동의를 나타냅니다.\n\n따라서 대화의\
+    \ 마지막에서 여자가 어떤 제안을 했을 때, 그것을 받아들이는 의미의 1번이 가장 자연스러운 응답이 됩니다.\"\n}"
+  time_taken: 5.75
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
+- question_id: q13
+  question_number: 13
+  answer: 0
+  correct_answer: 5
+  is_correct: false
+  reasoning: "{\n  \"answer\": 5,\n  \"reasoning\": \"대화의 흐름을 분석해보면:\n\n1. 남자가 자전거를\
+    \ 더 이상 타지 않는다고 언급\n2. 여자가 자전거의 상태를 물어봄\n3. 남자가 자전거가 좋은 상태이며 기부하기로 결정했다고 말함\n\n\
+    따라서 남자의 마지막 말(자전거를 기부하기로 했다)에 대한 가장 적절한 응답은 \n'Excellent! I'm sure your donation\
+    \ will be appreciated.'(훌륭해요! 당신의 기부가 감사하게 받아들여질 거예요)입니다.\n\n다른 선택지들은 상황에 맞지 않습니다:\n\
+    1번: 잃어버린 자전거에 대한 내용은 없음\n2번: 자전거 타기 연습에 대한 내용은 없음\n3번: 자전거를 빌리는 상황이 아님\n4번: 경매에\
+    \ 대한 언급이 없음\"\n}"
+  time_taken: 5.3
+  points: 2
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q14
+  question_number: 14
+  answer: 3
+  correct_answer: 1
+  is_correct: false
+  reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"대화의 흐름을 분석해보면:\n\n1. 여자가 마지막에\
+    \ 댄스 경연대회에 대해 언급하고 있고, 날짜 정보를 보내주겠다는 맥락으로 보입니다.\n\n2. 이에 대한 자연스러운 응답은 'Great.\
+    \ Text me the dates of the competition.'(좋아요. 경연대회 날짜를 문자로 보내주세요.) 입니다.\n\n3.\
+    \ 다른 선택지들을 분석해보면:\n   - 1번: 심사위원이 되길 바란다는 내용은 맥락에 맞지 않습니다.\n   - 2번: 결승전 진출을 축하하는\
+    \ 내용은 상황과 맞지 않습니다.\n   - 4번: 수상자 발표는 대화의 맥락과 관련이 없습니다.\n   - 5번: 심사의 공정성에 대한 언급은\
+    \ 대화 주제와 맞지 않습니다.\n\n4. 따라서 날짜 정보를 문자로 보내달라는 3번이 가장 자연스러운 응답입니다.\"\n}"
+  time_taken: 6.26
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q15
+  question_number: 15
+  answer: 3
+  correct_answer: 2
+  is_correct: false
+  reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"상황 설명이 주어지지 않았지만, 주어진 선택지들을\
+    \ 분석해보면 다음과 같은 논리로 3번이 가장 적절합니다:\n\n1. 선택지들은 콘서트와 관련된 상황임을 알 수 있습니다.\n2. 'sit\
+    \ together'라는 표현이 있는 3번은 함께 앉지 못하는 상황을 해결하기 위한 제안입니다.\n3. 'ask for a seat change'는\
+    \ 좌석 변경을 요청하자는 실질적인 해결책을 제시합니다.\n4. 다른 선택지들은:\n   - 1번: 계획 고수\n   - 2번: 일찍 출발\n\
+    \   - 4번: 리허설 추가\n   - 5번: 일찍 퇴장\n   이러한 내용들은 '함께 앉지 못하는' 문제의 직접적인 해결책이 되지 못합니다.\n\
+    \n따라서 Sophia와 Jack이 콘서트에서 함께 앉지 못하는 상황에서, 좌석 변경을 요청하자는 3번이 가장 적절한 제안이라고 판단됩니다.\"\
+    \n}"
+  time_taken: 6.4
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q16
+  question_number: 16
+  answer: 3
+  correct_answer: 3
+  is_correct: true
+  reasoning: 여자의 발언은 미래의 식량 부족 문제를 해결하기 위한 적절한 식품에 대해 다루고 있습니다. 특히 곤충이 미래의 대체 식량이
+    될 수 있다고 언급하며, 곤충이 단백질이 풍부하고 환경 친화적이며 생산 비용이 적게 든다는 장점을 설명하고 있습니다. 이는 단순히 특이한 재료로
+    만든 요리(4번)나 식품 보관 조건(1번), 영양가 있는 식단의 중요성(2번), 또는 미래 기술(5번)에 대한 것이 아닙니다. 여자는 구체적으로
+    미래 식량 부족 문제를 해결하기 위한 대안으로서의 식품을 제시하고 있으므로, 3번이 가장 적절한 주제입니다.
+  time_taken: 5.14
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
+- question_id: q17
+  question_number: 17
+  answer: 0
+  correct_answer: 4
+  is_correct: false
+  reasoning: "{\n  \"answer\": 5,\n  \"reasoning\": \"지문이 제시되지 않은 상태에서 선택지들을 비교해보면:\n\
+    \  1. seaweed (해조류/김)\n  2. beans (콩)\n  3. pumpkins (호박)\n  4. potatoes (감자)\n\
+    \  5. mushrooms (버섯)\n  이 나열되어 있습니다. 하지만 지문이 제시되지 않아 어떤 맥락에서 음식이 언급되었는지 알 수 없는\
+    \ 상황에서는, 정확한 답을 찾기 어렵습니다. 이런 경우 문제 출제 의도에 맞지 않으므로, 문제를 다시 확인하거나 지문을 제시해주시기 바랍니다.\"\
+    \n}"
+  time_taken: 4.45
+  points: 2
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q18
+  question_number: 18
+  answer: 3
+  correct_answer: 1
+  is_correct: false
+  reasoning: 지문이 제시되지 않았지만, 선택지들을 분석해보면 답은 3번이 가장 적절합니다. 그러나 정확한 판단을 위해서는 원문 지문이 필요합니다.
+    지문이 없는 상태에서는 완벽한 분석이 어렵습니다. 다음에는 지문과 함께 문제를 제시해 주시면 더 정확한 분석과 답변이 가능할 것 같습니다.
+  time_taken: 3.57
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q19
+  question_number: 19
+  answer: 0
+  correct_answer: 2
+  is_correct: false
+  reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"지문이 제시되지 않았지만, 심경 변화를 묻는 문제에서\
+    \ 'confused → satisfied'가 가장 적절한 답을 선택하기 위해서는 지문이 필요합니다. 심경 변화 문제를 정확하게 풀기 위해서는:\n\
+    \n1. 지문의 처음 부분에서 Peter의 초기 감정 상태\n2. 사건의 전개 과정\n3. 결말에서의 감정 상태\n\n이 세 가지 요소를 파악해야\
+    \ 합니다. \n\n지문이 없는 상태에서는 정확한 판단을 하기 어렵습니다. 문제를 정확하게 풀기 위해서는 반드시 지문이 필요합니다. 지문을\
+    \ 함께 제시해 주시면 더 정확한 답변을 드릴 수 있습니다.\"\n}"
+  time_taken: 4.83
+  points: 2
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q20
+  question_number: 20
+  answer: 0
+  correct_answer: 1
+  is_correct: false
+  reasoning: "죄송하지만 지문 내용이 제시되어 있지 않아 정확한 답을 선택하기 어렵습니다. \n\n지문이 없는 상태에서는:\n1. 선택지들만으로는\
+    \ 필자의 주장을 정확히 파악할 수 없습니다.\n2. 필자가 게임과 학습에 대해 어떤 관점을 가지고 있는지 알 수 없습니다.\n3. 선택지들\
+    \ 간의 비교 분석을 위한 근거가 부족합니다.\n\n정확한 답변을 위해서는 원문 지문이 필요합니다. 지문을 제시해 주시면 필자의 주장을 분석하여\
+    \ 가장 적절한 답을 선택하고 그 이유를 설명드리겠습니다."
+  time_taken: 4.24
+  points: 2
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q21
+  question_number: 21
+  answer: 0
+  correct_answer: 3
+  is_correct: false
+  reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"이 표현의 의미를 파악하기 위해서는 전체 맥락, 특히\
+    \ Vitruvius의 주장을 이해해야 합니다. 지문에서 Vitruvius는 건축가가 갖춰야 할 두 가지 핵심 요소를 언급합니다:\n\n1.\
+    \ 실용적 지식(practical knowledge)\n2. 이론적 지식(theoretical knowledge)\n\n그는 이 두 가지가\
+    \ 모두 필요하다고 주장하며:\n- 학문적 지식 없이 수작업 기술만 추구한 건축가들은 권위 있는 위치에 도달하지 못했고\n- 반대로 이론과\
+    \ 학문에만 의존한 사람들은 '실체가 아닌 그림자를 쫓는 것'이라고 했습니다.\n\n따라서 'hunting the shadow, not the\
+    \ substance'는 실제적인 기술 없이 건축의 이상이나 이론만을 추구하는 것을 의미합니다. 이는 선택지 3번 'pursuing the\
+    \ ideals of architecture without the practical skills'와 정확히 일치합니다.\"\n}"
+  time_taken: 5.51
+  points: 3
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q22
+  question_number: 22
+  answer: 0
+  correct_answer: 2
+  is_correct: false
+  reasoning: "{\n  \"answer\": 1,\n  \"reasoning\": \"주어진 지문은 감정이나 감정 조절에 대한 내용이 전혀\
+    \ 없습니다. 이 지문은 로마 제국 시대의 건축가의 위상과 건축가가 갖추어야 할 자질에 대해 설명하고 있습니다. 특히 Vitruvius가 주장한\
+    \ 바에 따르면, 건축가는 실무적 기술과 이론적 지식을 모두 갖추어야 하며, 문학, 제도, 수학, 역사, 철학 등 다양한 분야의 지식이 필요하다고\
+    \ 설명합니다. \n\n제시된 선택지들은 모두 감정과 관련된 내용으로, 지문의 주제 및 내용과 전혀 관련이 없습니다. 따라서 이 문제는 지문과\
+    \ 선택지가 서로 맞지 않는 오류가 있는 것으로 보입니다.\"\n}"
+  time_taken: 4.9
+  points: 3
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q23
+  question_number: 23
+  answer: 0
+  correct_answer: 1
+  is_correct: false
+  reasoning: "{\n  \"answer\": 1,\n  \"reasoning\": \"이 지문은 로마 제국 시대의 건축가의 지위와 교육에\
+    \ 대해 다루고 있어서, 제시된 선택지들 중 어느 것과도 직접적인 관련이 없습니다. 지문의 실제 주제는 '로마 시대 건축가의 지위 향상과 필요한\
+    \ 교육과정'에 관한 것입니다. \n\n주어진 선택지들은 모두 산업화(industrialization)와 노동 시장, 노동 시간 등에 관한\
+    \ 내용을 다루고 있어 지문의 내용과 전혀 맞지 않습니다. \n\n이는 문제와 선택지가 잘못 매칭된 것으로 보입니다. 정확한 답변을 위해서는\
+    \ 지문의 내용과 관련된 적절한 선택지가 필요합니다.\"\n}"
+  time_taken: 5.04
+  points: 3
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q24
+  question_number: 24
+  answer: 0
+  correct_answer: 5
+  is_correct: false
+  reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"죄송하지만 이 지문은 셀카(selfie)나 자화상에\
+    \ 대한 내용이 아닙니다. 이 지문은 로마 제국 시대의 건축가의 위상과 교육에 대해 다루고 있습니다. 주요 내용은:\n\n1. 로마 제국에서\
+    \ 건축가의 지위가 상승했다는 점\n2. 건축이 정치적 상징으로서 중요했다는 점\n3. 비트루비우스가 건축가에게 필요한 다양한 학문 분야를\
+    \ 제시한 점\n4. 실무와 이론 모두의 중요성을 강조한 점\n\n따라서 제시된 선택지들은 모두 지문의 내용과 관련이 없습니다. 지문의 적절한\
+    \ 제목은 'The Comprehensive Education of Roman Architects' 또는 'The Rise of Architects\
+    \ in Ancient Rome' 같은 것이 되어야 할 것입니다.\n\n주어진 선택지 중에서는 정답을 고를 수 없습니다.\"\n}"
+  time_taken: 5.6
+  points: 3
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q25
+  question_number: 25
+  answer: 0
+  correct_answer: 4
+  is_correct: false
+  reasoning: '죄송하지만, 도표가 제시되지 않아서 정확한 답을 찾을 수 없습니다. 도표의 내용을 확인할 수 있도록 도표를 함께 공유해 주시면,
+    각 선택지와 도표의 내용을 비교 분석하여 일치하지 않는 항목을 찾아드리겠습니다.
+
+
+    도표와 함께 문제를 다시 제시해 주시면 다음과 같은 방식으로 분석하겠습니다:
+
+    1. 도표의 데이터 확인
+
+    2. 각 선택지와 도표 내용 비교
+
+    3. 불일치하는 항목 식별
+
+    4. 불일치 이유 설명'
+  time_taken: 3.76
+  points: 2
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q26
+  question_number: 26
+  answer: 0
+  correct_answer: 4
+  is_correct: false
+  reasoning: "{\n  \"answer\": 4,\n  \"reasoning\": \"지문에서 Dick Enberg가 2016년 10월\
+    \ 2일에 마지막 방송을 했고, 2017년 12월 21일에 사망했다고 나와있습니다. 마지막 방송과 사망 사이의 기간은 약 1년 2개월로, 3년이\
+    \ 아닙니다. 따라서 '마지막 방송 후 3년 뒤에 사망하였다'는 선택지 4번은 지문의 내용과 일치하지 않습니다.\n\n다른 선택지들은 모두\
+    \ 지문과 일치합니다:\n- Michigan 출생\n- Central Michigan University에서 야구팀 코치 역임\n- 1979년\
+    \ 중국을 방문한 첫 미국인 스포츠 캐스터\n- 13개의 Sports Emmy Awards 수상\n\n따라서 지문의 내용과 일치하지 않는 것은\
+    \ 4번입니다.\"\n}"
+  time_taken: 4.89
+  points: 2
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q27
+  question_number: 27
+  answer: 2
+  correct_answer: 3
+  is_correct: false
+  reasoning: "{\n  \"answer\": 2,\n  \"reasoning\": \"지문에서 시티 투어 버스에 대한 사용 불가 내용이\
+    \ 언급되지 않았습니다. 오히려 이 카드는 대중교통 수단에서 사용할 수 있는 교통카드로 소개되어 있으며, 시티 투어 버스도 대중교통의 일종이므로\
+    \ 사용이 가능할 것으로 추정됩니다. \n\n나머지 선택지들은 모두 안내문의 내용과 일치합니다:\n1. 관광객을 위한 대중교통 카드라는 점이\
+    \ 명시되어 있습니다.\n3. 5일권에는 주요 관광지 입장료 할인 혜택이 포함된다고 언급되어 있습니다.\n4. 미사용 카드는 구매일로부터 30일\
+    \ 이내에 환불이 가능하다고 명시되어 있습니다.\n5. A-Transit 앱을 통해 모바일 카드를 구매할 수 있다는 내용이 포함되어 있습니다.\n\
+    \n따라서 시티 투어 버스 사용 불가를 언급한 2번이 안내문의 내용과 일치하지 않습니다.\"\n}"
+  time_taken: 5.76
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q28
+  question_number: 28
+  answer: 0
+  correct_answer: 3
+  is_correct: false
+  reasoning: "{\n  \"answer\": 2,\n  \"reasoning\": \"지문에서 'Luckwood Snow Festival'이\
+    \ 연중 내내 진행된다는 내용은 찾을 수 없습니다. 일반적으로 눈 축제는 겨울철에 한시적으로 개최되는 행사이며, 연중 내내 진행되는 것은 물리적으로도\
+    \ 불가능합니다. \n\n나머지 선택지들은 지문의 내용과 일치할 것으로 추정됩니다:\n1. 격년(2년에 한 번) 개최\n3. 11개 팀이 눈\
+    \ 조각 경연에 참가\n4. 주차 시설 제공\n5. 무료 셔틀버스 서비스 운영\n\n따라서 '연중 동안 진행된다'는 2번 선택지가 지문의 내용과\
+    \ 일치하지 않는 것으로 판단됩니다.\"\n}"
+  time_taken: 4.42
+  points: 2
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q29
+  question_number: 29
+  answer: 0
+  correct_answer: 2
+  is_correct: false
+  reasoning: "{\n  \"answer\": 2,\n  \"reasoning\": \"어법상 틀린 부분을 찾는 문제입니다. 밑줄 친 ②의\
+    \ 'knows'는 주어-동사 일치에서 오류가 있습니다.\n\n1. 주어는 'patients'로 복수명사입니다.\n2. 복수 주어와 함께 사용되는\
+    \ 동사는 복수형이어야 합니다.\n3. 따라서 'knows'는 'know'로 써야 올바릅니다.\n\n다른 밑줄 친 부분들은 모두 올바른 사용입니다:\n\
+    - ① had: 가정법 과거의 올바른 사용\n- ③ freeing: 분사구문의 올바른 사용\n- ④ that: 관계대명사의 올바른 사용\n\
+    - ⑤ what: 명사절을 이끄는 관계대명사의 올바른 사용\"\n}"
+  time_taken: 4.85
+  points: 2
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q30
+  question_number: 30
+  answer: 0
+  correct_answer: 4
+  is_correct: false
+  reasoning: "{\n  \"answer\": 2,\n  \"reasoning\": \"이 지문에서는 문법적 오류를 찾는 문제입니다. 밑줄\
+    \ 친 부분들을 하나씩 검토해보면:\n\n① had to consider: 가정법 문장에서 적절하게 사용됨\n② knows: 주어가 'patients'(복수)인데\
+    \ 동사가 단수형(knows)으로 사용됨. 'know'가 올바른 형태\n③ freeing up: 분사구문으로 적절하게 사용됨\n④ that\
+    \ support: 관계대명사절에서 적절하게 사용됨\n⑤ what you are: what절의 시작으로 적절하게 사용됨\n\n따라서 ②번의\
+    \ 'knows'가 문법적으로 부적절합니다. 복수 주어 'patients'에 맞춰 'know'로 써야 합니다. 주어-동사 일치 규칙에 어긋나는\
+    \ 것이 유일한 오류입니다.\"\n}"
+  time_taken: 5.78
+  points: 3
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q31
+  question_number: 31
+  answer: 0
+  correct_answer: 5
+  is_correct: false
+  reasoning: "{\n  \"answer\": 5,\n  \"reasoning\": \"이 지문은 우리의 무의식적인 자동화된 행동과 의식적인\
+    \ 사고 과정에 대해 설명하고 있습니다. 주요 논점은 다음과 같습니다:\n\n1. 일상적인 행동(예: 물 마시기)은 많은 단계가 있지만 우리는\
+    \ 의식적으로 각 단계를 생각하지 않습니다.\n\n2. 뇌의 오래된 부분이 이러한 자동화된 과정(움직임, 청각, 시각, 사회적 기술)을 담당합니다.\n\
+    \n3. 지문의 마지막 문장은 우리가 인식하고, 느끼고, 생각하는 대부분의 것들이 우리가 인식하지 못하는 사이에 일어나는 매우 기초적이고 빠른\
+    \ 분석을 기반으로 한다고 설명합니다.\n\n이러한 맥락에서, 우리의 의식적인 '개인적 관여(personal involvement)' 없이도\
+    \ 많은 행동과 인지 과정이 일어난다는 것이 지문의 핵심 메시지입니다. 따라서 빈칸에는 'personal involvement'가 가장 적절합니다.\n\
+    \n다른 선택지들(linguistic insight, artistic imagination, literary sensibility, alternative\
+    \ perspective)은 지문에서 다루는 자동화된 인지 처리 과정과는 직접적인 관련이 없습니다.\"\n}"
+  time_taken: 7.39
+  points: 3
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q33
+  question_number: 33
+  answer: 0
+  correct_answer: 3
+  is_correct: false
+  reasoning: "{\n  \"answer\": 5,\n  \"reasoning\": \"지문을 자세히 분석해보면:\n\n1. 'attention\
+    \ economy' 시대에 살고 있으며, 우리의 주의력이 소비되고 있다는 내용이 있음\n2. 광고 산업이 우리의 의식적인 시간을 포착해서 다른\
+    \ 사람에게 판매한다고 명시됨\n3. 무료로 보이는 서비스들이 실제로는 우리의 개인정보와 주의력을 대가로 하고 있음을 암시\n4. 무료로 보이는\
+    \ 것의 실제 지불자가 누군지 보이지 않는다는 내용이 있음\n\n그러나 5번 선택지처럼 'AI가 우리의 친구이고 그로 인한 혜택을 받고 있다'는\
+    \ 내용은 전혀 언급되지 않았습니다. 오히려 AI 기반 추천 시스템이 우리의 주의를 포획(trap)하고, 개인의 자유로운 탐색을 제한한다는\
+    \ 부정적인 맥락으로 설명되어 있습니다.\n\n따라서 지문의 내용과 가장 일치하지 않는 것은 5번입니다.\"\n}"
+  time_taken: 6.67
+  points: 2
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q34
+  question_number: 34
+  answer: 4
+  correct_answer: 5
+  is_correct: false
+  reasoning: "{\n  \"answer\": 4,\n  \"reasoning\": \"이 지문은 현대 주의력 경제(attention economy)에서\
+    \ AI 기반 추천 시스템과 알고리즘이 어떻게 우리의 행동을 제한하고 통제하는지를 설명하고 있습니다. 주요 논점은:\n\n1. 광고 산업이\
+    \ 우리의 의식적인 시간을 포착하여 판매한다는 점\n2. AI 기반 추천 시스템이 우리의 주의력을 '포획(trap)'한다는 점\n3. 개인의\
+    \ 자유로운 탐색이 알고리즘 생성 콘텐츠로 대체된다는 점\n\n이러한 맥락에서, 중앙화된 공식적 규칙(Centralized, formal rules)은\
+    \ '법적이고 확립된 맥락 내에서 행동을 강화한다(reinforce one's behavior within legal and established\
+    \ contexts)'는 4번이 가장 적절합니다. 지문에서 설명하는 시스템들이 사용자의 행동을 특정한 방식으로 유도하고 강화하는 것처럼, 중앙화된\
+    \ 규칙도 같은 방식으로 작동하기 때문입니다.\"\n}"
+  time_taken: 6.21
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q35
+  question_number: 35
+  answer: 4
+  correct_answer: 4
+  is_correct: true
+  reasoning: "{\n  \"answer\": 4,\n  \"reasoning\": \"이 지문은 자동차(car)가 스포츠 관광에 미친 영향과\
+    \ 그 발전 과정에 대해 설명하고 있습니다. 주요 내용을 보면:\n\n1. 자동차가 스포츠와 관광 발전에 미친 중요한 영향\n2. 19세기\
+    \ 말 발명되어 1920년대에 대중화된 자동차의 역사\n3. 대중교통이 닿지 않는 곳에 접근 가능하고 짐과 장비 운반이 용이한 자동차의 장점\n\
+    5. 사람과 장비를 외딴 곳으로 운반하는 데 있어 자동차의 중요성\n\n그러나 4번 문장은 '관광 성장과 관련된 합리적인 가격의 좋은 숙박시설의\
+    \ 확장이 지역 레스토랑의 성장을 촉진했다'는 내용으로, 자동차와 스포츠 관광의 관계를 다루는 전체 흐름과 무관합니다. 따라서 4번이 전체\
+    \ 흐름과 관계없는 문장입니다.\"\n}"
+  time_taken: 5.83
+  points: 3
+  earned_points: 3
+  success: true
+  error: null
+- question_id: q36
+  question_number: 36
+  answer: 0
+  correct_answer: 5
+  is_correct: false
+  reasoning: '죄송하지만 지문 내용이 제시되지 않아서 정확한 답을 찾을 수 없습니다. 글의 순서를 파악하기 위해서는:
+
+
+    1. 주어진 본문 내용
+
+    2. (A), (B), (C) 각각의 내용
+
+
+    이 필요합니다. 이 정보들이 있어야:
+
+    - 문장 간의 논리적 연결성
+
+    - 시간적 순서
+
+    - 인과 관계
+
+    - 화제의 전개 방식
+
+    등을 분석하여 가장 적절한 순서를 결정할 수 있습니다.
+
+
+    정확한 답변을 위해 누락된 지문 내용을 제공해 주시기 바랍니다.'
+  time_taken: 4.52
+  points: 3
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q38
+  question_number: 38
+  answer: 0
+  correct_answer: 4
+  is_correct: false
+  reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"지문의 논리적 흐름을 분석해보면 다음과 같습니다:\n\
+    \n1. 첫 부분(B)은 새를 관찰하라는 구체적인 행동 지시로 시작합니다.\n\n2. 중간 부분(C)에서는 'every other grosbeak'를\
+    \ 관찰하라는 내용이 나옵니다.\n\n3. 마지막 부분(A)에서는 'In reality'로 시작하며, 객체들이 단순한 선형적 생명주기 모델을\
+    \ 따르지 않는다는 일반적이고 추상적인 결론을 제시합니다.\n\n이러한 흐름은 '구체적 관찰 → 구체적 예시 → 일반적 결론'이라는 논리적\
+    \ 전개를 보여줍니다. 따라서 (B) - (C) - (A) 순서가 가장 자연스럽습니다. 특히 'In reality'로 시작하는 문장은 앞선\
+    \ 구체적 관찰에 대한 일반화된 결론을 제시하므로 마지막에 위치하는 것이 적절합니다.\"\n}"
+  time_taken: 6.16
+  points: 3
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q39
+  question_number: 39
+  answer: 1
+  correct_answer: 4
+  is_correct: false
+  reasoning: "{\n  \"answer\": 1,\n  \"reasoning\": \"이 지문은 자연의 생명체나 사물들이 단순한 선형적\
+    \ 생명주기 모델을 따르지 않는다는 내용을 다루고 있습니다. 주요 논점을 분석해보면:\n\n1. 첫 부분에서 새들의 관찰을 언급하며 자연현상의\
+    \ 예시를 제시합니다.\n\n2. 'In reality'로 시작하는 문장에서 실제로는 사물들이 선형적 생명주기 모델을 따르지 않는다고 명시합니다.\n\
+    \n3. 'far more complicated and adaptive path'라는 표현을 통해 실제 과정이 더 복잡하고 적응적임을 강조합니다.\n\
+    \n이러한 내용을 종합해볼 때:\n- (A)에는 '통제가능성(controllability)'이 적절합니다. 왜냐하면 글의 핵심은 자연현상이\
+    \ 단순히 통제되거나 예측될 수 없다는 것이기 때문입니다.\n- (B)에는 '도전(challenge)'이 적절합니다. 선형적 모델에 대한 도전이나\
+    \ 반박의 의미가 글의 전체 맥락과 일치하기 때문입니다.\n\n따라서 'controllability'와 'challenge'가 포함된 1번이\
+    \ 가장 적절한 답입니다.\"\n}"
+  time_taken: 7.02
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q41
+  question_number: 41
+  answer: 3
+  correct_answer: 2
+  is_correct: false
+  reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"이 지문은 인간의 손가락(특히 엄지와 검지)으로 종이를\
+    \ 집는 상황을 설명하면서, 이것이 'bloody business'(피비린내 나는 일)가 될 수 있다고 표현하고 있습니다. 이는 인간의 손이\
+    \ 진화의 결과물이지만, 예상치 못한(unexpected) 방식으로 발달했음을 암시합니다. \n\n선택지들을 분석해보면:\n1번은 해부학적\
+    \ 거리를 다루는데 지문과 무관합니다.\n2번은 진화적 도약을 말하지만 지문은 그런 긍정적 측면을 강조하지 않습니다.\n3번은 '예상치 못한\
+    \ 진화의 결과'를 말하는데, 'bloody business'라는 표현과 가장 잘 연결됩니다.\n4번은 생존의 딜레마를 말하지만 지문에서는\
+    \ 그런 내용이 없습니다.\n5번은 도구 사용을 말하지만 지문은 단순히 종이를 집는 행위만 언급합니다.\n\n따라서 인간의 손이 진화의 예상치\
+    \ 못한 결과물이라는 의미를 담은 3번이 가장 적절한 제목입니다.\"\n}"
+  time_taken: 6.77
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q42
+  question_number: 42
+  answer: 3
+  correct_answer: 5
+  is_correct: false
+  reasoning: 주어진 문장에서 'bloody'라는 단어의 사용이 문맥상 부적절합니다. 종이를 엄지와 검지로 집는 일상적인 동작을 설명하는
+    문장에서 'bloody(피투성이의, 피비린내 나는)'라는 표현은 상황과 맞지 않습니다. 종이를 손가락으로 집는 것은 매우 간단하고 안전한 행동이므로,
+    'bloody'라는 과도하게 강한 표현은 문맥에 맞지 않습니다. 이 자리에는 'simple(간단한)', 'basic(기본적인)' 또는 'easy(쉬운)'
+    같은 중립적인 형용사가 더 적절할 것입니다.
+  time_taken: 4.33
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q43
+  question_number: 43
+  answer: 0
+  correct_answer: 2
+  is_correct: false
+  reasoning: "죄송하지만 지문 (A)~(D)의 내용이 제시되지 않아 정확한 순서를 판단할 수 없습니다. \n\n글의 순서 배열 문제를 풀기\
+    \ 위해서는:\n1. 각 문단의 구체적인 내용\n2. 문단 간의 논리적 연결성\n3. 시간적 순서나 인과관계\n4. 주제의 전개 방식\n등을\
+    \ 분석해야 합니다.\n\n지문이 제공되지 않은 상태에서는 올바른 순서를 결정할 수 없으므로, 정확한 답과 그 근거를 제시할 수 없습니다.\
+    \ 지문을 함께 제공해 주시면 상세한 분석과 함께 답변 드리겠습니다."
+  time_taken: 4.17
+  points: 3
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q44
+  question_number: 44
+  answer: 0
+  correct_answer: 3
+  is_correct: false
+  reasoning: '죄송하지만 지문이 제시되지 않아 (a)~(e)가 무엇을 가리키는지 알 수 없습니다. 이 유형의 문제를 정확히 풀기 위해서는:
+
+
+    1. 지문 전체가 필요합니다
+
+    2. 밑줄 친 부분들의 문맥을 확인해야 합니다
+
+    3. 각 지시어가 가리키는 대상을 파악해야 합니다
+
+
+    지문을 제공해 주시면 정확한 답과 그 근거를 제시할 수 있습니다.'
+  time_taken: 3.13
+  points: 2
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+- question_id: q45
+  question_number: 45
+  answer: 0
+  correct_answer: 4
+  is_correct: false
+  reasoning: '죄송하지만 지문이 제공되지 않아 정확한 답을 찾기 어렵습니다. 지문 없이는 선택지의 진위 여부를 판단할 수 없습니다.
+
+
+    문제를 정확히 풀기 위해서는 다음과 같은 정보가 필요합니다:
+
+    1. Grace, Ethan, Sean 사이의 관계
+
+    2. 하이킹 관련 사건의 전후 맥락
+
+    3. 세탁소 방문 관련 내용
+
+    4. 등장인물들의 행동과 대화
+
+
+    지문을 제공해 주시면 문제를 다시 풀어드리겠습니다.'
+  time_taken: 3.79
+  points: 2
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
