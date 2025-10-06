@@ -83,7 +83,20 @@ def main():
         default='models/models.json',
         help='모델 설정 파일 경로 (기본: models/models.json)'
     )
-    
+
+    parser.add_argument(
+        '--parallel',
+        action='store_true',
+        help='병렬 처리로 평가 (속도 향상)'
+    )
+
+    parser.add_argument(
+        '--max-workers',
+        type=int,
+        default=10,
+        help='병렬 처리 시 최대 동시 스레드 수 (기본: 10)'
+    )
+
     args = parser.parse_args()
     
     # 환경변수 로드
@@ -194,7 +207,9 @@ def main():
             evaluator.evaluate_exam(
                 exam_path=str(exam_file),
                 model=model,
-                output_path=args.output
+                output_path=args.output,
+                parallel=args.parallel,
+                max_workers=args.max_workers
             )
         
         else:
@@ -214,7 +229,9 @@ def main():
             evaluator.evaluate_exam(
                 exam_path=str(exam_file),
                 model=model,
-                output_path=args.output
+                output_path=args.output,
+                parallel=args.parallel,
+                max_workers=args.max_workers
             )
     
     print(f"\n{'='*100}")
