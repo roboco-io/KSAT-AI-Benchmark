@@ -105,6 +105,22 @@ class Evaluator:
         correct_answer = question.get('correct_answer')
         points = question.get('points', 2)
 
+        # 듣기 문제 스킵 (question_text에 실제 텍스트가 없는 경우)
+        if not q_text or q_text.strip() == '' or '듣고' in q_text:
+            return {
+                'question_id': q_id,
+                'question_number': q_num,
+                'answer': 0,
+                'correct_answer': correct_answer,
+                'is_correct': None,
+                'reasoning': '듣기 평가 문제 (스킵)',
+                'time_taken': 0,
+                'points': points,
+                'earned_points': 0,
+                'success': False,
+                'error': '듣기 평가 문제는 평가하지 않음'
+            }
+
         # 문제 풀이
         response = model.solve_question(
             question_text=q_text,
