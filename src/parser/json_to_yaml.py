@@ -99,7 +99,18 @@ def convert_json_to_yaml(
         
         # 지문 연결
         passage_info = passage_map.get(q_num)
-        passage_text = passage_info.get('content', '') if passage_info else None
+        if passage_info:
+            # 'content', 'passage_text', 'passage' 키 모두 확인
+            passage_text = (
+                passage_info.get('content') or
+                passage_info.get('passage_text') or
+                passage_info.get('passage')
+            )
+            # 리스트인 경우 조인
+            if isinstance(passage_text, list):
+                passage_text = '\n'.join(passage_text)
+        else:
+            passage_text = None
         
         # 선택지 처리 (options 또는 choices)
         choices = q.get('choices', q.get('options', []))

@@ -25,7 +25,28 @@ help:
 	@echo "  make evaluate-all EXAM=<경로>       - 모든 모델로 평가"
 	@echo "  make evaluate-all-exams             - 모든 시험, 모든 모델"
 	@echo "  make evaluate-test                  - 빠른 테스트"
-	@echo "  make summary                        - 평가 결과 요약"
+	@echo ""
+	@echo "📊 결과 분석 및 요약:"
+	@echo "  make summary                        - 기본 요약 + 리더보드"
+	@echo "  make summary-detailed               - 상세 분석 (과목별, 통계 포함)"
+	@echo "  make leaderboard                    - 리더보드만 표시"
+	@echo "  make summary-model MODEL=<모델>     - 특정 모델 분석"
+	@echo "  make summary-subject SUBJECT=<과목> - 특정 과목 분석"
+	@echo "  make summary-year YEAR=<연도>       - 특정 연도 분석"
+	@echo ""
+	@echo "🚀 유연한 평가 시스템 (NEW!):"
+	@echo "  make <모델> <연도> <과목>"
+	@echo ""
+	@echo "  모델: gpt-5, gpt-4o, claude-opus-4-1, claude-3-5-sonnet,"
+	@echo "        gemini-2.5-pro, all"
+	@echo "  연도: 2025, 2024, all"
+	@echo "  과목: korean, math, english, korean,math (콤마로 여러개), all"
+	@echo ""
+	@echo "  예시:"
+	@echo "    make gpt-5 2025 korean,math        - GPT-5로 2025 국어+수학"
+	@echo "    make claude-opus-4-1 2025 korean   - Claude Opus 4.1로 2025 국어"
+	@echo "    make all 2025 all                  - 모든 모델로 2025 모든 과목"
+	@echo "    make gpt-4o all korean             - GPT-4o로 모든 연도 국어"
 	@echo ""
 	@echo "🌐 웹 배포:"
 	@echo "  make export-web                     - 평가 결과를 JSON으로 export"
@@ -207,10 +228,173 @@ evaluate-test:
 	@echo "⚡ 빠른 테스트 평가..."
 	python src/evaluator/evaluate.py exams/parsed/2025-math-sat-p1-2.yaml --model gpt-4o
 
-# 결과 요약
+# 결과 요약 (기본)
 summary:
 	@echo "📊 평가 결과 요약..."
-	python src/evaluator/summary.py
+	@python src/evaluator/summary.py
+
+# 상세 분석 (과목별, 통계 포함)
+summary-detailed:
+	@echo "📊 상세 분석 중..."
+	@python src/evaluator/summary.py --detailed
+
+# 리더보드만 표시
+leaderboard:
+	@echo "🏆 리더보드..."
+	@python src/evaluator/summary.py --leaderboard
+
+# 특정 모델 분석
+summary-model:
+	@if [ -z "$(MODEL)" ]; then \
+		echo "❌ 오류: MODEL을 지정하세요."; \
+		echo "   사용법: make summary-model MODEL=gpt-5"; \
+		exit 1; \
+	fi
+	@echo "📊 $(MODEL) 모델 분석..."
+	@python src/evaluator/summary.py --model $(MODEL)
+
+# 특정 과목 분석
+summary-subject:
+	@if [ -z "$(SUBJECT)" ]; then \
+		echo "❌ 오류: SUBJECT를 지정하세요."; \
+		echo "   사용법: make summary-subject SUBJECT=korean"; \
+		exit 1; \
+	fi
+	@echo "📊 $(SUBJECT) 과목 분석..."
+	@python src/evaluator/summary.py --subject $(SUBJECT)
+
+# 특정 연도 분석
+summary-year:
+	@if [ -z "$(YEAR)" ]; then \
+		echo "❌ 오류: YEAR를 지정하세요."; \
+		echo "   사용법: make summary-year YEAR=2025"; \
+		exit 1; \
+	fi
+	@echo "📊 $(YEAR)년 분석..."
+	@python src/evaluator/summary.py --year $(YEAR)
+
+# =============================================================================
+# 유연한 평가 시스템 (연도별, 과목별, 모델별)
+# =============================================================================
+
+# 사용법:
+#   make <모델> <연도> <과목>
+#   - 모델: gpt-5, gpt-4o, claude-opus-4-1, claude-3-5-sonnet, gemini-2.5-pro, all
+#   - 연도: 2025, 2024, all
+#   - 과목: korean, math, english, korean,math, all
+#
+# 예시:
+#   make gpt-5 2025 korean,math
+#   make claude-opus-4-1 2025 korean
+#   make all 2025 all
+#   make gpt-4o all korean
+
+# 기본값 설정
+DEFAULT_YEAR := 2025
+DEFAULT_SUBJECTS := all
+DEFAULT_MODEL := gpt-4o
+
+# 모델별 타겟 정의
+.PHONY: gpt-5 gpt-4o claude-opus-4-1 claude-3-5-sonnet gemini-2.5-pro all-models
+
+# 개별 모델 타겟
+gpt-5:
+	@$(MAKE) run-evaluation MODEL_NAME=gpt-5 YEAR=$(word 2,$(MAKECMDGOALS)) SUBJECTS=$(word 3,$(MAKECMDGOALS))
+
+gpt-4o:
+	@$(MAKE) run-evaluation MODEL_NAME=gpt-4o YEAR=$(word 2,$(MAKECMDGOALS)) SUBJECTS=$(word 3,$(MAKECMDGOALS))
+
+claude-opus-4-1:
+	@$(MAKE) run-evaluation MODEL_NAME=claude-opus-4-1 YEAR=$(word 2,$(MAKECMDGOALS)) SUBJECTS=$(word 3,$(MAKECMDGOALS))
+
+claude-3-5-sonnet:
+	@$(MAKE) run-evaluation MODEL_NAME=claude-3-5-sonnet YEAR=$(word 2,$(MAKECMDGOALS)) SUBJECTS=$(word 3,$(MAKECMDGOALS))
+
+gemini-2.5-pro:
+	@$(MAKE) run-evaluation MODEL_NAME=gemini-2.5-pro YEAR=$(word 2,$(MAKECMDGOALS)) SUBJECTS=$(word 3,$(MAKECMDGOALS))
+
+# 모든 모델 실행
+all-models:
+	@$(MAKE) run-evaluation MODEL_NAME=all YEAR=$(word 2,$(MAKECMDGOALS)) SUBJECTS=$(word 3,$(MAKECMDGOALS))
+
+# 'all' 키워드를 all-models로 매핑
+all: all-models
+
+# 실제 평가 실행 로직
+run-evaluation:
+	@echo "=========================================="
+	@echo "🚀 KSAT AI 평가 시작"
+	@echo "=========================================="
+	@EVAL_YEAR=$${YEAR:-$(DEFAULT_YEAR)}; \
+	EVAL_SUBJECTS=$${SUBJECTS:-$(DEFAULT_SUBJECTS)}; \
+	EVAL_MODEL=$${MODEL_NAME:-$(DEFAULT_MODEL)}; \
+	echo "📋 설정:"; \
+	echo "   모델: $$EVAL_MODEL"; \
+	echo "   연도: $$EVAL_YEAR"; \
+	echo "   과목: $$EVAL_SUBJECTS"; \
+	echo ""; \
+	TOTAL_EVALS=0; \
+	SUCCESS_EVALS=0; \
+	FAILED_EVALS=0; \
+	START_TIME=$$(date +%s); \
+	if [ "$$EVAL_SUBJECTS" = "all" ]; then \
+		EVAL_SUBJECTS="korean,math,english"; \
+	fi; \
+	if [ "$$EVAL_YEAR" = "all" ]; then \
+		YEARS="2024 2025"; \
+	else \
+		YEARS="$$EVAL_YEAR"; \
+	fi; \
+	if [ "$$EVAL_MODEL" = "all" ]; then \
+		MODELS="gpt-5 gpt-4o claude-opus-4-1 claude-3-5-sonnet gemini-2.5-pro"; \
+	else \
+		MODELS="$$EVAL_MODEL"; \
+	fi; \
+	for year in $$YEARS; do \
+		IFS=',' read -ra SUBJECT_ARRAY <<< "$$EVAL_SUBJECTS"; \
+		for subject in "$${SUBJECT_ARRAY[@]}"; do \
+			subject=$$(echo $$subject | xargs); \
+			EXAM_FILE="exams/parsed/$$year-$$subject-sat.yaml"; \
+			if [ ! -f "$$EXAM_FILE" ]; then \
+				echo "⚠️  시험 파일 없음: $$EXAM_FILE (건너뜀)"; \
+				continue; \
+			fi; \
+			for model in $$MODELS; do \
+				TOTAL_EVALS=$$((TOTAL_EVALS + 1)); \
+				echo ""; \
+				echo "=========================================="; \
+				echo "📝 평가 중: $$model | $$year | $$subject"; \
+				echo "=========================================="; \
+				if python src/evaluator/evaluate.py "$$EXAM_FILE" --model "$$model"; then \
+					SUCCESS_EVALS=$$((SUCCESS_EVALS + 1)); \
+					echo "✅ 완료: $$model - $$year $$subject"; \
+				else \
+					FAILED_EVALS=$$((FAILED_EVALS + 1)); \
+					echo "❌ 실패: $$model - $$year $$subject"; \
+				fi; \
+			done; \
+		done; \
+	done; \
+	END_TIME=$$(date +%s); \
+	ELAPSED=$$((END_TIME - START_TIME)); \
+	echo ""; \
+	echo "=========================================="; \
+	echo "📊 평가 완료 요약"; \
+	echo "=========================================="; \
+	echo "총 평가: $$TOTAL_EVALS"; \
+	echo "성공: $$SUCCESS_EVALS ✅"; \
+	echo "실패: $$FAILED_EVALS ❌"; \
+	echo "소요 시간: $$ELAPSED 초"; \
+	echo "=========================================="; \
+	if [ $$TOTAL_EVALS -gt 0 ]; then \
+		echo ""; \
+		echo "📈 상세 결과 확인:"; \
+		python src/evaluator/summary.py 2>/dev/null || echo "   (summary.py 실행 실패)"; \
+	fi
+
+# Make가 인자를 타겟으로 인식하지 않도록 처리
+%:
+	@:
 
 # =============================================================================
 # 웹 배포
