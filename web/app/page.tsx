@@ -80,7 +80,7 @@ export default function Home() {
                     <div>
                       <Text fw={600} size="lg">{entry.model_name}</Text>
                       <Text size="sm" c="dimmed">
-                        {entry.correct_answers}/{entry.total_questions} 정답 · {entry.exams_count}개 시험
+                        정답률 {entry.accuracy.toFixed(1)}% · {entry.exams_count}개 시험
                       </Text>
                     </div>
                   </Group>
@@ -247,7 +247,7 @@ export default function Home() {
 
                           <Group justify="space-between" mt="md">
                             <Text size="sm" fw={600}>
-                              총 {result.summary.correct_answers}개 정답 / {result.summary.total_questions}개 문제
+                              정답률: {result.summary.accuracy.toFixed(1)}% ({result.summary.correct_answers}개 정답)
                             </Text>
                             <Text size="sm" c="dimmed">
                               평균 응답 시간: {(result.results.reduce((sum: number, r: any) => sum + r.time_taken, 0) / result.results.length).toFixed(2)}초
@@ -381,7 +381,7 @@ export default function Home() {
                             <div>
                               <Text fw={600} size="lg">{entry.model_name}</Text>
                               <Text size="sm" c="dimmed">
-                                {entry.correct_answers}/{entry.total_questions} 정답 · {entry.exams_count}개 시험
+                                정답률 {entry.accuracy.toFixed(1)}% · {entry.exams_count}개 시험
                               </Text>
                             </div>
                           </Group>
@@ -548,7 +548,7 @@ export default function Home() {
 
                                   <Group justify="space-between" mt="md">
                                     <Text size="sm" fw={600}>
-                                      총 {result.summary.correct_answers}개 정답 / {result.summary.total_questions}개 문제
+                                      정답률: {result.summary.accuracy.toFixed(1)}% ({result.summary.correct_answers}개 정답)
                                     </Text>
                                     <Text size="sm" c="dimmed">
                                       평균 응답 시간: {(result.results.reduce((sum: number, r: any) => sum + r.time_taken, 0) / result.results.length).toFixed(2)}초
