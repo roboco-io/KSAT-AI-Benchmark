@@ -87,15 +87,59 @@ class OpenAIModel(BaseModel):
             
             # 응답 파싱
             content = response.choices[0].message.content
-            
+
+            # 빈 응답 처리
+            if not content or not content.strip():
+                return ModelResponse(
+                    answer=0,
+                    reasoning="빈 응답",
+                    time_taken=time.time() - start_time,
+                    raw_response=content or "",
+                    model_name=self.model_name,
+                    success=False,
+                    error="모델이 빈 응답을 반환했습니다"
+                )
+
             # GPT-5의 경우 JSON을 추출하는 더 강력한 로직 사용
             if is_gpt5:
                 # JSON 코드 블록이나 다른 텍스트가 포함된 경우 JSON만 추출
                 import re
-                json_match = re.search(r'\{[^{}]*"answer"[^{}]*"reasoning"[^{}]*\}', content, re.DOTALL)
-                if json_match:
-                    content = json_match.group(0)
-            
+
+                # 1. 완전한 JSON 객체를 찾기 위한 수동 파싱
+                start_idx = content.find('{')
+                if start_idx >= 0:
+                    brace_count = 0
+                    in_string = False
+                    escape = False
+                    end_idx = start_idx
+
+                    for i in range(start_idx, len(content)):
+                        char = content[i]
+
+                        if escape:
+                            escape = False
+                            continue
+
+                        if char == '\\':
+                            escape = True
+                            continue
+
+                        if char == '"' and not escape:
+                            in_string = not in_string
+                            continue
+
+                        if not in_string:
+                            if char == '{':
+                                brace_count += 1
+                            elif char == '}':
+                                brace_count -= 1
+                                if brace_count == 0:
+                                    end_idx = i + 1
+                                    break
+
+                    if end_idx > start_idx:
+                        content = content[start_idx:end_idx]
+
             try:
                 result = json.loads(content)
                 answer = int(result.get('answer', 0))
