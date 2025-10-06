@@ -89,18 +89,20 @@ make clean
 
 ## 🔄 자동화 워크플로우
 
-프론트엔드는 **완전 자동화**되어 있습니다. `results/` 디렉토리에 평가 결과만 추가하면 자동으로 웹사이트가 업데이트됩니다.
+> ⚠️ **개발 중**: GitHub Actions를 통한 자동 배포는 현재 개발 단계입니다. 아래는 계획된 워크플로우입니다.
+
+**계획된 자동화 파이프라인:**
 
 ```
 평가 실행 → results/ 저장 → Git Push → GitHub Actions → 자동 배포
-   (1)          (2)            (3)       (자동 export)     (자동 빌드)
+   (1)          (2)            (3)       (TODO)            (TODO)
 ```
 
-**자동화 파이프라인 상세:**
+**자동화 목표:**
 
-1. **로컬 평가**: `make gpt-5 2025 korean` 실행 → `results/` 디렉토리에 YAML 저장
-2. **Git 커밋/푸시**: `results/` 변경사항을 main 브랜치에 푸시
-3. **GitHub Actions 자동 실행** (`.github/workflows/deploy-pages.yml`):
+1. **로컬 평가**: `make gpt-5 2025 korean` 실행 → `results/` 디렉토리에 YAML 저장 ✅
+2. **Git 커밋/푸시**: `results/` 변경사항을 main 브랜치에 푸시 ✅
+3. **GitHub Actions 자동 실행** (TODO - `.github/workflows/deploy-pages.yml`):
    ```yaml
    - Python으로 YAML → JSON 변환 (scripts/export_data.py)
    - Next.js 웹사이트 빌드
@@ -108,7 +110,7 @@ make clean
    ```
 4. **웹사이트 자동 업데이트**: https://roboco.io/KSAT-AI-Benchmark/
 
-**한번 설정하면 손댈 필요 없음**: 새로운 평가를 실행하고 푸시만 하면, 과목별 탭, 리더보드, 통계가 모두 자동으로 업데이트됩니다.
+**현재 상태**: 로컬 평가 및 데이터 export는 완료. GitHub Actions 워크플로우 구현이 필요합니다.
 
 ### Vibe Coding in Action
 
@@ -373,36 +375,157 @@ Job 2: 모델 평가 (Job 1 완료 후)
 
 ## 🤝 기여하기
 
-프로젝트에 기여하는 방법:
+> 🌟 **이 프로젝트는 개발 초기 단계입니다!**
+>
+> 여러분의 기여를 환영합니다. 함께 AI 벤치마킹의 새로운 표준을 만들어가요!
 
-1. Fork this repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+### 🚀 기여 프로세스
 
-### 기여 가이드라인
+**1. 이슈 확인 또는 생성**
+   - [이슈 트래커](https://github.com/roboco-io/KSAT-AI-Benchmark/issues)에서 기존 이슈 확인
+   - 새로운 아이디어가 있다면 이슈 생성 후 토론
+   - `good first issue` 라벨로 초보자 친화적인 태스크 찾기
 
-**새로운 시험 추가**:
-- 공개 가능한 시험 문제만 추가 (저작권 확인 필수)
-- Vision API 파싱 후 반드시 수동 검증
-- 정답표 파싱 후 샘플 평가로 검증
+**2. Fork & Clone**
+   ```bash
+   # Repository fork 후
+   git clone https://github.com/YOUR_USERNAME/KSAT-AI-Benchmark.git
+   cd KSAT-AI-Benchmark
+   ```
 
-**새로운 모델 추가**:
-- `models/models.json`에 설정 추가
-- `src/evaluator/models/`에 provider 구현 (필요시)
-- 최소 1개 시험으로 테스트 후 PR
+**3. 개발 환경 설정**
+   ```bash
+   # Python 의존성 설치
+   make install
 
-**코드 기여**:
-- PEP 8 스타일 가이드 준수
-- 새 기능은 테스트 코드 함께 작성
-- `CLAUDE.md` 업데이트 (중요한 변경사항)
-- Vibe Coding 철학 유지 (직관적, 자동화, 투명성)
+   # .env 파일 생성 및 API 키 설정
+   make env
+   code .env  # API 키 입력
 
-**문서화**:
-- README.md: 사용자 관점 가이드
-- CLAUDE.md: 개발자 관점 가이드
-- 코드 주석: 복잡한 로직 설명
+   # 개발 도구 설치
+   make dev-install
+   ```
+
+**4. Feature Branch 생성**
+   ```bash
+   git checkout -b feature/amazing-feature
+   # 또는
+   git checkout -b fix/bug-description
+   ```
+
+**5. 개발 및 테스트**
+   ```bash
+   # 코드 작성
+
+   # 테스트 실행
+   make test
+
+   # 코드 포맷팅
+   make format
+
+   # Linting
+   make lint
+   ```
+
+**6. 커밋 & 푸시**
+   ```bash
+   git add .
+   git commit -m "feat: 멋진 기능 추가"
+   git push origin feature/amazing-feature
+   ```
+
+**7. Pull Request 생성**
+   - GitHub에서 PR 생성
+   - 제목: 명확하고 간결하게 (예: `feat: 과목별 리더보드 탭 추가`)
+   - 설명: 변경 사항, 테스트 방법, 스크린샷(UI 변경 시) 포함
+
+---
+
+### 📋 기여 가이드라인
+
+#### 🆕 새로운 시험 추가
+- ✅ 공개 가능한 시험 문제만 추가 (저작권 확인 필수)
+- ✅ Vision API 파싱 후 반드시 수동 검증
+- ✅ 정답표 파싱 후 샘플 평가로 검증
+- 📁 위치: `exams/pdf/YYYY/과목영역_문제지_홀수형.pdf`
+
+#### 🤖 새로운 모델 추가
+- ✅ `models/models.json`에 설정 추가
+- ✅ `src/evaluator/models/`에 provider 구현 (새 provider인 경우)
+- ✅ 최소 1개 시험으로 테스트 후 PR
+- 📝 README.md의 모델 목록 업데이트
+
+#### 💻 코드 기여
+- ✅ **PEP 8** 스타일 가이드 준수
+- ✅ 새 기능은 **테스트 코드** 함께 작성
+- ✅ `CLAUDE.md` 업데이트 (중요한 변경사항의 경우)
+- ✅ **Vibe Coding** 철학 유지:
+  - 직관적인 명령어와 API
+  - 지능형 자동화
+  - 투명한 프로세스
+
+#### 📚 문서화
+- 📖 **README.md**: 사용자 관점의 가이드
+- 🔧 **CLAUDE.md**: 개발자 관점의 가이드
+- 💬 **코드 주석**: 복잡한 로직은 설명 추가
+- 🌐 **한국어 우선**: 문서는 한국어로 작성
+
+#### 🎨 프론트엔드 기여
+- ✅ Next.js 15 + App Router 사용
+- ✅ Mantine UI v7 컴포넌트 활용
+- ✅ 반응형 디자인 (모바일 지원)
+- ✅ 접근성(a11y) 고려
+
+---
+
+### 🏗️ 주요 기여 영역
+
+#### 🔥 긴급 (High Priority)
+- [ ] **GitHub Actions 워크플로우 구현** - 자동 배포 파이프라인
+- [ ] **웹사이트 UI/UX 개선** - 과목별 탭, 차트, 필터
+- [ ] **모델 추가** - 최신 AI 모델 벤치마킹
+
+#### ⚡ 중요 (Medium Priority)
+- [ ] **PDF 파싱 개선** - 정확도 향상, 오류 처리
+- [ ] **테스트 커버리지** - 단위 테스트, 통합 테스트 추가
+- [ ] **성능 최적화** - 평가 속도, 웹 로딩 시간
+
+#### 💡 개선 (Nice to Have)
+- [ ] **다국어 시험 지원** - SAT, 가오카오 등
+- [ ] **API 서비스** - 평가 결과 조회 API
+- [ ] **차트 & 시각화** - 성능 추이, 비교 그래프
+
+---
+
+### 🐛 버그 리포트
+
+버그를 발견하셨나요? [이슈를 생성](https://github.com/roboco-io/KSAT-AI-Benchmark/issues/new)해주세요!
+
+**포함할 내용:**
+- 🔍 **재현 방법**: 단계별 설명
+- 🎯 **예상 동작**: 어떻게 작동해야 하는지
+- 💥 **실제 동작**: 실제로 어떻게 작동하는지
+- 🖼️ **스크린샷**: 가능하면 첨부
+- 🔧 **환경**: OS, Python 버전, Node.js 버전
+
+---
+
+### 💬 질문 & 토론
+
+- 💡 아이디어 제안: [Discussions](https://github.com/roboco-io/KSAT-AI-Benchmark/discussions)
+- 🐛 버그 리포트: [Issues](https://github.com/roboco-io/KSAT-AI-Benchmark/issues)
+- 📧 직접 연락: [이메일](mailto:contact@roboco.io)
+
+---
+
+### 🙌 기여자 행동 강령
+
+- 🤝 **존중**: 모든 기여자를 존중합니다
+- 🌈 **포용**: 다양한 배경과 관점을 환영합니다
+- 🎯 **건설적**: 피드백은 건설적이고 구체적으로
+- 🚀 **협력**: 함께 성장하는 커뮤니티
+
+**함께 만들어가요!** 작은 기여도 큰 영향을 만듭니다. 💪
 
 ## 📊 벤치마크 대상 모델
 
