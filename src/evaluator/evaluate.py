@@ -195,10 +195,17 @@ def main():
                 sys.exit(1)
             
             # 모델 생성 (model_id 사용)
+            # model_config에서 추가 설정 추출 (max_tokens, temperature 등)
+            model_kwargs = {}
+            for key in ['max_tokens', 'temperature', 'timeout', 'top_p', 'top_k']:
+                if key in model_config:
+                    model_kwargs[key] = model_config[key]
+
             model = evaluator.create_model(
                 provider=provider,
                 model_name=model_id,  # API용 실제 model_id 전달
-                api_key=api_key
+                api_key=api_key,
+                **model_kwargs  # models.json의 설정 전달
             )
             # 표시용 이름
             model.display_name = args.model
