@@ -49,9 +49,20 @@ export default function Home() {
     year: exam.year,
   }));
 
+  // 모델 웹사이트 매핑
+  const modelWebsites: Record<string, string> = {
+    'gpt-5': 'https://openai.com/ko-KR/index/introducing-gpt-5/',
+    'gpt-4o': 'https://openai.com/ko-KR/index/gpt-4o/',
+    'claude-opus-4-1': 'https://www.anthropic.com/products/claude-opus',
+    'claude-sonnet-4-5': 'https://www.anthropic.com/products/claude-sonnet',
+    'solar-pro': 'https://upstage.ai/kr/solar/',
+    'sonar-pro': 'https://www.perplexity.ai/enterprise/sonar',
+  };
+
   // 모델 목록 추출
   const modelsList = leaderboard.map((entry) => ({
     name: entry.model_name,
+    website: modelWebsites[entry.model_name] || '#',
     accuracy: entry.accuracy,
     examsCount: entry.exams_count,
   }));
@@ -332,7 +343,9 @@ export default function Home() {
                     border: '1px solid var(--mantine-color-blue-3)'
                   }}>
                     <Text size="sm" fw={600}>{idx + 1}. {model.name}</Text>
-                    <Text size="xs" c="dimmed">{model.examsCount}회 평가 · {model.accuracy.toFixed(1)}%</Text>
+                    <Anchor href={model.website} target="_blank" size="xs" c="blue">
+                      공식 웹사이트 →
+                    </Anchor>
                   </Box>
                 ))}
               </Stack>
