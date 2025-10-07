@@ -35,6 +35,11 @@ make env
 ```
 
 ### PDF Parsing
+
+**⚠️ 중요: 파싱은 한 번만 실행하면 됩니다!**
+- 파싱된 YAML 파일은 모든 모델이 공유합니다
+- 파싱 모델 추천: GPT-4o (텍스트), GPT-4o Vision (수식/그래프)
+
 ```bash
 # Text-based parsing (Korean, Social Studies, etc.)
 python src/parser/parse_exam.py exams/pdf/2025/국어영역_문제지_홀수형.pdf
@@ -47,10 +52,10 @@ python src/parser/parse_answer_key.py \
   exams/pdf/2025/수학영역_정답표.pdf \
   exams/parsed/2025-math-sat.yaml
 
-# Makefile shortcuts
-make korean    # Parse + inject answers for Korean
-make math      # Parse + inject answers for Math
-make all       # Process all subjects
+# Makefile shortcuts (한 번만 실행)
+make setup-korean    # Parse + inject answers for Korean
+make setup-math      # Parse + inject answers for Math
+make setup-all       # Process all subjects
 ```
 
 ### Evaluation

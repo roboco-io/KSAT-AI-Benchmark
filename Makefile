@@ -8,16 +8,22 @@ help:
 	@echo "  make install          - Python 의존성 설치"
 	@echo "  make env              - 환경변수 파일 생성"
 	@echo ""
-	@echo "📄 문제지 파싱 (LLM):"
+	@echo "📄 문제지 파싱 (한 번만 실행):"
 	@echo "  make parse-korean     - 국어 문제지 파싱 (텍스트)"
 	@echo "  make parse-math       - 수학 문제지 파싱 (Vision API)"
 	@echo "  make parse-english    - 영어 문제지 파싱 (텍스트)"
 	@echo "  make parse-all        - 모든 과목 파싱"
 	@echo ""
-	@echo "🔑 정답표 파싱 (Vision API):"
+	@echo "🔑 정답표 파싱 (한 번만 실행):"
 	@echo "  make answers-korean   - 국어 정답 입력"
 	@echo "  make answers-math     - 수학 정답 입력"
 	@echo "  make answers-all      - 모든 과목 정답 입력"
+	@echo ""
+	@echo "🎊 전체 파이프라인 (파싱+정답, 한 번만):"
+	@echo "  make setup-all        - 모든 과목 파싱 및 정답 입력"
+	@echo "  make setup-korean     - 국어 파싱 및 정답 입력"
+	@echo "  make setup-math       - 수학 파싱 및 정답 입력"
+	@echo "  make setup-english    - 영어 파싱 및 정답 입력"
 	@echo ""
 	@echo "🎯 평가 실행:"
 	@echo "  make evaluate EXAM=<경로>           - 단일 시험 평가 (GPT-4o)"
@@ -173,20 +179,20 @@ answer:
 # =============================================================================
 
 # 전체 파이프라인 (파싱 + 정답)
-all: parse-all answers-all
+setup-all: parse-all answers-all
 	@echo "🎊 전체 파이프라인 완료!"
 	@echo "📝 다음 단계: git add, commit, push"
 
-# 국어만
-korean: parse-korean answers-korean
+# 국어만 (파싱 + 정답)
+setup-korean: parse-korean answers-korean
 	@echo "✅ 국어 처리 완료!"
 
-# 수학만
-math: parse-math answers-math
+# 수학만 (파싱 + 정답)
+setup-math: parse-math answers-math
 	@echo "✅ 수학 처리 완료!"
 
-# 영어만
-english: parse-english answers-english
+# 영어만 (파싱 + 정답)
+setup-english: parse-english answers-english
 	@echo "✅ 영어 처리 완료!"
 
 # =============================================================================

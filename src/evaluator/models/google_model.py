@@ -48,13 +48,22 @@ class GoogleModel(BaseModel):
             user_prompt = self._build_prompt(question_text, choices, passage)
             full_prompt = f"{system_instruction}\n\n{user_prompt}"
             
+            # 안전 필터 설정 (수능 문제 평가를 위해 모든 카테고리 비활성화)
+            safety_settings = {
+                'HARM_CATEGORY_HARASSMENT': 'BLOCK_NONE',
+                'HARM_CATEGORY_HATE_SPEECH': 'BLOCK_NONE',
+                'HARM_CATEGORY_SEXUALLY_EXPLICIT': 'BLOCK_NONE',
+                'HARM_CATEGORY_DANGEROUS_CONTENT': 'BLOCK_NONE',
+            }
+
             # API 호출
             response = self.model.generate_content(
                 full_prompt,
                 generation_config=genai.types.GenerationConfig(
                     temperature=self.temperature,
                     max_output_tokens=self.max_tokens,
-                )
+                ),
+                safety_settings=safety_settings
             )
             
             time_taken = time.time() - start_time
