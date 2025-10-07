@@ -147,8 +147,7 @@ def export_to_json():
     # 통계
     total_exams = len(results)
     total_evaluations = len(all_results_list)
-    total_questions = sum(r['summary']['total_questions'] for r in all_results_list)
-    
+
     # JSON 데이터 생성
     data = {
         'leaderboard': leaderboard,
@@ -156,7 +155,6 @@ def export_to_json():
         'stats': {
             'totalExams': total_exams,
             'totalEvaluations': total_evaluations,
-            'totalQuestions': total_questions,
         },
         'results': all_results_list,
         'exams': exams,  # 시험 문제 데이터 추가
@@ -174,7 +172,6 @@ def export_to_json():
     print(f"✅ Export 완료: {output_file}")
     print(f"   - 리더보드 엔트리: {len(leaderboard)}개")
     print(f"   - 전체 평가 결과: {total_evaluations}개")
-    print(f"   - 총 문제 수: {total_questions}개")
 
 
 if __name__ == '__main__':

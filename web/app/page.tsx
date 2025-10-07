@@ -8,7 +8,7 @@ export default function Home() {
   const [leaderboardBySubject, setLeaderboardBySubject] = useState<any>({});
   const [results, setResults] = useState<any[]>([]);
   const [examsData, setExamsData] = useState<any>({});
-  const [stats, setStats] = useState({ totalExams: 0, totalEvaluations: 0, totalQuestions: 0 });
+  const [stats, setStats] = useState({ totalExams: 0, totalEvaluations: 0 });
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -39,7 +39,7 @@ export default function Home() {
     );
   }
 
-  const { totalExams, totalEvaluations, totalQuestions } = stats;
+  const { totalExams, totalEvaluations } = stats;
 
   // 시험 목록 추출
   const examsList = Object.values(examsData).map((exam: any) => ({
