@@ -298,7 +298,7 @@ export default function Home() {
           </Group>
         </div>
 
-        <SimpleGrid cols={{ base: 1, sm: 3 }} spacing="md">
+        <SimpleGrid cols={{ base: 1, sm: 2 }} spacing="md">
           {/* 평가된 시험 캐러솔 */}
           <Card shadow="sm" padding="lg" radius="md" withBorder>
             <Text size="sm" c="dimmed" mb="xs">평가된 시험</Text>
@@ -306,8 +306,8 @@ export default function Home() {
             <ScrollArea h={120} type="auto">
               <Stack gap="xs">
                 {examsList.map((exam, idx) => (
-                  <Box key={exam.id} p="xs" style={{ 
-                    backgroundColor: 'var(--mantine-color-gray-0)', 
+                  <Box key={exam.id} p="xs" style={{
+                    backgroundColor: 'var(--mantine-color-gray-0)',
                     borderRadius: '4px',
                     border: '1px solid var(--mantine-color-gray-3)'
                   }}>
@@ -326,8 +326,8 @@ export default function Home() {
             <ScrollArea h={120} type="auto">
               <Stack gap="xs">
                 {modelsList.map((model, idx) => (
-                  <Box key={model.name} p="xs" style={{ 
-                    backgroundColor: 'var(--mantine-color-blue-0)', 
+                  <Box key={model.name} p="xs" style={{
+                    backgroundColor: 'var(--mantine-color-blue-0)',
                     borderRadius: '4px',
                     border: '1px solid var(--mantine-color-blue-3)'
                   }}>
@@ -337,12 +337,6 @@ export default function Home() {
                 ))}
               </Stack>
             </ScrollArea>
-          </Card>
-
-          {/* 총 문제 수 */}
-          <Card shadow="sm" padding="lg" radius="md" withBorder>
-            <Text size="sm" c="dimmed" mb="xs">총 문제 수</Text>
-            <Text size="xl" fw={700}>{totalQuestions}개</Text>
           </Card>
         </SimpleGrid>
 
