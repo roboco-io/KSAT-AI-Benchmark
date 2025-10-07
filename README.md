@@ -4,6 +4,7 @@
 
 [![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
+[![Deploy to GitHub Pages](https://github.com/roboco-io/KSAT-AI-Benchmark/actions/workflows/deploy-pages.yml/badge.svg)](https://github.com/roboco-io/KSAT-AI-Benchmark/actions/workflows/deploy-pages.yml)
 [![GitHub Pages](https://img.shields.io/badge/GitHub-Pages-brightgreen)](https://roboco.io/KSAT-AI-Benchmark/)
 
 **🌐 리더보드 바로가기:** [https://roboco.io/KSAT-AI-Benchmark/](https://roboco.io/KSAT-AI-Benchmark/)
