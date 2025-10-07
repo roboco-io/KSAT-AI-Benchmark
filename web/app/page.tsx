@@ -588,6 +588,13 @@ export default function Home() {
           <Text size="sm" c="dimmed" mt="xs">
             💡 각 모델을 클릭하면 문제별 상세 결과와 답변 이유를 확인할 수 있습니다.
           </Text>
+          <Text size="sm" c="orange" mt="md" fw={500}>
+            ⚠️ Google Gemini 2.5 Pro 제외 사유
+          </Text>
+          <Text size="sm" c="dimmed" mt="xs">
+            Google의 안전 필터가 한국어 수능 문제 콘텐츠를 유해 콘텐츠로 오인하여 대부분의 문제에서 SAFETY 응답을 반환합니다.
+            BLOCK_NONE 설정에도 불구하고 정상적인 평가가 불가능하여 벤치마크에서 제외하였습니다.
+          </Text>
         </Card>
       </Stack>
     </Container>

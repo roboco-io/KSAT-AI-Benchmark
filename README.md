@@ -34,19 +34,21 @@ KSAT AI Benchmark는 대한민국 수학능력시험 문제를 활용하여 다�
 
 **지속적인 AI 발전 추적**
 
-- 엄선된 최신 모델 7종으로 집중 벤치마킹
+- 엄선된 최신 모델 6종으로 집중 벤치마킹
   - **OpenAI**: GPT-5, GPT-4o
   - **Anthropic**: Claude Opus 4.1, Claude Sonnet 4.5 (via Perplexity)
-  - **Google**: Gemini 2.5 Pro
   - **Upstage**: Solar Pro (한국어 특화)
   - **Perplexity**: Sonar Pro
 - 동일한 시험으로 시간에 따른 AI 발전을 객관적으로 비교
 - 과목별(국어, 수학, 영어), 영역별(언어이해, 수리추론, 문제해결) 강점과 약점 파악
 
+> **⚠️ Google Gemini 2.5 Pro 제외 사유**
+> Google의 안전 필터가 한국어 수능 문제 콘텐츠를 유해 콘텐츠로 오인하여 대부분의 문제에서 SAFETY 응답(finish_reason=2)을 반환합니다. BLOCK_NONE 설정에도 불구하고 정상적인 평가가 불가능하여 벤치마크에서 제외하였습니다.
+
 ### 주요 특징
 
 - 🤖 **Vision API 기반 지능형 파싱**: GPT-4o Vision으로 복잡한 수식, 그래프, 2단 레이아웃 완벽 처리
-- 🎯 **엄선된 최신 AI 모델**: GPT-5, GPT-4o, Claude Opus 4.1, Claude Sonnet 4.5, Gemini 2.5 Pro, Solar Pro, Sonar Pro
+- 🎯 **엄선된 최신 AI 모델**: GPT-5, GPT-4o, Claude Opus 4.1, Claude Sonnet 4.5, Solar Pro, Sonar Pro
 - 📊 **상세한 결과 분석**: 정답률, 답변 선택 이유, 풀이 시간, 과목별 등수까지 모두 기록
 - ⚡ **완전 자동화 파이프라인**: PDF → Vision 파싱 → 평가 → 웹 배포까지 GitHub Actions로 자동화
 - 🌐 **현대적인 웹 UI**: Next.js + Mantine UI로 구현된 인터랙티브 리더보드
