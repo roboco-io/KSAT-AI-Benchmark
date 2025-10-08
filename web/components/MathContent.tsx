@@ -12,6 +12,10 @@ export function MathContent({ text }: MathContentProps) {
 
   useEffect(() => {
     if (containerRef.current) {
+      // 먼저 텍스트 설정
+      containerRef.current.textContent = text;
+
+      // 그 다음 KaTeX 렌더링
       renderMathInElement(containerRef.current, {
         delimiters: [
           { left: '$$', right: '$$', display: true },
@@ -28,7 +32,6 @@ export function MathContent({ text }: MathContentProps) {
     <div
       ref={containerRef}
       style={{ whiteSpace: 'pre-wrap' }}
-      dangerouslySetInnerHTML={{ __html: text }}
     />
   );
 }
