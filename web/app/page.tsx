@@ -2,6 +2,7 @@
 
 import { Container, Title, Text, Stack, Group, Badge, Card, SimpleGrid, Accordion, Table, ScrollArea, Box, Anchor, Tabs } from '@mantine/core';
 import { useState, useEffect } from 'react';
+import { MathContent } from '@/components/MathContent';
 
 export default function Home() {
   const [leaderboard, setLeaderboard] = useState<any[]>([]);
@@ -179,9 +180,7 @@ export default function Home() {
                                             <Text fw={700} size="md" c="blue">
                                               📝 문제 {q.question_number}번
                                             </Text>
-                                            <Text style={{ whiteSpace: 'pre-wrap' }}>
-                                              {questionData.question_text}
-                                            </Text>
+                                            <MathContent text={questionData.question_text} />
 
                                             {questionData.choices && questionData.choices.length > 0 && (
                                               <Stack gap="xs" mt="sm">
@@ -205,7 +204,7 @@ export default function Home() {
                                                       <Badge color={badgeColor} variant="light" size="lg" mt={4}>
                                                         {choiceNum}
                                                       </Badge>
-                                                      <Text style={{ flex: 1 }}>{choice}</Text>
+                                                      <div style={{ flex: 1 }}><MathContent text={choice} /></div>
                                                       {isCorrectAnswer && <Text c="blue" fw={600}>✓ 정답</Text>}
                                                       {isModelAnswer && !isCorrectAnswer && <Text c="red" fw={600}>✗ 선택</Text>}
                                                       {isModelAnswer && isCorrectAnswer && <Text c="green" fw={600}>✓ 선택</Text>}
@@ -239,9 +238,7 @@ export default function Home() {
 
                                           <div>
                                             <Text size="sm" fw={600} mb="xs">풀이 과정:</Text>
-                                            <Text style={{ whiteSpace: 'pre-wrap' }}>
-                                              {q.reasoning || '풀이 정보 없음'}
-                                            </Text>
+                                            <MathContent text={q.reasoning || '풀이 정보 없음'} />
                                           </div>
 
                                           <Text size="xs" c="dimmed">
@@ -288,9 +285,9 @@ export default function Home() {
             대한민국 수능 문제를 활용한 AI 모델 성능 평가
           </Text>
           <Group gap="xs">
-            <Anchor 
-              href="https://github.com/roboco-io/KSAT-AI-Benchmark" 
-              target="_blank" 
+            <Anchor
+              href="https://github.com/roboco-io/KSAT-AI-Benchmark"
+              target="_blank"
               rel="noopener noreferrer"
               size="sm"
               fw={500}
@@ -298,9 +295,9 @@ export default function Home() {
               📦 GitHub Repository
             </Anchor>
             <Text c="dimmed" size="sm">·</Text>
-            <Anchor 
-              href="https://github.com/roboco-io/KSAT-AI-Benchmark/issues" 
-              target="_blank" 
+            <Anchor
+              href="https://github.com/roboco-io/KSAT-AI-Benchmark/issues"
+              target="_blank"
               rel="noopener noreferrer"
               size="sm"
             >
@@ -308,6 +305,67 @@ export default function Home() {
             </Anchor>
           </Group>
         </div>
+
+        {/* 공지사항 - 상단으로 이동 */}
+        <Card shadow="sm" padding="lg" radius="md" withBorder bg="yellow.0">
+          <Stack gap="sm">
+            <Text size="lg" fw={700} c="orange">
+              ⚠️ 벤치마크 개발 중 - 중요 안내
+            </Text>
+
+            <div>
+              <Text size="sm" fw={600} c="dark" mb="xs">
+                📊 현재 개발 및 테스트 단계입니다
+              </Text>
+              <Text size="sm" c="dimmed">
+                • 정답률/점수보다는 <strong>각 모델의 추론 과정(풀이)</strong>을 중점적으로 참고해 주세요
+              </Text>
+              <Text size="sm" c="dimmed">
+                • 프롬프트 엔지니어링 및 평가 시스템이 지속적으로 개선되고 있습니다
+              </Text>
+              <Text size="sm" c="dimmed">
+                • 결과는 참고용이며, 최종 성능을 대표하지 않을 수 있습니다
+              </Text>
+            </div>
+
+            <div>
+              <Text size="sm" fw={600} c="dark" mb="xs">
+                🔢 답변 번호 안내
+              </Text>
+              <Text size="sm" c="dimmed">
+                • <strong>0번 답변</strong>: 모델이 문제를 풀 수 없는 경우 (빈 응답, JSON 파싱 오류, API 오류 등)
+              </Text>
+              <Text size="sm" c="dimmed">
+                • <strong>1-5번 답변</strong>: 모델이 선택한 정상 답변
+              </Text>
+            </div>
+
+            <div>
+              <Text size="sm" fw={600} c="dark" mb="xs">
+                💡 벤치마크 활용 가이드
+              </Text>
+              <Text size="sm" c="dimmed">
+                • 각 모델을 클릭하면 문제별 상세 결과와 <strong>답변 이유(reasoning)</strong>를 확인할 수 있습니다
+              </Text>
+              <Text size="sm" c="dimmed">
+                • 같은 문제를 여러 모델이 어떻게 다르게 푸는지 비교해보세요
+              </Text>
+              <Text size="sm" c="dimmed">
+                • 이 벤치마크는 대한민국 수능 문제를 활용하여 AI 모델의 언어 이해 및 추론 능력을 평가합니다
+              </Text>
+            </div>
+
+            <div>
+              <Text size="sm" fw={600} c="orange" mb="xs">
+                ⚠️ Google Gemini 2.5 Pro 제외 사유
+              </Text>
+              <Text size="sm" c="dimmed">
+                Google의 안전 필터가 한국어 수능 문제 콘텐츠를 유해 콘텐츠로 오인하여 대부분의 문제에서 SAFETY 응답을 반환합니다.
+                BLOCK_NONE 설정에도 불구하고 정상적인 평가가 불가능하여 벤치마크에서 제외하였습니다.
+              </Text>
+            </div>
+          </Stack>
+        </Card>
 
         <SimpleGrid cols={{ base: 1, sm: 2 }} spacing="md">
           {/* 평가된 시험 캐러솔 */}
@@ -476,9 +534,7 @@ export default function Home() {
                                                     <Text fw={700} size="md" c="blue">
                                                       📝 문제 {q.question_number}번
                                                     </Text>
-                                                    <Text style={{ whiteSpace: 'pre-wrap' }}>
-                                                      {questionData.question_text}
-                                                    </Text>
+                                                    <MathContent text={questionData.question_text} />
 
                                                     {questionData.choices && questionData.choices.length > 0 && (
                                                       <Stack gap="xs" mt="sm">
@@ -502,7 +558,7 @@ export default function Home() {
                                                               <Badge color={badgeColor} variant="light" size="lg" mt={4}>
                                                                 {choiceNum}
                                                               </Badge>
-                                                              <Text style={{ flex: 1 }}>{choice}</Text>
+                                                              <div style={{ flex: 1 }}><MathContent text={choice} /></div>
                                                               {isCorrectAnswer && <Text c="blue" fw={600}>✓ 정답</Text>}
                                                               {isModelAnswer && !isCorrectAnswer && <Text c="red" fw={600}>✗ 선택</Text>}
                                                               {isModelAnswer && isCorrectAnswer && <Text c="green" fw={600}>✓ 선택</Text>}
@@ -536,9 +592,7 @@ export default function Home() {
 
                                                   <div>
                                                     <Text size="sm" fw={600} mb="xs">풀이 과정:</Text>
-                                                    <Text style={{ whiteSpace: 'pre-wrap' }}>
-                                                      {q.reasoning || '풀이 정보 없음'}
-                                                    </Text>
+                                                    <MathContent text={q.reasoning || '풀이 정보 없음'} />
                                                   </div>
 
                                                   <Text size="xs" c="dimmed">
@@ -593,22 +647,6 @@ export default function Home() {
             </Tabs>
           </Card>
         </div>
-
-        <Card shadow="sm" padding="lg" radius="md" withBorder>
-          <Text size="sm" c="dimmed">
-            📊 이 벤치마크는 대한민국 수능 문제를 활용하여 AI 모델의 언어 이해 및 추론 능력을 평가합니다.
-          </Text>
-          <Text size="sm" c="dimmed" mt="xs">
-            💡 각 모델을 클릭하면 문제별 상세 결과와 답변 이유를 확인할 수 있습니다.
-          </Text>
-          <Text size="sm" c="orange" mt="md" fw={500}>
-            ⚠️ Google Gemini 2.5 Pro 제외 사유
-          </Text>
-          <Text size="sm" c="dimmed" mt="xs">
-            Google의 안전 필터가 한국어 수능 문제 콘텐츠를 유해 콘텐츠로 오인하여 대부분의 문제에서 SAFETY 응답을 반환합니다.
-            BLOCK_NONE 설정에도 불구하고 정상적인 평가가 불가능하여 벤치마크에서 제외하였습니다.
-          </Text>
-        </Card>
       </Stack>
     </Container>
   );

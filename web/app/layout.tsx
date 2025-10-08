@@ -1,5 +1,6 @@
 import '@mantine/core/styles.css';
 import './globals.css';
+import 'katex/dist/katex.min.css';
 
 import { ColorSchemeScript, MantineProvider } from '@mantine/core';
 import { Inter } from 'next/font/google';
