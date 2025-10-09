@@ -416,6 +416,30 @@ export function LeaderboardContent() {
                 BLOCK_NONE 설정에도 불구하고 정상적인 평가가 불가능하여 벤치마크에서 제외하였습니다.
               </Text>
             </div>
+
+            <div>
+              <Text size="sm" fw={600} c="blue" mb="xs">
+                🚀 컨트리뷰터 모집
+              </Text>
+              <Text size="sm" c="dimmed">
+                • 이 프로젝트는 오픈소스 프로젝트입니다. 누구나 기여할 수 있습니다!
+              </Text>
+              <Text size="sm" c="dimmed">
+                • 새로운 모델 추가, 프롬프트 개선, 버그 수정, 문서화 등 다양한 방식으로 참여하실 수 있습니다.
+              </Text>
+              <Text size="sm" c="dimmed">
+                • GitHub 저장소:{' '}
+                <Anchor
+                  href="https://github.com/roboco-io/KSAT-AI-Benchmark"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  fw={600}
+                  c="blue"
+                >
+                  roboco-io/KSAT-AI-Benchmark
+                </Anchor>
+              </Text>
+            </div>
           </Stack>
         </Card>
 
