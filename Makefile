@@ -62,6 +62,11 @@ help:
 	@echo "  SIMPLE=1 make gpt-5 2025 korean      - 간단한 로그만 표시"
 	@echo "  SIMPLE=1 make all 2025 all           - 모든 평가에 간단한 로그 적용"
 	@echo ""
+	@echo "⚡ 병렬 처리 모드 (기본: 활성화):"
+	@echo "  기본값: 10개 스레드로 병렬 처리 (속도 3-5배 향상)"
+	@echo "  SEQUENTIAL=1 make gpt-5 2025 korean  - 순차 처리 (디버깅용)"
+	@echo "  MAX_WORKERS=20 make gpt-5 2025 all   - 최대 스레드 수 조정"
+	@echo ""
 	@echo "🌐 웹 배포:"
 	@echo "  make export-web                     - 평가 결과를 JSON으로 export"
 	@echo "  make web-build                      - Next.js 웹사이트 빌드"
@@ -308,6 +313,10 @@ DEFAULT_YEAR := 2025
 DEFAULT_SUBJECTS := all
 DEFAULT_MODEL := gpt-4o
 
+# 병렬 처리 설정 (기본: 활성화)
+PARALLEL ?= 1
+MAX_WORKERS ?= 10
+
 # 모델별 타겟 정의
 .PHONY: gpt-5 gpt-4o claude-opus-4-1 claude-sonnet-4-5 gemini-2.5-pro solar-pro sonar-pro all-models
 
@@ -350,15 +359,22 @@ run-evaluation:
 	EVAL_MODEL=$${MODEL_NAME:-$(DEFAULT_MODEL)}; \
 	VERBOSE_FLAG="--verbose"; \
 	LOG_MODE="상세 로그"; \
+	PARALLEL_FLAG="--parallel --max-workers $(MAX_WORKERS)"; \
+	PARALLEL_MODE="병렬 ($(MAX_WORKERS) 스레드)"; \
 	if [ "$$SIMPLE" = "1" ] || [ "$$SIMPLE" = "true" ]; then \
 		VERBOSE_FLAG=""; \
 		LOG_MODE="간단한 로그"; \
+	fi; \
+	if [ "$$PARALLEL" = "0" ] || [ "$$SEQUENTIAL" = "1" ]; then \
+		PARALLEL_FLAG=""; \
+		PARALLEL_MODE="순차 처리"; \
 	fi; \
 	echo "📋 설정:"; \
 	echo "   모델: $$EVAL_MODEL"; \
 	echo "   연도: $$EVAL_YEAR"; \
 	echo "   과목: $$EVAL_SUBJECTS"; \
 	echo "   로그: $$LOG_MODE"; \
+	echo "   처리: $$PARALLEL_MODE"; \
 	echo ""; \
 	TOTAL_EVALS=0; \
 	SUCCESS_EVALS=0; \
@@ -392,7 +408,7 @@ run-evaluation:
 				echo "=========================================="; \
 				echo "📝 평가 중: $$model | $$year | $$subject"; \
 				echo "=========================================="; \
-				if python src/evaluator/evaluate.py "$$EXAM_FILE" --model "$$model" $$VERBOSE_FLAG; then \
+				if python src/evaluator/evaluate.py "$$EXAM_FILE" --model "$$model" $$VERBOSE_FLAG $$PARALLEL_FLAG; then \
 					SUCCESS_EVALS=$$((SUCCESS_EVALS + 1)); \
 					echo "✅ 완료: $$model - $$year $$subject"; \
 				else \
