@@ -78,10 +78,45 @@ make gpt-4o all korean                 # GPT-4o on all years Korean
 # After evaluation, summary is automatically displayed
 ```
 
+**로그 모드 (기본값: 상세 로그)**:
+```bash
+# 기본값: 상세 로그 모드 (자동 활성화)
+make gpt-5 2025 korean                   # GPT-5로 2025 국어 평가 (상세 로그)
+make claude-opus-4-1 2025 all            # Claude Opus 4.1로 모든 과목 (상세 로그)
+
+# 간단한 로그만 표시 (SIMPLE 모드)
+SIMPLE=1 make gpt-5 2025 korean          # 간단한 로그만 표시
+SIMPLE=1 make all 2025 all               # 모든 평가에 간단한 로그 적용
+
+# 또는 직접 Python 실행
+python src/evaluator/evaluate.py exams/parsed/2025-korean-sat.yaml --model gpt-4o --verbose
+# 단축 옵션: -v
+python src/evaluator/evaluate.py exams/parsed/2025-korean-sat.yaml --model gpt-4o -v
+
+# 로그 출력:
+# - 콘솔: 문제별 요약 로그 (🐛 마크)
+# - 파일: logs/{exam_id}_{model_name}_{timestamp}.log (상세 로그)
+
+# 로그 파일 내용:
+# - 문제별 상세 정보 (지문, 질문, 선택지)
+# - API 요청 내용
+# - API 응답 내용 (선택한 답, 정답, 이유)
+# - 소요 시간
+# - 정답 여부
+```
+
 **Traditional Evaluation Commands**:
 ```bash
 # Evaluate with single model
 python src/evaluator/evaluate.py exams/parsed/2025-korean-sat.yaml --model gpt-4o
+
+# Evaluate specific questions only (useful for testing/debugging, saves API costs)
+python src/evaluator/evaluate.py exams/parsed/2025-korean-sat.yaml --model gpt-5 --questions "1-5"      # Questions 1-5
+python src/evaluator/evaluate.py exams/parsed/2025-korean-sat.yaml --model gpt-5 -q "1,3,5"             # Questions 1, 3, 5
+python src/evaluator/evaluate.py exams/parsed/2025-korean-sat.yaml --model gpt-5 -q "1-3,7,10-12"       # Questions 1-3, 7, 10-12
+
+# Evaluate with verbose mode
+python src/evaluator/evaluate.py exams/parsed/2025-korean-sat.yaml --model gpt-4o --verbose
 
 # Evaluate with all models
 python src/evaluator/evaluate.py exams/parsed/2025-korean-sat.yaml --all-models
@@ -167,12 +202,19 @@ PDF → LLM Parser (GPT-4o Vision) → JSON → YAML Converter → exams/parsed/
 **2. Evaluator System** (`src/evaluator/`)
 - `evaluate.py`: Main CLI for evaluation
 - `evaluator.py`: Core evaluation engine that orchestrates the process
+  - **Passages Schema Support**: Automatically handles both legacy (inline passage) and optimized (passage_id reference) schemas
+  - `passages_map`: Maps passage_id → passage_text for efficient lookup
+  - `load_exam()`: Builds passage map from passages section if present
+  - `_solve_single_question()`: Resolves passage_id references before sending to model
 - `base_model.py`: Abstract base class defining the model interface
 - `models/`: Provider-specific model implementations (OpenAI, Anthropic, Google, Upstage, Perplexity)
 
 **Evaluation Flow**:
 ```
-YAML Exam → Evaluator → Model Instance → solve_question() → ModelResponse → results/*.yaml
+YAML Exam → Evaluator.load_exam() → Build passages_map
+          → Evaluator._solve_single_question() → Resolve passage_id
+          → Model.solve_question(passage_text) → ModelResponse
+          → results/*.yaml
 ```
 
 **3. Model System**
@@ -190,25 +232,83 @@ YAML Exam → Evaluator → Model Instance → solve_question() → ModelRespons
 ### Data Formats
 
 **Exam YAML** (`exams/parsed/*.yaml`):
+
+KSAT 시험 데이터는 두 가지 스키마를 지원합니다:
+
+**1. Optimized Schema (권장 - 국어 시험):**
 ```yaml
 exam_id: 2025-korean-sat
-title: 2025학년도 수능 KOREAN
+title: 2025학년도 수능 국어영역
 subject: korean
 year: 2025
 parsing_info:
   method: vision
   model: gpt-4o
+  parsed_at: '2025-10-07T13:09:10.698243'
+
+# 지문 중앙 관리 (중복 제거)
+passages:
+  - passage_id: p1
+    passage_text: "밑줄 긋기는 일상적으로 유용하게 활용할 수 있는 독서 전략이다..."
+    question_numbers: [1, 2, 3]  # 참고용
+
+  - passage_id: p2
+    passage_text: "(가) 서양의 과학과 기술, 철학과 수용은..."
+    question_numbers: [4, 5, 6, 7, 8, 9]
+
+# 문제들은 passage_id로 지문 참조
+questions:
+  - question_id: q1
+    question_number: 1
+    question_text: "윗글의 내용과 일치하지 않는 것은?"
+    passage_id: p1  # 지문 참조
+    choices: ["선택지1", "선택지2", ...]
+    correct_answer: 3  # 1-5
+    points: 2
+    explanation: null
+
+  - question_id: q2
+    question_number: 2
+    question_text: "㉠에 해당하는 내용으로 가장 적절한 것은?"
+    passage_id: p1  # 같은 지문 재사용
+    choices: [...]
+    correct_answer: 4
+    points: 2
+    explanation: null
+```
+
+**장점:**
+- 지문 중복 제거로 파일 크기 **40% 절감** (국어: 73KB → 43KB)
+- 같은 지문을 공유하는 문제 그룹 명확히 표현
+- 평가 시 토큰 사용량 약 **70% 절감** 가능
+- 지문 수정 시 한 곳만 변경하면 모든 문제에 반영
+
+**2. Legacy Schema (기존 - 수학/영어):**
+```yaml
+exam_id: 2025-math-sat
+title: 2025학년도 수능 수학영역
+subject: math
+year: 2025
+parsing_info:
+  method: vision
+  model: gpt-4o
   parsed_at: '2025-10-06T00:08:47.744859'
+
 questions:
   - question_id: q1
     question_number: 1
     question_text: "문제 텍스트"
-    passage: "지문 (선택적)"
+    passage: "지문 전체 텍스트 (선택적)"  # 직접 포함
     choices: ["선택지1", "선택지2", ...]
     correct_answer: 3  # 1-5
     points: 2
     explanation: null
 ```
+
+**호환성:**
+- Evaluator는 두 스키마를 자동으로 감지하고 처리
+- `passage` 필드 우선, 없으면 `passage_id`로 조회
+- 기존 결과 파일과 100% 호환
 
 **Result YAML** (`results/{exam_id}/{model_name}.yaml`):
 ```yaml
