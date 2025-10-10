@@ -446,21 +446,7 @@ export function LeaderboardContent() {
         </Card>
 
         {/* 통계 카드 */}
-        <SimpleGrid cols={{ base: 1, sm: 2, md: 4 }} spacing="md">
-          <Card shadow="sm" padding="lg" radius="md" withBorder>
-            <Stack gap="xs">
-              <Text size="sm" c="dimmed">평가된 시험</Text>
-              <Text size="xl" fw={700}>{totalExams}개</Text>
-            </Stack>
-          </Card>
-
-          <Card shadow="sm" padding="lg" radius="md" withBorder>
-            <Stack gap="xs">
-              <Text size="sm" c="dimmed">전체 평가 수</Text>
-              <Text size="xl" fw={700}>{totalEvaluations}개</Text>
-            </Stack>
-          </Card>
-
+        <SimpleGrid cols={{ base: 1, sm: 2 }} spacing="md">
           <Card shadow="sm" padding="lg" radius="md" withBorder>
             <Stack gap="xs">
               <Text size="sm" c="dimmed">평가 모델 수</Text>
@@ -470,7 +456,7 @@ export function LeaderboardContent() {
 
           <Card shadow="sm" padding="lg" radius="md" withBorder>
             <Stack gap="xs">
-              <Text size="sm" c="dimmed">지원 과목</Text>
+              <Text size="sm" c="dimmed">평가 과목</Text>
               <Text size="xl" fw={700}>국어, 수학, 영어</Text>
             </Stack>
           </Card>
