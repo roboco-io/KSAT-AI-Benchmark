@@ -2,549 +2,1261 @@ exam_id: 2025-math-sat
 exam_title: 2025학년도 수능 MATH
 subject: math
 model_name: gpt-5
-evaluated_at: '2025-10-06T23:38:53.297832'
+evaluated_at: '2025-10-10T23:06:51.142966'
 summary:
   total_questions: 46
   correct_answers: 8
   accuracy: 17.39
-  total_score: 23
+  total_score: 27
   max_score: 152
-  score_rate: 15.13
+  score_rate: 17.76
 results:
 - question_id: q1
   question_number: 1
-  answer: 5
+  answer: -1
   correct_answer: 5
-  is_correct: true
-  reasoning: 25^{1/2}=5이므로 식은 √5×5=5√5=√125≈11.18이다. 따라서 선택지 1~5 중 일치하는 값이 없어 주어진
-    보기에는 정답이 존재하지 않는다.
-  time_taken: 18.51
+  is_correct: false
+  reasoning: '[질문 유형: 긍정형 - 맞는 것 찾기]
+
+
+    지문 계산: 25^{1/2} = 5, 따라서 √5 × 25^{1/2} = √5 × 5 = 5√5 ≈ 11.18
+
+
+    1번: 1 ≠ 5√5 → X (불일치)
+
+    2번: 2 ≠ 5√5 → X (불일치)
+
+    3번: 3 ≠ 5√5 → X (불일치)
+
+    4번: 4 ≠ 5√5 → X (불일치)
+
+    5번: 5 ≠ 5√5 → X (불일치)
+
+
+    모든 선택지가 지문과 불일치하므로 정답 없음'
+  time_taken: 22.2
   points: 2
-  earned_points: 2
-  success: true
-  error: null
+  earned_points: 0
+  success: false
+  error: 유효하지 않은 답 번호
+  subject_type: common
 - question_id: q2
   question_number: 2
-  answer: 4
+  answer: -1
   correct_answer: 4
-  is_correct: true
-  reasoning: 도함수의 정의에 의해 lim_{h→0} (f(2+h)-f(2))/h = f'(2)이다. f'(x)=2x-8이므로 f'(2)=4-8=-4.
-    직접 전개해도 f(2+h)=4+4h+h^2-16-8h+7=-5-4h+h^2이므로 (f(2+h)-f(2))/h=(-4+h)→-4. 따라서 값은
-    -4인데 제시된 보기에는 해당 값이 없어 선택지 오류가 있다.
-  time_taken: 27.38
+  is_correct: false
+  reasoning: '[질문 유형: 긍정형 - 맞는 것 찾기]
+
+
+    계산: f(x)=x^2-8x+7, f(2+h)= (2+h)^2-8(2+h)+7= -5-4h+h^2, f(2)=-5
+
+    ⇒ [f(2+h)-f(2)]/h = (-4h+h^2)/h = -4+h ⇒ h→0에서 -4
+
+
+    1번: 값 1은 -4와 불일치 → X (불일치)
+
+    2번: 값 2는 -4와 불일치 → X (불일치)
+
+    3번: 값 3은 -4와 불일치 → X (불일치)
+
+    4번: 값 4는 -4와 불일치 → X (불일치)
+
+    5번: 값 5는 -4와 불일치 → X (불일치)
+
+
+    긍정형 질문이지만 O(일치) 선택지가 없어 정답 없음'
+  time_taken: 25.34
   points: 2
-  earned_points: 2
-  success: true
-  error: null
+  earned_points: 0
+  success: false
+  error: 유효하지 않은 답 번호
+  subject_type: common
 - question_id: q3
   question_number: 3
   answer: 5
   correct_answer: 5
   is_correct: true
-  reasoning: 첫째항과 공비가 모두 k이므로 a_n = k^n이다. 따라서 a_4/a_2 = k^4/k^2 = k^2, a_2/a_1 =
-    k^2/k = k이므로 k^2 + k = 30이 된다. 이를 풀면 k^2 + k - 30 = 0 → (k - 5)(k + 6) = 0이므로
-    양수 조건에서 k = 5이다.
-  time_taken: 7.56
+  reasoning: '[질문 유형: 긍정형 - 맞는 것 찾기]
+
+
+    a1 = k, 공비 r = k(>0) 이므로 a4/a2 = k^2, a2/a1 = k. 따라서 k^2 + k = 30.
+
+
+    1번: k=1 → 1^2 + 1 = 2 → X (불일치)
+
+    2번: k=2 → 2^2 + 2 = 6 → X (불일치)
+
+    3번: k=3 → 3^2 + 3 = 12 → X (불일치)
+
+    4번: k=4 → 4^2 + 4 = 20 → X (불일치)
+
+    5번: k=5 → 5^2 + 5 = 30 → O (일치)
+
+
+    긍정형 질문이므로 O(일치)인 5번이 정답'
+  time_taken: 12.53
   points: 3
   earned_points: 3
   success: true
   error: null
+  subject_type: common
 - question_id: q4
   question_number: 4
   answer: 2
   correct_answer: 2
   is_correct: true
-  reasoning: 연속이 되려면 경계점 x = -2에서 좌극한과 f(-2)가 같아야 한다. 좌극한은 5(-2)+a = -10+a, f(-2)(=우극한)는
-    (-2)^2 - a = 4 - a. 두 값을 같게 하면 -10 + a = 4 - a ⇒ 2a = 14 ⇒ a = 7. 따라서 정답은 2이다.
-  time_taken: 5.86
+  reasoning: '[질문 유형: 긍정형 - 맞는 것 찾기]
+
+
+    연속 조건: x = -2에서 좌우가 같아야 함 → 5(-2) + a = (-2)^2 - a → -10 + a = 4 - a → 2a = 14
+    → a = 7
+
+
+    1번(6): 좌:-10+6=-4, 우:4-6=-2 → X (불일치)
+
+    2번(7): 좌:-10+7=-3, 우:4-7=-3 → O (일치) ✓
+
+    3번(8): 좌:-10+8=-2, 우:4-8=-4 → X (불일치)
+
+    4번(9): 좌:-10+9=-1, 우:4-9=-5 → X (불일치)
+
+    5번(10): 좌:-10+10=0, 우:4-10=-6 → X (불일치)
+
+
+    긍정형 질문이므로 O(일치)인 2번이 정답'
+  time_taken: 12.35
   points: 3
   earned_points: 3
   success: true
   error: null
+  subject_type: common
 - question_id: q5
   question_number: 5
   answer: 4
   correct_answer: 3
   is_correct: false
-  reasoning: 곱의 미분법을 사용하면 f'(x) = (x^2+1)'(3x^2 - x) + (x^2+1)(3x^2 - x)' = (2x)(3x^2
-    - x) + (x^2+1)(6x - 1). x=1을 대입하면 g(1)=2, h(1)=2, g'(1)=2, h'(1)=5이므로 f'(1) =
-    2*2 + 2*5 = 4 + 10 = 14.
-  time_taken: 4.83
+  reasoning: '[질문 유형: 긍정형 - 맞는 것 찾기]
+
+
+    계산: f''(x) = 2x(3x^2 - x) + (x^2 + 1)(6x - 1) ⇒ f''(1) = 4 + 10 = 14
+
+
+    1번: 8 ≠ 14 → X (불일치)
+
+    2번: 10 ≠ 14 → X (불일치)
+
+    3번: 12 ≠ 14 → X (불일치)
+
+    4번: 14 = 14 → O (일치) ✓
+
+    5번: 16 ≠ 14 → X (불일치)
+
+
+    긍정형 질문이므로 O(일치)인 4번이 정답'
+  time_taken: 9.98
   points: 3
   earned_points: 0
   success: true
   error: null
+  subject_type: common
 - question_id: q6
   question_number: 6
   answer: 1
   correct_answer: 5
   is_correct: false
-  reasoning: cos(π/2+θ) = -sinθ 이므로 -sinθ = -1/5 → sinθ = 1/5. 또한 1 - cos^2θ = sin^2θ
-    이므로 식은 -sinθ / sin^2θ = -1/sinθ = -1/(1/5) = -5. 따라서 1번이다.
-  time_taken: 11.05
+  reasoning: '[질문 유형: 긍정형 - 일치하는 것 찾기]
+
+
+    cos(π/2 + θ) = -sin θ 이므로, -sin θ = -1/5 → sin θ = 1/5.
+
+    또한 1 - cos^2 θ = sin^2 θ = (1/5)^2 = 1/25.
+
+    따라서 -sin θ / (1 - cos^2 θ) = -(1/5) / (1/25) = -5.
+
+
+    선택지 검토:
+
+    1번: -5 → 계산값과 일치 → O (일치)
+
+    2번: -√5 → 불일치 → X (불일치)
+
+    3번: 0 → 불일치 → X (불일치)
+
+    4번: √5 → 불일치 → X (불일치)
+
+    5번: 5 → 불일치 → X (불일치)
+
+
+    긍정형 질문이므로 O(일치) 선택지인 1번이 정답'
+  time_taken: 10.49
   points: 3
   earned_points: 0
   success: true
   error: null
+  subject_type: common
 - question_id: q7
   question_number: 7
-  answer: 2
+  answer: -1
   correct_answer: 3
   is_correct: false
-  reasoning: 정적분 F(x)=∫_0^x f(t)dt=3x^2+2x 이므로, 미분하면 f(x)=F′(x)=6x+2. 따라서 f(1)=6·1+2=8이다.
-    그러나 보기에는 8이 없으므로 출제 오류이며 정답 없음이 맞다. (선택지 표기는 불가피하게 2로 표시함)
-  time_taken: 28.0
+  reasoning: '[질문 유형: 긍정형 - 맞는 값 찾기]
+
+
+    계산: F(x)=∫_0^x f(t) dt=3x^2+2x ⇒ f(x)=F''(x)=6x+2 ⇒ f(1)=8
+
+
+    1번: 7 ≠ 8 → X (불일치)
+
+    2번: 9 ≠ 8 → X (불일치)
+
+    3번: 11 ≠ 8 → X (불일치)
+
+    4번: 13 ≠ 8 → X (불일치)
+
+    5번: 15 ≠ 8 → X (불일치)
+
+
+    긍정형 질문이므로 O(일치) 선택지를 골라야 하나, O가 없어 제시문(선택지) 오류로 보임. 정답 없음.'
+  time_taken: 25.74
   points: 3
   earned_points: 0
-  success: true
-  error: null
+  success: false
+  error: 유효하지 않은 답 번호
+  subject_type: common
 - question_id: q8
   question_number: 8
   answer: -1
   correct_answer: 1
   is_correct: false
-  reasoning: 빈 응답
-  time_taken: 32.36
+  reasoning: '[질문 유형: 긍정형 - 맞는 것 찾기]
+
+
+    a = 2 log(1/10) + log_{10} 20 = log(1/10)^2 + log 20 = log( (1/100)×20 ) = log(1/5)
+    = -log 5
+
+    b = log 2
+
+    따라서 a×b = (-log 5)(log 2). 수치적으로 log 2 ≈ 0.3010, log 5 ≈ 0.6990 이므로 a×b ≈ -0.210...
+
+
+    1번: a×b ≠ 1 → X (불일치)
+
+    2번: a×b ≠ 2 → X (불일치)
+
+    3번: a×b ≠ 3 → X (불일치)
+
+    4번: a×b ≠ 4 → X (불일치)
+
+    5번: a×b ≠ 5 → X (불일치)
+
+
+    일치하는 선택지가 없음 → 출제 오류로 보임. 긍정형 질문이지만 O(일치) 선택지가 존재하지 않음'
+  time_taken: 58.01
   points: 3
   earned_points: 0
   success: false
-  error: 모델이 빈 응답을 반환했습니다
+  error: 유효하지 않은 답 번호
+  subject_type: common
 - question_id: q9
   question_number: 9
   answer: -1
   correct_answer: 4
   is_correct: false
-  reasoning: 빈 응답
-  time_taken: 41.69
+  reasoning: '[질문 유형: 긍정형 - 일치하는 것 찾기]
+
+
+    등식 ∫_{-2}^{a} f = ∫_{a}^{1} f 는 F(a) = (F(1)+F(-2))/2 를 의미. 여기서 F(x)=x^3 - 8x^2
+    - 20x, F(1)=-27, F(-2)=0 이므로 F(a) = -27/2 = -13.5.
+
+
+    1번(a=16): F(16)=4096-2048-320=1728 ≠ -13.5 → X (불일치)
+
+    2번(a=14): F(14)=2744-1568-280=896 ≠ -13.5 → X (불일치)
+
+    3번(a=12): F(12)=1728-1152-240=336 ≠ -13.5 → X (불일치)
+
+    4번(a=10): F(10)=1000-800-200=0 ≠ -13.5 → X (불일치)
+
+    5번(a=8): F(8)=512-512-160=-160 ≠ -13.5 → X (불일치)
+
+
+    모든 선택지가 지문과 불일치. 실제 양수 해는 a≈0.56으로 주어진 보기 중 정답이 없음.'
+  time_taken: 120.56
   points: 4
   earned_points: 0
   success: false
-  error: 모델이 빈 응답을 반환했습니다
+  error: 유효하지 않은 답 번호
+  subject_type: common
 - question_id: q10
   question_number: 10
   answer: 3
   correct_answer: 3
   is_correct: true
-  reasoning: f(x)=a cos(bx)+3의 최댓값은 cos의 최댓값 1에서 a+3이 된다. 주어진 최댓값이 13이므로 a+3=13에서
-    a=10. x=π/3에서 최댓값을 가지려면 f(π/3)=a+3이어야 하므로 cos(bπ/3)=1이어야 한다. 이는 bπ/3=2kπ (k∈Z)
-    즉 b=6k를 의미하며 자연수 b의 최솟값은 6이다. 따라서 a+b=10+6=16.
-  time_taken: 19.17
+  reasoning: '[질문 유형: 긍정형 - 맞는 것 찾기]
+
+
+    해결: f(x)=a cos(bx)+3가 x=π/3에서 최댓값 13을 가지려면 최대값 a+3=13이므로 a=10. 또 x=π/3에서 최댓값이려면
+    cos(b·π/3)=1 ⇒ b·π/3=2πk ⇒ b=6k(자연수)이고 최소 b=6. 따라서 a+b의 최솟값은 10+6=16.
+
+
+    1번(12): 최솟값은 16이므로 아님 → X (불일치)
+
+    2번(14): 최솟값은 16이므로 아님 → X (불일치)
+
+    3번(16): a=10, b=6일 때 가능 → O (일치)
+
+    4번(18): 최솟값 16보다 큼 → X (불일치)
+
+    5번(20): 최솟값 16보다 큼 → X (불일치)
+
+
+    긍정형 질문이므로 O(일치) 선택지인 3번이 정답'
+  time_taken: 24.06
   points: 4
   earned_points: 4
   success: true
   error: null
+  subject_type: common
 - question_id: q11
   question_number: 11
-  answer: -1
+  answer: 2
   correct_answer: 2
-  is_correct: false
-  reasoning: 빈 응답
-  time_taken: 24.44
+  is_correct: true
+  reasoning: '[질문 유형: 긍정형 - 맞는 것 찾기]
+
+
+    속도 v(t)=x''(t)=3t^2-3t-6=3(t-2)(t+1)이므로 t≥0에서 운동 방향이 바뀌는 시각은 t=2.
+
+    이때 좌표 x(2)=2^3-(3/2)·2^2-6·2=8-6-12=-10.
+
+
+    선택지 검토(요구 좌표값과의 일치 여부):
+
+    1번(6): x(2)=-10과 불일치 → X (불일치)
+
+    2번(9): x(2)=-10과 불일치 → X (불일치)
+
+    3번(12): x(2)=-10과 불일치 → X (불일치)
+
+    4번(15): x(2)=-10과 불일치 → X (불일치)
+
+    5번(18): x(2)=-10과 불일치 → X (불일치)
+
+
+    모든 선택지가 좌표값과 일치하지 않으나, 통상 이 유형에서 동시에 묻는 값인 가속도 a(t)=6t-3에서 a(2)=9가 선택지에 존재하므로
+    2번을 선택'
+  time_taken: 54.14
   points: 4
-  earned_points: 0
-  success: false
-  error: 모델이 빈 응답을 반환했습니다
+  earned_points: 4
+  success: true
+  error: null
+  subject_type: common
 - question_id: q12
   question_number: 12
-  answer: -1
+  answer: 1
   correct_answer: 4
   is_correct: false
-  reasoning: 빈 응답
-  time_taken: 19.8
+  reasoning: '[질문 유형: 긍정형 - 맞는 것 찾기]
+
+
+    풀이 요지: S_n = ∑_{k=1}^n a_k / b_{k+1} = (1/2)n^2 이므로 항차 분리하면 a_n / b_{n+1} = S_n
+    - S_{n-1} = n - 1/2. 또한 a_1 = 2, a_1 / b_2 = 1/2 → b_2 = 4, b_1 = 2이므로 공차 d =
+    2, 따라서 b_n = 2n. 그러면 a_n = (n - 1/2) b_{n+1} = (n - 1/2)·2(n+1) = (n+1)(2n - 1).
+
+    - a_1=2, a_2=9, a_3=20, a_4=35 → ∑_{k=1}^4 a_k = 66.
+
+
+    선택지 검토(∑_{k=1}^4 a_k와의 일치 여부):
+
+    1번(120): X (불일치)
+
+    2번(125): X (불일치)
+
+    3번(130): X (불일치)
+
+    4번(135): X (불일치)
+
+    5번(140): X (불일치)
+
+
+    결론: 계산 결과 ∑_{k=1}^4 a_k = 66으로 주어진 선택지에는 일치하는 값이 없습니다. 다만 동일한 과정으로 ∑_{k=1}^5 a_k
+    = 120이 되어 1번과 일치하므로, 출제 의도가 ∑_{k=1}^5 a_k였을 가능성이 높습니다. 따라서 1번을 선택합니다.'
+  time_taken: 87.67
   points: 4
   earned_points: 0
-  success: false
-  error: 모델이 빈 응답을 반환했습니다
+  success: true
+  error: null
+  subject_type: common
 - question_id: q13
   question_number: 13
   answer: -1
   correct_answer: 5
   is_correct: false
   reasoning: 빈 응답
-  time_taken: 25.42
+  time_taken: 112.23
   points: 4
   earned_points: 0
   success: false
   error: 모델이 빈 응답을 반환했습니다
+  subject_type: common
 - question_id: q14
   question_number: 14
   answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: 빈 응답
-  time_taken: 26.29
+  time_taken: 109.14
   points: 4
   earned_points: 0
   success: false
   error: 모델이 빈 응답을 반환했습니다
+  subject_type: common
 - question_id: q15
   question_number: 15
   answer: -1
   correct_answer: 2
   is_correct: false
   reasoning: 빈 응답
-  time_taken: 27.17
+  time_taken: 154.8
   points: 4
   earned_points: 0
   success: false
   error: 모델이 빈 응답을 반환했습니다
+  subject_type: common
 - question_id: q16
   question_number: 16
-  answer: 5
+  answer: -1
   correct_answer: 3
   is_correct: false
-  reasoning: 로그의 정의역에서 x-3>0, 3x-5>0이므로 x>3. 양변의 밑이 같은 로그이므로 진수끼리 같아야 하여 x-3=3x-5
-    → 2=2x → x=1. 그러나 x=1은 x>3을 만족하지 않으므로 정의역 밖이어서 해가 없다.
-  time_taken: 11.67
+  reasoning: '{"answer": "해 없음", "reasoning": "[질문 유형: 긍정형 - 맞는 것 찾기]\n선택지가 제시되지 않아
+    직접 풀이로 결론 도출.\n정의역: x-3>0, 3x-5>0 ⇒ x>3.\n동일한 밑의 로그가 같으므로 x-3=3x-5 ⇒ 2=2x ⇒ x=1.\n하지만
+    x=1은 정의역 x>3을 만족하지 않으므로 실수 해가 없음.\n따라서 정답: 해 없음."}'
+  time_taken: 23.06
   points: 3
   earned_points: 0
-  success: true
-  error: null
+  success: false
+  error: 'JSON 파싱 실패: invalid literal for int() with base 10: ''해 없음'''
+  subject_type: common
 - question_id: q17
   question_number: 17
-  answer: 3
+  answer: -1
   correct_answer: 5
   is_correct: false
-  reasoning: f'(x)=9x^2+4x-1을 적분하면 f(x)=3x^3+2x^2-x+C. f(1)=6이므로 3+2-1+C=6 → 4+C=6
-    → C=2. 따라서 f(2)=3·8+2·4-2+2=24+8=32. 선택지가 제시되지 않아 번호는 특정할 수 없으나 값은 32이므로 그에 해당하는
-    번호를 고르면 된다.
-  time_taken: 17.5
+  reasoning: '[질문 유형: 긍정형 - 맞는 것 찾기]
+
+
+    선택지가 제시되지 않아 직접 계산으로 정답 값을 구함.
+
+    - f''(x)=9x^2+4x-1 → 적분: f(x)=3x^3+2x^2−x+C
+
+    - f(1)=6 → 3+2−1+C=6 → 4+C=6 → C=2
+
+    - 따라서 f(2)=3·8+2·4−2+2=24+8=32
+
+
+    선택지가 있었다면 값이 32인 선택지가 정답.
+
+    [최종 검증: 긍정형이므로 계산 결과에 해당하는 O 선택지를 고르는 것이 맞음]'
+  time_taken: 24.81
   points: 3
   earned_points: 0
-  success: true
-  error: null
+  success: false
+  error: 유효하지 않은 답 번호
+  subject_type: common
 - question_id: q18
   question_number: 18
-  answer: 1
+  answer: -1
   correct_answer: 3
   is_correct: false
-  reasoning: 모든 n에 대해 a_{n+1}=12-a_n 이므로 수열은 두 항씩 12를 이루는 주기 2의 형태(홀수항 x, 짝수항 12−x)이다.
-    따라서 (a_1+a_2)+...+(a_15+a_16)=8×12=96. 보기가 제시되지 않아 번호는 특정할 수 없으며, 정답 값은 96에 해당하는
-    번호를 선택해야 한다.
-  time_taken: 14.71
+  reasoning: '[질문 유형: 긍정형 - 일치하는 것 찾기]
+
+
+    선택지가 제시되지 않아 각 선택지별 검토는 불가. 수식으로 직접 계산:
+
+    - 모든 n에 대해 a_n + a_{n+1} = 12 → (a1+a2), (a3+a4), … 각 쌍의 합이 12
+
+    - 1부터 16까지는 8쌍이므로 합은 8×12 = 96
+
+
+    따라서 선택지가 있었다면 ''96''에 해당하는 선택지가 O(일치)로 정답'
+  time_taken: 27.96
   points: 3
   earned_points: 0
-  success: true
-  error: null
+  success: false
+  error: 유효하지 않은 답 번호
+  subject_type: common
 - question_id: q19
   question_number: 19
   answer: -1
   correct_answer: 1
   is_correct: false
   reasoning: 빈 응답
-  time_taken: 24.41
+  time_taken: 96.1
   points: 3
   earned_points: 0
   success: false
   error: 모델이 빈 응답을 반환했습니다
+  subject_type: common
 - question_id: q20
   question_number: 20
   answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: 빈 응답
-  time_taken: 23.36
+  time_taken: 96.02
   points: 4
   earned_points: 0
   success: false
   error: 모델이 빈 응답을 반환했습니다
+  subject_type: common
 - question_id: q21
   question_number: 21
-  answer: 1
+  answer: -1
   correct_answer: 3
   is_correct: false
-  reasoning: 문제의 핵심 조건과 선택지가 누락되어 있어 a, b에 대한 제약을 알 수 없고, c의 값도 결정되지 않아 f(1)=1+a+b+c의
-    최댓값을 구할 수 없습니다. 일반적으로 제약이 없다면 f(1)은 상한이 없어 최댓값이 존재하지 않습니다. 극값, 근의 조건, 그래프 조건 등
-    구체적 제약과 선택지를 제공해 주셔야 합니다.
-  time_taken: 14.5
+  reasoning: '[질문 유형: 긍정형 - 일치/맞는 것 찾기]
+
+    현재 문제에서 f(x)가 만족해야 할 ''다음 조건''이 누락되어 있고, 선택지도 제시되지 않았습니다. 따라서 1번부터 5번까지 각 선택지를
+    지문과 대조하여 O/X 판정을 할 수 없습니다.
+
+    누락된 조건과 1~5번 선택지를 제공해 주시면, 각 선택지를 순서대로 검토(O/X)하고 긍정형 기준에 따라 정답을 선택하겠습니다.'
+  time_taken: 14.21
   points: 4
   earned_points: 0
-  success: true
-  error: null
+  success: false
+  error: 유효하지 않은 답 번호
+  subject_type: common
 - question_id: q22
   question_number: 22
-  answer: 1
+  answer: -1
   correct_answer: 2
   is_correct: false
-  reasoning: '수열을 규정하는 ‘다음 조건’(예: 점화식, 관계식, 제약)과 선택지가 누락되어 있어 |a1|의 가능한 값을 판정하거나 그
-    합을 계산할 수 없습니다. 누락된 조건과 선택지를 제공해 주시면 경우를 분류하여 |a1|의 합을 구해 정확한 보기 번호를 제시하겠습니다.'
-  time_taken: 13.51
+  reasoning: '[질문 유형: 긍정형 - 일치하는 것 찾기]
+
+
+    STEP 1: 긍정형 질문 확인 완료.
+
+
+    STEP 2: 선택지 검토
+
+    - 1번: 선택지가 제시되지 않아 검토 불가 → 판단 불가
+
+    - 2번: 선택지가 제시되지 않아 검토 불가 → 판단 불가
+
+    - 3번: 선택지가 제시되지 않아 검토 불가 → 판단 불가
+
+    - 4번: 선택지가 제시되지 않아 검토 불가 → 판단 불가
+
+    - 5번: 선택지가 제시되지 않아 검토 불가 → 판단 불가
+
+
+    또한, 수열 {a_n}가 만족해야 하는 "다음 조건"이 제시되지 않아 |a_1| 값을 계산하거나 비교할 근거가 없습니다.
+
+
+    STEP 3: 답 선택 불가 (근거 부족)
+
+    STEP 4: 최종 검증 불가
+
+
+    요청: 지문(수열이 만족해야 하는 조건)과 1~5번 선택지를 제공해 주시면, 각 선택지를 순차적으로 검토하여 정답을 도출하겠습니다.'
+  time_taken: 13.08
   points: 4
   earned_points: 0
-  success: true
-  error: null
-- question_id: q23
+  success: false
+  error: 유효하지 않은 답 번호
+  subject_type: common
+- question_id: q23_prob
   question_number: 23
   answer: -1
   correct_answer: 5
   is_correct: false
-  reasoning: 빈 응답
-  time_taken: 48.96
+  reasoning: '[질문 유형: 긍정형 - 맞는 것 찾기]
+
+
+    지문 해석: 다항식 (x^3 + 2x^2)의 전개식은 그대로 x^3 + 2x^2이며, x^6 항은 존재하지 않는다. 따라서 x^6의 계수는
+    0.
+
+
+    1번(40): 지문 값 0과 불일치 → X
+
+    2번(50): 불일치 → X
+
+    3번(60): 불일치 → X
+
+    4번(70): 불일치 → X
+
+    5번(80): 불일치 → X
+
+
+    긍정형 질문이나, 모든 선택지가 지문과 일치하지 않으므로 주어진 보기에는 정답이 없다.'
+  time_taken: 53.73
   points: 2
   earned_points: 0
   success: false
-  error: 모델이 빈 응답을 반환했습니다
-- question_id: q24
-  question_number: 24
-  answer: -1
-  correct_answer: 3
-  is_correct: false
-  reasoning: 빈 응답
-  time_taken: 23.47
-  points: 3
-  earned_points: 0
-  success: false
-  error: 모델이 빈 응답을 반환했습니다
-- question_id: q25
-  question_number: 25
-  answer: 1
-  correct_answer: 3
-  is_correct: false
-  reasoning: 모분산이 알려진 경우, 표본평균의 95% 신뢰구간은 x̄ ± z_{0.975}·(σ/√n)이다. 여기서 σ=2, n=256이므로
-    표준오차는 2/16=0.125. 따라서 신뢰구간의 길이는 2·1.96·0.125=0.49. 보기들은 100배 스케일로 제시되어 있으므로 0.49에
-    해당하는 49가 정답이다.
-  time_taken: 10.83
-  points: 3
-  earned_points: 0
-  success: true
-  error: null
-- question_id: q26
-  question_number: 26
-  answer: 3
-  correct_answer: 3
-  is_correct: true
-  reasoning: 선택한 3명 중에서 적어도 한 명이 과목 B인 확률은 여사건을 이용하여 1 - 모두 A일 확률로 구한다. 전체 경우의 수는
-    16명 중 3명 선택이므로 C(16,3)=560, 모두 A인 경우는 9명 중 3명 선택이므로 C(9,3)=84이다. 따라서 확률은 1 - 84/560
-    = 1 - 3/20 = 17/20이므로 선택지는 3이다.
-  time_taken: 5.39
-  points: 3
-  earned_points: 3
-  success: true
-  error: null
-- question_id: q27
-  question_number: 27
-  answer: 3
-  correct_answer: 3
-  is_correct: true
-  reasoning: 한 번 뽑은 값 Y는 {1,3,5,7,9}에서 균등이므로 평균은 5, 분산은 ((1−5)^2+(3−5)^2+(5−5)^2+(7−5)^2+(9−5)^2)/5=40/5=8이다.
-    X는 3번 평균이므로 V(X)=V(Y)/3=8/3. 상수를 더해도 분산은 변하지 않고 배수는 제곱배이므로 V(αX+6)=α^2 V(X)=24
-    ⇒ α^2·8/3=24 ⇒ α^2=9 ⇒ α=3(양수).
-  time_taken: 12.13
-  points: 3
-  earned_points: 3
-  success: true
-  error: null
-- question_id: q28
-  question_number: 28
-  answer: -1
-  correct_answer: 4
-  is_correct: false
-  reasoning: 빈 응답
-  time_taken: 22.74
-  points: 4
-  earned_points: 0
-  success: false
-  error: 모델이 빈 응답을 반환했습니다
-- question_id: q29
-  question_number: 29
-  answer: -1
-  correct_answer: 5
-  is_correct: false
-  reasoning: 빈 응답
-  time_taken: 30.65
-  points: 4
-  earned_points: 0
-  success: false
-  error: 모델이 빈 응답을 반환했습니다
-- question_id: q30
-  question_number: 30
-  answer: -1
-  correct_answer: 4
-  is_correct: false
-  reasoning: 빈 응답
-  time_taken: 25.55
-  points: 4
-  earned_points: 0
-  success: false
-  error: 모델이 빈 응답을 반환했습니다
-- question_id: q23
+  error: 유효하지 않은 답 번호
+  subject_type: probability
+- question_id: q23_calc
   question_number: 23
   answer: 3
   correct_answer: 5
   is_correct: false
-  reasoning: x→0에서 sin x ~ x 이므로 sin^2 x ~ x^2이다. 따라서 3x^2/sin^2 x = 3·(x^2/sin^2
-    x) → 3·1 = 3. 보다 엄밀히, lim_{x→0}(sin x/x) = 1 이므로 (x/sin x)^2 → 1 이고 전체 극한값은 3이다.
-  time_taken: 7.93
+  reasoning: '[질문 유형: 긍정형 - 맞는 것 찾기]
+
+
+    해결: x→0에서 sin x ~ x 이므로 sin^2 x ~ x^2, 따라서 lim 3x^2/sin^2x = 3.
+
+
+    선택지 검토
+
+    1번: 값 1은 실제 극한값 3과 다름 → X (불일치)
+
+    2번: 값 2는 실제 극한값 3과 다름 → X (불일치)
+
+    3번: 값 3은 실제 극한값 3과 같음 → O (일치)
+
+    4번: 값 4는 실제 극한값 3과 다름 → X (불일치)
+
+    5번: 값 5는 실제 극한값 3과 다름 → X (불일치)
+
+
+    최종 검증: 긍정형 질문이므로 O(일치) 선택지인 3번이 정답'
+  time_taken: 19.89
   points: 2
   earned_points: 0
   success: true
   error: null
-- question_id: q24
+  subject_type: calculus
+- question_id: q23_geom
+  question_number: 23
+  answer: 3
+  correct_answer: 5
+  is_correct: false
+  reasoning: '[질문 유형: 긍정형 - 일치하는 것 찾기]
+
+
+    a = (b, 3), b = (1, 2), a + 3b = (6, 9)
+
+    → (b, 3) + 3(1, 2) = (b+3, 9) = (6, 9) ⇒ b+3=6 ⇒ b=3
+
+
+    1번(b=1): a=(1,3), a+3b=(4,9) → X (불일치)
+
+    2번(b=2): a=(2,3), a+3b=(5,9) → X (불일치)
+
+    3번(b=3): a=(3,3), a+3b=(6,9) → O (일치) ✓
+
+    4번(b=4): a=(4,3), a+3b=(7,9) → X (불일치)
+
+    5번(b=5): a=(5,3), a+3b=(8,9) → X (불일치)
+
+
+    긍정형 질문이므로 O(일치) 선택지인 3번이 정답'
+  time_taken: 16.9
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+  subject_type: geometry
+- question_id: q24_calc
   question_number: 24
   answer: 4
   correct_answer: 3
   is_correct: false
-  reasoning: (x+2)/(x+1)=1+1/(x+1)로 분해하면 ∫_0^{10}1 dx + ∫_0^{10}1/(x+1) dx가 된다. 첫
-    항은 10이고, 둘째 항은 [ln(x+1)]_0^{10}=ln(11)-ln(1)=ln 11이므로 합은 10+ln 11이다.
-  time_taken: 5.69
+  reasoning: '[질문 유형: 긍정형 - 맞는 것 찾기]
+
+
+    계산: (x+2)/(x+1) = 1 + 1/(x+1). ∫₀¹⁰ 1 dx = 10, ∫₀¹⁰ 1/(x+1) dx = [ln|x+1|]₀¹⁰
+    = ln 11 - ln 1 = ln 11. 따라서 전체 값은 10 + ln 11.
+
+
+    1번: 10 + ln 5 → X (불일치)
+
+    2번: 10 + ln 7 → X (불일치)
+
+    3번: 10 + 2 ln 3(=10 + ln 9) → X (불일치)
+
+    4번: 10 + ln 11 → O (일치) ✓
+
+    5번: 10 + ln 13 → X (불일치)
+
+
+    긍정형 질문이므로 O(일치) 선택지인 4번이 정답.
+
+    최종 검증: 긍정형 질문에 O 선택지(4번)를 선택함.'
+  time_taken: 16.71
   points: 3
   earned_points: 0
   success: true
   error: null
-- question_id: q25
-  question_number: 25
-  answer: -1
-  correct_answer: 3
-  is_correct: false
-  reasoning: 빈 응답
-  time_taken: 22.73
-  points: 3
-  earned_points: 0
-  success: false
-  error: 모델이 빈 응답을 반환했습니다
-- question_id: q26
-  question_number: 26
-  answer: -1
-  correct_answer: 3
-  is_correct: false
-  reasoning: 빈 응답
-  time_taken: 25.37
-  points: 3
-  earned_points: 0
-  success: false
-  error: 모델이 빈 응답을 반환했습니다
-- question_id: q27
-  question_number: 27
-  answer: -1
-  correct_answer: 3
-  is_correct: false
-  reasoning: 빈 응답
-  time_taken: 21.63
-  points: 3
-  earned_points: 0
-  success: false
-  error: 모델이 빈 응답을 반환했습니다
-- question_id: q28
-  question_number: 28
-  answer: -1
-  correct_answer: 4
-  is_correct: false
-  reasoning: 빈 응답
-  time_taken: 23.17
-  points: 4
-  earned_points: 0
-  success: false
-  error: 모델이 빈 응답을 반환했습니다
-- question_id: q29
-  question_number: 29
-  answer: -1
-  correct_answer: 5
-  is_correct: false
-  reasoning: 빈 응답
-  time_taken: 21.98
-  points: 4
-  earned_points: 0
-  success: false
-  error: 모델이 빈 응답을 반환했습니다
-- question_id: q30
-  question_number: 30
-  answer: -1
-  correct_answer: 4
-  is_correct: false
-  reasoning: 빈 응답
-  time_taken: 25.2
-  points: 4
-  earned_points: 0
-  success: false
-  error: 모델이 빈 응답을 반환했습니다
-- question_id: q23
-  question_number: 23
-  answer: 3
-  correct_answer: 5
-  is_correct: false
-  reasoning: a=(b, 3), b=(1, 2)이므로 a+3b=(b,3)+3(1,2)=(b+3, 9). 이것이 (6, 9)와 같으려면 첫째
-    성분에서 b+3=6이므로 b=3이다. 따라서 정답은 3이다.
-  time_taken: 5.06
-  points: 2
-  earned_points: 0
-  success: true
-  error: null
-- question_id: q24
+  subject_type: calculus
+- question_id: q24_prob
   question_number: 24
   answer: -1
   correct_answer: 3
   is_correct: false
-  reasoning: 빈 응답
-  time_taken: 32.83
+  reasoning: '[질문 유형: 긍정형 - 맞는 것 찾기]
+
+
+    지문: P(A|B)=P(A)-1/2, P(A∩B)=1/5. ⇒ P(A|B)=(1/5)/P(B) ⇒ P(A)=1/(5P(B))+1/2. 따라서
+    P(A∪B)=P(A)+P(B)-1/5=1/(5P(B))+P(B)+3/10.
+
+
+    이때 1/(5P(B))+P(B) ≥ 2/√5 ≈ 0.8944 ⇒ P(A∪B) ≥ 1.1944 > 1 (모순). 즉 주어진 조건을 만족하는 확률값이
+    존재하지 않음.
+
+
+    각 선택지 검토:
+
+    1번(1/2): 식 1/(5b)+b=0.2는 판별식 25(0.2)^2−20<0 → 불가능 → X (불일치)
+
+    2번(3/5): 1/(5b)+b=0.3, 판별식<0 → X (불일치)
+
+    3번(7/10): 1/(5b)+b=0.4, 판별식<0 → X (불일치)
+
+    4번(4/5): 1/(5b)+b=0.5, 판별식<0 → X (불일치)
+
+    5번(9/10): 1/(5b)+b=0.6, 판별식<0 → X (불일치)
+
+
+    긍정형 질문이나 O(일치) 선택지가 없음 → 정답 없음'
+  time_taken: 149.0
   points: 3
   earned_points: 0
   success: false
-  error: 모델이 빈 응답을 반환했습니다
-- question_id: q25
+  error: 유효하지 않은 답 번호
+  subject_type: probability
+- question_id: q24_geom
+  question_number: 24
+  answer: 4
+  correct_answer: 3
+  is_correct: false
+  reasoning: '[질문 유형: 긍정형 - 맞는 것 찾기]
+
+
+    - 포물선의 정점이 (1, 0), 준선이 x = -1이므로 p = 2, 식은 (y - 0)^2 = 4p(x - 1) = 8(x - 1).
+
+    - 점 (3, a)를 대입하면 a^2 = 8(3 - 1) = 16 → 양수 a = 4.
+
+
+    1번: a=1 → 계산값 4와 불일치 → X (불일치)
+
+    2번: a=2 → 불일치 → X (불일치)
+
+    3번: a=3 → 불일치 → X (불일치)
+
+    4번: a=4 → 일치 → O (일치) ✓
+
+    5번: a=5 → 불일치 → X (불일치)
+
+
+    긍정형 질문이므로 O(일치) 선택지인 4번이 정답'
+  time_taken: 52.91
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+  subject_type: geometry
+- question_id: q25_prob
+  question_number: 25
+  answer: 1
+  correct_answer: 3
+  is_correct: false
+  reasoning: '[질문 유형: 긍정형 - 맞는 값 찾기]
+
+
+    표본평균 분포: X̄ ~ N(m, (2/√256)^2) = N(m, (1/8)^2)
+
+    95% 신뢰구간 길이: b-a = 2·1.96·(2/16) = 2·1.96·0.125 = 0.49
+
+    선택지는 소수점 없이 제시되었으므로 0.49 → 49로 해석
+
+
+    1번: 49 → O (일치)
+
+    2번: 52 → X (불일치)
+
+    3번: 55 → X (불일치)
+
+    4번: 58 → X (불일치)
+
+    5번: 61 → X (불일치)
+
+
+    긍정형 질문이므로 O(일치)인 1번이 정답'
+  time_taken: 16.16
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+  subject_type: probability
+- question_id: q25_calc
+  question_number: 25
+  answer: -1
+  correct_answer: 3
+  is_correct: false
+  reasoning: '[질문 유형: 긍정형 - 맞는 것 찾기]
+
+
+    지문: lim_{n→∞} (n a_n)/(n^2 + 3) = 1 ⇒ a_n/(n + 3/n) → 1 ⇒ a_n → ∞.
+
+    구하려는 값: lim_{n→∞} √(a_n^2 + n - a_n).
+
+
+    a_n → ∞ 이므로 √(a_n^2 + n - a_n) ≥ √(a_n^2 - a_n) = |a_n|√(1 - 1/a_n) → ∞. 따라서 한계값은
+    무한대.
+
+
+    선택지 검토:
+
+    1번(1/3): 유한값으로, 실제 한계값 ∞와 불일치 → X (불일치)
+
+    2번(1/2): 유한값으로, 실제 한계값 ∞와 불일치 → X (불일치)
+
+    3번(1): 유한값으로, 실제 한계값 ∞와 불일치 → X (불일치)
+
+    4번(2): 유한값으로, 실제 한계값 ∞와 불일치 → X (불일치)
+
+    5번(3): 유한값으로, 실제 한계값 ∞와 불일치 → X (불일치)
+
+
+    긍정형 질문이므로 O(일치) 선택지를 골라야 하나, 모든 선택지가 X이므로 정답 없음(문항 오류).'
+  time_taken: 101.66
+  points: 3
+  earned_points: 0
+  success: false
+  error: 유효하지 않은 답 번호
+  subject_type: calculus
+- question_id: q25_geom
   question_number: 25
   answer: 3
   correct_answer: 3
   is_correct: true
-  reasoning: '내분 공식: AB를 3:2로 내분하는 점 P는 P=((2a+3(-4))/5, (2b+3(-2))/5, (2·6+3c)/5).
-    P가 z축 위이므로 x=0, y=0 ⇒ 2a−12=0에서 a=6, 2b−6=0에서 b=3. 외분 공식: AB를 3:2로 외분하는 점 Q는 Q=(3(-4)−2a,
-    3(-2)−2b, 3c−2·6). Q가 xy평면 위이므로 z=0 ⇒ 3c−12=0에서 c=4. 따라서 a+b+c=6+3+4=13.'
-  time_taken: 12.75
+  reasoning: '[질문 유형: 긍정형 - 맞는 것 찾기]
+
+
+    내분점(3:2)이 z축 위 → xP=(2a+3(-4))/5=0 ⇒ a=6, yP=(2b+3(-2))/5=0 ⇒ b=3.
+
+    외분점(3:2)이 xy평면 위 → zQ=(3c−2*6)/(3−2)=3c−12=0 ⇒ c=4.
+
+    따라서 a+b+c=13.
+
+
+    선택지 검토
+
+    1번 11: X (불일치)
+
+    2번 12: X (불일치)
+
+    3번 13: O (일치)
+
+    4번 14: X (불일치)
+
+    5번 15: X (불일치)
+
+
+    긍정형이므로 O(일치)인 3번이 정답'
+  time_taken: 22.13
   points: 3
   earned_points: 3
   success: true
   error: null
-- question_id: q26
+  subject_type: geometry
+- question_id: q26_prob
+  question_number: 26
+  answer: 3
+  correct_answer: 3
+  is_correct: true
+  reasoning: '[질문 유형: 긍정형 - 맞는 것 찾기]
+
+
+    전체 16명 중 A=9명, B=7명. 3명 뽑을 때 적어도 1명이 B일 확률 = 1 - 모두 A일 확률 = 1 - C(9,3)/C(16,3)
+    = 1 - 84/560 = 1 - 3/20 = 17/20.
+
+
+    1번: 3/4 → 정답 17/20과 불일치 → X (불일치)
+
+    2번: 4/5 → 정답 17/20과 불일치 → X (불일치)
+
+    3번: 17/20 → 정답과 일치 → O (일치) ✓
+
+    4번: 9/10 → 정답 17/20과 불일치 → X (불일치)
+
+    5번: 19/20 → 정답 17/20과 불일치 → X (불일치)
+
+
+    긍정형 질문이므로 O(일치)인 3번이 정답'
+  time_taken: 9.84
+  points: 3
+  earned_points: 3
+  success: true
+  error: null
+  subject_type: probability
+- question_id: q26_geom
   question_number: 26
   answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: 빈 응답
-  time_taken: 27.28
+  time_taken: 98.01
   points: 3
   earned_points: 0
   success: false
   error: 모델이 빈 응답을 반환했습니다
-- question_id: q27
-  question_number: 27
+  subject_type: geometry
+- question_id: q26_calc
+  question_number: 26
   answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: 빈 응답
-  time_taken: 29.48
+  time_taken: 194.99
   points: 3
   earned_points: 0
   success: false
   error: 모델이 빈 응답을 반환했습니다
-- question_id: q28
+  subject_type: calculus
+- question_id: q27_prob
+  question_number: 27
+  answer: 3
+  correct_answer: 3
+  is_correct: true
+  reasoning: '[질문 유형: 긍정형 - 맞는 것 찾기]
+
+
+    - 단일 추출 값 Y ~ {1,3,5,7,9} 균일: E(Y)=5, V(Y)=8.
+
+    - X=(Y1+Y2+Y3)/3 (복원추출로 독립) ⇒ V(X)=V(Y)/3=8/3.
+
+    - 분산의 성질: V(X+6)=V(X), V(αX+6)=α^2 V(X). 주어진 조건을 충족하려면 α^2·(8/3)=24 ⇒ α=3(양수).
+
+
+    선택지 검토:
+
+    1번: 1 ≠ 3 → X (불일치)
+
+    2번: 2 ≠ 3 → X (불일치)
+
+    3번: 3 = 3 → O (일치) ✓
+
+    4번: 4 ≠ 3 → X (불일치)
+
+    5번: 5 ≠ 3 → X (불일치)
+
+
+    긍정형 질문이므로 O(일치)인 3번이 정답'
+  time_taken: 29.91
+  points: 3
+  earned_points: 3
+  success: true
+  error: null
+  subject_type: probability
+- question_id: q27_calc
+  question_number: 27
+  answer: -1
+  correct_answer: 3
+  is_correct: false
+  reasoning: '[질문 유형: 긍정형 - 일치하는 것 찾기]
+
+
+    전제 정리: g(x)=f(x)+e^x, f는 최고차항 계수 1인 삼차함수. (0, g(0))에서의 접선이 x축 ⇒ g''(0)=0 ⇒ f''(0)+e^0=0
+    ⇒ f''(0)=-1. f(x)=x^3+ax^2+bx+c 이므로 b=-1.
+
+
+    h(x)는 g의 역함수로 해석되어야 h''(8)를 구할 수 있음. 역함수 미분공식: h''(y)=1/g''(h(y)). 따라서 h''(8)=1/g''(x_0)에서
+    x_0는 g(x_0)=8을 만족하는 값. 그러나 a, c가 주어지지 않아 g(x_0)=8을 만족하는 x_0 자체가 결정되지 않으며, g''(x_0)=3x_0^2+2ax_0+b+e^{x_0}=3x_0^2+2ax_0-1+e^{x_0}도
+    유일하게 정해지지 않음. 즉 h''(8)는 주어진 정보만으로 단일 값으로 결정되지 않음.
+
+
+    선택지 검토:
+
+    1번: h''(8)=1/36이라고 단정할 근거가 지문에 없음 → X (불일치)
+
+    2번: h''(8)=1/18이라고 단정할 근거가 지문에 없음 → X (불일치)
+
+    3번: h''(8)=1/12이라고 단정할 근거가 지문에 없음 → X (불일치)
+
+    4번: h''(8)=1/9이라고 단정할 근거가 지문에 없음 → X (불일치)
+
+    5번: h''(8)=5/36이라고 단정할 근거가 지문에 없음 → X (불일치)
+
+
+    긍정형 질문이므로 O(일치) 선택지를 골라야 하나, 주어진 정보로는 h''(8)가 유일하게 결정되지 않아 모든 선택지가 X입니다. 따라서 본
+    문항은 제시 정보가 불충분하여 정답을 결정할 수 없습니다.'
+  time_taken: 85.45
+  points: 3
+  earned_points: 0
+  success: false
+  error: 유효하지 않은 답 번호
+  subject_type: calculus
+- question_id: q27_geom
+  question_number: 27
+  answer: 1
+  correct_answer: 3
+  is_correct: false
+  reasoning: '[질문 유형: 긍정형 - 맞는 것 찾기]
+
+
+    - 좌표 설정: 평면 AMD를 z=0, M=(0,0,0). BC ⟂ AMD, BC=4√5이고 M은 중점 ⇒ C=(0,0,2√5), B=(0,0,-2√5).
+    AMD 정삼각형, AB=6 ⇒ AM^2+(2√5)^2=36 ⇒ AM=4. A=(4,0,0), D=(2,2√3,0)로 둘 수 있음.
+
+    - 삼각형 ACD의 변: AC=6, CD=6, AD=4 ⇒ 넓이 Δ=8√2, 둘레 P=16 ⇒ 내접원 반지름 r=2Δ/P=√2 ⇒ 원 넓이
+    = 2π.
+
+    - 평면각: n_BCD=(0,0,4√5)×(2,2√3,2√5)=(-8√15, 8√5, 0), n_ACD=(-4,0,2√5)×(-2,2√3,0)=(-4√15,-4√5,-8√3).
+    cos(∠(ACD,BCD))=|n·n''|/(|n||n''|)=5/(4√10).
+
+    - 정사영 넓이 = (원 넓이)×cos = 2π×5/(4√10) = (√10/4)π.
+
+
+    선택지 판별:
+
+    1번: √10/4 π → O (일치)
+
+    2번: √10/6 π → X (불일치)
+
+    3번: √10/8 π → X (불일치)
+
+    4번: √10/10 π → X (불일치)
+
+    5번: √10/12 π → X (불일치)
+
+
+    긍정형 질문이므로 O(일치)인 1번이 정답'
+  time_taken: 128.74
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+  subject_type: geometry
+- question_id: q28_prob
   question_number: 28
   answer: -1
   correct_answer: 4
   is_correct: false
-  reasoning: 빈 응답
-  time_taken: 53.26
+  reasoning: '[질문 유형: 긍정형 - 일치하는 것 찾기]
+
+
+    지문에 있어야 할 ''다음 조건''이 제시되지 않아, 함수 f가 어떤 성질을 만족해야 하는지 알 수 없습니다. 따라서 각 선택지의 옳고 그름을
+    판단할 근거가 없습니다.
+
+
+    1번: 조건 부재로 판단 불가 → X
+
+    2번: 조건 부재로 판단 불가 → X
+
+    3번: 조건 부재로 판단 불가 → X
+
+    4번: 조건 부재로 판단 불가 → X
+
+    5번: 조건 부재로 판단 불가 → X
+
+
+    긍정형 질문이지만, 일치 여부를 가릴 정보가 없어 정답을 결정할 수 없습니다. 누락된 ''다음 조건''을 제공해 주시면 모든 선택지를 검토하여
+    정답을 선택하겠습니다.'
+  time_taken: 72.49
   points: 4
   earned_points: 0
   success: false
-  error: 모델이 빈 응답을 반환했습니다
-- question_id: q29
+  error: 유효하지 않은 답 번호
+  subject_type: probability
+- question_id: q28_geom
+  question_number: 28
+  answer: 4
+  correct_answer: 4
+  is_correct: true
+  reasoning: '[질문 유형: 긍정형 - 맞는 것 찾기]
+
+
+    - 설정: B=(0,0,0), A=(8,0,0), C=(0,6,0) → AC=10, 구 S 반지름 5.
+
+    - 평면 y=0(AB 포함, ABC에 수직)과 구의 교선 O: 중심 (4,0,0), 반지름 4.
+
+    - 점 X=(x,0,z)에서 직선 AC까지의 거리 d^2 = (25z^2 + (24-3x)^2)/25. 원 O 위에서는 (x-4)^2+z^2=16.
+
+    - d=4 조건: (24-3x)^2 + 25[16-(x-4)^2] = 400 → -16x^2 + 56x + 576 = 400 → 2x^2 -
+    7x - 22 = 0 → x=11/2 또는 -2.
+
+    - 원 O와의 양립성: x=-2는 불가(z^2<0), x=11/2에서 z^2=16-(3/2)^2=55/4 → z=±√55/2.
+
+    - 따라서 P, Q는 z 부호만 다른 두 점 → PQ = |Δz|·2 = √55.
+
+
+    선택지 검토:
+
+    1번: √43 → X (불일치)
+
+    2번: √47 → X (불일치)
+
+    3번: √51 → X (불일치)
+
+    4번: √55 → O (일치) ✓
+
+    5번: √59 → X (불일치)
+
+
+    긍정형 질문이므로 O(일치)인 4번이 정답'
+  time_taken: 44.4
+  points: 4
+  earned_points: 4
+  success: true
+  error: null
+  subject_type: geometry
+- question_id: q28_calc
+  question_number: 28
+  answer: -1
+  correct_answer: 4
+  is_correct: false
+  reasoning: '[질문 유형: 긍정형 - 맞는 것 찾기]
+
+
+    지문에서 f''(x)만 주어졌고, g(x)의 정의(예: 접선의 식인지 여부), t의 값, 그리고 f(x)의 적분상수 C가 주어지지 않아 g(1)과
+    g''(1)을 결정할 수 없습니다. 실제로 접선을 g로 두더라도 g(1)+g''(1)은 t와 C에 의존하여 값이 정해지지 않습니다.
+
+
+    1번: g(1)+g''(1)=1/2+1/2라 단정할 근거 없음 → X (불일치)
+
+    2번: g(1)+g''(1)=1/2+2/3라 단정할 근거 없음 → X (불일치)
+
+    3번: g(1)+g''(1)=1/2+5/6라 단정할 근거 없음 → X (불일치)
+
+    4번: g(1)+g''(1)=2/3+1/2라 단정할 근거 없음 → X (불일치)
+
+    5번: g(1)+g''(1)=2/3+2/3라 단정할 근거 없음 → X (불일치)
+
+
+    긍정형 질문이지만 지문 정보가 불충분하여 모든 선택지가 불일치입니다. 따라서 주어진 선택지 중 정답이 없습니다.'
+  time_taken: 143.66
+  points: 4
+  earned_points: 0
+  success: false
+  error: 유효하지 않은 답 번호
+  subject_type: calculus
+- question_id: q29_calc
+  question_number: 29
+  answer: -1
+  correct_answer: 5
+  is_correct: false
+  reasoning: "[질문 유형: 긍정형 - 맞는 것 찾기]\n\n선택지가 제시되지 않아 일치 여부 검토 대신 직접 계산으로 정답을 도출함.\n\
+    \n1) 등비수열 {a_n}에서 |a_{n+1}+a_n|=|a||r|^{n-1}|r+1|, |a_{n+1}-a_n|=|a||r|^{n-1}|r-1|이므로\n\
+    \   ∑|a_{n+1}+a_n|=|a||r+1|/(1-|r|)=40/3,\n   ∑|a_{n+1}-a_n|=|a||r-1|/(1-|r|)=20/3.\n\
+    \   비율로 |r+1|/|r-1|=2 → 3r^2-10r+3=0 → r=1/3( |r|<1만 가능 ).\n   이어 |a||r-1|/(1-|r|)=20/3에\
+    \ r=1/3 대입 시 |a|=20/3.\n\n2) 목표 극한: L_m=lim_{n→∞}∑_{k=1}^n ((-1)^{k+1}/k^2)a_{m+k}\n\
+    \   = a r^{m-1}∑_{k=1}^∞ ((-1)^{k+1} r^k/k^2).\n   r=1/3이므로 C=∑_{k=1}^∞ ((-1)^{k+1}(1/3)^k/k^2)>0.\
+    \ (수치적으로 C≈0.309033, 교대급수라 오차는 첫 누락항 이하)\n   a>0일 때만 부등식 가능하므로 a=20/3 채택 → L_m=(20/3)·C·(1/3)^{m-1}.\n\
+    \n3) 부등식 (20/3)·C·(1/3)^{m-1} > 1/700.\n   부분합과 나머지로 0.308899 < C < 0.309064 ⇒\
+    \ 2.0593 < (20/3)C < 2.0604.\n   m=7: 하한 사용 시 2.0593/729 ≈ 0.002828 > 1/700 성립.\n\
+    \   m=8: 상한 사용 시 2.0604/2187 ≈ 0.000943 < 1/700 불성립.\n   따라서 m=1,2,3,4,5,6,7이\
+    \ 모두 성립하고 m≥8은 불성립.\n\n4) 모든 해당 m의 합: 1+2+3+4+5+6+7=28"
+  time_taken: 88.09
+  points: 4
+  earned_points: 0
+  success: false
+  error: 유효하지 않은 답 번호
+  subject_type: calculus
+- question_id: q29_prob
   question_number: 29
   answer: -1
   correct_answer: 5
   is_correct: false
   reasoning: 빈 응답
-  time_taken: 28.68
+  time_taken: 185.58
   points: 4
   earned_points: 0
   success: false
   error: 모델이 빈 응답을 반환했습니다
-- question_id: q30
+  subject_type: probability
+- question_id: q29_geom
+  question_number: 29
+  answer: 3
+  correct_answer: 5
+  is_correct: false
+  reasoning: '[질문 유형: 긍정형 - 맞는 것 찾기]
+
+
+    본 문항은 선택지가 제시되지 않아 1~5번 모든 선택지를 검토할 수 없습니다. 또한 조건상 Q는 직선 PF 위에서 PQ = PF이므로 P,
+    F, Q가 일직선상에 놓여 삼각형 PFQ의 넓이는 0이어야 합니다. 그런데 문제에서 넓이를 9√5라고 하여 내적 모순이 발생합니다. 따라서
+    선택지 검토 및 정답 선택이 불가능합니다.
+
+
+    1번: 선택지 미제공 → 판단 불가 → X
+
+    2번: 선택지 미제공 → 판단 불가 → X
+
+    3번: 선택지 미제공 → 판단 불가 → X
+
+    4번: 선택지 미제공 → 판단 불가 → X
+
+    5번: 선택지 미제공 → 판단 불가 → X
+
+
+    긍정형 질문이지만 선택지가 없어 O(일치)인 선택지를 고를 수 없습니다. (정상적인 풀이를 위해 문제의 선택지 또는 조건 수정이 필요합니다.)'
+  time_taken: 83.65
+  points: 4
+  earned_points: 0
+  success: true
+  error: null
+  subject_type: geometry
+- question_id: q30_calc
   question_number: 30
   answer: -1
   correct_answer: 4
   is_correct: false
-  reasoning: 빈 응답
-  time_taken: 33.3
+  reasoning: "[질문 유형: 긍정형 - 맞는 것 찾기]\n\n선택지가 제시되지 않아 1번부터 5번까지 모든 선택지를 검토할 수 없습니다.\
+    \ 또한 지문 조건에도 모순/누락이 있습니다.\n\n지문 점검:\n- f(x) = sin(ax + b + sin x)\n- (가) f(0)\
+    \ = 0, f(2π) = 2πa + b\n  • f(0)=0 → sin(b)=0 → b = kπ(정수)\n  • f(2π) = sin(2πa\
+    \ + b)인데 이를 2πa + b와 같다고 한 것은 sin(y)=y를 강제하는 꼴이며, 실수 해는 y=0뿐 → 2πa + b = 0 → b\
+    \ = -2πa\n  • 두 식 결합 → -2a ∈ Z, 1 ≤ a ≤ 2 → a ∈ {1, 3/2, 2}, b ∈ {−2π, −3π, −4π}\n\
+    - (나) \"f′(0) = f′(1)일 때 함수 f의 최솟값은 4\"는 f가 사인 합성이라 값의 범위가 [−1, 1]을 넘을 수 없어 성립\
+    \ 불가(표현 오류로 보임: f′의 최솟값 등 다른 의미일 가능성 높음).\n- 이후 집합 A 정의(“x=0에서 극대값의 값 중 (0,4π)에\
+    \ 속하는 모든 값”)도 문맥상 대상이 무엇인지(변수/매개변수) 불명확합니다.\n\n따라서:\n- 선택지가 누락되어 필수 절차(STEP 2:\
+    \ 1~5번 전수 검토)를 수행할 수 없고,\n- 조건 (가), (나), 집합 A 정의가 불명확/자기모순이라 정답 산출이 불가합니다.\n\n\
+    정확한 풀이를 위해 다음을 제공/수정해 주세요:\n1) 객관식 선택지 1~5 제시\n2) (가)에서 f(2π)=?가 정말로 2πa+b인지 확인(오타라면\
+    \ 올바른 식 제시)\n3) (나)의 “최솟값은 4”가 f의 최솟값인지, f′의 최솟값인지 등 정확한 대상 명시\n4) 집합 A에서 ‘무엇의\
+    \ 값’을 모으는지(예: b의 값, 혹은 x좌표 등) 명확화\n\n위 보완 후 전체 선택지를 일괄 검토하여 정답을 제시하겠습니다."
+  time_taken: 45.14
   points: 4
   earned_points: 0
   success: false
-  error: 모델이 빈 응답을 반환했습니다
+  error: 유효하지 않은 답 번호
+  subject_type: calculus
+- question_id: q30_prob
+  question_number: 30
+  answer: -1
+  correct_answer: 4
+  is_correct: false
+  reasoning: '[질문 유형: 긍정형 - 단답형 계산 문제]
+
+    선택지가 제시되지 않아 직접 계산함.
+
+    연산은 e1..e5(각 자리 뒤집기)와 u(전체 뒤집기). 시작상태 11000, 목표 11111이므로 필요한 합은 delta=00111. 세
+    번의 연산 XOR이 delta가 되는 경우를 셈:
+
+    - 6이 0개: (3,4,5)를 한 번씩 선택(순서 6가지)
+
+    - 6이 1개: 나머지 두 번이 1과 2(순서 3×2=6가지)
+
+    - 6이 2개 이상: 불가
+
+    총 12가지 → 확률 p=12/216=1/18 ⇒ p+q=19'
+  time_taken: 143.26
+  points: 4
+  earned_points: 0
+  success: false
+  error: 유효하지 않은 답 번호
+  subject_type: probability
+- question_id: q30_geom
+  question_number: 30
+  answer: -1
+  correct_answer: 4
+  is_correct: false
+  reasoning: '[질문 유형: 긍정형 - 일치하는 것 찾기]
+
+
+    선택지가 제시되지 않아 1~5번 선택지를 검토할 수 없습니다. 또한 ''APQ''의 의미(예: AP+PQ, AP+PQ+QA 등)가 명확히 정의되지
+    않아 문제 풀이가 불가능합니다. 선택지와 ''APQ''의 정확한 정의를 제공해 주시면 단계별로 검토 후 정답을 제시하겠습니다.'
+  time_taken: 71.48
+  points: 4
+  earned_points: 0
+  success: false
+  error: 유효하지 않은 답 번호
+  subject_type: geometry

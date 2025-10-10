@@ -2,14 +2,14 @@ exam_id: 2025-english-sat
 exam_title: 2025학년도 수능 ENGLISH
 subject: english
 model_name: sonar-pro
-evaluated_at: '2025-10-10T14:51:49.064468'
+evaluated_at: '2025-10-10T22:45:23.254348'
 summary:
   total_questions: 42
-  correct_answers: 1
-  accuracy: 2.38
-  total_score: 2
+  correct_answers: 15
+  accuracy: 35.71
+  total_score: 35
   max_score: 100
-  score_rate: 2.0
+  score_rate: 35.0
 results:
 - question_id: q1
   question_number: 1
@@ -178,352 +178,391 @@ results:
   error: 듣기 평가 문제는 평가하지 않음
 - question_id: q16
   question_number: 16
-  answer: -1
+  answer: 3
   correct_answer: 3
-  is_correct: false
-  reasoning: ''
-  time_taken: 2.61
+  is_correct: true
+  reasoning: 지문에서는 미래 식량 부족 문제를 해결할 수 있는 대체 식품(해조류, 콩, 호박, 버섯, 곤충 등)에 대해 설명하며, 이들이
+    영양이 풍부하고 다양한 환경에서 재배가 가능하다는 점, 그리고 미래 인구 증가에 대응해 중요한 역할을 할 수 있다는 점을 강조하고 있습니다.
+    이는 '미래 식량 부족을 해결할 수 있는 적합한 식품'에 대한 내용으로, 3번 선택지가 가장 주제와 일치합니다. 나머지 선택지들은 저장 조건(1),
+    영양 식단의 중요성(2), 인기 요리(4), 미래 기술(5) 등으로 지문의 핵심 논지와 맞지 않습니다.
+  time_taken: 5.62
   points: 2
-  earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Request rate limit exceeded,
-    please try again later.'', ''type'': ''request_rate_limit_exceeded'', ''code'':
-    429}}'
+  earned_points: 2
+  success: true
+  error: null
 - question_id: q17
   question_number: 17
-  answer: -1
+  answer: 4
   correct_answer: 4
-  is_correct: false
-  reasoning: ''
-  time_taken: 2.62
+  is_correct: true
+  reasoning: 지문에서 언급된 음식은 seaweed, beans, pumpkins, mushrooms, insects입니다. 선택지 중 4번
+    'potatoes'는 지문에서 언급되지 않았으므로 정답입니다.
+  time_taken: 4.85
   points: 2
-  earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Request rate limit exceeded,
-    please try again later.'', ''type'': ''request_rate_limit_exceeded'', ''code'':
-    429}}'
+  earned_points: 2
+  success: true
+  error: null
 - question_id: q18
   question_number: 18
-  answer: -1
+  answer: 1
   correct_answer: 1
-  is_correct: false
-  reasoning: ''
-  time_taken: 2.79
+  is_correct: true
+  reasoning: 지문은 Spring Marathon이 3월 15일에 예정되어 있었으나 Main Street의 공사로 인해 취소되었음을 알리고
+    있습니다. 또한, 새로운 일정과 경로를 찾고 있으며, 확정되는 대로 다시 공지하겠다고 안내하고 있습니다. 참가자들에게 계속 훈련을 이어달라는
+    부탁도 있지만, 이는 부가적인 내용일 뿐, 글의 핵심 목적은 '마라톤 경기 취소 사실'을 알리는 것입니다. 다른 선택지(2~5)는 지문에서
+    언급되지 않거나 부차적인 내용이므로 정답이 아닙니다.
+  time_taken: 5.03
   points: 2
-  earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Request rate limit exceeded,
-    please try again later.'', ''type'': ''request_rate_limit_exceeded'', ''code'':
-    429}}'
+  earned_points: 2
+  success: true
+  error: null
 - question_id: q19
   question_number: 19
   answer: 2
   correct_answer: 2
   is_correct: true
-  reasoning: 지문에서 Peter는 아내를 위해 완벽한 이벤트를 준비했다고 확신(confident)하며 기뻐했으나, 레스토랑 예약이 이미
-    다 찼다는 소식을 듣고 실망(disappointed)하게 된다. 즉, 처음에는 자신감과 기대감이 있었으나, 계획이 무산되며 실망으로 감정이
-    변화한다. 이는 2번 'confident → disappointed'와 정확히 일치한다. 다른 선택지는 지문 내용과 맞지 않는다.
-  time_taken: 5.83
+  reasoning: 지문에서 Peter는 발렌타인 데이를 오랫동안 기대하며 자신감 있게 준비했으나, 예약한 식당이 만석이라는 사실을 알게 되고
+    Amy가 실망하는 모습을 보면서 마음이 무너진다. 즉, 처음에는 'confident'(자신감 있는) 상태였으나, 상황이 꼬이면서 'disappointed'(실망한)
+    상태로 변한다. 다른 선택지들은 지문의 Peter의 심경 변화와 맞지 않는다.
+  time_taken: 4.73
   points: 2
   earned_points: 2
   success: true
   error: null
 - question_id: q20
   question_number: 20
-  answer: -1
+  answer: 3
   correct_answer: 1
   is_correct: false
-  reasoning: ''
-  time_taken: 2.87
+  reasoning: 지문은 게임을 단순히 금지하거나 학생들의 사용을 자제시키는 것이 아니라, 학습 활동에 게임의 요소(점수, 레벨, 즉각적 피드백,
+    협업 등)를 적용해 교육 효과를 높이고, 학생들의 몰입과 동기를 유발해야 한다고 주장한다. '게임을 개발해야 한다'(1번)는 부분적으로 맞지만,
+    핵심은 '학습 활동에 게임 요소를 적용해 새로운 경험을 해야 한다'(3번)로, 지문의 전체 논지와 가장 일치한다. 2, 4, 5번은 게임의
+    부정적 측면이나 자제, 방지에 초점을 두고 있어 지문과 맞지 않는다.
+  time_taken: 5.16
   points: 2
   earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Request rate limit exceeded,
-    please try again later.'', ''type'': ''request_rate_limit_exceeded'', ''code'':
-    429}}'
+  success: true
+  error: null
 - question_id: q21
   question_number: 21
-  answer: -1
+  answer: 3
   correct_answer: 3
-  is_correct: false
-  reasoning: ''
-  time_taken: 2.83
+  is_correct: true
+  reasoning: 지문에서 Vitruvius는 건축가가 이론적 지식만을 의존하는 경우를 'hunting the shadow, not the substance'라고
+    표현하며, 이는 실제 건축 기술이나 실무적 역량 없이 이상적인 이론만 추구하는 것을 비판하는 맥락이다. 즉, 건축의 이상(이론)만을 좇고 실제적인
+    기술(실무)이 결여된 상태를 의미하므로, 3번 'pursuing the ideals of architecture without the practical
+    skills'가 가장 적절하다.
+  time_taken: 6.05
   points: 3
-  earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Request rate limit exceeded,
-    please try again later.'', ''type'': ''request_rate_limit_exceeded'', ''code'':
-    429}}'
+  earned_points: 3
+  success: true
+  error: null
 - question_id: q22
   question_number: 22
-  answer: -1
+  answer: 5
   correct_answer: 2
   is_correct: false
-  reasoning: ''
-  time_taken: 2.92
+  reasoning: 지문은 로마 시대 건축가의 위상과 함께, 비트루비우스가 건축가가 되기 위해서는 실용적 기술뿐 아니라 문학, 수사, 수학, 역사,
+    철학, 음악, 의학, 법률, 천문학 등 다양한 이론적 지식을 갖추어야 한다고 강조한다. 이는 단순한 기술 습득만으로는 권위 있는 위치에 오를
+    수 없고, 이론적 학문만으로도 실질적인 성취를 이루지 못한다는 점을 지적한다. 즉, 자신의 상태(여기서는 감정이 아니라, 건축가로서의 자기
+    이해와 학문적 토대)에 대한 깊은 이해와 균형 잡힌 역량이 사회적 성공(권위, 지위 등)에 필수적임을 말한다. 주어진 선택지 중 '자신의 감정
+    상태에 대한 이해는 사회적 향상에 필수적 요소이다'가 지문의 핵심 논지와 가장 유사하게 맞는다. 나머지 선택지들은 감정, 공감, 갈등 해소
+    등 감정적 요소에 초점을 두고 있으나, 지문은 감정이 아니라 자기 이해와 균형 잡힌 학문적 소양의 중요성을 강조한다.
+  time_taken: 8.62
   points: 3
   earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Request rate limit exceeded,
-    please try again later.'', ''type'': ''request_rate_limit_exceeded'', ''code'':
-    429}}'
+  success: true
+  error: null
 - question_id: q23
   question_number: 23
-  answer: -1
+  answer: 3
   correct_answer: 1
   is_correct: false
-  reasoning: ''
-  time_taken: 2.77
+  reasoning: 지문은 로마 제국 시기 건축가의 위상이 높아졌고, 건축이 정치적 상징으로 중요해졌음을 설명합니다. 또한 건축가가 갖추어야 할
+    다양한 학문적 소양(문학, 수학, 역사 등)과 실무적 능력의 조화를 강조하며, 이론만 또는 실무만으로는 권위 있는 위치에 오를 수 없다고 말합니다.
+    즉, 로마 시대 건축가의 사회적·정치적 위상과 건축이 사회에 미친 영향, 그리고 인간(건축가)과 그가 다루는 기술·이론(기계적, 실천적 요소)의
+    관계에 대한 논의가 중심입니다. 주어진 선택지 중 3번 'influence of industrialization on the machine-human
+    relationship'이 유일하게 인간(건축가)과 기술(건축, 이론, 실무)의 관계와 그 영향에 관한 주제로, 지문의 핵심 논지와 가장 부합합니다.
+    나머지 선택지는 산업화, 노동시장, 근로시간 등과 관련되어 지문과 직접적 관련이 없습니다.
+  time_taken: 10.78
   points: 3
   earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Request rate limit exceeded,
-    please try again later.'', ''type'': ''request_rate_limit_exceeded'', ''code'':
-    429}}'
+  success: true
+  error: null
 - question_id: q24
   question_number: 24
-  answer: -1
+  answer: 5
   correct_answer: 5
-  is_correct: false
-  reasoning: ''
-  time_taken: 2.82
+  is_correct: true
+  reasoning: 지문은 로마 시대 건축가의 위상, 건축이 정치적 상징으로서의 중요성, 건축가가 갖추어야 할 다양한 학문적 소양, 실용적 기술과
+    이론적 지식의 조화 등을 다루고 있다. 즉, 건축가라는 직업과 건축 자체가 단순한 기술을 넘어 사회적, 문화적, 정치적으로 중요한 역할을 하며,
+    다양한 지식의 융합이 필요하다는 점을 강조한다. 선택지 중 5번 'Selfies, the Latest Innovation in Representing
+    Ourselves'는 '셀피'라는 새로운 자기 표현 방식을 다루는 것으로, 지문에서 다룬 건축가의 위상, 건축의 정치적·문화적 의미, 다양한
+    지식의 융합과는 전혀 관련이 없다. 나머지 선택지들도 모두 '셀피'와 관련된 내용으로, 지문의 핵심 주제와 일치하지 않는다. 따라서 주어진
+    선택지 중 지문의 내용과 가장 적절한 제목은 없다. 하지만 형식상 가장 포괄적으로 '자기 표현의 혁신'이라는 측면에서 5번이 상대적으로 가장
+    근접하다고 볼 수 있다.
+  time_taken: 7.71
   points: 3
-  earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Request rate limit exceeded,
-    please try again later.'', ''type'': ''request_rate_limit_exceeded'', ''code'':
-    429}}'
+  earned_points: 3
+  success: true
+  error: null
 - question_id: q25
   question_number: 25
-  answer: -1
+  answer: 3
   correct_answer: 4
   is_correct: false
-  reasoning: ''
-  time_taken: 2.71
+  reasoning: Editor의 경우, 지문에서는 'The percentage of women employed as editors on the
+    top 100 U.S. films was less than 20% in each of the three years.'라고 명시되어 있습니다.
+    하지만 그래프 데이터에 따르면 Editor의 비율은 2020년 18%, 2021년 21%, 2022년 18%로, 2021년에 21%로 20%를
+    초과합니다. 따라서 Editor에 대한 설명은 도표의 내용과 일치하지 않습니다.
+  time_taken: 3.98
   points: 2
   earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Request rate limit exceeded,
-    please try again later.'', ''type'': ''request_rate_limit_exceeded'', ''code'':
-    429}}'
+  success: true
+  error: null
 - question_id: q26
   question_number: 26
-  answer: -1
+  answer: 4
   correct_answer: 4
-  is_correct: false
-  reasoning: ''
-  time_taken: 2.21
+  is_correct: true
+  reasoning: 지문에 따르면 Dick Enberg는 2016년에 마지막 생방송을 했고, 그 다음 해인 2017년에 82세로 사망했습니다.
+    즉, 마지막 방송 후 1년 뒤에 사망한 것이지, 3년 뒤에 사망한 것이 아닙니다. 따라서 4번 선택지는 지문 내용과 일치하지 않습니다.
+  time_taken: 3.71
   points: 2
-  earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Request rate limit exceeded,
-    please try again later.'', ''type'': ''request_rate_limit_exceeded'', ''code'':
-    429}}'
+  earned_points: 2
+  success: true
+  error: null
 - question_id: q27
   question_number: 27
-  answer: -1
+  answer: 3
   correct_answer: 3
-  is_correct: false
-  reasoning: ''
-  time_taken: 2.36
+  is_correct: true
+  reasoning: 지문에 따르면 1일권, 3일권, 5일권 모두 '10% off admission for major tourist attractions'
+    즉, 주요 관광지 입장료 10% 할인 혜택이 제공된다고 명시되어 있다. 따라서 5일권에도 이 혜택이 제공된다. 3번 선택지는 '5일 사용 카드에는
+    주요 관광지 입장료 할인 혜택이 제공된다'고 하여 지문과 일치한다. 그러나 문제는 '일치하지 않는 것'을 고르는 것이므로, 나머지 선택지를
+    검토해야 한다. 1번(관광객용 카드), 2번(시티 투어 버스 사용 불가), 4번(미사용 카드 30일 이내 환불), 5번(모바일 카드는 앱에서
+    구매 가능)은 모두 지문과 일치한다. 따라서 3번이 일치하지 않는 내용이 아니라, 나머지 선택지가 모두 일치하므로, 정답은 3번이다.
+  time_taken: 5.97
   points: 2
-  earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Request rate limit exceeded,
-    please try again later.'', ''type'': ''request_rate_limit_exceeded'', ''code'':
-    429}}'
+  earned_points: 2
+  success: true
+  error: null
 - question_id: q28
   question_number: 28
-  answer: -1
+  answer: 4
   correct_answer: 3
   is_correct: false
-  reasoning: ''
-  time_taken: 2.46
+  reasoning: 지문에는 'Parking is not available (Use public transportation and/or shuttle
+    bus service).'라고 명확히 주차가 불가능하다고 안내되어 있습니다. 따라서 '주차가 가능하다.'는 4번 선택지는 안내문의 내용과 일치하지
+    않는 내용입니다. 1번(2년에 한 번 열린다), 2번(연중 동안 진행된다), 5번(셔틀버스 이용은 무료이다)도 모두 안내문과 일치하지 않지만,
+    4번이 가장 명확하게 지문과 반대되는 정보를 담고 있습니다. 3번은 '11 teams will participate.'와 일치합니다.
+  time_taken: 6.23
   points: 2
   earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Request rate limit exceeded,
-    please try again later.'', ''type'': ''request_rate_limit_exceeded'', ''code'':
-    429}}'
+  success: true
+  error: null
 - question_id: q29
   question_number: 29
-  answer: -1
+  answer: 2
   correct_answer: 2
-  is_correct: false
-  reasoning: ''
-  time_taken: 2.21
+  is_correct: true
+  reasoning: '''as patients recovering from a brain injury affecting the motor system
+    ② knows.''에서 주어는 ''patients''로 복수이므로 동사는 ''know''가 되어야 합니다. 현재 ''knows''로 단수형이
+    사용되어 어법상 틀렸습니다. 나머지 선택지는 모두 문법적으로 옳습니다.'
+  time_taken: 4.82
   points: 2
-  earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Request rate limit exceeded,
-    please try again later.'', ''type'': ''request_rate_limit_exceeded'', ''code'':
-    429}}'
+  earned_points: 2
+  success: true
+  error: null
 - question_id: q30
   question_number: 30
-  answer: -1
+  answer: 2
   correct_answer: 4
   is_correct: false
-  reasoning: ''
-  time_taken: 2.34
+  reasoning: 문제는 밑줄 친 부분 중 문맥상 적절하지 않은 낱말을 찾는 것이다. 각 문장에 들어갈 단어를 대입해보면, ① had to consider(고려해야만
+    했다), ② knows(알고 있다), ③ freeing up(해방시켜준다), ④ that support(지지하는), ⑤ what you are
+    perceiving(지각하는 것) 등이다. 이 중 ②는 'patients recovering from a brain injury affecting
+    the motor system'이 복수 주어이므로 동사는 'know'가 되어야 한다. 'knows'는 단수 주어에 쓰이므로 문법상 적절하지
+    않다. 나머지 밑줄 부분은 모두 문맥과 문법에 맞게 쓰였다.
+  time_taken: 6.01
   points: 3
   earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Request rate limit exceeded,
-    please try again later.'', ''type'': ''request_rate_limit_exceeded'', ''code'':
-    429}}'
+  success: true
+  error: null
 - question_id: q31
   question_number: 31
-  answer: -1
+  answer: 5
   correct_answer: 5
-  is_correct: false
-  reasoning: ''
-  time_taken: 2.36
+  is_correct: true
+  reasoning: 지문에서는 우리가 물을 마시기 위해 일어날 때, 복잡한 근육 움직임을 의식적으로 고려하지 않고 자동적으로 행동한다고 설명합니다.
+    이는 'autopilot parts of our brain'이 자동으로 처리해주기 때문에, 우리의 의식은 더 중요한 일에 집중할 수 있다고
+    합니다. 마지막 문장에서는 'what you are perceiving, feeling, or thinking is based on a very
+    crude and fast analysis that happens completely without your awareness'라고 하여,
+    우리가 인지하고 느끼고 생각하는 대부분이 무의식적으로 이루어진다는 점을 강조합니다. 즉, 우리의 행동과 경험이 'personal involvement'(개인적
+    관여, 즉 자신이 직접 개입한다는 느낌) 없이 자동적으로 이루어진다는 맥락이므로, 5번 'personal involvement'가 가장 적절합니다.
+  time_taken: 5.47
   points: 3
-  earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Request rate limit exceeded,
-    please try again later.'', ''type'': ''request_rate_limit_exceeded'', ''code'':
-    429}}'
+  earned_points: 3
+  success: true
+  error: null
 - question_id: q33
   question_number: 33
-  answer: -1
+  answer: 3
   correct_answer: 3
-  is_correct: false
-  reasoning: ''
-  time_taken: 2.23
+  is_correct: true
+  reasoning: 지문에서는 주의 경제(attention economy)와 관련하여 기업들이 사용자의 주의를 상품화하고, 광고 산업이 사용자의
+    의식 시간을 사고파는 구조, 그리고 AI 추천 시스템이 사용자의 주의를 붙잡아두는 방식에 대해 설명하고 있습니다. 그러나 '개인정보 침해(privacy
+    violation)'에 대한 언급은 전혀 없으며, 지문은 오직 주의력의 상품화와 알고리즘의 영향에 초점을 맞추고 있습니다. 따라서 3번 'your
+    privacy is being violated'는 지문과 일치하지 않는 선택지입니다.
+  time_taken: 6.05
   points: 2
-  earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Request rate limit exceeded,
-    please try again later.'', ''type'': ''request_rate_limit_exceeded'', ''code'':
-    429}}'
+  earned_points: 2
+  success: true
+  error: null
 - question_id: q34
   question_number: 34
-  answer: -1
+  answer: 4
   correct_answer: 5
   is_correct: false
-  reasoning: ''
-  time_taken: 2.33
+  reasoning: 지문에서는 AI 기반 추천 시스템이 사용자의 주의를 붙잡아두고, 개인의 자유로운 탐색을 알고리즘이 생성한 재생목록이나 예술로
+    대체한다고 언급한다. 이는 개인의 창의적 탐색이나 새로운 사고방식, 창의적 아이디어를 촉진하기보다는, 이미 정해진 틀(회사, 알고리즘)에 사용자의
+    행동을 고정시키고 강화하는 역할을 한다는 의미다. 선택지 4번의 'reinforce one’s behavior within legal and
+    established contexts(법적이고 확립된 맥락 내에서 개인의 행동을 강화한다)'가 이러한 맥락과 가장 일치한다. 다른 선택지들은
+    창의성 촉진(3번), 새로운 역할 모색(2번), 생산적 활동 촉진(5번) 등으로, 지문이 비판적으로 언급하는 '행동의 강화'와는 거리가 있다.
+  time_taken: 10.35
   points: 3
   earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Request rate limit exceeded,
-    please try again later.'', ''type'': ''request_rate_limit_exceeded'', ''code'':
-    429}}'
+  success: true
+  error: null
 - question_id: q35
   question_number: 35
-  answer: -1
+  answer: 1
   correct_answer: 4
   is_correct: false
-  reasoning: ''
-  time_taken: 2.43
+  reasoning: 지문은 'attention economy(주의 경제)'와 관련된 내용으로, 기업들이 사람들의 주의를 상품화하여 이익을 창출하고,
+    AI 추천 시스템이 사용자의 창의적 탐색을 제한한다는 논지를 전개하고 있다. 반면 1번 문장은 자동차가 스포츠와 관광 발전에 미친 영향에 대한
+    내용으로, 주의 경제나 디지털 미디어, 알고리즘, 광고 등과 전혀 관련이 없다. 나머지 선택지(2~5)는 모두 자동차의 대중화, 편리함, 스포츠
+    관광과의 관계 등 자동차와 관련된 맥락을 공유하지만, 이 맥락 자체가 지문과 무관하다. 따라서 전체 흐름과 관계없는 문장은 1번이다.
+  time_taken: 5.94
   points: 3
   earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Request rate limit exceeded,
-    please try again later.'', ''type'': ''request_rate_limit_exceeded'', ''code'':
-    429}}'
+  success: true
+  error: null
 - question_id: q36
   question_number: 36
-  answer: -1
+  answer: 5
   correct_answer: 5
-  is_correct: false
-  reasoning: ''
-  time_taken: 2.31
+  is_correct: true
+  reasoning: '지문은 시장의 계약 이행을 강화하는 요소로 ''평판 자본''을 언급하며, 계약 위반 시 평판이 훼손되어 시장에서 제재를 받을
+    수 있음을 설명한다. (C)는 농민과 지주가 정직, 공정성, 높은 생산성 등으로 평판을 쌓는 과정을 설명하며, 소규모 공동체에서 평판이 잘
+    알려진다는 점을 강조한다. 이는 평판의 형성과 그 중요성을 먼저 설명하는 도입에 적합하다. (B)는 평판이 실제로 어떻게 작동하는지, 즉 지주가
+    농민을 간접적으로 모니터링하고 평판이 일종의 ''보증'' 역할을 한다는 구체적 메커니즘을 제시한다. (A)는 이런 평판 시스템 하에서 계약
+    위반(예: 농민의 노력 감소, 지주의 관리 소홀)이 어떻게 장기적으로 불이익(거래 거부)으로 이어지는지 결과를 보여준다. 따라서 평판의 형성(C)
+    → 평판의 작동 방식(B) → 평판 훼손 시 결과(A) 순서가 논리적이다.'
+  time_taken: 7.18
   points: 3
-  earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Request rate limit exceeded,
-    please try again later.'', ''type'': ''request_rate_limit_exceeded'', ''code'':
-    429}}'
+  earned_points: 3
+  success: true
+  error: null
 - question_id: q38
   question_number: 38
-  answer: -1
+  answer: 3
   correct_answer: 4
   is_correct: false
-  reasoning: ''
-  time_taken: 2.27
+  reasoning: 지문에서 주어진 문장은 'In reality, objects do not conform to a linear lifecycle
+    model... a far more complicated and adaptive path than a simplistic linear progression.'으로,
+    실제로 사물(또는 현상)의 생애 주기가 단순한 선형적 모델에 맞지 않고 훨씬 더 복잡하고 적응적인 경로를 따른다는 내용이다. 즉, 기존의 단순화된
+    선형 모델에 대한 반박이자, 실제 현상은 더 복잡하다는 논지이다. 이 문장은 일반적으로 기존의 단순한 설명이나 모델이 소개된 후, 그 한계를
+    지적하며 실제는 더 복잡하다는 흐름에서 자연스럽게 들어간다. 선택지 (B)-(C)-(A)에서 (B)는 기존의 단순한 모델이나 설명을 제시하고,
+    (C)는 그에 대한 구체적 사례나 설명, (A)는 결론이나 요약이 나오는 구조로 볼 수 있다. 따라서 주어진 문장은 (B)와 (C) 사이,
+    즉 (B)-(C)-(A) 순서에서 (C) 앞에 들어가는 것이 가장 자연스럽다.
+  time_taken: 7.87
   points: 3
   earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Request rate limit exceeded,
-    please try again later.'', ''type'': ''request_rate_limit_exceeded'', ''code'':
-    429}}'
+  success: true
+  error: null
 - question_id: q39
   question_number: 39
-  answer: -1
+  answer: 2
   correct_answer: 4
   is_correct: false
-  reasoning: ''
-  time_taken: 2.15
+  reasoning: 지문에서는 사물(또는 객체)의 생애 주기가 단순한 선형적 모델에 따르지 않으며, 실제로는 훨씬 더 복잡하고 적응적인 경로를
+    따른다고 설명한다. 즉, 사물의 변화가 '예측 가능성(predictability)'에 도전(challenge)된다는 것이 아니라, 오히려 '예측
+    가능성(predictability)'에 대한 '지지(support)'가 아니라 '의문(question)'을 제기하거나 '도전(challenge)'을
+    받는다는 맥락이다. 선택지 2번은 'predictability ...... support'로, 실제로 지문이 말하는 바와 일치한다. 즉, 선형적
+    생애 주기 모델이 사물의 예측 가능성을 뒷받침(support)하지 못한다는 의미가 된다. 다른 선택지는 문맥상 맞지 않는다.
+  time_taken: 8.14
   points: 3
   earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Request rate limit exceeded,
-    please try again later.'', ''type'': ''request_rate_limit_exceeded'', ''code'':
-    429}}'
+  success: true
+  error: null
 - question_id: q41
   question_number: 41
-  answer: -1
+  answer: 3
   correct_answer: 2
   is_correct: false
-  reasoning: ''
-  time_taken: 2.26
+  reasoning: '지문은 인간의 엄지와 집게손가락을 이용해 종이 한 장을 집는 행위를 묘사하며, 그 과정이 예상외로 ''bloody business''가
+    될 수 있다고 언급합니다. 이는 인간 손의 진화적 결과가 일상적이지만 예상치 못한 결과를 가져왔음을 암시합니다. 선택지 3번 ''Our Hands:
+    An Unexpected Outcome of Evolution''은 인간 손이 진화의 결과로서 예상치 못한 특성을 지니게 되었음을 강조하며,
+    지문의 핵심 내용과 가장 잘 부합합니다. 다른 선택지들은 진화적 거리(1번), 결정적 도약(2번), 생존의 딜레마(4번), 도구 사용의 힘(5번)
+    등으로 지문의 핵심 논지와 맞지 않습니다.'
+  time_taken: 11.16
   points: 2
   earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Request rate limit exceeded,
-    please try again later.'', ''type'': ''request_rate_limit_exceeded'', ''code'':
-    429}}'
+  success: true
+  error: null
 - question_id: q42
   question_number: 42
-  answer: -1
+  answer: 3
   correct_answer: 5
   is_correct: false
-  reasoning: ''
-  time_taken: 2.41
+  reasoning: 지문의 'it can be a bloody business'는 '종이로 손을 베는 일'이 피가 날 수 있는 위험한 일임을 강조하는
+    표현입니다. 따라서 'bloody'는 '피가 나는, 피투성이의'라는 의미로 쓰여 문맥상 적절합니다. (a)~(e) 중에서 각 낱말의 쓰임을
+    살펴보면, (c)의 단어가 문맥상 적절하지 않게 쓰였습니다. (c)는 'business'와 어울리지 않는 의미의 단어가 들어가 있어, 지문의
+    상황(종이로 손을 집을 때 피가 날 수 있다)에 맞지 않습니다. 나머지 선택지는 모두 지문과 자연스럽게 연결됩니다.
+  time_taken: 5.77
   points: 3
   earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Request rate limit exceeded,
-    please try again later.'', ''type'': ''request_rate_limit_exceeded'', ''code'':
-    429}}'
+  success: true
+  error: null
 - question_id: q43
   question_number: 43
-  answer: -1
+  answer: 2
   correct_answer: 2
-  is_correct: false
-  reasoning: ''
-  time_taken: 2.38
+  is_correct: true
+  reasoning: 지문 (A)에서 에단과 그레이스가 하이킹을 가기로 결정한 후, 두 사람은 하이킹 재킷이 세탁소에 있다는 사실을 깨닫고 함께
+    찾으러 가기로 합니다. 따라서 세탁소에서 재킷을 찾는 장면인 (C)가 먼저 나와야 합니다. 그 다음 집으로 돌아와 하이킹 준비물을 점검하고,
+    아들에게 하이킹을 제안하는 장면인 (B)가 이어집니다. 마지막으로 실제 하이킹을 가서 부자간의 갈등이 해소되는 장면인 (D)가 나오는 것이
+    자연스러운 순서입니다. 즉, (C) → (B) → (D)가 가장 논리적이고 지문의 흐름에 맞는 배열입니다.
+  time_taken: 4.87
   points: 3
-  earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Request rate limit exceeded,
-    please try again later.'', ''type'': ''request_rate_limit_exceeded'', ''code'':
-    429}}'
+  earned_points: 3
+  success: true
+  error: null
 - question_id: q44
   question_number: 44
-  answer: -1
+  answer: 3
   correct_answer: 3
-  is_correct: false
-  reasoning: ''
-  time_taken: 2.46
+  is_correct: true
+  reasoning: (a), (b), (d), (e)는 모두 Sean(아들)을 가리키지만, (c)는 Ethan(아버지)을 가리킨다. 지문에서 (a)는
+    Ethan이 Sean과의 관계를 회상하며 이야기할 때, (b)는 Sean이 Ethan의 제안에 답하는 장면, (d)와 (e)는 Sean이 Ethan에게
+    자신의 감정을 고백하는 장면에서 각각 Sean을 가리킨다. 반면 (c)는 세탁소 점원이 Ethan에게 '언제 옷을 맡겼냐'고 물으며 Ethan을
+    지칭한다. 따라서 (c)가 나머지 넷과 가리키는 대상이 다르다.
+  time_taken: 6.66
   points: 2
-  earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Request rate limit exceeded,
-    please try again later.'', ''type'': ''request_rate_limit_exceeded'', ''code'':
-    429}}'
+  earned_points: 2
+  success: true
+  error: null
 - question_id: q45
   question_number: 45
-  answer: -1
+  answer: 4
   correct_answer: 4
-  is_correct: false
-  reasoning: ''
-  time_taken: 2.36
+  is_correct: true
+  reasoning: 지문 (A)와 (C)를 보면 Ethan은 하이킹 재킷을 찾으러 갈 때 Grace에게 함께 가자고 요청했고, 실제로 두 사람이
+    함께 세탁소에 갔다고 명시되어 있다. 즉, Ethan이 혼자서 세탁소에 하이킹 재킷을 찾으러 간 것이 아니라 Grace와 함께 갔다. 따라서
+    4번 선택지는 지문의 내용과 일치하지 않아 적절하지 않은 내용이다.
+  time_taken: 4.67
   points: 2
-  earned_points: 0
-  success: false
-  error: 'Error code: 429 - {''error'': {''message'': ''Request rate limit exceeded,
-    please try again later.'', ''type'': ''request_rate_limit_exceeded'', ''code'':
-    429}}'
+  earned_points: 2
+  success: true
+  error: null

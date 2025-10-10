@@ -2,14 +2,14 @@ exam_id: 2025-english-sat
 exam_title: 2025학년도 수능 ENGLISH
 subject: english
 model_name: gpt-5
-evaluated_at: '2025-10-06T23:31:23.633949'
+evaluated_at: '2025-10-10T23:12:57.742369'
 summary:
   total_questions: 42
-  correct_answers: 9
-  accuracy: 21.43
-  total_score: 22
+  correct_answers: 11
+  accuracy: 26.19
+  total_score: 26
   max_score: 100
-  score_rate: 22.0
+  score_rate: 26.0
 results:
 - question_id: q1
   question_number: 1
@@ -181,11 +181,22 @@ results:
   answer: 3
   correct_answer: 3
   is_correct: true
-  reasoning: 여자는 미래의 식량난을 대비해 어떤 식품이 대안이 될 수 있는지와 그 이유(영양적 가치, 지속가능성 등)를 소개·설명하는 데
-    초점을 맞추고 있다. 이는 식량 보관 조건(1)이나 일반적인 균형 잡힌 식단의 중요성(2)을 말하는 것이 아니며, 특이한 재료로 만든 인기
-    요리 자체(4)를 소개하는 것도 아니다. 또한 신기술 중심의 대응책(5)보다 대안 식품의 선정과 적합성에 무게를 두고 있어 3이 주제로 가장
-    적절하다.
-  time_taken: 15.02
+  reasoning: '[질문 유형: 긍정형 - 일치하는 것 찾기]
+
+
+    1번: 보관의 바람직한 조건에 대한 내용은 없음. 호박의 장기 보관 가능 언급은 있으나 ‘조건’ 설명 아님 → X (불일치)
+
+    2번: 영양가 있는 식단의 중요성 자체를 주제로 하지 않음. 대체 식품의 예와 미래 식량난 해결 초점 → X (불일치)
+
+    3번: 미래 식량난 해결에 적합한 대체 식품을 소개(해조류, 콩, 호박, 버섯, 곤충) → O (일치) ✓
+
+    4번: ‘인기 있는 요리’나 조리법·인기도 언급 없음 → X (불일치)
+
+    5번: 기술에 대한 논의 없음. 주제는 ‘식품’ 자체 → X (불일치)
+
+
+    긍정형 질문이므로 O(일치) 선택지인 3번이 정답'
+  time_taken: 16.86
   points: 2
   earned_points: 2
   success: true
@@ -195,41 +206,78 @@ results:
   answer: 4
   correct_answer: 4
   is_correct: true
-  reasoning: 지문이 제공되지 않아 정답을 확정할 수는 없으나, 일반적으로 해조류(seaweed)·콩(beans)·호박(pumpkins)·버섯(mushrooms)은
-    채식·아시아 식단 혹은 전통 식재료 문맥에서 함께 언급되는 경우가 많고, 그 조합에서 감자(potatoes)는 상대적으로 덜 등장합니다. 따라서
-    비언급일 가능성이 가장 높은 4번을 추정 선택합니다.
-  time_taken: 22.06
+  reasoning: '⚠️ 검증: reasoning에서 5번을 부적절/틀렸다고 판단했으나, answer는 4번으로 선택됨. 5번으로 수정 제안.
+
+
+    [질문 유형: 부정형 - 언급되지 않은 것 찾기]
+
+
+    1번: 지문에 seaweed 언급 → O (일치)
+
+    2번: 지문에 beans 언급 → O (일치)
+
+    3번: 지문에 pumpkins 언급 → O (일치)
+
+    4번: 지문에 potatoes 언급 없음 → X (불일치) ✓
+
+    5번: 지문에 mushrooms 언급 → O (일치)
+
+
+    부정형 질문이므로 X(불일치) 선택지인 4번이 정답'
+  time_taken: 9.39
   points: 2
   earned_points: 2
   success: true
   error: null
 - question_id: q18
   question_number: 18
-  answer: 5
+  answer: 1
   correct_answer: 1
-  is_correct: false
-  reasoning: 글은 대회 참가자에게 필요한 준비나 주의사항보다, 일반 시민을 대상으로 특정 날짜와 시간대, 통제 구간, 우회 경로 및 대중교통
-    이용 권고 등 교통 관련 정보를 제공하고 협조를 요청하는 데 초점이 맞춰져 있다. 이는 마라톤 진행으로 인한 교통 통제를 미리 알리고 불편을
-    최소화하려는 목적이므로, 도로 통제 안내가 가장 적절하다. 반면 취소나 환불 절차 안내, 준비 운동 당부 등은 글의 핵심과 맞지 않는다.
-  time_taken: 9.98
+  is_correct: true
+  reasoning: '[질문 유형: 긍정형 - 일치하는 것 찾기]
+
+
+    1번: ''마라톤이 취소되었음(cancelled)''을 알리고 새 일정은 추후 통지한다고 명시 → O (일치)
+
+    2번: 시작 전 주의 사항을 독려하는 내용 없음 → X (불일치)
+
+    3번: 참가비 환불 절차 언급 없음 → X (불일치)
+
+    4번: ''훈련을 계속하라''는 요청은 있으나 ''시작 전 준비 운동 당부''는 아님 → X (불일치)
+
+    5번: 도로 통제 안내 없음 → X (불일치)
+
+
+    긍정형 질문이므로 O(일치) 선택지인 1번이 정답'
+  time_taken: 14.82
   points: 2
-  earned_points: 0
+  earned_points: 2
   success: true
   error: null
 - question_id: q19
   question_number: 19
-  answer: 3
+  answer: 2
   correct_answer: 2
-  is_correct: false
-  reasoning: 제시문이 제공되지 않아 단정은 어렵지만, 보기들의 전개 개연성을 비교하면 3번이 가장 일반적이다. 1번(relaxed→indifferent)은
-    갈등·사건에 따른 감정선 변화가 미미해 지문형 문제에서 덜 자연스럽고, 2번(confident→disappointed)은 초반 자신감의 근거와
-    후반 좌절의 명확한 계기가 필요하며 부정적 결말 빈도가 낮다. 4번(embarrassed→joyful)은 중간의 문제 해결·이해라는 매개 없이
-    당혹에서 즉각 기쁨으로 뛰어 변화가 도약적이다. 5번(jealous→discouraged)은 ‘질투’라는 출발 정서가 특수하고 결말도 소극적
-    좌절로 마무리된다. 반면 3번(confused→satisfied)은 초반 상황 미파악으로 혼란을 겪다 문제 해결·이해로 만족·안도에 이르는
-    전형적 서사 구조이므로 가장 타당하다.
-  time_taken: 24.36
+  is_correct: true
+  reasoning: '[질문 유형: 긍정형 - 일치하는 것 찾기]
+
+
+    1번: 처음에 relaxed(여유) 근거 없음, 이후 indifferent(무관심)도 아님 → X (불일치)
+
+    2번: 처음에 "so confident that everything would be perfect" 명시, 이후 "heart sank", 계획이
+    무너짐 → disappointed에 해당 → O (일치)
+
+    3번: 처음에 confused 근거 없음, 이후 satisfied 아님 → X (불일치)
+
+    4번: embarrassed와 joyful 모두 지문에 근거 없음 → X (불일치)
+
+    5번: jealous 근거 없음, discouraged는 일부 가능하나 초반 감정과 불일치 → X (불일치)
+
+
+    긍정형 질문이므로 O(일치)인 2번이 정답'
+  time_taken: 19.43
   points: 2
-  earned_points: 0
+  earned_points: 2
   success: true
   error: null
 - question_id: q20
@@ -237,10 +285,23 @@ results:
   answer: 3
   correct_answer: 1
   is_correct: false
-  reasoning: 글의 초점은 게임 자체를 금지하거나 별도의 교육용 게임을 만드는 것이 아니라, 게임의 규칙·보상·도전·즉각적 피드백 같은 메커니즘을
-    학습 활동에 접목해 학습자의 동기와 몰입을 높이자는 ‘게이미피케이션’에 있다. 이는 기존 수업을 게임처럼 설계해 새로운 학습 경험을 제공하자는
-    주장으로, 규제(2), 시간관리(4), 부정적 영향 완화의 총론(5)이나 도구 개발 위주의 접근(1)과 구분된다.
-  time_taken: 10.99
+  reasoning: '[질문 유형: 긍정형 - 일치하는 것 찾기]
+
+
+    1번: 지문에 "교육자는 학습 성과 향상을 위해 설계된 게임을 개발해야 한다"라고 명시 → O (일치)
+
+    2번: 지문은 게임을 금지/자제시키기보다 교실에 통합하라고 함 → X (불일치)
+
+    3번: 지문에 "학습 활동에 게임적 요소를 통합하면 수동적 학습이 능동적·몰입적 경험으로 변한다"라고 함 → O (일치)
+
+    4번: 여가 시간의 게임 사용에 대한 언급 없음 → X (불일치)
+
+    5번: 게임의 부정적 영향 감소를 위한 학습 공동체의 노력 언급 없음 → X (불일치)
+
+
+    긍정형이므로 O(일치) 중에서 선택. 1번과 3번이 일치하나, 글의 핵심 주장인 "게임적 요소를 학습 활동에 통합"을 직접 담은 3번이 가장
+    적절하므로 3번 선택'
+  time_taken: 40.72
   points: 2
   earned_points: 0
   success: true
@@ -250,62 +311,134 @@ results:
   answer: 3
   correct_answer: 3
   is_correct: true
-  reasoning: 비트루비우스는 건축에는 이론과 실무가 모두 필요하다고 했고, 오직 이론과 학문에만 의존하는 이들은 ‘실체가 아니라 그림자’를
-    쫓는다고 했다. 이는 실무적 기술과 현실 적용 없이 이론적 이상만 좇는 것을 비판하는 표현이므로, 실용적 역량 없이 건축의 이상만 추구하는
-    것을 뜻한다.
-  time_taken: 8.25
+  reasoning: '[질문 유형: 긍정형 - 적절한 것 찾기]
+
+
+    1번: ''전통이 강조한''이라는 지문에 없는 요소 포함, 또한 실기 결여의 의미가 빠짐 → X (불일치)
+
+    2번: ''필요한 과목들을 경시''는 오히려 ''실기만 추구'' 쪽에 가까워 지문 맥락과 다름(문제의 구절은 이론만 의존) → X (불일치)
+
+    3번: ''이론(이상)만 추구하고 실기(실무) 없는 경우''로, "those who have relied only upon theories
+    and scholarship"에 정확히 부합 → O (일치) ✓
+
+    4번: 물질 vs 예술의 대비는 지문에 없음 → X (불일치)
+
+    5번: 역사적 전례 vs 현행 기준의 대비는 지문에 없음 → X (불일치)
+
+
+    긍정형 질문이므로 O(일치)인 3번이 정답
+
+
+    최종 검증: 긍정형 질문에 대해 O 선택지를 선택함'
+  time_taken: 17.68
   points: 3
   earned_points: 3
   success: true
   error: null
 - question_id: q22
   question_number: 22
-  answer: 5
+  answer: -1
   correct_answer: 2
   is_correct: false
-  reasoning: 지문은 비트루비우스가 건축가에게 요구되는 것은 이론과 실무의 균형 및 폭넓은 학문적 소양이며, 둘 중 하나에만 치우치면 권위와
-    지위에 오르기 어렵다는 내용이다. 제시된 선택지들은 모두 감정 능력에 관한 내용으로 지문과 직접적으로 부합하지 않는다. 그나마 5번의 ‘사회적
-    향상(지위 상승)’이라는 요소가 지문 속 ‘권위에 오름’과 부분적으로 맞닿아 있어 소거법상 가장 가까운 선택지로 볼 수 있다.
-  time_taken: 36.71
+  reasoning: '[질문 유형: 긍정형 - 적절한 것 찾기]
+
+
+    1번: 지문은 로마 시대 건축가의 위상 상승과 건축에서 이론·실무의 겸비 필요성을 말함. 감정 조절·갈등 해소 언급 없음 → X (불일치)
+
+    2번: 감정 이해 능력과 현대 직업환경의 중요성 증가 언급 없음 → X (불일치)
+
+    3번: 타인의 감정 공감과 자신의 감정 조절의 관계 언급 없음 → X (불일치)
+
+    4번: 감정 이해의 차이가 긍정 능력 발달의 기반이 된다는 내용 없음 → X (불일치)
+
+    5번: 자신의 감정 이해가 사회적 향상에 필수라는 내용 없음 → X (불일치)
+
+
+    긍정형 질문이지만, 제시된 모든 선택지가 지문 내용과 무관하여 일치하는 보기가 없음'
+  time_taken: 37.65
   points: 3
   earned_points: 0
-  success: true
-  error: null
+  success: false
+  error: 유효하지 않은 답 번호
 - question_id: q23
   question_number: 23
-  answer: 3
+  answer: -1
   correct_answer: 1
   is_correct: false
-  reasoning: 지문은 로마 제국 시대에 건축가의 위상이 높아지고, 비트루비우스가 건축가가 갖추어야 할 폭넓은 교양과 이론·실무의 균형을 강조했다는
-    내용이다. 반면 제시된 선택지는 산업화, 표준화, 노동시간, 기계-인간 관계 등 산업혁명 관련 주제로 지문과 시대·내용이 전혀 부합하지 않는다.
-    따라서 적절한 선택지는 사실상 없으며, 불가피하게 고르자면 가장 일반적인 표현인 3번을 택하나 이것 역시 지문과 무관하다.
-  time_taken: 25.3
+  reasoning: '[질문 유형: 긍정형 - 주제 찾기]
+
+
+    1번: 산업화로 인한 노동시간 패러다임 전환 → 지문은 로마 시대 건축가의 지위 상승과 비트루비우스의 이론·실무 병행 강조를 다룸. 산업화·노동시간
+    언급 없음 → X (불일치)
+
+    2번: 생산 절차 표준화가 노동시장에 미친 영향 → 지문에 해당 내용 없음 → X (불일치)
+
+    3번: 산업화가 기계-인간 관계에 미친 영향 → 지문에 해당 내용 없음 → X (불일치)
+
+    4번: 산업 시대 시간 가치 높이는 효율적 방법 → 지문에 해당 내용 없음 → X (불일치)
+
+    5번: 과도한 노동시간이 노동자에게 초래한 문제 → 지문에 해당 내용 없음 → X (불일치)
+
+
+    긍정형 질문이므로 O(일치) 선택지를 골라야 하나, 지문과 일치하는 선택지가 없음. 지문의 실제 주제는 로마 시대 건축가의 지위 상승과 건축에서
+    이론과 실무의 균형 중요성임. 따라서 정답 없음.'
+  time_taken: 26.75
   points: 3
   earned_points: 0
-  success: true
-  error: null
+  success: false
+  error: 유효하지 않은 답 번호
 - question_id: q24
   question_number: 24
-  answer: 5
+  answer: -1
   correct_answer: 5
-  is_correct: true
-  reasoning: 지문의 핵심은 로마 제국 시기 건축가의 위상과 비트루비우스가 말한 건축가의 소양(이론과 실무의 조화)으로, 셀피와 전혀 관련이
-    없습니다. 제시된 제목들은 모두 셀피에 관한 것으로 지문과 주제가 불일치합니다. 그중 1, 2, 3, 4는 특정한 주장(일시적 유행, 실재성
-    논쟁, 자기중심 문화 상징, 자화상의 종말)을 담고 있어 더 부적절하고, 5번은 비교적 일반적인 서술로 덜 부적절하므로 소거법상 5번을 고릅니다.
-  time_taken: 17.21
+  is_correct: false
+  reasoning: '[질문 유형: 긍정형 - 글의 제목으로 적절한 것 찾기]
+
+
+    1번: 셀피의 유행 여부(미술사) 언급. 지문은 로마 제국의 건축가 위상과 비트루비우스의 견해로, 셀피/자기표상 전혀 없음 → X (불일치)
+
+    2번: 셀피와 실재/정체성 문제. 지문과 무관 → X (불일치)
+
+    3번: 셀피와 자기지향적 문화 상징. 지문과 무관 → X (불일치)
+
+    4번: 셀피가 자화상을 대체. 지문과 무관 → X (불일치)
+
+    5번: 셀피가 자기표상의 최신 혁신. 지문과 무관 → X (불일치)
+
+
+    긍정형 질문이지만 O(일치) 선택지가 존재하지 않음. 모든 선택지가 지문 내용(로마 시대 건축가의 위상 상승, 비트루비우스의 학문·실무 병행
+    강조)과 무관하므로 정답 없음'
+  time_taken: 25.62
   points: 3
-  earned_points: 3
-  success: true
-  error: null
+  earned_points: 0
+  success: false
+  error: 유효하지 않은 답 번호
 - question_id: q25
   question_number: 25
-  answer: 5
+  answer: 3
   correct_answer: 4
   is_correct: false
-  reasoning: 일반적으로 영화 제작진 도표는 ‘Role’(역할)이라는 열 제목 아래에 Director, Writer, Editor, Producer
-    같은 구체적 직무가 항목값으로 나열된다. 따라서 1~4는 도표의 개별 역할명과 일치하지만, 5의 ‘Role’은 범주명(열 제목)이지 개별 역할이
-    아니므로 도표의 항목 내용과 일치하지 않는다.
-  time_taken: 20.01
+  reasoning: '⚠️ 검증: reasoning에서 5번을 부적절/틀렸다고 판단했으나, answer는 3번으로 선택됨. 5번으로 수정 제안.
+
+
+    [질문 유형: 부정형 - 일치하지 않는 것 찾기]
+
+
+    1번: Director — 지문에 ''2021년은 2020년보다 낮고 2022년보다 높다''고 했고, 그래프 16→12→11로 일치 → O
+    (일치)
+
+    2번: Writer — 지문에 ''20→21 +4%p, 21→22 +1%p''라 했고, 그래프 12→16→17로 일치 → O (일치)
+
+    3번: Editor — 지문에 ''매년 20% 미만''이라 했으나 그래프 2021년 21%로 20% 이상 → X (불일치) ✓
+
+    4번: Producer — 지문에 ''매년 네 역할 중 가장 높음'' 및 ''2022=2020''이라 했고, 그래프 28=28, 각 연도 최고치로
+    일치 → O (일치)
+
+    5번: Role — 지문에 ''by role''로 제시되어 도표 범주에 해당, 불일치 내용 없음 → O (일치)
+
+
+    부정형 질문이므로 X(불일치) 선택지인 3번이 정답'
+  time_taken: 35.18
   points: 2
   earned_points: 0
   success: true
@@ -315,48 +448,109 @@ results:
   answer: 4
   correct_answer: 4
   is_correct: true
-  reasoning: 글에 따르면 그는 미시간에서 태어났고, 대학 야구를 코치한 경력이 있으며, 미국 스포츠 캐스터로서는 최초로 중국을 방문했고,
-    에미상을 수상한 인물로 소개된다. 반면 마지막 방송 이후 약 1년여 만에 사망했으므로 ‘마지막 방송 후 3년 뒤에 사망하였다’는 4번 선택지는
-    글의 내용과 일치하지 않는다.
-  time_taken: 26.39
+  reasoning: '⚠️ 검증: reasoning에서 5번을 부적절/틀렸다고 판단했으나, answer는 4번으로 선택됨. 5번으로 수정 제안.
+
+
+    [질문 유형: 부정형 - 일치하지 않는 것 찾기]
+
+
+    1번: 지문에 ''He was born in Michigan in 1935.''라 명시 → O (일치)
+
+    2번: 지문에 ''served as a coach of its baseball team''이라 명시(대학 야구팀) → O (일치)
+
+    3번: 지문에 ''the first U.S. sportscaster ever to visit China''라 명시 → O (일치)
+
+    4번: 지문에 ''last live broadcast in 2016 and died the following year''라 명시(다음 해 사망)
+    → 3년 뒤 아님 → X (불일치) ✓
+
+    5번: 지문에 ''won Emmy Awards''라 명시 → O (일치)
+
+
+    부정형 질문이므로 X(불일치) 선택지인 4번이 정답'
+  time_taken: 9.85
   points: 2
   earned_points: 2
   success: true
   error: null
 - question_id: q27
   question_number: 27
-  answer: 2
+  answer: -1
   correct_answer: 3
   is_correct: false
-  reasoning: 안내문에는 Adenville City Pass Card가 관광객을 위한 대중교통 통합 카드로, 모바일 카드는 A-Transit
-    앱에서 구매 가능하며, 미사용 카드는 구입일로부터 30일 이내 환불 가능하다고 안내되어 있다. 또한 5일권에는 주요 관광지 입장료 할인 혜택이
-    제공된다고 되어 있다. 반면 시티 투어 버스에서도 사용 가능하다고 명시되어 있으므로, ‘시티 투어 버스에는 사용할 수 없다’는 2번이 안내문
-    내용과 일치하지 않는다.
-  time_taken: 14.63
+  reasoning: '[질문 유형: 부정형 - 일치하지 않는 것 찾기]
+
+
+    1번: 지문에 ''tourists visiting Adenville를 위한 public transportation card''로 명시 → O
+    (일치)
+
+    2번: 지문에 ''cannot be used for city tour buses'' 명시 → O (일치)
+
+    3번: 5-Day 카드에도 ''(10% off admission for major tourist attractions)'' 표기 → O (일치)
+
+    4번: ''Unused cards are refundable within 30 days of the purchase date'' 명시 → O
+    (일치)
+
+    5번: ''Mobile cards can be purchased on the A-Transit app'' 명시 → O (일치)
+
+
+    모든 선택지가 지문과 일치하여 X(불일치) 선택지가 없습니다. 따라서 일치하지 않는 것은 없습니다.'
+  time_taken: 34.21
+  points: 2
+  earned_points: 0
+  success: false
+  error: 유효하지 않은 답 번호
+- question_id: q28
+  question_number: 28
+  answer: 4
+  correct_answer: 3
+  is_correct: false
+  reasoning: '⚠️ 검증: reasoning에서 5번을 부적절/틀렸다고 판단했으나, answer는 4번으로 선택됨. 5번으로 수정 제안.
+
+
+    [질문 유형: 부정형 - 일치하지 않는 것 찾기]
+
+
+    1번: 지문에 ''annual(매년)''이라 되어 있어 2년마다가 아님 → X (불일치)
+
+    2번: 지문에 ''1월 24–30일(7일간)''로 제시 → X (불일치)
+
+    3번: 지문에 ''11 teams will participate'' 명시 → O (일치)
+
+    4번: 지문에 ''Parking is not available'' 명시 → X (불일치) ✓
+
+    5번: 지문에 ''One-way fare: $1''로 유료 명시 → X (불일치)
+
+
+    부정형 질문이므로 X(불일치) 선택지 중 하나인 4번을 정답으로 선택'
+  time_taken: 28.11
   points: 2
   earned_points: 0
   success: true
   error: null
-- question_id: q28
-  question_number: 28
-  answer: -1
-  correct_answer: 3
-  is_correct: false
-  reasoning: 빈 응답
-  time_taken: 34.47
-  points: 2
-  earned_points: 0
-  success: false
-  error: 모델이 빈 응답을 반환했습니다
 - question_id: q29
   question_number: 29
   answer: 2
   correct_answer: 2
   is_correct: true
-  reasoning: ②에서 주어는 복수명사 patients이므로 동사는 복수형 know가 와야 한다. knows는 단수 주어에 맞는 형태로 어법상
-    틀리다. ① had는 가정적 상황을 나타내는 과거시제로 적절하고, ③ freeing은 분사구문으로 앞 문장을 수식해 자연스럽다. ④는 강조구문(It
-    is ~ that ~)으로 바른 형태이며, ⑤ what은 주어 역할의 합성관계대명사로 적절하다.
-  time_taken: 14.53
+  reasoning: '⚠️ 검증: reasoning에서 5번을 부적절/틀렸다고 판단했으나, answer는 2번으로 선택됨. 5번으로 수정 제안.
+
+
+    [질문 유형: 부정형 - 어법상 틀린 것 찾기]
+
+
+    1번(had): 가정 상황을 상정하는 if절에서 과거시제 사용 적절 → O (일치)
+
+    2번(knows): 주어 patients(복수)이므로 동사는 know가 되어야 함 → X (불일치) ✓
+
+    3번(freeing): 분사구문으로 앞절의 동작 결과를 자연스럽게 설명 → O (일치)
+
+    4번(that): 강조구문 It is ~ that ...에서 that 사용과 동사 호응(support) 적절 → O (일치)
+
+    5번(what): 명사절 주어(what~)에 단수 동사 is의 호응 적절 → O (일치)
+
+
+    부정형 질문이므로 X(불일치)인 2번이 정답'
+  time_taken: 25.54
   points: 2
   earned_points: 2
   success: true
@@ -366,48 +560,110 @@ results:
   answer: 2
   correct_answer: 4
   is_correct: false
-  reasoning: ②에서 주어 patients가 복수이므로 동사는 know가 되어야 하는데 knows로 쓰여 수일치 오류가 있다. ①은 가정·상상을
-    나타내는 had to가 자연스럽고, ③은 분사구문으로 앞의 내용(autopilot parts do it) 결과를 설명해 적절하다. ④는 강조구문
-    It is A that B에서 복수 주어 parts에 맞는 동사 support가 올바르며, ⑤는 what절이 단수 취급되어 is가 적절하다.
-  time_taken: 18.04
+  reasoning: '⚠️ 검증: reasoning에서 5번을 부적절/틀렸다고 판단했으나, answer는 2번으로 선택됨. 5번으로 수정 제안.
+
+
+    [질문 유형: 부정형 - 적절하지 않은 것 찾기]
+
+
+    1번(① had to consider): 가정적 상황을 상정한 "Imagine if we had to ~"에서 과거형 사용은 자연스러움 →
+    O (일치)
+
+    2번(② knows): 주어가 복수 "patients"이므로 동사는 "know"가 되어야 함. "knows"는 문법적으로 부적절 → X (불일치)
+    ✓
+
+    3번(③ freeing up): 앞 절 전체를 수식하는 분사구문으로 의미·구성 모두 적절 → O (일치)
+
+    4번(④ that support ~ that allow ~): 강조구문 It is ~ that ~ 및 관계대명사 사용이 문맥에 적절 → O
+    (일치)
+
+    5번(⑤ what you are perceiving ~ is ~): 명사절 what ~가 주어로 쓰이며 단수 취급 "is"도 적절 → O (일치)
+
+
+    부정형 질문이므로 X(불일치)인 2번이 정답'
+  time_taken: 36.27
   points: 3
   earned_points: 0
   success: true
   error: null
 - question_id: q31
   question_number: 31
-  answer: -1
+  answer: 1
   correct_answer: 5
   is_correct: false
-  reasoning: 빈 응답
-  time_taken: 28.65
+  reasoning: '[질문 유형: 긍정형 - 적절한 것 찾기]
+
+
+    1번: 지문에 ‘말하기, 읽기, 쓰기’ 등 언어 능력은 자동화가 덜 되어 의식적 처리가 필요함이 언급됨 → ‘linguistic insight’과
+    맥락상 부합 → O (일치)
+
+    2번: 예술적 상상에 대한 언급 없음 → X (불일치)
+
+    3번: 문학적 감수성에 대한 언급 없음 → X (불일치)
+
+    4번: 대안적 관점에 대한 언급 없음 → X (불일치)
+
+    5번: 개인적 관여에 대한 언급 없음 → X (불일치)
+
+
+    긍정형 질문이므로 O(일치)인 1번이 정답'
+  time_taken: 29.12
   points: 3
   earned_points: 0
-  success: false
-  error: 모델이 빈 응답을 반환했습니다
+  success: true
+  error: null
 - question_id: q33
   question_number: 33
-  answer: -1
+  answer: 5
   correct_answer: 3
   is_correct: false
-  reasoning: 빈 응답
-  time_taken: 29.28
+  reasoning: '⚠️ 검증: reasoning에서 4번을 부적절/틀렸다고 판단했으나, answer는 5번으로 선택됨. 4번으로 수정 제안.
+
+
+    [질문 유형: 부정형 - 일치하지 않는 것 찾기]
+
+
+    1번: 지문은 광고 산업이 ‘주의’를 포획·판매한다고 했지만 ‘모든 주의가 이미 다 쓰였다’는 전면적·완료 표현은 없음 → X (불일치)
+
+    2번: 무료인 서비스의 비용 지불자가 보이지 않으면 ‘사용자가 상품’이라는 통념을 시사 → O (일치)
+
+    3번: 프라이버시 침해에 대한 직접 언급 없음 → X (불일치)
+
+    4번: ‘대중이 당신을 후원한다’는 내용은 없고, 오히려 사용자가 상품이라는 취지 → X (불일치)
+
+    5번: AI 추천 시스템이 주의를 ‘가두고’ 개인 탐색의 자유를 ‘대체’한다고 비판적으로 서술됨; ‘AI에게 혜택을 빚진다’거나 ‘친구 AI’라는
+    긍정적 평가는 전혀 없음 → X (불일치) ✓
+
+
+    부정형 질문이므로 X(불일치) 중에서 가장 명백히 반대되는 5번을 정답으로 선택'
+  time_taken: 42.95
   points: 2
   earned_points: 0
-  success: false
-  error: 모델이 빈 응답을 반환했습니다
+  success: true
+  error: null
 - question_id: q34
   question_number: 34
-  answer: 5
+  answer: 4
   correct_answer: 5
-  is_correct: true
-  reasoning: 중앙집권적이고 공식적인 규칙은 역할과 절차를 명확히 정해 조직 내 조정과 예측가능성을 높이고, 책임소재를 분명히 하여 협업과
-    분업을 원활하게 만들어 생산적 활동을 촉진한다. 3은 창의성 촉진에 관한 진술로 공식 규칙의 일반적 효과와 거리가 있고, 4는 단지 기존 맥락의
-    행동을 강화한다는 소극적 설명에 그쳐 생산 촉진 기능을 포착하지 못한다. 1의 ‘행동양식의 범주화’는 어색하고 목적과의 연결이 약하며, 2의
-    역할·관행 재평가 유도는 규칙보다는 담론이나 비판적 논의의 효과에 가깝다. 따라서 5가 가장 적절하다.
-  time_taken: 19.04
+  is_correct: false
+  reasoning: '[질문 유형: 긍정형 - 일치하는 것 찾기]
+
+
+    1번: 지문에 ''행동 양식을 합법적·생산적으로 분류''한다는 내용 없음 → X (불일치)
+
+    2번: 지문에 ''역할·관행을 재평가하게 한다''는 내용 없음 → X (불일치)
+
+    3번: 지문은 오히려 ''개인적 탐색의 자유를 대체''한다고 하므로 창의적 사고 장려와 상반 → X (불일치)
+
+    4번: 지문에 ''다른 회사가 아닌 특정 회사의 작업에 계속 주의를 기울이게 함''이라 있어 행동을 강화하는 취지와 부합 → O (일치)
+
+    5번: 지문에 ''역할·관행을 설정하여 생산 활동을 촉진''한다는 내용 없음 → X (불일치)
+
+
+    긍정형 질문이므로 O(일치) 선택지인 4번이 정답'
+  time_taken: 52.2
   points: 3
-  earned_points: 3
+  earned_points: 0
   success: true
   error: null
 - question_id: q35
@@ -415,53 +671,111 @@ results:
   answer: 4
   correct_answer: 4
   is_correct: true
-  reasoning: 1, 2, 3, 5는 모두 자동차의 등장·대중화와 그 편의성(접근성, 장비 운반 등)이 스포츠 관광의 발달에 미친 영향을 중심으로
-    전개된다. 반면 4는 관광 성장에 따른 숙박의 확충이 지역 식당의 성장에 기여했다는 내용으로, 자동차나 스포츠 관광의 발전과 직접적 인과관계를
-    다루지 않아 전체 흐름(‘자동차→스포츠 관광 발전’)에서 벗어난다.
-  time_taken: 11.18
+  reasoning: '[질문 유형: 부정형 - 전체 흐름과 관계 없는 문장 찾기]
+
+
+    글의 중심 흐름: 자동차의 보급과 특성이 스포츠 관광의 발전에 미친 영향
+
+
+    1번: 자동차가 스포츠·관광 및 스포츠 관광에 미친 영향 언급 → O (일치)
+
+    2번: 자동차의 대중 교통수단화 시기 제시(배경 정보) → O (일치)
+
+    3번: 자동차의 편의·접근성·수화물 운반 이점 제시 → O (일치)
+
+    4번: 숙박 확대가 지역 식당 성장 촉진(자동차·스포츠 관광 논지와 직접 연계 없음) → X (불일치) ✓
+
+    5번: 자동차가 특히 외진 곳으로의 이동이 필요한 스포츠 관광 발전에 유용 → O (일치)
+
+
+    부정형 질문이므로 X(불일치) 선택지인 4번이 정답'
+  time_taken: 36.99
   points: 3
   earned_points: 3
   success: true
   error: null
 - question_id: q36
   question_number: 36
-  answer: 1
+  answer: 5
   correct_answer: 5
-  is_correct: false
-  reasoning: 주어진 글과 (A)(B)(C)의 구체적인 내용이 제공되지 않아 문단 간 논리 전개(주제 제시→설명/예시→결론, 지시어의 선행사,
-    대조·원인·결과 연결, 키워드 반복 등)를 판별할 수 없습니다. 연결 단서가 전혀 없어 순서를 판단할 근거가 부족하므로 정답을 확정할 수 없습니다.
-    형식상 답안을 선택해야 하기에 임의 표시합니다.
-  time_taken: 11.47
+  is_correct: true
+  reasoning: '[질문 유형: 긍정형 - 적절한 순서 찾기]
+
+
+    1번 (A → C → B): (A)가 ''Similarly''로 시작하나 앞서 농부의 행동 예시가 없어 연결 불가. 일반→구체 전개도 어긋남
+    → X (불일치)
+
+    2번 (B → A → C): (B)와 (A)는 ''Similarly''로 자연스럽지만, (C)의 일반적 설명이 사례 뒤에 와 전개가 역행 →
+    X (불일치)
+
+    3번 (B → C → A): ''Similarly''가 직전의 농부 사례(B)와 바로 이어져야 하는데 (C)가 끼어들어 연결 단절 → X (불일치)
+
+    4번 (C → A → B): (A)의 ''Similarly''에 해당하는 선행(농부의 기회주의 행동)이 없어 부자연스러움 → X (불일치)
+
+    5번 (C → B → A): (C)에서 평판과 공동체 소개(일반) → (B)에서 간접 감시와 농부의 기회주의 사례 제시 및 평판의 담보 기능
+    → (A)에서 ''Similarly''로 지주의 기회주의와 평판 제재로 귀결. ''over time'' 반복 및 주제(평판에 의한 시장 집행)와도
+    일관 → O (일치)
+
+
+    긍정형 질문이므로 O(일치) 선택지인 5번이 정답'
+  time_taken: 36.61
   points: 3
-  earned_points: 0
+  earned_points: 3
   success: true
   error: null
 - question_id: q38
   question_number: 38
-  answer: 3
+  answer: -1
   correct_answer: 4
   is_correct: false
-  reasoning: 글의 전개는 일반 논지 제시 → 구체적 예시 → 요지 정리의 흐름이 자연스럽다. (B)에서 ‘현실에서 사물은 선형적 생애주기
-    모델을 따르지 않는다’는 일반 명제를 먼저 제시하고, (C)에서 ‘마당의 새 관찰’이라는 구체적 사례로 그 비선형성과 변이를 직관적으로 보여
-    준다. 마지막으로 (A)에서 ‘단순한 선형 진행이 아니라 훨씬 복잡하고 적응적인 경로’라는 형태로 앞선 논지를 요약·정리하며 함의를 도출하므로
-    B-예시(C)-결론(A)의 순서가 가장 논리적이다.
-  time_taken: 23.11
+  reasoning: '[질문 유형: 긍정형 - 적절한 것 찾기]
+
+
+    1번: (A)-(C)-(B) 배열의 타당성을 검토하려면 (A)(B)(C) 각 내용과 ''주어진 문장''의 정확한 내용이 필요하나, 본문에 제시되지
+    않아 판단 불가 → X(판단 불가)
+
+    2번: (B)-(A)-(C) 역시 (A)(B)(C)와 주어진 문장의 구체 내용 부재로 논리 전개 검증 불가 → X(판단 불가)
+
+    3번: (B)-(C)-(A)도 동일한 사유로 검증 불가 → X(판단 불가)
+
+    4번: (C)-(A)-(B)도 동일한 사유로 검증 불가 → X(판단 불가)
+
+    5번: (C)-(B)-(A)도 동일한 사유로 검증 불가 → X(판단 불가)
+
+
+    결론: 지문 전체, (A)(B)(C) 구간의 실제 문장, 그리고 ''주어진 문장''의 정확한 문구가 제공되지 않아 각 선택지를 근거 있게 비교할
+    수 없습니다. 정보가 불충분하여 정답을 확정할 수 없습니다.
+
+
+    최종 검증: 질문은 긍정형이나, O(일치) 선택지를 식별할 수 있는 정보가 부족하여 선택 불가'
+  time_taken: 29.79
   points: 3
   earned_points: 0
-  success: true
-  error: null
+  success: false
+  error: 유효하지 않은 답 번호
 - question_id: q39
   question_number: 39
   answer: 1
   correct_answer: 4
   is_correct: false
-  reasoning: 첫 부분의 새 관찰 사례는 출현이 규칙적으로 번갈아 나타난다는(‘every other grosbeak’) 선형적 기대가 현실의
-    우발성과 군집성 앞에서 무너짐을 보여 주어 예측·통제가 쉽지 않음을 드러낸다. 둘째 부분도 사물의 수명주기가 선형 모델에 따르지 않고 훨씬
-    복잡하고 적응적인 경로를 따른다고 하여, 단순한 선형 모델에 기댄 통제 가능성의 가정을 비판한다. 따라서 요약문의 (A)는 ‘통제 가능성(controllability)’에
-    대한 믿음, (B)는 그것을 ‘도전/비판하다(challenge)’가 가장 적절하다. 2는 예측 가능성을 지지(support)하라고 하여 본문
-    취지와 반대이고, 3의 manageability를 강화(intensify)하라는 것도 문맥과 어긋나며, 4와 5의 affordability·accessibility는
-    논지와 무관하다.
-  time_taken: 30.45
+  reasoning: '[질문 유형: 긍정형 - 일치하는 것 찾기]
+
+
+    1번: 지문은 자연(새 관찰)과 사물의 생애 주기가 단순·선형적으로 통제/예측되지 않음을 강조 → 단순한 통제 가능성의 전제를 ‘도전(Challenge)’해야
+    한다는 취지와 부합 → O (일치)
+
+    2번: 지문은 선형적 ‘예측 가능성’을 지지하지 않고 오히려 반박 → ‘support’와 상반 → X (불일치)
+
+    3번: ‘manageability(관리 가능성)·intensify(강화)’는 지문 취지(단순 모델 비판)와 무관 → X (불일치)
+
+    4번: ‘affordability(비용 감내 가능성)’은 지문 주제와 무관, ‘reverse’도 맥락 부적합 → X (불일치)
+
+    5번: ‘accessibility(접근성)’은 지문 핵심 개념이 아님. 비판 대상은 ‘선형적/단순한 모델의 예측·통제성’ → ‘question’
+    방향은 맞지만 A가 부적합 → X (불일치)
+
+
+    긍정형 질문이므로 O(일치) 선택지인 1번이 정답'
+  time_taken: 61.18
   points: 3
   earned_points: 0
   success: true
@@ -471,66 +785,134 @@ results:
   answer: 3
   correct_answer: 2
   is_correct: false
-  reasoning: 글은 엄지와 집게손가락으로 종이를 집는 정교한 집기 능력을 예로 들며 인간 손의 독특한 형태가 단지 도구 사용 때문만이 아니라
-    주먹을 쥐어 싸우는 등 폭력과도 연관된 선택의 산물일 수 있음을 시사한다(‘bloody business’). 이는 인간 손에 대한 통념(도구
-    사용을 위한 진화)을 뒤집는 내용으로, 진화가 목적론적 도약이라기보다 예상 밖의 결과를 낳을 수 있음을 강조한다. 따라서 3번이 핵심을 가장
-    잘 반영한다. 2번은 진보적·목적론적 뉘앙스가 강하고, 5번은 도구 사용에만 초점을 좁히며, 1번은 단순 비교에 치우치고, 4번의 ‘딜레마’
-    구도는 글의 논지와 부합하지 않는다.
-  time_taken: 21.18
+  reasoning: '[질문 유형: 긍정형 - 적절한 제목 찾기]
+
+
+    1번: 지문은 다른 영장류와의 ''해부학적 거리''를 다루지 않음 → X (불일치)
+
+    2번: ''진화의 결정적 도약''이라는 주장이나 표현 없음 → X (불일치)
+
+    3번: 엄지와 검지의 섬세한 집기와 ''피투성이''가 될 수 있는 면을 대비해, 우리 손의 용도와 결과가 ''의외''라는 관점과 부합 → O
+    (일치) ✓
+
+    4번: ''생존의 딜레마''라는 주제 제시는 없음 → X (불일치)
+
+    5번: 도구 사용에 대한 내용 없음 → X (불일치)
+
+
+    긍정형 질문이므로 O(일치) 선택지인 3번이 정답'
+  time_taken: 32.52
   points: 2
   earned_points: 0
   success: true
   error: null
 - question_id: q42
   question_number: 42
-  answer: 1
+  answer: -1
   correct_answer: 5
   is_correct: false
-  reasoning: 제시문 전체와 밑줄 친 (a)~(e)의 실제 어구가 제공되지 않아 문맥상의 적절성을 판별할 수 없습니다. 현재 보이는 문장
-    “...it can be a bloody business.”에서 bloody business는 종이로 손가락이 베여 피가 날 수 있다는 의미로
-    자연스러우므로 부적절한 용례를 특정할 근거가 없습니다. 정확한 판단을 위해 (a)~(e) 각 표현이 무엇인지 전체 지문과 함께 제시해 주시기
-    바랍니다.
-  time_taken: 20.49
+  reasoning: '[질문 유형: 부정형 - 적절하지 않은 것 찾기]
+
+
+    1번: (a)의 실제 낱말과 문맥이 제시되지 않아 판단 불가 → 검토 불가
+
+    2번: (b)의 실제 낱말과 문맥이 제시되지 않아 판단 불가 → 검토 불가
+
+    3번: (c)의 실제 낱말과 문맥이 제시되지 않아 판단 불가 → 검토 불가
+
+    4번: (d)의 실제 낱말과 문맥이 제시되지 않아 판단 불가 → 검토 불가
+
+    5번: (e)의 실제 낱말과 문맥이 제시되지 않아 판단 불가 → 검토 불가
+
+
+    지문에 (a)~(e)로 밑줄 친 낱말과 그 문장이 제시되지 않아 각 선택지의 적절성 여부를 검토할 수 없습니다. (a)~(e)가 포함된 원문(밑줄
+    친 낱말과 문맥)을 제공해 주시면 단계별로 검토하여 정답을 제시하겠습니다.'
+  time_taken: 26.08
   points: 3
   earned_points: 0
-  success: true
-  error: null
+  success: false
+  error: 유효하지 않은 답 번호
 - question_id: q43
   question_number: 43
-  answer: 3
+  answer: 2
   correct_answer: 2
-  is_correct: false
-  reasoning: 지문 (A)~(D)의 실제 내용이 제시되지 않아 문단 간 주제 전개, 지시어 참조, 연결어(원인·결과·대조), 시점·사건 흐름
-    등 배열의 근거를 확인할 수 없습니다. 따라서 (B), (C), (D)의 상대적 순서를 판단할 정보가 부족하여 정답을 확정할 수 없습니다.
-    문단 내용이 제공되어야 논리적 전개(도입→전개→결론, 일반→구체, 문제→해결 등)에 따라 올바른 배열을 결정할 수 있습니다.
-  time_taken: 15.84
+  is_correct: true
+  reasoning: '[질문 유형: 긍정형 - 적절한 배열 찾기]
+
+
+    1번 (B→D→C): B에는 ''재킷을 가지고 집에 돌아왔다''가 나오므로 세탁소 수거(C) 이후여야 함. D가 C보다 먼저 오는 것도 말이
+    안 됨 → X (불일치)
+
+    2번 (C→B→D): A에서 재킷을 찾으러 가기로 함 → 실제 세탁소 수거(C) → 재킷을 가지고 집에 와서 다른 준비와 Sean 설득(B)
+    → 주말 하이킹 실행(D) 순으로 자연스럽게 이어짐 → O (일치)
+
+    3번 (C→D→B): 하이킹(D)이 Sean의 동의와 일정 확정(B)보다 먼저 옴 → X (불일치)
+
+    4번 (D→B→C): 하이킹(D)이 제안과 수락(B), 재킷 수거(C)보다 먼저 옴 → X (불일치)
+
+    5번 (D→C→B): 시작을 하이킹(D)으로 함 → A의 전개(세탁소 수거 후 준비, 제안·수락)와 모순 → X (불일치)
+
+
+    긍정형 질문이므로 O(일치)인 2번이 정답'
+  time_taken: 21.54
   points: 3
-  earned_points: 0
+  earned_points: 3
   success: true
   error: null
 - question_id: q44
   question_number: 44
-  answer: 1
+  answer: -1
   correct_answer: 3
   is_correct: false
-  reasoning: 지문이 제공되지 않아 (a)~(e) 각 지시어가 무엇을 가리키는지 파악할 수 없으므로 다섯 항목의 지시 대상 비교 자체가 불가능하다.
-    이 문제는 문맥 속에서 동일·상이 지시 대상을 판별해야 하는 유형이므로 필수 정보(문장·문맥·선행사)가 없으면 정답을 결정할 수 없다. 따라서
-    정답을 도출할 수 없으며, 부득이하게 표기상 1을 임의로 선택한다.
-  time_taken: 14.46
+  reasoning: '[질문 유형: 긍정형 - 가리키는 대상이 다른 것 찾기]
+
+
+    필수 정보(밑줄 (a)~(e)의 실제 위치/단어)가 지문에 제시되지 않아 각 지시어의 지시 대상을 확인할 수 없습니다. 따라서 선택지별 검토를
+    진행할 수 없습니다.
+
+
+    1번 (a): 지문에 (a)의 표시가 없어 지시 대상 확인 불가 → 판단 불가
+
+    2번 (b): 지문에 (b)의 표시가 없어 지시 대상 확인 불가 → 판단 불가
+
+    3번 (c): 지문에 (c)의 표시가 없어 지시 대상 확인 불가 → 판단 불가
+
+    4번 (d): 지문에 (d)의 표시가 없어 지시 대상 확인 불가 → 판단 불가
+
+    5번 (e): 지문에 (e)의 표시가 없어 지시 대상 확인 불가 → 판단 불가
+
+
+    정답을 판단하려면 (a)~(e)가 밑줄 그어진 정확한 단어나 구가 필요합니다. 해당 부분을 제공해 주시면 단계별로 검토하여 정답을 제시하겠습니다.'
+  time_taken: 16.52
   points: 2
   earned_points: 0
-  success: true
-  error: null
+  success: false
+  error: 유효하지 않은 답 번호
 - question_id: q45
   question_number: 45
   answer: 4
   correct_answer: 4
   is_correct: true
-  reasoning: 글에서는 Grace가 Ethan과 Sean의 돈독한 관계를 부러워한다고 말하고, Ethan에게 Sean과 함께 하이킹을 가보라고
-    권하기도 한다. 또한 Sean은 걸음이 서툴렀던 시기가 있었고 실제 하이킹 도중 발이 걸려 넘어지는 장면도 제시된다. 반면 Ethan이 세탁소에서
-    의류를 찾을 때는 혼자가 아니라 Sean과 함께 들렀다가 하이킹을 간 것으로 서술되어 있어, 4번의 ‘혼자서’라는 내용이 본문과 어긋난다.
-    따라서 4번이 적절하지 않다.
-  time_taken: 21.83
+  reasoning: '⚠️ 검증: reasoning에서 5번을 부적절/틀렸다고 판단했으나, answer는 4번으로 선택됨. 5번으로 수정 제안.
+
+
+    [질문 유형: 부정형 - 적절하지 않은 것 찾기]
+
+
+    1번: 지문 (A)에서 Grace가 "I always envied your relationship with Sean"라고 말함 → O (일치)
+
+    2번: 지문 (A)에서 Grace가 "How about going hiking, just the two of you?"라고 권함 → O (일치)
+
+    3번: 지문 (B)에서 "in his drawers they found his ... sunglasses"라고 함 → O (일치)
+
+    4번: 지문 (A)에서 Ethan이 아내에게 함께 재킷을 찾으러 가자고 했고, (C)에서도 Grace가 함께 대화에 참여함 → X (불일치)
+    ✓
+
+    5번: 지문 (D)에서 Sean이 하이킹 중 "fell over a rock"라고 함 → O (일치)
+
+
+    부정형 질문이므로 X(불일치)인 4번이 정답'
+  time_taken: 17.9
   points: 2
   earned_points: 2
   success: true

@@ -1,0 +1,644 @@
+exam_id: 2025-korean-sat
+exam_title: 2025학년도 수능 국어영역
+subject: korean
+model_name: solar-pro2
+evaluated_at: '2025-10-10T23:00:54.413604'
+summary:
+  total_questions: 45
+  correct_answers: 16
+  accuracy: 35.56
+  total_score: 34
+  max_score: 100
+  score_rate: 34.0
+results:
+- question_id: q1
+  question_number: 1
+  answer: 3
+  correct_answer: 3
+  is_correct: true
+  reasoning: 지문은 밑줄 긋기가 '연습 없이 능숙하게 사용할 수 있다고 오해되어 온 경향이 있다'고 명시하며, 실제로는 주요 정보 판단이
+    선행되어야 하므로 단순하지 않다고 설명합니다. 따라서 '누구나 쉽게 이용하여 사용할 수 있는 전략'이라는 선택지 3은 지문의 내용과 일치하지
+    않습니다. 나머지 선택지(1, 2, 4, 5)는 지문에서 직접적으로 언급되거나 추론 가능한 내용과 일치합니다.
+  time_taken: 2.63
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
+- question_id: q2
+  question_number: 2
+  answer: 4
+  correct_answer: 4
+  is_correct: true
+  reasoning: 지문에서 밑줄 긋기의 효과를 얻기 위한 방법으로 '주요한 정보에 밑줄 긋기'와 '자신만의 밑줄 긋기 표시 체계 세우기'를 언급하고
+    있습니다. 선택지 4는 이 두 가지 방법을 모두 반영하고 있으며, 지문에서 제시된 밑줄 긋기의 핵심 원리와 일치합니다. 다른 선택지들은 지문의
+    내용과 부분적으로 일치하거나 오해의 소지가 있는 내용을 포함하고 있습니다. 예를 들어, 선택지 1은 '글을 다 읽은 뒤에 밑줄 긋기'를 제시하지만
+    지문에서는 '읽는 중에 잠시 늦추었다가 주요 정보에 표시'한다고 설명합니다. 선택지 2는 '글 전체에 주의를 기울이기 위해 밑줄 긋기를 하지
+    않는다'는 내용으로 지문의 주장과 반대됩니다. 선택지 3은 '중요도 결정 후 수정'하는 방식을 언급하지만 지문에서는 '상대적 중요도를 결정한
+    후 주요 정보에 표시'하라고 강조합니다. 선택지 5는 '반복되는 어휘나 유사 문장에 바꿔가며 표시'하는 방법으로 지문에서 언급되지 않은 내용입니다.
+  time_taken: 3.54
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
+- question_id: q3
+  question_number: 3
+  answer: 3
+  correct_answer: 5
+  is_correct: false
+  reasoning: 선택지 3은 지문에서 제시된 밑줄 긋기의 원칙과 일치하지 않습니다. 지문에 따르면 밑줄 긋기는 글을 읽는 중 바로 하기보다는
+    상대적 중요도를 판단한 후 주요 정보에 표시해야 하며, 독서 목적에 따라 달라질 수 있습니다. 또한 밑줄 긋기 표시 체계를 미리 정해 놓는
+    것이 중요합니다. 선택지 3은 '밑줄 긋기 후에 확인된 주요 어휘'에 밑줄을 그었다고 설명하는데, 이는 밑줄 긋기의 기본 원칙인 '주요 정보를
+    미리 판단하여 표시'하는 과정과 배치됩니다. 다른 선택지들은 독서 목적 고려, 표시 체계 사용, 주요 문장 표시 등 지문의 내용과 일치하지만,
+    선택지 3은 밑줄 긋기의 사후 확인 방식을 제시하여 적절하지 않습니다.
+  time_taken: 2.53
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q4
+  question_number: 4
+  answer: 5
+  correct_answer: 4
+  is_correct: false
+  reasoning: '선택지 5는 (나) 지문의 내용과 일치하지 않습니다. (나)에서는 과학적 방법론이 인문학적 문제 해결에 적용될 수 없다는
+    비판적 인식이 언급되었지만, 전통 가치를 주축으로 하는 전개가 제시되었다는 내용은 없습니다. 오히려 과학적 사유와 경제적 변혁의 결합, 실용적
+    접근을 강조하는 내용이 주를 이루며, 전통 가치에 대한 주축 논의는 나타나지 않습니다. 따라서 이 선택지는 적절하지 않습니다. 다른 선택지들은
+    각각 (가)와 (나)의 핵심 논지와 일치합니다: 1번은 서양 문명 수용의 지속, 2번은 유학의 재구성 필요성, 3번은 기술 수용을 넘어선 근대
+    전환, 4번은 과학 정신과 경제적 변혁의 연관성을 정확히 반영합니다.'
+  time_taken: 3.65
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q5
+  question_number: 5
+  answer: 4
+  correct_answer: 5
+  is_correct: false
+  reasoning: 지문 (가)와 (나)에서 '계획'에 대한 직접적 언급은 없으나, 개화와 근대화 과정에서 통치권자(왕)의 역할과 주체성 강조가
+    반복적으로 나타난다. 선택지 4는 '통치권에 대한 도전'으로 해석되는 계획 개념을 제시하나, 지문에서는 개화와 근대화 과정에서 통치권자(왕)의
+    주도적 역할을 전제로 한 주체성 확립을 강조한다. 특히 (가)에서 '개화의 주체적 수용'과 '국가 구성원 조직'을 위한 왕 중심의 개혁이 언급되며,
+    (나)에서도 '과학적 사유와 철학적 인식의 주체'로서 통치권자의 역할이 부각된다. 따라서 '통치권에 대한 도전'이라는 해석은 지문의 맥락과
+    상반되며, 이는 적절하지 않은 이해로 판단된다.
+  time_taken: 3.04
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q6
+  question_number: 6
+  answer: 3
+  correct_answer: 3
+  is_correct: true
+  reasoning: 지문 (가)와 (나) 모두에서 과학적 방법의 수용과 혁신의 필요성을 강조한다. (가)에서는 '과학적 사유와 철학적 인식의 주체'를
+    강조하며, (나)에서는 '과학적 사유능력이 가장 중요하다'고 명시한다. 또한 (나)에서 '과학적 전환을 통한 과학 자체의 회의야 아니라고 주장'하며
+    과학적 방법의 지속적 활용을 옹호한다. 선택지 3은 '과학적 방법을 거부할 수 없다'는 내용으로, 두 지문의 공통된 입장과 일치한다. 반면
+    1, 2, 4, 5는 지문 전체 맥락과 부분적으로만 부합하거나 모순되는 내용을 포함한다.
+  time_taken: 3.08
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
+- question_id: q7
+  question_number: 7
+  answer: 2
+  correct_answer: 3
+  is_correct: false
+  reasoning: 지문 (가)와 (나)를 종합할 때, (가)에서는 개화를 통한 주체적 수용과 근대 주체의 형성을 강조하며, (나)에서는 과학적
+    방법론과 인문학적 인식의 확장을 구분하는 입장을 보인다. 선택지 2에서 '②은 전통적 과학의 방법에 인간을 수 없다는 생각에 반대하는 입장'은
+    (나)의 '과학적 방법론이 인문학적 문제 해결에 적용될 수 없다'는 주장과 일치하며, '①은 주체 인식의 준거가 사양 근대 문명의 주체'라는
+    표현은 (가)의 '민족 규범성 강조'와 연결된다. 다른 선택지들은 지문의 핵심 논지와 부분적 일치 또는 무관한 내용을 포함하고 있어 부적절하다.
+  time_taken: 2.51
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q8
+  question_number: 8
+  answer: 3
+  correct_answer: 3
+  is_correct: true
+  reasoning: 선택지 3은 (가) 지문의 핵심 논지와 일치하지 않습니다. (가)에서는 개화의 주체적 수용과 의식 혁신을 강조하며, 사양 근대
+    전개와 동적 맥락에서의 변화를 논합니다. 그러나 선택지 3은 '공론을 자본화하여 된 인식 계획'이라는 추상적 표현을 사용하며, '푸바리러지
+    보편화'와 같은 지문 어디에도 언급되지 않은 용어를 남용하고 있습니다. 이는 (가)의 구체적 논지(문명화, 주체성 확립, 유교적 재구성)와
+    직접적 연관성이 없으며, 오히려 지문의 맥락을 왜곡하는 비논리적 추론입니다. 다른 선택지들은 (가)와 (나)의 주요 개념(주체적 수용, 과학
+    정신, 기술 도입의 한계)을 부분적으로 반영하고 있으나, 선택지 3은 지문과의 연결 고리가 전혀 없습니다.
+  time_taken: 3.25
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
+- question_id: q9
+  question_number: 9
+  answer: 3
+  correct_answer: 2
+  is_correct: false
+  reasoning: 지문에서 '유교적으로 ‘수학적’으로는 이를 허용하지 개화 개혁의 명확성의 부정적 이미지를 벗어 내고자 했다'는 구절이 있습니다.
+    이는 '수학적'이라는 표현에 국한되지 않고 더 넓은 맥락에서 개화 개혁을 추구했음을 의미합니다. 선택지 3번 '아이 응용은 수학적 그치지 않았다'는
+    '수학적'에만 국한되지 않고 더 확장되었음을 나타내는 표현으로, 지문의 맥락과 가장 유사합니다. 다른 선택지들은 지문의 내용과 직접적인 관련이
+    없거나, '그치다'의 사용 방식이 문맥과 부합하지 않습니다.
+  time_taken: 2.3
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q10
+  question_number: 10
+  answer: 2
+  correct_answer: 3
+  is_correct: false
+  reasoning: 지문에는 확산 모델이 '노이즈 생성기, 이미지 예측기, 노이즈 예측기'로 구성되어 있으며, '확산 과정의 학습과 작업 순으로
+    작동한다'고 명시되어 있습니다. 그러나 두 과정 중 '어느 과정이 선행되어야 하는지'에 대한 내용은 언급되지 않았습니다. 다른 선택지들은 지문에서
+    직접적으로 또는 추론 가능한 내용과 일치하지만, 선택지 2는 지문에 근거하지 않은 추론을 요구하므로 적절하지 않습니다.
+  time_taken: 2.61
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q11
+  question_number: 11
+  answer: 2
+  correct_answer: 1
+  is_correct: false
+  reasoning: '지문에 따르면 확산 모델은 노이즈를 점진적으로 추가하고 제거하는 과정을 통해 이미지를 생성하며, 이는 역학적 과정(노이즈
+    추가 및 제거의 반복적 단계)에 해당합니다. 또한 노이즈 예측기는 지도 학습으로 훈련되며, 이 과정에서 확산 이미지(노이즈가 추가된 이미지)를
+    입력받아 노이즈를 예측하는 방식을 학습합니다. 따라서 ''확산 모델에서 학습은 역학적 과정에서 이루어진다''는 설명이 적절합니다. 다른 선택지들은
+    지문 내용과 일치하지 않습니다: 1번(노이즈 생성기는 초기 단계뿐만 아니라 모든 단계에서 작동), 3번(이미지 연결기는 언급되지 않음), 4번(정답으로
+    사용되는 것은 노이즈 생성기에서 추가한 실제 노이즈), 5번(확산 이미지는 최종 단계에서 원본과 유사해짐).'
+  time_taken: 1.93
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q12
+  question_number: 12
+  answer: 2
+  correct_answer: 5
+  is_correct: false
+  reasoning: 선택지 2는 '확산 과정에서 출력된 단계의 연합적 특성은 노이즈가 더해진다'라고 설명하지만, 지문에는 '연합적 특성'이라는
+    표현이 등장하지 않으며, 노이즈가 더해지는 과정은 단계별 학습 및 복원 메커니즘과 관련되어 있을 뿐, '연합적 특성'이라는 개념과 직접적인
+    연관성이 없습니다. 반면 나머지 선택지들은 지문에서 언급된 주제 표현의 수치적 조정(1), 주제 표현 학습 방식 포함(3), 노이즈 크기와
+    단계 연결(4), 노이즈 복원 추측(5) 등과 일치합니다. 따라서 선택지 2가 적절하지 않습니다.
+  time_taken: 1.35
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q13
+  question_number: 13
+  answer: 3
+  correct_answer: 3
+  is_correct: true
+  reasoning: 지문에서 확산 모델의 작동 과정은 노이즈 생성기, 이미지 예측기, 노이즈 예측기로 구성되며, 노이즈 예측기는 노이즈를 추측하여
+    수치적으로 표현하고 이를 바탕으로 노이즈를 예측하는 역할을 합니다. 또한, 이미지 연산기(또는 이미지 예측기)는 노이즈를 제거하는 역할을 합니다.
+    선택지 3은 '음악적 과정'이라는 잘못된 전제를 사용하며, 노이즈 예측기에서 예측한 노이즈가 이미지 연산기에 입력된다는 내용은 지문과 일치하지
+    않습니다. 노이즈 예측기의 출력은 노이즈 제거 과정에 활용되지만, 이미지 연산기에 직접 입력된다는 설명은 없습니다. 따라서 이 선택지는 적절하지
+    않습니다.
+  time_taken: 1.36
+  points: 3
+  earned_points: 3
+  success: true
+  error: null
+- question_id: q14
+  question_number: 14
+  answer: 1
+  correct_answer: 1
+  is_correct: true
+  reasoning: 선택지 1은 '심층 연기는 내면의 진솔한 정서를 드러내기 위해 형식에 집중하는 자기표현이다'라고 서술했으나, 지문에서 심층
+    연기는 '내면의 솔직한 정서를 불러내어 진정성을 보여주는 것'으로 설명되며, 형식에 집중하는 것은 표면 연기의 특징이다. 따라서 선택지 1은
+    지문의 내용과 일치하지 않는다. 나머지 선택지(2~5)는 모두 지문의 내용과 일치한다.
+  time_taken: 1.28
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
+- question_id: q15
+  question_number: 15
+  answer: 2
+  correct_answer: 2
+  is_correct: true
+  reasoning: 지문에 따르면, ㉠(인터넷 ID의 명예 주체성을 인정하는 입장)은 인터넷 ID가 사용자 개인의 자기 정체성의 일부이므로 ID에
+    대한 공격을 개인에 대한 공격으로 보는 반면, ㉡(인정하지 않는 입장)은 ID가 개인을 구별하는 장치에 불과하며 ID 자체는 명예 주체성이
+    없다고 본다. 따라서 ㉠은 ㉡과 달리 인터넷 ID 공격을 개인에 대한 공격으로 간주한다는 2번이 적절하다. 1번은 ㉠이 아닌 ㉡의 입장이며,
+    3번과 4번은 ㉡이 아닌 ㉠의 주장과 관련된다. 5번은 지문에서 언급되지 않은 내용이다.
+  time_taken: 2.51
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
+- question_id: q16
+  question_number: 16
+  answer: 5
+  correct_answer: 2
+  is_correct: false
+  reasoning: 지문에는 '가처분조치'나 이와 관련된 법적 책임에 대한 언급이 전혀 없습니다. 따라서 ㉠, ㉡, ㉢, ㉣에 대한 법적 책임
+    여부를 판단한 모든 선택지(1~5)는 지문과 무관한 내용으로, 특히 5번은 '판단 내용이 모두 잘못되는 점없다'고 주장하지만 지문 근거가 없어
+    적절하지 않습니다. 다른 선택지(1~4)도 마찬가지로 지문과 무관한 오류를 포함하지만, 5번은 모든 판단을 긍정하는 포괄적 오류를 지녀 가장
+    부적절합니다.
+  time_taken: 1.4
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q17
+  question_number: 17
+  answer: 3
+  correct_answer: 3
+  is_correct: true
+  reasoning: 지문에서 '가상 공간에서 자기표현의 제약을 완화하는 수단은 가상 공간의 아이디이다'라고 언급되어 있으며, 이는 아이디를 통해
+    자기표현이 '표출'된다는 맥락과 일치합니다. '표출(表出)'은 감정이나 생각을 드러낸다는 의미로, 자기표현의 제약 완화와 가장 적절한 표현입니다.
+    다른 선택지들은 지문의 내용과 직접적으로 연결되지 않거나 문맥상 부적절합니다. 예를 들어, '완성(完成)', '요청(要請)', '기만(欺瞞)',
+    '확충(擴充)'은 각각 자기표현의 과정이나 결과를 설명하는 데 적합하지 않습니다.
+  time_taken: 1.55
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
+- question_id: q18
+  question_number: 18
+  answer: 5
+  correct_answer: 2
+  is_correct: false
+  reasoning: '지문에는 북쪽의 상황이나 심리적 숙명감에 대한 언급이 전혀 없습니다. 5번 선택지는 지문에 없는 내용을 추론한 것으로, 적절하지
+    않습니다. 나머지 선택지(1~4번)는 지문의 맥락과 부분적으로 연결될 수 있는 요소(예: 상소, 사연, 고증 등)를 포함하고 있으나, 5번은
+    완전히 무관한 내용을 다루고 있습니다.'
+  time_taken: 1.17
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q19
+  question_number: 19
+  answer: 2
+  correct_answer: 4
+  is_correct: false
+  reasoning: '지문에서 ''중군장은 사부에 연습하였고''라는 표현은 남주인공(정운)이 중군장(누명을 씌운 인물)을 처벌하지 않고 유보한
+    상황을 암시합니다. 또한 ''전거 전하여''라는 표현은 정운의 행동이 요용(교묘한 수단)에 기반했음을 나타냅니다. 이는 선택지 2의 ''요용으로
+    처벌을 유보했다''는 내용과 일치합니다. 다른 선택지들은 지문의 맥락(예: 누명 배경, 장소 이동, 어머니 관련)과 직접적 연결이 부재하거나
+    오류가 있습니다.'
+  time_taken: 1.24
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q20
+  question_number: 20
+  answer: 1
+  correct_answer: 5
+  is_correct: false
+  reasoning: 지문에 '군사를 압류하고 서울을 사로잡으라는 명령'과 직접적으로 연결되는 내용이 없습니다. 다른 선택지들은 '정벌군', '중군장',
+    '정보 전달' 등 지문의 맥락과 부분적으로 연관되나, 1번은 지문에서 확인할 수 없는 과장된 행동을 포함하고 있습니다. 특히 '서울을 사로잡다'는
+    표현은 지문의 지역적·정치적 맥락(충청 정벌)과도 불일치합니다.
+  time_taken: 1.51
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q21
+  question_number: 21
+  answer: 3
+  correct_answer: 4
+  is_correct: false
+  reasoning: 지문에 왕비가 '앙천통곡'하는 장면이나 충렬부인의 수난이 '악녀'의 탓으로 인식된다는 내용이 명시적으로 언급되지 않았습니다.
+    또한 일부다처제 문제가 개인의 인성 문제로 축소된다는 해석도 지문의 맥락과 직접적으로 연결되지 않습니다. 다른 선택지들은 지문에서 유추 가능한
+    인물 관계나 행동 묘사와 부분적으로 일치하지만, 3번은 지문에 근거하지 않은 주관적 해석이 포함되어 적절하지 않습니다.
+  time_taken: 1.13
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q22
+  question_number: 22
+  answer: 3
+  correct_answer: 5
+  is_correct: false
+  reasoning: 세 지문 모두 반복과 반복을 통한 표현 방식을 공통적으로 사용한다. (가)에서는 '배를 탄다'의 반복, (나)에서는 '당신'이라는
+    단어의 반복, (다)에서는 편지 쓰기와 관련된 행위의 반복적 묘사가 나타난다. 이는 동일한 규격의 반복과 반복을 통해 상상의 변화를 표현하는
+    방식과 일치한다. 다른 선택지들은 각 지문의 특정 요소만을 부분적으로 반영하거나, 공통적이지 않은 내용을 포함하고 있다.
+  time_taken: 1.07
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q23
+  question_number: 23
+  answer: 1
+  correct_answer: 2
+  is_correct: false
+  reasoning: 선택지 1은 '벽을 밀던 손'과 '아슬아슬히 벽에서 떨어져'가는 상황을 언급하지만, (가) 지문에는 '벽'이나 '손'에 대한
+    직접적인 언급이 없습니다. (가)는 '배를 탄다'와 '밀려들어오는 배'라는 이미지를 중심으로 정적과 긴장감을 표현하고 있으나, 선택지 1의
+    내용은 지문에 명시되지 않은 요소를 포함하고 있어 적절하지 않습니다. 다른 선택지들은 '밀려오는 힘', '밀어내는 태도', '동화', '아무
+    소리 없이' 등 (가)의 핵심 이미지와 연결될 수 있는 요소를 다루고 있으나, 선택지 1은 지문의 내용과 일치하지 않습니다.
+  time_taken: 1.53
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q24
+  question_number: 24
+  answer: 4
+  correct_answer: 4
+  is_correct: true
+  reasoning: 선택지 4는 지문 (나)의 내용과 일치하지 않습니다. 지문에서 '당신'은 '문득 가는 먼 길...'이라는 맥락에서 '무릎 수도
+    없는 상황'과 연결되지만, '널' 앞에 있다는 표현은 직접적으로 언급되지 않습니다. 반면 나머지 선택지들은 화자의 내면성, 방문자적 인격,
+    무모함, 사랑과 습관의 이중성 등 지문의 분위기와 일치하는 해석을 담고 있습니다. 특히 '무릎 수도 없는'은 '무슨 수도 없는'의 오기로 보이며,
+    이는 선택지 4의 '무릎 수도 없는'과 일치하지 않아 부적절합니다.
+  time_taken: 1.51
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
+- question_id: q25
+  question_number: 25
+  answer: 2
+  correct_answer: 3
+  is_correct: false
+  reasoning: 선택지 2는 '반복적으로 순환하는 웃음의 의식'이라는 표현이 (나) 시의 내용과 직접적으로 연결되지 않습니다. (나) 시는
+    '당신'이라는 단어의 반복과 침묵, 소통의 단절 등을 통해 화자의 내적 갈등과 상실감을 표현하고 있으나, '웃음'이나 '웃음의 의식'에 대한
+    언급은 없습니다. 따라서 이는 시의 맥락과 일치하지 않는 부적절한 해석입니다. 다른 선택지들은 (나) 시의 반복적 표현, 침묵, 내적 갈등,
+    정체성 문제 등을 적절히 반영하고 있으나, 선택지 2만 유일하게 시의 내용과 무관한 요소를 포함하고 있습니다.
+  time_taken: 1.61
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q26
+  question_number: 26
+  answer: 4
+  correct_answer: 2
+  is_correct: false
+  reasoning: 지문 (다)에서 화자는 '편지를 쓰는 것이 자신의 존재를 증명하던 시절'을 언급하며, 사랑하는 사람에게 보내는 편지의 유무로
+    관계가 유지되었음을 표현한다. 이는 편지를 통해 자신을 드러내고자 하는 욕망이 관계의 상처를 은폐하는 긴장을 드러내는 것으로 해석할 수 있다.
+    선택지 4는 '더 나은 자신을 드러내려는 욕망'이 상처를 막후하는 긴장을 보여준다는 점에서 지문의 맥락과 가장 부합한다. 다른 선택지들은 화자나
+    대상의 아픔, 회복, 사상 등의 개념을 언급하지만, 지문에서 직접적으로 드러나지 않는 추상적 해석에 의존한다.
+  time_taken: 1.47
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q27
+  question_number: 27
+  answer: 2
+  correct_answer: 2
+  is_correct: true
+  reasoning: 선택지 2는 '망령의 욕구를 통제할 수 없다'는 표현이 지문 (다)에 명시적으로 언급되지 않으며, '상처를 향한 그의 사랑이
+    응원된 것이어서 사랑을 할 수 없음'이라는 해석도 지문의 맥락과 일치하지 않습니다. 지문 (다)는 편지 쓰기를 통해 자신을 증명하고 사랑하는
+    사람에게 표현하는 과정을 다루고 있으나, '망령'이나 '통제 불가능성'과 같은 개념은 등장하지 않습니다. 다른 선택지들은 '이상화된 자아와
+    현실의 차이', '자기 고백의 함의', '주체적 기능 상실' 등 지문의 주제와 부분적으로 연관되나, 선택지 2는 지나치게 추상적이고 지문과의
+    직접적 연결이 부족합니다.
+  time_taken: 1.58
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
+- question_id: q28
+  question_number: 28
+  answer: 3
+  correct_answer: 4
+  is_correct: false
+  reasoning: 지문은 인물의 내면 의식과 심리적 흐름을 중심으로 서술하며, 구체적인 사건의 진행보다는 인물의 정신적 상태와 비밀, 희망,
+    상실감 등을 암시적으로 드러내고 있습니다. 예를 들어, '비밀과 함께 사는 것', '희망의 상실', '의식의 문을 건드려 오자' 등의 표현은
+    인물의 의식이 사건 진행과 묵시적으로 연결되어 있음을 보여줍니다. 다른 선택지들은 명시적 서술(1), 평가적 서술(2), 정보 누락(4),
+    순차적 서술(5) 등과 맞지 않습니다.
+  time_taken: 2.21
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q29
+  question_number: 29
+  answer: 3
+  correct_answer: 3
+  is_correct: true
+  reasoning: 지문에서 인물은 '택배업계'에 이르는 등 일상적이지 않은 직업을 의식하며, '비밀'과 '고통', '희망의 상실' 등을 통해
+    심리적 동요를 드러내고 있습니다. 또한 '노련한 드러머 앞에서 기분이 최적화된다'는 표현이나 '특별한 상상력'과 같은 서술은 인물의 내적 갈등을
+    강조합니다. 이는 선택지 3의 '일상적이지 않은 직업을 인물이 의식한다는 표지로, 인물의 심리적 동요를 부각한다'는 내용과 가장 부합합니다.
+    다른 선택지들은 지문에서 명확히 드러나지 않는 주제(세계관 형상화, 사회적 갈등 해소 등)를 포함하고 있어 적절하지 않습니다.
+  time_taken: 1.45
+  points: 3
+  earned_points: 3
+  success: true
+  error: null
+- question_id: q30
+  question_number: 30
+  answer: 5
+  correct_answer: 5
+  is_correct: true
+  reasoning: 지문에서 '희망'은 주로 개인의 내면적이고 주관적인 경험으로 묘사되며, '실물'에 대한 인식을 '세상 사상'들과 공유한다는
+    내용은 나타나지 않습니다. 오히려 '희망'은 비밀을 통해 형성된 개인의 독특한 경험으로, 외부와의 공유보다는 내적 갈등과 변화에 초점이 맞춰져
+    있습니다. 선택지 5는 '희망'이 '실물'에 대한 인식을 공유하고 '사상'을 적정하게 알게 된다는 점을 강조하는데, 이는 지문의 맥락과 부합하지
+    않습니다. 다른 선택지들은 '희망'이 실물, 사상, 세상 사상과의 관계에서 느끼는 안도감이나 접근 방식을 부분적으로 반영하고 있으나, 선택지
+    5만이 명확히 지문과 일치하지 않는 내용을 담고 있습니다.
+  time_taken: 1.82
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
+- question_id: q31
+  question_number: 31
+  answer: 5
+  correct_answer: 4
+  is_correct: false
+  reasoning: '선택지 5는 지문에서 직접적으로 언급되지 않은 내용을 포함하고 있습니다. 지문은 주인공의 내적 갈등과 비밀, 일상의 변화,
+    비평적 사고 등을 다루지만, ''비평이 안정화되는 상황''이나 ''사실을 나타내는 현상''에 대한 일관된 언급을 찾을 수 없습니다. 다른 선택지들은
+    지문의 맥락(예: 의식의 변화, 일상의 변형, 비평적 사고의 확장)과 부분적으로 연결되지만, 선택지 5는 지문의 내용과 명확히 일치하지 않는
+    추상적 해석을 제시합니다. 특히 ''기고한 한탄''이라는 표현이 지문에 등장하지 않으며, ''비평적 안정화''와 같은 개념도 명확히 드러나지
+    않아 적절하지 않습니다.'
+  time_taken: 1.59
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q32
+  question_number: 32
+  answer: 5
+  correct_answer: 3
+  is_correct: false
+  reasoning: 지문에서 '삼십여도'와 같은 수치가 언급되지만, 이는 구체적 수치 제시를 통해 현실을 강렬하게 드러내는 표현보다는 상징적 의미가
+    강조된 것으로 보입니다. 다른 선택지들은 지문의 내용과 부분적으로 일치하지만, 5번은 지문의 핵심 표현 방식과 부합하지 않습니다. 1번은 '어겨
+    어겨'와 같은 대구 표현, 2번은 '가는 길에' 등의 행위 묘사, 3번은 '군은 중간...떠올린가'와 같은 의문 표현, 4번은 '처음 되기
+    삼십여도' 등의 과거 행적 언급과 연결됩니다.
+  time_taken: 1.55
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q33
+  question_number: 33
+  answer: 5
+  correct_answer: 5
+  is_correct: true
+  reasoning: 지문에서 화자는 '향후 별'을 향한 여정을 묘사하며, '가시 전도(荊棘道) 새로 설렘이 장하리니'라는 표현에서 고난과 성취를
+    동시에 암시합니다. 또한 '부모사가 보관하고 새 갈수록 누리리라'는 부분에서 성취가 시간 속에서 점진적으로 실현되는 과정을 강조합니다. 이는
+    선택지 5의 '성취가 묻으면서 하는 행위의 대상'이라는 설명과 일치합니다. 다른 선택지들은 지문의 맥락과 직접적인 관련이 없거나, 화자와 다른
+    인물 간의 관계나 목적을 명확히 설명하지 못합니다.
+  time_taken: 1.55
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
+- question_id: q34
+  question_number: 34
+  answer: 4
+  correct_answer: 2
+  is_correct: false
+  reasoning: 선택지 4는 지문에서 직접적으로 언급되지 않은 내용을 포함하고 있습니다. '고기가 누군데'라는 표현이나 '이내'의 명시적 양상에
+    대한 설명은 지문에 나타나지 않으며, 이는 화자의 심리나 상황을 과장하거나 잘못 해석한 것입니다. 다른 선택지들은 (가)와 (나)의 화자 관계,
+    심리적 부속감, 대화 전개 방식 등 지문의 맥락과 부분적으로 연결될 수 있지만, 선택지 4는 지문과 일치하지 않는 명확한 오류가 있습니다.
+  time_taken: 1.14
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q35
+  question_number: 35
+  answer: 4
+  correct_answer: 2
+  is_correct: false
+  reasoning: 선택지 4는 지문에서 확인할 수 없는 내용을 포함하고 있습니다. 지문에는 '항정상에 당의 모든 저작소양권에서 ㅅ된, 원인 창작자에서
+    당문으로 적합하다'는 내용이 명시적으로 언급되지 않았습니다. 또한 '당문'이라는 용어도 지문에 등장하지 않아 적절하지 않습니다. 다른 선택지들은
+    지문의 내용과 부분적으로 일치하거나 추론 가능한 내용을 담고 있으나, 선택지 4는 지문과 직접적으로 연결되지 않는 정보를 포함하고 있어 가장
+    적절하지 않습니다.
+  time_taken: 1.34
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q36
+  question_number: 36
+  answer: 5
+  correct_answer: 4
+  is_correct: false
+  reasoning: 지문에서 '원인창작자'는 'ㅂ'을 'ㅅ'으로 표기하는 방식을 취한다고 명시되어 있습니다. 선택지 5의 '[한] 하다'는 'ㅅ'
+    표기와 직접적인 연관성이 없으며, 지문에서 언급된 '원인창작자'의 표기 원칙과도 일치하지 않습니다. 반면 다른 선택지들은 '저작소양권' 또는
+    '원인창작자'의 표기 방식과 관련된 내용을 부분적으로 반영하고 있으나, 선택지 5는 지문의 내용과 명확히 부합하지 않는 유일한 옵션입니다.
+  time_taken: 1.4
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q37
+  question_number: 37
+  answer: 4
+  correct_answer: 3
+  is_correct: false
+  reasoning: 선택지 4는 '학생1과 학생2가 발표에서 궁금한 내용이 다뤄지지 않았음을 아쉬워하고 있다'고 주장하지만, 지문에는 학생들의
+    아쉬움을 나타내는 내용이 전혀 없습니다. 학생1과 학생2의 대화는 발표 내용을 기반으로 한 질문과 추론에 집중되어 있으며, 발표에서 다루지
+    않은 내용에 대한 아쉬움은 언급되지 않았습니다. 따라서 이 선택지는 발표 내용과 일치하지 않아 적절하지 않습니다. 다른 선택지들은 지문에서
+    확인할 수 있는 학생들의 반응(기억 회상, 이해 확인, 추론, 추가 정보 탐색 시도)을 정확히 반영하고 있습니다.
+  time_taken: 1.78
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q38
+  question_number: 38
+  answer: 4
+  correct_answer: 4
+  is_correct: true
+  reasoning: 선택지 4는 ㉠에 대한 설명으로 적절하지 않습니다. ㉠에서 학생 2는 교가 가사 변경 이유에 대해 단순히 질문만 하고 있으며,
+    새로운 제안을 하는 내용은 없습니다. 반면 선택지 1은 학생 1이 뉴스 정보를 공유하는 상황을 정확히 설명합니다. 선택지 2와 5는 ㉡에서
+    학생 2가 교훈에 대한 불편함을 표현하며 기존 교훈과 다른 의견을 제시하는 맥락을 반영합니다. 선택지 3은 ㉢에서 학생 1이 기존 의견을 수정하며
+    새로운 생각을 밝히는 부분을 올바르게 지적합니다.
+  time_taken: 1.29
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
+- question_id: q39
+  question_number: 39
+  answer: 2
+  correct_answer: 5
+  is_correct: false
+  reasoning: 지문 (가)에서 학생 1은 '다른 학교의 사례를 더 찾아서 회의 때 공유할게'라고 언급하며, 이는 (나)의 빈칸 부분에서 '다른
+    학교 사례를 찾아서 공유해야 함'이라는 계획과 직접적으로 연결됩니다. 또한, (가)의 [A]~[D] 중 [A]에서 ○○고의 교가 변경 사례가
+    논의되었고, 학생 3이 '교훈을 미리 제안받으면 오해할 수 있다'는 의견을 제시한 점([D])을 고려할 때, (나)에서는 이와 유사한 다른
+    학교의 사례를 제시하는 것이 논리적 흐름에 부합합니다. 따라서 '관련 사례 제시'가 가장 적절한 선택지입니다.
+  time_taken: 1.71
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q40
+  question_number: 40
+  answer: 1
+  correct_answer: 4
+  is_correct: false
+  reasoning: 지문에서 학생들은 교훈 변경의 필요성에 대해 논의하며, 특히 '누구나 공감할 수 있어야 한다'는 보편적 가치의 중요성을 강조합니다.
+    또한, 교훈 변경 과정에서 '구성원의 관심을 높이고 결속력을 키울 것'이라고 언급하며 공감 형성과 구성원 간 협력의 측면을 반복적으로 제시합니다.
+    친구의 조언이 반영된 (나)의 내용은 이와 같은 맥락에서 '학교 구성원 간의 공감 형성'을 다루는 것이 가장 적절합니다. 다른 선택지들은 지문에서
+    직접적으로 언급되지 않거나, 교훈 변경의 주요 논지와 일치하지 않습니다.
+  time_taken: 1.56
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q41
+  question_number: 41
+  answer: 1
+  correct_answer: 3
+  is_correct: false
+  reasoning: 지문 (가)에는 '가수', '플라스틱 콘텐츠', '정우', '눈부신', '할아버님' 등의 인물이나 용어가 전혀 등장하지 않습니다.
+    또한, 선택지 1에서 언급된 '반항하는 반응'이나 '여행 경험' 역시 지문 (가)의 내용과 무관합니다. 반면, 나머지 선택지 2~5는 모두
+    (B)와 (C) 관련 내용을 다루고 있으나, 지문 (가)에는 (B)와 (C)에 해당하는 부분이 없으므로 모든 선택지가 지문과 일치하지 않습니다.
+    다만, 문제 출제 오류로 보이며, 주어진 지문 (가) 기준으로는 선택지 1이 가장 명확히 부적절합니다.
+  time_taken: 1.6
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q42
+  question_number: 42
+  answer: 2
+  correct_answer: 2
+  is_correct: true
+  reasoning: 지문 (나)에서 '플라스틱 콘텐츠'에 관한 '다시 보기' 영상은 출력된 글자만 기입하여 제시된 것이 아니라, 영상 자체가 재생되거나
+    화면 내용이 시작되는 지점이 제시된 것으로 보입니다. 선택지 2는 영상을 글자만 기입하여 제시했다고 서술했으나, 이는 실제 정보 제시 방식과
+    일치하지 않습니다. 다른 선택지들은 A4 용지 규격 이미지 제시, 화면 시작 지점 안내, 첨부 파일 활용 등 지문 내용과 부합하는 반면, 선택지
+    2는 영상 처리 방식을 잘못 설명했습니다.
+  time_taken: 1.55
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
+- question_id: q43
+  question_number: 43
+  answer: 3
+  correct_answer: 1
+  is_correct: false
+  reasoning: 지문에서 푸른과 전설은 '푸드과학 콘트레'에 대해 논의하며, 현재 상황의 필요성과 다른 국가(일본)와의 차이점을 비교하고 있습니다.
+    이는 특정 주제(푸드과학 콘트레)의 장점과 단점을 함께 나열하고 서술하는 방식과 유사합니다. 선택지 3은 이러한 비교와 분석을 반영한 글쓰기
+    방식으로 가장 적절합니다. 다른 선택지들은 지문에서 언급되지 않은 항공유, 생산 과정, 경제적 효과 등과 관련이 없어 부적절합니다.
+  time_taken: 1.35
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q44
+  question_number: 44
+  answer: 5
+  correct_answer: 5
+  is_correct: true
+  reasoning: 지문은 지속 가능한 항공유 사용 의무화와 기술 개발, 제도 정비를 통해 탄소 배출량을 감축하려는 정부의 노력을 강조합니다.
+    선택지 5는 지속 가능한 항공유 사용 확대와 탄소 배출 감축을 직접 연결하며, 개인의 실천 방안(탄소 배출량이 적은 항공편 선택)을 제시합니다.
+    이는 지문의 핵심 논지(항공 부문의 환경 개선 노력)와 일치하며, 다른 선택지(1, 3, 4)는 지문의 구체적 내용(의무화 비율, 기술 고도화
+    등)과 직접적 연관성이 떨어지거나, 2는 지속 가능한 항공유와 무관한 내용입니다. 5번은 지문의 '환경 개선을 위한 발걸음'이라는 맥락을 가장
+    정확히 반영합니다.
+  time_taken: 1.8
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
+- question_id: q45
+  question_number: 45
+  answer: 3
+  correct_answer: 2
+  is_correct: false
+  reasoning: 선택지 3은 '중장기 부작용에 대한 의견'과 '의무로 고전한다'는 내용이 지문에 명시되지 않았으며, 오히려 지문은 지속 가능한
+    항공유 의무화의 긍정적 효과와 정부의 대비 계획을 강조하고 있습니다. 따라서 이는 지문의 맥락과 일치하지 않는 부적절한 보강 자료입니다. 다른
+    선택지들은 지문에서 언급된 탄소 배출량, 혼합 비율, 운송 수단 비교 등과 직접적으로 연결되어 적절합니다.
+  time_taken: 1.58
+  points: 3
+  earned_points: 0
+  success: true
+  error: null

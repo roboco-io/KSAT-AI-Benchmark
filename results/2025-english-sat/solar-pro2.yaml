@@ -1,0 +1,565 @@
+exam_id: 2025-english-sat
+exam_title: 2025학년도 수능 ENGLISH
+subject: english
+model_name: solar-pro2
+evaluated_at: '2025-10-11T05:46:46.426835'
+summary:
+  total_questions: 42
+  correct_answers: 12
+  accuracy: 28.57
+  total_score: 28
+  max_score: 100
+  score_rate: 28.0
+results:
+- question_id: q1
+  question_number: 1
+  answer: 0
+  correct_answer: 2
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q2
+  question_number: 2
+  answer: 0
+  correct_answer: 5
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q3
+  question_number: 3
+  answer: 0
+  correct_answer: 1
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q4
+  question_number: 4
+  answer: 0
+  correct_answer: 3
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q5
+  question_number: 5
+  answer: 0
+  correct_answer: 1
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q6
+  question_number: 6
+  answer: 0
+  correct_answer: 4
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q7
+  question_number: 7
+  answer: 0
+  correct_answer: 3
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q8
+  question_number: 8
+  answer: 0
+  correct_answer: 4
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q9
+  question_number: 9
+  answer: 0
+  correct_answer: 5
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q10
+  question_number: 10
+  answer: 0
+  correct_answer: 2
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q11
+  question_number: 11
+  answer: 0
+  correct_answer: 2
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 3
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q12
+  question_number: 12
+  answer: 0
+  correct_answer: 1
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q13
+  question_number: 13
+  answer: 0
+  correct_answer: 5
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q14
+  question_number: 14
+  answer: 0
+  correct_answer: 1
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 3
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q15
+  question_number: 15
+  answer: 0
+  correct_answer: 2
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 3
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q16
+  question_number: 16
+  answer: 3
+  correct_answer: 3
+  is_correct: true
+  reasoning: 지문은 미래 식량 부족을 해결할 수 있는 대체 식량원에 대해 설명하고 있습니다. 해초, 콩, 호박, 버섯, 곤충 등이 영양
+    가치가 높고 다양한 환경에서 재배 가능하며 지속 가능한 식량원으로 소개되었습니다. 이는 '미래 식량 부족을 해결하기 위한 적합한 식품'이라는
+    주제와 직접적으로 일치합니다. 다른 선택지들은 저장 조건(1), 영양 식단의 중요성(2), 이색 재료로 만든 요리(4), 식량 부족 대응 기술(5)
+    등 지문의 핵심 내용과 관련이 없습니다.
+  time_taken: 1.66
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
+- question_id: q17
+  question_number: 17
+  answer: 4
+  correct_answer: 4
+  is_correct: true
+  reasoning: 지문에서 언급된 음식은 seaweed(해조류), beans(콩), pumpkins(박), mushrooms(버섯)이며, insects(곤충)도
+    추가로 소개되었습니다. 그러나 potatoes(감자)는 지문에서 전혀 언급되지 않았으므로 정답은 4번입니다.
+  time_taken: 1.79
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
+- question_id: q18
+  question_number: 18
+  answer: 1
+  correct_answer: 1
+  is_correct: true
+  reasoning: 지문은 3월 15일 예정된 봄 마라톤이 메인 스트리트 공사로 인해 취소되었음을 공지하고, 새로운 일정 및 경로를 협의 중이며
+    추후 공지할 예정임을 전달합니다. 또한 불편을 사과하고 훈련을 지속할 것을 당부하는 내용이 포함되어 있습니다. 이는 마라톤 경기 취소 사실을
+    공지하는 목적과 정확히 일치하므로 선택지 1이 가장 적절합니다. 다른 선택지들은 환불 절차, 준비 운동, 도로 통제 등 지문에서 언급되지 않은
+    내용으로 부적절합니다.
+  time_taken: 2.74
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
+- question_id: q19
+  question_number: 19
+  answer: 2
+  correct_answer: 2
+  is_correct: true
+  reasoning: 지문에 따르면 Peter는 Valentine's Day를 오랫동안 기대하며 완벽하게 계획된 저녁을 확신하고 있었습니다(confident).
+    그러나 레스토랑 예약 문제로 인해 계획이 무너지자 그의 마음은 가라앉았고(Amy의 실망한 표정을 보며), 이는 실망감(disappointed)으로의
+    심경 변화를 명확히 보여줍니다. 다른 선택지들은 지문에서 언급되지 않거나 반대되는 감정을 나타내므로 적절하지 않습니다.
+  time_taken: 1.88
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
+- question_id: q20
+  question_number: 20
+  answer: 3
+  correct_answer: 1
+  is_correct: false
+  reasoning: 필자는 게임을 완전히 배제하거나 제한하는 대신, 게임 요소(포인트 시스템, 레벨 진행, 즉각적인 피드백, 협력적 과제 등)를
+    학습 활동에 통합하여 학습을 더 흥미롭고 효과적으로 만들 것을 주장합니다. 이는 '학습 활동에 게임 요소를 적용해 새로운 경험을 해야 한다'는
+    선택지 3과 정확히 일치합니다. 선택지 1은 부분적으로 맞지만, 핵심은 게임 개발보다 기존 학습에 게임 요소를 접목하는 데 있습니다. 선택지
+    2, 4, 5는 필자의 주장과 반대되거나 지문에서 언급되지 않은 내용입니다.
+  time_taken: 2.18
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q21
+  question_number: 21
+  answer: 3
+  correct_answer: 3
+  is_correct: true
+  reasoning: 지문에서 Vitruvius는 건축가가 실무 기술(manual skill)과 학문적 지식(scholarship)을 모두 갖추어야
+    한다고 강조합니다. 'hunting the shadow, not the substance'는 이론(shadow)만 추구하고 실제 기술(substance)이
+    부족한 경우를 비판한 표현입니다. 선택지 3은 '실무 기술 없이 건축의 이상을 추구하는 것'으로, 이 맥락과 정확히 일치합니다. 다른 선택지들은
+    지문에서 언급되지 않거나 반대되는 내용을 담고 있습니다.
+  time_taken: 2.0
+  points: 3
+  earned_points: 3
+  success: true
+  error: null
+- question_id: q22
+  question_number: 22
+  answer: 5
+  correct_answer: 2
+  is_correct: false
+  reasoning: 지문은 건축가의 역할에 대해 설명하며, 이론적 지식과 실용적 기술의 균형을 강조합니다. 특히, 건축가가 권위 있는 위치에 오르기
+    위해서는 학문적 지식과 실무 능력을 모두 갖추어야 한다고 주장합니다. 이는 자신의 감정 상태(이론적 이해)와 실용적 기술(감정 조절)을 이해하는
+    것이 사회적 성공(권위 있는 위치)에 필수적이라는 선택지와 맥락을 공유합니다. 다른 선택지들은 감정 조절이나 공감 능력 등 건축가의 전문성과
+    직접적 관련이 없는 주제를 다루어 부적절합니다.
+  time_taken: 2.97
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q23
+  question_number: 23
+  answer: 5
+  correct_answer: 1
+  is_correct: false
+  reasoning: 지문은 로마 제국 시기 건축가의 지위 상승과 건축가의 역할에 필요한 학문적·실무적 지식의 중요성을 강조합니다. 그러나 제공된
+    선택지 중 지문의 내용과 직접적으로 일치하는 주제는 없습니다. 선택지 1~4는 산업화와 관련된 주제로, 지문의 로마 제국 건축가와 무관합니다.
+    선택지 5는 '과도한 근로 시간이 노동자에게 미친 문제'를 다루지만, 지문에서는 건축가의 학문적·실무적 역량 부족을 문제로 지적하며, 이는
+    선택지 5의 맥락과 완전히 일치하지 않습니다. 따라서 모든 선택지가 지문과 일치하지 않으나, 문제 조건에 따라 가장 근접한 주제를 선택해야
+    한다면, 건축가의 실무·이론 불균형을 '문제'로 언급한 부분을 근거로 선택지 5를 선택할 수 있습니다. 다만 이는 지문의 핵심 주제와는 거리가
+    있습니다.
+  time_taken: 2.31
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q24
+  question_number: 24
+  answer: 3
+  correct_answer: 5
+  is_correct: false
+  reasoning: '지문은 로마 제국 시기 건축가의 지위 상승과 건축이 정치적 상징으로 중요해진 점, 건축가에게 필요한 학문적·실천적 지식의
+    통합을 강조합니다. 선택지 중 ''3. The Selfie: A Symbol of Self-oriented Global Culture''는
+    ''건축이 정치적 상징이 되었다''는 맥락과 ''자기 중심적 문화''라는 표현이 ''건축가의 학문적·실천적 역량 통합''과 간접적으로 연결될
+    수 있습니다. 그러나 선택지들이 모두 ''셀피(selfie)''를 주제로 하여 지문과의 직접적 연관성이 부족합니다. 이는 문제 오류로 보이며,
+    가장 근접한 것은 ''상징성''과 ''문화적 역할''을 언급한 3번입니다. 다른 선택지들은 일시적 유행(1,4), 현실성 부재(2), 기술
+    혁신(5) 등 지문의 핵심과 거리가 있습니다.'
+  time_taken: 2.39
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q25
+  question_number: 25
+  answer: 3
+  correct_answer: 4
+  is_correct: false
+  reasoning: 지문에 따르면 2020년부터 2022년까지 편집자(Editor)로 고용된 여성의 비율은 각 연도별로 20% 미만이어야 합니다.
+    그러나 제공된 그래프 데이터에서 2021년 편집자 비율은 21%로, 이는 지문의 조건과 일치하지 않습니다. 따라서 'Editor'가 일치하지
+    않는 항목입니다. 다른 선택지(Director, Writer, Producer)는 지문 설명과 그래프 데이터가 모두 일치합니다. 'Role'은
+    일반적인 역할 범주를 지칭하므로 특정 오류 대상이 아닙니다.
+  time_taken: 2.23
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q26
+  question_number: 26
+  answer: 4
+  correct_answer: 4
+  is_correct: true
+  reasoning: 지문에 따르면 Dick Enberg은 2016년 마지막 생방송을 한 후 2017년(다음 해)에 사망했으며, 이는 1년 후입니다.
+    선택지 4에서 '3년 뒤'라고 언급했으므로 이는 지문 내용과 일치하지 않습니다. 나머지 선택지 1, 2, 3, 5는 각각 지문의 'Michigan에서
+    태어났다', 'San Fernando Valley State College 야구팀 코치', '1973년 첫 미국 스포츠 캐스터로 중국 방문',
+    'Emmy Awards 수상'과 정확히 일치합니다.
+  time_taken: 1.41
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
+- question_id: q27
+  question_number: 27
+  answer: 4
+  correct_answer: 3
+  is_correct: false
+  reasoning: '지문에 따르면 ''미사용 카드''는 구입일로부터 30일 이내에 환불이 가능하다고 명시되어 있습니다. 그러나 선택지 4는 ''미사용
+    카드''가 아닌 일반적인 ''카드''의 환불 조건을 언급한 것처럼 오해의 소지가 있는 표현을 사용했습니다. 다른 선택지들은 모두 지문의 내용과
+    정확히 일치합니다: 1번(관광객용 대중교통 카드), 2번(시티 투어 버스 사용 불가), 3번(5일 카드 할인 혜택), 5번(A-Transit
+    앱에서 모바일 카드 구입 가능).'
+  time_taken: 1.45
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q28
+  question_number: 28
+  answer: 1
+  correct_answer: 3
+  is_correct: false
+  reasoning: '지문에 따르면 Luckwood Snow Festival은 ''15th annual''로 매년 개최됨을 알 수 있어 ''2년에
+    한 번 열린다''는 선택지 1은 일치하지 않습니다. 선택지 2는 ''January 24th—30th''로 7일간 진행되므로 ''연중 동안 진행된다''는
+    내용과 불일치합니다. 선택지 3은 ''11 teams will participate''로 정확히 일치합니다. 선택지 4는 ''Parking
+    is not available''로 주차 불가능함이 명시되어 있어 틀린 설명입니다. 선택지 5는 ''One-way fare: $1''로 무료가
+    아니므로 불일치합니다. 이 중 가장 명확히 틀린 것은 선택지 1(2년에 한 번)이지만, 선택지 2, 4, 5도 모두 불일치합니다. 문제 조건에
+    따라 가장 먼저 언급된 오류를 기준으로 1을 정답으로 선택합니다. (※ 실제 시험에서는 모든 불일치 항목을 확인해야 하나, 주어진 선택지 중
+    1이 가장 명백한 오류입니다.)'
+  time_taken: 2.57
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q29
+  question_number: 29
+  answer: 2
+  correct_answer: 2
+  is_correct: true
+  reasoning: 선택지 2의 'knows'는 주어인 'patients'가 복수이므로 단수 동사 'knows' 대신 복수 동사 'know'가
+    사용되어야 합니다. 나머지 선택지들은 모두 어법상 문제가 없습니다. 1번 'had to'는 가정법 과거로 적절하며, 3번 'freeing'은
+    분사구문으로 문맥에 맞습니다. 4번 'that'은 관계대명사로 올바르게 사용되었고, 5번 'what'은 명사절 접속사로 적절합니다.
+  time_taken: 1.41
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
+- question_id: q30
+  question_number: 30
+  answer: 2
+  correct_answer: 4
+  is_correct: false
+  reasoning: 지문에서 밑줄 친 ①~⑤ 중 문맥상 낱말의 쓰임이 적절하지 않은 부분을 찾는 문제입니다. 주어진 선택지(internal, uncomfortable,
+    desire, diminishing, altruistic)는 지문의 밑줄 친 부분과 직접 연결되지 않으며, 문제 자체에 오류가 있는 것으로
+    보입니다. 그러나 문제 지문에 따르면, ② 'knows'는 주어가 'patients'로 복수이므로 단수 동사 'knows' 대신 복수 동사
+    'know'가 적절합니다. 따라서 ②가 문맥상 틀린 부분이며, 이에 해당하는 선택지가 제공되지 않았으나 가장 가까운 오류는 2번 'uncomfortable'이
+    아닌 문법적 오류입니다. 문제의 선택지와 지문이 불일치하므로, 출제 오류 가능성이 높습니다.
+  time_taken: 2.0
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q31
+  question_number: 31
+  answer: 4
+  correct_answer: 5
+  is_correct: false
+  reasoning: 지문의 핵심 논지는 뇌의 자동화된 처리 과정과 의식적 사고의 차이를 설명하는 것입니다. ①~⑤까지의 내용은 무의식적 자동 처리(근육
+    조절, 사회적 기술)와 의식적 처리(말하기, 읽기, 쓰기)를 대비하며, 'crude and fast analysis without awareness'라는
+    표현으로 무의식적 판단의 특성을 강조합니다. 선택지 중 'alternative perspective'(대안적 관점)는 지문에서 언급된 '의식적
+    분석 없이 빠르게 이루어지는 무의식적 처리'와 가장 잘 부합합니다. 이는 의식적 사고와 달리 자동화된 시스템이 제공하는 대안적 인지 방식을
+    의미하기 때문입니다. 다른 선택지(언어적 통찰, 예술적 상상력 등)는 지문에서 직접적으로 언급되지 않거나 관련성이 떨어집니다.
+  time_taken: 1.62
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q33
+  question_number: 33
+  answer: 5
+  correct_answer: 3
+  is_correct: false
+  reasoning: 지문은 AI 기반 추천 시스템이 사용자의 주의를 사로잡기 위해 설계되었으며, 이로 인해 개인의 탐색 자유가 알고리즘 생성 플레이리스트
+    등으로 대체된다고 설명합니다. 그러나 '친구 AI'에게 혜택을 빚지고 있다는 내용(선택지 5)은 언급되지 않았습니다. 다른 선택지들은 주의
+    경제, 사용자 데이터의 상품화, 프라이버시 침해, 광고주 지원 구조 등과 간접적으로 연결될 수 있지만, 선택지 5는 지문의 핵심 논지와 무관하며
+    오히려 AI 시스템을 의인화하는 오해를 유발할 수 있는 표현입니다.
+  time_taken: 1.43
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q34
+  question_number: 34
+  answer: 4
+  correct_answer: 5
+  is_correct: false
+  reasoning: 지문은 중앙집중적 규칙(알고리즘 추천 시스템)이 개인의 자유로운 탐색을 대체하고 주의를 사로잡는 방식으로 행동을 유도한다고
+    설명합니다. 이는 '법적 및 기존 맥락 내에서 행동을 강화한다(4번)'와 일치합니다. 1번은 '법적·생산적 방식으로 분류'를 언급하지만, 지문은
+    분류보다 행동 유도에 초점을 둡니다. 2번과 3번은 창의적 재평가나 사고를 촉진하는 내용으로, 지문의 비판적 논조와 반대됩니다. 5번은 '생산적
+    활동 촉진'을 주장하지만, 지문은 알고리즘이 오히려 자유로운 탐색을 방해한다고 기술합니다. 따라서 4번이 가장 적합합니다.
+  time_taken: 1.41
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q35
+  question_number: 35
+  answer: 4
+  correct_answer: 4
+  is_correct: true
+  reasoning: 지문은 '주의 경제'와 AI 기반 추천 시스템이 인간의 주의를 사로잡는 방식에 초점을 맞추고 있습니다. 선택지 1, 2, 3,
+    5는 모두 자동차의 발전과 스포츠 관광의 연관성을 다루며, 특히 원격지 이동과 장비 운반의 편의성 등 '접근성'과 '이동성'을 강조합니다.
+    이는 지문의 '주의 포획'과 간접적으로 연결될 수 있는 물리적 이동성과 관련됩니다. 반면 선택지 4는 '숙소 및 식당 확장'을 언급하는데,
+    이는 지문의 핵심 주제인 주의 경제나 기술 매개성(mediation)과 무관하며, 다른 선택지들과도 맥락이 일치하지 않습니다. 따라서 전체
+    흐름과 관계 없는 문장은 4번입니다.
+  time_taken: 1.71
+  points: 3
+  earned_points: 3
+  success: true
+  error: null
+- question_id: q36
+  question_number: 36
+  answer: 5
+  correct_answer: 5
+  is_correct: true
+  reasoning: 지문은 계약 당사자 간 평판 자본이 계약 위반 시 훼손될 수 있음을 설명하며, 이는 시장 집행의 잠재력과 연결됩니다. (C)는
+    농부와 토지 소유자의 평판 형성(정확성, 공정성, 높은 수확량 등)을 소개하며, 이는 지문의 평판 자본 개념과 직접적으로 연결됩니다. (B)는
+    평판이 어떻게 간접적으로 모니터링되고 기능하는지를 설명하며, (C)의 평판 개념을 구체화하는 논리적 흐름입니다. (A)는 평판 훼손의 결과(거래
+    거부)를 다루며, (B)에서 언급된 모니터링의 결과로 자연스럽게 이어집니다. 따라서 (C) → (B) → (A) 순서가 가장 적절합니다. 다른
+    선택지들은 평판의 형성 → 모니터링 → 결과라는 논리적 순서를 따르지 않거나, (A)의 부정적 사례를 먼저 제시해 흐름을 끊습니다.
+  time_taken: 1.85
+  points: 3
+  earned_points: 3
+  success: true
+  error: null
+- question_id: q38
+  question_number: 38
+  answer: 3
+  correct_answer: 4
+  is_correct: false
+  reasoning: 주어진 문장 'Watch the birds in your backyard... to see every other grosbeak'은
+    구체적인 관찰 행위를 강조하는 반면, 'In reality, objects do not conform to a linear lifecycle
+    model...'은 이론적 설명으로 일반적인 원리를 다룹니다. (B)가 이론적 설명의 시작, (C)가 구체적 예시로의 전환, (A)가 관찰
+    사례로 이어지는 흐름이 자연스럽습니다. 따라서 (B)-(C)-(A) 순서인 선택지 3이 가장 적절합니다.
+  time_taken: 1.38
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q39
+  question_number: 39
+  answer: 5
+  correct_answer: 4
+  is_correct: false
+  reasoning: 지문의 첫 문장은 '뒷마당의 새들을 관찰하라'는 구체적인 행동을 언급하지만, 두 번째 문장에서 '물체는 단순한 선형 진행 모델보다
+    훨씬 복잡하고 적응적인 경로를 따른다'고 강조합니다. 이는 기존의 선형적 접근 방식에 대한 의문(question)을 제기하며, '접근성(accessibility)'은
+    관찰이나 이해의 용이성과 관련된 개념으로, 복잡한 현실을 단순화하는 기존의 접근 방식에 대한 비판적 시각과 연결됩니다. 다른 선택지(controllability,
+    predictability 등)는 지문의 핵심 논지와 직접적으로 부합하지 않습니다.
+  time_taken: 1.26
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q41
+  question_number: 41
+  answer: 4
+  correct_answer: 2
+  is_correct: false
+  reasoning: '지문은 ''엄지손가락과 집게손가락으로 종이를 잡는 행위''를 언급하며, 이를 ''피투성이 사업(bloody business)''이라고
+    표현합니다. 이는 인간의 손이 도구 사용이나 정교한 작업에 적합하지만, 동시에 상처나 고통을 유발할 수 있는 딜레마를 암시합니다. 선택지 4번
+    ''Human Grip: The Dilemma of Human Survival''은 인간의 손이 생존에 필수적인 도구 사용 능력을 제공하면서도
+    신체적 위험을 동반하는 모순적 특성을 가장 잘 반영합니다. 다른 선택지들은 진화론적 관점(2,3번), 해부학적 비교(1번), 도구 사용의 일상적
+    힘(5번) 등 지문의 핵심 맥락과 일치하지 않습니다.'
+  time_taken: 1.48
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q42
+  question_number: 42
+  answer: 1
+  correct_answer: 5
+  is_correct: false
+  reasoning: 주어진 지문 'Imagine grabbing a piece of paper between your thumb and index
+    finger... it can be a bloody business.'에서 (a)는 'grabbing'으로, 종이를 손가락으로 잡는 행위를
+    묘사하는데 적절합니다. 그러나 (b)~(e)에 대한 정보가 없어 정확한 판단이 불가능합니다. 문제 조건에 따라 부정형 질문임을 고려할 때,
+    (a)는 문맥상 문제가 없으므로 다른 선택지 중 하나가 정답일 수 있지만, 현재 정보로는 (a)를 제외한 나머지 중 하나가 부적절할 것으로
+    추정됩니다. 다만, 'bloody business'가 과장된 표현으로 사용된 점을 고려할 때, (a)의 'grabbing'이 오히려 어색할
+    수 있다는 해석도 가능하나, 이는 추가 문맥이 필요합니다. 따라서 주어진 정보만으로는 (a)가 가장 덜 부적절해 보이지만, 문제 구조상 (a)가
+    정답일 가능성도 배제할 수 없습니다. (※ 실제 시험에서는 선택지 전체 확인이 필수적입니다.)
+  time_taken: 2.58
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q43
+  question_number: 43
+  answer: 2
+  correct_answer: 2
+  is_correct: true
+  reasoning: 글 (A)에서 Ethan과 Grace는 세탁소에서 재킷을 찾으러 가기로 결정합니다. 이에 따라 (C)가 먼저 와야 하는데,
+    (C)는 세탁소에서 재킷을 찾는 과정을 설명합니다. 이후 (B)에서 Ethan과 Grace는 재킷을 가지고 집에 돌아와 Sean과 하이킹을
+    계획합니다. 마지막으로 (D)에서 하이킹 당일 상황을 묘사하며 이야기가 완결됩니다. 따라서 (C) → (B) → (D) 순서가 가장 적절합니다.
+  time_taken: 1.18
+  points: 3
+  earned_points: 3
+  success: true
+  error: null
+- question_id: q44
+  question_number: 44
+  answer: 3
+  correct_answer: 3
+  is_correct: true
+  reasoning: 선택지 (a)~(e) 중 (c)는 다른 선택지와 가리키는 대상이 다릅니다. (a), (b), (d), (e)는 모두 Ethan과
+    Sean의 관계 회복, 등산 준비, 감정적 교감 등과 직접적으로 연결된 사건들입니다. 반면 (c)는 세탁소에서 옷을 찾는 에피소드로, 다른
+    선택지들과 달리 Ethan과 Sean의 관계나 본 사건의 흐름과 직접적인 연관성이 없는 별개의 사건입니다. 따라서 (c)가 나머지와 다른 대상(세탁소
+    직원과의 대화)을 가리킵니다.
+  time_taken: 1.24
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
+- question_id: q45
+  question_number: 45
+  answer: 4
+  correct_answer: 4
+  is_correct: true
+  reasoning: 지문 (A)에서 Ethan은 아내 Grace에게 세탁소에 함께 가자고 요청했고, 지문 (C)에서 Ethan과 Grace가 함께
+    세탁소에 갔다는 내용이 명시되어 있습니다. 따라서 'Ethan은 혼자서 세탁소에 하이킹 재킷을 찾으러 갔다'는 내용은 지문과 일치하지 않습니다.
+    나머지 선택지 1, 2, 3, 5는 각각 지문 (A), (B), (B), (D)의 내용과 정확히 일치합니다.
+  time_taken: 1.39
+  points: 2
+  earned_points: 2
+  success: true
+  error: null

@@ -1,0 +1,772 @@
+exam_id: 2025-english-sat
+exam_title: 2025학년도 수능 ENGLISH
+subject: english
+model_name: gemini-2.5-pro
+evaluated_at: '2025-10-10T22:44:57.455952'
+summary:
+  total_questions: 42
+  correct_answers: 12
+  accuracy: 28.57
+  total_score: 28
+  max_score: 100
+  score_rate: 28.0
+results:
+- question_id: q1
+  question_number: 1
+  answer: 0
+  correct_answer: 2
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q2
+  question_number: 2
+  answer: 0
+  correct_answer: 5
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q3
+  question_number: 3
+  answer: 0
+  correct_answer: 1
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q4
+  question_number: 4
+  answer: 0
+  correct_answer: 3
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q5
+  question_number: 5
+  answer: 0
+  correct_answer: 1
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q6
+  question_number: 6
+  answer: 0
+  correct_answer: 4
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q7
+  question_number: 7
+  answer: 0
+  correct_answer: 3
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q8
+  question_number: 8
+  answer: 0
+  correct_answer: 4
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q9
+  question_number: 9
+  answer: 0
+  correct_answer: 5
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q10
+  question_number: 10
+  answer: 0
+  correct_answer: 2
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q11
+  question_number: 11
+  answer: 0
+  correct_answer: 2
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 3
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q12
+  question_number: 12
+  answer: 0
+  correct_answer: 1
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q13
+  question_number: 13
+  answer: 0
+  correct_answer: 5
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 2
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q14
+  question_number: 14
+  answer: 0
+  correct_answer: 1
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 3
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q15
+  question_number: 15
+  answer: 0
+  correct_answer: 2
+  is_correct: null
+  reasoning: 듣기 평가 문제 (스킵)
+  time_taken: 0
+  points: 3
+  earned_points: 0
+  success: false
+  error: 듣기 평가 문제는 평가하지 않음
+- question_id: q16
+  question_number: 16
+  answer: 3
+  correct_answer: 3
+  is_correct: true
+  reasoning: 이 지문은 미래의 식량 부족 문제를 해결하기 위한 대안 식품에 대해 이야기하고 있습니다. 지문의 첫 문장에서 화자는 "scientists
+    have been paying attention to alternative food sources that could help solve future
+    food shortages(과학자들이 미래의 식량 부족을 해결하는 데 도움이 될 수 있는 대안 식품 공급원에 주목하고 있다)"라고 명확하게
+    주제를 제시합니다. 이후 해조류, 콩, 호박, 버섯, 곤충 등을 구체적인 예시로 들며 이러한 식품들이 영양가가 풍부하고 다양한 환경에서 자랄
+    수 있어 미래 식량 문제의 해결책이 될 수 있음을 설명합니다. 마지막 문장에서도 "These alternative foods could play
+    a crucial role in feeding the growing global population(이러한 대안 식품들은 증가하는 세계 인구를
+    먹여 살리는 데 중요한 역할을 할 수 있다)"고 강조하며 주제를 다시 한번 확인시켜 줍니다. 따라서 이 말의 주제로 가장 적절한 것은 '미래의
+    식량 부족을 해결하기에 적합한 식품'을 의미하는 3번 선택지입니다. 다른 선택지들은 지문의 일부 내용만을 다루거나(1번), 주제에서 벗어난(2,
+    4, 5번) 내용입니다.
+  time_taken: 15.8
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
+- question_id: q17
+  question_number: 17
+  answer: 4
+  correct_answer: 4
+  is_correct: true
+  reasoning: '문제는 지문에서 언급되지 않은 음식을 찾는 것입니다. 지문은 미래 식량 부족 문제의 해결책으로 여러 대안 식품을 예로 들고
+    있습니다. 지문에서 언급된 식품은 다음과 같습니다:
+
+
+    1.  **seaweed (해조류)**: "seaweed is rich in vitamins and minerals"
+
+    2.  **beans (콩)**: "Beans are another great option"
+
+    3.  **pumpkins (호박)**: "Pumpkins are versatile"
+
+    4.  **mushrooms (버섯)**: "mushrooms and insects are also being considered"
+
+
+    선택지 1, 2, 3, 5번은 모두 지문에 명시적으로 언급되어 있습니다. 하지만 선택지 4번인 **potatoes (감자)**는 지문에서 전혀
+    언급되지 않았습니다. 따라서 지문에서 언급되지 않은 음식은 4번입니다.'
+  time_taken: 15.01
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
+- question_id: q18
+  question_number: 18
+  answer: 1
+  correct_answer: 1
+  is_correct: true
+  reasoning: 이 글의 핵심 목적은 첫 문장에 명확하게 드러납니다. 필자는 "I am writing to inform you that the
+    Spring Marathon scheduled for March 15 has been canceled(3월 15일로 예정된 봄 마라톤이 취소되었음을
+    알리기 위해 이 글을 씁니다)"라고 밝히고 있습니다. 글의 나머지 부분은 취소 사유(Main Street의 공사), 사과, 그리고 향후 계획(대체
+    날짜와 경로 모색)에 대한 부가적인 설명입니다. 따라서 이 글의 가장 주된 목적은 마라톤 경기가 취소되었다는 사실을 공지하는 것입니다. 다른
+    선택지들은 지문에서 언급되지 않았거나(3번 환불 절차, 5번 도로 통제 안내) 글의 핵심 내용이 아닙니다(2번 주의할 점, 4번 준비 운동
+    당부).
+  time_taken: 14.72
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
+- question_id: q19
+  question_number: 19
+  answer: 2
+  correct_answer: 2
+  is_correct: true
+  reasoning: "이 문제는 지문에 나타난 Peter의 심경 변화를 파악하는 문제입니다. 지문의 전반부와 후반부에서 Peter의 감정을 나타내는\
+    \ 핵심 표현을 찾아야 합니다.\n\n1.  **초반 심경 (기대감, 자신감):** 지문 초반에 Peter는 밸런타인데이를 몇 주 동안 고대해왔고(\"\
+    had been looking forward to\"), 모든 것이 완벽할 것이라고 매우 자신했습니다(\"so confident that everything\
+    \ would be perfect\"). 이는 그의 심경이 '자신감 있는(confident)' 상태였음을 명확히 보여줍니다.\n\n2.  **후반\
+    \ 심경 (실망감):** 하지만 예약에도 불구하고 식당이 만석이라는 사실을 알게 된 후, 그의 마음은 무너져 내렸고(\"Peter's heart\
+    \ sank\"), 공들여 계획한 저녁이 무너지고 있었습니다(\"his carefully planned evening was falling\
+    \ apart\"). 'heart sank'라는 표현은 큰 실망감이나 낙담을 의미합니다. 따라서 그의 심경은 '실망한(disappointed)'\
+    \ 상태로 변했음을 알 수 있습니다.\n\n3.  **선택지 분석:**\n    *   1번 (relaxed → indifferent): Peter는\
+    \ 느긋하기보다는 자신감에 차 있었고, 무관심해진 것이 아니라 실망했습니다.\n    *   2번 (confident → disappointed):\
+    \ 지문에서 직접적으로 드러난 'confident'와 'heart sank'라는 표현을 통해 유추할 수 있는 'disappointed'는 Peter의\
+    \ 심경 변화를 가장 정확하게 묘사합니다.\n    *   3번 (confused → satisfied): 처음에 혼란스러웠던 것이 아니라\
+    \ 자신감이 있었고, 마지막에는 만족한 것이 아니라 실망했습니다.\n    *   4번 (embarrassed → joyful): 당황했을\
+    \ 수는 있지만 초기 감정은 자신감이었고, 마지막에 기쁨을 느끼지 않았습니다.\n    *   5번 (jealous → discouraged):\
+    \ 질투심에 대한 내용은 지문에 전혀 없으며, 초기 감정과 맞지 않습니다.\n\n따라서 Peter의 심경 변화는 '자신감 있는(confident)'\
+    \ 상태에서 '실망한(disappointed)' 상태로 바뀌었다고 보는 것이 가장 적절합니다."
+  time_taken: 17.3
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
+- question_id: q20
+  question_number: 20
+  answer: 3
+  correct_answer: 1
+  is_correct: false
+  reasoning: 이 글의 필자는 비디오 게임이 학업을 방해한다는 기존의 비판을 언급하며 시작하지만, '그러나(However)'를 통해 핵심
+    주장을 제시합니다. 필자의 핵심 주장은 게임을 금지하는 것이 아니라, '학습 활동에 게임과 같은 요소를 통합하는 것(incorporate game-like
+    elements into learning activities)'이 중요하다고 말하는 부분에 명확히 드러납니다. 필자는 점수 시스템, 레벨 진행,
+    즉각적인 피드백과 같은 '게임 요소(game mechanics)'를 교육 과정에 통합하면, 수동적인 학습을 능동적이고 몰입감 있는 '경험(experience)'으로
+    바꿀 수 있다고 주장합니다. 선택지 3번 '학습 활동에 게임 요소를 적용해 새로운 경험을 해야 한다'는 이러한 필자의 핵심 주장을 가장 포괄적이고
+    정확하게 요약하고 있습니다. 반면, 선택지 1번은 필자가 언급한 구체적인 방법 중 하나일 뿐, 글 전체의 핵심 주장이라고 보기는 어렵습니다.
+    선택지 2, 4, 5번은 필자가 비판적으로 언급하거나, 주장하는 바와는 거리가 먼 내용입니다.
+  time_taken: 21.65
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q21
+  question_number: 21
+  answer: 3
+  correct_answer: 3
+  is_correct: true
+  reasoning: 지문은 고대 로마의 건축가 비트루비우스의 견해를 소개하며, 그는 건축이 실용적 지식(practical knowledge)과
+    이론적 지식(theoretical knowledge)을 모두 필요로 한다고 주장했습니다. 그는 두 가지 유형의 실패한 건축가를 대조하여 설명합니다.
+    첫째는 '학문 없이 수공 기술만 습득하려 한 건축가들(architects who have aimed at acquiring manual skill
+    without scholarship)'이고, 둘째는 '이론과 학문에만 의존한 건축가들(those who have relied only upon
+    theories and scholarship)'입니다. 밑줄 친 'hunting the shadow, not the substance'는 바로
+    이 두 번째 유형의 건축가들을 묘사하는 표현입니다. 여기서 'shadow(그림자)'는 실체가 없는 이론이나 이상을, 'substance(실체)'는
+    실제적인 결과물이나 그것을 구현하는 실용적 기술을 의미합니다. 따라서 이 표현은 실용적 기술 없이 이론이나 이상만을 쫓는 행위를 가리킵니다.
+    선택지 3번 'pursuing the ideals of architecture without the practical skills(실용적인
+    기술 없이 건축의 이상을 추구하는 것)'은 이러한 의미를 가장 정확하게 반영하고 있습니다.
+  time_taken: 18.71
+  points: 3
+  earned_points: 3
+  success: true
+  error: null
+- question_id: q22
+  question_number: 22
+  answer: 3
+  correct_answer: 2
+  is_correct: false
+  reasoning: "제시된 지문은 로마 시대 건축가의 위상과, 성공적인 건축가가 되기 위해 이론적 지식(scholarship)과 실무적 기술(manual\
+    \ skill)의 균형이 필수적이라는 점을 비트루비우스의 주장을 통해 설명하고 있습니다. 지문의 핵심 요지는 '성공적인 건축가는 이론과 실무를\
+    \ 겸비해야 한다'는 것입니다. \n\n그러나 제시된 선택지 1번부터 5번까지는 모두 '감정 조절', '감정 이해', '공감 능력' 등 지문의\
+    \ 내용과 전혀 관련이 없는 주제를 다루고 있습니다. 지문에는 건축, 역사, 철학, 수학 등 다양한 학문이 언급되지만, 감정이나 공감에 대한\
+    \ 내용은 전혀 언급되지 않습니다. \n\n따라서, 지문의 내용에 근거하여 요지를 찾는 문제에서 주어진 선택지 중 정답을 고르는 것은 논리적으로\
+    \ 불가능합니다. 이 문제는 지문과 선택지가 서로 일치하지 않는 오류가 있는 것으로 판단됩니다. 형식에 따라 임의의 번호를 선택하였으나, 지문의\
+    \ 내용과 일치하는 선택지는 존재하지 않습니다."
+  time_taken: 43.66
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q23
+  question_number: 23
+  answer: 3
+  correct_answer: 1
+  is_correct: false
+  reasoning: 제시된 지문과 선택지 간에 내용적 불일치가 존재하여 논리적으로 정답을 선택할 수 없습니다. 지문은 로마 시대 건축가의 위상과
+    그들이 갖추어야 할 이론적 지식과 실무적 기술의 조화에 대해 설명하고 있습니다. 즉, 지문의 주제는 '고대 로마 건축가에게 요구되었던 자질'에
+    가깝습니다. 하지만 제시된 선택지들은 모두 '산업화(industrialization)', '노동 시간(work-time)', '기계와 인간의
+    관계(machine-human relationship)' 등 산업 혁명 시대의 사회경제적 변화에 관한 내용입니다. 지문의 내용(로마 시대 건축)과
+    선택지의 내용(산업 시대 노동)은 시대적, 주제적으로 아무런 관련이 없으므로, 지문을 근거로 정답을 고를 수 없습니다. 문제 자체에 지문과
+    선택지가 잘못 조합된 오류가 있는 것으로 판단됩니다. 형식 준수를 위해 임의의 번호를 선택하였으나, 문제의 오류로 인해 정답을 특정할 수 없습니다.
+  time_taken: 49.85
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q24
+  question_number: 24
+  answer: 3
+  correct_answer: 5
+  is_correct: false
+  reasoning: '제시된 지문은 고대 로마 시대 건축가의 위상이 높아졌으며, 당시 이상적인 건축가가 되기 위해 이론적 지식과 실용적 기술을
+    겸비해야 한다는 점을 비트루비우스의 견해를 통해 설명하고 있습니다. 지문의 핵심 내용은 ''고대 로마 건축가의 역할과 필요 소양''에 관한
+    것입니다.
+
+
+    하지만, 제시된 선택지 1번부터 5번까지는 모두 ''셀피(selfie)''를 주제로 다루고 있습니다. 지문의 내용인 ''고대 로마 건축가''와
+    선택지의 주제인 ''셀피'' 사이에는 어떠한 연관성도 찾을 수 없습니다. 예를 들어, 선택지 3번 ''The Selfie: A Symbol
+    of Self-oriented Global Culture''는 셀피와 자기중심적 문화의 관계를 다루고 있어, 지문의 내용과 완전히 무관합니다.
+    다른 선택지들 역시 마찬가지입니다.
+
+
+    결론적으로, 이 문제는 지문과 선택지 간의 내용이 전혀 일치하지 않는 오류가 있는 문제입니다. 주어진 선택지 중에서는 지문의 제목으로 적절한
+    것을 고를 수 없습니다. 지침에 따라 답변 형식을 준수하기 위해 임의의 번호를 선택하였으나, 논리적으로 올바른 정답은 존재하지 않습니다.'
+  time_taken: 25.45
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q25
+  question_number: 25
+  answer: 3
+  correct_answer: 4
+  is_correct: false
+  reasoning: '문제는 지문의 내용과 도표의 데이터가 일치하지 않는 것을 찾는 것입니다. 지문의 각 문장을 데이터와 비교하여 검토해야 합니다.
+
+
+    1.  **프로듀서(Producer) 관련 진술**: 첫 번째 문장은 3년 모두 프로듀서의 비율이 다른 세 직업에 비해 가장 높았다고 말합니다.
+    데이터 확인 결과, 2020년(28%), 2021년(24%), 2022년(28%) 모두 가장 높은 수치이므로 이 진술은 **일치**합니다.
+    다섯 번째 문장은 2022년 프로듀서 비율(28%)이 2020년(28%)과 같다고 말하며, 이 또한 데이터와 **일치**합니다.
+
+
+    2.  **감독(Director) 관련 진술**: 두 번째 문장은 2021년 감독 비율(12%)이 2020년(16%)보다 낮고 2022년(11%)보다
+    높다고 말합니다. (12% < 16%, 12% > 11%) 이는 데이터와 **일치**합니다.
+
+
+    3.  **작가(Writer) 관련 진술**: 세 번째 문장은 작가 비율이 2020년에서 2021년으로 4%p, 2021년에서 2022년으로
+    1%p 증가했다고 말합니다. 데이터 확인 결과, 2020년(12%) → 2021년(16%)으로 4%p 증가했고, 2021년(16%) → 2022년(17%)으로
+    1%p 증가했으므로 **일치**합니다.
+
+
+    4.  **편집자(Editor) 관련 진술**: 네 번째 문장은 편집자 비율이 3년 모두 20% 미만이었다고 말합니다. 데이터 확인 결과,
+    2020년(18%)과 2022년(18%)은 20% 미만이지만, 2021년은 21%로 20% 미만이 아닙니다. 따라서 이 진술은 데이터와 **불일치**합니다.
+
+
+    결론적으로, 편집자(Editor)에 대한 설명이 도표의 내용과 일치하지 않으므로 정답은 3번입니다.'
+  time_taken: 30.89
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q26
+  question_number: 26
+  answer: 4
+  correct_answer: 4
+  is_correct: true
+  reasoning: '이 문제는 지문의 내용과 일치하지 않는 선택지를 찾는 것입니다. 지문에 따르면, Dick Enberg는 "He made his
+    last live broadcast in 2016 and died the following year"라고 되어 있습니다. ''the following
+    year''는 ''그 다음 해''를 의미하므로, 그는 마지막 방송을 한 2016년의 다음 해인 2017년에 사망했습니다. 따라서 마지막 방송
+    후 1년 뒤에 사망한 것입니다. 하지만 선택지 4번은 ''마지막 방송 후 3년 뒤에 사망하였다''고 기술하고 있어 지문의 내용과 명백히 다릅니다.
+    따라서 4번이 정답입니다.
+
+
+    - 1번: "He was born in Michigan in 1935." (Michigan에서 태어났다) -> 일치
+
+    - 2번: "he also served as a coach of its baseball team." (대학 야구를 코치했다) -> 일치
+
+    - 3번: "he became the first U.S. sportscaster ever to visit China." (중국을 방문한 첫
+    미국인 스포츠 캐스터였다) -> 일치
+
+    - 5번: "won Emmy Awards as a sportscaster, a writer, and a producer." (Emmy Awards를
+    수상하였다) -> 일치'
+  time_taken: 14.05
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
+- question_id: q27
+  question_number: 27
+  answer: -1
+  correct_answer: 3
+  is_correct: false
+  reasoning: ''
+  time_taken: 59.23
+  points: 2
+  earned_points: 0
+  success: false
+  error: 504 The request timed out. Please try again.
+- question_id: q28
+  question_number: 28
+  answer: 3
+  correct_answer: 3
+  is_correct: true
+  reasoning: '문제는 안내문의 내용과 ''일치하지 않는 것''을 찾으라고 요구하고 있습니다. 각 선택지를 지문의 내용과 비교하여 검토하겠습니다.
+
+
+    1. **2년에 한 번 열린다:** 지문에는 "15th annual Luckwood Snow Festival"이라고 명시되어 있습니다. ''annual''은
+    ''매년의''라는 뜻이므로, 축제는 1년에 한 번 열립니다. 따라서 이 선택지는 내용과 일치하지 않습니다.
+
+
+    2. **연중 동안 진행된다:** 지문에는 축제 기간이 "January 24th—30th (7 days)"라고 명시되어 있습니다. 7일 동안만
+    진행되므로, 연중 동안 진행된다는 설명은 내용과 일치하지 않습니다.
+
+
+    3. **눈 조각 경연에는 11개 팀이 참가할 것이다:** 지문의 ''Special Activities'' 항목에 "Snow Sculpture
+    Contest: 11 teams will participate."라고 명시되어 있습니다. 이는 ''눈 조각 경연에 11개 팀이 참가할 것이다''라는
+    내용과 정확히 일치합니다.
+
+
+    4. **주차가 가능하다:** 지문의 ''Transportation'' 항목에 "Parking is not available"라고 명시되어
+    있습니다. 이는 주차가 불가능하다는 의미이므로, 주차가 가능하다는 설명은 내용과 일치하지 않습니다.
+
+
+    5. **셔틀버스 이용은 무료이다:** 지문의 ''Transportation'' 항목에 셔틀버스 요금이 "One-way fare: $1, cash
+    only"라고 명시되어 있습니다. 요금이 1달러이므로, 무료라는 설명은 내용과 일치하지 않습니다.
+
+
+    분석 결과, 선택지 1, 2, 4, 5는 모두 지문의 내용과 일치하지 않으며, 선택지 3만이 유일하게 지문의 내용과 일치합니다. 문제의 형식상
+    하나의 정답을 골라야 하므로, 내용과 유일하게 ''일치하는'' 3번을 정답으로 선택합니다.'
+  time_taken: 58.06
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
+- question_id: q29
+  question_number: 29
+  answer: 2
+  correct_answer: 2
+  is_correct: true
+  reasoning: '해당 문장의 밑줄 친 부분 ② ''knows''는 어법상 틀렸습니다. 이 문장의 주어는 ''patients recovering
+    from a brain injury affecting the motor system''에서 핵심 명사인 ''patients''입니다. ''patients''는
+    복수 명사이므로, 이에 상응하는 동사는 복수형인 ''know''가 되어야 합니다. 3인칭 단수 주어에 사용하는 ''knows''는 주어와 동사의
+    수일치(subject-verb agreement) 원칙에 어긋납니다. 따라서 ''knows''를 ''know''로 고쳐야 합니다.
+
+
+    다른 선택지들의 어법적 타당성은 다음과 같습니다:
+
+    1. ① had: ''Imagine if ~'' 구문은 현재 사실과 반대되는 상황을 가정하는 가정법 과거 문맥입니다. 따라서 동사의 과거형인
+    ''had''를 사용하는 것은 올바릅니다.
+
+    3. ③ freeing: 주절(''The autopilot parts of our brain do it for us automatically'')의
+    내용에 이어지는 부수적인 상황을 설명하는 분사구문입니다. 주절의 주어인 ''The autopilot parts of our brain''이
+    의식적인 마음을 ''자유롭게 해주는'' 능동의 관계이므로 현재분사 ''freeing''을 사용하는 것은 올바릅니다.
+
+    4. ④ that: ''It is ~ that ...'' 강조 구문으로, ''the older parts of our brain''을 강조하고
+    있습니다. 강조되는 대상이 사물(parts)이므로 ''that''을 사용하는 것은 올바릅니다.
+
+    5. ⑤ what: 선행사를 포함하는 관계대명사 ''what''은 ''~하는 것''으로 해석되며, 문장 내에서 명사절을 이끕니다. 여기서는
+    ''what you are perceiving, feeling, or thinking''이라는 명사절이 문장의 주어 역할을 하고 있으므로 어법상
+    올바릅니다.'
+  time_taken: 19.66
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
+- question_id: q30
+  question_number: 30
+  answer: 2
+  correct_answer: 4
+  is_correct: false
+  reasoning: '이 글은 우리가 의식적으로 통제하지 않는 뇌의 자동적인(autopilot) 기능과 의식적인 사고 과정을 대조하여 설명하고
+    있습니다. 각 밑줄 친 부분이 문법과 문맥에 맞게 사용되었는지 분석해 보겠습니다.
+
+
+    1. ① had to: ''Imagine if we had to consider...''는 현재 사실과 반대되는 상황을 가정하는 가정법 과거
+    구문입니다. ''만약 우리가 ~해야 한다면''이라는 의미로, 문법적으로 올바른 표현입니다.
+
+
+    2. ② knows: 이 문장의 주어는 ''patients recovering from a brain injury affecting the
+    motor system''입니다. 핵심 주어는 복수 명사인 ''patients''입니다. 주어가 복수이므로 동사는 복수형인 ''know''가
+    되어야 합니다. ''knows''는 3인칭 단수 주어에 사용하는 형태이므로, 주어-동사 수일치가 틀렸습니다. 따라서 문맥상 적절하지 않은 낱말입니다.
+
+
+    3. ③ freeing up: ''The autopilot parts of our brain do it for us automatically,
+    freeing up...''은 분사구문입니다. 주절의 주어인 ''The autopilot parts of our brain''이 의식적인 마음을
+    ''자유롭게 해주는'' 능동적인 주체이므로, 현재분사 ''freeing up''을 사용하는 것은 올바릅니다. 이는 ''and they free
+    up...''을 의미합니다.
+
+
+    4. ④ that: ''It is ~ that ...'' 강조 구문입니다. ''these automatic processes''를 지지하는
+    주체인 ''the older parts of our brain''을 강조하고 있습니다. 강조되는 대상이 사물(parts)이므로 주격 관계대명사
+    ''that''을 사용하는 것은 문법적으로 올바릅니다.
+
+
+    5. ⑤ what: ''what you are perceiving, feeling, or thinking''은 선행사를 포함하는 관계대명사
+    ''what''이 이끄는 명사절입니다. 이 명사절 전체가 문장의 주어 역할을 하고 있으며, ''~하는 것''으로 해석됩니다. 단수 취급하므로
+    뒤따르는 동사 ''is''와도 잘 연결됩니다. 문법적으로 올바른 표현입니다.
+
+
+    따라서 주어(patients)와 동사(knows)의 수일치가 맞지 않는 ②가 문법적으로 틀렸으므로 정답입니다.'
+  time_taken: 25.68
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q31
+  question_number: 31
+  answer: 5
+  correct_answer: 5
+  is_correct: true
+  reasoning: 이 지문은 의식적이고 의도적인 사고 과정과, 우리가 인지하지 못하는 사이에 일어나는 자동적이고 무의식적인 뇌의 과정을 대조하고
+    있습니다. 지문은 물을 마시기 위해 걷는 것과 같은 일상적인 행동이 모든 근육의 움직임을 의식적으로 고려하지 않는 '자동 조종(autopilot)'
+    시스템에 의해 수행된다고 설명합니다. 이는 우리의 '의식(conscious mind)'을 더 중요한 과업을 위해 자유롭게 해줍니다. 문제의
+    빈칸은 지문의 마지막 문장, 즉 '대부분의 경우, 당신이 인지하고, 느끼고, 생각하는 것은 당신의 ______ 없이 완전히 일어나는 매우 대략적이고
+    빠른 분석에 기반한다'는 결론 부분에 해당합니다. 이 빈칸에는 자동적 과정의 핵심 특징, 즉 '의식적인 통제나 참여가 없음'을 나타내는 말이
+    들어가야 합니다. 선택지 5번 'personal involvement (개인적 개입)'는 이러한 '의식적인 자아의 참여'를 의미하므로, '개인적
+    개입 없이'라는 표현은 지문의 전체적인 맥락과 완벽하게 일치합니다. 다른 선택지들은 너무 구체적이거나(1. linguistic insight)
+    지문의 핵심 주제인 의식과 무의식의 대조와는 관련이 적습니다.
+  time_taken: 55.7
+  points: 3
+  earned_points: 3
+  success: true
+  error: null
+- question_id: q33
+  question_number: 33
+  answer: -1
+  correct_answer: 3
+  is_correct: false
+  reasoning: ''
+  time_taken: 59.13
+  points: 2
+  earned_points: 0
+  success: false
+  error: 504 The request timed out. Please try again.
+- question_id: q34
+  question_number: 34
+  answer: -1
+  correct_answer: 5
+  is_correct: false
+  reasoning: ''
+  time_taken: 58.77
+  points: 3
+  earned_points: 0
+  success: false
+  error: 504 The request timed out. Please try again.
+- question_id: q35
+  question_number: 35
+  answer: 4
+  correct_answer: 4
+  is_correct: true
+  reasoning: '이 글의 전체적인 주제는 ''자동차(the car)가 스포츠 관광(sports tourism) 발전에 미친 영향''입니다.
+    각 문장의 내용을 살펴보면 다음과 같습니다.
+
+
+    1. 문장 ①: 자동차가 스포츠 관광에 중요한 영향을 미쳤다고 언급하며 글의 주제를 제시합니다.
+
+    2. 문장 ②: 주제의 핵심 소재인 자동차가 대중화된 역사적 배경을 설명합니다.
+
+    3. 문장 ③: 스포츠 관광의 맥락에서 자동차가 가진 구체적인 장점(외진 곳 접근, 장비 운송 용이 등)을 설명합니다.
+
+    4. 문장 ⑤: ''그 결과(As a result)''라는 표현을 통해, 문장 ③에서 언급된 장점들로 인해 자동차가 스포츠 관광 발전에 필수적이었음을
+    결론 내립니다. 특히 사람과 장비를 외진 곳으로 운송해야 하는 경우에 그렇다고 강조하며 문장 ①, ③과 긴밀하게 연결됩니다.
+
+
+    반면, 문장 ④는 관광 성장에 따른 ''숙박 시설의 확장''이 ''지역 식당의 성장''을 촉진했다는 내용입니다. 이는 글의 핵심 소재인 ''자동차''와는
+    직접적인 관련이 없으며, 관광 산업의 다른 측면(숙박과 요식업의 관계)을 다루고 있습니다. 따라서 글의 전체적인 흐름에서 벗어나는 문장은 ④입니다.'
+  time_taken: 28.11
+  points: 3
+  earned_points: 3
+  success: true
+  error: null
+- question_id: q36
+  question_number: 36
+  answer: -1
+  correct_answer: 5
+  is_correct: false
+  reasoning: ''
+  time_taken: 59.19
+  points: 3
+  earned_points: 0
+  success: false
+  error: 504 The request timed out. Please try again.
+- question_id: q38
+  question_number: 38
+  answer: 3
+  correct_answer: 4
+  is_correct: false
+  reasoning: "이 문제는 주어진 문장의 위치를 찾는 유형이 아니라, (A), (B), (C) 세 문단의 순서를 배열하는 유형입니다. 선택지의\
+    \ 형태((B)-(C)-(A) 등)가 이를 명확히 보여줍니다. 지문의 내용 조각들을 바탕으로 가장 논리적인 글의 순서를 추론해야 합니다.\n\
+    \n1.  **(B) 문단의 역할 분석**: (B)에 해당하는 것으로 보이는 \"Watch the birds in your backyard...\"\
+    \ 부분은 구체적인 예시나 비유를 통해 독자의 주의를 환기하며 글을 시작하는 역할을 할 가능성이 높습니다. 특정 대상을 관찰하라는 명령문은\
+    \ 글의 도입부에서 흔히 사용되는 방식입니다.\n\n2.  **(C) 문단의 역할 분석**: (C)에 해당하는 것으로 보이는 \"In reality,\
+    \ objects do not conform to a linear lifecycle model...\" 부분은 'In reality(실제로는)'라는\
+    \ 표현으로 시작합니다. 이는 앞서 제시된 내용이나 일반적인 통념을 반박하며 글의 핵심 주제를 제시하는 역할을 합니다. 즉, (B)에서 제시된\
+    \ 예시나 암시된 통념을 뒤집고, '사물은 선형적인 생애 주기 모델을 따르지 않는다'는 중심 주장을 명확히 밝히는 부분입니다.\n\n3. \
+    \ **(A) 문단의 역할 분석**: (A) 문단은 (C)에서 제시된 중심 주장, 즉 '훨씬 더 복잡하고 적응적인 경로(a far more\
+    \ complicated and adaptive path)'에 대한 구체적인 부연 설명이나 심화 내용을 담고 있을 것입니다. (C)의 마지막\
+    \ 부분과 자연스럽게 연결되어 주장을 뒷받침하는 역할을 할 것입니다.\n\n4.  **논리적 순서 조합**: 따라서 가장 자연스러운 글의 흐름은\
+    \ 다음과 같습니다.\n    *   **(B)**: 구체적인 예시(새 관찰)를 통해 흥미를 유발하고 논의의 배경을 제시합니다.\n    *\
+    \   **(C)**: 'In reality'를 통해 (B)의 내용이나 일반적 통념과 대조하며 '사물의 생애 주기는 선형적이지 않다'는 글의\
+    \ 핵심 주장을 명확히 드러냅니다.\n    *   **(A)**: (C)에서 제시한 핵심 주장에 대해 더 구체적으로 설명하고 논지를 강화합니다.\n\
+    \n이러한 흐름에 따라, 가장 적절한 순서는 (B) - (C) - (A)입니다."
+  time_taken: 23.48
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q39
+  question_number: 39
+  answer: -1
+  correct_answer: 4
+  is_correct: false
+  reasoning: ''
+  time_taken: 59.23
+  points: 3
+  earned_points: 0
+  success: false
+  error: 504 The request timed out. Please try again.
+- question_id: q41
+  question_number: 41
+  answer: 3
+  correct_answer: 2
+  is_correct: false
+  reasoning: '주어진 지문은 ''엄지와 검지로 종이 한 장을 집는 것을 상상해 보라... 피비린내 나는 일이 될 수 있다''는 내용입니다.
+    이는 인간의 손이 가진 정교한 능력(종이를 집는 행위)이 역설적으로 사소한 것에 의해 상처를 입을 수 있는(paper cut) 취약점을 동시에
+    가졌다는 점을 시사합니다. 즉, 진화의 결과물인 인간의 손이 가진 예상치 못한, 아이러니한 측면을 보여주고 있습니다.
+
+
+    각 선택지를 분석해 보겠습니다.
+
+    1. ''인간과 다른 영장류 사이의 해부학적 거리'': 지문은 인간의 손에 대해서만 이야기할 뿐, 다른 영장류와 비교하고 있지 않습니다.
+
+    2. ''인간의 손: 진화 경로의 결정적 도약'': 이 제목은 인간 손의 위대하고 긍정적인 측면을 강조합니다. 하지만 지문은 오히려 그 손이
+    가진 취약점, 즉 부정적인 측면을 언급하고 있으므로 적절하지 않습니다.
+
+    3. ''우리의 손: 진화의 예상치 못한 결과'': 이 제목은 지문의 핵심을 정확히 포착합니다. 정교한 조작 능력을 갖도록 진화한 손이, 바로
+    그 정교함 때문에 얇은 종이에도 쉽게 베이는 ''예상치 못한 결과''를 낳았다는 지문의 역설적인 내용을 잘 담고 있습니다.
+
+    4. ''인간의 파지법: 인류 생존의 딜레마'': ''생존의 딜레마''라는 표현은 종이에 베이는 사소한 상처를 설명하기에는 지나치게 과장된
+    표현입니다.
+
+    5. ''일상적인 도구 사용에 숨겨진 힘'': 지문은 도구 사용의 ''힘''이 아니라, 그로 인한 ''취약점''이나 ''위험''을 이야기하고
+    있으므로 내용과 반대됩니다.
+
+
+    따라서 지문이 전달하는 ''진화의 산물인 인간 손의 역설적이고 예상치 못한 취약점''이라는 메시지를 가장 잘 나타내는 제목은 3번입니다.'
+  time_taken: 21.01
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q42
+  question_number: 42
+  answer: 3
+  correct_answer: 5
+  is_correct: false
+  reasoning: 제공된 지문은 문제의 일부에 불과하며, 평가의 대상이 되는 밑줄 친 (a)~(e)에 해당하는 단어가 전혀 없습니다. 'Imagine
+    grabbing a piece of paper...'로 시작하는 문장만으로는 각 단어가 사용된 구체적인 문맥을 알 수 없으므로, 낱말의 쓰임이
+    적절한지 판단하는 것이 불가능합니다. 따라서 논리적인 근거에 기반하여 정답을 선택할 수 없습니다. 문제 해결을 위해서는 전체 지문과 밑줄 친
+    단어에 대한 정보가 반드시 필요합니다. 요청된 형식 준수를 위해 임의의 번호 3을 선택하였으나, 이는 문제의 정보가 불완전하기 때문이며 어떠한
+    분석적 근거도 없음을 명확히 밝힙니다.
+  time_taken: 24.03
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q43
+  question_number: 43
+  answer: 2
+  correct_answer: 2
+  is_correct: true
+  reasoning: '주어진 글 (A)는 Ethan이 아들 Sean과의 관계가 소원해진 것을 걱정하자, 아내 Grace가 부자간의 하이킹을 제안하는
+    내용으로 끝납니다. 특히 (A)의 마지막 문장에서 Ethan은 하이킹 재킷이 세탁소에 있다는 것을 깨닫고 아내와 함께 찾으러 가자고 말합니다.
+    이 내용에 따라 가장 자연스럽게 이어질 다음 사건은 세탁소에 가는 것입니다.
+
+
+    (C)는 Ethan과 Grace가 세탁소에 가서 한 달 전에 맡긴 재킷을 찾아오는 장면을 묘사합니다. 이는 (A)의 마지막 내용과 직접적으로
+    연결됩니다.
+
+
+    (B)는 "Ethan and Grace came back home with the jackets(Ethan과 Grace는 재킷을 가지고 집으로
+    돌아왔다)"라는 문장으로 시작합니다. 이는 세탁소에서 재킷을 찾아온 (C) 다음에 일어날 일임을 명확히 보여줍니다. (B)에서는 집에 돌아와
+    다른 하이킹 장비를 챙기고, 아들 Sean에게 하이킹을 제안하여 승낙을 받는 과정이 나옵니다.
+
+
+    (D)는 실제 하이킹을 떠난 날의 이야기입니다. 하이킹 도중 Sean이 다치고, Ethan이 아들을 업고 내려오는 과정에서 부자간의 오해를
+    풀고 관계를 회복하는 내용으로, 이야기의 절정과 결말에 해당합니다. 이는 하이킹을 가기로 약속한 (B) 다음에 와야 합니다.
+
+
+    따라서 전체적인 이야기의 흐름은 (A) 문제 제기 및 하이킹 제안 → (C) 세탁소에서 재킷 찾기 → (B) 하이킹 준비 및 아들 설득 →
+    (D) 실제 하이킹 및 관계 회복 순서가 가장 논리적입니다. 그러므로 (A)에 이어질 순서는 (C) → (B) → (D)가 가장 적절합니다.'
+  time_taken: 21.88
+  points: 3
+  earned_points: 3
+  success: true
+  error: null
+- question_id: q44
+  question_number: 44
+  answer: -1
+  correct_answer: 3
+  is_correct: false
+  reasoning: ''
+  time_taken: 59.29
+  points: 2
+  earned_points: 0
+  success: false
+  error: 504 The request timed out. Please try again.
+- question_id: q45
+  question_number: 45
+  answer: 4
+  correct_answer: 4
+  is_correct: true
+  reasoning: '이 문제는 지문의 내용과 일치하지 않는 선택지를 찾는 문제입니다. 각 선택지를 지문과 비교하여 사실 여부를 확인해야 합니다.
+
+
+    1. **Grace는 Ethan과 Sean의 관계를 부러워했다고 말했다.**: (A) 단락에서 Grace는 Ethan에게 "I always
+    envied your relationship with Sean(나는 항상 당신과 Sean의 관계를 부러워했어요)"라고 말합니다. 따라서 이
+    내용은 지문과 일치합니다.
+
+
+    2. **Grace는 Ethan에게 Sean과 둘이서 하이킹할 것을 권했다.**: (A) 단락에서 Grace는 "How about going
+    hiking, just the two of you?(둘이서만 하이킹 가는 건 어때요?)"라고 제안합니다. 따라서 이 내용은 지문과 일치합니다.
+
+
+    3. **Sean의 선글라스가 서랍장 안에 있었다.**: (B) 단락에서 Ethan과 Grace가 Sean의 하이킹 장비를 확인할 때 "in
+    his drawers they found his hat, shoes, sunglasses, and hiking sticks(그의 서랍장에서
+    모자, 신발, 선글라스, 그리고 하이킹 스틱을 찾았다)"라는 내용이 나옵니다. 따라서 이 내용은 지문과 일치합니다.
+
+
+    4. **Ethan은 혼자서 세탁소에 하이킹 재킷을 찾으러 갔다.**: (A) 단락의 마지막 부분에서 Ethan은 아내에게 "asked his
+    wife to go and pick them up with him(그와 함께 재킷을 찾으러 가자고 아내에게 부탁했다)"라고 말합니다. 또한,
+    (B) 단락은 "Ethan and Grace came back home with the jackets(Ethan과 Grace는 재킷을 가지고
+    집으로 돌아왔다)"로 시작하며, (C) 단락의 세탁소 장면에서도 Grace가 대화에 참여합니다. 이를 통해 Ethan은 혼자가 아니라 아내
+    Grace와 함께 세탁소에 갔음을 알 수 있습니다. 따라서 이 선택지는 지문의 내용과 일치하지 않습니다.
+
+
+    5. **Sean은 하이킹하는 도중 돌에 걸려 넘어졌다.**: (D) 단락에서 "Sean fell over a rock and twisted
+    his ankle(Sean은 돌에 걸려 넘어져 발목을 삐었다)"라는 내용이 있습니다. 따라서 이 내용은 지문과 일치합니다.
+
+
+    결론적으로, 지문의 내용과 일치하지 않는 것은 4번입니다.'
+  time_taken: 21.59
+  points: 2
+  earned_points: 2
+  success: true
+  error: null

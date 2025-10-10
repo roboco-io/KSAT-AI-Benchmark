@@ -1,0 +1,837 @@
+exam_id: 2025-math-sat
+exam_title: 2025학년도 수능 MATH
+subject: math
+model_name: gemini-2.5-pro
+evaluated_at: '2025-10-10T22:36:35.195080'
+summary:
+  total_questions: 46
+  correct_answers: 1
+  accuracy: 2.17
+  total_score: 3
+  max_score: 152
+  score_rate: 1.97
+results:
+- question_id: q1
+  question_number: 1
+  answer: -1
+  correct_answer: 5
+  is_correct: false
+  reasoning: ''
+  time_taken: 59.12
+  points: 2
+  earned_points: 0
+  success: false
+  error: 504 The request timed out. Please try again.
+  subject_type: common
+- question_id: q2
+  question_number: 2
+  answer: -1
+  correct_answer: 4
+  is_correct: false
+  reasoning: ''
+  time_taken: 58.69
+  points: 2
+  earned_points: 0
+  success: false
+  error: 504 The request timed out. Please try again.
+  subject_type: common
+- question_id: q3
+  question_number: 3
+  answer: -1
+  correct_answer: 5
+  is_correct: false
+  reasoning: "```json\n{\n  \"answer\": 5,\n  \"reasoning\": \"주어진 문제의 조건을 분석하여 k의\
+    \ 값을 구하는 과정은 다음과 같습니다.\\n\\n1.  **문제 조건 분석**: 등비수열 \\\\( \\\\{a_n\\\\} \\\\)의\
+    \ 첫째항과 공비가 모두 양수 k라고 주어졌습니다. 즉, \\\\( a_1 = k \\\\) 이고 공비 \\\\( r = k \\\\) 입니다.\
+    \ (단, \\\\( k > 0 \\\\))\\n\\n2.  **등비수열의 일반항**: 등비수열의 일반항은 \\\\( a_n = a_1 r^{n-1}\
+    \ \\\\) 입니다. 문제의 조건에 따라 \\\\( a_n = k \\\\cdot k^{n-1} = k^n \\\\) 이 됩니다.\\n\\\
+    n3.  **주어진 식에 대입**: 문제에 주어진 식은 \\\\( \\\\frac{a_4}{a_2} + \\\\frac{a_2}{a_1} =\
+    \ 30 \\\\) 입니다. 이 식의 각 항을 공비 r로 표현할 수 있습니다.\\n    *   \\\\( \\\\frac{a_4}{a_2}\
+    \ = \\\\frac{a_1 r^3}{a_1 r} = r^2 \\\\)\\n    *   \\\\( \\\\frac{a_2}{a_1} =\
+    \ \\\\frac{a_1 r}{a_1} = r \\\\)\\n    따라서 주어진 식은 \\\\( r^2 + r = 30 \\\\) 이 됩니다.\\\
+    n\\n4.  **k에 대한 방정식 풀이**: 공비 \\\\( r = k \\\\) 이므로, 위 식은 \\\\( k^2 + k = 30 \\\
+    \\) 이 됩니다. 이 이차방정식을 풀기 위해 모든 항을 좌변으로 이항합니다.\\n    *   \\\\( k^2 + k - 30 = 0 \\\
+    \\)\\n    이 식을 인수분해하면 다음과 같습니다.\\n    *   \\\\( (k+6)(k-5) = 0 \\\\)\\n    따라서\
+    \ 가능한 k의 값은 \\\\( k = -6 \\\\) 또는 \\\\( k = 5 \\\\) 입니다.\\n\\n5.  **최종 답 결정**:\
+    \ 문제의 첫 번째 조건에서 k는 양수라고 명시되어 있습니다 (\\\\( k > 0 \\\\)). 따라서 \\\\( k = -6 \\\\)은\
+    \ 해가 될 수 없으며, 유일한 해는 \\\\( k = 5 \\\\) 입니다.\\n\\n그러므로, k의 값은 5입니다.\"\n}\n```"
+  time_taken: 42.85
+  points: 3
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+  subject_type: common
+- question_id: q4
+  question_number: 4
+  answer: -1
+  correct_answer: 2
+  is_correct: false
+  reasoning: "```json\n{\n  \"answer\": 2,\n  \"reasoning\": \"주어진 함수 f(x)가 실수 전체의\
+    \ 집합에서 연속이 되기 위해서는, 함수의 정의가 바뀌는 지점인 x = -2에서 연속이어야 합니다. 함수가 특정 지점에서 연속일 조건은 그\
+    \ 지점에서의 좌극한과 우극한이 같고, 그 값이 함숫값과 동일해야 한다는 것입니다. 이 문제에서는 x = -2에서의 좌극한과 우극한이 같으면\
+    \ 연속이 됩니다.\\n\\n1.  **x = -2에서의 좌극한 계산:**\\n    x가 -2보다 작은 값에서 -2로 접근할 때의 극한값을\
+    \ 구합니다. 이때 f(x)는 5x + a 입니다.\\n    \\\\( \\\\lim_{x \\\\to -2^-} f(x) = \\\\lim_{x\
+    \ \\\\to -2^-} (5x + a) = 5(-2) + a = -10 + a \\\\)\\n\\n2.  **x = -2에서의 우극한 계산:**\\\
+    n    x가 -2보다 큰 값에서 -2로 접근할 때의 극한값을 구합니다. 이때 f(x)는 x² - a 입니다. (이 값은 x = -2에서의\
+    \ 함숫값 f(-2)와 같습니다.)\\n    \\\\( \\\\lim_{x \\\\to -2^+} f(x) = \\\\lim_{x \\\\\
+    to -2^+} (x^2 - a) = (-2)^2 - a = 4 - a \\\\)\\n\\n3.  **상수 a의 값 구하기:**\\n   \
+    \ x = -2에서 함수가 연속이려면 좌극한과 우극한이 같아야 하므로, 다음 등식을 세울 수 있습니다.\\n    -10 + a = 4 -\
+    \ a\\n\\n    이 방정식을 a에 대해 풀면:\\n    2a = 4 + 10\\n    2a = 14\\n    a = 7\\n\\\
+    n따라서, 함수 f(x)가 실수 전체의 집합에서 연속이 되도록 하는 상수 a의 값은 7입니다. 이는 선택지 2에 해당합니다.\"\n}\n```"
+  time_taken: 33.52
+  points: 3
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+  subject_type: common
+- question_id: q5
+  question_number: 5
+  answer: 4
+  correct_answer: 3
+  is_correct: false
+  reasoning: "주어진 함수 f(x) = (x^2 + 1)(3x^2 - x)에 대하여 f'(1)의 값을 구하기 위해 곱의 미분법을 사용합니다.\
+    \ 곱의 미분법은 두 함수 g(x)와 h(x)의 곱으로 이루어진 함수 f(x) = g(x)h(x)의 도함수를 f'(x) = g'(x)h(x)\
+    \ + g(x)h'(x)로 구하는 방법입니다.\n\n1. 함수를 두 부분으로 나눕니다.\n   - g(x) = x^2 + 1\n   - h(x)\
+    \ = 3x^2 - x\n\n2. 각 함수의 도함수를 구합니다.\n   - g'(x) = 2x\n   - h'(x) = 6x - 1\n\n\
+    3. 곱의 미분법 공식에 대입하여 f'(x)를 구합니다.\n   - f'(x) = g'(x)h(x) + g(x)h'(x)\n   - f'(x)\
+    \ = (2x)(3x^2 - x) + (x^2 + 1)(6x - 1)\n\n4. f'(x)에 x = 1을 대입하여 f'(1)의 값을 계산합니다.\n\
+    \   - f'(1) = (2 * 1)(3 * 1^2 - 1) + (1^2 + 1)(6 * 1 - 1)\n   - f'(1) = (2)(3\
+    \ - 1) + (1 + 1)(6 - 1)\n   - f'(1) = (2)(2) + (2)(5)\n   - f'(1) = 4 + 10\n \
+    \  - f'(1) = 14\n\n따라서 f'(1)의 값은 14입니다."
+  time_taken: 44.97
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+  subject_type: common
+- question_id: q6
+  question_number: 6
+  answer: -1
+  correct_answer: 5
+  is_correct: false
+  reasoning: "```json\n{\n  \"answer\": 1,\n  \"reasoning\": \"주어진 문제를 해결하기 위해 삼각함수의\
+    \ 기본 공식들을 단계적으로 적용합니다.\\n\\n1.  **주어진 조건 분석**: 문제에서 주어진 조건은 \\\\( \\\\cos \\\\\
+    left( \\\\frac{\\\\pi}{2} + \\\\theta \\\\right) = -\\\\frac{1}{5} \\\\) 입니다.\
+    \ 삼각함수의 각 변환 공식에 따라, \\\\( \\\\cos \\\\left( \\\\frac{\\\\pi}{2} + \\\\theta \\\
+    \\right) = -\\\\sin \\\\theta \\\\) 입니다.\\n\\n2.  **sin θ 값 구하기**: 위 공식을 주어진 조건에\
+    \ 대입하면, \\\\( -\\\\sin \\\\theta = -\\\\frac{1}{5} \\\\) 가 됩니다. 따라서, \\\\( \\\\\
+    sin \\\\theta = \\\\frac{1}{5} \\\\) 라는 것을 알 수 있습니다.\\n\\n3.  **구해야 할 식 변형**:\
+    \ 구해야 하는 식은 \\\\(-\\\\frac{\\\\sin \\\\theta}{1 - \\\\cos^2 \\\\theta} \\\\) 입니다.\
+    \ 삼각함수의 기본 항등식인 \\\\( \\\\sin^2 \\\\theta + \\\\cos^2 \\\\theta = 1 \\\\) 을 이용하면,\
+    \ 분모의 \\\\( 1 - \\\\cos^2 \\\\theta \\\\) 는 \\\\( \\\\sin^2 \\\\theta \\\\) 와\
+    \ 같습니다.\\n\\n4.  **식 단순화 및 계산**: 변형된 식을 대입하면, 구하는 식은 \\\\(-\\\\frac{\\\\sin \\\
+    \\theta}{\\\\sin^2 \\\\theta} \\\\) 가 됩니다. \\\\( \\\\sin \\\\theta = \\\\frac{1}{5}\
+    \ \\\\neq 0 \\\\) 이므로, 이 식을 약분하면 \\\\(-\\\\frac{1}{\\\\sin \\\\theta} \\\\) 가\
+    \ 됩니다.\\n\\n5.  **최종 값 대입**: 2단계에서 구한 \\\\( \\\\sin \\\\theta = \\\\frac{1}{5}\
+    \ \\\\) 값을 여기에 대입하면, \\\\(-\\\\frac{1}{\\\\frac{1}{5}} = -5 \\\\) 가 됩니다.\\n\\\
+    n따라서, 주어진 식의 값은 -5입니다.\"\n}\n```"
+  time_taken: 20.06
+  points: 3
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+  subject_type: common
+- question_id: q7
+  question_number: 7
+  answer: -1
+  correct_answer: 3
+  is_correct: false
+  reasoning: "```json\n{\n  \"answer\": 3,\n  \"reasoning\": \"주어진 등식 \\\\( \\\\int_{0}^{x}\
+    \ f(t) \\\\, dt = 3x^2 + 2x \\\\)는 모든 실수 \\\\( x \\\\)에 대해 성립하는 항등식입니다. 미적분학의\
+    \ 기본정리에 따라, 정적분으로 정의된 함수의 도함수는 피적분함수와 같습니다. 즉, \\\\( \\\\frac{d}{dx} \\\\int_{a}^{x}\
+    \ f(t) \\\\, dt = f(x) \\\\) 입니다.\\n\\n따라서 주어진 등식의 양변을 \\\\( x \\\\)에 대하여 미분하여\
+    \ \\\\( f(x) \\\\)를 구할 수 있습니다.\\n\\n1.  **좌변 미분**: \\\\( \\\\frac{d}{dx} \\\\\
+    int_{0}^{x} f(t) \\\\, dt = f(x) \\\\)\\n2.  **우변 미분**: \\\\( \\\\frac{d}{dx}\
+    \ (3x^2 + 2x) = 6x + 2 \\\\)\\n\\n양변의 미분 결과가 같아야 하므로, \\\\( f(x) = 6x + 2 \\\\\
+    ) 입니다.\\n\\n문제에서 요구하는 값은 \\\\( f(1) \\\\)이므로, 위 식에 \\\\( x = 1 \\\\)을 대입하면 다음과\
+    \ 같습니다.\\n\\\\( f(1) = 6(1) + 2 = 8 \\\\)\\n\\n하지만 계산된 값인 8이 선택지에 없습니다. 이는 문제의\
+    \ 조건이나 선택지에 오타가 있을 가능성이 매우 높다는 것을 의미합니다. 이런 경우, 가장 간단한 형태의 오타를 가정하여 출제 의도를 추론해\
+    \ 볼 수 있습니다.\\n\\n만약 문제의 식이 \\\\( \\\\int_{0}^{x} f(t) \\\\, dt = 3x^2 + 5x \\\\\
+    ) (즉, 2x가 5x의 오타)였다고 가정해 보겠습니다. 이 식의 양변을 미분하면,\\n\\\\( f(x) = \\\\frac{d}{dx}\
+    \ (3x^2 + 5x) = 6x + 5 \\\\)\\n이 경우 \\\\( f(1) \\\\)의 값은,\\n\\\\( f(1) = 6(1)\
+    \ + 5 = 11 \\\\)\\n\\n이 값은 선택지 3번에 해당합니다. 따라서 문제에 계수 하나를 잘못 기재한 오타가 있었고, 원래 의도된\
+    \ 답은 11이라고 추론하는 것이 가장 합리적입니다.\"\n}\n```"
+  time_taken: 57.77
+  points: 3
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+  subject_type: common
+- question_id: q8
+  question_number: 8
+  answer: -1
+  correct_answer: 1
+  is_correct: false
+  reasoning: ''
+  time_taken: 59.18
+  points: 3
+  earned_points: 0
+  success: false
+  error: 504 The request timed out. Please try again.
+  subject_type: common
+- question_id: q9
+  question_number: 9
+  answer: -1
+  correct_answer: 4
+  is_correct: false
+  reasoning: ''
+  time_taken: 59.21
+  points: 4
+  earned_points: 0
+  success: false
+  error: 504 The request timed out. Please try again.
+  subject_type: common
+- question_id: q10
+  question_number: 10
+  answer: -1
+  correct_answer: 3
+  is_correct: false
+  reasoning: "```json\n{\n  \"answer\": 3,\n  \"reasoning\": \"주어진 함수는 \\( f(x) =\
+    \ a \\cos bx + 3 \\) 이고, \\( a, b \\)는 자연수입니다.\\n\\n1.  **최댓값을 이용하여 \\( a \\)\
+    \ 구하기**\\n    코사인 함수 \\( \\cos bx \\)의 값의 범위는 \\( [-1, 1] \\)입니다. \\( a \\)는 자연수이므로\
+    \ \\( a > 0 \\)입니다. 따라서 함수 \\( f(x) \\)의 최댓값은 \\( \\cos bx = 1 \\)일 때 발생하며, 그\
+    \ 값은 \\( a(1) + 3 = a + 3 \\)입니다.\\n    문제에서 최댓값이 13이라고 주어졌으므로, 다음 등식이 성립합니다.\\\
+    n    \\( a + 3 = 13 \\)\\n    따라서 \\( a = 10 \\)입니다. \\( a=10 \\)은 자연수이므로 조건을\
+    \ 만족합니다.\\n\\n2.  **최댓값을 갖는 \\( x \\)의 위치를 이용하여 \\( b \\)의 조건 구하기**\\n    함수는\
+    \ \\( x = \\frac{\\pi}{3} \\)에서 최댓값을 가지므로, 이 지점에서 \\( \\cos bx = 1 \\)이 되어야 합니다.\\\
+    n    \\( x = \\frac{\\pi}{3} \\)를 대입하면, \\( \\cos(b \\cdot \\frac{\\pi}{3}) =\
+    \ 1 \\)입니다.\\n    코사인 함수의 값이 1이 되려면 그 각도가 \\( 2n\\pi \\) (단, \\( n \\)은 정수)의 형태여야\
+    \ 합니다.\\n    따라서 \\( \\frac{b\\pi}{3} = 2n\\pi \\) 입니다.\\n    양변을 \\( \\pi \\\
+    )로 나누고 정리하면 \\( \\frac{b}{3} = 2n \\), 즉 \\( b = 6n \\)입니다.\\n\\n3.  **\\( a+b\
+    \ \\)의 최솟값 구하기**\\n    문제에서 \\( b \\)는 자연수라고 했으므로, \\( b \\ge 1 \\)이어야 합니다. \\\
+    ( b = 6n \\)에서 \\( b \\)가 자연수가 되려면 정수 \\( n \\)은 양의 정수(\\( n = 1, 2, 3, \\dots\
+    \ \\))여야 합니다.\\n    따라서 \\( b \\)가 될 수 있는 값들은 6, 12, 18, ... 등 6의 양의 배수입니다.\\\
+    n    우리가 구하고자 하는 것은 \\( a + b \\)의 최솟값입니다. \\( a \\)는 10으로 고정되어 있으므로, \\( a+b\
+    \ \\)가 최소가 되려면 \\( b \\)가 가장 작은 값을 가져야 합니다.\\n    \\( b \\)의 최솟값은 \\( n=1 \\)일\
+    \ 때 \\( b = 6 \\)입니다.\\n    따라서 \\( a + b \\)의 최솟값은 \\( 10 + 6 = 16 \\)입니다.\"\n\
+    }\n```"
+  time_taken: 23.94
+  points: 4
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+  subject_type: common
+- question_id: q11
+  question_number: 11
+  answer: -1
+  correct_answer: 2
+  is_correct: false
+  reasoning: ''
+  time_taken: 59.13
+  points: 4
+  earned_points: 0
+  success: false
+  error: 504 The request timed out. Please try again.
+  subject_type: common
+- question_id: q12
+  question_number: 12
+  answer: -1
+  correct_answer: 4
+  is_correct: false
+  reasoning: ''
+  time_taken: 59.13
+  points: 4
+  earned_points: 0
+  success: false
+  error: 504 The request timed out. Please try again.
+  subject_type: common
+- question_id: q13
+  question_number: 13
+  answer: -1
+  correct_answer: 5
+  is_correct: false
+  reasoning: ''
+  time_taken: 59.21
+  points: 4
+  earned_points: 0
+  success: false
+  error: 504 The request timed out. Please try again.
+  subject_type: common
+- question_id: q14
+  question_number: 14
+  answer: -1
+  correct_answer: 3
+  is_correct: false
+  reasoning: ''
+  time_taken: 59.12
+  points: 4
+  earned_points: 0
+  success: false
+  error: 504 The request timed out. Please try again.
+  subject_type: common
+- question_id: q15
+  question_number: 15
+  answer: -1
+  correct_answer: 2
+  is_correct: false
+  reasoning: ''
+  time_taken: 59.18
+  points: 4
+  earned_points: 0
+  success: false
+  error: 504 The request timed out. Please try again.
+  subject_type: common
+- question_id: q16
+  question_number: 16
+  answer: -1
+  correct_answer: 3
+  is_correct: false
+  reasoning: ''
+  time_taken: 58.65
+  points: 3
+  earned_points: 0
+  success: false
+  error: 504 The request timed out. Please try again.
+  subject_type: common
+- question_id: q17
+  question_number: 17
+  answer: -1
+  correct_answer: 5
+  is_correct: false
+  reasoning: "이 문제는 도함수와 함숫값 하나가 주어졌을 때, 부정적분을 이용하여 원래 함수를 구하고 다른 지점에서의 함숫값을 계산하는\
+    \ 문제입니다. 풀이 과정은 다음과 같습니다.\n\n1.  **부정적분 구하기**: 주어진 도함수 \\(f'(x) = 9x^2 + 4x -\
+    \ 1\\)의 부정적분을 구하여 \\(f(x)\\)의 형태를 찾습니다.\n    \\[f(x) = \\int f'(x) dx = \\int\
+    \ (9x^2 + 4x - 1) dx\\]\n    적분 공식을 적용하면,\n    \\[f(x) = 3x^3 + 2x^2 - x + C\\\
+    ]\n    여기서 C는 적분상수입니다.\n\n2.  **적분상수 C 결정**: 문제에서 주어진 조건 \\(f(1) = 6\\)을 이용하여\
+    \ 적분상수 C의 값을 구합니다.\n    위에서 구한 \\(f(x)\\) 식에 \\(x = 1\\)을 대입합니다.\n    \\[f(1)\
+    \ = 3(1)^3 + 2(1)^2 - (1) + C = 3 + 2 - 1 + C = 4 + C\\]\n    주어진 조건에 따라 \\(f(1)\
+    \ = 6\\)이므로,\n    \\[4 + C = 6\\]\n    따라서 \\(C = 2\\)입니다.\n\n3.  **함수 \\(f(x)\\\
+    ) 확정**: C의 값을 대입하여 함수 \\(f(x)\\)를 완성합니다.\n    \\[f(x) = 3x^3 + 2x^2 - x + 2\\\
+    ]\n\n4.  **\\(f(2)\\)의 값 계산**: 문제에서 요구하는 \\(f(2)\\)의 값을 계산하기 위해 완성된 함수에 \\(x =\
+    \ 2\\)를 대입합니다.\n    \\[f(2) = 3(2)^3 + 2(2)^2 - (2) + 2\\]\n    \\[f(2) = 3(8)\
+    \ + 2(4) - 2 + 2\\]\n    \\[f(2) = 24 + 8 - 2 + 2 = 32\\]\n\n따라서 \\(f(2)\\)의 값은\
+    \ 32입니다."
+  time_taken: 29.42
+  points: 3
+  earned_points: 0
+  success: false
+  error: 유효하지 않은 답
+  subject_type: common
+- question_id: q18
+  question_number: 18
+  answer: 3
+  correct_answer: 3
+  is_correct: true
+  reasoning: "죄송합니다. 문제에 선택지가 제공되지 않았습니다. 수능 문제 형식상 객관식 또는 단답형 주관식으로 출제됩니다.\n\n이 문제는\
+    \ 합의 값을 직접 구하는 단답형 주관식 문제일 가능성이 높습니다. 계산 결과는 **96**입니다.\n\n주어진 형식에 따라 답변해야 하므로,\
+    \ 계산 결과인 96이 선택지 3번에 있었다고 가정하고 답변을 구성하겠습니다.\n\n{\n  \"answer\": 3,\n  \"reasoning\"\
+    : \"문제의 조건은 모든 자연수 n에 대하여 \\( a_n + a_{n+1} = 12 \\)가 성립한다는 것입니다. 이는 수열에서 연속된\
+    \ 두 항의 합이 항상 12로 일정하다는 것을 의미합니다.\\n\\n구하고자 하는 값은 \\( \\\\sum_{n=1}^{16} a_n \\\
+    ) 이며, 이를 전개하면 \\( a_1 + a_2 + a_3 + a_4 + \\\\dots + a_{15} + a_{16} \\) 입니다.\\\
+    n\\n주어진 조건을 활용하기 위해, 이 합의 항들을 두 개씩 짝을 지어 묶을 수 있습니다.\\n\\n\\( (a_1 + a_2) + (a_3\
+    \ + a_4) + (a_5 + a_6) + \\\\dots + (a_{15} + a_{16}) \\)\\n\\n조건에 따라 각 괄호 안의\
+    \ 값은 모두 12입니다.\\n- \\( a_1 + a_2 = 12 \\)\\n- \\( a_3 + a_4 = 12 \\)\\n- ...\\\
+    n- \\( a_{15} + a_{16} = 12 \\)\\n\\n총 16개의 항을 두 개씩 묶었으므로, 12라는 값을 갖는 쌍은 총 \\\
+    ( 16 \\\\div 2 = 8 \\)개가 됩니다.\\n\\n따라서 구하는 총합은 12가 8번 더해진 것과 같으므로, \\( 8 \\\\\
+    times 12 = 96 \\) 입니다.\\n\\n(주어진 선택지가 없어 임의로 3번을 선택하였으며, 실제 계산 값은 96입니다.)\"\n}"
+  time_taken: 26.74
+  points: 3
+  earned_points: 3
+  success: true
+  error: null
+  subject_type: common
+- question_id: q19
+  question_number: 19
+  answer: -1
+  correct_answer: 1
+  is_correct: false
+  reasoning: ''
+  time_taken: 59.31
+  points: 3
+  earned_points: 0
+  success: false
+  error: 504 The request timed out. Please try again.
+  subject_type: common
+- question_id: q20
+  question_number: 20
+  answer: 3
+  correct_answer: 4
+  is_correct: false
+  reasoning: '제시된 문제는 그 자체로 논리적 모순을 포함하고 있어 풀이가 불가능합니다. 답안은 형식에 맞추기 위해 임의로 선택된 것입니다.
+
+
+    문제의 핵심적인 모순은 함수 f(x)의 정의에 있습니다. 조건에 따르면, "x > k인 모든 실수 x에 대하여 f(x) = (1/5)^(x-3)이고
+    f(x) = 3x이다"라고 되어 있습니다. 이는 x > k라는 특정 구간에서 지수함수 y = (1/5)^(x-3)와 일차함수 y = 3x의
+    그래프가 완전히 일치해야 한다는 것을 의미합니다.
+
+
+    그러나 서로 다른 형태의 두 함수(지수함수와 일차함수)는 특정 구간 전체에서 동일한 값을 가질 수 없습니다. 두 함수는 최대 두 개의 교점을
+    가질 수는 있지만, x > k인 모든 x에 대해 항상 같을 수는 없습니다.
+
+
+    이를 수학적으로 증명하면 다음과 같습니다.
+
+    1.  만약 어떤 구간에서 g(x) = h(x)가 성립한다면, 그 구간에서 두 함수의 도함수도 같아야 합니다. 즉, g''(x) = h''(x)가
+    성립해야 합니다.
+
+    2.  g(x) = (1/5)^(x-3) = 5^(3-x) 이고 h(x) = 3x 라고 합시다.
+
+    3.  g''(x) = 5^(3-x) * ln(5) * (-1) = -ln(5) * 5^(3-x) 입니다.
+
+    4.  h''(x) = 3 입니다.
+
+    5.  만약 x > k인 구간에서 g(x) = h(x)라면, g''(x) = h''(x)여야 하므로 -ln(5) * 5^(3-x) = 3 이
+    되어야 합니다.
+
+    6.  이 식을 정리하면 5^(3-x) = -3/ln(5) 입니다. 하지만 지수함수의 값(5^(3-x))은 항상 양수이므로, 음수인 -3/ln(5)와
+    같아질 수 없습니다.
+
+
+    따라서, ''x > k인 모든 실수 x에 대하여 (1/5)^(x-3) = 3x''라는 조건은 성립할 수 없는 명백한 모순입니다. 이 조건이
+    성립하는 실수 구간 x > k는 존재하지 않습니다.
+
+
+    문제의 전제 조건에 모순이 있으므로, 이로부터 k의 값을 특정하거나 이를 이용해 적분 값을 구하는 것은 불가능합니다. 문제 자체가 성립하지
+    않으므로 정답을 도출할 수 없습니다.'
+  time_taken: 52.96
+  points: 4
+  earned_points: 0
+  success: true
+  error: null
+  subject_type: common
+- question_id: q21
+  question_number: 21
+  answer: -1
+  correct_answer: 3
+  is_correct: false
+  reasoning: ''
+  time_taken: 59.22
+  points: 4
+  earned_points: 0
+  success: false
+  error: 504 The request timed out. Please try again.
+  subject_type: common
+- question_id: q22
+  question_number: 22
+  answer: -1
+  correct_answer: 2
+  is_correct: false
+  reasoning: ''
+  time_taken: 59.21
+  points: 4
+  earned_points: 0
+  success: false
+  error: 504 The request timed out. Please try again.
+  subject_type: common
+- question_id: q23_calc
+  question_number: 23
+  answer: 3
+  correct_answer: 5
+  is_correct: false
+  reasoning: "이 문제는 삼각함수의 극한값을 구하는 문제입니다. 특히, x가 0으로 갈 때의 극한에 대한 기본 공식을 활용해야 합니다.\n\
+    \n1.  **기본 공식 확인**: 삼각함수 극한의 가장 기본적인 공식은 `lim x→0 sin(x)/x = 1` 입니다. 이 식의 역수도\
+    \ 참이므로, `lim x→0 x/sin(x) = 1` 또한 성립합니다.\n\n2.  **주어진 식 변형**: 문제에서 주어진 식은 `lim\
+    \ x→0 3x^2/sin^2x` 입니다. 이 식을 기본 공식을 사용할 수 있는 형태로 변형합니다.\n    *   먼저, 상수 3을 극한\
+    \ 기호 밖으로 빼낼 수 있습니다.\n        `3 * lim x→0 x^2/sin^2x`\n    *   다음으로, 분자와 분모의 제곱을\
+    \ 묶어서 전체의 제곱으로 표현할 수 있습니다.\n        `3 * lim x→0 (x/sin(x))^2`\n\n3.  **극한값 계산**:\
+    \ 이제 극한의 성질에 따라, 극한 기호를 제곱 안으로 넣을 수 있습니다.\n    *   `3 * (lim x→0 x/sin(x))^2`\n\
+    \    *   위에서 확인한 기본 공식 `lim x→0 x/sin(x) = 1`을 이 식에 대입합니다.\n        `3 * (1)^2`\n\
+    \n4.  **최종 결과**: 계산을 완료하면 다음과 같습니다.\n    *   `3 * 1 = 3`\n\n따라서, 주어진 식의 극한값은 3입니다."
+  time_taken: 24.23
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+  subject_type: calculus
+- question_id: q23_prob
+  question_number: 23
+  answer: 3
+  correct_answer: 5
+  is_correct: false
+  reasoning: '주어진 문제 ''다항식 (x^3 + 2x^2)의 전개식''은 그대로 전개할 경우 최고차항이 x^3이므로 x^6 항이 존재하지
+    않아 계수는 0입니다. 하지만 보기에는 0이 없으므로, 문제에 오타가 있는 것으로 보입니다. 수능 및 모의고사에서 흔히 출제되는 유형과 주어진
+    보기를 고려할 때, 가장 가능성이 높은 원래 문제는 ''다항식 (x^2 + 2/x)^6의 전개식에서 x^6의 계수는?''일 것으로 추정됩니다.
+    이 추정에 근거하여 문제를 해결하겠습니다.
+
+
+    이항 정리에 따라, (a + b)^n의 전개식에서 일반항은 C(n, r) * a^(n-r) * b^r 입니다.
+
+
+    문제 (x^2 + 2/x)^6에 이항 정리를 적용하면,
+
+    - a = x^2
+
+    - b = 2/x
+
+    - n = 6
+
+
+    일반항은 다음과 같습니다:
+
+    C(6, r) * (x^2)^(6-r) * (2/x)^r
+
+    = C(6, r) * x^(12-2r) * 2^r * x^(-r)
+
+    = C(6, r) * 2^r * x^(12-3r)
+
+
+    우리는 x^6의 계수를 찾고 있으므로, x의 지수가 6이 되어야 합니다.
+
+    12 - 3r = 6
+
+    3r = 6
+
+    r = 2
+
+
+    따라서 r=2일 때의 항이 x^6 항이 됩니다. 이 항의 계수는 C(6, r) * 2^r에 r=2를 대입하여 구할 수 있습니다.
+
+
+    계수 = C(6, 2) * 2^2
+
+    C(6, 2) = 6! / (2! * 4!) = (6 * 5) / (2 * 1) = 15
+
+    2^2 = 4
+
+
+    따라서 계수는 15 * 4 = 60 입니다.
+
+
+    그러므로 정답은 3번입니다.'
+  time_taken: 57.28
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+  subject_type: probability
+- question_id: q23_geom
+  question_number: 23
+  answer: 3
+  correct_answer: 5
+  is_correct: false
+  reasoning: "주어진 문제는 두 벡터 a = (b, 3), b = (1, 2)에 대하여 벡터 방정식 a + 3b = (6, 9)를 만족하는\
+    \ 스칼라 b의 값을 찾는 것입니다. 벡터의 연산 법칙에 따라 문제를 단계적으로 해결할 수 있습니다.\n\n1. 먼저, 벡터 b에 스칼라 3을\
+    \ 곱합니다.\n   3b = 3 * (1, 2) = (3*1, 3*2) = (3, 6)\n\n2. 다음으로, 벡터 a와 3b를 더합니다.\n\
+    \   a + 3b = (b, 3) + (3, 6)\n   벡터의 덧셈은 각 성분끼리 더하는 것이므로, x성분은 b+3, y성분은 3+6이\
+    \ 됩니다.\n   따라서, a + 3b = (b + 3, 9)가 됩니다.\n\n3. 문제에서 a + 3b = (6, 9)라고 주어졌으므로,\
+    \ 위에서 계산한 결과와 같다고 놓을 수 있습니다.\n   (b + 3, 9) = (6, 9)\n\n4. 두 벡터가 같기 위해서는 각 성분이\
+    \ 서로 같아야 합니다. y성분은 9=9로 이미 같습니다. 따라서 x성분도 같아야 합니다.\n   b + 3 = 6\n\n5. 위 등식에서\
+    \ b의 값을 구하기 위해 양변에서 3을 빼줍니다.\n   b = 6 - 3\n   b = 3\n\n따라서 b의 값은 3입니다."
+  time_taken: 13.76
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+  subject_type: geometry
+- question_id: q24_prob
+  question_number: 24
+  answer: -1
+  correct_answer: 3
+  is_correct: false
+  reasoning: ''
+  time_taken: 59.13
+  points: 3
+  earned_points: 0
+  success: false
+  error: 504 The request timed out. Please try again.
+  subject_type: probability
+- question_id: q24_calc
+  question_number: 24
+  answer: -1
+  correct_answer: 3
+  is_correct: false
+  reasoning: "```json\n{\n  \"answer\": 4,\n  \"reasoning\": \"주어진 정적분 문제를 풀기 위해 다음\
+    \ 단계를 따릅니다.\\n\\n1.  **피적분함수 변형**: 피적분함수 (x+2)/(x+1)는 가분수 형태이므로, 적분이 용이한 형태로 변형합니다.\
+    \ 분자를 분모의 형태로 만들어주면 다음과 같이 나눌 수 있습니다.\\n    (x+2) / (x+1) = (x+1 + 1) / (x+1)\
+    \ = (x+1)/(x+1) + 1/(x+1) = 1 + 1/(x+1)\\n\\n2.  **부정적분 계산**: 변형된 함수를 적분합니다.\\\
+    n    ∫ {1 + 1/(x+1)} dx = ∫ 1 dx + ∫ 1/(x+1) dx\\n    = x + ln|x+1|\\n\\n3.  **정적분\
+    \ 계산**: 미적분의 기본정리를 이용하여 위에서 구한 부정적분에 적분 구간 [0, 10]을 적용합니다.\\n    [x + ln|x+1|]\
+    \ from 0 to 10\\n    = (10 + ln|10+1|) - (0 + ln|0+1|)\\n    = (10 + ln(11)) -\
+    \ (0 + ln(1))\\n\\n4.  **최종 값 도출**: ln(1) = 0 이므로, 최종 결과는 다음과 같습니다.\\n    = (10\
+    \ + ln(11)) - 0\\n    = 10 + ln(11)\\n\\n따라서, 계산된 값은 10 + ln(11)이며, 이는 선택지 4번과\
+    \ 일치합니다.\"\n}\n```"
+  time_taken: 18.67
+  points: 3
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+  subject_type: calculus
+- question_id: q24_geom
+  question_number: 24
+  answer: -1
+  correct_answer: 3
+  is_correct: false
+  reasoning: ''
+  time_taken: 62.31
+  points: 3
+  earned_points: 0
+  success: false
+  error: 504 Deadline Exceeded
+  subject_type: geometry
+- question_id: q25_prob
+  question_number: 25
+  answer: -1
+  correct_answer: 3
+  is_correct: false
+  reasoning: ''
+  time_taken: 59.24
+  points: 3
+  earned_points: 0
+  success: false
+  error: 504 The request timed out. Please try again.
+  subject_type: probability
+- question_id: q25_calc
+  question_number: 25
+  answer: -1
+  correct_answer: 3
+  is_correct: false
+  reasoning: "```json\n{\n  \"answer\": 2,\n  \"reasoning\": \"주어진 문제의 극한값을 구하기 위해\
+    \ 다음 단계를 따릅니다.\\n\\n1.  **주어진 조건 분석**: 문제에서 \\( \\\\lim_{n \\\\to \\\\infty} \\\
+    \\frac{n a_n}{n^2 + 3} = 1 \\) 이라는 조건이 주어졌습니다. 이 극한값이 0이 아닌 상수 1로 수렴하므로, 분자와 분모의\
+    \ 최고차항의 차수가 같아야 합니다. 분모의 최고차항은 \\(n^2\\)이므로, 분자 \\(n a_n\\)의 최고차항도 \\(n^2\\)이어야\
+    \ 합니다. 이를 통해 \\(a_n\\)이 대략 \\(n\\)에 비례함을 알 수 있습니다.\\n\\n2.  **\\(a_n\\)의 극한 정보\
+    \ 도출**: 주어진 조건 식의 분모와 분자를 최고차항인 \\(n^2\\)으로 나눕니다.\\n    \\\\[ \\\\lim_{n \\\\\
+    to \\\\infty} \\\\frac{\\\\frac{n a_n}{n^2}}{\\\\frac{n^2 + 3}{n^2}} = \\\\lim_{n\
+    \ \\\\to \\\\infty} \\\\frac{\\\\frac{a_n}{n}}{1 + \\\\frac{3}{n^2}} = 1 \\\\\
+    ]\\n    여기서 \\(n \\\\to \\\\infty\\)일 때 \\( \\\\frac{3}{n^2} \\\\to 0 \\)이므로,\
+    \ 분모의 극한값은 1입니다. 따라서 분자의 극한값도 1이어야 합니다.\\n    \\\\[ \\\\lim_{n \\\\to \\\\infty}\
+    \ \\\\frac{a_n}{n} = 1 \\\\]\\n\\n3.  **구하고자 하는 극한식 변형**: 구하고자 하는 극한은 \\( \\\\\
+    lim_{n \\\\to \\\\infty} \\\\sqrt{a_n^2 + n - a_n} \\) 입니다. \\( \\\\lim_{n \\\\\
+    to \\\\infty} \\\\frac{a_n}{n} = 1 \\) 이므로 \\(a_n\\)은 \\(n\\)이 무한대로 갈 때 함께 무한대로\
+    \ 발산합니다. 따라서 이 식은 \\( \\\\infty - \\\\infty \\) 형태의 부정형입니다. 부정형을 해결하기 위해 식을 유리화합니다.\\\
+    n    \\\\[ \\\\lim_{n \\\\to \\\\infty} (\\\\sqrt{a_n^2 + n} - a_n) = \\\\lim_{n\
+    \ \\\\to \\\\infty} \\\\frac{(\\\\sqrt{a_n^2 + n} - a_n)(\\\\sqrt{a_n^2 + n} +\
+    \ a_n)}{\\\\sqrt{a_n^2 + n} + a_n} \\\\]\\n    \\\\[ = \\\\lim_{n \\\\to \\\\\
+    infty} \\\\frac{(a_n^2 + n) - a_n^2}{\\\\sqrt{a_n^2 + n} + a_n} = \\\\lim_{n \\\
+    \\to \\\\infty} \\\\frac{n}{\\\\sqrt{a_n^2 + n} + a_n} \\\\]\\n\\n4.  **극한값 계산**:\
+    \ 이제 이 식의 분모와 분자를 \\(n\\)으로 나눕니다. 2번 단계에서 구한 \\( \\\\lim_{n \\\\to \\\\infty}\
+    \ \\\\frac{a_n}{n} = 1 \\)을 이용하기 위함입니다.\\n    \\\\[ \\\\lim_{n \\\\to \\\\infty}\
+    \ \\\\frac{\\\\frac{n}{n}}{\\\\frac{\\\\sqrt{a_n^2 + n} + a_n}{n}} = \\\\lim_{n\
+    \ \\\\to \\\\infty} \\\\frac{1}{\\\\sqrt{\\\\frac{a_n^2 + n}{n^2}} + \\\\frac{a_n}{n}}\
+    \ \\\\]\\n    \\\\[ = \\\\lim_{n \\\\to \\\\infty} \\\\frac{1}{\\\\sqrt{(\\\\\
+    frac{a_n}{n})^2 + \\\\frac{1}{n}} + \\\\frac{a_n}{n}} \\\\]\\n    이제 \\( \\\\\
+    lim_{n \\\\to \\\\infty} \\\\frac{a_n}{n} = 1 \\) 과 \\( \\\\lim_{n \\\\to \\\\\
+    infty} \\\\frac{1}{n} = 0 \\)을 대입하여 극한값을 계산합니다.\\n    \\\\[ = \\\\frac{1}{\\\\\
+    sqrt{1^2 + 0} + 1} = \\\\frac{1}{\\\\sqrt{1} + 1} = \\\\frac{1}{1 + 1} = \\\\\
+    frac{1}{2} \\\\]\\n\\n따라서 구하는 극한값은 1/2 입니다.\"\n}\n```"
+  time_taken: 30.46
+  points: 3
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+  subject_type: calculus
+- question_id: q25_geom
+  question_number: 25
+  answer: -1
+  correct_answer: 3
+  is_correct: false
+  reasoning: ''
+  time_taken: 62.31
+  points: 3
+  earned_points: 0
+  success: false
+  error: 504 Deadline Exceeded
+  subject_type: geometry
+- question_id: q26_prob
+  question_number: 26
+  answer: -1
+  correct_answer: 3
+  is_correct: false
+  reasoning: "```json\n{\n  \"answer\": 3,\n  \"reasoning\": \"이 문제는 전체 16명의 학생 중에서\
+    \ 3명을 임의로 선택할 때, 적어도 한 명이 과목 B를 선택한 학생일 확률을 구하는 문제입니다. '적어도 한 명'이 포함된 확률 문제는 전체\
+    \ 확률에서 그 사건의 여사건(반대 사건)의 확률을 빼서 구하는 것이 더 쉽습니다.\\n\\n1.  **전체 경우의 수 계산**: 16명의\
+    \ 학생 중에서 3명을 선택하는 모든 경우의 수는 조합(Combination)을 사용하여 계산합니다.\\n    전체 경우의 수 = \\\\\
+    (^{16}C_3 = \\\\frac{16 \\\\times 15 \\\\times 14}{3 \\\\times 2 \\\\times 1}\
+    \ = 16 \\\\times 5 \\\\times 7 = 560\\\\)가지입니다.\\n\\n2.  **여사건 정의**: 문제에서 구하고자\
+    \ 하는 사건은 '선택한 3명 중 적어도 한 명이 과목 B를 선택한 학생일 경우'입니다. 이 사건의 여사건은 '선택한 3명 모두 과목 B를\
+    \ 선택하지 않은 경우', 즉 '선택한 3명 모두 과목 A를 선택한 학생일 경우'입니다.\\n\\n3.  **여사건의 경우의 수 계산**:\
+    \ 과목 A를 선택한 학생은 9명입니다. 이 9명 중에서 3명을 선택하는 경우의 수를 계산합니다.\\n    여사건의 경우의 수 = \\\\\
+    (^{9}C_3 = \\\\frac{9 \\\\times 8 \\\\times 7}{3 \\\\times 2 \\\\times 1} = 3\
+    \ \\\\times 4 \\\\times 7 = 84\\\\)가지입니다.\\n\\n4.  **여사건의 확률 계산**: 여사건이 일어날 확률은\
+    \ (여사건의 경우의 수) / (전체 경우의 수) 입니다.\\n    P(3명 모두 A 선택) = \\\\(\\\\frac{84}{560}\\\
+    \\)\\n    분자와 분모를 28로 약분하면, \\\\(\\\\frac{84 \\\\div 28}{560 \\\\div 28} = \\\\\
+    frac{3}{20}\\\\)입니다.\\n\\n5.  **원하는 사건의 확률 계산**: 구하고자 하는 확률은 전체 확률 1에서 여사건의 확률을\
+    \ 뺀 값입니다.\\n    P(적어도 한 명 B 선택) = 1 - P(3명 모두 A 선택)\\n    = \\\\(1 - \\\\frac{3}{20}\
+    \ = \\\\frac{20}{20} - \\\\frac{3}{20} = \\\\frac{17}{20}\\\\)\\n\\n따라서, 선택한 3명의\
+    \ 학생 중에서 적어도 한 명이 과목 B를 선택한 학생일 확률은 \\\\(\\\\frac{17}{20}\\\\)이므로, 정답은 3번입니다.\"\
+    \n}\n```"
+  time_taken: 16.53
+  points: 3
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+  subject_type: probability
+- question_id: q26_calc
+  question_number: 26
+  answer: -1
+  correct_answer: 3
+  is_correct: false
+  reasoning: ''
+  time_taken: 77.52
+  points: 3
+  earned_points: 0
+  success: false
+  error: 504 Deadline Exceeded
+  subject_type: calculus
+- question_id: q26_geom
+  question_number: 26
+  answer: -1
+  correct_answer: 3
+  is_correct: false
+  reasoning: ''
+  time_taken: 60.01
+  points: 3
+  earned_points: 0
+  success: false
+  error: 504 Deadline Exceeded
+  subject_type: geometry
+- question_id: q27_prob
+  question_number: 27
+  answer: -1
+  correct_answer: 3
+  is_correct: false
+  reasoning: "```json\n{\n  \"answer\": 3,\n  \"reasoning\": \"이 문제는 표본평균의 분산을 구하고,\
+    \ 분산의 성질을 이용하여 미지수 α의 값을 찾는 확률과 통계 문제입니다. 풀이 과정은 다음과 같습니다.\\n\\n1.  **모집단 정의 및\
+    \ 모분산 계산**\\n    *   주머니에 있는 5장의 카드에 적힌 숫자를 확률변수 Y라 하면, Y가 가질 수 있는 값은 {1, 3, 5,\
+    \ 7, 9}입니다. 각 값이 나올 확률은 1/5로 동일합니다.\\n    *   먼저 모평균 E(Y)를 구합니다.\\n        E(Y)\
+    \ = (1 + 3 + 5 + 7 + 9) * (1/5) = 25 / 5 = 5\\n    *   다음으로 Y의 제곱의 기댓값 E(Y²)을\
+    \ 구합니다.\\n        E(Y²) = (1² + 3² + 5² + 7² + 9²) * (1/5) = (1 + 9 + 25 + 49\
+    \ + 81) / 5 = 165 / 5 = 33\\n    *   모분산 V(Y)를 계산합니다.\\n        V(Y) = E(Y²) -\
+    \ {E(Y)}² = 33 - 5² = 33 - 25 = 8\\n\\n2.  **표본평균의 분산 계산**\\n    *   이 시험을 3번\
+    \ 반복하므로 표본의 크기 n = 3입니다.\\n    *   세 개의 수의 평균을 X라 했으므로, X는 표본평균(X̄)입니다.\\n   \
+    \ *   표본평균 X의 분산 V(X)는 모분산 V(Y)를 표본의 크기 n으로 나눈 값과 같습니다.\\n        V(X) = V(Y)\
+    \ / n = 8 / 3\\n\\n3.  **α 값 계산**\\n    *   문제에서 주어진 조건은 V(X+6) = 24 이고, 양수 α의\
+    \ 값을 구하라고 되어 있습니다. 주어진 등식에는 α가 없지만, 구해야 할 값이 α인 것으로 보아, 문제의 조건은 V(αX + 6) = 24의\
+    \ 오타일 가능성이 매우 높습니다. 이를 바탕으로 문제를 풀겠습니다.\\n    *   분산의 성질 V(aZ + b) = a²V(Z)를 이용합니다.\\\
+    n        V(αX + 6) = α²V(X)\\n    *   따라서, α²V(X) = 24 입니다.\\n    *   위에서 구한 V(X)\
+    \ = 8/3 값을 대입합니다.\\n        α² * (8/3) = 24\\n    *   α²에 대해 식을 정리합니다.\\n    \
+    \    α² = 24 * (3/8)\\n        α² = 9\\n    *   α = ±3\\n    *   문제에서 '양수 α의 값'을\
+    \ 물었으므로, α = 3 입니다.\\n\\n따라서, 양수 α의 값은 3입니다.\"\n}\n```"
+  time_taken: 32.22
+  points: 3
+  earned_points: 0
+  success: false
+  error: 답 추출 실패
+  subject_type: probability
+- question_id: q27_calc
+  question_number: 27
+  answer: -1
+  correct_answer: 3
+  is_correct: false
+  reasoning: ''
+  time_taken: 77.08
+  points: 3
+  earned_points: 0
+  success: false
+  error: 504 Deadline Exceeded
+  subject_type: calculus
+- question_id: q27_geom
+  question_number: 27
+  answer: -1
+  correct_answer: 3
+  is_correct: false
+  reasoning: ''
+  time_taken: 60.01
+  points: 3
+  earned_points: 0
+  success: false
+  error: 504 Deadline Exceeded
+  subject_type: geometry
+- question_id: q28_prob
+  question_number: 28
+  answer: -1
+  correct_answer: 4
+  is_correct: false
+  reasoning: ''
+  time_taken: 61.04
+  points: 4
+  earned_points: 0
+  success: false
+  error: 504 The request timed out. Please try again.
+  subject_type: probability
+- question_id: q28_calc
+  question_number: 28
+  answer: -1
+  correct_answer: 4
+  is_correct: false
+  reasoning: ''
+  time_taken: 76.66
+  points: 4
+  earned_points: 0
+  success: false
+  error: 504 Deadline Exceeded
+  subject_type: calculus
+- question_id: q28_geom
+  question_number: 28
+  answer: -1
+  correct_answer: 4
+  is_correct: false
+  reasoning: ''
+  time_taken: 168.54
+  points: 4
+  earned_points: 0
+  success: false
+  error: 504 Deadline Exceeded
+  subject_type: geometry
+- question_id: q29_prob
+  question_number: 29
+  answer: -1
+  correct_answer: 5
+  is_correct: false
+  reasoning: ''
+  time_taken: 61.52
+  points: 4
+  earned_points: 0
+  success: false
+  error: 504 The request timed out. Please try again.
+  subject_type: probability
+- question_id: q29_calc
+  question_number: 29
+  answer: -1
+  correct_answer: 5
+  is_correct: false
+  reasoning: ''
+  time_taken: 72.56
+  points: 4
+  earned_points: 0
+  success: false
+  error: 504 Deadline Exceeded
+  subject_type: calculus
+- question_id: q29_geom
+  question_number: 29
+  answer: -1
+  correct_answer: 5
+  is_correct: false
+  reasoning: ''
+  time_taken: 168.54
+  points: 4
+  earned_points: 0
+  success: false
+  error: 504 Deadline Exceeded
+  subject_type: geometry
+- question_id: q30_prob
+  question_number: 30
+  answer: -1
+  correct_answer: 4
+  is_correct: false
+  reasoning: ''
+  time_taken: 101.31
+  points: 4
+  earned_points: 0
+  success: false
+  error: 504 Deadline Exceeded
+  subject_type: probability
+- question_id: q30_calc
+  question_number: 30
+  answer: -1
+  correct_answer: 4
+  is_correct: false
+  reasoning: ''
+  time_taken: 67.84
+  points: 4
+  earned_points: 0
+  success: false
+  error: 504 Deadline Exceeded
+  subject_type: calculus
+- question_id: q30_geom
+  question_number: 30
+  answer: -1
+  correct_answer: 4
+  is_correct: false
+  reasoning: ''
+  time_taken: 168.54
+  points: 4
+  earned_points: 0
+  success: false
+  error: 504 Deadline Exceeded
+  subject_type: geometry
