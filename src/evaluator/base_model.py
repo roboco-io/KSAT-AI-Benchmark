@@ -95,7 +95,7 @@ class BaseModel(ABC):
 
         Args:
             question_text: 문제 텍스트
-            choices: 선택지 리스트
+            choices: 선택지 리스트 (주관식의 경우 비어있음)
             passage: 지문
 
         Returns:
@@ -110,18 +110,29 @@ class BaseModel(ABC):
         # 문제
         prompt += f"문제: {question_text}\n\n"
 
-        # 질문 유형 분석 추가
-        question_type = self._analyze_question_type(question_text)
-        prompt += f"⚠️ 주의: {question_type}\n\n"
+        # 주관식 vs 객관식 판별
+        is_subjective = not choices or len(choices) == 0
 
-        # 선택지
-        prompt += "선택지:\n"
-        for i, choice in enumerate(choices, 1):
-            prompt += f"{i}. {choice}\n"
+        if is_subjective:
+            # 주관식 문제
+            prompt += "⚠️ 주의: 이 문제는 **주관식 문제**입니다.\n"
+            prompt += "- answer 필드에 계산한 숫자 답을 입력하세요 (예: 32, 5.5, -10 등)\n"
+            prompt += "- 답이 정수가 아닌 경우 소수점 형태로 입력하세요\n"
+            prompt += "- 답이 없거나 특수한 경우 reasoning에만 설명하고 answer는 0으로 입력하세요\n\n"
+        else:
+            # 객관식 문제
+            # 질문 유형 분석 추가
+            question_type = self._analyze_question_type(question_text)
+            prompt += f"⚠️ 주의: {question_type}\n\n"
+
+            # 선택지
+            prompt += "선택지:\n"
+            for i, choice in enumerate(choices, 1):
+                prompt += f"{i}. {choice}\n"
 
         return prompt
     
-    def _extract_json_from_text(self, text: str) -> Optional[str]:
+    def _extract_json_from_text(self, text: str, is_subjective: bool = False) -> Optional[str]:
         """텍스트에서 JSON 부분만 추출 (중첩된 중괄호, 마크다운 처리)
 
         Claude와 같은 모델들이 JSON 앞뒤에 추가 텍스트나 마크다운을 포함하는 경우가 많아서,
@@ -129,6 +140,7 @@ class BaseModel(ABC):
 
         Args:
             text: 응답 텍스트
+            is_subjective: 주관식 문제 여부 (True면 answer 검증 완화)
 
         Returns:
             JSON 문자열 또는 None
@@ -173,9 +185,15 @@ class BaseModel(ABC):
                 try:
                     parsed = json.loads(json_str)
                     answer = parsed.get('answer')
-                    # answer가 1-5 사이의 정수인지 확인
-                    if isinstance(answer, int) and 1 <= answer <= 5:
-                        return json_str
+
+                    if is_subjective:
+                        # 주관식: answer가 숫자(정수/실수) 또는 문자열이면 OK
+                        if isinstance(answer, (int, float, str)):
+                            return json_str
+                    else:
+                        # 객관식: answer가 1-5 사이의 정수여야 함
+                        if isinstance(answer, int) and 1 <= answer <= 5:
+                            return json_str
                 except (json.JSONDecodeError, ValueError):
                     pass
 

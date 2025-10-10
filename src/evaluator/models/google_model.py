@@ -26,9 +26,12 @@ class GoogleModel(BaseModel):
         **kwargs
     ) -> ModelResponse:
         """Gemini로 문제 풀이"""
-        
+
         start_time = time.time()
-        
+
+        # 주관식 여부 확인
+        is_subjective = kwargs.get('is_subjective', False)
+
         try:
             # 개선된 프롬프트
             system_instruction = """당신은 대한민국 수능 문제를 푸는 AI입니다.
@@ -84,36 +87,57 @@ class GoogleModel(BaseModel):
             if json_match:
                 try:
                     result = json.loads(json_match.group())
-                    answer = int(result.get('answer', -1))
+                    answer_raw = result.get('answer', -1)
                     reasoning = result.get('reasoning', '')
-                    
-                    if not (1 <= answer <= 5):
-                        answer = self._extract_answer_from_text(content) or -1
-                    
+
+                    # 주관식과 객관식 답 처리 분리
+                    if is_subjective:
+                        # 주관식: answer를 그대로 받아들임 (int, float, str 모두 허용)
+                        answer = answer_raw
+                    else:
+                        # 객관식: 1-5 범위 검증
+                        answer = int(answer_raw) if isinstance(answer_raw, (int, float, str)) else -1
+
+                        if not (1 <= answer <= 5):
+                            answer = self._extract_answer_from_text(content) or -1
+
                     return ModelResponse(
                         answer=answer,
                         reasoning=reasoning or content,
                         time_taken=time_taken,
                         raw_response=content,
                         model_name=self.model_name,
-                        success=(1 <= answer <= 5),
-                        error=None if (1 <= answer <= 5) else "유효하지 않은 답"
+                        success=True if is_subjective else (1 <= answer <= 5),
+                        error=None if (is_subjective or (1 <= answer <= 5)) else "유효하지 않은 답"
                     )
                 except (json.JSONDecodeError, ValueError):
                     pass
-            
-            # JSON 파싱 실패시 텍스트에서 추출
-            answer = self._extract_answer_from_text(content) or -1
-            
-            return ModelResponse(
-                answer=answer,
-                reasoning=content,
-                time_taken=time_taken,
-                raw_response=content,
-                model_name=self.model_name,
-                success=(1 <= answer <= 5),
-                error=None if (1 <= answer <= 5) else "답 추출 실패"
-            )
+
+            # JSON 파싱 실패시 텍스트에서 추출 (객관식만)
+            if is_subjective:
+                # 주관식: JSON 파싱에 실패했으므로 실패로 처리
+                return ModelResponse(
+                    answer=-1,
+                    reasoning=content,
+                    time_taken=time_taken,
+                    raw_response=content,
+                    model_name=self.model_name,
+                    success=False,
+                    error="주관식 답변 파싱 실패"
+                )
+            else:
+                # 객관식: 텍스트에서 답 추출
+                answer = self._extract_answer_from_text(content) or -1
+
+                return ModelResponse(
+                    answer=answer,
+                    reasoning=content,
+                    time_taken=time_taken,
+                    raw_response=content,
+                    model_name=self.model_name,
+                    success=(1 <= answer <= 5),
+                    error=None if (1 <= answer <= 5) else "답 추출 실패"
+                )
         
         except Exception as e:
             time_taken = time.time() - start_time

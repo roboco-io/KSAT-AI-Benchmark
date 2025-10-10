@@ -75,13 +75,16 @@ class OpenAIModel(BaseModel):
         **kwargs
     ) -> ModelResponse:
         """GPT로 문제 풀이"""
-        
+
         start_time = time.time()
-        
+
+        # 주관식 여부 확인
+        is_subjective = kwargs.get('is_subjective', False)
+
         try:
             # GPT-5 전용 프롬프트와 설정
             is_gpt5 = "gpt-5" in self.model_name.lower()
-            
+
             if is_gpt5:
                 # GPT-5: CoT 강화 프롬프트 (구조화된 분석)
                 system_prompt = """당신은 대한민국 수능 국어 문제를 푸는 AI입니다.
@@ -240,33 +243,41 @@ class OpenAIModel(BaseModel):
 
             try:
                 result = json.loads(content)
-                answer = int(result.get('answer', -1))
+                answer_raw = result.get('answer', -1)
                 reasoning = result.get('reasoning', '')
 
-                # 답 검증
-                if not (1 <= answer <= 5):
-                    # 텍스트에서 답 추출 시도
-                    answer = self._extract_answer_from_text(content) or -1
+                # 주관식과 객관식 답 처리 분리
+                if is_subjective:
+                    # 주관식: answer를 그대로 받아들임 (int, float, str 모두 허용)
+                    answer = answer_raw
+                else:
+                    # 객관식: 1-5 범위 검증
+                    answer = int(answer_raw) if isinstance(answer_raw, (int, float, str)) else -1
 
-                if not (1 <= answer <= 5):
-                    return ModelResponse(
-                        answer=-1,
-                        reasoning=reasoning or content,
-                        time_taken=time_taken,
-                        raw_response=content,
-                        model_name=self.model_name,
-                        success=False,
-                        error="유효하지 않은 답 번호"
-                    )
+                    # 답 검증 (객관식만)
+                    if not (1 <= answer <= 5):
+                        # 텍스트에서 답 추출 시도
+                        answer = self._extract_answer_from_text(content) or -1
 
-                # GPT-5인 경우 reasoning-answer 일치 검증
-                if is_gpt5:
-                    validated_answer, warning = self._validate_reasoning_answer_consistency(
-                        question_text, reasoning, answer
-                    )
-                    if warning:
-                        # 경고를 reasoning에 추가
-                        reasoning = f"{warning}\n\n{reasoning}"
+                    if not (1 <= answer <= 5):
+                        return ModelResponse(
+                            answer=-1,
+                            reasoning=reasoning or content,
+                            time_taken=time_taken,
+                            raw_response=content,
+                            model_name=self.model_name,
+                            success=False,
+                            error="유효하지 않은 답 번호"
+                        )
+
+                    # GPT-5인 경우 reasoning-answer 일치 검증 (객관식만)
+                    if is_gpt5:
+                        validated_answer, warning = self._validate_reasoning_answer_consistency(
+                            question_text, reasoning, answer
+                        )
+                        if warning:
+                            # 경고를 reasoning에 추가
+                            reasoning = f"{warning}\n\n{reasoning}"
 
                 return ModelResponse(
                     answer=answer,

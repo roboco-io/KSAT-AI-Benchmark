@@ -250,6 +250,9 @@ class Evaluator:
         correct_answer = question.get('correct_answer')
         points = question.get('points', 2)
 
+        # 주관식 vs 객관식 판별
+        is_subjective = not choices or len(choices) == 0
+
         # 듣기 문제 스킵 (question_text에 실제 텍스트가 없는 경우)
         if not q_text or q_text.strip() == '' or '듣고' in q_text:
             result = {
@@ -276,11 +279,28 @@ class Evaluator:
         response = model.solve_question(
             question_text=q_text,
             choices=choices,
-            passage=passage
+            passage=passage,
+            is_subjective=is_subjective  # 주관식 여부 전달
         )
 
         # 정답 확인
-        is_correct = (response.answer == correct_answer) if correct_answer else None
+        if is_subjective:
+            # 주관식: answer를 숫자로 변환하여 비교
+            try:
+                answer_num = float(response.answer) if isinstance(response.answer, (int, float, str)) else None
+                correct_num = float(correct_answer) if correct_answer is not None else None
+
+                # 소수점 이하 자릿수 고려하여 비교 (오차 허용: 0.01)
+                if answer_num is not None and correct_num is not None:
+                    is_correct = abs(answer_num - correct_num) < 0.01
+                else:
+                    is_correct = False
+            except (ValueError, TypeError):
+                # 숫자로 변환 불가능하면 오답 처리
+                is_correct = False
+        else:
+            # 객관식: 기존 로직 (1-5 비교)
+            is_correct = (response.answer == correct_answer) if correct_answer else None
 
         # 결과 저장
         result = {

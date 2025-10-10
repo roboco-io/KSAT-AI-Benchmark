@@ -25,9 +25,12 @@ class AnthropicModel(BaseModel):
         **kwargs
     ) -> ModelResponse:
         """Claude로 문제 풀이"""
-        
+
         start_time = time.time()
-        
+
+        # 주관식 여부 확인
+        is_subjective = kwargs.get('is_subjective', False)
+
         try:
             # 개선된 프롬프트
             system_prompt = """당신은 대한민국 수능 문제를 푸는 AI입니다.
@@ -74,11 +77,19 @@ class AnthropicModel(BaseModel):
             # 1차 시도: 그대로 JSON 파싱
             try:
                 result = json.loads(content)
-                answer = int(result.get('answer', -1))
+                answer_raw = result.get('answer', -1)
                 reasoning = result.get('reasoning', '')
 
-                if not (1 <= answer <= 5):
-                    answer = self._extract_answer_from_text(content) or -1
+                # 주관식과 객관식 답 처리 분리
+                if is_subjective:
+                    # 주관식: answer를 그대로 받아들임 (int, float, str 모두 허용)
+                    answer = answer_raw
+                else:
+                    # 객관식: 1-5 범위 검증
+                    answer = int(answer_raw) if isinstance(answer_raw, (int, float, str)) else -1
+
+                    if not (1 <= answer <= 5):
+                        answer = self._extract_answer_from_text(content) or -1
 
                 return ModelResponse(
                     answer=answer,
@@ -86,22 +97,30 @@ class AnthropicModel(BaseModel):
                     time_taken=time_taken,
                     raw_response=content,
                     model_name=self.model_name,
-                    success=(1 <= answer <= 5),
-                    error=None if (1 <= answer <= 5) else "유효하지 않은 답"
+                    success=True if is_subjective else (1 <= answer <= 5),
+                    error=None if (is_subjective or (1 <= answer <= 5)) else "유효하지 않은 답"
                 )
             except (json.JSONDecodeError, ValueError):
                 pass
 
             # 2차 시도: 강력한 JSON 추출 (중첩된 중괄호, 마크다운 처리)
-            extracted_json = self._extract_json_from_text(content)
+            extracted_json = self._extract_json_from_text(content, is_subjective=is_subjective)
             if extracted_json:
                 try:
                     result = json.loads(extracted_json)
-                    answer = int(result.get('answer', -1))
+                    answer_raw = result.get('answer', -1)
                     reasoning = result.get('reasoning', '')
 
-                    if not (1 <= answer <= 5):
-                        answer = self._extract_answer_from_text(content) or -1
+                    # 주관식과 객관식 답 처리 분리
+                    if is_subjective:
+                        # 주관식: answer를 그대로 받아들임
+                        answer = answer_raw
+                    else:
+                        # 객관식: 1-5 범위 검증
+                        answer = int(answer_raw) if isinstance(answer_raw, (int, float, str)) else -1
+
+                        if not (1 <= answer <= 5):
+                            answer = self._extract_answer_from_text(content) or -1
 
                     return ModelResponse(
                         answer=answer,
@@ -109,24 +128,37 @@ class AnthropicModel(BaseModel):
                         time_taken=time_taken,
                         raw_response=content,
                         model_name=self.model_name,
-                        success=(1 <= answer <= 5),
-                        error=None if (1 <= answer <= 5) else "유효하지 않은 답"
+                        success=True if is_subjective else (1 <= answer <= 5),
+                        error=None if (is_subjective or (1 <= answer <= 5)) else "유효하지 않은 답"
                     )
                 except (json.JSONDecodeError, ValueError):
                     pass
 
-            # 3차 시도: 텍스트에서 답 추출
-            answer = self._extract_answer_from_text(content) or -1
+            # 3차 시도: 텍스트에서 답 추출 (객관식만)
+            if is_subjective:
+                # 주관식: JSON 파싱에 실패했으므로 실패로 처리
+                return ModelResponse(
+                    answer=-1,
+                    reasoning=content,
+                    time_taken=time_taken,
+                    raw_response=content,
+                    model_name=self.model_name,
+                    success=False,
+                    error="주관식 답변 파싱 실패"
+                )
+            else:
+                # 객관식: 텍스트에서 답 추출 시도
+                answer = self._extract_answer_from_text(content) or -1
 
-            return ModelResponse(
-                answer=answer,
-                reasoning=content,
-                time_taken=time_taken,
-                raw_response=content,
-                model_name=self.model_name,
-                success=(1 <= answer <= 5),
-                error=None if (1 <= answer <= 5) else "답 추출 실패"
-            )
+                return ModelResponse(
+                    answer=answer,
+                    reasoning=content,
+                    time_taken=time_taken,
+                    raw_response=content,
+                    model_name=self.model_name,
+                    success=(1 <= answer <= 5),
+                    error=None if (1 <= answer <= 5) else "답 추출 실패"
+                )
         
         except Exception as e:
             time_taken = time.time() - start_time
