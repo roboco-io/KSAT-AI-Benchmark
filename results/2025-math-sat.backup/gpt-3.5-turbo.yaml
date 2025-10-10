@@ -1,0 +1,630 @@
+exam_id: 2025-math-sat
+exam_title: 2025학년도 수능 MATH
+subject: math
+model_name: gpt-3.5-turbo
+evaluated_at: '2025-10-06T23:50:46.900367'
+summary:
+  total_questions: 46
+  correct_answers: 15
+  accuracy: 32.61
+  total_score: 47
+  max_score: 152
+  score_rate: 30.92
+results:
+- question_id: q1
+  question_number: 1
+  answer: 3
+  correct_answer: 5
+  is_correct: false
+  reasoning: 주어진 수식을 계산하면, √5 × 25^(1/2) = √5 × 5 = 5. 따라서 정답은 3입니다.
+  time_taken: 1.64
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q2
+  question_number: 2
+  answer: 3
+  correct_answer: 4
+  is_correct: false
+  reasoning: 주어진 함수를 이용하여 미분을 구해보면, f(x) = x^2 - 8x + 7의 도함수는 f'(x) = 2x - 8이다. 따라서,
+    주어진 식을 이용하여 미분을 구하면, lim(h→0) [f(2+h) - f(2)] / h = lim(h→0) [(2+h)^2 - 8(2+h)
+    + 7 - (2^2 - 8*2 + 7)] / h = lim(h→0) [4h + h^2] / h = lim(h→0) (h(4+h)) / h =
+    lim(h→0) (4+h) = 4+0 = 4이다. 따라서, 정답은 4가 아닌 3이다.
+  time_taken: 3.81
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q3
+  question_number: 3
+  answer: 3
+  correct_answer: 5
+  is_correct: false
+  reasoning: 등비수열의 일반항을 a라고 하면, a_2 = a, a_4 = a^3이므로 주어진 식은 (a^3/a) + (a/a) = 30이
+    됩니다. 이를 정리하면 a^2 + 1 = 30이 되고, a^2 = 29이므로 a = ±√29입니다. 양수로 주어졌으므로 a = √29이 됩니다.
+    따라서 등비수열의 공비 k는 a/1 = √29/1 = √29이므로 k = 3이 됩니다.
+  time_taken: 3.15
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q4
+  question_number: 4
+  answer: 3
+  correct_answer: 2
+  is_correct: false
+  reasoning: 함수가 연속이 되려면 x = -2에서의 함수값이 같아야 합니다. 따라서, -2를 함수에 대입하여 a를 구해보면, 5(-2)
+    + a = (-2)^2 - a 이므로, a = 8이 됩니다.
+  time_taken: 1.88
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q5
+  question_number: 5
+  answer: 3
+  correct_answer: 3
+  is_correct: true
+  reasoning: 함수 f(x)를 전개하면 f(x) = 3x^4 - x^3 + 3x^2 - x. 이를 미분하면 f'(x) = 12x^3 - 3x^2
+    + 6x - 1. 따라서 f'(1) = 12*1^3 - 3*1^2 + 6*1 - 1 = 12 - 3 + 6 - 1 = 14이므로, 정답은 3입니다.
+  time_taken: 2.42
+  points: 3
+  earned_points: 3
+  success: true
+  error: null
+- question_id: q6
+  question_number: 6
+  answer: 2
+  correct_answer: 5
+  is_correct: false
+  reasoning: '우선 주어진 삼각함수 식을 이용하여 삼각함수 값을 구합니다. 우리는 다음 공식을 이용할 수 있습니다: cos(a+b) =
+    cos(a)cos(b) - sin(a)sin(b). 따라서, cos(π/2 + θ) = cos(π/2)cos(θ) - sin(π/2)sin(θ)
+    = 0*cos(θ) - 1*sin(θ) = -sin(θ). 따라서, -sin(θ) = -1/5 이므로 sin(θ) = 1/5 입니다. 이제
+    주어진 수식을 대입하여 계산하면, -sin(θ) / (1 - cos^2(θ)) = -(1/5) / (1 - cos^2(θ)) = -(1/5)
+    / (1 - (1/25)) = -(1/5) / (24/25) = -5/24 = -√5/5 = -√5 입니다. 따라서, 정답은 -√5 입니다.'
+  time_taken: 2.65
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q7
+  question_number: 7
+  answer: 3
+  correct_answer: 3
+  is_correct: true
+  reasoning: 정적분의 기본 정리에 의하면, 다항함수 f(x)는 원래 함수인 3x^2 + 2x의 미분인 6x + 2가 된다. 따라서 f(1)을
+    구하면 6*1 + 2 = 8이므로, f(1)의 값은 8이다.
+  time_taken: 1.67
+  points: 3
+  earned_points: 3
+  success: true
+  error: null
+- question_id: q8
+  question_number: 8
+  answer: 2
+  correct_answer: 1
+  is_correct: false
+  reasoning: "먼저 주어진 수식을 계산하면, a = 2 \times (-1) + 1 = -1, b = \frac{1}{2} 이다. 따라서\
+    \ a \times b = -\frac{1}{2} 이므로 정답은 2번이다."
+  time_taken: 2.12
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q9
+  question_number: 9
+  answer: 3
+  correct_answer: 4
+  is_correct: false
+  reasoning: 주어진 두 적분이 같다는 것은 적분 구간에서 함수의 값이 대칭이라는 뜻입니다. 즉, 함수가 x=a에서 대칭축을 기준으로 대칭이
+    되어야 합니다. 주어진 함수를 x=a를 기준으로 대칭이 되도록 만들어보면, a=12가 됩니다. 따라서 정답은 3입니다.
+  time_taken: 1.35
+  points: 4
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q10
+  question_number: 10
+  answer: 3
+  correct_answer: 3
+  is_correct: true
+  reasoning: 주어진 함수의 최댓값을 구하기 위해 먼저 미분을 통해 극값을 찾아야 합니다. 주어진 함수를 미분하면 f'(x) = -ab sin(bx)
+    이고, 이를 0으로 놓고 풀면 x = π/2b 가 됩니다. 주어진 x = π/3 에서 최댓값이므로, π/2b = π/3 이어야 합니다. 따라서
+    b = 2가 됩니다. 이를 함수에 대입하여 a를 구하면 a = 10 이 됩니다. 따라서 a + b = 10 + 2 = 12 가 되고, 최솟값은
+    12보다 큰 16이 됩니다.
+  time_taken: 2.05
+  points: 4
+  earned_points: 4
+  success: true
+  error: null
+- question_id: q11
+  question_number: 11
+  answer: 3
+  correct_answer: 2
+  is_correct: false
+  reasoning: 점 P의 운동 방향이 바뀌는 시각은 가속도가 0이 되는 시점이므로, x의 미분인 속도 함수를 구하고 그 속도 함수의 미분이
+    0이 되는 시간을 구하면 된다. x를 t에 대해 미분하면 속도 함수 v(t) = 3t^2 - 3t - 6이 된다. v(t)를 t에 대해 다시
+    미분하면 가속도 함수 a(t) = 6t - 3가 된다. 따라서, a(t) = 0을 만족하는 t를 구하면 t=2가 나온다. 따라서 t=2일 때의
+    x를 구하면 x = 2^3 - 3/2 * 2^2 - 6 * 2 = 12이므로, 운동 방향이 바뀌는 시각에서의 점 P의 좌표는 12이다.
+  time_taken: 4.58
+  points: 4
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q12
+  question_number: 12
+  answer: 3
+  correct_answer: 4
+  is_correct: false
+  reasoning: 등차수열 {bₙ}의 일반항을 bₙ = 2n로 설정하면, 주어진 식을 대입하여 aₙ의 일반항을 구할 수 있습니다. 이를 이용하여
+    a₁부터 a₄까지의 합을 구하면 130이 됩니다.
+  time_taken: 1.79
+  points: 4
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q13
+  question_number: 13
+  answer: 4
+  correct_answer: 5
+  is_correct: false
+  reasoning: 우선 주어진 조건을 이용하여 삼차함수를 구하고, 점 Q의 좌표를 구합니다. 그리고 넓이 A와 B를 구한 후 두 넓이의 차를
+    계산하면 43/4가 됩니다. 삼차함수를 구하는 과정과 넓이를 구하는 방법에 대해 자세히 설명할 수 있습니다.
+  time_taken: 2.27
+  points: 4
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q14
+  question_number: 14
+  answer: 4
+  correct_answer: 3
+  is_correct: false
+  reasoning: 삼각형 ADE의 넓이와 삼각형 ABC의 넓이의 비가 9:35이므로, 삼각형 ADE의 넓이는 9/(9+35) = 9/44이고,
+    삼각형 ABC의 넓이는 35/(9+35) = 35/44이다. 이때, 삼각형 ADE의 넓이는 AD*DE*sinA/2, 삼각형 ABC의 넓이는
+    AB*BC*sinC/2로 나타낼 수 있다. 또한, AD:DB = 3:2이므로 DE:EB = 3:2이다. 삼각형 ADE와 삼각형 ABC의 넓이의
+    비를 이용하여 계산하면 sinA/sinC = 8/5이므로 sinA = 8x, sinC = 5x로 놓을 수 있다. 이때, sinA = DE/AD
+    = 8x/3, sinC = BC/AC = 5x/AC이므로 AC = 5/8*3 = 15/8이다. 또한, 삼각형 ABC의 외접원의 반지름의 길이가
+    7이므로 AB*BC*AC/4R = 35/44이다. 여기서 AB = 5, BC = 8, AC = 15/8, R = 7을 대입하여 계산하면 AC
+    = 15/8이므로, 점 E의 위치는 AC의 중점이다. 따라서, 삼각형 PBC의 넓이의 최댓값은 삼각형 ABC의 넓이의 절반인 36 + 30√3이다.
+  time_taken: 4.38
+  points: 4
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q15
+  question_number: 15
+  answer: 3
+  correct_answer: 2
+  is_correct: false
+  reasoning: 먼저 (가)에서 함수 g(x)가 미분가능하려면 x=0에서 연속이어야 한다. 따라서 x=0일 때 f(x)의 값은 7이어야 한다.
+    이를 이용하여 (나)를 해석하면, g(x)g(x-4)=0의 서로 다른 실근의 개수가 4개라는 것은 g(x)=0과 g(x-4)=0의 실근이 각각
+    2개씩 존재한다는 뜻이다. x=0일 때 g(x)=7이므로 x=4일 때 g(x)=f(4)이어야 한다. 즉, f(4)=0이어야 한다. 이를 만족하는
+    a의 값을 구하고, g(-2)+g(0)을 계산하면 34가 된다.
+  time_taken: 2.52
+  points: 4
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q16
+  question_number: 16
+  answer: 3
+  correct_answer: 3
+  is_correct: true
+  reasoning: 두 로그식이 같은 밑을 가지고 있고 로그식의 값이 같다는 성질을 이용하여 방정식을 풀면, x = 4가 나온다.
+  time_taken: 1.31
+  points: 3
+  earned_points: 3
+  success: true
+  error: null
+- question_id: q17
+  question_number: 17
+  answer: 3
+  correct_answer: 5
+  is_correct: false
+  reasoning: f(x)의 미분 함수인 f'(x)를 적분하면 f(x)가 된다. 따라서 f(x) = 3x^3 + 2x^2 - x + C 형태의
+    다항함수가 된다. 여기서 f(1) = 6을 이용하여 C를 구하면 C = 2가 된다. 따라서 f(x) = 3x^3 + 2x^2 - x + 2이다.
+    이를 이용하여 f(2)를 계산하면 24가 된다.
+  time_taken: 1.58
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q18
+  question_number: 18
+  answer: 3
+  correct_answer: 3
+  is_correct: true
+  reasoning: 주어진 식을 이용하여 수열을 구하면, 수열은 5, 7, 5, 7, ... 와 같이 5와 7이 번갈아가면서 나타납니다. 이를
+    이용하여 16항까지의 합을 구하면 72이므로, 정답은 3입니다.
+  time_taken: 2.82
+  points: 3
+  earned_points: 3
+  success: true
+  error: null
+- question_id: q19
+  question_number: 19
+  answer: 3
+  correct_answer: 1
+  is_correct: false
+  reasoning: 함수의 극댓값은 미분을 통해 구할 수 있습니다. 주어진 조건에서 미분한 함수를 이용하여 극댓값을 구하고, 이를 이용해 f(3)을
+    계산하면 f(3) = -54이므로 정답은 3입니다.
+  time_taken: 2.16
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q20
+  question_number: 20
+  answer: 3
+  correct_answer: 4
+  is_correct: false
+  reasoning: 우선 곡선과 직선이 만나는 점의 x좌표를 구하면 k=1이 나옵니다. 따라서 f(x)는 x>1인 구간에서 (1/5)^(x-3)과
+    3x 두 함수의 조건을 만족합니다. 이를 이용하여 적분을 풀면 3이 나옵니다.
+  time_taken: 1.52
+  points: 4
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q21
+  question_number: 21
+  answer: 3
+  correct_answer: 3
+  is_correct: true
+  reasoning: 함수 f(x)의 값을 최대로 만들기 위해서는 x^3의 계수가 양수여야 합니다. 따라서 a는 양수여야 합니다. 또한, f(1)의
+    값이 최대가 되려면 b와 c는 0이어야 합니다. 따라서 a=1, b=0, c=0일 때 f(1)의 값이 최대가 됩니다. 따라서 f(1)의 최댓값은
+    1^3 + 1*1^2 + 0*1 + 0 = 2 입니다.
+  time_taken: 2.81
+  points: 4
+  earned_points: 4
+  success: true
+  error: null
+- question_id: q22
+  question_number: 22
+  answer: 3
+  correct_answer: 2
+  is_correct: false
+  reasoning: 주어진 조건을 만족하는 수열은 a1이 양수일 때와 음수일 때로 나눌 수 있습니다. 양수일 때는 a1이 1, 2, 3, ...
+    순으로 증가하고 음수일 때는 a1이 -1, -2, -3, ... 순으로 감소합니다. 따라서 |a1|의 값의 합은 1 + 2 + 3 + ...
+    + 1 + 2 + 3 + ... = 1 + 2 + 3 + ... = 1/2 * n * (n + 1)으로 계산됩니다. 여기서 n은 양의 정수이므로
+    n = 2일 때 3이 됩니다.
+  time_taken: 1.97
+  points: 4
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q23
+  question_number: 23
+  answer: 3
+  correct_answer: 5
+  is_correct: false
+  reasoning: 다항식 (x^3 + 2x^2)를 전개하면 x^6의 항은 x^3 * x^3 + 2x^2 * x^4으로 구성됩니다. 따라서 x^6의
+    계수는 1 * 1 * 2 = 2이므로 정답은 60입니다.
+  time_taken: 1.97
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q24
+  question_number: 24
+  answer: 3
+  correct_answer: 3
+  is_correct: true
+  reasoning: "확률의 합집합 공식을 이용하면 P(A∪B) = P(A) + P(B) - P(A∩B)를 사용할 수 있습니다. 주어진 조건에\
+    \ 따라 P(A∪B) = P(A) + P(B) - P(A∩B) = (P(A|B) + P(A)) - P(A∩B) = (P(A) - \frac{1}{2}\
+    \ + P(A)) - \frac{1}{5} = 2P(A) - \frac{1}{2} - \frac{1}{5) = 2P(A) - \frac{7}{10}입니다.\
+    \ 따라서 P(A∪B)의 값은 2P(A) - \frac{7}{10}이며, P(A) + P(B) = 1이므로 P(A) = \frac{3}{5}입니다.\
+    \ 따라서 P(A∪B) = 2 * \frac{3}{5} - \frac{7}{10} = \frac{6}{5} - \frac{7}{10} = \f\
+    rac{12}{10} - \frac{7}{10} = \frac{5}{10} = \frac{1}{2} = 0.5이므로 선택지 3. \frac{7}{10}이\
+    \ 맞습니다."
+  time_taken: 5.23
+  points: 3
+  earned_points: 3
+  success: true
+  error: null
+- question_id: q25
+  question_number: 25
+  answer: 3
+  correct_answer: 3
+  is_correct: true
+  reasoning: 신뢰도 95%의 신뢰구간을 구할 때, 표준정규분포 상에서의 Z값은 1.96이다. 따라서, 표준오차는 2 / √256 = 0.125이다.
+    이때, Z값을 표준오차로 변환하여 계산하면 1.96 * 0.125 = 0.245이다. 따라서, m에 대한 95% 신뢰구간은 m ± 0.245이다.
+    즉, b-a = 2 * 0.245 = 0.49이므로, 정답은 0.49이다.
+  time_taken: 2.07
+  points: 3
+  earned_points: 3
+  success: true
+  error: null
+- question_id: q26
+  question_number: 26
+  answer: 5
+  correct_answer: 3
+  is_correct: false
+  reasoning: 우선, 과목 B를 선택한 학생이 적어도 한 명일 확률은 전체 경우에서 모두 과목 A를 선택한 경우를 제외한 확률과 같습니다.
+    따라서 1 - (모두 과목 A를 선택한 경우)를 계산하면 됩니다. 16명 중 3명을 선택하는 경우의 수는 조합으로 구할 수 있으며, 이 중에서
+    과목 A를 선택한 학생 3명을 선택하는 경우의 수는 9명 중 3명을 선택하는 경우의 수와 같습니다. 따라서 (9C3) / (16C3)을 계산하면,
+    1 - (9C3) / (16C3) = 19/20이므로 답은 5번입니다.
+  time_taken: 2.1
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q27
+  question_number: 27
+  answer: 3
+  correct_answer: 3
+  is_correct: true
+  reasoning: 세 개의 수의 평균을 X라고 하면, X는 3번의 시험에서 나올 수 있는 수의 합을 3으로 나눈 값이다. 따라서 X는 3, 5,
+    7, 9 중 하나일 것이다. V(X+6) = 24에서 X+6의 분산이 24이므로 X+6의 표준편차는 24의 제곱근인 4이다. X+6의 표준편차는
+    X의 표준편차와 같으므로 X의 표준편차는 4이다. X가 3, 5, 7, 9일 때, X와 6의 차이의 제곱의 평균이 4가 되는 것은 X가 3일
+    때이다. 따라서 X=3이므로 α는 3이다.
+  time_taken: 3.0
+  points: 3
+  earned_points: 3
+  success: true
+  error: null
+- question_id: q28
+  question_number: 28
+  answer: 3
+  correct_answer: 4
+  is_correct: false
+  reasoning: 주어진 집합 X의 원소 개수는 6개이므로 함수 f의 경우의 수는 6^6 = 46656가지입니다. 하지만 함수 f는 X에서 X로의
+    함수이므로 총 6! = 720가지의 순열 중에서 중복을 제외해야 합니다. 따라서 실제 경우의 수는 46656 / 720 = 176가지이므로
+    정답은 3번입니다.
+  time_taken: 2.87
+  points: 4
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q29
+  question_number: 29
+  answer: 3
+  correct_answer: 5
+  is_correct: false
+  reasoning: 먼저 주어진 조건을 활용하여 X와 Y의 분포를 분석하면, X ~ N(25, 25), Y ~ N(15, 25)임을 알 수 있습니다.
+    따라서 P(15 ≤ X ≤ 20) = P((15-25)/5 ≤ Z ≤ (20-25)/5) = P(-2 ≤ Z ≤ -1) = 0.1587, P(15
+    ≤ Y ≤ 20) = P((15-15)/5 ≤ Z ≤ (20-15)/5) = P(0 ≤ Z ≤ 1) = 0.3413 이므로, P(15 ≤ X
+    ≤ 20) + P(15 ≤ Y ≤ 20) = 0.5이고, 따라서 m1 + σ1 = 25입니다.
+  time_taken: 4.0
+  points: 4
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q30
+  question_number: 30
+  answer: 3
+  correct_answer: 4
+  is_correct: false
+  reasoning: 처음에 1번째와 2번째 동전만 앞면이 보이도록 놓여 있기 때문에, 주사위를 던져 나온 눈의 수에 따라 1번째와 2번째 동전을
+    뒤집는 경우만 고려하면 된다. 주사위를 던져 1 또는 2가 나올 확률은 각각 2/6이므로, 3번의 실험 후에 5개의 동전이 모두 앞면이 보이도록
+    놓여 있을 확률은 (2/6)^3 = 8/216이다. 따라서 p = 8/216이고, q = 1 - p = 208/216이다. 따라서 p + q
+    = 8/216 + 208/216 = 216/216 = 1이다.
+  time_taken: 2.96
+  points: 4
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q23
+  question_number: 23
+  answer: 3
+  correct_answer: 5
+  is_correct: false
+  reasoning: 주어진 함수를 x에 대해 미분하면 (6x*sin^2x - 6x^3*cosx)/(sin^4x)이 됩니다. 여기서 x를 0으로
+    대입하면 분자는 0이 되고, 분모는 0이 아니므로 0/0의 형태가 됩니다. 이는 미분의 형태로 변환하여 다시 계산할 수 있습니다. 미분을 통해
+    다시 계산하면 3이 나오므로, 주어진 극한값은 3입니다.
+  time_taken: 3.7
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q24
+  question_number: 24
+  answer: 4
+  correct_answer: 3
+  is_correct: false
+  reasoning: 주어진 정적분을 풀기 위해 먼저 분모를 분배하면 ∫(0 to 10) (x+2)/(x+1) dx = ∫(0 to 10) (1
+    + 1/(x+1)) dx = [x + ln|x+1|]_0^10 = (10 + ln 11) - (0 + ln 1) = 10 + ln 11 이므로,
+    정답은 4번입니다.
+  time_taken: 1.39
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q25
+  question_number: 25
+  answer: 3
+  correct_answer: 3
+  is_correct: true
+  reasoning: 먼저 주어진 조건을 이용하여 수열의 극한값을 구합니다. 주어진 식을 정리하면, lim(n→∞) (n * a_n) / (n^2
+    + 3) = 1 이므로, lim(n→∞) (a_n) / (1 + 3/n) = 1 이 됩니다. 따라서 a_n의 극한값은 1이 됩니다. 이제 주어진
+    두 번째 수열을 살펴봅시다. 주어진 수열을 제곱하면 a_n^2 + n - a_n 이 됩니다. 이를 루트 씌워주면, √(a_n^2 + n -
+    a_n) = √(a_n^2 - a_n + n) = √(a_n(a_n - 1) + n) 이 됩니다. n이 무한대로 갈 때, a_n은 1에 수렴하므로
+    √(1(1-1) + n) = √n 이 됩니다. 따라서 주어진 수열의 극한값은 루트 n이 되고, 이는 무한대로 발산하므로 답은 3입니다.
+  time_taken: 6.48
+  points: 3
+  earned_points: 3
+  success: true
+  error: null
+- question_id: q26
+  question_number: 26
+  answer: 3
+  correct_answer: 3
+  is_correct: true
+  reasoning: 우선 주어진 함수의 그래프를 그리고, x=1, x=e와의 교점을 구합니다. 그 다음 회전체의 단면이 정사각형이 되기 위해서는
+    반지름이 일정해야 합니다. 따라서 반지름을 구하고 부피를 계산하면, 부피는 ln(e+3)이 됩니다.
+  time_taken: 1.39
+  points: 3
+  earned_points: 3
+  success: true
+  error: null
+- question_id: q27
+  question_number: 27
+  answer: 3
+  correct_answer: 3
+  is_correct: true
+  reasoning: 점 (0, g(0))에서의 접선이 x축이므로 g(0) = 0이다. g(x) = f(x) + e^x 이므로 g(0) = f(0)
+    + e^0 = f(0) + 1 = 0 이다. 따라서 f(0) = -1이다. h(x)는 g(x)의 연속함수이므로 h(x) = g(x)의 도함수인
+    g'(x)가 연속이어야 한다. g(x) = f(x) + e^x 이므로 g'(x) = f'(x) + e^x 이다. g'(0) = f'(0) +
+    e^0 = f'(0) + 1 = 0 이므로 f'(0) = -1이다. h'(x) = g'(x) = f'(x) + e^x 이므로 h'(8) =
+    f'(8) + e^8 이다. 최고차항의 계수가 1인 삼차함수의 도함수는 2차함수이므로 f'(8) = 0이다. 따라서 h'(8) = f'(8)
+    + e^8 = 0 + e^8 = e^8 이므로 h'(8)의 값은 e^8 = 1/12이다.
+  time_taken: 7.24
+  points: 3
+  earned_points: 3
+  success: true
+  error: null
+- question_id: q28
+  question_number: 28
+  answer: 3
+  correct_answer: 4
+  is_correct: false
+  reasoning: 접선의 기울기는 함수의 도함수 값과 같으므로 f'(t) = g'(t)이다. 주어진 f'(x)를 이용하여 f'(t) = -t
+    + e + 1 - t^2를 구하고, g'(t) = -t + e + 1 - t^2를 만족하는 g(x)를 찾는다. g'(x)를 적분하여 g(x)를
+    구하면 g(x) = -1/2x^2 + ex + x + C가 나온다. 여기서 g(t) = -1/2t^2 + et + t + C이므로 g(t)
+    = -1/2t^2 + et + t + C = f(t)이다. 두 함수가 같으므로 C = 0이 되고, 따라서 g(t) = -1/2t^2 + et
+    + t이다. g(1) + g'(1) = -1/2 + e + 1 + e = 1/2 + 2e = 1/2 + 5/6 = 11/6이므로 정답은 3번이다.
+  time_taken: 2.56
+  points: 4
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q29
+  question_number: 29
+  answer: 3
+  correct_answer: 5
+  is_correct: false
+  reasoning: 주어진 부등식을 만족시키기 위해서는 주어진 수열이 조건을 만족해야 합니다. 주어진 ∑ (|aₙ₊₁ + aₙ|) = 40/3,
+    ∑ (|aₙ₊₁ − aₙ|) = 20/3를 이용하여 등비수열 {aₙ}을 찾고, 이를 이용하여 부등식을 만족시키는 m을 구합니다. 주어진 등비수열은
+    {aₙ} = (1/3)^n 입니다. 이를 이용하여 부등식을 만족시키는 m을 구하면, m = 3, 4, 5, ... 일 때 부등식을 만족시킵니다.
+    따라서 모든 자연수 m의 값의 합은 3 + 4 + 5 + ... = 1/6 × (3 + 4 + 5 + ...) = 1/6 × (n(n+1)/2
+    - 2) = 1/6 × (n^2 + n - 12) 입니다. 여기서 n을 무한대로 보낼 때, 합은 무한대로 발산하므로 답은 3입니다.
+  time_taken: 6.66
+  points: 4
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q30
+  question_number: 30
+  answer: 3
+  correct_answer: 4
+  is_correct: false
+  reasoning: 함수 f(x)의 최솟값이 4이므로, f(x)가 x = 0에서 극대값을 가져야 합니다. 따라서, f'(0) = 0이어야 합니다.
+    주어진 조건에서 f'(0) = f'(1)이므로 f'(1) = 0입니다. f'(x)를 구하고 f'(1) = 0을 이용하여 a, b에 대한 연립방정식을
+    세우면 a = 1, b = -π가 됩니다. 따라서, f(x) = sin(x - π + sinx)가 됩니다. x = 0에서 극대값을 가지므로,
+    f'(0) = 0을 이용하여 a₁ = 0이 됩니다. 집합 A의 원소의 개수 n은 2이고, 따라서 na₁ - aₙ = 2 * 0 - 0 = 0이므로
+    p + q = 0입니다.
+  time_taken: 2.78
+  points: 4
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q23
+  question_number: 23
+  answer: 3
+  correct_answer: 5
+  is_correct: false
+  reasoning: 벡터 a + 3 * 벡터 b = (b, 3) + 3 * (1, 2) = (b + 3, 6). 주어진 식에서 (b + 3, 6)
+    = (6, 9) 이므로 b + 3 = 6, b = 3이다. 따라서 b의 값은 3이다.
+  time_taken: 2.56
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q24
+  question_number: 24
+  answer: 3
+  correct_answer: 3
+  is_correct: true
+  reasoning: 주어진 문제에서 우리는 곡선의 좌표와 준선의 정보를 활용하여 문제를 풀어야 합니다. 주어진 곡선의 좌표가 (1, 0)이므로
+    이는 포물선의 꼭지점이라는 것을 알 수 있습니다. 또한 준선이 x = -1인 포물선이 점 (3, a)를 지난다고 했을 때, x = 3일 때의
+    y값을 구하면 됩니다. 포물선의 일반식은 y = ax^2 + bx + c 형태이므로 주어진 조건을 대입하여 연립방정식을 풀면 a = 3이 나옵니다.
+    따라서 양수 a의 값은 3이 됩니다.
+  time_taken: 4.83
+  points: 3
+  earned_points: 3
+  success: true
+  error: null
+- question_id: q25
+  question_number: 25
+  answer: 3
+  correct_answer: 3
+  is_correct: true
+  reasoning: 선분 AB를 3:2로 내분하는 점이 z축 위에 있으므로 내분점의 z좌표는 0이다. 따라서, (6+2)/2 = 4이다. 선분
+    AB를 3:2로 외분하는 점이 xy평면 위에 있으므로 외분점의 z좌표는 0이다. 따라서, (6*2 + c*3)/5 = 0 이므로 c = -12이다.
+    따라서, a+b+c = a + b - 12이다. 내분점과 외분점을 이용하여 계산하면, a = -12, b = 1이므로 a+b+c = -12
+    + 1 - 12 = -23이다. 따라서, 정답은 13이다.
+  time_taken: 2.6
+  points: 3
+  earned_points: 3
+  success: true
+  error: null
+- question_id: q26
+  question_number: 26
+  answer: 3
+  correct_answer: 3
+  is_correct: true
+  reasoning: 우선 두 타원 C₁과 C₂의 방정식을 이용하여 P와 Q의 좌표를 구한 후, 각각의 접선 방정식을 구합니다. 이후 두 접선의
+    기울기를 이용하여 각각의 각도를 구하고, α와 β의 차이를 계산하여 6 이상 15 이하인 경우를 찾습니다. 이때 n=11일 때, 6 ≤ α
+    - β ≤ 15를 만족하므로 정답은 3입니다.
+  time_taken: 1.88
+  points: 3
+  earned_points: 3
+  success: true
+  error: null
+- question_id: q27
+  question_number: 27
+  answer: 2
+  correct_answer: 3
+  is_correct: false
+  reasoning: 삼각형 AMD가 정삼각형이므로 각이 60도이다. 직선 BC가 평면 AMD와 수직이므로 삼각형 AMD의 높이는 BC/2 = 2√5이다.
+    삼각형 AMD의 넓이는 밑변 * 높이 / 2 = 6 * 2√5 / 2 = 6√5이다. 삼각형 ACD에 내접하는 원의 지름은 AC이므로 반지름은
+    AC/2 = 3√5이다. 원의 넓이는 πr^2 = π * (3√5)^2 = 9π * 5 = 45π이다. BCD 위로의 정사영의 넓이는 삼각형
+    ACD의 넓이와 같으므로 45π의 1/6인 √10/6 π가 정답이다.
+  time_taken: 2.73
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q28
+  question_number: 28
+  answer: 3
+  correct_answer: 4
+  is_correct: false
+  reasoning: 우선 AB = 8, BC = 6, ∠ABC = π/2인 직각삼각형 ABC에서 AC의 길이를 피타고라스 정리를 통해 구하면 AC
+    = √(8^2 + 6^2) = √100 = 10이다. 이때, AC를 지름으로 하는 구 S의 반지름은 10/2 = 5이다. 또한, AC까지의
+    거리가 4인 서로 다른 두 점을 P, Q라고 했을 때, 이는 구의 지름과 수직이므로 PQ의 길이는 2배인 8이다. 따라서 선분 PQ의 길이는
+    8이므로 √51이다.
+  time_taken: 5.12
+  points: 4
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q29
+  question_number: 29
+  answer: 3
+  correct_answer: 5
+  is_correct: false
+  reasoning: 먼저 삼각형 PFQ의 넓이가 9√5이므로 PF * QF = 18이다. 또한, 삼각형 QFF'와 삼각형 FFP'가 서로 닿으므로
+    QF = PF'이다. 따라서 PF * PF' = 18이고, PF < QF이므로 PF = 3, PF' = 6이다. 이에 따라 PF^2 + QF^2
+    = 45이므로 QF = √36 = 6이다. 따라서 p = 3, q = 6이다.
+  time_taken: 2.36
+  points: 4
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q30
+  question_number: 30
+  answer: 3
+  correct_answer: 4
+  is_correct: false
+  reasoning: 우선 S의 형태를 분석하면, |XB + XC| = |XB - XC|를 만족하는 X는 정사각형 ABCD의 중심 O이다. 따라서
+    S는 정사각형 ABCD의 중심 O이다. 이후, P에 대한 조건을 고려하면, Q는 P를 중심으로 PB + 2PD 만큼 떨어진 점이므로 Q는 P와
+    대각선에 위치한다. 따라서 AC와 AQ의 내적이 최대가 되려면 Q는 AC의 중점인 O와 일치해야 하며, 이때 AC · AQ의 값이 최대가 된다.
+    반대로, AC와 AQ의 내적이 최소가 되려면 Q는 AC의 중점 O와 반대편에 위치해야 하며, 이때 AC · AQ의 값이 최소가 된다. 따라서
+    M은 AC의 길이의 절반인 0.5이고, m은 -0.5이다. 따라서 M × m = -0.25이므로 정답은 3이다.
+  time_taken: 3.08
+  points: 4
+  earned_points: 0
+  success: true
+  error: null

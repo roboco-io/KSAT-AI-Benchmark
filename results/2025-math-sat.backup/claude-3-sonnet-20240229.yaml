@@ -1,0 +1,565 @@
+exam_id: 2025-math-sat
+exam_title: 2025학년도 수능 MATH
+subject: math
+model_name: claude-3-sonnet-20240229
+evaluated_at: '2025-10-07T00:24:33.605682'
+summary:
+  total_questions: 46
+  correct_answers: 0
+  accuracy: 0.0
+  total_score: 0
+  max_score: 152
+  score_rate: 0.0
+results:
+- question_id: q1
+  question_number: 1
+  answer: -1
+  correct_answer: 5
+  is_correct: false
+  reasoning: ''
+  time_taken: 0.28
+  points: 2
+  earned_points: 0
+  success: false
+  error: 'Error code: 404 - {''type'': ''error'', ''error'': {''type'': ''not_found_error'',
+    ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTrBAqbKU979hEVSUfyPJ''}'
+- question_id: q2
+  question_number: 2
+  answer: -1
+  correct_answer: 4
+  is_correct: false
+  reasoning: ''
+  time_taken: 0.22
+  points: 2
+  earned_points: 0
+  success: false
+  error: 'Error code: 404 - {''type'': ''error'', ''error'': {''type'': ''not_found_error'',
+    ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTrBArVPdhTpkgxSh8Fxf''}'
+- question_id: q3
+  question_number: 3
+  answer: -1
+  correct_answer: 5
+  is_correct: false
+  reasoning: ''
+  time_taken: 0.26
+  points: 3
+  earned_points: 0
+  success: false
+  error: 'Error code: 404 - {''type'': ''error'', ''error'': {''type'': ''not_found_error'',
+    ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTrBAsWQTDsVK9ZTfw56P''}'
+- question_id: q4
+  question_number: 4
+  answer: -1
+  correct_answer: 2
+  is_correct: false
+  reasoning: ''
+  time_taken: 0.22
+  points: 3
+  earned_points: 0
+  success: false
+  error: 'Error code: 404 - {''type'': ''error'', ''error'': {''type'': ''not_found_error'',
+    ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTrBAtYB1RbA4E3GDadgZ''}'
+- question_id: q5
+  question_number: 5
+  answer: -1
+  correct_answer: 3
+  is_correct: false
+  reasoning: ''
+  time_taken: 0.23
+  points: 3
+  earned_points: 0
+  success: false
+  error: 'Error code: 404 - {''type'': ''error'', ''error'': {''type'': ''not_found_error'',
+    ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTrBAuXx5BFjUnLd2q2Mb''}'
+- question_id: q6
+  question_number: 6
+  answer: -1
+  correct_answer: 5
+  is_correct: false
+  reasoning: ''
+  time_taken: 0.23
+  points: 3
+  earned_points: 0
+  success: false
+  error: 'Error code: 404 - {''type'': ''error'', ''error'': {''type'': ''not_found_error'',
+    ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTrBAvUziivfCJ7XqNVVQ''}'
+- question_id: q7
+  question_number: 7
+  answer: -1
+  correct_answer: 3
+  is_correct: false
+  reasoning: ''
+  time_taken: 0.22
+  points: 3
+  earned_points: 0
+  success: false
+  error: 'Error code: 404 - {''type'': ''error'', ''error'': {''type'': ''not_found_error'',
+    ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTrBAwRJoCsUNBTXyEeU7''}'
+- question_id: q8
+  question_number: 8
+  answer: -1
+  correct_answer: 1
+  is_correct: false
+  reasoning: ''
+  time_taken: 0.26
+  points: 3
+  earned_points: 0
+  success: false
+  error: 'Error code: 404 - {''type'': ''error'', ''error'': {''type'': ''not_found_error'',
+    ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTrBAxNrP5h8ZsPsZh6Ay''}'
+- question_id: q9
+  question_number: 9
+  answer: -1
+  correct_answer: 4
+  is_correct: false
+  reasoning: ''
+  time_taken: 0.24
+  points: 4
+  earned_points: 0
+  success: false
+  error: 'Error code: 404 - {''type'': ''error'', ''error'': {''type'': ''not_found_error'',
+    ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTrBAybmyiiTpvXgSf5gK''}'
+- question_id: q10
+  question_number: 10
+  answer: -1
+  correct_answer: 3
+  is_correct: false
+  reasoning: ''
+  time_taken: 0.23
+  points: 4
+  earned_points: 0
+  success: false
+  error: 'Error code: 404 - {''type'': ''error'', ''error'': {''type'': ''not_found_error'',
+    ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTrBAzbJhaNMKEs65zp4m''}'
+- question_id: q11
+  question_number: 11
+  answer: -1
+  correct_answer: 2
+  is_correct: false
+  reasoning: ''
+  time_taken: 0.22
+  points: 4
+  earned_points: 0
+  success: false
+  error: 'Error code: 404 - {''type'': ''error'', ''error'': {''type'': ''not_found_error'',
+    ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTrBB1aLZPoW9m4nTk2NG''}'
+- question_id: q12
+  question_number: 12
+  answer: -1
+  correct_answer: 4
+  is_correct: false
+  reasoning: ''
+  time_taken: 0.24
+  points: 4
+  earned_points: 0
+  success: false
+  error: 'Error code: 404 - {''type'': ''error'', ''error'': {''type'': ''not_found_error'',
+    ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTrBB2X96C5V9FfoLghMi''}'
+- question_id: q13
+  question_number: 13
+  answer: -1
+  correct_answer: 5
+  is_correct: false
+  reasoning: ''
+  time_taken: 0.29
+  points: 4
+  earned_points: 0
+  success: false
+  error: 'Error code: 404 - {''type'': ''error'', ''error'': {''type'': ''not_found_error'',
+    ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTrBB3Xua4VJrZd4bpXaE''}'
+- question_id: q14
+  question_number: 14
+  answer: -1
+  correct_answer: 3
+  is_correct: false
+  reasoning: ''
+  time_taken: 0.24
+  points: 4
+  earned_points: 0
+  success: false
+  error: 'Error code: 404 - {''type'': ''error'', ''error'': {''type'': ''not_found_error'',
+    ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTrBB4rHLjgPbG8dcPawv''}'
+- question_id: q15
+  question_number: 15
+  answer: -1
+  correct_answer: 2
+  is_correct: false
+  reasoning: ''
+  time_taken: 0.27
+  points: 4
+  earned_points: 0
+  success: false
+  error: 'Error code: 404 - {''type'': ''error'', ''error'': {''type'': ''not_found_error'',
+    ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTrBB5ppve5tfShFdbuas''}'
+- question_id: q16
+  question_number: 16
+  answer: -1
+  correct_answer: 3
+  is_correct: false
+  reasoning: ''
+  time_taken: 0.29
+  points: 3
+  earned_points: 0
+  success: false
+  error: 'Error code: 404 - {''type'': ''error'', ''error'': {''type'': ''not_found_error'',
+    ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTrBB6yXq9FcjFHJoVWiQ''}'
+- question_id: q17
+  question_number: 17
+  answer: -1
+  correct_answer: 5
+  is_correct: false
+  reasoning: ''
+  time_taken: 0.24
+  points: 3
+  earned_points: 0
+  success: false
+  error: 'Error code: 404 - {''type'': ''error'', ''error'': {''type'': ''not_found_error'',
+    ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTrBB8EvoM4YhRwvNfGjz''}'
+- question_id: q18
+  question_number: 18
+  answer: -1
+  correct_answer: 3
+  is_correct: false
+  reasoning: ''
+  time_taken: 0.29
+  points: 3
+  earned_points: 0
+  success: false
+  error: 'Error code: 404 - {''type'': ''error'', ''error'': {''type'': ''not_found_error'',
+    ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTrBB9Cj47zkCGPYXKxuX''}'
+- question_id: q19
+  question_number: 19
+  answer: -1
+  correct_answer: 1
+  is_correct: false
+  reasoning: ''
+  time_taken: 0.28
+  points: 3
+  earned_points: 0
+  success: false
+  error: 'Error code: 404 - {''type'': ''error'', ''error'': {''type'': ''not_found_error'',
+    ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTrBBAV7km8wf69mjdf6H''}'
+- question_id: q20
+  question_number: 20
+  answer: -1
+  correct_answer: 4
+  is_correct: false
+  reasoning: ''
+  time_taken: 0.24
+  points: 4
+  earned_points: 0
+  success: false
+  error: 'Error code: 404 - {''type'': ''error'', ''error'': {''type'': ''not_found_error'',
+    ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTrBBBgJXARBsEUXuLBPL''}'
+- question_id: q21
+  question_number: 21
+  answer: -1
+  correct_answer: 3
+  is_correct: false
+  reasoning: ''
+  time_taken: 0.3
+  points: 4
+  earned_points: 0
+  success: false
+  error: 'Error code: 404 - {''type'': ''error'', ''error'': {''type'': ''not_found_error'',
+    ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTrBBChZhDxx4kyCQGoQ4''}'
+- question_id: q22
+  question_number: 22
+  answer: -1
+  correct_answer: 2
+  is_correct: false
+  reasoning: ''
+  time_taken: 0.31
+  points: 4
+  earned_points: 0
+  success: false
+  error: 'Error code: 404 - {''type'': ''error'', ''error'': {''type'': ''not_found_error'',
+    ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTrBBE3vmEaA3wVTCvxgM''}'
+- question_id: q23
+  question_number: 23
+  answer: -1
+  correct_answer: 5
+  is_correct: false
+  reasoning: ''
+  time_taken: 0.31
+  points: 2
+  earned_points: 0
+  success: false
+  error: 'Error code: 404 - {''type'': ''error'', ''error'': {''type'': ''not_found_error'',
+    ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTrBBFHqYCEzfmdLHVrXQ''}'
+- question_id: q24
+  question_number: 24
+  answer: -1
+  correct_answer: 3
+  is_correct: false
+  reasoning: ''
+  time_taken: 0.22
+  points: 3
+  earned_points: 0
+  success: false
+  error: 'Error code: 404 - {''type'': ''error'', ''error'': {''type'': ''not_found_error'',
+    ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTrBBGbDudRUmwwAV6PQA''}'
+- question_id: q25
+  question_number: 25
+  answer: -1
+  correct_answer: 3
+  is_correct: false
+  reasoning: ''
+  time_taken: 0.29
+  points: 3
+  earned_points: 0
+  success: false
+  error: 'Error code: 404 - {''type'': ''error'', ''error'': {''type'': ''not_found_error'',
+    ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTrBBHZGKExvnxmL6DCn3''}'
+- question_id: q26
+  question_number: 26
+  answer: -1
+  correct_answer: 3
+  is_correct: false
+  reasoning: ''
+  time_taken: 0.34
+  points: 3
+  earned_points: 0
+  success: false
+  error: 'Error code: 404 - {''type'': ''error'', ''error'': {''type'': ''not_found_error'',
+    ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTrBBJpRKLgQnXWRn4rBf''}'
+- question_id: q27
+  question_number: 27
+  answer: -1
+  correct_answer: 3
+  is_correct: false
+  reasoning: ''
+  time_taken: 0.28
+  points: 3
+  earned_points: 0
+  success: false
+  error: 'Error code: 404 - {''type'': ''error'', ''error'': {''type'': ''not_found_error'',
+    ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTrBBLEVmGMNjg39fGfSW''}'
+- question_id: q28
+  question_number: 28
+  answer: -1
+  correct_answer: 4
+  is_correct: false
+  reasoning: ''
+  time_taken: 0.23
+  points: 4
+  earned_points: 0
+  success: false
+  error: 'Error code: 404 - {''type'': ''error'', ''error'': {''type'': ''not_found_error'',
+    ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTrBBMUf5iYTLBHVxick5''}'
+- question_id: q29
+  question_number: 29
+  answer: -1
+  correct_answer: 5
+  is_correct: false
+  reasoning: ''
+  time_taken: 0.23
+  points: 4
+  earned_points: 0
+  success: false
+  error: 'Error code: 404 - {''type'': ''error'', ''error'': {''type'': ''not_found_error'',
+    ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTrBBNQxue9frkxoLXKnS''}'
+- question_id: q30
+  question_number: 30
+  answer: -1
+  correct_answer: 4
+  is_correct: false
+  reasoning: ''
+  time_taken: 0.21
+  points: 4
+  earned_points: 0
+  success: false
+  error: 'Error code: 404 - {''type'': ''error'', ''error'': {''type'': ''not_found_error'',
+    ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTrBBPQk89diEHqY6bqP7''}'
+- question_id: q23
+  question_number: 23
+  answer: -1
+  correct_answer: 5
+  is_correct: false
+  reasoning: ''
+  time_taken: 0.35
+  points: 2
+  earned_points: 0
+  success: false
+  error: 'Error code: 404 - {''type'': ''error'', ''error'': {''type'': ''not_found_error'',
+    ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTrBBQMoEKkbWrVttrjh4''}'
+- question_id: q24
+  question_number: 24
+  answer: -1
+  correct_answer: 3
+  is_correct: false
+  reasoning: ''
+  time_taken: 0.23
+  points: 3
+  earned_points: 0
+  success: false
+  error: 'Error code: 404 - {''type'': ''error'', ''error'': {''type'': ''not_found_error'',
+    ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTrBBRq6tRZZj4hkwm5tQ''}'
+- question_id: q25
+  question_number: 25
+  answer: -1
+  correct_answer: 3
+  is_correct: false
+  reasoning: ''
+  time_taken: 0.23
+  points: 3
+  earned_points: 0
+  success: false
+  error: 'Error code: 404 - {''type'': ''error'', ''error'': {''type'': ''not_found_error'',
+    ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTrBBSqcmtRN48wUmM41E''}'
+- question_id: q26
+  question_number: 26
+  answer: -1
+  correct_answer: 3
+  is_correct: false
+  reasoning: ''
+  time_taken: 0.35
+  points: 3
+  earned_points: 0
+  success: false
+  error: 'Error code: 404 - {''type'': ''error'', ''error'': {''type'': ''not_found_error'',
+    ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTrBBTofRfQFNJkkf9oX4''}'
+- question_id: q27
+  question_number: 27
+  answer: -1
+  correct_answer: 3
+  is_correct: false
+  reasoning: ''
+  time_taken: 0.31
+  points: 3
+  earned_points: 0
+  success: false
+  error: 'Error code: 404 - {''type'': ''error'', ''error'': {''type'': ''not_found_error'',
+    ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTrBBVJD2HBp26tDenfTp''}'
+- question_id: q28
+  question_number: 28
+  answer: -1
+  correct_answer: 4
+  is_correct: false
+  reasoning: ''
+  time_taken: 0.21
+  points: 4
+  earned_points: 0
+  success: false
+  error: 'Error code: 404 - {''type'': ''error'', ''error'': {''type'': ''not_found_error'',
+    ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTrBBWbLvthy8V2krchA7''}'
+- question_id: q29
+  question_number: 29
+  answer: -1
+  correct_answer: 5
+  is_correct: false
+  reasoning: ''
+  time_taken: 0.24
+  points: 4
+  earned_points: 0
+  success: false
+  error: 'Error code: 404 - {''type'': ''error'', ''error'': {''type'': ''not_found_error'',
+    ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTrBBXWQtT753eyykD3UQ''}'
+- question_id: q30
+  question_number: 30
+  answer: -1
+  correct_answer: 4
+  is_correct: false
+  reasoning: ''
+  time_taken: 0.23
+  points: 4
+  earned_points: 0
+  success: false
+  error: 'Error code: 404 - {''type'': ''error'', ''error'': {''type'': ''not_found_error'',
+    ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTrBBYXRwvbVUS4dWBcFa''}'
+- question_id: q23
+  question_number: 23
+  answer: -1
+  correct_answer: 5
+  is_correct: false
+  reasoning: ''
+  time_taken: 0.21
+  points: 2
+  earned_points: 0
+  success: false
+  error: 'Error code: 404 - {''type'': ''error'', ''error'': {''type'': ''not_found_error'',
+    ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTrBBZXCnukUoxTE7xu4E''}'
+- question_id: q24
+  question_number: 24
+  answer: -1
+  correct_answer: 3
+  is_correct: false
+  reasoning: ''
+  time_taken: 0.3
+  points: 3
+  earned_points: 0
+  success: false
+  error: 'Error code: 404 - {''type'': ''error'', ''error'': {''type'': ''not_found_error'',
+    ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTrBBaT1hrWn5gVnzDwRE''}'
+- question_id: q25
+  question_number: 25
+  answer: -1
+  correct_answer: 3
+  is_correct: false
+  reasoning: ''
+  time_taken: 0.23
+  points: 3
+  earned_points: 0
+  success: false
+  error: 'Error code: 404 - {''type'': ''error'', ''error'': {''type'': ''not_found_error'',
+    ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTrBBbgvxn5g1Yz7jk7uc''}'
+- question_id: q26
+  question_number: 26
+  answer: -1
+  correct_answer: 3
+  is_correct: false
+  reasoning: ''
+  time_taken: 0.22
+  points: 3
+  earned_points: 0
+  success: false
+  error: 'Error code: 404 - {''type'': ''error'', ''error'': {''type'': ''not_found_error'',
+    ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTrBBcfDVQSjkUsRDow1H''}'
+- question_id: q27
+  question_number: 27
+  answer: -1
+  correct_answer: 3
+  is_correct: false
+  reasoning: ''
+  time_taken: 0.23
+  points: 3
+  earned_points: 0
+  success: false
+  error: 'Error code: 404 - {''type'': ''error'', ''error'': {''type'': ''not_found_error'',
+    ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTrBBdeFVxvvddn7iMBD2''}'
+- question_id: q28
+  question_number: 28
+  answer: -1
+  correct_answer: 4
+  is_correct: false
+  reasoning: ''
+  time_taken: 0.27
+  points: 4
+  earned_points: 0
+  success: false
+  error: 'Error code: 404 - {''type'': ''error'', ''error'': {''type'': ''not_found_error'',
+    ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTrBBednTDFzDiYCYXihp''}'
+- question_id: q29
+  question_number: 29
+  answer: -1
+  correct_answer: 5
+  is_correct: false
+  reasoning: ''
+  time_taken: 0.22
+  points: 4
+  earned_points: 0
+  success: false
+  error: 'Error code: 404 - {''type'': ''error'', ''error'': {''type'': ''not_found_error'',
+    ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTrBBfkFgmuxfraZAfyo2''}'
+- question_id: q30
+  question_number: 30
+  answer: -1
+  correct_answer: 4
+  is_correct: false
+  reasoning: ''
+  time_taken: 0.22
+  points: 4
+  earned_points: 0
+  success: false
+  error: 'Error code: 404 - {''type'': ''error'', ''error'': {''type'': ''not_found_error'',
+    ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTrBBggK6k3Yhwx48N1zM''}'

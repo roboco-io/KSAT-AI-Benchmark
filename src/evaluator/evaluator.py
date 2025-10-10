@@ -265,6 +265,9 @@ class Evaluator:
                 'success': False,
                 'error': '듣기 평가 문제는 평가하지 않음'
             }
+            # subject_type 추가
+            if 'subject_type' in question:
+                result['subject_type'] = question['subject_type']
             if self.logger:
                 self.logger.info(f"문제 {q_num}번: 듣기 평가 문제 스킵")
             return result
@@ -293,6 +296,10 @@ class Evaluator:
             'success': response.success,
             'error': response.error
         }
+
+        # subject_type 추가 (선택과목 정보)
+        if 'subject_type' in question:
+            result['subject_type'] = question['subject_type']
 
         # 디버그 로그 출력
         self._log_question_debug(question, response, result)

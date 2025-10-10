@@ -1,0 +1,550 @@
+exam_id: 2025-math-sat
+exam_title: 2025학년도 수능 MATH
+subject: math
+model_name: gpt-5
+evaluated_at: '2025-10-06T23:38:53.297832'
+summary:
+  total_questions: 46
+  correct_answers: 8
+  accuracy: 17.39
+  total_score: 23
+  max_score: 152
+  score_rate: 15.13
+results:
+- question_id: q1
+  question_number: 1
+  answer: 5
+  correct_answer: 5
+  is_correct: true
+  reasoning: 25^{1/2}=5이므로 식은 √5×5=5√5=√125≈11.18이다. 따라서 선택지 1~5 중 일치하는 값이 없어 주어진
+    보기에는 정답이 존재하지 않는다.
+  time_taken: 18.51
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
+- question_id: q2
+  question_number: 2
+  answer: 4
+  correct_answer: 4
+  is_correct: true
+  reasoning: 도함수의 정의에 의해 lim_{h→0} (f(2+h)-f(2))/h = f'(2)이다. f'(x)=2x-8이므로 f'(2)=4-8=-4.
+    직접 전개해도 f(2+h)=4+4h+h^2-16-8h+7=-5-4h+h^2이므로 (f(2+h)-f(2))/h=(-4+h)→-4. 따라서 값은
+    -4인데 제시된 보기에는 해당 값이 없어 선택지 오류가 있다.
+  time_taken: 27.38
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
+- question_id: q3
+  question_number: 3
+  answer: 5
+  correct_answer: 5
+  is_correct: true
+  reasoning: 첫째항과 공비가 모두 k이므로 a_n = k^n이다. 따라서 a_4/a_2 = k^4/k^2 = k^2, a_2/a_1 =
+    k^2/k = k이므로 k^2 + k = 30이 된다. 이를 풀면 k^2 + k - 30 = 0 → (k - 5)(k + 6) = 0이므로
+    양수 조건에서 k = 5이다.
+  time_taken: 7.56
+  points: 3
+  earned_points: 3
+  success: true
+  error: null
+- question_id: q4
+  question_number: 4
+  answer: 2
+  correct_answer: 2
+  is_correct: true
+  reasoning: 연속이 되려면 경계점 x = -2에서 좌극한과 f(-2)가 같아야 한다. 좌극한은 5(-2)+a = -10+a, f(-2)(=우극한)는
+    (-2)^2 - a = 4 - a. 두 값을 같게 하면 -10 + a = 4 - a ⇒ 2a = 14 ⇒ a = 7. 따라서 정답은 2이다.
+  time_taken: 5.86
+  points: 3
+  earned_points: 3
+  success: true
+  error: null
+- question_id: q5
+  question_number: 5
+  answer: 4
+  correct_answer: 3
+  is_correct: false
+  reasoning: 곱의 미분법을 사용하면 f'(x) = (x^2+1)'(3x^2 - x) + (x^2+1)(3x^2 - x)' = (2x)(3x^2
+    - x) + (x^2+1)(6x - 1). x=1을 대입하면 g(1)=2, h(1)=2, g'(1)=2, h'(1)=5이므로 f'(1) =
+    2*2 + 2*5 = 4 + 10 = 14.
+  time_taken: 4.83
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q6
+  question_number: 6
+  answer: 1
+  correct_answer: 5
+  is_correct: false
+  reasoning: cos(π/2+θ) = -sinθ 이므로 -sinθ = -1/5 → sinθ = 1/5. 또한 1 - cos^2θ = sin^2θ
+    이므로 식은 -sinθ / sin^2θ = -1/sinθ = -1/(1/5) = -5. 따라서 1번이다.
+  time_taken: 11.05
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q7
+  question_number: 7
+  answer: 2
+  correct_answer: 3
+  is_correct: false
+  reasoning: 정적분 F(x)=∫_0^x f(t)dt=3x^2+2x 이므로, 미분하면 f(x)=F′(x)=6x+2. 따라서 f(1)=6·1+2=8이다.
+    그러나 보기에는 8이 없으므로 출제 오류이며 정답 없음이 맞다. (선택지 표기는 불가피하게 2로 표시함)
+  time_taken: 28.0
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q8
+  question_number: 8
+  answer: -1
+  correct_answer: 1
+  is_correct: false
+  reasoning: 빈 응답
+  time_taken: 32.36
+  points: 3
+  earned_points: 0
+  success: false
+  error: 모델이 빈 응답을 반환했습니다
+- question_id: q9
+  question_number: 9
+  answer: -1
+  correct_answer: 4
+  is_correct: false
+  reasoning: 빈 응답
+  time_taken: 41.69
+  points: 4
+  earned_points: 0
+  success: false
+  error: 모델이 빈 응답을 반환했습니다
+- question_id: q10
+  question_number: 10
+  answer: 3
+  correct_answer: 3
+  is_correct: true
+  reasoning: f(x)=a cos(bx)+3의 최댓값은 cos의 최댓값 1에서 a+3이 된다. 주어진 최댓값이 13이므로 a+3=13에서
+    a=10. x=π/3에서 최댓값을 가지려면 f(π/3)=a+3이어야 하므로 cos(bπ/3)=1이어야 한다. 이는 bπ/3=2kπ (k∈Z)
+    즉 b=6k를 의미하며 자연수 b의 최솟값은 6이다. 따라서 a+b=10+6=16.
+  time_taken: 19.17
+  points: 4
+  earned_points: 4
+  success: true
+  error: null
+- question_id: q11
+  question_number: 11
+  answer: -1
+  correct_answer: 2
+  is_correct: false
+  reasoning: 빈 응답
+  time_taken: 24.44
+  points: 4
+  earned_points: 0
+  success: false
+  error: 모델이 빈 응답을 반환했습니다
+- question_id: q12
+  question_number: 12
+  answer: -1
+  correct_answer: 4
+  is_correct: false
+  reasoning: 빈 응답
+  time_taken: 19.8
+  points: 4
+  earned_points: 0
+  success: false
+  error: 모델이 빈 응답을 반환했습니다
+- question_id: q13
+  question_number: 13
+  answer: -1
+  correct_answer: 5
+  is_correct: false
+  reasoning: 빈 응답
+  time_taken: 25.42
+  points: 4
+  earned_points: 0
+  success: false
+  error: 모델이 빈 응답을 반환했습니다
+- question_id: q14
+  question_number: 14
+  answer: -1
+  correct_answer: 3
+  is_correct: false
+  reasoning: 빈 응답
+  time_taken: 26.29
+  points: 4
+  earned_points: 0
+  success: false
+  error: 모델이 빈 응답을 반환했습니다
+- question_id: q15
+  question_number: 15
+  answer: -1
+  correct_answer: 2
+  is_correct: false
+  reasoning: 빈 응답
+  time_taken: 27.17
+  points: 4
+  earned_points: 0
+  success: false
+  error: 모델이 빈 응답을 반환했습니다
+- question_id: q16
+  question_number: 16
+  answer: 5
+  correct_answer: 3
+  is_correct: false
+  reasoning: 로그의 정의역에서 x-3>0, 3x-5>0이므로 x>3. 양변의 밑이 같은 로그이므로 진수끼리 같아야 하여 x-3=3x-5
+    → 2=2x → x=1. 그러나 x=1은 x>3을 만족하지 않으므로 정의역 밖이어서 해가 없다.
+  time_taken: 11.67
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q17
+  question_number: 17
+  answer: 3
+  correct_answer: 5
+  is_correct: false
+  reasoning: f'(x)=9x^2+4x-1을 적분하면 f(x)=3x^3+2x^2-x+C. f(1)=6이므로 3+2-1+C=6 → 4+C=6
+    → C=2. 따라서 f(2)=3·8+2·4-2+2=24+8=32. 선택지가 제시되지 않아 번호는 특정할 수 없으나 값은 32이므로 그에 해당하는
+    번호를 고르면 된다.
+  time_taken: 17.5
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q18
+  question_number: 18
+  answer: 1
+  correct_answer: 3
+  is_correct: false
+  reasoning: 모든 n에 대해 a_{n+1}=12-a_n 이므로 수열은 두 항씩 12를 이루는 주기 2의 형태(홀수항 x, 짝수항 12−x)이다.
+    따라서 (a_1+a_2)+...+(a_15+a_16)=8×12=96. 보기가 제시되지 않아 번호는 특정할 수 없으며, 정답 값은 96에 해당하는
+    번호를 선택해야 한다.
+  time_taken: 14.71
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q19
+  question_number: 19
+  answer: -1
+  correct_answer: 1
+  is_correct: false
+  reasoning: 빈 응답
+  time_taken: 24.41
+  points: 3
+  earned_points: 0
+  success: false
+  error: 모델이 빈 응답을 반환했습니다
+- question_id: q20
+  question_number: 20
+  answer: -1
+  correct_answer: 4
+  is_correct: false
+  reasoning: 빈 응답
+  time_taken: 23.36
+  points: 4
+  earned_points: 0
+  success: false
+  error: 모델이 빈 응답을 반환했습니다
+- question_id: q21
+  question_number: 21
+  answer: 1
+  correct_answer: 3
+  is_correct: false
+  reasoning: 문제의 핵심 조건과 선택지가 누락되어 있어 a, b에 대한 제약을 알 수 없고, c의 값도 결정되지 않아 f(1)=1+a+b+c의
+    최댓값을 구할 수 없습니다. 일반적으로 제약이 없다면 f(1)은 상한이 없어 최댓값이 존재하지 않습니다. 극값, 근의 조건, 그래프 조건 등
+    구체적 제약과 선택지를 제공해 주셔야 합니다.
+  time_taken: 14.5
+  points: 4
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q22
+  question_number: 22
+  answer: 1
+  correct_answer: 2
+  is_correct: false
+  reasoning: '수열을 규정하는 ‘다음 조건’(예: 점화식, 관계식, 제약)과 선택지가 누락되어 있어 |a1|의 가능한 값을 판정하거나 그
+    합을 계산할 수 없습니다. 누락된 조건과 선택지를 제공해 주시면 경우를 분류하여 |a1|의 합을 구해 정확한 보기 번호를 제시하겠습니다.'
+  time_taken: 13.51
+  points: 4
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q23
+  question_number: 23
+  answer: -1
+  correct_answer: 5
+  is_correct: false
+  reasoning: 빈 응답
+  time_taken: 48.96
+  points: 2
+  earned_points: 0
+  success: false
+  error: 모델이 빈 응답을 반환했습니다
+- question_id: q24
+  question_number: 24
+  answer: -1
+  correct_answer: 3
+  is_correct: false
+  reasoning: 빈 응답
+  time_taken: 23.47
+  points: 3
+  earned_points: 0
+  success: false
+  error: 모델이 빈 응답을 반환했습니다
+- question_id: q25
+  question_number: 25
+  answer: 1
+  correct_answer: 3
+  is_correct: false
+  reasoning: 모분산이 알려진 경우, 표본평균의 95% 신뢰구간은 x̄ ± z_{0.975}·(σ/√n)이다. 여기서 σ=2, n=256이므로
+    표준오차는 2/16=0.125. 따라서 신뢰구간의 길이는 2·1.96·0.125=0.49. 보기들은 100배 스케일로 제시되어 있으므로 0.49에
+    해당하는 49가 정답이다.
+  time_taken: 10.83
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q26
+  question_number: 26
+  answer: 3
+  correct_answer: 3
+  is_correct: true
+  reasoning: 선택한 3명 중에서 적어도 한 명이 과목 B인 확률은 여사건을 이용하여 1 - 모두 A일 확률로 구한다. 전체 경우의 수는
+    16명 중 3명 선택이므로 C(16,3)=560, 모두 A인 경우는 9명 중 3명 선택이므로 C(9,3)=84이다. 따라서 확률은 1 - 84/560
+    = 1 - 3/20 = 17/20이므로 선택지는 3이다.
+  time_taken: 5.39
+  points: 3
+  earned_points: 3
+  success: true
+  error: null
+- question_id: q27
+  question_number: 27
+  answer: 3
+  correct_answer: 3
+  is_correct: true
+  reasoning: 한 번 뽑은 값 Y는 {1,3,5,7,9}에서 균등이므로 평균은 5, 분산은 ((1−5)^2+(3−5)^2+(5−5)^2+(7−5)^2+(9−5)^2)/5=40/5=8이다.
+    X는 3번 평균이므로 V(X)=V(Y)/3=8/3. 상수를 더해도 분산은 변하지 않고 배수는 제곱배이므로 V(αX+6)=α^2 V(X)=24
+    ⇒ α^2·8/3=24 ⇒ α^2=9 ⇒ α=3(양수).
+  time_taken: 12.13
+  points: 3
+  earned_points: 3
+  success: true
+  error: null
+- question_id: q28
+  question_number: 28
+  answer: -1
+  correct_answer: 4
+  is_correct: false
+  reasoning: 빈 응답
+  time_taken: 22.74
+  points: 4
+  earned_points: 0
+  success: false
+  error: 모델이 빈 응답을 반환했습니다
+- question_id: q29
+  question_number: 29
+  answer: -1
+  correct_answer: 5
+  is_correct: false
+  reasoning: 빈 응답
+  time_taken: 30.65
+  points: 4
+  earned_points: 0
+  success: false
+  error: 모델이 빈 응답을 반환했습니다
+- question_id: q30
+  question_number: 30
+  answer: -1
+  correct_answer: 4
+  is_correct: false
+  reasoning: 빈 응답
+  time_taken: 25.55
+  points: 4
+  earned_points: 0
+  success: false
+  error: 모델이 빈 응답을 반환했습니다
+- question_id: q23
+  question_number: 23
+  answer: 3
+  correct_answer: 5
+  is_correct: false
+  reasoning: x→0에서 sin x ~ x 이므로 sin^2 x ~ x^2이다. 따라서 3x^2/sin^2 x = 3·(x^2/sin^2
+    x) → 3·1 = 3. 보다 엄밀히, lim_{x→0}(sin x/x) = 1 이므로 (x/sin x)^2 → 1 이고 전체 극한값은 3이다.
+  time_taken: 7.93
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q24
+  question_number: 24
+  answer: 4
+  correct_answer: 3
+  is_correct: false
+  reasoning: (x+2)/(x+1)=1+1/(x+1)로 분해하면 ∫_0^{10}1 dx + ∫_0^{10}1/(x+1) dx가 된다. 첫
+    항은 10이고, 둘째 항은 [ln(x+1)]_0^{10}=ln(11)-ln(1)=ln 11이므로 합은 10+ln 11이다.
+  time_taken: 5.69
+  points: 3
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q25
+  question_number: 25
+  answer: -1
+  correct_answer: 3
+  is_correct: false
+  reasoning: 빈 응답
+  time_taken: 22.73
+  points: 3
+  earned_points: 0
+  success: false
+  error: 모델이 빈 응답을 반환했습니다
+- question_id: q26
+  question_number: 26
+  answer: -1
+  correct_answer: 3
+  is_correct: false
+  reasoning: 빈 응답
+  time_taken: 25.37
+  points: 3
+  earned_points: 0
+  success: false
+  error: 모델이 빈 응답을 반환했습니다
+- question_id: q27
+  question_number: 27
+  answer: -1
+  correct_answer: 3
+  is_correct: false
+  reasoning: 빈 응답
+  time_taken: 21.63
+  points: 3
+  earned_points: 0
+  success: false
+  error: 모델이 빈 응답을 반환했습니다
+- question_id: q28
+  question_number: 28
+  answer: -1
+  correct_answer: 4
+  is_correct: false
+  reasoning: 빈 응답
+  time_taken: 23.17
+  points: 4
+  earned_points: 0
+  success: false
+  error: 모델이 빈 응답을 반환했습니다
+- question_id: q29
+  question_number: 29
+  answer: -1
+  correct_answer: 5
+  is_correct: false
+  reasoning: 빈 응답
+  time_taken: 21.98
+  points: 4
+  earned_points: 0
+  success: false
+  error: 모델이 빈 응답을 반환했습니다
+- question_id: q30
+  question_number: 30
+  answer: -1
+  correct_answer: 4
+  is_correct: false
+  reasoning: 빈 응답
+  time_taken: 25.2
+  points: 4
+  earned_points: 0
+  success: false
+  error: 모델이 빈 응답을 반환했습니다
+- question_id: q23
+  question_number: 23
+  answer: 3
+  correct_answer: 5
+  is_correct: false
+  reasoning: a=(b, 3), b=(1, 2)이므로 a+3b=(b,3)+3(1,2)=(b+3, 9). 이것이 (6, 9)와 같으려면 첫째
+    성분에서 b+3=6이므로 b=3이다. 따라서 정답은 3이다.
+  time_taken: 5.06
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q24
+  question_number: 24
+  answer: -1
+  correct_answer: 3
+  is_correct: false
+  reasoning: 빈 응답
+  time_taken: 32.83
+  points: 3
+  earned_points: 0
+  success: false
+  error: 모델이 빈 응답을 반환했습니다
+- question_id: q25
+  question_number: 25
+  answer: 3
+  correct_answer: 3
+  is_correct: true
+  reasoning: '내분 공식: AB를 3:2로 내분하는 점 P는 P=((2a+3(-4))/5, (2b+3(-2))/5, (2·6+3c)/5).
+    P가 z축 위이므로 x=0, y=0 ⇒ 2a−12=0에서 a=6, 2b−6=0에서 b=3. 외분 공식: AB를 3:2로 외분하는 점 Q는 Q=(3(-4)−2a,
+    3(-2)−2b, 3c−2·6). Q가 xy평면 위이므로 z=0 ⇒ 3c−12=0에서 c=4. 따라서 a+b+c=6+3+4=13.'
+  time_taken: 12.75
+  points: 3
+  earned_points: 3
+  success: true
+  error: null
+- question_id: q26
+  question_number: 26
+  answer: -1
+  correct_answer: 3
+  is_correct: false
+  reasoning: 빈 응답
+  time_taken: 27.28
+  points: 3
+  earned_points: 0
+  success: false
+  error: 모델이 빈 응답을 반환했습니다
+- question_id: q27
+  question_number: 27
+  answer: -1
+  correct_answer: 3
+  is_correct: false
+  reasoning: 빈 응답
+  time_taken: 29.48
+  points: 3
+  earned_points: 0
+  success: false
+  error: 모델이 빈 응답을 반환했습니다
+- question_id: q28
+  question_number: 28
+  answer: -1
+  correct_answer: 4
+  is_correct: false
+  reasoning: 빈 응답
+  time_taken: 53.26
+  points: 4
+  earned_points: 0
+  success: false
+  error: 모델이 빈 응답을 반환했습니다
+- question_id: q29
+  question_number: 29
+  answer: -1
+  correct_answer: 5
+  is_correct: false
+  reasoning: 빈 응답
+  time_taken: 28.68
+  points: 4
+  earned_points: 0
+  success: false
+  error: 모델이 빈 응답을 반환했습니다
+- question_id: q30
+  question_number: 30
+  answer: -1
+  correct_answer: 4
+  is_correct: false
+  reasoning: 빈 응답
+  time_taken: 33.3
+  points: 4
+  earned_points: 0
+  success: false
+  error: 모델이 빈 응답을 반환했습니다

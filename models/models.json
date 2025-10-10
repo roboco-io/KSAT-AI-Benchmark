@@ -122,11 +122,11 @@
       "enabled": false
     },
     {
-      "name": "solar-pro",
+      "name": "solar-pro-2",
       "provider": "upstage",
-      "model_id": "solar-pro",
-      "version": "2024-01",
-      "description": "Upstage Solar Pro - 한국어 특화 모델",
+      "model_id": "solar-pro2",
+      "version": "2025-09-09",
+      "description": "Upstage Solar Pro 2 - 31B 파라미터, 하이브리드 모드(Chat/Reasoning), 한국어 특화, 고도화된 추론 능력",
       "api_key_env": "UPSTAGE_API_KEY",
       "max_tokens": 4096,
       "temperature": 0.3,
