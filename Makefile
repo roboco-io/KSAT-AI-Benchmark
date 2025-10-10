@@ -1,5 +1,8 @@
 .PHONY: help install parse-korean parse-math parse-english parse-all answers-korean answers-math answers-all clean test lint
 
+# 기본 타겟 설정
+.DEFAULT_GOAL := help
+
 # 기본 타겟
 help:
 	@echo "KSAT AI Benchmark - Makefile Commands"
@@ -43,8 +46,8 @@ help:
 	@echo "🚀 유연한 평가 시스템 (NEW!):"
 	@echo "  make <모델> <연도> <과목>"
 	@echo ""
-	@echo "  모델: gpt-5, gpt-4o, claude-opus-4-1, claude-3-5-sonnet,"
-	@echo "        gemini-2.5-pro, all"
+	@echo "  모델: gpt-5, gpt-4o, claude-opus-4-1, gemini-2.5-pro,"
+	@echo "        solar-pro, sonar-pro, all"
 	@echo "  연도: 2025, 2024, all"
 	@echo "  과목: korean, math, english, korean,math (콤마로 여러개), all"
 	@echo ""
@@ -290,7 +293,7 @@ summary-year:
 
 # 사용법:
 #   make <모델> <연도> <과목>
-#   - 모델: gpt-5, gpt-4o, claude-opus-4-1, claude-3-5-sonnet, gemini-2.5-pro, all
+#   - 모델: gpt-5, gpt-4o, claude-opus-4-1, gemini-2.5-pro, solar-pro, sonar-pro, all
 #   - 연도: 2025, 2024, all
 #   - 과목: korean, math, english, korean,math, all
 #
@@ -306,7 +309,7 @@ DEFAULT_SUBJECTS := all
 DEFAULT_MODEL := gpt-4o
 
 # 모델별 타겟 정의
-.PHONY: gpt-5 gpt-4o claude-opus-4-1 claude-3-5-sonnet gemini-2.5-pro all-models
+.PHONY: gpt-5 gpt-4o claude-opus-4-1 gemini-2.5-pro solar-pro sonar-pro all-models
 
 # 개별 모델 타겟
 gpt-5:
@@ -318,11 +321,14 @@ gpt-4o:
 claude-opus-4-1:
 	@$(MAKE) run-evaluation MODEL_NAME=claude-opus-4-1 YEAR=$(word 2,$(MAKECMDGOALS)) SUBJECTS=$(word 3,$(MAKECMDGOALS))
 
-claude-3-5-sonnet:
-	@$(MAKE) run-evaluation MODEL_NAME=claude-3-5-sonnet YEAR=$(word 2,$(MAKECMDGOALS)) SUBJECTS=$(word 3,$(MAKECMDGOALS))
-
 gemini-2.5-pro:
 	@$(MAKE) run-evaluation MODEL_NAME=gemini-2.5-pro YEAR=$(word 2,$(MAKECMDGOALS)) SUBJECTS=$(word 3,$(MAKECMDGOALS))
+
+solar-pro:
+	@$(MAKE) run-evaluation MODEL_NAME=solar-pro YEAR=$(word 2,$(MAKECMDGOALS)) SUBJECTS=$(word 3,$(MAKECMDGOALS))
+
+sonar-pro:
+	@$(MAKE) run-evaluation MODEL_NAME=sonar-pro YEAR=$(word 2,$(MAKECMDGOALS)) SUBJECTS=$(word 3,$(MAKECMDGOALS))
 
 # 모든 모델 실행
 all-models:
@@ -364,7 +370,7 @@ run-evaluation:
 		YEARS="$$EVAL_YEAR"; \
 	fi; \
 	if [ "$$EVAL_MODEL" = "all" ]; then \
-		MODELS="gpt-5 gpt-4o claude-opus-4-1 claude-3-5-sonnet gemini-2.5-pro"; \
+		MODELS="gpt-5 gpt-4o claude-opus-4-1 gemini-2.5-pro solar-pro sonar-pro"; \
 	else \
 		MODELS="$$EVAL_MODEL"; \
 	fi; \
@@ -410,8 +416,9 @@ run-evaluation:
 		python src/evaluator/summary.py 2>/dev/null || echo "   (summary.py 실행 실패)"; \
 	fi
 
-# Make가 인자를 타겟으로 인식하지 않도록 처리
-%:
+# 유효한 연도 및 과목 인자 (타겟으로 인식되지만 아무것도 하지 않음)
+.PHONY: 2025 2024 korean math english
+2025 2024 korean math english:
 	@:
 
 # =============================================================================
