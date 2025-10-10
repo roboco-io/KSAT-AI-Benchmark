@@ -95,21 +95,56 @@ def export_to_json():
         model_map[model_name].append(result)
     
     # 과목별로 결과 분류
-    def create_leaderboard(model_map_filtered):
-        """주어진 모델 맵으로 리더보드 생성"""
+    def create_leaderboard(model_map_filtered, subject=None):
+        """주어진 모델 맵으로 리더보드 생성
+
+        Args:
+            model_map_filtered: 모델별 결과 맵
+            subject: 과목 (영어의 경우 듣기 평가 제외 처리)
+        """
         board = []
         for model_name, model_results in model_map_filtered.items():
             if not model_results:
                 continue
 
-            total_questions = sum(r['summary']['total_questions'] for r in model_results)
-            correct_answers = sum(r['summary']['correct_answers'] for r in model_results)
-            total_score = sum(r['summary']['total_score'] for r in model_results)
-            max_score = sum(r['summary']['max_score'] for r in model_results)
-            total_time = sum(
-                sum(q['time_taken'] for q in r['results'])
-                for r in model_results
-            )
+            # 영어 과목의 경우 듣기 평가 제외 (question_number <= 15)
+            if subject == 'english':
+                reading_results = []
+                for r in model_results:
+                    reading_questions = [q for q in r['results'] if q['question_number'] >= 16]
+                    if reading_questions:
+                        total_questions = len(reading_questions)
+                        correct_answers = sum(1 for q in reading_questions if q['is_correct'])
+                        total_score = sum(q['earned_points'] for q in reading_questions)
+                        max_score = sum(q['points'] for q in reading_questions)
+                        total_time = sum(q['time_taken'] for q in reading_questions)
+
+                        reading_results.append({
+                            'total_questions': total_questions,
+                            'correct_answers': correct_answers,
+                            'total_score': total_score,
+                            'max_score': max_score,
+                            'total_time': total_time
+                        })
+
+                if not reading_results:
+                    continue
+
+                total_questions = sum(r['total_questions'] for r in reading_results)
+                correct_answers = sum(r['correct_answers'] for r in reading_results)
+                total_score = sum(r['total_score'] for r in reading_results)
+                max_score = sum(r['max_score'] for r in reading_results)
+                total_time = sum(r['total_time'] for r in reading_results)
+            else:
+                # 다른 과목은 기존 로직
+                total_questions = sum(r['summary']['total_questions'] for r in model_results)
+                correct_answers = sum(r['summary']['correct_answers'] for r in model_results)
+                total_score = sum(r['summary']['total_score'] for r in model_results)
+                max_score = sum(r['summary']['max_score'] for r in model_results)
+                total_time = sum(
+                    sum(q['time_taken'] for q in r['results'])
+                    for r in model_results
+                )
 
             accuracy = (correct_answers / total_questions * 100) if total_questions > 0 else 0
             score_rate = (total_score / max_score * 100) if max_score > 0 else 0
@@ -122,6 +157,7 @@ def export_to_json():
                 'total_score': total_score,
                 'max_score': max_score,
                 'correct_answers': correct_answers,
+                'total_questions': total_questions,  # 총 문제 수 추가
                 'avg_time': round(avg_time, 2),
                 'exams_count': len(model_results),
             })
@@ -142,7 +178,7 @@ def export_to_json():
                 subject_model_map[model_name] = subject_results
 
         if subject_model_map:
-            subject_leaderboards[subject] = create_leaderboard(subject_model_map)
+            subject_leaderboards[subject] = create_leaderboard(subject_model_map, subject=subject)
     
     # 통계
     total_exams = len(results)
