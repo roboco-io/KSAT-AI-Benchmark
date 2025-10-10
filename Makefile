@@ -1,4 +1,4 @@
-.PHONY: help install parse-korean parse-math parse-english parse-all answers-korean answers-math answers-all clean test lint
+.PHONY: help install parse-korean parse-math parse-english parse-all answers-korean answers-math answers-all clean test lint model models
 
 # 기본 타겟 설정
 .DEFAULT_GOAL := help
@@ -10,6 +10,7 @@ help:
 	@echo "📦 설치 및 환경 설정:"
 	@echo "  make install          - Python 의존성 설치"
 	@echo "  make env              - 환경변수 파일 생성"
+	@echo "  make model            - 사용 가능한 모델 목록 표시"
 	@echo ""
 	@echo "📄 문제지 파싱 (한 번만 실행):"
 	@echo "  make parse-korean     - 국어 문제지 파싱 (텍스트)"
@@ -105,6 +106,19 @@ env:
 	else \
 		echo "⚠️  .env 파일이 이미 존재합니다."; \
 	fi
+
+model models:
+	@echo "🤖 사용 가능한 모델 목록"
+	@echo "========================================"
+	@python -c "import json; data = json.load(open('models/models.json')); enabled = [m for m in data['models'] if m.get('enabled', False)]; print('\n'.join(['  - {} ({})'.format(m['name'], m['provider']) for m in enabled]))"
+	@echo ""
+	@echo "사용법:"
+	@echo "  make <모델> <연도> <과목>"
+	@echo ""
+	@echo "예시:"
+	@echo "  make gpt-5 2025 korean"
+	@echo "  make claude-opus-4-1 2025 korean,math"
+	@echo "  make all 2025 all"
 
 # =============================================================================
 # 문제지 파싱 (PDF → YAML)
