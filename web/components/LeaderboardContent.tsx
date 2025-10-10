@@ -122,6 +122,7 @@ export function LeaderboardContent() {
     website: modelWebsites[entry.model_name] || '#',
     accuracy: entry.accuracy,
     examsCount: entry.exams_count,
+    avgTime: entry.avg_time,
   }));
 
   // 과목별 리더보드 렌더링 함수
@@ -160,7 +161,7 @@ export function LeaderboardContent() {
                     <div>
                       <Text fw={600} size="lg">{entry.model_name}</Text>
                       <Text size="sm" c="dimmed">
-                        정답률 {entry.accuracy.toFixed(1)}% · {entry.exams_count}개 시험
+                        정답률 {entry.accuracy.toFixed(1)}% · {entry.exams_count}개 시험 · 평균 {entry.avg_time?.toFixed(2)}초
                       </Text>
                     </div>
                   </Group>
@@ -187,7 +188,8 @@ export function LeaderboardContent() {
                             <Text fw={600} size="lg">{result.exam_title}</Text>
                             <Text size="sm" c="dimmed">
                               정답률: {result.summary.accuracy.toFixed(1)}% ·
-                              점수: {result.summary.total_score}/{result.summary.max_score}점
+                              점수: {result.summary.total_score}/{result.summary.max_score}점 ·
+                              평균 {(result.results.reduce((sum: number, q: any) => sum + q.time_taken, 0) / result.results.length).toFixed(2)}초
                             </Text>
                           </div>
 
@@ -330,7 +332,7 @@ export function LeaderboardContent() {
                               정답률: {result.summary.accuracy.toFixed(1)}% ({result.summary.correct_answers}개 정답)
                             </Text>
                             <Text size="sm" c="dimmed">
-                              점수: {result.summary.total_score}/{result.summary.max_score}점
+                              점수: {result.summary.total_score}/{result.summary.max_score}점 · 평균 {(result.results.reduce((sum: number, q: any) => sum + q.time_taken, 0) / result.results.length).toFixed(2)}초
                             </Text>
                           </Group>
                         </Stack>
@@ -528,7 +530,7 @@ export function LeaderboardContent() {
                             <div>
                               <Text fw={600} size="lg">{entry.model_name}</Text>
                               <Text size="sm" c="dimmed">
-                                정답률 {entry.accuracy.toFixed(1)}% · {entry.exams_count}개 시험
+                                정답률 {entry.accuracy.toFixed(1)}% · {entry.exams_count}개 시험 · 평균 {entry.avg_time?.toFixed(2)}초
                               </Text>
                             </div>
                           </Group>
@@ -555,7 +557,8 @@ export function LeaderboardContent() {
                                     <Text fw={600} size="lg">{result.exam_title}</Text>
                                     <Text size="sm" c="dimmed">
                                       정답률: {result.summary.accuracy.toFixed(1)}% ·
-                                      점수: {result.summary.total_score}/{result.summary.max_score}점
+                                      점수: {result.summary.total_score}/{result.summary.max_score}점 ·
+                                      평균 {(result.results.reduce((sum: number, q: any) => sum + q.time_taken, 0) / result.results.length).toFixed(2)}초
                                     </Text>
                                   </div>
 
@@ -698,7 +701,7 @@ export function LeaderboardContent() {
                                       정답률: {result.summary.accuracy.toFixed(1)}% ({result.summary.correct_answers}개 정답)
                                     </Text>
                                     <Text size="sm" c="dimmed">
-                                      점수: {result.summary.total_score}/{result.summary.max_score}점
+                                      점수: {result.summary.total_score}/{result.summary.max_score}점 · 평균 {(result.results.reduce((sum: number, q: any) => sum + q.time_taken, 0) / result.results.length).toFixed(2)}초
                                     </Text>
                                   </Group>
                                 </Stack>
@@ -741,6 +744,7 @@ export function LeaderboardContent() {
                   <Table.Tr>
                     <Table.Th>모델명</Table.Th>
                     <Table.Th>평균 정답률</Table.Th>
+                    <Table.Th>평균 응답 시간</Table.Th>
                     <Table.Th>평가 시험 수</Table.Th>
                     <Table.Th>웹사이트</Table.Th>
                   </Table.Tr>
@@ -750,6 +754,7 @@ export function LeaderboardContent() {
                     <Table.Tr key={model.name}>
                       <Table.Td>{model.name}</Table.Td>
                       <Table.Td>{model.accuracy.toFixed(1)}%</Table.Td>
+                      <Table.Td>{model.avgTime?.toFixed(2)}초</Table.Td>
                       <Table.Td>{model.examsCount}개</Table.Td>
                       <Table.Td>
                         {model.website !== '#' ? (
