@@ -15,7 +15,10 @@ import sys
 
 def load_results() -> Dict[str, List[Dict]]:
     """모든 평가 결과 로드
-    
+
+    같은 exam_id + model_name 조합의 여러 결과가 있을 경우,
+    evaluated_at 타임스탬프가 가장 최신인 것만 반환합니다.
+
     Returns:
         {exam_id: [result1, result2, ...]} 딕셔너리
     """
@@ -23,20 +26,32 @@ def load_results() -> Dict[str, List[Dict]]:
     if not results_dir.exists():
         print("❌ results/ 디렉토리가 없습니다.")
         return {}
-    
-    results = defaultdict(list)
-    
+
+    # 모든 결과를 (exam_id, model_name) 키로 그룹화
+    all_results = defaultdict(list)
+
     for exam_dir in results_dir.iterdir():
         if not exam_dir.is_dir():
             continue
-        
+
         exam_id = exam_dir.name
-        
+
         for result_file in exam_dir.glob("*.yaml"):
             with open(result_file, 'r', encoding='utf-8') as f:
                 result_data = yaml.safe_load(f)
-                results[exam_id].append(result_data)
-    
+                model_name = result_data.get('model_name', 'unknown')
+                all_results[(exam_id, model_name)].append(result_data)
+
+    # 각 (exam_id, model_name) 조합에서 최신 결과만 선택
+    results = defaultdict(list)
+    for (exam_id, model_name), model_results in all_results.items():
+        if len(model_results) == 1:
+            results[exam_id].append(model_results[0])
+        else:
+            # evaluated_at으로 정렬하여 최신 것 선택
+            latest = max(model_results, key=lambda x: x.get('evaluated_at', ''))
+            results[exam_id].append(latest)
+
     return dict(results)
 
 

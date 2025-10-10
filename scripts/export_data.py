@@ -18,7 +18,11 @@ from src.evaluator.summary import load_results
 
 
 def load_enabled_models():
-    """models.json에서 활성화된 모델 목록 로드"""
+    """models.json에서 활성화된 모델 목록 로드
+
+    Returns:
+        활성화된 모델의 name과 model_id 집합
+    """
     models_file = project_root / 'models' / 'models.json'
     enabled_models = set()
 
@@ -27,7 +31,10 @@ def load_enabled_models():
             models_data = json.load(f)
             for model in models_data.get('models', []):
                 if model.get('enabled', False):
+                    # name과 model_id 모두 추가 (결과 파일의 model_name이 둘 중 하나일 수 있음)
                     enabled_models.add(model['name'])
+                    if 'model_id' in model:
+                        enabled_models.add(model['model_id'])
     except Exception as e:
         print(f"⚠️  models.json 로드 실패: {e}")
 
