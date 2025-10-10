@@ -155,7 +155,7 @@
       "max_tokens": 4096,
       "temperature": 0.3,
       "timeout": 60,
-      "enabled": true
+      "enabled": false
     },
     {
       "name": "sonar-large",

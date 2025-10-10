@@ -31,7 +31,7 @@ help:
 	@echo "  make <모델> <연도> <과목>"
 	@echo ""
 	@echo "  모델: gpt-5, gpt-4o, claude-opus-4-1, claude-sonnet-4-5,"
-	@echo "        gemini-2.5-pro, solar-pro, sonar-pro, all"
+	@echo "        solar-pro-2, all"
 	@echo "  연도: 2025, 2024, all"
 	@echo "  과목: korean, math, english, korean,math (콤마로 여러개), all"
 	@echo ""
@@ -208,7 +208,7 @@ PARALLEL ?= 1
 MAX_WORKERS ?= 10
 
 # 모델별 타겟 정의
-.PHONY: gpt-5 gpt-4o claude-opus-4-1 claude-sonnet-4-5 gemini-2.5-pro solar-pro sonar-pro all-models
+.PHONY: gpt-5 gpt-4o claude-opus-4-1 claude-sonnet-4-5 solar-pro-2 all-models
 
 # 개별 모델 타겟
 gpt-5:
@@ -223,14 +223,8 @@ claude-opus-4-1:
 claude-sonnet-4-5:
 	@$(MAKE) run-evaluation MODEL_NAME=claude-sonnet-4-5 YEAR=$(word 2,$(MAKECMDGOALS)) SUBJECTS=$(word 3,$(MAKECMDGOALS))
 
-gemini-2.5-pro:
-	@$(MAKE) run-evaluation MODEL_NAME=gemini-2.5-pro YEAR=$(word 2,$(MAKECMDGOALS)) SUBJECTS=$(word 3,$(MAKECMDGOALS))
-
-solar-pro:
-	@$(MAKE) run-evaluation MODEL_NAME=solar-pro YEAR=$(word 2,$(MAKECMDGOALS)) SUBJECTS=$(word 3,$(MAKECMDGOALS))
-
-sonar-pro:
-	@$(MAKE) run-evaluation MODEL_NAME=sonar-pro YEAR=$(word 2,$(MAKECMDGOALS)) SUBJECTS=$(word 3,$(MAKECMDGOALS))
+solar-pro-2:
+	@$(MAKE) run-evaluation MODEL_NAME=solar-pro-2 YEAR=$(word 2,$(MAKECMDGOALS)) SUBJECTS=$(word 3,$(MAKECMDGOALS))
 
 # 모든 모델 실행 (첫 번째 인자로 'all' 사용 시)
 # 예: make all 2025 korean
@@ -277,7 +271,7 @@ run-evaluation:
 		YEARS="$$EVAL_YEAR"; \
 	fi; \
 	if [ "$$EVAL_MODEL" = "all" ]; then \
-		MODELS="gpt-5 gpt-4o claude-opus-4-1 claude-sonnet-4-5 gemini-2.5-pro solar-pro sonar-pro"; \
+		MODELS="gpt-5 gpt-4o claude-opus-4-1 claude-sonnet-4-5 solar-pro-2"; \
 	else \
 		MODELS="$$EVAL_MODEL"; \
 	fi; \
