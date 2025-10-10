@@ -178,7 +178,7 @@ results:
   error: 듣기 평가 문제는 평가하지 않음
 - question_id: q16
   question_number: 16
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: ''
@@ -191,7 +191,7 @@ results:
     ''param'': ''response_format'', ''code'': None}}'
 - question_id: q17
   question_number: 17
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: ''
@@ -204,7 +204,7 @@ results:
     ''param'': ''response_format'', ''code'': None}}'
 - question_id: q18
   question_number: 18
-  answer: 0
+  answer: -1
   correct_answer: 1
   is_correct: false
   reasoning: ''
@@ -217,7 +217,7 @@ results:
     ''param'': ''response_format'', ''code'': None}}'
 - question_id: q19
   question_number: 19
-  answer: 0
+  answer: -1
   correct_answer: 2
   is_correct: false
   reasoning: ''
@@ -230,7 +230,7 @@ results:
     ''param'': ''response_format'', ''code'': None}}'
 - question_id: q20
   question_number: 20
-  answer: 0
+  answer: -1
   correct_answer: 1
   is_correct: false
   reasoning: ''
@@ -243,7 +243,7 @@ results:
     ''param'': ''response_format'', ''code'': None}}'
 - question_id: q21
   question_number: 21
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: ''
@@ -256,7 +256,7 @@ results:
     ''param'': ''response_format'', ''code'': None}}'
 - question_id: q22
   question_number: 22
-  answer: 0
+  answer: -1
   correct_answer: 2
   is_correct: false
   reasoning: ''
@@ -269,7 +269,7 @@ results:
     ''param'': ''response_format'', ''code'': None}}'
 - question_id: q23
   question_number: 23
-  answer: 0
+  answer: -1
   correct_answer: 1
   is_correct: false
   reasoning: ''
@@ -282,7 +282,7 @@ results:
     ''param'': ''response_format'', ''code'': None}}'
 - question_id: q24
   question_number: 24
-  answer: 0
+  answer: -1
   correct_answer: 5
   is_correct: false
   reasoning: ''
@@ -295,7 +295,7 @@ results:
     ''param'': ''response_format'', ''code'': None}}'
 - question_id: q25
   question_number: 25
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: ''
@@ -308,7 +308,7 @@ results:
     ''param'': ''response_format'', ''code'': None}}'
 - question_id: q26
   question_number: 26
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: ''
@@ -321,7 +321,7 @@ results:
     ''param'': ''response_format'', ''code'': None}}'
 - question_id: q27
   question_number: 27
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: ''
@@ -334,7 +334,7 @@ results:
     ''param'': ''response_format'', ''code'': None}}'
 - question_id: q28
   question_number: 28
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: ''
@@ -347,7 +347,7 @@ results:
     ''param'': ''response_format'', ''code'': None}}'
 - question_id: q29
   question_number: 29
-  answer: 0
+  answer: -1
   correct_answer: 2
   is_correct: false
   reasoning: ''
@@ -360,7 +360,7 @@ results:
     ''param'': ''response_format'', ''code'': None}}'
 - question_id: q30
   question_number: 30
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: ''
@@ -373,7 +373,7 @@ results:
     ''param'': ''response_format'', ''code'': None}}'
 - question_id: q31
   question_number: 31
-  answer: 0
+  answer: -1
   correct_answer: 5
   is_correct: false
   reasoning: ''
@@ -386,7 +386,7 @@ results:
     ''param'': ''response_format'', ''code'': None}}'
 - question_id: q33
   question_number: 33
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: ''
@@ -399,7 +399,7 @@ results:
     ''param'': ''response_format'', ''code'': None}}'
 - question_id: q34
   question_number: 34
-  answer: 0
+  answer: -1
   correct_answer: 5
   is_correct: false
   reasoning: ''
@@ -412,7 +412,7 @@ results:
     ''param'': ''response_format'', ''code'': None}}'
 - question_id: q35
   question_number: 35
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: ''
@@ -425,7 +425,7 @@ results:
     ''param'': ''response_format'', ''code'': None}}'
 - question_id: q36
   question_number: 36
-  answer: 0
+  answer: -1
   correct_answer: 5
   is_correct: false
   reasoning: ''
@@ -438,7 +438,7 @@ results:
     ''param'': ''response_format'', ''code'': None}}'
 - question_id: q38
   question_number: 38
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: ''
@@ -451,7 +451,7 @@ results:
     ''param'': ''response_format'', ''code'': None}}'
 - question_id: q39
   question_number: 39
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: ''
@@ -464,7 +464,7 @@ results:
     ''param'': ''response_format'', ''code'': None}}'
 - question_id: q41
   question_number: 41
-  answer: 0
+  answer: -1
   correct_answer: 2
   is_correct: false
   reasoning: ''
@@ -477,7 +477,7 @@ results:
     ''param'': ''response_format'', ''code'': None}}'
 - question_id: q42
   question_number: 42
-  answer: 0
+  answer: -1
   correct_answer: 5
   is_correct: false
   reasoning: ''
@@ -490,7 +490,7 @@ results:
     ''param'': ''response_format'', ''code'': None}}'
 - question_id: q43
   question_number: 43
-  answer: 0
+  answer: -1
   correct_answer: 2
   is_correct: false
   reasoning: ''
@@ -503,7 +503,7 @@ results:
     ''param'': ''response_format'', ''code'': None}}'
 - question_id: q44
   question_number: 44
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: ''
@@ -516,7 +516,7 @@ results:
     ''param'': ''response_format'', ''code'': None}}'
 - question_id: q45
   question_number: 45
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: ''

@@ -63,7 +63,7 @@ results:
   error: null
 - question_id: q5
   question_number: 5
-  answer: 0
+  answer: -1
   correct_answer: 5
   is_correct: false
   reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"지문 (가)에 따르면 개화기의 계획 개념은 개화파의\

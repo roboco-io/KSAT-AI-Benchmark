@@ -116,7 +116,7 @@ results:
   error: null
 - question_id: q6
   question_number: 6
-  answer: 0
+  answer: -1
   correct_answer: 5
   is_correct: false
   reasoning: "{\n  \"answer\": 1,\n  \"reasoning\": \"주어진 식 \\( \\cos \\left( \\frac{\\\
@@ -228,7 +228,7 @@ results:
   error: null
 - question_id: q9
   question_number: 9
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"주어진 정적분 조건을 만족하는 양수 \\( a \\\
@@ -468,7 +468,7 @@ results:
   error: null
 - question_id: q18
   question_number: 18
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: "{\n  \"answer\": 96,\n  \"reasoning\": \"주어진 조건 \\( a_n + a_{n+1} =\
@@ -547,7 +547,7 @@ results:
   error: null
 - question_id: q22
   question_number: 22
-  answer: 0
+  answer: -1
   correct_answer: 2
   is_correct: false
   reasoning: 문제에 제시된 조건과 선택지가 누락되어 있어 정확한 답변을 제공할 수 없습니다. 문제의 전체 내용, 특히 수열이 만족해야 하는
@@ -745,7 +745,7 @@ results:
   error: null
 - question_id: q26
   question_number: 26
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: "{\n  \"answer\": 1,\n  \"reasoning\": \"회전체의 단면이 정사각형이므로, 회전체의 반지름과\
@@ -944,7 +944,7 @@ results:
   error: null
 - question_id: q24
   question_number: 24
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: "{\n  \"answer\": 2,\n  \"reasoning\": \"포물선의 정의에 따라 초점 F(1, 0)과 준선 x\

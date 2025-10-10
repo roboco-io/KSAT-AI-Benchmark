@@ -206,7 +206,7 @@ results:
   error: null
 - question_id: q18
   question_number: 18
-  answer: 0
+  answer: -1
   correct_answer: 1
   is_correct: false
   reasoning: "{\n  \"answer\": \"\",\n  \"reasoning\": \"문제에서 제공된 지문이 없어 정확한 답변을 제공할\
@@ -218,7 +218,7 @@ results:
   error: 'JSON 파싱 실패: invalid literal for int() with base 10: '''''
 - question_id: q19
   question_number: 19
-  answer: 0
+  answer: -1
   correct_answer: 2
   is_correct: false
   reasoning: 문제에서 Peter의 심경 변화에 대한 구체적인 지문이 제공되지 않았습니다. 따라서, 제공된 정보만으로는 Peter의 심경
@@ -260,7 +260,7 @@ results:
   error: null
 - question_id: q22
   question_number: 22
-  answer: 0
+  answer: -1
   correct_answer: 2
   is_correct: false
   reasoning: 제시된 선택지들은 모두 감정 조절, 감정 이해, 감정 공감 등과 관련된 내용을 다루고 있으나, 지문의 내용은 로마 제국 시대에
@@ -454,7 +454,7 @@ results:
   error: null
 - question_id: q36
   question_number: 36
-  answer: 0
+  answer: -1
   correct_answer: 5
   is_correct: false
   reasoning: ''
@@ -529,7 +529,7 @@ results:
   error: null
 - question_id: q43
   question_number: 43
-  answer: 0
+  answer: -1
   correct_answer: 2
   is_correct: false
   reasoning: 문제에서 제공된 글 (A)~(D)의 내용이 없어 정확한 순서를 결정할 수 없습니다. 문제의 내용을 기반으로 한 구체적인 분석이
@@ -541,7 +541,7 @@ results:
   error: 유효하지 않은 답 번호
 - question_id: q44
   question_number: 44
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: 문제에서 밑줄 친 (a)~(e)의 구체적인 내용이 제공되지 않았기 때문에, 가리키는 대상이 나머지 넷과 다른 것을 판단할 수

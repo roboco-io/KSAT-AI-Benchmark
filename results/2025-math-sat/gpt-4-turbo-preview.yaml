@@ -128,7 +128,7 @@ results:
   error: null
 - question_id: q7
   question_number: 7
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: "{\n  \"answer\": 2,\n  \"reasoning\": \"주어진 조건에 따르면, 다항함수 f(x)에 대하여\
@@ -304,7 +304,7 @@ results:
   error: null
 - question_id: q12
   question_number: 12
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: "{\n  \"answer\": 2,\n  \"reasoning\": \"주어진 조건에 따르면, 모든 자연수 n에 대하여 주어진\
@@ -405,7 +405,7 @@ results:
   error: null
 - question_id: q15
   question_number: 15
-  answer: 0
+  answer: -1
   correct_answer: 2
   is_correct: false
   reasoning: "{\n  \"answer\": 2,\n  \"reasoning\": \"먼저, 조건 (가)에 따라 함수 g(x)가 실수 전체의\
@@ -472,7 +472,7 @@ results:
   error: null
 - question_id: q17
   question_number: 17
-  answer: 0
+  answer: -1
   correct_answer: 5
   is_correct: false
   reasoning: 주어진 문제에서 다항함수의 도함수가 주어졌으므로, 원래의 함수를 구하기 위해서는 주어진 도함수를 적분해야 합니다. 주어진 도함수는
@@ -488,7 +488,7 @@ results:
   error: 유효하지 않은 답 번호
 - question_id: q18
   question_number: 18
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: 주어진 조건에 따르면, 수열 \( \{a_n\} \)은 모든 자연수 \( n \)에 대해 \( a_n + a_{n+1} =
@@ -524,7 +524,7 @@ results:
   error: null
 - question_id: q20
   question_number: 20
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: "{\n  \"answer\": \"오류\",\n  \"reasoning\": \"제공된 문제 설명에는 선택지가 제공되지 않았으며,\
@@ -540,7 +540,7 @@ results:
   error: 'JSON 파싱 실패: invalid literal for int() with base 10: ''오류'''
 - question_id: q21
   question_number: 21
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: ''
@@ -552,7 +552,7 @@ results:
     'NoneType'
 - question_id: q22
   question_number: 22
-  answer: 0
+  answer: -1
   correct_answer: 2
   is_correct: false
   reasoning: ''
@@ -709,7 +709,7 @@ results:
   error: null
 - question_id: q29
   question_number: 29
-  answer: 0
+  answer: -1
   correct_answer: 5
   is_correct: false
   reasoning: 이 문제는 정규분포의 성질과 확률변수의 변환을 이용하여 해결할 수 있습니다. 주어진 조건에 따르면, 확률변수 X와 Y는 서로
@@ -885,7 +885,7 @@ results:
   error: null
 - question_id: q29
   question_number: 29
-  answer: 0
+  answer: -1
   correct_answer: 5
   is_correct: false
   reasoning: "{\n  \"answer\": \"오류\",\n  \"reasoning\": \"제공된 정보만으로는 문제의 정확한 해답을\
@@ -900,7 +900,7 @@ results:
   error: 'JSON 파싱 실패: invalid literal for int() with base 10: ''오류'''
 - question_id: q30
   question_number: 30
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: 이 문제는 주어진 조건을 만족하는 함수 f(x) = sin(ax + b + sinx)에 대한 극대값과 그에 따른 집합 A의
@@ -1057,7 +1057,7 @@ results:
   error: null
 - question_id: q29
   question_number: 29
-  answer: 0
+  answer: -1
   correct_answer: 5
   is_correct: false
   reasoning: "{\n  \"answer\": \"오류\",\n  \"reasoning\": \"선택지가 제공되지 않았으므로, 정확한 답변을\
@@ -1070,7 +1070,7 @@ results:
   error: 'JSON 파싱 실패: invalid literal for int() with base 10: ''오류'''
 - question_id: q30
   question_number: 30
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: 이 문제는 좌표평면과 벡터의 성질을 이용하여 해결할 수 있습니다. 먼저, |XB + XC| = |XB - XC| 조건을 만족시키는

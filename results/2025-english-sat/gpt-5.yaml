@@ -339,7 +339,7 @@ results:
   error: null
 - question_id: q28
   question_number: 28
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: 빈 응답
@@ -376,7 +376,7 @@ results:
   error: null
 - question_id: q31
   question_number: 31
-  answer: 0
+  answer: -1
   correct_answer: 5
   is_correct: false
   reasoning: 빈 응답
@@ -387,7 +387,7 @@ results:
   error: 모델이 빈 응답을 반환했습니다
 - question_id: q33
   question_number: 33
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: 빈 응답

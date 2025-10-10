@@ -433,7 +433,7 @@ results:
   error: null
 - question_id: q31
   question_number: 31
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: ''
@@ -446,7 +446,7 @@ results:
     429}}'
 - question_id: q32
   question_number: 32
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: ''
@@ -459,7 +459,7 @@ results:
     429}}'
 - question_id: q33
   question_number: 33
-  answer: 0
+  answer: -1
   correct_answer: 5
   is_correct: false
   reasoning: ''
@@ -472,7 +472,7 @@ results:
     429}}'
 - question_id: q34
   question_number: 34
-  answer: 0
+  answer: -1
   correct_answer: 2
   is_correct: false
   reasoning: ''
@@ -485,7 +485,7 @@ results:
     429}}'
 - question_id: q35
   question_number: 35
-  answer: 0
+  answer: -1
   correct_answer: 2
   is_correct: false
   reasoning: ''
@@ -498,7 +498,7 @@ results:
     429}}'
 - question_id: q36
   question_number: 36
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: ''
@@ -511,7 +511,7 @@ results:
     429}}'
 - question_id: q37
   question_number: 37
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: ''
@@ -524,7 +524,7 @@ results:
     429}}'
 - question_id: q38
   question_number: 38
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: ''
@@ -537,7 +537,7 @@ results:
     429}}'
 - question_id: q39
   question_number: 39
-  answer: 0
+  answer: -1
   correct_answer: 5
   is_correct: false
   reasoning: ''
@@ -550,7 +550,7 @@ results:
     429}}'
 - question_id: q40
   question_number: 40
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: ''
@@ -563,7 +563,7 @@ results:
     429}}'
 - question_id: q41
   question_number: 41
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: ''
@@ -576,7 +576,7 @@ results:
     429}}'
 - question_id: q42
   question_number: 42
-  answer: 0
+  answer: -1
   correct_answer: 2
   is_correct: false
   reasoning: ''
@@ -589,7 +589,7 @@ results:
     429}}'
 - question_id: q43
   question_number: 43
-  answer: 0
+  answer: -1
   correct_answer: 1
   is_correct: false
   reasoning: ''
@@ -602,7 +602,7 @@ results:
     429}}'
 - question_id: q44
   question_number: 44
-  answer: 0
+  answer: -1
   correct_answer: 5
   is_correct: false
   reasoning: ''
@@ -615,7 +615,7 @@ results:
     429}}'
 - question_id: q45
   question_number: 45
-  answer: 0
+  answer: -1
   correct_answer: 2
   is_correct: false
   reasoning: ''

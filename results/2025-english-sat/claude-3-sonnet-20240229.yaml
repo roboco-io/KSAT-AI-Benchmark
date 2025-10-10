@@ -178,7 +178,7 @@ results:
   error: 듣기 평가 문제는 평가하지 않음
 - question_id: q16
   question_number: 16
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: ''
@@ -190,7 +190,7 @@ results:
     ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTr7h1YDxwrGghRyUPVhE''}'
 - question_id: q17
   question_number: 17
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: ''
@@ -202,7 +202,7 @@ results:
     ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTr7h2sM2AYzAMGPhJpa7''}'
 - question_id: q18
   question_number: 18
-  answer: 0
+  answer: -1
   correct_answer: 1
   is_correct: false
   reasoning: ''
@@ -214,7 +214,7 @@ results:
     ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTr7h4CDSZQBq37GeADVm''}'
 - question_id: q19
   question_number: 19
-  answer: 0
+  answer: -1
   correct_answer: 2
   is_correct: false
   reasoning: ''
@@ -226,7 +226,7 @@ results:
     ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTr7h5CVMLJZJCeAsSTj4''}'
 - question_id: q20
   question_number: 20
-  answer: 0
+  answer: -1
   correct_answer: 1
   is_correct: false
   reasoning: ''
@@ -238,7 +238,7 @@ results:
     ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTr7h6EzuikJ5JrE4h6re''}'
 - question_id: q21
   question_number: 21
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: ''
@@ -250,7 +250,7 @@ results:
     ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTr7h7E2vBTp99YsQJMnW''}'
 - question_id: q22
   question_number: 22
-  answer: 0
+  answer: -1
   correct_answer: 2
   is_correct: false
   reasoning: ''
@@ -262,7 +262,7 @@ results:
     ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTr7h8YuKNn1LWAJP4H1b''}'
 - question_id: q23
   question_number: 23
-  answer: 0
+  answer: -1
   correct_answer: 1
   is_correct: false
   reasoning: ''
@@ -274,7 +274,7 @@ results:
     ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTr7h9Xh5TuaED3sRieEy''}'
 - question_id: q24
   question_number: 24
-  answer: 0
+  answer: -1
   correct_answer: 5
   is_correct: false
   reasoning: ''
@@ -286,7 +286,7 @@ results:
     ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTr7hAbw6Nfh4YGM4L33h''}'
 - question_id: q25
   question_number: 25
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: ''
@@ -298,7 +298,7 @@ results:
     ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTr7hBjPz1JdjyNEtKyxw''}'
 - question_id: q26
   question_number: 26
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: ''
@@ -310,7 +310,7 @@ results:
     ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTr7hChgsARyN6Rb6drH5''}'
 - question_id: q27
   question_number: 27
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: ''
@@ -322,7 +322,7 @@ results:
     ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTr7hDnBNekFGWJN8GGuG''}'
 - question_id: q28
   question_number: 28
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: ''
@@ -334,7 +334,7 @@ results:
     ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTr7hFA2ViA4STd43CRSb''}'
 - question_id: q29
   question_number: 29
-  answer: 0
+  answer: -1
   correct_answer: 2
   is_correct: false
   reasoning: ''
@@ -346,7 +346,7 @@ results:
     ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTr7hGvgk4K5VZZ6yJvfK''}'
 - question_id: q30
   question_number: 30
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: ''
@@ -358,7 +358,7 @@ results:
     ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTr7hJB6U5uWMiueYn12f''}'
 - question_id: q31
   question_number: 31
-  answer: 0
+  answer: -1
   correct_answer: 5
   is_correct: false
   reasoning: ''
@@ -370,7 +370,7 @@ results:
     ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTr7hKCN4aosiMYb2ZWU7''}'
 - question_id: q33
   question_number: 33
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: ''
@@ -382,7 +382,7 @@ results:
     ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTr7hLHbW7HgHv7o3GyfQ''}'
 - question_id: q34
   question_number: 34
-  answer: 0
+  answer: -1
   correct_answer: 5
   is_correct: false
   reasoning: ''
@@ -394,7 +394,7 @@ results:
     ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTr7hMqriL9NPUbSqNfWd''}'
 - question_id: q35
   question_number: 35
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: ''
@@ -406,7 +406,7 @@ results:
     ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTr7hP23sQLEW9Ctc5mWt''}'
 - question_id: q36
   question_number: 36
-  answer: 0
+  answer: -1
   correct_answer: 5
   is_correct: false
   reasoning: ''
@@ -418,7 +418,7 @@ results:
     ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTr7hQAFsVrCV9fkzT27E''}'
 - question_id: q38
   question_number: 38
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: ''
@@ -430,7 +430,7 @@ results:
     ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTr7hRNvwxPP71f4APLYH''}'
 - question_id: q39
   question_number: 39
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: ''
@@ -442,7 +442,7 @@ results:
     ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTr7hSgKDnmiqVtaL7z8j''}'
 - question_id: q41
   question_number: 41
-  answer: 0
+  answer: -1
   correct_answer: 2
   is_correct: false
   reasoning: ''
@@ -454,7 +454,7 @@ results:
     ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTr7hTerWWUQyfdgw3oHA''}'
 - question_id: q42
   question_number: 42
-  answer: 0
+  answer: -1
   correct_answer: 5
   is_correct: false
   reasoning: ''
@@ -466,7 +466,7 @@ results:
     ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTr7hUaukd2raUtNFmHcX''}'
 - question_id: q43
   question_number: 43
-  answer: 0
+  answer: -1
   correct_answer: 2
   is_correct: false
   reasoning: ''
@@ -478,7 +478,7 @@ results:
     ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTr7hVispvGM634jnHRri''}'
 - question_id: q44
   question_number: 44
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: ''
@@ -490,7 +490,7 @@ results:
     ''message'': ''model: claude-3-sonnet-20240229''}, ''request_id'': ''req_011CTr7hXJ8WsoAkhTNstZ9t''}'
 - question_id: q45
   question_number: 45
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: ''

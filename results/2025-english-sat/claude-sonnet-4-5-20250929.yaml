@@ -178,7 +178,7 @@ results:
   error: 듣기 평가 문제는 평가하지 않음
 - question_id: q16
   question_number: 16
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: "```json\n{\n  \"answer\": 3,\n  \"reasoning\": \"지문의 핵심 주제를 파악하기 위해\
@@ -261,7 +261,7 @@ results:
   error: null
 - question_id: q19
   question_number: 19
-  answer: 0
+  answer: -1
   correct_answer: 2
   is_correct: false
   reasoning: "```json\n{\n  \"answer\": 2,\n  \"reasoning\": \"지문에서 Peter의 심경 변화를\
@@ -306,7 +306,7 @@ results:
   error: null
 - question_id: q21
   question_number: 21
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: "```json\n{\n  \"answer\": 3,\n  \"reasoning\": \"이 문제는 'hunting the\
@@ -479,7 +479,7 @@ results:
   error: null
 - question_id: q31
   question_number: 31
-  answer: 0
+  answer: -1
   correct_answer: 5
   is_correct: false
   reasoning: "```json\n{\n  \"answer\": 1,\n  \"reasoning\": \"이 문제는 밑줄 친 부분의 어법상\
@@ -664,7 +664,7 @@ results:
   error: null
 - question_id: q42
   question_number: 42
-  answer: 0
+  answer: -1
   correct_answer: 5
   is_correct: false
   reasoning: "지문이 불완전하여 (a)~(e)로 표시된 밑줄 친 부분들을 확인할 수 없습니다. \n\n문제를 정확히 풀기 위해서는 다음\

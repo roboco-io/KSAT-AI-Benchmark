@@ -69,7 +69,7 @@ results:
   error: null
 - question_id: q3
   question_number: 3
-  answer: 0
+  answer: -1
   correct_answer: 5
   is_correct: false
   reasoning: ''
@@ -189,7 +189,7 @@ results:
   error: null
 - question_id: q7
   question_number: 7
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: ''
@@ -306,7 +306,7 @@ results:
   error: null
 - question_id: q11
   question_number: 11
-  answer: 0
+  answer: -1
   correct_answer: 1
   is_correct: false
   reasoning: ''
@@ -317,7 +317,7 @@ results:
   error: 504 The request timed out. Please try again.
 - question_id: q12
   question_number: 12
-  answer: 0
+  answer: -1
   correct_answer: 5
   is_correct: false
   reasoning: ''
@@ -328,7 +328,7 @@ results:
   error: 504 The request timed out. Please try again.
 - question_id: q13
   question_number: 13
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: ''
@@ -481,7 +481,7 @@ results:
   error: null
 - question_id: q19
   question_number: 19
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: ''
@@ -526,7 +526,7 @@ results:
   error: null
 - question_id: q21
   question_number: 21
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: ''
@@ -838,7 +838,7 @@ results:
   error: null
 - question_id: q31
   question_number: 31
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: ''
@@ -888,7 +888,7 @@ results:
   error: null
 - question_id: q33
   question_number: 33
-  answer: 0
+  answer: -1
   correct_answer: 5
   is_correct: false
   reasoning: ''
@@ -937,7 +937,7 @@ results:
   error: null
 - question_id: q35
   question_number: 35
-  answer: 0
+  answer: -1
   correct_answer: 2
   is_correct: false
   reasoning: ''
@@ -976,7 +976,7 @@ results:
   error: null
 - question_id: q37
   question_number: 37
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: ''
@@ -987,7 +987,7 @@ results:
   error: 504 The request timed out. Please try again.
 - question_id: q38
   question_number: 38
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: ''

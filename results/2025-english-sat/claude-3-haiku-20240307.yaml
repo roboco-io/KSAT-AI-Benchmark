@@ -477,7 +477,7 @@ results:
   error: null
 - question_id: q43
   question_number: 43
-  answer: 0
+  answer: -1
   correct_answer: 2
   is_correct: false
   reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"이 문제는 주어진 글 (A)~(D)의 내용상 순서를\

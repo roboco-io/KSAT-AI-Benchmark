@@ -189,7 +189,7 @@ class OpenAIModel(BaseModel):
             # 빈 응답 처리
             if not content or not content.strip():
                 return ModelResponse(
-                    answer=0,
+                    answer=-1,
                     reasoning="빈 응답",
                     time_taken=time.time() - start_time,
                     raw_response=content or "",
@@ -240,17 +240,17 @@ class OpenAIModel(BaseModel):
 
             try:
                 result = json.loads(content)
-                answer = int(result.get('answer', 0))
+                answer = int(result.get('answer', -1))
                 reasoning = result.get('reasoning', '')
 
                 # 답 검증
                 if not (1 <= answer <= 5):
                     # 텍스트에서 답 추출 시도
-                    answer = self._extract_answer_from_text(content) or 0
+                    answer = self._extract_answer_from_text(content) or -1
 
                 if not (1 <= answer <= 5):
                     return ModelResponse(
-                        answer=0,
+                        answer=-1,
                         reasoning=reasoning or content,
                         time_taken=time_taken,
                         raw_response=content,
@@ -279,8 +279,8 @@ class OpenAIModel(BaseModel):
                 
             except (json.JSONDecodeError, ValueError) as e:
                 # JSON 파싱 실패시 텍스트에서 추출 시도
-                answer = self._extract_answer_from_text(content) or 0
-                
+                answer = self._extract_answer_from_text(content) or -1
+
                 # reasoning은 content를 그대로 사용 (빈 문자열이 아닌)
                 return ModelResponse(
                     answer=answer,
@@ -291,11 +291,11 @@ class OpenAIModel(BaseModel):
                     success=(1 <= answer <= 5),
                     error=None if (1 <= answer <= 5) else f"JSON 파싱 실패: {e}"
                 )
-        
+
         except Exception as e:
             time_taken = time.time() - start_time
             return ModelResponse(
-                answer=0,
+                answer=-1,
                 reasoning="",
                 time_taken=time_taken,
                 raw_response="",

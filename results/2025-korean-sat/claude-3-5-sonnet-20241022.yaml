@@ -13,7 +13,7 @@ summary:
 results:
 - question_id: q1
   question_number: 1
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"지문의 마지막 부분에서 '밑줄 긋기는 어떠한 수준의\
@@ -30,7 +30,7 @@ results:
   error: 답 추출 실패
 - question_id: q2
   question_number: 2
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: "{\n  \"answer\": 4,\n  \"reasoning\": \"지문의 내용을 바탕으로 효과적인 밑줄 긋기 방법을\
@@ -65,7 +65,7 @@ results:
   error: null
 - question_id: q4
   question_number: 4
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: "{\n  \"answer\": 2,\n  \"reasoning\": \"지문을 검토한 결과, 2번 선택지가 적절하지 않습니다.\
@@ -83,7 +83,7 @@ results:
   error: 답 추출 실패
 - question_id: q5
   question_number: 5
-  answer: 0
+  answer: -1
   correct_answer: 5
   is_correct: false
   reasoning: "{\n  \"answer\": 2,\n  \"reasoning\": \"주어진 지문에서 '단성소보'의 계획 개념에 대해 직접적으로\
@@ -154,7 +154,7 @@ results:
   error: null
 - question_id: q9
   question_number: 9
-  answer: 0
+  answer: -1
   correct_answer: 2
   is_correct: false
   reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"지문에서 ①은 '근대 국가 건설의 새로운 주체의 형성의\
@@ -205,7 +205,7 @@ results:
   error: null
 - question_id: q12
   question_number: 12
-  answer: 0
+  answer: -1
   correct_answer: 5
   is_correct: false
   reasoning: "{\n  \"answer\": 2,\n  \"reasoning\": \"지문을 분석하여 각 선택지를 검토하겠습니다:\n\n\
@@ -239,7 +239,7 @@ results:
   error: null
 - question_id: q14
   question_number: 14
-  answer: 0
+  answer: -1
   correct_answer: 1
   is_correct: false
   reasoning: "{\n  \"answer\": 1,\n  \"reasoning\": \"지문과 일치하지 않는 내용을 찾아보겠습니다.\n\n\
@@ -257,7 +257,7 @@ results:
   error: 답 추출 실패
 - question_id: q15
   question_number: 15
-  answer: 0
+  answer: -1
   correct_answer: 2
   is_correct: false
   reasoning: "{\n  \"answer\": 2,\n  \"reasoning\": \"지문에서 인터넷 ID의 명예 주체성에 대한 두 입장을\
@@ -274,7 +274,7 @@ results:
   error: 답 추출 실패
 - question_id: q16
   question_number: 16
-  answer: 0
+  answer: -1
   correct_answer: 2
   is_correct: false
   reasoning: "{\n  \"answer\": 5,\n  \"reasoning\": \"주어진 지문에서는 가처분조치의 법적 책임에 대한 내용이\
@@ -290,7 +290,7 @@ results:
   error: 답 추출 실패
 - question_id: q17
   question_number: 17
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"이 문제는 지문에 밑줄 친 부분이 보이지 않아 직접적인\
@@ -324,7 +324,7 @@ results:
   error: null
 - question_id: q19
   question_number: 19
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: "{\n  \"answer\": 4,\n  \"reasoning\": \"지문을 분석해보면 다음과 같은 핵심 내용을 파악할\
@@ -408,7 +408,7 @@ results:
   error: null
 - question_id: q24
   question_number: 24
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"지문 (나)를 분석해보면 다음과 같습니다:\n\n\
@@ -443,7 +443,7 @@ results:
   error: null
 - question_id: q26
   question_number: 26
-  answer: 0
+  answer: -1
   correct_answer: 2
   is_correct: false
   reasoning: "{\n  \"answer\": 4,\n  \"reasoning\": \"지문 (다)를 분석해보면 다음과 같은 핵심 내용을\
@@ -477,7 +477,7 @@ results:
   error: null
 - question_id: q28
   question_number: 28
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"이 지문은 다음과 같은 서술상 특징을 보입니다:\n\
@@ -494,7 +494,7 @@ results:
   error: 답 추출 실패
 - question_id: q29
   question_number: 29
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"이 지문을 분석해보면 다음과 같은 특징들이 드러납니다:\n\
@@ -513,7 +513,7 @@ results:
   error: 답 추출 실패
 - question_id: q30
   question_number: 30
-  answer: 0
+  answer: -1
   correct_answer: 5
   is_correct: false
   reasoning: "{\n  \"answer\": 1,\n  \"reasoning\": \"지문을 분석해보면 다음과 같은 특징들이 나타납니다:\n\
@@ -530,7 +530,7 @@ results:
   error: 답 추출 실패
 - question_id: q31
   question_number: 31
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"이 지문을 분석해보면 다음과 같은 특징이 있습니다:\n\
@@ -547,7 +547,7 @@ results:
   error: 답 추출 실패
 - question_id: q32
   question_number: 32
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: "{\n  \"answer\": 4,\n  \"reasoning\": \"이 선택지들을 하나씩 검토해보겠습니다:\n\n1.\
@@ -564,7 +564,7 @@ results:
   error: 답 추출 실패
 - question_id: q33
   question_number: 33
-  answer: 0
+  answer: -1
   correct_answer: 5
   is_correct: false
   reasoning: "{\n  \"answer\": 5,\n  \"reasoning\": \"이 시는 누군가의 여정을 관찰하고 있는 화자의 시점에서\
@@ -598,7 +598,7 @@ results:
   error: null
 - question_id: q35
   question_number: 35
-  answer: 0
+  answer: -1
   correct_answer: 2
   is_correct: false
   reasoning: "{\n  \"answer\": 2,\n  \"reasoning\": \"다음과 같은 이유로 2번 선택지가 지문의 내용과 일치하지\
@@ -631,7 +631,7 @@ results:
   error: null
 - question_id: q37
   question_number: 37
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: ''
@@ -642,7 +642,7 @@ results:
   error: Connection error.
 - question_id: q38
   question_number: 38
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: ''
@@ -653,7 +653,7 @@ results:
   error: Connection error.
 - question_id: q39
   question_number: 39
-  answer: 0
+  answer: -1
   correct_answer: 5
   is_correct: false
   reasoning: ''
@@ -664,7 +664,7 @@ results:
   error: Connection error.
 - question_id: q40
   question_number: 40
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: ''
@@ -675,7 +675,7 @@ results:
   error: Connection error.
 - question_id: q41
   question_number: 41
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: ''
@@ -686,7 +686,7 @@ results:
   error: Connection error.
 - question_id: q42
   question_number: 42
-  answer: 0
+  answer: -1
   correct_answer: 2
   is_correct: false
   reasoning: ''
@@ -697,7 +697,7 @@ results:
   error: Connection error.
 - question_id: q43
   question_number: 43
-  answer: 0
+  answer: -1
   correct_answer: 1
   is_correct: false
   reasoning: ''
@@ -708,7 +708,7 @@ results:
   error: Connection error.
 - question_id: q44
   question_number: 44
-  answer: 0
+  answer: -1
   correct_answer: 5
   is_correct: false
   reasoning: ''
@@ -719,7 +719,7 @@ results:
   error: Connection error.
 - question_id: q45
   question_number: 45
-  answer: 0
+  answer: -1
   correct_answer: 2
   is_correct: false
   reasoning: ''

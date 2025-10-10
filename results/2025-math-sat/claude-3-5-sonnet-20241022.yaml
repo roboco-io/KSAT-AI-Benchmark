@@ -26,7 +26,7 @@ results:
   error: null
 - question_id: q2
   question_number: 2
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: "{\n  \"answer\": 4,\n  \"reasoning\": \"이 문제는 미분계수의 정의를 이용하여 해결할 수 있습니다.\n\
@@ -60,7 +60,7 @@ results:
   error: null
 - question_id: q4
   question_number: 4
-  answer: 0
+  answer: -1
   correct_answer: 2
   is_correct: false
   reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"이 문제를 해결하기 위한 단계별 풀이:\n\n1)\
@@ -126,7 +126,7 @@ results:
   error: null
 - question_id: q6
   question_number: 6
-  answer: 0
+  answer: -1
   correct_answer: 5
   is_correct: false
   reasoning: "{\n  \"answer\": 5,\n  \"reasoning\": \"이 문제를 다음 단계로 풀어보겠습니다:\\n\\n1)\
@@ -145,7 +145,7 @@ results:
   error: 답 추출 실패
 - question_id: q7
   question_number: 7
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: "{\n  \"answer\": 1,\n  \"reasoning\": \"이 문제는 정적분과 미분의 관계를 이용하여 풀 수\
@@ -162,7 +162,7 @@ results:
   error: 답 추출 실패
 - question_id: q8
   question_number: 8
-  answer: 0
+  answer: -1
   correct_answer: 1
   is_correct: false
   reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"이 문제를 단계별로 풀어보겠습니다.\n\n1) 먼저\
@@ -182,7 +182,7 @@ results:
   error: 답 추출 실패
 - question_id: q9
   question_number: 9
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: "{\n  \"answer\": 5,\n  \"reasoning\": \"다음과 같은 단계로 풀이할 수 있습니다:\\n\\\
@@ -218,7 +218,7 @@ results:
   error: null
 - question_id: q11
   question_number: 11
-  answer: 0
+  answer: -1
   correct_answer: 2
   is_correct: false
   reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"다음과 같은 단계로 풀이할 수 있습니다:\n\n1)\
@@ -236,7 +236,7 @@ results:
   error: 답 추출 실패
 - question_id: q12
   question_number: 12
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"다음과 같은 단계로 풀이할 수 있습니다:\\n\\\
@@ -274,7 +274,7 @@ results:
   error: null
 - question_id: q14
   question_number: 14
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"다음과 같은 단계로 문제를 해결할 수 있습니다:\n\
@@ -312,7 +312,7 @@ results:
   error: null
 - question_id: q16
   question_number: 16
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: "{\n  \"answer\": 4,\n  \"reasoning\": \"이 문제를 다음과 같이 풀이할 수 있습니다:\\n\\\
@@ -328,7 +328,7 @@ results:
   error: 답 추출 실패
 - question_id: q17
   question_number: 17
-  answer: 0
+  answer: -1
   correct_answer: 5
   is_correct: false
   reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"이 문제는 다음과 같은 단계로 해결할 수 있습니다:\n\
@@ -345,7 +345,7 @@ results:
   error: 답 추출 실패
 - question_id: q18
   question_number: 18
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"이 문제를 다음과 같이 해결할 수 있습니다:\n\n\
@@ -363,7 +363,7 @@ results:
   error: 답 추출 실패
 - question_id: q19
   question_number: 19
-  answer: 0
+  answer: -1
   correct_answer: 1
   is_correct: false
   reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"다음과 같은 단계로 문제를 해결하겠습니다:\n\n\
@@ -381,7 +381,7 @@ results:
   error: 답 추출 실패
 - question_id: q20
   question_number: 20
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"이 문제를 단계별로 해결해보겠습니다.\n\n1) 먼저\
@@ -399,7 +399,7 @@ results:
   error: 답 추출 실패
 - question_id: q21
   question_number: 21
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"이 문제를 다음과 같이 풀이할 수 있습니다:\n\n\
@@ -416,7 +416,7 @@ results:
   error: 답 추출 실패
 - question_id: q22
   question_number: 22
-  answer: 0
+  answer: -1
   correct_answer: 2
   is_correct: false
   reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"이 문제를 다음과 같이 풀이할 수 있습니다:\n\n\
@@ -480,7 +480,7 @@ results:
   error: null
 - question_id: q24
   question_number: 24
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"다음과 같은 단계로 풀이할 수 있습니다:\\n\\\
@@ -514,7 +514,7 @@ results:
   error: null
 - question_id: q26
   question_number: 26
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"이 문제는 여사건을 이용하여 해결할 수 있습니다.\n\
@@ -547,7 +547,7 @@ results:
   error: null
 - question_id: q28
   question_number: 28
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"이 문제를 다음과 같이 풀이할 수 있습니다:\n\n\
@@ -565,7 +565,7 @@ results:
   error: 답 추출 실패
 - question_id: q29
   question_number: 29
-  answer: 0
+  answer: -1
   correct_answer: 5
   is_correct: false
   reasoning: "{\n  \"answer\": 20,\n  \"reasoning\": \"이 문제를 단계별로 풀어보겠습니다.\n\n1) 첫\
@@ -584,7 +584,7 @@ results:
   error: 답 추출 실패
 - question_id: q30
   question_number: 30
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"이 문제를 단계별로 풀어보겠습니다.\n\n1) 초기\
@@ -601,7 +601,7 @@ results:
   error: 답 추출 실패
 - question_id: q23
   question_number: 23
-  answer: 0
+  answer: -1
   correct_answer: 5
   is_correct: false
   reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"이 극한값을 구하기 위해 다음과 같이 풀이할 수 있습니다:\n\
@@ -617,7 +617,7 @@ results:
   error: 답 추출 실패
 - question_id: q24
   question_number: 24
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: "{\n  \"answer\": 4,\n  \"reasoning\": \"이 적분을 해결하기 위해 다음과 같은 단계로 풀이합니다:\n\
@@ -634,7 +634,7 @@ results:
   error: 답 추출 실패
 - question_id: q25
   question_number: 25
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"다음과 같은 단계로 풀이할 수 있습니다:\\n\\\
@@ -654,7 +654,7 @@ results:
   error: 답 추출 실패
 - question_id: q26
   question_number: 26
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"이 문제를 해결하기 위해 다음 단계로 풀이하겠습니다:\n\
@@ -671,7 +671,7 @@ results:
   error: 답 추출 실패
 - question_id: q27
   question_number: 27
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"다음과 같은 단계로 풀이할 수 있습니다:\n\n1)\
@@ -689,7 +689,7 @@ results:
   error: 답 추출 실패
 - question_id: q28
   question_number: 28
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"이 문제를 단계별로 풀어보겠습니다.\n\n1) 먼저\
@@ -709,7 +709,7 @@ results:
   error: 답 추출 실패
 - question_id: q29
   question_number: 29
-  answer: 0
+  answer: -1
   correct_answer: 5
   is_correct: false
   reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"이 문제를 다음과 같이 해결할 수 있습니다:\n\n\
@@ -727,7 +727,7 @@ results:
   error: 답 추출 실패
 - question_id: q30
   question_number: 30
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"이 문제를 단계별로 해결해보겠습니다.\n\n1) 먼저\
@@ -855,7 +855,7 @@ results:
   error: null
 - question_id: q27
   question_number: 27
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"이 문제를 다음과 같이 해결할 수 있습니다:\n\n\
@@ -873,7 +873,7 @@ results:
   error: 답 추출 실패
 - question_id: q28
   question_number: 28
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"이 문제를 다음과 같이 해결할 수 있습니다:\n\n\
@@ -892,7 +892,7 @@ results:
   error: 답 추출 실패
 - question_id: q29
   question_number: 29
-  answer: 0
+  answer: -1
   correct_answer: 5
   is_correct: false
   reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"이 문제를 단계별로 해결해보겠습니다.\n\n1) 주어진\
@@ -910,7 +910,7 @@ results:
   error: 답 추출 실패
 - question_id: q30
   question_number: 30
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"이 문제를 단계별로 해결해보겠습니다.\n\n1) |XB\

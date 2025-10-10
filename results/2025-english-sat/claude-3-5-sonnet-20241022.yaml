@@ -178,7 +178,7 @@ results:
   error: 듣기 평가 문제는 평가하지 않음
 - question_id: q16
   question_number: 16
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"여자의 발언은 미래 식량 부족 문제를 해결하기 위한\
@@ -194,7 +194,7 @@ results:
   error: 답 추출 실패
 - question_id: q17
   question_number: 17
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: "{\n  \"answer\": 1,\n  \"reasoning\": \"지문이 제시되지 않은 상태에서 선택지들을 비교해보면:\n\
@@ -240,7 +240,7 @@ results:
   error: null
 - question_id: q20
   question_number: 20
-  answer: 0
+  answer: -1
   correct_answer: 1
   is_correct: false
   reasoning: '죄송하지만 지문 내용이 제시되지 않아 정확한 답을 찾기 어렵습니다. 선택지만으로는 필자의 주장을 파악할 수 없습니다.
@@ -263,7 +263,7 @@ results:
   error: 답 추출 실패
 - question_id: q21
   question_number: 21
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"이 표현의 의미를 파악하기 위해서는 전체 맥락, 특히\
@@ -280,7 +280,7 @@ results:
   error: 답 추출 실패
 - question_id: q22
   question_number: 22
-  answer: 0
+  answer: -1
   correct_answer: 2
   is_correct: false
   reasoning: "{\n  \"answer\": 1,\n  \"reasoning\": \"주어진 지문은 건축가의 역할과 필요한 자질에 대해\
@@ -295,7 +295,7 @@ results:
   error: 답 추출 실패
 - question_id: q23
   question_number: 23
-  answer: 0
+  answer: -1
   correct_answer: 1
   is_correct: false
   reasoning: "{\n  \"answer\": 1,\n  \"reasoning\": \"이 지문은 로마 제국 시대의 건축가의 위상과 교육에\
@@ -310,7 +310,7 @@ results:
   error: 답 추출 실패
 - question_id: q24
   question_number: 24
-  answer: 0
+  answer: -1
   correct_answer: 5
   is_correct: false
   reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"죄송하지만 이 지문은 셀피(selfie)나 자화상에\
@@ -327,7 +327,7 @@ results:
   error: 답 추출 실패
 - question_id: q25
   question_number: 25
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: '죄송하지만, 도표가 제시되지 않아서 정확한 답을 찾을 수 없습니다. 도표의 내용을 확인할 수 있도록 도표를 함께 공유해 주시면,
@@ -353,7 +353,7 @@ results:
   error: 답 추출 실패
 - question_id: q26
   question_number: 26
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: "{\n  \"answer\": 4,\n  \"reasoning\": \"지문에서 Dick Enberg가 2016년 10월\
@@ -368,7 +368,7 @@ results:
   error: 답 추출 실패
 - question_id: q27
   question_number: 27
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: "{\n  \"answer\": 2,\n  \"reasoning\": \"지문에서 시티 투어 버스에 대한 사용 제한 내용이\
@@ -383,7 +383,7 @@ results:
   error: 답 추출 실패
 - question_id: q28
   question_number: 28
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: "{\n  \"answer\": 2,\n  \"reasoning\": \"지문에서 'Luckwood Snow Festival'이\
@@ -398,7 +398,7 @@ results:
   error: 답 추출 실패
 - question_id: q29
   question_number: 29
-  answer: 0
+  answer: -1
   correct_answer: 2
   is_correct: false
   reasoning: "{\n  \"answer\": 2,\n  \"reasoning\": \"어법상 틀린 부분을 찾는 문제입니다. 각 밑줄 친\
@@ -414,7 +414,7 @@ results:
   error: 답 추출 실패
 - question_id: q30
   question_number: 30
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: "{\n  \"answer\": 2,\n  \"reasoning\": \"이 지문에서는 문법적 오류를 찾는 문제입니다. 밑줄\
@@ -430,7 +430,7 @@ results:
   error: 답 추출 실패
 - question_id: q31
   question_number: 31
-  answer: 0
+  answer: -1
   correct_answer: 5
   is_correct: false
   reasoning: "{\n  \"answer\": 5,\n  \"reasoning\": \"이 지문은 우리의 무의식적인 자동화된 행동과 의식적인\
@@ -447,7 +447,7 @@ results:
   error: 답 추출 실패
 - question_id: q33
   question_number: 33
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: "{\n  \"answer\": 5,\n  \"reasoning\": \"지문을 자세히 분석해보면:\n\n1. 'attention\
@@ -495,7 +495,7 @@ results:
   error: null
 - question_id: q36
   question_number: 36
-  answer: 0
+  answer: -1
   correct_answer: 5
   is_correct: false
   reasoning: "죄송하지만 지문 내용이 제시되지 않아서 정확한 답을 찾을 수 없습니다. \n\n글의 순서를 파악하기 위해서는:\n1. 주어진\
@@ -509,7 +509,7 @@ results:
   error: 답 추출 실패
 - question_id: q38
   question_number: 38
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"지문의 논리적 흐름을 분석해보면 다음과 같습니다:\n\
@@ -525,7 +525,7 @@ results:
   error: 답 추출 실패
 - question_id: q39
   question_number: 39
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: "{\n  \"answer\": 1,\n  \"reasoning\": \"이 지문은 자연의 생명체나 사물들이 단순한 선형적\
@@ -542,7 +542,7 @@ results:
   error: 답 추출 실패
 - question_id: q41
   question_number: 41
-  answer: 0
+  answer: -1
   correct_answer: 2
   is_correct: false
   reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"이 지문은 인간의 손가락(특히 엄지와 검지)으로 종이를\
@@ -573,7 +573,7 @@ results:
   error: null
 - question_id: q43
   question_number: 43
-  answer: 0
+  answer: -1
   correct_answer: 2
   is_correct: false
   reasoning: "죄송하지만 지문 (A)~(D)의 내용이 제시되지 않아 정확한 순서를 판단할 수 없습니다. \n\n글의 순서 배열 문제를 풀기\
@@ -587,7 +587,7 @@ results:
   error: 답 추출 실패
 - question_id: q44
   question_number: 44
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: '죄송하지만, 지문이 제시되지 않아 (a)~(e)가 가리키는 대상을 파악할 수 없습니다. 이 유형의 문제를 정확히 풀기 위해서는:
@@ -608,7 +608,7 @@ results:
   error: 답 추출 실패
 - question_id: q45
   question_number: 45
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: '죄송하지만 지문이 제공되지 않아 정확한 답을 찾기 어렵습니다. 지문 없이는 선택지의 진위 여부를 판단할 수 없습니다.

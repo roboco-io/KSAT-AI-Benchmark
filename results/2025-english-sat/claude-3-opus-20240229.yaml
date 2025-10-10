@@ -178,7 +178,7 @@ results:
   error: 듣기 평가 문제는 평가하지 않음
 - question_id: q16
   question_number: 16
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: 지문이 제공되지 않아 정확한 답변을 하기 어렵습니다. 여자가 하는 말의 내용을 알아야 주제를 파악할 수 있을 것 같습니다.
@@ -203,7 +203,7 @@ results:
   error: null
 - question_id: q18
   question_number: 18
-  answer: 0
+  answer: -1
   correct_answer: 1
   is_correct: false
   reasoning: 문제에 지문이 제시되지 않았기 때문에 정확한 답변을 제공하기 어렵습니다. 문제의 목적을 파악하려면 해당 글의 내용이 필요합니다.
@@ -215,7 +215,7 @@ results:
   error: 답 추출 실패
 - question_id: q19
   question_number: 19
-  answer: 0
+  answer: -1
   correct_answer: 2
   is_correct: false
   reasoning: "죄송하지만 주어진 정보만으로는 Peter의 심경 변화를 파악하기 어렵습니다. 심경 변화를 추론할 수 있는 구체적인 지문이\
@@ -230,7 +230,7 @@ results:
   error: 답 추출 실패
 - question_id: q20
   question_number: 20
-  answer: 0
+  answer: -1
   correct_answer: 1
   is_correct: false
   reasoning: 죄송하지만 주어진 정보만으로는 정확한 답변을 제공하기 어렵습니다. 필자가 주장하는 바를 파악하려면 해당 글의 내용이 필요합니다.
@@ -257,7 +257,7 @@ results:
   error: null
 - question_id: q22
   question_number: 22
-  answer: 0
+  answer: -1
   correct_answer: 2
   is_correct: false
   reasoning: "지문을 분석해 보면 건축가의 위상에 대해 설명하고 있습니다. 로마 제국 시대에 건축이 정치적으로 중요해지면서 건축가의 위상도\
@@ -303,7 +303,7 @@ results:
   error: null
 - question_id: q25
   question_number: 25
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: 죄송하지만 문제에서 언급한 도표가 제공되지 않았습니다. 도표 없이는 선택지 중 도표 내용과 일치하지 않는 것을 판단할 수 없습니다.
@@ -315,7 +315,7 @@ results:
   error: 답 추출 실패
 - question_id: q26
   question_number: 26
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: 지문이 제공되지 않아 정확한 답변을 할 수 없습니다. Dick Enberg에 대한 글의 내용을 근거로 답변할 수 있도록 지문을
@@ -327,7 +327,7 @@ results:
   error: 답 추출 실패
 - question_id: q27
   question_number: 27
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: 지문이 제공되지 않아 문제를 해결하기 어렵습니다. Adenville City Pass Card에 대한 안내문의 내용이 주어져야
@@ -339,7 +339,7 @@ results:
   error: 답 추출 실패
 - question_id: q28
   question_number: 28
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: 지문이 제공되지 않아 문제를 풀 수 없습니다. 문제를 해결하려면 Luckwood Snow Festival에 대한 안내문의 내용이
@@ -379,7 +379,7 @@ results:
   error: null
 - question_id: q31
   question_number: 31
-  answer: 0
+  answer: -1
   correct_answer: 5
   is_correct: false
   reasoning: "{\n  \"answer\": 5,\n  \"reasoning\": \"지문에서는 우리가 의식하지 않고 자동적으로 처리되는\
@@ -440,7 +440,7 @@ results:
   error: null
 - question_id: q36
   question_number: 36
-  answer: 0
+  answer: -1
   correct_answer: 5
   is_correct: false
   reasoning: 죄송하지만 주어진 정보만으로는 문제를 풀 수 없습니다. 지문과 (A), (B), (C)에 해당하는 내용이 제시되어 있지 않기
@@ -467,7 +467,7 @@ results:
   error: null
 - question_id: q39
   question_number: 39
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: "{\n  \"answer\": 5,\n  \"reasoning\": \"주어진 지문은 두 개의 문장으로 이루어져 있는데,\
@@ -500,7 +500,7 @@ results:
   error: null
 - question_id: q42
   question_number: 42
-  answer: 0
+  answer: -1
   correct_answer: 5
   is_correct: false
   reasoning: 주어진 지문에는 (a)~(e)로 표시된 밑줄 친 단어가 없습니다. 따라서 문제 자체가 잘못 출제되었으며, 주어진 선택지 중에서
@@ -512,7 +512,7 @@ results:
   error: 유효하지 않은 답
 - question_id: q43
   question_number: 43
-  answer: 0
+  answer: -1
   correct_answer: 2
   is_correct: false
   reasoning: 죄송하지만 문제에 주어진 글 (A)~(D)가 제시되어 있지 않아 내용상 순서를 판단할 수 없습니다. 주어진 글의 내용을 제공해
@@ -524,7 +524,7 @@ results:
   error: 답 추출 실패
 - question_id: q44
   question_number: 44
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: 죄송하지만 주어진 정보만으로는 문제를 풀 수 없습니다. 밑줄 친 (a)~(e)가 포함된 지문이 제시되어야 각 대명사가 가리키는
@@ -537,7 +537,7 @@ results:
   error: 답 추출 실패
 - question_id: q45
   question_number: 45
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: 지문이 제공되지 않아 문제를 풀 수 없습니다. 지문 내용을 근거로 답변해야 하는데 지문이 없어서 선택지의 내용이 지문과 일치하는지

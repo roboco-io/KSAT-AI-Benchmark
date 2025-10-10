@@ -74,11 +74,11 @@ class AnthropicModel(BaseModel):
             # 1차 시도: 그대로 JSON 파싱
             try:
                 result = json.loads(content)
-                answer = int(result.get('answer', 0))
+                answer = int(result.get('answer', -1))
                 reasoning = result.get('reasoning', '')
 
                 if not (1 <= answer <= 5):
-                    answer = self._extract_answer_from_text(content) or 0
+                    answer = self._extract_answer_from_text(content) or -1
 
                 return ModelResponse(
                     answer=answer,
@@ -97,11 +97,11 @@ class AnthropicModel(BaseModel):
             if extracted_json:
                 try:
                     result = json.loads(extracted_json)
-                    answer = int(result.get('answer', 0))
+                    answer = int(result.get('answer', -1))
                     reasoning = result.get('reasoning', '')
 
                     if not (1 <= answer <= 5):
-                        answer = self._extract_answer_from_text(content) or 0
+                        answer = self._extract_answer_from_text(content) or -1
 
                     return ModelResponse(
                         answer=answer,
@@ -116,7 +116,7 @@ class AnthropicModel(BaseModel):
                     pass
 
             # 3차 시도: 텍스트에서 답 추출
-            answer = self._extract_answer_from_text(content) or 0
+            answer = self._extract_answer_from_text(content) or -1
 
             return ModelResponse(
                 answer=answer,
@@ -131,7 +131,7 @@ class AnthropicModel(BaseModel):
         except Exception as e:
             time_taken = time.time() - start_time
             return ModelResponse(
-                answer=0,
+                answer=-1,
                 reasoning="",
                 time_taken=time_taken,
                 raw_response="",

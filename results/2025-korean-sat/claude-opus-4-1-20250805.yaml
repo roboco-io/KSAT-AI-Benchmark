@@ -217,7 +217,7 @@ results:
   error: null
 - question_id: q16
   question_number: 16
-  answer: 0
+  answer: -1
   correct_answer: 2
   is_correct: false
   reasoning: "죄송하지만, 제시된 문제에 <보기>가 누락되어 있습니다. \n\n문제는 \"윗글을 바탕으로 <보기>를 이해한 내용으로 적절하지\
@@ -497,7 +497,7 @@ results:
   error: null
 - question_id: q37
   question_number: 37
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: "문제를 분석하기 위해 먼저 <보기>의 내용을 확인해야 하는데, 제시된 지문에는 <보기>가 포함되어 있지 않습니다. \n\n\
@@ -552,7 +552,7 @@ results:
   error: null
 - question_id: q41
   question_number: 41
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: "제시된 지문을 분석해보니, (가)는 학생들이 교훈 변경에 대해 토론하는 내용이고, 문제에서 언급하는 (A)~(C)와 '플라스틱\

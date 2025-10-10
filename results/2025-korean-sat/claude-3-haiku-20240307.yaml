@@ -313,7 +313,7 @@ results:
   error: null
 - question_id: q25
   question_number: 25
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"(나)에서 화자는 \"당신이라는 말 할 줄 알고서...,\

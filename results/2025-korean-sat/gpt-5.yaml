@@ -13,7 +13,7 @@ summary:
 results:
 - question_id: q1
   question_number: 1
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: 빈 응답
@@ -166,7 +166,7 @@ results:
   error: null
 - question_id: q7
   question_number: 7
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: '[질문 유형: 긍정형 - 일치하는 것 찾기]
@@ -1030,7 +1030,7 @@ results:
   error: null
 - question_id: q37
   question_number: 37
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: '[질문 유형: 부정형 - 적절하지 않은 것 찾기]
@@ -1208,7 +1208,7 @@ results:
   error: null
 - question_id: q43
   question_number: 43
-  answer: 0
+  answer: -1
   correct_answer: 1
   is_correct: false
   reasoning: '[질문 유형: 긍정형 - 일치하는 것 찾기]

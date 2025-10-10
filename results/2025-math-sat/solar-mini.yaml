@@ -13,7 +13,7 @@ summary:
 results:
 - question_id: q1
   question_number: 1
-  answer: 0
+  answer: -1
   correct_answer: 5
   is_correct: false
   reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"주어진 식 \\( \\sqrt{5} \\times\
@@ -28,7 +28,7 @@ results:
   error: JSON 파싱 실패
 - question_id: q2
   question_number: 2
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"주어진 함수 \\( f(x) = x^2 - 8x +\
@@ -47,7 +47,7 @@ results:
   error: JSON 파싱 실패
 - question_id: q3
   question_number: 3
-  answer: 0
+  answer: -1
   correct_answer: 5
   is_correct: false
   reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"등비수열 \\( \\{a_n\\} \\) 의 일반항은\
@@ -66,7 +66,7 @@ results:
   error: JSON 파싱 실패
 - question_id: q4
   question_number: 4
-  answer: 0
+  answer: -1
   correct_answer: 2
   is_correct: false
   reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"함수 \\( f(x) \\) 가 실수 전체의 집합에서\
@@ -89,7 +89,7 @@ results:
   error: JSON 파싱 실패
 - question_id: q5
   question_number: 5
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"주어진 함수 \\( f(x) = (x^2 + 1)(3x^2\
@@ -111,7 +111,7 @@ results:
   error: JSON 파싱 실패
 - question_id: q6
   question_number: 6
-  answer: 0
+  answer: -1
   correct_answer: 5
   is_correct: false
   reasoning: "{\n  \"answer\": 2,\n  \"reasoning\": \"주어진 방정식 \\( \\cos \\left( \\\
@@ -138,7 +138,7 @@ results:
   error: JSON 파싱 실패
 - question_id: q7
   question_number: 7
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"주어진 식 \\(\\int_{0}^{x} f(t)\
@@ -154,7 +154,7 @@ results:
   error: JSON 파싱 실패
 - question_id: q8
   question_number: 8
-  answer: 0
+  answer: -1
   correct_answer: 1
   is_correct: false
   reasoning: "{\n  \"answer\": 2,\n  \"reasoning\": \"주어진 식을 계산하기 위해 로그의 성질을 사용합니다.\\\
@@ -175,7 +175,7 @@ results:
   error: JSON 파싱 실패
 - question_id: q9
   question_number: 9
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"주어진 식 \\[ \\int_{-2}^{a} f(x)\
@@ -226,7 +226,7 @@ results:
   error: null
 - question_id: q11
   question_number: 11
-  answer: 0
+  answer: -1
   correct_answer: 2
   is_correct: false
   reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"점 P의 운동 방향이 바뀌는 시각을 찾기 위해서는\
@@ -281,7 +281,7 @@ results:
   error: JSON 파싱 실패
 - question_id: q12
   question_number: 12
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"주어진 식을 변형하여 등차수열 {b_n}의 공차를\
@@ -348,7 +348,7 @@ results:
   error: null
 - question_id: q14
   question_number: 14
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"주어진 정보에 따라 삼각형 ABC의 내각 A와 내각\
@@ -392,7 +392,7 @@ results:
   error: JSON 파싱 실패
 - question_id: q15
   question_number: 15
-  answer: 0
+  answer: -1
   correct_answer: 2
   is_correct: false
   reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"함수 \\(g(x)\\)가 실수 전체의 집합에서 미분가능하므로\
@@ -445,7 +445,7 @@ results:
   error: JSON 파싱 실패
 - question_id: q16
   question_number: 16
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: "{\n  \"answer\": 1,\n  \"reasoning\": \"로그의 성질에 의해 \\(\\log_3(x-3) =\
@@ -459,7 +459,7 @@ results:
   error: JSON 파싱 실패
 - question_id: q17
   question_number: 17
-  answer: 0
+  answer: -1
   correct_answer: 5
   is_correct: false
   reasoning: "{\n  \"answer\": 29,\n  \"reasoning\": \"주어진 \\(f'(x) = 9x^2 + 4x -\
@@ -478,7 +478,7 @@ results:
   error: JSON 파싱 실패
 - question_id: q18
   question_number: 18
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: "{\n  \"answer\": 120,\n  \"reasoning\": \"주어진 수열 \\( \\{a_n\\} \\)에\
@@ -512,7 +512,7 @@ results:
   error: JSON 파싱 실패
 - question_id: q19
   question_number: 19
-  answer: 0
+  answer: -1
   correct_answer: 1
   is_correct: false
   reasoning: "{\n  \"answer\": 1,\n  \"reasoning\": \"함수 \\( f(x) \\)의 극댓값이 \\( \\\
@@ -549,7 +549,7 @@ results:
   error: JSON 파싱 실패
 - question_id: q20
   question_number: 20
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: "{\n  \"answer\": 1,\n  \"reasoning\": \"주어진 함수 \\( f(x) \\)는 \\( x >\
@@ -573,7 +573,7 @@ results:
   error: JSON 파싱 실패
 - question_id: q21
   question_number: 21
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: "{\n  \"answer\": 4,\n  \"reasoning\": \"주어진 함수 \\( f(x) = x^3 + ax^2\
@@ -657,7 +657,7 @@ results:
   error: null
 - question_id: q25
   question_number: 25
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: "{\n  \"answer\": 4,\n  \"reasoning\": \"신뢰도 95%의 신뢰구간을 구하는 공식은 다음과 같다.\\\
@@ -700,7 +700,7 @@ results:
   error: null
 - question_id: q28
   question_number: 28
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"집합 X = {1, 2, 3, 4, 5, 6}에서\
@@ -744,7 +744,7 @@ results:
   error: JSON 파싱 실패
 - question_id: q29
   question_number: 29
-  answer: 0
+  answer: -1
   correct_answer: 5
   is_correct: false
   reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"주어진 조건에 따라 \\(X\\)와 \\(Y\\)의\
@@ -799,7 +799,7 @@ results:
   error: JSON 파싱 실패
 - question_id: q30
   question_number: 30
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: "{\n  \"answer\": 1,\n  \"reasoning\": \"주어진 실험에서 5개의 동전이 모두 앞면이 보이도록\
@@ -856,7 +856,7 @@ results:
   error: null
 - question_id: q25
   question_number: 25
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: "{\n  \"answer\": 2,\n  \"reasoning\": \"주어진 조건은 \\(\\lim_{n \\to \\\
@@ -877,7 +877,7 @@ results:
   error: JSON 파싱 실패
 - question_id: q26
   question_number: 26
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"회전체의 부피를 구하기 위해 디스크 방법(Disk\

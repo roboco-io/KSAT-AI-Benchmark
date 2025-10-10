@@ -117,8 +117,15 @@ def export_to_json():
             # 영어 과목의 경우 듣기 평가 제외 (question_number <= 15)
             if subject == 'english':
                 reading_results = []
+                skipped_count = 0
+                parsing_failed_count = 0
+
                 for r in model_results:
                     reading_questions = [q for q in r['results'] if q['question_number'] >= 16]
+                    # 전체 결과에서 스킵과 파싱실패 카운트
+                    skipped_count += sum(1 for q in r['results'] if q['answer'] == 0)
+                    parsing_failed_count += sum(1 for q in r['results'] if q['answer'] == -1)
+
                     if reading_questions:
                         total_questions = len(reading_questions)
                         correct_answers = sum(1 for q in reading_questions if q['is_correct'])
@@ -152,6 +159,15 @@ def export_to_json():
                     sum(q['time_taken'] for q in r['results'])
                     for r in model_results
                 )
+                # 스킵과 파싱실패 카운트
+                skipped_count = sum(
+                    sum(1 for q in r['results'] if q['answer'] == 0)
+                    for r in model_results
+                )
+                parsing_failed_count = sum(
+                    sum(1 for q in r['results'] if q['answer'] == -1)
+                    for r in model_results
+                )
 
             accuracy = (correct_answers / total_questions * 100) if total_questions > 0 else 0
             score_rate = (total_score / max_score * 100) if max_score > 0 else 0
@@ -164,9 +180,11 @@ def export_to_json():
                 'total_score': total_score,
                 'max_score': max_score,
                 'correct_answers': correct_answers,
-                'total_questions': total_questions,  # 총 문제 수 추가
+                'total_questions': total_questions,
                 'avg_time': round(avg_time, 2),
                 'exams_count': len(model_results),
+                'skipped_count': skipped_count,  # 스킵된 문제 수 (듣기 평가)
+                'parsing_failed_count': parsing_failed_count,  # 파싱 실패 문제 수
             })
 
         board.sort(key=lambda x: x['accuracy'], reverse=True)

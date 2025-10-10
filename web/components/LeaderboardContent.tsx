@@ -163,6 +163,11 @@ export function LeaderboardContent() {
                       <Text size="sm" c="dimmed">
                         정답률 {entry.accuracy.toFixed(1)}% · {entry.exams_count}개 시험 · 평균 {entry.avg_time?.toFixed(2)}초
                       </Text>
+                      {(entry.skipped_count > 0 || entry.parsing_failed_count > 0) && (
+                        <Text size="xs" c="orange">
+                          스킵 {entry.skipped_count}개 · 파싱실패 {entry.parsing_failed_count}개
+                        </Text>
+                      )}
                     </div>
                   </Group>
                   <div style={{ textAlign: 'right' }}>
@@ -384,7 +389,10 @@ export function LeaderboardContent() {
                 🔢 답변 번호 안내
               </Text>
               <Text size="sm" c="dimmed">
-                • <strong>0번 답변</strong>: 모델이 문제를 풀 수 없는 경우 (빈 응답, JSON 파싱 오류, API 오류 등)
+                • <strong>0번 답변</strong>: 의도적 스킵 (예: 영어 듣기 평가 - 오디오 없음)
+              </Text>
+              <Text size="sm" c="dimmed">
+                • <strong>-1번 답변</strong>: 파싱 실패 (빈 응답, JSON 오류, API 오류 등)
               </Text>
               <Text size="sm" c="dimmed">
                 • <strong>1-5번 답변</strong>: 모델이 선택한 정상 답변
@@ -518,6 +526,11 @@ export function LeaderboardContent() {
                               <Text size="sm" c="dimmed">
                                 정답률 {entry.accuracy.toFixed(1)}% · {entry.exams_count}개 시험 · 평균 {entry.avg_time?.toFixed(2)}초
                               </Text>
+                              {(entry.skipped_count > 0 || entry.parsing_failed_count > 0) && (
+                                <Text size="xs" c="orange">
+                                  스킵 {entry.skipped_count}개 · 파싱실패 {entry.parsing_failed_count}개
+                                </Text>
+                              )}
                             </div>
                           </Group>
                           <div style={{ textAlign: 'right' }}>

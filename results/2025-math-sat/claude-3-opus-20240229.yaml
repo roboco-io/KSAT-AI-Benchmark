@@ -13,7 +13,7 @@ summary:
 results:
 - question_id: q1
   question_number: 1
-  answer: 0
+  answer: -1
   correct_answer: 5
   is_correct: false
   reasoning: "{\n  \"answer\": 5,\n  \"reasoning\": \"\\( \\sqrt{5} \\times 25^{\\\
@@ -30,7 +30,7 @@ results:
   error: 답 추출 실패
 - question_id: q2
   question_number: 2
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: "{\n  \"answer\": 4,\n  \"reasoning\": \"주어진 함수 f(x) = x^2 - 8x + 7에\
@@ -61,7 +61,7 @@ results:
   error: null
 - question_id: q4
   question_number: 4
-  answer: 0
+  answer: -1
   correct_answer: 2
   is_correct: false
   reasoning: "{\n  \"answer\": 4,\n  \"reasoning\": \"함수 f(x)가 실수 전체의 집합에서 연속이려면,\
@@ -76,7 +76,7 @@ results:
   error: 답 추출 실패
 - question_id: q5
   question_number: 5
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: "{\n  \"answer\": 4,\n  \"reasoning\": \"함수 f(x)는 두 함수의 곱으로 이루어져 있으므로,\
@@ -93,7 +93,7 @@ results:
   error: 답 추출 실패
 - question_id: q6
   question_number: 6
-  answer: 0
+  answer: -1
   correct_answer: 5
   is_correct: false
   reasoning: "{\n  \"answer\": 4,\n  \"reasoning\": \"주어진 식 \\( \\cos \\left( \\frac{\\\
@@ -113,7 +113,7 @@ results:
   error: 답 추출 실패
 - question_id: q7
   question_number: 7
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: "다음과 같이 문제를 풀이해보겠습니다.\n\n{\n  \"answer\": 2,\n  \"reasoning\": \"함수 f(x)는\
@@ -128,7 +128,7 @@ results:
   error: 답 추출 실패
 - question_id: q8
   question_number: 8
-  answer: 0
+  answer: -1
   correct_answer: 1
   is_correct: false
   reasoning: "{\n  \"answer\": 2,\n  \"reasoning\": \"주어진 식을 계산하기 위해 로그의 성질을 이용합니다.\n\
@@ -154,7 +154,7 @@ results:
   error: 답 추출 실패
 - question_id: q9
   question_number: 9
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: "문제를 신중하게 분석한 결과, 다음과 같이 답변합니다.\n\n{\n  \"answer\": 4,\n  \"reasoning\"\
@@ -176,7 +176,7 @@ results:
   error: 답 추출 실패
 - question_id: q10
   question_number: 10
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: "문제를 분석해보겠습니다:\n\n{\n  \"answer\": 2,\n  \"reasoning\": \"함수 f(x) = a\
@@ -193,7 +193,7 @@ results:
   error: 답 추출 실패
 - question_id: q11
   question_number: 11
-  answer: 0
+  answer: -1
   correct_answer: 2
   is_correct: false
   reasoning: "문제를 분석해보겠습니다:\n\n{\n  \"answer\": 2,\n  \"reasoning\": \"점 P의 위치는 x\
@@ -210,7 +210,7 @@ results:
   error: 답 추출 실패
 - question_id: q12
   question_number: 12
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: "문제를 분석해보겠습니다.\n\n{\n  \"answer\": 2,\n  \"reasoning\": \"주어진 조건에 따라\
@@ -230,7 +230,7 @@ results:
   error: 답 추출 실패
 - question_id: q13
   question_number: 13
-  answer: 0
+  answer: -1
   correct_answer: 5
   is_correct: false
   reasoning: "{\n  \"answer\": 4,\n  \"reasoning\": \"주어진 조건을 바탕으로 삼차함수 f(x)를 구해보면\
@@ -248,7 +248,7 @@ results:
   error: 답 추출 실패
 - question_id: q14
   question_number: 14
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: "문제를 자세히 분석해 보겠습니다.\n\n{\n  \"answer\": 4,\n  \"reasoning\": \"주어진 조건을\
@@ -271,7 +271,7 @@ results:
   error: 답 추출 실패
 - question_id: q15
   question_number: 15
-  answer: 0
+  answer: -1
   correct_answer: 2
   is_correct: false
   reasoning: "이 문제를 단계적으로 풀어보겠습니다.\n\n{\n  \"answer\": 2,\n  \"reasoning\": \"주어진\
@@ -295,7 +295,7 @@ results:
   error: 답 추출 실패
 - question_id: q16
   question_number: 16
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: "이 문제는 선택지가 주어지지 않은 서술형 문제입니다. 따라서 1~5 중에서 고르는 것이 아니라 주어진 방정식을 풀어서 실수\
@@ -310,7 +310,7 @@ results:
   error: 답 추출 실패
 - question_id: q17
   question_number: 17
-  answer: 0
+  answer: -1
   correct_answer: 5
   is_correct: false
   reasoning: "문제를 잘 분석해 보겠습니다.\n\n주어진 정보:\n- \\(f(x)\\)는 다항함수\n- \\(f'(x) = 9x^2 +\
@@ -333,7 +333,7 @@ results:
   error: 답 추출 실패
 - question_id: q18
   question_number: 18
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: "문제를 분석해보겠습니다.\n\n{\n  \"answer\": 5,\n  \"reasoning\": \"수열의 규칙은 연속한\
@@ -348,7 +348,7 @@ results:
   error: 답 추출 실패
 - question_id: q19
   question_number: 19
-  answer: 0
+  answer: -1
   correct_answer: 1
   is_correct: false
   reasoning: "문제를 분석해보겠습니다.\n\n함수 \\( f(x) = 2x^3 - 3ax^2 - 12ax \\)가 주어졌고, 이 함수의\
@@ -370,7 +370,7 @@ results:
   error: 답 추출 실패
 - question_id: q20
   question_number: 20
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: "문제를 잘 분석해 보겠습니다.\n\n{\n  \"answer\": 5,\n  \"reasoning\": \"주어진 문제를\
@@ -394,7 +394,7 @@ results:
   error: 답 추출 실패
 - question_id: q21
   question_number: 21
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: 죄송하지만 이 문제에는 선택지가 주어지지 않았습니다. 문제에 주어진 조건만으로는 f(1)의 최댓값을 구하기에 충분한 정보가
@@ -407,7 +407,7 @@ results:
   error: 답 추출 실패
 - question_id: q22
   question_number: 22
-  answer: 0
+  answer: -1
   correct_answer: 2
   is_correct: false
   reasoning: "문제를 풀기 위해서는 수열 \\( \\{a_n\\} \\)이 만족해야 하는 조건이 제시되어야 합니다. 하지만 문제에서 조건이\
@@ -422,7 +422,7 @@ results:
   error: 답 추출 실패
 - question_id: q23
   question_number: 23
-  answer: 0
+  answer: -1
   correct_answer: 5
   is_correct: false
   reasoning: "{\n  \"answer\": 1,\n  \"reasoning\": \"주어진 다항식은 (x^3 + 2x^2)입니다. 이\
@@ -441,7 +441,7 @@ results:
   error: 답 추출 실패
 - question_id: q24
   question_number: 24
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"두 사건 A와 B의 합집합의 확률 P(A∪B)는 포함-배제의\
@@ -462,7 +462,7 @@ results:
   error: 답 추출 실패
 - question_id: q25
   question_number: 25
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: "다음과 같이 문제를 풀이해보겠습니다.\n\n{\n  \"answer\": 1,\n  \"reasoning\": \"신뢰도\
@@ -478,7 +478,7 @@ results:
   error: 답 추출 실패
 - question_id: q26
   question_number: 26
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: "{\n  \"answer\": 5,\n  \"reasoning\": \"전체 16명의 학생 중 과목 B를 선택한 학생은 7명입니다.\
@@ -510,7 +510,7 @@ results:
   error: null
 - question_id: q28
   question_number: 28
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"함수 f : X→X가 되려면 정의역과 공역이 같은\
@@ -528,7 +528,7 @@ results:
   error: 답 추출 실패
 - question_id: q29
   question_number: 29
-  answer: 0
+  answer: -1
   correct_answer: 5
   is_correct: false
   reasoning: "문제를 자세히 분석해 보겠습니다.\n\n{\n  \"answer\": 5,\n  \"reasoning\": \"주어진 조건을\
@@ -548,7 +548,7 @@ results:
   error: 답 추출 실패
 - question_id: q30
   question_number: 30
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: "문제를 분석해 보겠습니다.\n\n{\n  \"answer\": 5,\n  \"reasoning\": \"이 문제를 풀기 위해서는\
@@ -567,7 +567,7 @@ results:
   error: 답 추출 실패
 - question_id: q23
   question_number: 23
-  answer: 0
+  answer: -1
   correct_answer: 5
   is_correct: false
   reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"lim x→0 3x^2/sin^2x 의 값을 구하기\
@@ -582,7 +582,7 @@ results:
   error: 답 추출 실패
 - question_id: q24
   question_number: 24
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: "{\n  \"answer\": 4,\n  \"reasoning\": \"주어진 적분은 치환적분법을 사용하여 계산할 수 있습니다.\
@@ -597,7 +597,7 @@ results:
   error: 답 추출 실패
 - question_id: q25
   question_number: 25
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: "{\n  \"answer\": 3,\n  \"reasoning\": \"주어진 조건 \\( \\lim_{n \\to \\\
@@ -621,7 +621,7 @@ results:
   error: 답 추출 실패
 - question_id: q26
   question_number: 26
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: "이 문제를 풀기 위해서는 다음과 같은 단계를 거쳐야 합니다:\n\n{\n  \"answer\": 2,\n  \"reasoning\"\
@@ -649,7 +649,7 @@ results:
   error: 답 추출 실패
 - question_id: q27
   question_number: 27
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: "문제를 분석해보겠습니다.\n\n{\n  \"answer\": 4,\n  \"reasoning\": \"주어진 정보를 바탕으로\
@@ -689,7 +689,7 @@ results:
   error: null
 - question_id: q29
   question_number: 29
-  answer: 0
+  answer: -1
   correct_answer: 5
   is_correct: false
   reasoning: "이 문제를 풀기 위해서는 다음과 같은 단계가 필요합니다:\n\n1. 등비수열 {aₙ}의 공비 r을 구합니다. \n2. 등비수열\
@@ -738,7 +738,7 @@ results:
   error: null
 - question_id: q24
   question_number: 24
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: "{\n  \"answer\": 4,\n  \"reasoning\": \"포물선의 방정식은 y = a(x - h)^2 + k\
@@ -753,7 +753,7 @@ results:
   error: 답 추출 실패
 - question_id: q25
   question_number: 25
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: "문제를 자세히 분석해보겠습니다.\n\n{\n  \"answer\": 4,\n  \"reasoning\": \"두 점 A(a,\
@@ -769,7 +769,7 @@ results:
   error: 답 추출 실패
 - question_id: q26
   question_number: 26
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: "이 문제를 풀기 위해 다음과 같이 단계적으로 접근해 보겠습니다.\n\n{\n  \"answer\": 3,\n  \"reasoning\"\
@@ -788,7 +788,7 @@ results:
   error: 답 추출 실패
 - question_id: q27
   question_number: 27
-  answer: 0
+  answer: -1
   correct_answer: 3
   is_correct: false
   reasoning: "이 문제를 풀기 위해서는 다음과 같은 단계를 거쳐야 합니다:\n\n{\n  \"answer\": 3,\n  \"reasoning\"\
@@ -806,7 +806,7 @@ results:
   error: 답 추출 실패
 - question_id: q28
   question_number: 28
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: "문제를 분석해보겠습니다:\n\n{\n  \"answer\": 4,\n  \"reasoning\": \"주어진 조건에 따라\
@@ -824,7 +824,7 @@ results:
   error: 답 추출 실패
 - question_id: q29
   question_number: 29
-  answer: 0
+  answer: -1
   correct_answer: 5
   is_correct: false
   reasoning: 이 문제는 선택지가 주어지지 않아 p와 q의 정확한 값을 구할 수 없는 불완전한 문제입니다. 문제에서 요구하는 답을 고르기
@@ -837,7 +837,7 @@ results:
   error: 유효하지 않은 답
 - question_id: q30
   question_number: 30
-  answer: 0
+  answer: -1
   correct_answer: 4
   is_correct: false
   reasoning: "이 문제를 풀기 위해서는 다음과 같은 단계가 필요합니다:\n\n{\n  \"answer\": 5,\n  \"reasoning\"\
