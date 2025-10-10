@@ -154,39 +154,117 @@ class UpstageModel(BaseModel):
         Solar-Pro가 JSON 앞뒤에 추가 텍스트를 포함하는 경우가 많아서,
         정규식으로 JSON 부분만 추출합니다.
 
+        특히 수학 문제에서 "**수정 후:**", "**최종 답변:**" 같은
+        마크다운 헤더와 함께 여러 JSON 블록을 출력하는 경우 첫 번째 유효한 JSON만 추출합니다.
+
         Args:
             text: 응답 텍스트
 
         Returns:
             JSON 문자열 또는 None
         """
-        # 마크다운 코드 블록 제거
+        # 마크다운 제거 (안전한 방식)
+        # 1. 코드 블록 제거
         text = re.sub(r'```json\s*', '', text)
         text = re.sub(r'```\s*', '', text)
 
-        # 패턴 1: { "answer": ... } 형식 찾기 (가장 일반적)
-        # 중첩된 {} 처리를 위해 재귀적 패턴 사용하지 않고 간단한 방법 사용
-        match = re.search(r'\{\s*"answer"\s*:\s*\d+\s*,\s*"reasoning"\s*:\s*"[^"]*(?:"[^"]*)*"\s*\}', text, re.DOTALL)
-        if match:
-            return match.group(0)
+        # 2. 줄 단위 마크다운 헤더만 제거 (JSON 내부 보호)
+        # "**수정 후:**", "**최종 답변:**" 같은 패턴 (줄 시작 또는 개행 뒤에만)
+        text = re.sub(r'(?:^|\n)\s*\*\*[^*\n]+\*\*:?\s*(?:\n|$)', '\n', text, flags=re.MULTILINE)
+        text = re.sub(r'(?:^|\n)#{1,6}\s+[^\n]+\n', '\n', text, flags=re.MULTILINE)
 
-        # 패턴 2: 첫 번째 { 부터 마지막 } 까지 추출
-        # (reasoning에 긴 텍스트가 있을 수 있으므로)
-        first_brace = text.find('{')
-        if first_brace != -1:
+        # 첫 번째 유효한 JSON 블록 찾기 (여러 JSON 블록이 있을 수 있음)
+        search_start = 0
+        while True:
+            first_brace = text.find('{', search_start)
+            if first_brace == -1:
+                break
+
             # 중첩된 {} 고려하여 매칭되는 } 찾기
             brace_count = 0
+            json_end = -1
             for i in range(first_brace, len(text)):
                 if text[i] == '{':
                     brace_count += 1
                 elif text[i] == '}':
                     brace_count -= 1
                     if brace_count == 0:
-                        json_str = text[first_brace:i+1]
-                        # 간단한 유효성 검사
-                        if '"answer"' in json_str and '"reasoning"' in json_str:
-                            return json_str
+                        json_end = i
                         break
 
+            if json_end == -1:
+                # 매칭되는 }를 찾지 못함
+                break
+
+            json_str = text[first_brace:json_end+1]
+
+            # 유효성 검사
+            if '"answer"' in json_str and '"reasoning"' in json_str:
+                # JSON 파싱 테스트
+                try:
+                    parsed = json.loads(json_str)
+                    # answer가 1-5 범위인지 확인
+                    answer = parsed.get('answer')
+                    if isinstance(answer, int) and 1 <= answer <= 5:
+                        # 유효한 JSON 발견! 즉시 반환
+                        return json_str
+                except (json.JSONDecodeError, ValueError, KeyError) as e:
+                    # LaTeX 수식의 백슬래시 escape 문제일 수 있음
+                    # \( → \\(, \) → \\), \frac → \\frac 등
+                    # 간단한 휴리스틱: JSON 문자열 내부의 unescaped 백슬래시 처리
+                    try:
+                        # reasoning 필드 내부의 백슬래시만 escape
+                        # 단, 이미 escape된 것(\\", \\n 등)은 유지
+                        fixed_json = self._fix_latex_backslashes(json_str)
+                        parsed = json.loads(fixed_json)
+                        answer = parsed.get('answer')
+                        if isinstance(answer, int) and 1 <= answer <= 5:
+                            return fixed_json
+                    except (json.JSONDecodeError, ValueError, KeyError):
+                        # 백슬래시 fix로도 안 되면 다음 JSON 블록 시도
+                        pass
+
+            # 다음 JSON 블록 찾기
+            search_start = json_end + 1
+
         return None
+
+    def _fix_latex_backslashes(self, json_str: str) -> str:
+        """LaTeX 수식의 백슬래시를 escape하여 valid JSON으로 변환
+
+        Solar-Pro가 수학 문제에서 LaTeX 수식을 출력할 때
+        백슬래시를 escape하지 않아 invalid JSON이 생성되는 문제 해결.
+
+        예: \( \sqrt{5} \) → \\( \\sqrt{5} \\)
+
+        Args:
+            json_str: JSON 문자열 (백슬래시가 escape되지 않을 수 있음)
+
+        Returns:
+            백슬래시가 escape된 JSON 문자열
+        """
+        # LaTeX 수식에 자주 사용되는 패턴들을 escape
+        # \( → \\(
+        # \) → \\)
+        # \[ → \\[
+        # \] → \\]
+        # \frac → \\frac
+        # \sqrt → \\sqrt
+        # \times → \\times
+        # \cdot → \\cdot
+        # 등등
+
+        # 이미 escape된 백슬래시는 유지하면서, LaTeX 패턴만 escape
+        # 정규식: 백슬래시 뒤에 LaTeX 명령어나 괄호가 오는 경우
+        patterns = [
+            (r'\\(?=[(\)\[\]])', r'\\\\'),  # \(, \), \[, \]
+            (r'\\(?=frac|sqrt|times|cdot|alpha|beta|gamma|delta|theta|pi|sigma|sum|int|lim|infty)', r'\\\\'),  # LaTeX 명령어
+            (r'\\(?=to|neq|leq|geq|pm|mp|approx)', r'\\\\'),  # 수학 기호
+        ]
+
+        result = json_str
+        for pattern, replacement in patterns:
+            result = re.sub(pattern, replacement, result)
+
+        return result
 
