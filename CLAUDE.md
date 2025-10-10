@@ -36,27 +36,31 @@ make env
 
 ### PDF Parsing
 
-**⚠️ 중요: 파싱은 한 번만 실행하면 됩니다!**
+**⚠️ 중요: 파싱은 연 1회 작업입니다**
 - 파싱된 YAML 파일은 모든 모델이 공유합니다
-- 파싱 모델 추천: GPT-4o (텍스트), GPT-4o Vision (수식/그래프)
+- Claude Code를 사용한 수동 파싱 권장 (자동화 스크립트 제거됨)
+- **파싱 가이드**: `PARSING_GUIDE.md` 참조
 
 ```bash
-# Text-based parsing (Korean, Social Studies, etc.)
-python src/parser/parse_exam.py exams/pdf/2025/국어영역_문제지_홀수형.pdf
+# Claude Code로 PDF를 YAML로 변환
+# 1. Claude Code 실행
+code .
 
-# Vision API parsing (Math, Science - for equations/graphs)
-python src/parser/parse_exam.py exams/pdf/2025/수학영역_문제지_홀수형.pdf --vision
+# 2. 프롬프트 예시:
+# "다음 KSAT 시험 PDF를 Optimized Schema YAML로 파싱해주세요:
+#  파일: exams/pdf/2025/국어영역_문제지_홀수형.pdf
+#  출력: exams/parsed/2025-korean-sat.yaml
+#  참고: PARSING_GUIDE.md의 Optimized Schema 구조를 따라주세요."
 
-# Parse answer key and inject into exam YAML
-python src/parser/parse_answer_key.py \
-  exams/pdf/2025/수학영역_정답표.pdf \
-  exams/parsed/2025-math-sat.yaml
-
-# Makefile shortcuts (한 번만 실행)
-make setup-korean    # Parse + inject answers for Korean
-make setup-math      # Parse + inject answers for Math
-make setup-all       # Process all subjects
+# 3. 검증
+make validate
 ```
+
+**두 가지 스키마 지원**:
+- **Optimized Schema**: 지문 중앙 관리 (국어/사회 - 권장, 40% 크기 절감)
+- **Legacy Schema**: 각 문제에 지문 포함 (수학/영어)
+
+자세한 파싱 방법은 `PARSING_GUIDE.md`를 참조하세요.
 
 ### Evaluation
 
@@ -188,15 +192,14 @@ make lint
 
 ### Core Components
 
-**1. Parser System** (`src/parser/`)
-- `parse_exam.py`: Main CLI for PDF parsing
-- `llm_parser.py`: LLM-based parsing engine using GPT-4o Vision API
-- `json_to_yaml.py`: JSON to YAML converter
-- `parse_answer_key.py`: Answer key parser that injects correct_answer into exam YAML
+**1. YAML Schema** (`exams/parsed/*.yaml`)
+- Two schema types: Optimized (passages-based) and Legacy (inline passages)
+- Manual parsing using Claude Code (recommended for annual SAT releases)
+- See `PARSING_GUIDE.md` for detailed parsing instructions
 
-**Parsing Flow**:
+**Parsing Approach**:
 ```
-PDF → LLM Parser (GPT-4o Vision) → JSON → YAML Converter → exams/parsed/*.yaml
+PDF → Claude Code Manual Parsing → YAML (Optimized/Legacy Schema) → exams/parsed/*.yaml
 ```
 
 **2. Evaluator System** (`src/evaluator/`)
@@ -416,10 +419,10 @@ results:
 - Handle errors gracefully with `success=False` and error message
 
 **Parsing Strategy**:
-- Text-based subjects (Korean, English): Direct text extraction
-- Visual subjects (Math, Science): Use `--vision` flag for GPT-4o Vision API
-- Complex equations: Parsed as LaTeX in YAML
-- Answer injection: Separate workflow using `parse_answer_key.py`
+- Manual parsing using Claude Code (연 1회 작업)
+- Optimized Schema for passage-heavy subjects (Korean, Social)
+- Legacy Schema for independent questions (Math, English)
+- See `PARSING_GUIDE.md` for detailed instructions
 
 **Evaluation Concurrency**:
 - Models evaluate questions sequentially to respect rate limits
@@ -470,12 +473,6 @@ Optional settings:
 
 ### Common Issues
 
-**Vision API Parsing Failures**:
-- Ensure `OPENAI_API_KEY` is set in `.env`
-- Check PDF quality - low resolution images may fail
-- For complex math equations, use `--vision` flag explicitly
-- Verify API rate limits haven't been exceeded
-
 **Model Evaluation Errors**:
 - Check API keys for all providers in `.env`
 - Verify model is enabled in `models/models.json` (`"enabled": true`)
@@ -499,13 +496,6 @@ Optional settings:
 ```bash
 # Run evaluation with Python verbose mode
 python -v src/evaluator/evaluate.py exams/parsed/2025-korean-sat.yaml --model gpt-4o
-```
-
-**Check Parsing Output**:
-```bash
-# Keep intermediate JSON files for inspection
-python src/parser/parse_exam.py <pdf> --keep-json
-# JSON saved in same directory as output YAML
 ```
 
 **Test Single Question**:

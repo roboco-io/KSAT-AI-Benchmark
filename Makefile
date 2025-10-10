@@ -1,4 +1,4 @@
-.PHONY: help install parse-korean parse-math parse-english parse-all answers-korean answers-math answers-all clean test lint model models
+.PHONY: help install clean test lint model models
 
 # 기본 타겟 설정
 .DEFAULT_GOAL := help
@@ -11,23 +11,6 @@ help:
 	@echo "  make install          - Python 의존성 설치"
 	@echo "  make env              - 환경변수 파일 생성"
 	@echo "  make model            - 사용 가능한 모델 목록 표시"
-	@echo ""
-	@echo "📄 문제지 파싱 (한 번만 실행):"
-	@echo "  make parse-korean     - 국어 문제지 파싱 (텍스트)"
-	@echo "  make parse-math       - 수학 문제지 파싱 (Vision API)"
-	@echo "  make parse-english    - 영어 문제지 파싱 (텍스트)"
-	@echo "  make parse-all        - 모든 과목 파싱"
-	@echo ""
-	@echo "🔑 정답표 파싱 (한 번만 실행):"
-	@echo "  make answers-korean   - 국어 정답 입력"
-	@echo "  make answers-math     - 수학 정답 입력"
-	@echo "  make answers-all      - 모든 과목 정답 입력"
-	@echo ""
-	@echo "🎊 전체 파이프라인 (파싱+정답, 한 번만):"
-	@echo "  make setup-all        - 모든 과목 파싱 및 정답 입력"
-	@echo "  make setup-korean     - 국어 파싱 및 정답 입력"
-	@echo "  make setup-math       - 수학 파싱 및 정답 입력"
-	@echo "  make setup-english    - 영어 파싱 및 정답 입력"
 	@echo ""
 	@echo "🎯 평가 실행:"
 	@echo "  make evaluate EXAM=<경로>           - 단일 시험 평가 (GPT-4o)"
@@ -82,11 +65,6 @@ help:
 	@echo "🧹 정리:"
 	@echo "  make clean            - 임시 파일 삭제"
 	@echo "  make clean-results    - 결과 파일 삭제"
-	@echo ""
-	@echo "📝 커스텀 파싱:"
-	@echo "  make parse PDF=<경로>                    - 커스텀 PDF 파싱"
-	@echo "  make parse-vision PDF=<경로>             - Vision API로 커스텀 PDF 파싱"
-	@echo "  make answer PDF=<정답표> YAML=<시험>     - 커스텀 정답 입력"
 
 # =============================================================================
 # 설치 및 환경 설정
@@ -119,108 +97,6 @@ model models:
 	@echo "  make gpt-5 2025 korean"
 	@echo "  make claude-opus-4-1 2025 korean,math"
 	@echo "  make all 2025 all"
-
-# =============================================================================
-# 문제지 파싱 (PDF → YAML)
-# =============================================================================
-
-YEAR := 2025
-
-parse-korean:
-	@echo "📚 국어 문제지 파싱 중..."
-	python src/parser/parse_exam.py exams/pdf/$(YEAR)/국어영역_문제지_홀수형.pdf
-	@echo "✅ 국어 파싱 완료!"
-
-parse-math:
-	@echo "🔢 수학 문제지 파싱 중 (Vision API)..."
-	python src/parser/parse_exam.py exams/pdf/$(YEAR)/수학영역_문제지_홀수형.pdf --vision
-	@echo "✅ 수학 파싱 완료!"
-
-parse-english:
-	@echo "🌐 영어 문제지 파싱 중..."
-	python src/parser/parse_exam.py exams/pdf/$(YEAR)/영어영역_문제지_홀수형.pdf
-	@echo "✅ 영어 파싱 완료!"
-
-parse-all: parse-korean parse-math parse-english
-	@echo "🎉 모든 과목 파싱 완료!"
-
-# 커스텀 파싱
-parse:
-	@if [ -z "$(PDF)" ]; then \
-		echo "❌ 오류: PDF 경로를 지정하세요."; \
-		echo "   사용법: make parse PDF=exams/pdf/2025/국어영역_문제지_홀수형.pdf"; \
-		exit 1; \
-	fi
-	@echo "📄 파싱 중: $(PDF)"
-	python src/parser/parse_exam.py $(PDF)
-
-parse-vision:
-	@if [ -z "$(PDF)" ]; then \
-		echo "❌ 오류: PDF 경로를 지정하세요."; \
-		echo "   사용법: make parse-vision PDF=exams/pdf/2025/수학영역_문제지_홀수형.pdf"; \
-		exit 1; \
-	fi
-	@echo "📄 파싱 중 (Vision API): $(PDF)"
-	python src/parser/parse_exam.py $(PDF) --vision
-
-# =============================================================================
-# 정답표 파싱 및 입력
-# =============================================================================
-
-answers-korean:
-	@echo "🔑 국어 정답 입력 중..."
-	python src/parser/parse_answer_key.py \
-		exams/pdf/$(YEAR)/국어영역_정답표.pdf \
-		exams/parsed/$(YEAR)-korean-sat.yaml
-	@echo "✅ 국어 정답 입력 완료!"
-
-answers-math:
-	@echo "🔑 수학 정답 입력 중..."
-	python src/parser/parse_answer_key.py \
-		exams/pdf/$(YEAR)/수학영역_정답표.pdf \
-		exams/parsed/$(YEAR)-math-sat.yaml
-	@echo "✅ 수학 정답 입력 완료!"
-
-answers-english:
-	@echo "🔑 영어 정답 입력 중..."
-	python src/parser/parse_answer_key.py \
-		exams/pdf/$(YEAR)/영어영역_정답표.pdf \
-		exams/parsed/$(YEAR)-english-sat.yaml
-	@echo "✅ 영어 정답 입력 완료!"
-
-answers-all: answers-korean answers-math answers-english
-	@echo "🎉 모든 과목 정답 입력 완료!"
-
-# 커스텀 정답 입력
-answer:
-	@if [ -z "$(PDF)" ] || [ -z "$(YAML)" ]; then \
-		echo "❌ 오류: PDF와 YAML 경로를 지정하세요."; \
-		echo "   사용법: make answer PDF=exams/pdf/2025/수학영역_정답표.pdf YAML=exams/parsed/2025-math-sat.yaml"; \
-		exit 1; \
-	fi
-	@echo "🔑 정답 입력 중..."
-	python src/parser/parse_answer_key.py $(PDF) $(YAML)
-
-# =============================================================================
-# 전체 파이프라인
-# =============================================================================
-
-# 전체 파이프라인 (파싱 + 정답)
-setup-all: parse-all answers-all
-	@echo "🎊 전체 파이프라인 완료!"
-	@echo "📝 다음 단계: git add, commit, push"
-
-# 국어만 (파싱 + 정답)
-setup-korean: parse-korean answers-korean
-	@echo "✅ 국어 처리 완료!"
-
-# 수학만 (파싱 + 정답)
-setup-math: parse-math answers-math
-	@echo "✅ 수학 처리 완료!"
-
-# 영어만 (파싱 + 정답)
-setup-english: parse-english answers-english
-	@echo "✅ 영어 처리 완료!"
 
 # =============================================================================
 # 평가 실행
@@ -550,18 +426,6 @@ clean-results:
 	rm -rf results/*
 	rm -rf logs/*
 	@echo "✅ 결과 파일 삭제 완료!"
-
-# =============================================================================
-# 샘플 및 테스트 파싱 (일부 페이지만)
-# =============================================================================
-
-sample-korean:
-	@echo "📄 국어 샘플 파싱 (첫 3페이지)..."
-	python src/parser/parse_exam.py exams/pdf/$(YEAR)/국어영역_문제지_홀수형.pdf --pages 1-3 --keep-json
-
-sample-math:
-	@echo "📄 수학 샘플 파싱 (첫 2페이지, Vision API)..."
-	python src/parser/parse_exam.py exams/pdf/$(YEAR)/수학영역_문제지_홀수형.pdf --pages 1-2 --vision --keep-json
 
 # =============================================================================
 # 정보 출력
