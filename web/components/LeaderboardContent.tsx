@@ -453,23 +453,6 @@ export function LeaderboardContent() {
           </Stack>
         </Card>
 
-        {/* 통계 카드 */}
-        <SimpleGrid cols={{ base: 1, sm: 2 }} spacing="md">
-          <Card shadow="sm" padding="lg" radius="md" withBorder>
-            <Stack gap="xs">
-              <Text size="sm" c="dimmed">평가 모델 수</Text>
-              <Text size="xl" fw={700}>{modelsList.length}개</Text>
-            </Stack>
-          </Card>
-
-          <Card shadow="sm" padding="lg" radius="md" withBorder>
-            <Stack gap="xs">
-              <Text size="sm" c="dimmed">평가 과목</Text>
-              <Text size="xl" fw={700}>국어, 수학, 영어</Text>
-            </Stack>
-          </Card>
-        </SimpleGrid>
-
         <div>
           <Title order={2} mb="md">리더보드</Title>
           <Card shadow="sm" padding="lg" radius="md" withBorder>
