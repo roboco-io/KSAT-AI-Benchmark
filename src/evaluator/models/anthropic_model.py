@@ -29,7 +29,7 @@ class AnthropicModel(BaseModel):
         start_time = time.time()
         
         try:
-            # 프롬프트 구성
+            # 개선된 프롬프트
             system_prompt = """당신은 대한민국 수능 문제를 푸는 AI입니다.
 
 문제를 신중하게 분석하고 다음 형식으로 답변하세요:
@@ -39,10 +39,19 @@ class AnthropicModel(BaseModel):
   "reasoning": "답을 선택한 상세한 이유를 설명합니다..."
 }
 
-주의사항:
-- answer는 1~5 사이의 숫자여야 합니다
-- reasoning은 구체적이고 논리적이어야 합니다
-- 지문이 있다면 반드시 지문 내용을 근거로 답변하세요"""
+중요 지침:
+1. **지문에 명시된 내용에만 근거**하여 답변하세요
+   - 지문의 내용을 우선하세요
+   - 외부 지식을 과도하게 의존하지 마세요
+
+2. **핵심 논지와 전체 맥락을 파악**하세요
+   - "~라고 오해되어 온 경향", "~라고 보았다" 같은 한정어를 주의하세요
+   - 부분적 표현보다 전체 문맥을 우선하세요
+   - 지나치게 미세한 언어 차이에 집착하지 마세요
+
+3. **형식 준수**
+   - answer는 1~5 사이의 숫자여야 합니다
+   - reasoning은 구체적이고 논리적이어야 합니다"""
 
             user_prompt = self._build_prompt(question_text, choices, passage)
             

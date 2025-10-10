@@ -11,12 +11,45 @@ import argparse
 import sys
 from pathlib import Path
 import os
+from typing import List
 
 # 프로젝트 루트를 sys.path에 추가
 project_root = Path(__file__).parent.parent.parent
 sys.path.insert(0, str(project_root))
 
 from src.evaluator.evaluator import Evaluator
+
+
+def parse_question_numbers(question_spec: str) -> List[int]:
+    """문제 번호 범위 파싱
+
+    Args:
+        question_spec: 문제 번호 지정 (예: "1-5", "1,3,5", "1-3,7,10-12")
+
+    Returns:
+        문제 번호 리스트
+
+    Examples:
+        >>> parse_question_numbers("1-5")
+        [1, 2, 3, 4, 5]
+        >>> parse_question_numbers("1,3,5")
+        [1, 3, 5]
+        >>> parse_question_numbers("1-3,7,10-12")
+        [1, 2, 3, 7, 10, 11, 12]
+    """
+    question_numbers = set()
+
+    for part in question_spec.split(','):
+        part = part.strip()
+        if '-' in part:
+            # 범위 지정 (예: "1-5")
+            start, end = part.split('-')
+            question_numbers.update(range(int(start), int(end) + 1))
+        else:
+            # 단일 번호 (예: "3")
+            question_numbers.add(int(part))
+
+    return sorted(list(question_numbers))
 
 
 def main():
@@ -27,13 +60,22 @@ def main():
 예시:
   # 특정 시험 평가 (OpenAI GPT-4o)
   %(prog)s exams/parsed/2025-math-sat-p1-2.yaml --model gpt-4o
-  
+
+  # 특정 문제만 평가 (1-5번)
+  %(prog)s exams/parsed/2025-korean-sat.yaml --model gpt-5 --questions "1-5"
+
+  # 여러 문제 선택 (1, 3, 5번)
+  %(prog)s exams/parsed/2025-korean-sat.yaml --model gpt-5 -q "1,3,5"
+
+  # 범위 조합 (1-3번, 7번, 10-12번)
+  %(prog)s exams/parsed/2025-korean-sat.yaml --model gpt-5 -q "1-3,7,10-12"
+
   # 모든 모델로 평가
   %(prog)s exams/parsed/2025-korean-sat.yaml --all-models
-  
+
   # 모든 시험 평가
   %(prog)s --all
-  
+
   # 특정 제공자 모델들만
   %(prog)s exams/parsed/2025-math-sat-p1-2.yaml --provider openai
         """
@@ -97,6 +139,26 @@ def main():
         help='병렬 처리 시 최대 동시 스레드 수 (기본: 10)'
     )
 
+    parser.add_argument(
+        '--verbose', '-v',
+        action='store_true',
+        dest='verbose',
+        help='상세 로그 활성화 (문제별 API 요청/응답, logs/ 디렉토리에 저장)'
+    )
+
+    parser.add_argument(
+        '--debug',
+        action='store_true',
+        dest='verbose',
+        help='--verbose의 별칭 (하위 호환성)'
+    )
+
+    parser.add_argument(
+        '--questions', '-q',
+        type=str,
+        help='평가할 문제 번호 지정 (예: "1-5", "1,3,5", "1-3,7-10")'
+    )
+
     args = parser.parse_args()
     
     # 환경변수 로드
@@ -108,9 +170,20 @@ def main():
         print("⚠️  python-dotenv가 설치되지 않았습니다. .env 파일을 사용하려면 'pip install python-dotenv'를 실행하세요.")
     except Exception as e:
         print(f"⚠️  .env 파일 로드 실패: {e}")
-    
+
+    # 문제 번호 파싱
+    question_numbers = None
+    if args.questions:
+        try:
+            question_numbers = parse_question_numbers(args.questions)
+            print(f"📝 평가할 문제: {question_numbers} ({len(question_numbers)}개)")
+        except Exception as e:
+            print(f"❌ 오류: 문제 번호 파싱 실패: {e}")
+            print(f"   올바른 형식: '1-5', '1,3,5', '1-3,7-10' 등")
+            sys.exit(1)
+
     # 평가기 생성
-    evaluator = Evaluator(models_config_path=args.models_config)
+    evaluator = Evaluator(models_config_path=args.models_config, enable_debug=args.verbose)
     
     # 시험 파일 목록 생성
     exam_files = []
@@ -161,7 +234,8 @@ def main():
             
             evaluator.evaluate_with_all_models(
                 exam_path=str(exam_file),
-                models_to_use=models_to_use
+                models_to_use=models_to_use,
+                question_numbers=question_numbers
             )
         
         elif args.model:
@@ -216,7 +290,8 @@ def main():
                 model=model,
                 output_path=args.output,
                 parallel=args.parallel,
-                max_workers=args.max_workers
+                max_workers=args.max_workers,
+                question_numbers=question_numbers
             )
         
         else:
@@ -232,13 +307,14 @@ def main():
                 model_name='gpt-4o',
                 api_key=api_key
             )
-            
+
             evaluator.evaluate_exam(
                 exam_path=str(exam_file),
                 model=model,
                 output_path=args.output,
                 parallel=args.parallel,
-                max_workers=args.max_workers
+                max_workers=args.max_workers,
+                question_numbers=question_numbers
             )
     
     print(f"\n{'='*100}")

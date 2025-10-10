@@ -63,6 +63,28 @@ class BaseModel(ABC):
         """
         pass
     
+    def _analyze_question_type(self, question_text: str) -> str:
+        """질문 유형 분석 (긍정형/부정형)
+
+        Args:
+            question_text: 질문 텍스트
+
+        Returns:
+            질문 유형 설명
+        """
+        # 부정형 질문 패턴
+        negative_patterns = [
+            "않는", "아닌", "틀린", "잘못", "부적절",
+            "올바르지", "맞지", "적절하지", "일치하지"
+        ]
+
+        is_negative = any(pattern in question_text for pattern in negative_patterns)
+
+        if is_negative:
+            return "이 문제는 '틀린 것', '일치하지 않는 것', '적절하지 않은 것'을 찾는 **부정형 질문**입니다. 각 선택지를 검토하여 지문과 맞지 않거나 틀린 선택지를 찾아야 합니다."
+        else:
+            return "이 문제는 '맞는 것', '일치하는 것', '적절한 것'을 찾는 **긍정형 질문**입니다. 각 선택지를 검토하여 지문과 일치하거나 맞는 선택지를 찾아야 합니다."
+
     def _build_prompt(
         self,
         question_text: str,
@@ -70,29 +92,33 @@ class BaseModel(ABC):
         passage: Optional[str] = None
     ) -> str:
         """문제를 프롬프트로 변환
-        
+
         Args:
             question_text: 문제 텍스트
             choices: 선택지 리스트
             passage: 지문
-        
+
         Returns:
             프롬프트 문자열
         """
         prompt = ""
-        
+
         # 지문이 있으면 먼저 추가
         if passage:
             prompt += f"다음 지문을 읽고 문제를 푸세요:\n\n{passage}\n\n"
-        
+
         # 문제
         prompt += f"문제: {question_text}\n\n"
-        
+
+        # 질문 유형 분석 추가
+        question_type = self._analyze_question_type(question_text)
+        prompt += f"⚠️ 주의: {question_type}\n\n"
+
         # 선택지
         prompt += "선택지:\n"
         for i, choice in enumerate(choices, 1):
             prompt += f"{i}. {choice}\n"
-        
+
         return prompt
     
     def _extract_answer_from_text(self, text: str) -> Optional[int]:

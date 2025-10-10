@@ -15,7 +15,7 @@ PyYAML==6.0.1
 ruamel.yaml==0.18.5
 
 # AI Model APIs
-openai==1.12.0
+openai>=1.50.0
 anthropic==0.18.0
 google-generativeai==0.3.2
 cohere==4.47

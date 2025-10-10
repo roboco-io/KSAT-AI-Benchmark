@@ -235,17 +235,44 @@ git push
 
 #### 방법 2: 수동 YAML 작성
 
-`exams/parsed/` 폴더에 YAML 파일을 직접 작성할 수도 있습니다:
+`exams/parsed/` 폴더에 YAML 파일을 직접 작성할 수도 있습니다.
 
+**국어 시험 (Optimized Schema - 지문 중복 제거):**
 ```yaml
-exam_id: 2024-ksat-math
-title: 2024학년도 수학능력시험 - 수학
+exam_id: 2024-korean-sat
+title: 2024학년도 수능 국어영역
+subject: korean
+year: 2024
+
+# 지문 중앙 관리 (같은 지문을 공유하는 문제 그룹)
+passages:
+  - passage_id: p1
+    passage_text: "긴 지문 내용..."
+    question_numbers: [1, 2, 3]
+
+# 문제들은 passage_id로 지문 참조
+questions:
+  - question_id: q1
+    question_number: 1
+    question_text: "윗글의 내용과 일치하는 것은?"
+    passage_id: p1  # 지문 참조
+    choices: ["선택지1", "선택지2", ...]
+    correct_answer: 3
+    points: 2
+```
+
+**수학 시험 (Legacy Schema - 기존 방식):**
+```yaml
+exam_id: 2024-math-sat
+title: 2024학년도 수능 수학영역
 subject: math
 year: 2024
+
 questions:
   - question_id: q1
     question_number: 1
     question_text: "다음 중 옳은 것은?"
+    passage: "지문 내용 (선택적)"  # 직접 포함
     choices: ["1", "2", "3", "4", "5"]
     correct_answer: "3"
     points: 2

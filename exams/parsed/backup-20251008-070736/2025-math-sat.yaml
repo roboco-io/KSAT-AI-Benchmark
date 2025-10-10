@@ -1,0 +1,546 @@
+exam_id: 2025-math-sat
+title: 2025학년도 수능 MATH
+subject: math
+year: 2025
+parsing_info:
+  method: vision
+  model: gpt-4o
+  parsed_at: '2025-10-06T17:47:35.254888'
+questions:
+- question_id: q1
+  question_number: 1
+  question_text: '다음 중 \( \sqrt{5} \times 25^{\frac{1}{2}} \) 의 값은? '
+  passage: null
+  choices:
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  correct_answer: 5
+  points: 2
+  explanation: null
+- question_id: q2
+  question_number: 2
+  question_text: 함수 \( f(x) = x^2 - 8x + 7 \)에 대하여 \( \lim_{h \to 0} \frac{f(2+h) - f(2)}{h} \) 의 값은?
+  passage: null
+  choices:
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  correct_answer: 4
+  points: 2
+  explanation: null
+- question_id: q3
+  question_number: 3
+  question_text: 첫째항과 공비가 모두 양수 k인 등비수열 \( \{a_n\} \) 에 대하여 \( \frac{a_4}{a_2} + \frac{a_2}{a_1} = 30 \) 을 만족시킬 때, k의 값은?
+  passage: null
+  choices:
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  correct_answer: 5
+  points: 3
+  explanation: null
+- question_id: q4
+  question_number: 4
+  question_text: 함수 \( f(x) = \begin{cases} 5x + a & (x < -2) \\ x^2 - a & (x \geq -2) \end{cases} \) 가 실수 전체의 집합에서 연속일 때, 상수 a의 값은?
+  passage: null
+  choices:
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '10'
+  correct_answer: 2
+  points: 3
+  explanation: null
+- question_id: q5
+  question_number: 5
+  question_text: 함수 \( f(x) = (x^2 + 1)(3x^2 - x) \) 에 대하여 \( f'(1) \) 의 값은?
+  passage: null
+  choices:
+  - '8'
+  - '10'
+  - '12'
+  - '14'
+  - '16'
+  correct_answer: 3
+  points: 3
+  explanation: null
+- question_id: q6
+  question_number: 6
+  question_text: \( \cos \left( \frac{\pi}{2} + \theta \right) = -\frac{1}{5} \) 일 때, \(-\frac{\sin \theta}{1 - \cos^2 \theta} \) 의 값은?
+  passage: null
+  choices:
+  - '-5'
+  - -\sqrt{5}
+  - '0'
+  - \sqrt{5}
+  - '5'
+  correct_answer: 5
+  points: 3
+  explanation: null
+- question_id: q7
+  question_number: 7
+  question_text: 다항함수 \( f(x) \) 가 모든 실수 \( x \) 에 대하여 \( \int_{0}^{x} f(t) \, dt = 3x^2 + 2x \) 를 만족시킬 때, \( f(1) \) 의 값은?
+  passage: null
+  choices:
+  - '7'
+  - '9'
+  - '11'
+  - '13'
+  - '15'
+  correct_answer: 3
+  points: 3
+  explanation: null
+- question_id: q8
+  question_number: 8
+  question_text: 두 실수 \( a = 2 \log \frac{1}{10} + \log_{10} 20, \ b = \log 2 \) 에 대하여 \( a \times b \) 의 값은?
+  passage: null
+  choices:
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  correct_answer: 1
+  points: 3
+  explanation: null
+- question_id: q9
+  question_number: 9
+  question_text: 함수 \( f(x) = 3x^2 - 16x - 20 \) 에 대하여 \[ \int_{-2}^{a} f(x) \, dx = \int_{a}^{1} f(x) \, dx \] 일 때, 양수 \( a \) 의 값은?
+  passage: null
+  choices:
+  - '16'
+  - '14'
+  - '12'
+  - '10'
+  - '8'
+  correct_answer: 4
+  points: 4
+  explanation: null
+- question_id: q10
+  question_number: 10
+  question_text: 닫힌구간 \([0, 2\pi]\) 에서 정의된 함수 \( f(x) = a \cos bx + 3 \) 이 \( x = \frac{\pi}{3} \) 에서 최댓값 13을 갖도록 하는 두 자연수 \( a, b \) 의 순서쌍 \((a, b)\) 에 대하여 \( a + b \) 의 최솟값은?
+  passage: null
+  choices:
+  - '12'
+  - '14'
+  - '16'
+  - '18'
+  - '20'
+  correct_answer: 3
+  points: 4
+  explanation: null
+- question_id: q11
+  question_number: 11
+  question_text: 시간 t=0일 때 출발하여 수직선 위를 움직이는 점 P의 시간 t(t≥0)에서의 위치 x가 \( x = t^3 - \frac{3}{2}t^2 - 6t \) 이다. 출발한 후 점 P의 운동 방향이 바뀌는 시각에서의 점 P의 좌표는?
+  passage: null
+  choices:
+  - '6'
+  - '9'
+  - '12'
+  - '15'
+  - '18'
+  correct_answer: 2
+  points: 4
+  explanation: null
+- question_id: q12
+  question_number: 12
+  question_text: a₁ = 2인 수열 {aₙ}과 b₁ = 2인 등차수열 {bₙ}이 모든 자연수 n에 대하여 \( \sum_{k=1}^{n} \frac{a_k}{b_{k+1}} = \frac{1}{2}n^2 \) 을 만족시킬 때, \( \sum_{k=1}^{4} a_k \)의 값은?
+  passage: null
+  choices:
+  - '120'
+  - '125'
+  - '130'
+  - '135'
+  - '140'
+  correct_answer: 4
+  points: 4
+  explanation: null
+- question_id: q13
+  question_number: 13
+  question_text: 최고차항의 계수가 1인 삼차함수 \( f(x) \)가 \( f(1) = f(2) = 0, \ f'(0) = -7 \)을 만족시킨다. 원점 O와 점 P(3, f(3))에 대하여 선분 OP가 곡선 \( y = f(x) \)와 만나는 점을 Q라 하자. 아래 질문에 답하시오. 곡선 \( y = f(x) \)와 직선 OQ로 둘러싸인 부분의 넓이를 A, 곡선 \( y = f(x) \)와 직선 PQ로 둘러싸인 부분의 넓이를 B라 할 때, \( B - A \)의 값은? [4점]
+  passage: null
+  choices:
+  - 37/4
+  - 39/4
+  - 41/4
+  - 43/4
+  - 45/4
+  correct_answer: 5
+  points: 4
+  explanation: null
+- question_id: q14
+  question_number: 14
+  question_text: '그림과 같이 삼각형 ABC에서 선분 AB 위에 AD : DB = 3 : 2인 점 D를 잡고, 점 A를 중심으로 하고 점 D를 지나는 원을 O, 원 O와 선분 AC가 만나는 점을 E라 하자. \( \sin A : \sin C = 8 : 5 \)이고, 삼각형 ADE의 삼각형 ABC의 넓이의 비가 9 : 35이다. 삼각형 ABC의 외접원의 반지름의 길이가 7일 때, 점 E의 위치 점 P에 대하여 삼각형 PBC의 넓이의 최댓값은? (단, AB < AC) [4점]'
+  passage: null
+  choices:
+  - 18 + 15√3
+  - 24 + 20√3
+  - 30 + 25√3
+  - 36 + 30√3
+  - 42 + 35√3
+  correct_answer: 3
+  points: 4
+  explanation: null
+- question_id: q15
+  question_number: 15
+  question_text: 상수 \(a (a \neq 3 \sqrt{5})\)와 최고차항의 계수가 유수인 이차함수 \(f(x)\)에 대하여 함수 \(g(x) = \begin{cases} x^3 + ax^2 + 15x + 7 & (x \leq 0) \\ f(x) & (x > 0) \end{cases}\) 이 다음 조건을 만족시킨다. (가) 함수 \(g(x)\)는 실수 전체의 집합에서 미분가능하다. (나) 위의 대합 방정식 \(g(x)g(x-4) = 0\)의 서로 다른 실근의 개수는 4이다. \(g(-2) + g(0)\)의 값은? [4점]
+  passage: null
+  choices:
+  - '30'
+  - '32'
+  - '34'
+  - '36'
+  - '38'
+  correct_answer: 2
+  points: 4
+  explanation: null
+- question_id: q16
+  question_number: 16
+  question_text: 방정식 \(\log_3(x-3) = \log_3(3x-5)\) 를 만족시키는 실수 \(x\)의 값을 구하시오. [3점]
+  passage: null
+  choices: []
+  correct_answer: 3
+  points: 3
+  explanation: null
+- question_id: q17
+  question_number: 17
+  question_text: 다항함수 \(f(x)\)에 대하여 \(f'(x) = 9x^2 + 4x - 1\)이고 \(f(1) = 6\)일 때, \(f(2)\)의 값을 구하시오. [3점]
+  passage: null
+  choices: []
+  correct_answer: 5
+  points: 3
+  explanation: null
+- question_id: q18
+  question_number: 18
+  question_text: 수열 \( \{a_n\} \)의 모든 자연수 \( n \)에 대하여 \( a_n + a_{n+1} = 12 \) 를 만족시킬 때, \( \sum_{n=1}^{16} a_n \)의 값을 구하시오.
+  passage: null
+  choices: []
+  correct_answer: 3
+  points: 3
+  explanation: null
+- question_id: q19
+  question_number: 19
+  question_text: 양수 \( a \)에 대하여 함수 \( f(x) \)를 \( f(x) = 2x^3 - 3ax^2 - 12ax \) 라 하자. 함수 \( f(x) \)의 극댓값이 \( \frac{7}{27} \)일 때, \( f(3) \)의 값을 구하시오.
+  passage: null
+  choices: []
+  correct_answer: 1
+  points: 3
+  explanation: null
+- question_id: q20
+  question_number: 20
+  question_text: 곡선 \( y = \left( \frac{1}{5} \right)^{x-3} \)과 직선 \( y = 2x \)가 만나는 점의 \( x \)좌표를 \( k \)라 하자. 실수 전체의 집합에서 정의된 함수 \( f(x) \)가 다음 조건을 만족시킨다. \( x > k \)인 모든 실수 \( x \)에 대하여 \( f(x) = \left( \frac{1}{5} \right)^{x-3} \)이고 \( f(x) = 3x \)이다. \( \int_{1}^{k} \frac{1}{k^2 x 5^{3x}} \)의 값을 구하시오.
+  passage: null
+  choices: []
+  correct_answer: 4
+  points: 4
+  explanation: null
+- question_id: q21
+  question_number: 21
+  question_text: 함수 \( f(x)=x^3+ax^2+bx+c \)가 다음 조건을 만족시키도록 하는 두 정수 \( a, b \)에 대하여 \( f(1) \)의 최댓값을 구하시오.
+  passage: null
+  choices: []
+  correct_answer: 3
+  points: 4
+  explanation: null
+- question_id: q22
+  question_number: 22
+  question_text: 모든 항이 정수이고, 다음 조건을 만족시키는 모든 수열 \( \{a_n\} \)에 대하여 \( |a_1| \)의 값의 합을 구하시오.
+  passage: null
+  choices: []
+  correct_answer: 2
+  points: 4
+  explanation: null
+- question_id: q23
+  question_number: 23
+  question_text: 다항식 (x^3 + 2x^2)의 전개식에서 x^6의 계수는?
+  passage: null
+  choices:
+  - '40'
+  - '50'
+  - '60'
+  - '70'
+  - '80'
+  correct_answer: 5
+  points: 2
+  explanation: null
+- question_id: q24
+  question_number: 24
+  question_text: '두 사건 A, B에 대하여
+
+    P(A|B) = P(A) - \frac{1}{2}, P(A∩B) = \frac{1}{5}
+
+    일 때, P(A∪B)의 값은?'
+  passage: null
+  choices:
+  - \frac{1}{2}
+  - \frac{3}{5}
+  - \frac{7}{10}
+  - \frac{4}{5}
+  - \frac{9}{10}
+  correct_answer: 3
+  points: 3
+  explanation: null
+- question_id: q25
+  question_number: 25
+  question_text: 정규분포 \(N(m, 2^2)\)을 따르는 모집단에서 크기가 256인 표본을 임의추출하여 얻은 표본평균을 이용하여 구한 \(m\)에 대한 신뢰도 95%의 신뢰구간이 \(a \leq m \leq b\)이다. \(b-a\)의 값은? (단, 2차 표준정규분포를 따르는 확률변수일 때, \(P(|Z| \leq 1.96) = 0.95\)를 계산한다.) [3점]
+  passage: null
+  choices:
+  - '49'
+  - '52'
+  - '55'
+  - '58'
+  - '61'
+  correct_answer: 3
+  points: 3
+  explanation: null
+- question_id: q26
+  question_number: 26
+  question_text: 어느 학교의 학생 16명을 대상으로 과목 A와 과목 B에 대한 선호도를 조사하였다. 이 조사에 참여한 학생은 과목 A와 과목 B 중 하나를 선택하였고, 과목 A를 선택한 학생은 9명, 과목 B를 선택한 학생은 7명이다. 이 조사에 참여한 학생 16명 중에서 임의로 3명을 선택할 때, 선택한 3명의 학생 중에서 적어도 한 명이 과목 B를 선택한 학생일 확률은? [3점]
+  passage: null
+  choices:
+  - \(\frac{3}{4}\)
+  - \(\frac{4}{5}\)
+  - \(\frac{17}{20}\)
+  - \(\frac{9}{10}\)
+  - \(\frac{19}{20}\)
+  correct_answer: 3
+  points: 3
+  explanation: null
+- question_id: q27
+  question_number: 27
+  question_text: 숫자 1, 3, 5, 7, 9가 각각 하나씩 적혀 있는 5장의 카드가 들어 있는 주머니가 있다. 이 주머니에서 임의로 1장의 카드를 꺼내어 카드에 적혀 있는 수를 확인한 후 다시 넣는 시험을 한다. 이 시험을 3번 반복하여 확인한 세 개의 수의 평균을 X라 하자. V(X+6) = 24일 때, 양수 α의 값은?
+  passage: null
+  choices:
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  correct_answer: 3
+  points: 3
+  explanation: null
+- question_id: q28
+  question_number: 28
+  question_text: '집합 X = {1, 2, 3, 4, 5, 6}에 대하여 다음 조건을 만족시키는 함수 f : X→X의 개수는?'
+  passage: null
+  choices:
+  - '166'
+  - '171'
+  - '176'
+  - '181'
+  - '186'
+  correct_answer: 4
+  points: 4
+  explanation: null
+- question_id: q29
+  question_number: 29
+  question_text: 정규분포 \(N(m_1, \sigma_1^2)\)를 따르는 확률변수 \(X\)와 정규분포 \(N(m_2, \sigma_2^2)\)를 따르는 확률변수 \(Y\)가 다음 조건을 만족시킨다. 모든 실수 \(x\)에 대하여 \(P(X \leq x) = P(Y \leq 40 - x)\)이고, \(P(Y \leq x) = P(X \leq x + 10)\)이다. \(P(15 \leq X \leq 20) + P(15 \leq Y \leq 20)\)의 값을 오른쪽 표준정규분포표를 이용하여 구한 것이 0.4772일 때, \(m_1 + \sigma_1\)의 값을 구하시오. (단, \(\alpha, \beta, \gamma\)는 양수이다.) [4점]
+  passage: null
+  choices: []
+  correct_answer: 5
+  points: 4
+  explanation: null
+- question_id: q30
+  question_number: 30
+  question_text: 탁자 위에 5개의 동전이 일렬로 놓여 있다. 이 5개의 동전 중 1번째 자리와 2번째 자리의 동전은 앞면이 보이도록 놓여 있고, 나머지 자리의 3개의 동전은 뒷면이 보이도록 놓여 있다. 이 5개의 동전과 한 개의 주사위를 사용하여 다음 실험을 한다. 주사위를 한 번 던져 나온 눈의 수가 \(k\)일 때, \(k \leq 5\)이면 번호에 적혀진 동전을 한 번 뒤집어 제자리에 놓고, \(k = 6\)이면 모든 동전을 한 번 뒤집어 제자리에 놓는다. 위의 실험을 3번 반복한 후, 이 5개의 동전이 모두 앞면이 보이도록 놓여 있을 확률을 \(p\)이라. \(p + q\)의 값을 구하시오. (단, \(p\)와 \(q\)는 서로소인 자연수이다.) [4점]
+  passage: null
+  choices: []
+  correct_answer: 4
+  points: 4
+  explanation: null
+- question_id: q23
+  question_number: 23
+  question_text: lim x→0 3x^2/sin^2x 의 값은?
+  passage: null
+  choices:
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  correct_answer: 5
+  points: 2
+  explanation: null
+- question_id: q24
+  question_number: 24
+  question_text: ∫(0 to 10) (x+2)/(x+1) dx 의 값은?
+  passage: null
+  choices:
+  - 10 + ln 5
+  - 10 + ln 7
+  - 10 + 2 ln 3
+  - 10 + ln 11
+  - 10 + ln 13
+  correct_answer: 3
+  points: 3
+  explanation: null
+- question_id: q25
+  question_number: 25
+  question_text: 수열 \( \{a_n\} \)에 대하여 \( \lim_{n \to \infty} \frac{n a_n}{n^2 + 3} = 1 \)일 때, \( \lim_{n \to \infty} \sqrt{a_n^2 + n - a_n} \)을 구하시오.
+  passage: null
+  choices:
+  - 1/3
+  - 1/2
+  - '1'
+  - '2'
+  - '3'
+  correct_answer: 3
+  points: 3
+  explanation: null
+- question_id: q26
+  question_number: 26
+  question_text: 그림과 같이 곡선 \( y = \frac{x+1}{\sqrt{x(\ln x)}} \)과 축 및 두 직선 \( x=1, x=e \)로 둘러싸인 부분을 면적으로 하는 회전체가 있다. 이 회전체를 축에 수직인 평면으로 자른 단면이 모두 정사각형일 때, 이 회전체의 부피는?
+  passage: null
+  choices:
+  - \( \ln(e+1) \)
+  - \( \ln(e+2) \)
+  - \( \ln(e+3) \)
+  - \( \ln(2e+1) \)
+  - \( \ln(2e+2) \)
+  correct_answer: 3
+  points: 3
+  explanation: null
+- question_id: q27
+  question_number: 27
+  question_text: 최고차항의 계수가 1인 삼차함수 f(x)에 대하여 함수 g(x)를 g(x) = f(x) + e^x이라 하자. 곡선 y = g(x) 위의 점 (0, g(0))에서의 접선이 x축이고 함수 g(x)가 연속함 h(x)를 가질 때, h'(8)의 값은?
+  passage: null
+  choices:
+  - 1/36
+  - 1/18
+  - 1/12
+  - 1/9
+  - 5/36
+  correct_answer: 3
+  points: 3
+  explanation: null
+- question_id: q28
+  question_number: 28
+  question_text: 실수 전체의 집합에서 미분가능한 함수 f(x)의 도함수 f'(x)가 f'(x) = -x + e + 1 - x^2이라 할 때, 함수 f에 대하여 곡선 y = f(x) 위의 점 (t, f(t))에서의 접선과 함수 y = g(x) 및 함수 g(x)의 도함수의 값이 같은 경우를 찾아라. g(t)를 하자. g(1) + g'(1)의 값은?
+  passage: null
+  choices:
+  - 1/2 + 1/2
+  - 1/2 + 2/3
+  - 1/2 + 5/6
+  - 2/3 + 1/2
+  - 2/3 + 2/3
+  correct_answer: 4
+  points: 4
+  explanation: null
+- question_id: q29
+  question_number: 29
+  question_text: 등비수열 {aₙ}의 ∑ (|aₙ₊₁ + aₙ|) = 40/3, ∑ (|aₙ₊₁ − aₙ|) = 20/3 을 만족시킨다. 부등식 lim (n→∞) ∑ (k=1 to n) ((−1)^(k+1) / k^2) × aₘ₊ₖ > 1/700 을 만족시키는 모든 자연수 m의 값의 합을 구하시오.
+  passage: null
+  choices: []
+  correct_answer: 5
+  points: 4
+  explanation: null
+- question_id: q30
+  question_number: 30
+  question_text: 두 상수 a (1 ≤ a ≤ 2), b에 대하여 함수 f(x) = sin(ax + b + sinx)가 다음 조건을 만족시킨다. (가) f(0) = 0, f(2π) = 2πa + b (나) f′(0) = f′(1)일 때 함수 f의 최솟값은 4이다. 함수 f(x)가 x = 0에서 극대값의 값 중 열린구간 (0, 4π)에 속하는 모든 값을 집합 A라 하자. 집합 A의 원소의 개수는 n, 집합 A의 원소 중 가장 작은 값을 a₁이라 하면, na₁ − aₙ = q/p 이다. p + q의 값을 구하시오. (단, p와 q는 서로소인 자연수이다.)
+  passage: null
+  choices: []
+  correct_answer: 4
+  points: 4
+  explanation: null
+- question_id: q23
+  question_number: 23
+  question_text: 두 벡터 a = (b, 3), b = (1, 2) 에 대하여 a + 3b = (6, 9) 일 때, b의 값은?
+  passage: null
+  choices:
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  correct_answer: 5
+  points: 2
+  explanation: null
+- question_id: q24
+  question_number: 24
+  question_text: 곡선의 좌표가 (1, 0)이고, 준선이 x = -1인 포물선이 점 (3, a)를 지날 때, 양수 a의 값은?
+  passage: null
+  choices:
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  correct_answer: 3
+  points: 3
+  explanation: null
+- question_id: q25
+  question_number: 25
+  question_text: 좌표공간의 두 점 A(a, b, 6), B(-4, -2, c)에 대하여 선분 AB를 3:2로 내분하는 점이 z축 위에 있고, 선분 AB를 3:2로 외분하는 점이 xy평면 위에 있을 때, a+b+c의 값은?
+  passage: null
+  choices:
+  - '11'
+  - '12'
+  - '13'
+  - '14'
+  - '15'
+  correct_answer: 3
+  points: 3
+  explanation: null
+- question_id: q26
+  question_number: 26
+  question_text: '자연수 n(n≥2)에 대하여 직선 x=1/n 이 두 타원 C₁: x²/2 + y² = 1, C₂: 2x² + y²/2 = 1 과 만나는 제1사분면 위의 점을 각각 P, Q라 하자. 타원 C₁ 위의 점 P에서의 접선을 ℓ₁, 타원 C₂ 위의 점 Q에서의 접선을 ℓ₂라 할 때, 6 ≤ α - β ≤ 15가 되도록 하는 모든 n의 개수는?'
+  passage: null
+  choices:
+  - '7'
+  - '9'
+  - '11'
+  - '13'
+  - '15'
+  correct_answer: 3
+  points: 3
+  explanation: null
+- question_id: q27
+  question_number: 27
+  question_text: 그림과 같이 AB = 6, BC = 4√5인 사각형 ABCD에 대하여 선분 BC의 중점을 M이라 하자. 삼각형 AMD가 정삼각형이고 직선 BC는 평면 AMD가 수직일 때, 삼각형 ACD에 내접하는 원의 평면 BCD 위로의 정사영의 넓이는?
+  passage: null
+  choices:
+  - √10/4 π
+  - √10/6 π
+  - √10/8 π
+  - √10/10 π
+  - √10/12 π
+  correct_answer: 3
+  points: 3
+  explanation: null
+- question_id: q28
+  question_number: 28
+  question_text: 좌표조건에 AB = 8, BC = 6, ∠ABC = π/2인 직각삼각형 ABC와 선분 AC를 직경으로 하는 구 S가 있다. 점선 AB를 포함하고 평면 ABC에 수직인 평면이 구 S와 만나서 생기는 원을 O라 하자. 원 O 위의 점 중에서 직선 AC까지의 거리가 4인 서로 다른 두 점을 P, Q라 할 때, 선분 PQ의 길이는?
+  passage: null
+  choices:
+  - √43
+  - √47
+  - √51
+  - √55
+  - √59
+  correct_answer: 4
+  points: 4
+  explanation: null
+- question_id: q29
+  question_number: 29
+  question_text: 두 초점이 F(c, 0), F'(-c, 0) (c > 0)인 쌍곡선 x^2 - y^2/35 = 1이 있다. 이 쌍곡선 위에 있는 제1사분면 위의 점 P에 대하여 직선 PF 위에 PQ = PF인 점 Q를 잡자. 삼각형 QFF'와 삼각형 FFP'가 서로 닿을 때, 삼각형 PFQ의 넓이는 9√5이다. p, q의 값을 구하시오. (단, PF < QF이고, p와 q는 서로소인 자연수이다.)
+  passage: null
+  choices: []
+  correct_answer: 5
+  points: 4
+  explanation: null
+- question_id: q30
+  question_number: 30
+  question_text: 좌표평면에 한 변의 길이가 1인 정사각형 ABCD가 있다. |XB + XC| = |XB - XC|를 만족시키는 점 X가 나타내는 도형을 S라 하자. 도형 S 위의 점 P에 대하여 APQ = PB + 2PD를 만족시키는 점을 Q라 할 때, AC · AQ의 최댓값과 최솟값을 각각 M, m이라 하자. M × m의 값을 구하시오.
+  passage: null
+  choices: []
+  correct_answer: 4
+  points: 4
+  explanation: null

@@ -1,0 +1,647 @@
+exam_id: 2025-korean-sat
+exam_title: 2025학년도 수능 국어영역
+subject: korean
+model_name: gemini-2.5-pro
+evaluated_at: '2025-10-08T14:35:47.005657'
+summary:
+  total_questions: 45
+  correct_answers: 2
+  accuracy: 4.44
+  total_score: 4
+  max_score: 100
+  score_rate: 4.0
+results:
+- question_id: q1
+  question_number: 1
+  answer: 0
+  correct_answer: 3
+  is_correct: false
+  reasoning: ''
+  time_taken: 90.51
+  points: 2
+  earned_points: 0
+  success: false
+  error: 'Timeout of 60.0s exceeded, last exception: 503 DNS resolution failed for
+    generativelanguage.googleapis.com:443: C-ares status is not ARES_SUCCESS qtype=A
+    name=generativelanguage.googleapis.com is_balancer=0: DNS query cancelled'
+- question_id: q2
+  question_number: 2
+  answer: 0
+  correct_answer: 4
+  is_correct: false
+  reasoning: ''
+  time_taken: 65.71
+  points: 2
+  earned_points: 0
+  success: false
+  error: 'Timeout of 60.0s exceeded, last exception: 503 DNS resolution failed for
+    generativelanguage.googleapis.com:443: C-ares status is not ARES_SUCCESS qtype=A
+    name=generativelanguage.googleapis.com is_balancer=0: DNS query cancelled'
+- question_id: q3
+  question_number: 3
+  answer: 0
+  correct_answer: 5
+  is_correct: false
+  reasoning: ''
+  time_taken: 54.8
+  points: 3
+  earned_points: 0
+  success: false
+  error: 'Timeout of 60.0s exceeded, last exception: 503 DNS resolution failed for
+    generativelanguage.googleapis.com:443: C-ares status is not ARES_SUCCESS qtype=A
+    name=generativelanguage.googleapis.com is_balancer=0: DNS query cancelled'
+- question_id: q4
+  question_number: 4
+  answer: 0
+  correct_answer: 4
+  is_correct: false
+  reasoning: ''
+  time_taken: 61.13
+  points: 2
+  earned_points: 0
+  success: false
+  error: 'Timeout of 60.0s exceeded, last exception: 503 DNS resolution failed for
+    generativelanguage.googleapis.com:443: C-ares status is not ARES_SUCCESS qtype=SRV
+    name=_grpclb._tcp.generativelanguage.googleapis.com: Timeout while contacting
+    DNS servers'
+- question_id: q5
+  question_number: 5
+  answer: 0
+  correct_answer: 5
+  is_correct: false
+  reasoning: ''
+  time_taken: 59.66
+  points: 3
+  earned_points: 0
+  success: false
+  error: 'Timeout of 60.0s exceeded, last exception: 503 DNS resolution failed for
+    generativelanguage.googleapis.com:443: C-ares status is not ARES_SUCCESS qtype=SRV
+    name=_grpclb._tcp.generativelanguage.googleapis.com: Timeout while contacting
+    DNS servers'
+- question_id: q6
+  question_number: 6
+  answer: 0
+  correct_answer: 3
+  is_correct: false
+  reasoning: ''
+  time_taken: 58.77
+  points: 2
+  earned_points: 0
+  success: false
+  error: 'Timeout of 60.0s exceeded, last exception: 503 DNS resolution failed for
+    generativelanguage.googleapis.com:443: C-ares status is not ARES_SUCCESS qtype=SRV
+    name=_grpclb._tcp.generativelanguage.googleapis.com: DNS query cancelled'
+- question_id: q7
+  question_number: 7
+  answer: 0
+  correct_answer: 3
+  is_correct: false
+  reasoning: ''
+  time_taken: 59.78
+  points: 2
+  earned_points: 0
+  success: false
+  error: 'Timeout of 60.0s exceeded, last exception: 503 DNS resolution failed for
+    generativelanguage.googleapis.com:443: C-ares status is not ARES_SUCCESS qtype=SRV
+    name=_grpclb._tcp.generativelanguage.googleapis.com: DNS query cancelled'
+- question_id: q8
+  question_number: 8
+  answer: 3
+  correct_answer: 3
+  is_correct: true
+  reasoning: '이 문제는 지문 (가)와 (나)의 핵심 내용을 파악하고, 각 선택지가 그 내용과 논리적으로 부합하는지를 판단하는 문제입니다.
+    지문의 내용이 매우 난해하고 비문이 많아 핵심 주장을 추론하는 데 어려움이 있지만, 전체적인 맥락을 통해 답을 찾을 수 있습니다.
+
+
+    지문 (가)의 핵심 내용은 개화기에 서양 문물을 단순히 모방하는 것이 아니라, ''주체적 수용''을 통해 우리 민족의 정체성을 확립하고 근대
+    국가를 건설하려 했다는 점입니다. 지문은 ''개화의 주체적 수용'', ''민족 규범성을 강조했다'', ''민족의 정체성 확립'' 등의 표현을
+    통해 서양과 구별되는 우리만의 독자적인 근대화 노선을 강조하고 있습니다.
+
+
+    이제 선택지 3번을 분석해 보겠습니다.
+
+    선택지 3번은 "(가)에서 비유는 사양과 구별되는 계획의 중요성을 강조했음으로, <보기>에서 공론이라는 자본화하여 된 인식 계획을 가부간 정향을
+    위한 계획이 사양에서 푸바리러지 보편화."라고 서술합니다.
+
+
+    이 선택지는 두 부분으로 나눌 수 있습니다.
+
+    1.  전반부: "(가)에서 비유는 사양과 구별되는 계획의 중요성을 강조했음으로" - 이 부분은 (가)의 내용, 즉 ''주체적 수용''과 ''민족
+    정체성 확립''을 통해 서양과 구별되는 독자적 노선을 추구했다는 점을 올바르게 파악하고 있습니다.
+
+    2.  후반부: "<보기>에서 ... 계획이 사양에서 ... 보편화." - 이 부분은 <보기>의 상황을 설명하면서, 어떤 계획이 서양으로부터
+    와서 ''보편화''되었다고 설명합니다.
+
+
+    여기서 논리적 모순이 발생합니다. 선택지의 구조는 ''A이므로 B이다''라는 인과 관계를 나타냅니다. 즉, ''(가)에서 서양과 구별되는 독자성을
+    강조했으므로, <보기>의 상황은 서양의 것이 보편화된 것이다''라는 주장이 됩니다. 이는 전제와 결론이 서로 상반되는 명백한 논리적 오류입니다.
+    (가)의 ''주체성''과 ''차별성'' 강조가 서양 모델의 ''보편화''를 설명하는 근거가 될 수는 없습니다. 오히려 (가)의 관점에서는 서양
+    모델의 무비판적 보편화에 대해 비판적인 입장을 취할 것입니다.
+
+
+    다른 선택지들은 비록 문장이 어색하지만, (가)와 (나)의 핵심 내용(예: (나)의 과학 정신, 과학 방법론의 한계 등)과 명백하게 충돌하는
+    논리적 모순을 보이지는 않습니다. 반면, 3번 선택지는 (가)의 핵심 논지를 근거로 들면서 그와 정반대되는 결론을 도출하고 있으므로, 지문을
+    제대로 이해한 학생의 반응으로 가장 적절하지 않습니다.'
+  time_taken: 59.87
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
+- question_id: q9
+  question_number: 9
+  answer: 3
+  correct_answer: 2
+  is_correct: false
+  reasoning: "이 문제는 지문의 ①과 문맥상 의미가 가장 가까운 선택지를 찾는 문제입니다. 지문이 매우 난해하고 문법적으로 어색한 부분이\
+    \ 많아 전체적인 맥락과 핵심 어휘의 연관성을 파악하는 것이 중요합니다.\n\n1.  **①의 문맥적 의미 분석**: 밑줄 친 ① '근대 국가\
+    \ 건설의 새로운 주체의 형성의 표출'은 (가) 단락의 '개화'와 '민족성'에 대한 설명의 일부입니다. (가) 단락의 전체적인 내용은 기존의\
+    \ 한계를 벗어나 서양 문물을 주체적으로 수용하고, '새로운 주체'를 형성하여 근대 국가를 건설하려는 '개화'의 노력을 설명하고 있습니다.\
+    \ 즉, ①이 포함된 문장은 '민족성'이 기존의 낡은 틀을 '넘어서' 새로운 주체를 만들어내는 과정의 표현이라는 의미를 담고 있습니다. 핵심은\
+    \ '기존의 한계를 넘어서는 확장과 변화'입니다.\n\n2.  **선택지 분석**: 선택지들은 '그치다'라는 동사의 활용을 중심으로 의미를\
+    \ 비교해야 합니다. '그치다'는 '멈추다(stop)'의 의미와 '어떤 범위에 한정되다(be limited to)'의 의미를 가집니다. 이\
+    \ 문제의 맥락에서는 '한정되지 않고 더 나아감'의 의미를 찾아야 합니다.\n    *   1번, 3번: '~에 그치지 않았다'는 '한정되지\
+    \ 않았다', '그 이상으로 나아갔다'는 의미입니다. 이는 ①의 문맥적 의미인 '한계를 넘어서는 확장'과 통합니다.\n    *   2번,\
+    \ 5번: '그쳤다', '그친 일이 없다'는 '멈추다', '멈춘 적이 없다'는 의미로, 확장이나 변화보다는 중단이나 지속의 의미를 가집니다.\n\
+    \n3.  **가장 적절한 선택지 판단 (1번 vs 3번)**: 1번과 3번 모두 '한정되지 않음'이라는 의미를 가지고 있어 ①의 문맥과 유사합니다.\
+    \ 하지만 더 깊은 연관성을 찾아야 합니다. (가) 단락의 후반부를 보면 \"유교적으로 ‘수학적’으로는 이를 허용하지 개화 개혁의 명확성의\
+    \ 부정적 이미지를 벗어 내고자 했다.\"라는 문장이 있습니다. 이 문장은 비록 어색하지만, '수학적'이라는 단어를 '개혁을 허용하지 않는'\
+    \ 즉, '한계를 짓는' 부정적인 맥락에서 사용하고 있습니다.\n\n    선택지 3번은 \"아이 응용은 수학적 그치지 않았다\"라고 말합니다.\
+    \ 이는 지문에서 '한계'의 예시로 사용된 '수학적'이라는 단어를 직접 사용하여, 그 '수학적'인 한계에 머무르지 않고 넘어섰다는 의미를 전달합니다.\
+    \ 이처럼 지문에서 한계의 상징으로 사용된 특정 단어('수학적')를 사용하여 그 한계를 넘어섰음을 표현했기 때문에, 막연히 '교과서'라는 한계를\
+    \ 넘어섰다고 말하는 1번보다 지문과의 문맥적 관련성이 훨씬 더 깊고 직접적입니다. 따라서 3번이 가장 가까운 의미를 가진 선택지입니다."
+  time_taken: 50.48
+  points: 2
+  earned_points: 0
+  success: true
+  error: null
+- question_id: q10
+  question_number: 10
+  answer: 3
+  correct_answer: 3
+  is_correct: true
+  reasoning: 이 문제는 지문의 내용과 일치하지 않는 학생의 이해를 찾는 것입니다. 선택지 3은 '사용되는 노이즈의 주제가 표현의 기능에
+    미치는 영향'을 이해했다고 말합니다. 하지만 지문에서는 '노이즈' 자체에 '주제'가 있다고 설명하지 않습니다. 지문은 '노이즈 예측기 내부의
+    이러한 수치들은 주제 표현에 기반한다'고 언급합니다. 이는 노이즈를 예측하는 '예측기'가 '주제 표현'이라는 개념을 기반으로 작동한다는 의미이지,
+    모델에 사용되는 '노이즈'가 특정 주제를 가지고 있다는 의미가 아닙니다. 또한, '주제 표현의 수치적으로 표현하는 다른 특성의 노이즈가 생성되어'라는
+    부분은, 주제 표현을 통해 새로운 특성을 가진 이미지를 생성할 수 있다는 의미로 해석해야 합니다. 따라서 '노이즈의 주제'라는 표현은 지문의
+    내용을 잘못 이해한 것입니다. 반면, 다른 선택지들은 지문의 내용과 일치합니다. 1번은 '지도 학습'을 사용한다는 내용, 2번은 노이즈를 추가하는
+    '확산 과정'이 노이즈를 제거하는 '복원 과정'에 선행된다는 내용, 4번은 '주제 표현'을 바탕으로 노이즈를 예측한다는 원리, 5번은 '노이즈
+    생성기', '노이즈 예측기' 등 구성 요소와 그 기능에 대한 내용 모두 지문에서 확인할 수 있습니다.
+  time_taken: 29.79
+  points: 2
+  earned_points: 2
+  success: true
+  error: null
+- question_id: q11
+  question_number: 11
+  answer: 0
+  correct_answer: 1
+  is_correct: false
+  reasoning: ''
+  time_taken: 60.02
+  points: 2
+  earned_points: 0
+  success: false
+  error: 504 Deadline Exceeded
+- question_id: q12
+  question_number: 12
+  answer: 0
+  correct_answer: 5
+  is_correct: false
+  reasoning: ''
+  time_taken: 59.55
+  points: 2
+  earned_points: 0
+  success: false
+  error: 'Timeout of 60.0s exceeded, last exception: 503 failed to connect to all
+    addresses; last error: UNKNOWN: ipv6:%5B2404:6800:4004:818::200a%5D:443: connect:
+    No route to host (65)'
+- question_id: q13
+  question_number: 13
+  answer: 0
+  correct_answer: 3
+  is_correct: false
+  reasoning: ''
+  time_taken: 61.86
+  points: 3
+  earned_points: 0
+  success: false
+  error: 'Timeout of 60.0s exceeded, last exception: 503 failed to connect to all
+    addresses; last error: UNKNOWN: ipv4:142.250.207.106:443: connect: Network is
+    unreachable (51)'
+- question_id: q14
+  question_number: 14
+  answer: 0
+  correct_answer: 1
+  is_correct: false
+  reasoning: ''
+  time_taken: 59.63
+  points: 2
+  earned_points: 0
+  success: false
+  error: 'Timeout of 60.0s exceeded, last exception: 503 failed to connect to all
+    addresses; last error: UNKNOWN: ipv4:142.250.207.106:443: connect: Network is
+    unreachable (51)'
+- question_id: q15
+  question_number: 15
+  answer: 0
+  correct_answer: 2
+  is_correct: false
+  reasoning: ''
+  time_taken: 60.37
+  points: 2
+  earned_points: 0
+  success: false
+  error: 'Timeout of 60.0s exceeded, last exception: 503 failed to connect to all
+    addresses; last error: UNKNOWN: ipv4:142.250.207.106:443: connect: Network is
+    unreachable (51)'
+- question_id: q16
+  question_number: 16
+  answer: 0
+  correct_answer: 2
+  is_correct: false
+  reasoning: ''
+  time_taken: 161.63
+  points: 3
+  earned_points: 0
+  success: false
+  error: 'Timeout of 60.0s exceeded, last exception: 503 failed to connect to all
+    addresses; last error: UNKNOWN: ipv6:%5B2404:6800:4004:818::200a%5D:443: connect:
+    No route to host (65)'
+- question_id: q17
+  question_number: 17
+  answer: 0
+  correct_answer: 3
+  is_correct: false
+  reasoning: ''
+  time_taken: 139.85
+  points: 2
+  earned_points: 0
+  success: false
+  error: 'Timeout of 60.0s exceeded, last exception: 503 failed to connect to all
+    addresses; last error: UNKNOWN: ipv6:%5B2404:6800:4004:818::200a%5D:443: connect:
+    No route to host (65)'
+- question_id: q18
+  question_number: 18
+  answer: 0
+  correct_answer: 2
+  is_correct: false
+  reasoning: ''
+  time_taken: 121.33
+  points: 2
+  earned_points: 0
+  success: false
+  error: 'Timeout of 60.0s exceeded, last exception: 503 failed to connect to all
+    addresses; last error: UNKNOWN: ipv4:142.250.207.106:443: connect: Network is
+    unreachable (51)'
+- question_id: q19
+  question_number: 19
+  answer: 0
+  correct_answer: 4
+  is_correct: false
+  reasoning: ''
+  time_taken: 61.93
+  points: 2
+  earned_points: 0
+  success: false
+  error: 'Timeout of 60.0s exceeded, last exception: 503 failed to connect to all
+    addresses; last error: UNKNOWN: ipv4:142.250.207.106:443: connect: Network is
+    unreachable (51)'
+- question_id: q20
+  question_number: 20
+  answer: 0
+  correct_answer: 5
+  is_correct: false
+  reasoning: ''
+  time_taken: 67.9
+  points: 2
+  earned_points: 0
+  success: false
+  error: 'Timeout of 60.0s exceeded, last exception: 503 failed to connect to all
+    addresses; last error: UNKNOWN: ipv4:142.250.207.106:443: connect: Network is
+    unreachable (51)'
+- question_id: q21
+  question_number: 21
+  answer: 0
+  correct_answer: 4
+  is_correct: false
+  reasoning: ''
+  time_taken: 76.9
+  points: 3
+  earned_points: 0
+  success: false
+  error: 'Timeout of 60.0s exceeded, last exception: 503 failed to connect to all
+    addresses; last error: UNKNOWN: ipv4:142.250.207.106:443: connect: Network is
+    unreachable (51)'
+- question_id: q22
+  question_number: 22
+  answer: 0
+  correct_answer: 5
+  is_correct: false
+  reasoning: ''
+  time_taken: 59.94
+  points: 2
+  earned_points: 0
+  success: false
+  error: 'Timeout of 60.0s exceeded, last exception: 503 failed to connect to all
+    addresses; last error: UNKNOWN: ipv6:%5B2404:6800:400a:80b::200a%5D:443: connect:
+    No route to host (65)'
+- question_id: q23
+  question_number: 23
+  answer: 0
+  correct_answer: 2
+  is_correct: false
+  reasoning: ''
+  time_taken: 62.81
+  points: 2
+  earned_points: 0
+  success: false
+  error: 'Timeout of 60.0s exceeded, last exception: 503 failed to connect to all
+    addresses; last error: UNAVAILABLE: ipv4:172.217.175.74:443: Failed to connect
+    to remote host: Timeout occurred: FD shutdown'
+- question_id: q24
+  question_number: 24
+  answer: 0
+  correct_answer: 4
+  is_correct: false
+  reasoning: ''
+  time_taken: 56.63
+  points: 2
+  earned_points: 0
+  success: false
+  error: 'Timeout of 60.0s exceeded, last exception: 503 failed to connect to all
+    addresses; last error: UNAVAILABLE: ipv4:172.217.175.74:443: Failed to connect
+    to remote host: Timeout occurred: FD shutdown'
+- question_id: q25
+  question_number: 25
+  answer: 0
+  correct_answer: 3
+  is_correct: false
+  reasoning: ''
+  time_taken: 60.45
+  points: 3
+  earned_points: 0
+  success: false
+  error: 'Timeout of 60.0s exceeded, last exception: 503 failed to connect to all
+    addresses; last error: UNAVAILABLE: ipv4:172.217.175.74:443: Failed to connect
+    to remote host: Timeout occurred: FD shutdown'
+- question_id: q26
+  question_number: 26
+  answer: 0
+  correct_answer: 2
+  is_correct: false
+  reasoning: ''
+  time_taken: 62.05
+  points: 2
+  earned_points: 0
+  success: false
+  error: 'Timeout of 60.0s exceeded, last exception: 503 failed to connect to all
+    addresses; last error: UNAVAILABLE: ipv4:172.217.175.74:443: Failed to connect
+    to remote host: Timeout occurred: FD shutdown'
+- question_id: q27
+  question_number: 27
+  answer: 0
+  correct_answer: 2
+  is_correct: false
+  reasoning: ''
+  time_taken: 58.81
+  points: 2
+  earned_points: 0
+  success: false
+  error: 'Timeout of 60.0s exceeded, last exception: 503 failed to connect to all
+    addresses; last error: UNAVAILABLE: ipv4:172.217.175.74:443: Failed to connect
+    to remote host: Timeout occurred: FD shutdown'
+- question_id: q28
+  question_number: 28
+  answer: 0
+  correct_answer: 4
+  is_correct: false
+  reasoning: ''
+  time_taken: 59.67
+  points: 2
+  earned_points: 0
+  success: false
+  error: 'Timeout of 60.0s exceeded, last exception: 503 failed to connect to all
+    addresses; last error: UNAVAILABLE: ipv4:172.217.175.74:443: Failed to connect
+    to remote host: Timeout occurred: FD shutdown'
+- question_id: q29
+  question_number: 29
+  answer: 0
+  correct_answer: 3
+  is_correct: false
+  reasoning: ''
+  time_taken: 60.14
+  points: 3
+  earned_points: 0
+  success: false
+  error: 'Timeout of 60.0s exceeded, last exception: 503 failed to connect to all
+    addresses; last error: UNAVAILABLE: ipv4:172.217.175.74:443: Failed to connect
+    to remote host: Timeout occurred: FD shutdown'
+- question_id: q30
+  question_number: 30
+  answer: 0
+  correct_answer: 5
+  is_correct: false
+  reasoning: ''
+  time_taken: 61.24
+  points: 2
+  earned_points: 0
+  success: false
+  error: 'Timeout of 60.0s exceeded, last exception: 503 failed to connect to all
+    addresses; last error: UNAVAILABLE: ipv4:172.217.175.74:443: Failed to connect
+    to remote host: Timeout occurred: FD shutdown'
+- question_id: q31
+  question_number: 31
+  answer: 0
+  correct_answer: 4
+  is_correct: false
+  reasoning: ''
+  time_taken: 129.65
+  points: 2
+  earned_points: 0
+  success: false
+  error: 'Timeout of 60.0s exceeded, last exception: 503 failed to connect to all
+    addresses; last error: UNAVAILABLE: ipv4:172.217.175.74:443: Failed to connect
+    to remote host: Timeout occurred: FD shutdown'
+- question_id: q32
+  question_number: 32
+  answer: 0
+  correct_answer: 3
+  is_correct: false
+  reasoning: ''
+  time_taken: 892.64
+  points: 2
+  earned_points: 0
+  success: false
+  error: 'Timeout of 60.0s exceeded, last exception: 503 failed to connect to all
+    addresses; last error: UNAVAILABLE: ipv4:172.217.175.74:443: Failed to connect
+    to remote host: Timeout occurred: FD shutdown'
+- question_id: q33
+  question_number: 33
+  answer: 0
+  correct_answer: 5
+  is_correct: false
+  reasoning: ''
+  time_taken: 112.57
+  points: 2
+  earned_points: 0
+  success: false
+  error: 'Timeout of 60.0s exceeded, last exception: 503 failed to connect to all
+    addresses; last error: UNAVAILABLE: ipv4:172.217.175.74:443: Failed to connect
+    to remote host: Timeout occurred: FD shutdown'
+- question_id: q34
+  question_number: 34
+  answer: 0
+  correct_answer: 2
+  is_correct: false
+  reasoning: ''
+  time_taken: 114.2
+  points: 3
+  earned_points: 0
+  success: false
+  error: 'Timeout of 60.0s exceeded, last exception: 503 failed to connect to all
+    addresses; last error: UNAVAILABLE: ipv4:172.217.175.74:443: Failed to connect
+    to remote host: Timeout occurred: FD shutdown'
+- question_id: q35
+  question_number: 35
+  answer: 0
+  correct_answer: 2
+  is_correct: false
+  reasoning: ''
+  time_taken: 58.88
+  points: 2
+  earned_points: 0
+  success: false
+  error: 'Timeout of 60.0s exceeded, last exception: 503 failed to connect to all
+    addresses; last error: UNAVAILABLE: ipv4:172.217.175.74:443: Failed to connect
+    to remote host: Timeout occurred: FD shutdown'
+- question_id: q36
+  question_number: 36
+  answer: 0
+  correct_answer: 4
+  is_correct: false
+  reasoning: ''
+  time_taken: 52.11
+  points: 3
+  earned_points: 0
+  success: false
+  error: 'Timeout of 60.0s exceeded, last exception: 503 failed to connect to all
+    addresses; last error: UNAVAILABLE: ipv4:172.217.175.74:443: Failed to connect
+    to remote host: Timeout occurred: FD shutdown'
+- question_id: q37
+  question_number: 37
+  answer: 0
+  correct_answer: 3
+  is_correct: false
+  reasoning: ''
+  time_taken: 57.88
+  points: 2
+  earned_points: 0
+  success: false
+  error: 'Timeout of 60.0s exceeded, last exception: 503 failed to connect to all
+    addresses; last error: UNAVAILABLE: ipv4:172.217.175.74:443: Failed to connect
+    to remote host: Timeout occurred: FD shutdown'
+- question_id: q38
+  question_number: 38
+  answer: 0
+  correct_answer: 4
+  is_correct: false
+  reasoning: ''
+  time_taken: 57.86
+  points: 2
+  earned_points: 0
+  success: false
+  error: 'Timeout of 60.0s exceeded, last exception: 503 failed to connect to all
+    addresses; last error: UNAVAILABLE: ipv4:172.217.175.74:443: Failed to connect
+    to remote host: Timeout occurred: FD shutdown'
+- question_id: q39
+  question_number: 39
+  answer: 0
+  correct_answer: 5
+  is_correct: false
+  reasoning: ''
+  time_taken: 58.61
+  points: 2
+  earned_points: 0
+  success: false
+  error: 'Timeout of 60.0s exceeded, last exception: 503 failed to connect to all
+    addresses; last error: UNAVAILABLE: ipv4:172.217.175.74:443: Failed to connect
+    to remote host: Timeout occurred: FD shutdown'
+- question_id: q40
+  question_number: 40
+  answer: 0
+  correct_answer: 4
+  is_correct: false
+  reasoning: ''
+  time_taken: 58.56
+  points: 2
+  earned_points: 0
+  success: false
+  error: 'Timeout of 60.0s exceeded, last exception: 503 failed to connect to all
+    addresses; last error: UNAVAILABLE: ipv4:172.217.175.74:443: Failed to connect
+    to remote host: Timeout occurred: FD shutdown'
+- question_id: q41
+  question_number: 41
+  answer: 0
+  correct_answer: 3
+  is_correct: false
+  reasoning: ''
+  time_taken: 465.01
+  points: 2
+  earned_points: 0
+  success: false
+  error: 'Timeout of 60.0s exceeded, last exception: 503 failed to connect to all
+    addresses; last error: UNAVAILABLE: ipv4:172.217.175.74:443: Failed to connect
+    to remote host: Timeout occurred: FD shutdown'
+- question_id: q42
+  question_number: 42
+  answer: 0
+  correct_answer: 2
+  is_correct: false
+  reasoning: ''
+  time_taken: 52.38
+  points: 2
+  earned_points: 0
+  success: false
+  error: 'Timeout of 60.0s exceeded, last exception: 503 failed to connect to all
+    addresses; last error: UNAVAILABLE: ipv4:172.217.175.74:443: Failed to connect
+    to remote host: Timeout occurred: FD shutdown'
+- question_id: q43
+  question_number: 43
+  answer: 0
+  correct_answer: 1
+  is_correct: false
+  reasoning: ''
+  time_taken: 54.37
+  points: 2
+  earned_points: 0
+  success: false
+  error: 'Timeout of 60.0s exceeded, last exception: 503 failed to connect to all
+    addresses; last error: UNAVAILABLE: ipv4:172.217.175.74:443: Failed to connect
+    to remote host: Timeout occurred: FD shutdown'
+- question_id: q44
+  question_number: 44
+  answer: 0
+  correct_answer: 5
+  is_correct: false
+  reasoning: ''
+  time_taken: 53.39
+  points: 2
+  earned_points: 0
+  success: false
+  error: 'Timeout of 60.0s exceeded, last exception: 503 failed to connect to all
+    addresses; last error: UNAVAILABLE: ipv4:172.217.175.74:443: Failed to connect
+    to remote host: Timeout occurred: FD shutdown'
+- question_id: q45
+  question_number: 45
+  answer: 0
+  correct_answer: 2
+  is_correct: false
+  reasoning: ''
+  time_taken: 55.52
+  points: 3
+  earned_points: 0
+  success: false
+  error: 'Timeout of 60.0s exceeded, last exception: 503 failed to connect to all
+    addresses; last error: UNAVAILABLE: ipv4:172.217.175.74:443: Failed to connect
+    to remote host: Timeout occurred: FD shutdown'
