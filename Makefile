@@ -232,12 +232,10 @@ solar-pro:
 sonar-pro:
 	@$(MAKE) run-evaluation MODEL_NAME=sonar-pro YEAR=$(word 2,$(MAKECMDGOALS)) SUBJECTS=$(word 3,$(MAKECMDGOALS))
 
-# 모든 모델 실행
+# 모든 모델 실행 (첫 번째 인자로 'all' 사용 시)
+# 예: make all 2025 korean
 all-models:
 	@$(MAKE) run-evaluation MODEL_NAME=all YEAR=$(word 2,$(MAKECMDGOALS)) SUBJECTS=$(word 3,$(MAKECMDGOALS))
-
-# 'all' 키워드를 all-models로 매핑
-all: all-models
 
 # 실제 평가 실행 로직
 run-evaluation:
@@ -326,9 +324,15 @@ run-evaluation:
 	fi
 
 # 유효한 연도 및 과목 인자 (타겟으로 인식되지만 아무것도 하지 않음)
-.PHONY: 2025 2024 korean math english
+.PHONY: 2025 2024 korean math english all
 2025 2024 korean math english:
 	@:
+
+# 'all' 타겟: 첫 번째 위치(모델)에서만 실행, 세 번째 위치(과목)에서는 무시
+all:
+	@if [ "$(word 1,$(MAKECMDGOALS))" = "all" ]; then \
+		$(MAKE) run-evaluation MODEL_NAME=all YEAR=$(word 2,$(MAKECMDGOALS)) SUBJECTS=$(word 3,$(MAKECMDGOALS)); \
+	fi
 
 # =============================================================================
 # 웹 배포
