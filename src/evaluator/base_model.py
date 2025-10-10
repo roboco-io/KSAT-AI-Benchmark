@@ -121,18 +121,81 @@ class BaseModel(ABC):
 
         return prompt
     
-    def _extract_answer_from_text(self, text: str) -> Optional[int]:
-        """텍스트에서 답 번호 추출 (1-5)
-        
+    def _extract_json_from_text(self, text: str) -> Optional[str]:
+        """텍스트에서 JSON 부분만 추출 (중첩된 중괄호, 마크다운 처리)
+
+        Claude와 같은 모델들이 JSON 앞뒤에 추가 텍스트나 마크다운을 포함하는 경우가 많아서,
+        강력한 파싱 로직으로 JSON 부분만 정확히 추출합니다.
+
         Args:
             text: 응답 텍스트
-        
+
+        Returns:
+            JSON 문자열 또는 None
+        """
+        import re
+        import json
+
+        # 1단계: 마크다운 코드 블록 제거
+        text = re.sub(r'```json\s*', '', text)
+        text = re.sub(r'```\s*', '', text)
+
+        # 2단계: 줄 단위 마크다운 헤더 제거 (JSON 내부는 보호)
+        text = re.sub(r'(?:^|\n)\s*\*\*[^*\n]+\*\*:?\s*(?:\n|$)', '\n', text, flags=re.MULTILINE)
+        text = re.sub(r'(?:^|\n)#{1,6}\s+[^\n]+\n', '\n', text, flags=re.MULTILINE)
+
+        # 3단계: 첫 번째 유효한 JSON 블록 찾기 (중첩된 중괄호 처리)
+        search_start = 0
+        while True:
+            first_brace = text.find('{', search_start)
+            if first_brace == -1:
+                break
+
+            # 중첩된 {} 고려하여 매칭되는 } 찾기
+            brace_count = 0
+            json_end = -1
+            for i in range(first_brace, len(text)):
+                if text[i] == '{':
+                    brace_count += 1
+                elif text[i] == '}':
+                    brace_count -= 1
+                    if brace_count == 0:
+                        json_end = i
+                        break
+
+            if json_end == -1:
+                break
+
+            json_str = text[first_brace:json_end+1]
+
+            # 4단계: 유효성 검사 - answer와 reasoning 필드가 있는지 확인
+            if '"answer"' in json_str and '"reasoning"' in json_str:
+                try:
+                    parsed = json.loads(json_str)
+                    answer = parsed.get('answer')
+                    # answer가 1-5 사이의 정수인지 확인
+                    if isinstance(answer, int) and 1 <= answer <= 5:
+                        return json_str
+                except (json.JSONDecodeError, ValueError):
+                    pass
+
+            # 다음 JSON 블록 찾기
+            search_start = json_end + 1
+
+        return None
+
+    def _extract_answer_from_text(self, text: str) -> Optional[int]:
+        """텍스트에서 답 번호 추출 (1-5)
+
+        Args:
+            text: 응답 텍스트
+
         Returns:
             답 번호 (1-5) 또는 None
         """
         # 여러 패턴 시도
         import re
-        
+
         # "답: 3", "정답: 3", "Answer: 3" 등
         patterns = [
             r'(?:답|정답|answer)(?:\s*:?\s*)(\d)',
@@ -140,14 +203,14 @@ class BaseModel(ABC):
             r'^(\d)(?:\s*번)?$',  # 단순히 숫자만
             r'(\d)\s*번(?:이|을|이다)',
         ]
-        
+
         for pattern in patterns:
             match = re.search(pattern, text, re.IGNORECASE | re.MULTILINE)
             if match:
                 answer = int(match.group(1))
                 if 1 <= answer <= 5:
                     return answer
-        
+
         return None
     
     def __str__(self) -> str:

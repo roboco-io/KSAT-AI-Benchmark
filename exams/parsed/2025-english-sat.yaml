@@ -61,6 +61,49 @@ passages:
   question_numbers:
   - 41
   - 42
+- passage_id: p6
+  passage_text: "Hello, everyone! Recently, scientists have been paying attention to alternative food sources that could help solve future food shortages. These foods are nutritious and can be grown in various environments. For example, seaweed is rich in vitamins and minerals and can be farmed in the ocean. Beans are another great option because they are high in protein and can grow in many climates. Pumpkins are versatile and can be stored for long periods. And surprisingly, mushrooms and insects are also being considered as sustainable food sources for the future. These alternative foods could play a crucial role in feeding the growing global population."
+  question_numbers:
+  - 16
+  - 17
+- passage_id: p7
+  passage_text: "Dear friends and members,\n\nI am writing to inform you that the Spring Marathon scheduled for March 15 has been canceled due to construction on Main Street. We apologize for any inconvenience this may cause. We are currently working with city officials to find an alternative date and route. We will notify you as soon as we have confirmed the new details. In the meantime, please continue your training regimen. We appreciate your understanding and look forward to seeing you at the rescheduled event.\n\nSincerely,\nMartha Kingsley\nPresident, City Runners Club"
+  question_numbers:
+  - 18
+- passage_id: p8
+  passage_text: "Peter had been looking forward to Valentine's Day for weeks. He made a reservation at Amy's favorite Italian restaurant and planned to surprise her with flowers. When they arrived, however, the restaurant was completely booked despite his reservation. The host apologized profusely, explaining there had been a computer error. Peter's heart sank as he saw the disappointment on Amy's face. He had been so confident that everything would be perfect, but now his carefully planned evening was falling apart. They stood outside the restaurant, unsure of what to do next."
+  question_numbers:
+  - 19
+- passage_id: p9
+  passage_text: "Video games have long been criticized for distracting students from their studies. However, recent research suggests that games can actually be powerful educational tools when used properly. The key is not to ban games from classrooms, but to incorporate game-like elements into learning activities. Features such as point systems, level progression, immediate feedback, and collaborative challenges can make learning more engaging and effective. Educators should develop games specifically designed to enhance learning outcomes, combining entertainment with educational content. When game mechanics are thoughtfully integrated into curriculum, they can transform passive learning into an active, immersive experience that motivates students and improves retention."
+  question_numbers:
+  - 20
+- passage_id: p10
+  passage_text: "The graph above shows the percentages of women employed behind the scenes on the top 100 U.S. films by role in 2020, 2021, and 2022. For each of the three years, the percentage of women employed as producers on the top 100 U.S. films was the highest as compared with the percentages of each of the other three roles. The percentage of women employed as directors on the top 100 U.S. films in 2021 was lower than in 2020 but higher than in 2022. The percentage of women employed as writers on the top 100 U.S. films increased by 4 percentage points from 2020 to 2021 and by 1 percentage point from 2021 to 2022. The percentage of women employed as editors on the top 100 U.S. films was less than 20% in each of the three years. In 2022, the percentage of women employed as producers on the top 100 U.S. films was the same as that in 2020. [Graph data: Director 2020: 16%, 2021: 12%, 2022: 11% | Writer 2020: 12%, 2021: 16%, 2022: 17% | Editor 2020: 18%, 2021: 21%, 2022: 18% | Producer 2020: 28%, 2021: 24%, 2022: 28%]"
+  question_numbers:
+  - 25
+- passage_id: p11
+  passage_text: "Dick Enberg was one of America's most beloved sports broadcasters. He was born in Michigan in 1935. In the early 1960s, he became an assistant professor at San Fernando Valley State College, where he also served as a coach of its baseball team. Afterwards, he began a full-time sportscasting career in Los Angeles. In 1973, he became the first U.S. sportscaster ever to visit China. He joined NBC Sports in 1975 and remained with the network for about 25 years, covering such big events as the Olympics. He later worked for other major sports broadcasting stations. He made his last live broadcast in 2016 and died the following year at the age of 82. He served as Chairman of the American Sportscaster Association for more than three decades. Enberg was also a best-selling writer and won Emmy Awards as a sportscaster, a writer, and a producer."
+  question_numbers:
+  - 26
+- passage_id: p12
+  passage_text: "Adenville City Pass Card\n\nThe Adenville City Pass Card is a public transportation card for tourists visiting Adenville.\n\nService Range:\n• Adenville-based subway lines\n• Adenville-licensed buses\n※ This card cannot be used for city tour buses.\n\nCard Type:\n1-Day: $10 (10% off admission for major tourist attractions)\n3-Day: $25 (10% off admission for major tourist attractions)\n5-Day: $40 (10% off admission for major tourist attractions)\n\n※ Unused cards are refundable within 30 days of the purchase date.\n\nPurchase Information:\n• Physical cards can be purchased at subway stations.\n• Mobile cards can be purchased on the A-Transit app."
+  question_numbers:
+  - 27
+- passage_id: p13
+  passage_text: "Luckwood Snow Festival\n\nWe're happy to announce the 15th annual Luckwood Snow Festival. Come to the festival to enjoy winter activities.\n\nWhen & Where:\n• January 24th—30th (7 days), from 9 a.m. to 8 p.m.\n• Luckwood Park\n\nSpecial Activities:\n• Snow Sculpture Contest: 11 teams will participate.\n• Fun in the Snow: Kids can enjoy snow tunnels and snow slides.\n\nTransportation:\n• Parking is not available (Use public transportation and/or shuttle bus service).\n• The shuttle bus runs between Luckwood Subway Station and Luckwood Park (One-way fare: $1, cash only).\n\n※ For more information, please visit www.ldsnow.org."
+  question_numbers:
+  - 28
+- passage_id: p14
+  passage_text: "The potential for market enforcement is greater when contracting parties have developed reputational capital that can be devalued when contracts are violated.\n\n(A) Similarly, a landowner can undermaintain fences, ditches, and irrigation systems. Accurate assessments of farmer and landowner behavior will be made over time, and those farmers and landowners who attempt to gain at each other's expense will find that others may refuse to deal with them in the future.\n\n(B) Over time landowners indirectly monitor farmers by observing the reported output, the general quality of the soil, and any unusual or extreme behavior. Farmer and landowner reputations act as a bond. In any growing season a farmer can reduce effort, overuse soil, or underreport the crop.\n\n(C) Farmers and landowners develop reputations for honesty, fairness, producing high yields, and consistently demonstrating that they are good at what they do. In small, close-knit farming communities, reputations are well known."
+  question_numbers:
+  - 36
+- passage_id: p15
+  passage_text: "(A) \"Do you remember when Sean used to tell me that I was the best dad in the world?\" Ethan asked his wife, Grace. \"Yes, I do. I always envied your relationship with Sean,\" she replied. Ethan then shared how things had changed since his son started middle school. Grace had noticed Ethan often pushing Sean to study harder. \"Maybe he isn't that into school right now. How about going hiking, just the two of you?\" she suggested. He agreed, and realizing that both his and Sean's hiking jackets were still at the laundry, he asked his wife to go and pick them up with him.\n\n(B) Ethan and Grace came back home with the jackets and checked if Sean had everything else he needed for hiking. Luckily, in his drawers they found his hat, shoes, sunglasses, and hiking sticks. When Sean returned from school, Ethan softly said, \"Sean, let's go hiking this Saturday, just the two of us.\" Though Sean thanked him for the suggestion, he said he had to go to the library. Grace stepped in, \"You know, the weather this weekend will be the best of the year. Why not enjoy it?\" After a moment's hesitation, he agreed.\n\n(C) \"When did you bring the jackets in?\" the clerk at the laundry asked. \"Maybe two weeks ago,\" Ethan replied. Then, Grace quickly reminded him, \"Honey, we actually left them here a month ago.\" The clerk went into the storage area to look for the clothes. Finally, he returned with the jackets and handed them to Ethan. The clerk politely said, \"I am sorry, but please collect your items earlier next time. Our storage is too full.\" Ethan felt embarrassed for the late collection and apologized.\n\n(D) The weather was perfect. Ethan and Sean set off hiking along the valley by Aicken Mountain. They walked in silence until Sean fell over a rock and twisted his ankle. Realizing he couldn't walk, Ethan carried his son down on his back. He felt Sean's heartbeat, something he hadn't felt since Sean was a baby. Suddenly, Sean said, \"Dad, I'm sorry. At some point, I started to become afraid of disappointing you. But you are still the best dad.\" Energized, he felt no weight on his back and replied, \"You are the best son, no matter what.\""
+  question_numbers:
+  - 43
+  - 44
+  - 45
 questions:
 - question_id: q1
   question_number: 1
@@ -268,7 +311,7 @@ questions:
   correct_answer: 3
   points: 2
   explanation: null
-  passage_id: null
+  passage_id: p6
 - question_id: q17
   question_number: 17
   question_text: 언급된 음식이 아닌 것은?
@@ -281,7 +324,7 @@ questions:
   correct_answer: 4
   points: 2
   explanation: null
-  passage_id: null
+  passage_id: p6
 - question_id: q18
   question_number: 18
   question_text: 다음 글의 목적으로 가장 적절한 것은?
@@ -294,7 +337,7 @@ questions:
   correct_answer: 1
   points: 2
   explanation: null
-  passage_id: null
+  passage_id: p7
 - question_id: q19
   question_number: 19
   question_text: 다음 글에 드러난 Peter의 심경 변화로 가장 적절한 것은?
@@ -307,7 +350,7 @@ questions:
   correct_answer: 2
   points: 2
   explanation: null
-  passage_id: null
+  passage_id: p8
 - question_id: q20
   question_number: 20
   question_text: 다음 글에서 필자가 주장하는 바로 가장 적절한 것은?
@@ -320,7 +363,7 @@ questions:
   correct_answer: 1
   points: 2
   explanation: null
-  passage_id: null
+  passage_id: p9
 - question_id: q21
   question_number: 21
   question_text: 밑줄 친 hunting the shadow, not the substance가 다음 글에서 의미하는 바로, 가장 적절한 것은?
@@ -385,7 +428,7 @@ questions:
   correct_answer: 4
   points: 2
   explanation: null
-  passage_id: null
+  passage_id: p10
 - question_id: q26
   question_number: 26
   question_text: Dick Enberg에 관한 다음 글의 내용과 일치하지 않는 것은?
@@ -398,7 +441,7 @@ questions:
   correct_answer: 4
   points: 2
   explanation: null
-  passage_id: null
+  passage_id: p11
 - question_id: q27
   question_number: 27
   question_text: Adenville City Pass Card에 관한 다음 안내문의 내용과 일치하지 않는 것은?
@@ -411,7 +454,7 @@ questions:
   correct_answer: 3
   points: 2
   explanation: null
-  passage_id: null
+  passage_id: p12
 - question_id: q28
   question_number: 28
   question_text: Luckwood Snow Festival에 관한 다음 안내문의 내용과 일치하지 않는 것은?
@@ -424,7 +467,7 @@ questions:
   correct_answer: 3
   points: 2
   explanation: null
-  passage_id: null
+  passage_id: p13
 - question_id: q29
   question_number: 29
   question_text: 다음 글의 밑줄 친 부분 중, 어법상 틀린 것은?
@@ -516,10 +559,11 @@ questions:
   - (B) → (A) → (C)
   - (B) → (C) → (A)
   - (C) → (A) → (B)
+  - (C) → (B) → (A)
   correct_answer: 5
   points: 3
   explanation: null
-  passage_id: null
+  passage_id: p14
 - question_id: q38
   question_number: 38
   question_text: 윗글의 흐름으로 보아, 주어진 문장이 들어가기에 가장 적절한 곳을 고르시오.
@@ -574,7 +618,7 @@ questions:
   passage_id: p5
 - question_id: q43
   question_number: 43
-  question_text: 주어진 글 (A)~(D)에서 내용상 순서가 바르게 배열된 것으로 가장 적절한 것은?
+  question_text: 주어진 글 (A)에 이어질 내용을 순서에 맞게 배열한 것으로 가장 적절한 것은?
   choices:
   - (B) → (D) → (C)
   - (C) → (B) → (D)
@@ -584,7 +628,7 @@ questions:
   correct_answer: 2
   points: 3
   explanation: null
-  passage_id: null
+  passage_id: p15
 - question_id: q44
   question_number: 44
   question_text: 밑줄 친 (a)~(e) 중에서 가리키는 대상이 나머지 넷과 다른 것은?
@@ -597,17 +641,17 @@ questions:
   correct_answer: 3
   points: 2
   explanation: null
-  passage_id: null
+  passage_id: p15
 - question_id: q45
   question_number: 45
   question_text: 윗글에 관한 내용으로 적절하지 않은 것은?
   choices:
-  - Grace는 Ethan과 Sean의 관계를 부러워한다고 말한다.
-  - Grace는 Ethan에게 Sean과 같이 하이킹을 가자고 권했다.
-  - Sean의 걸음걸이가 서툴렀던 적이 있었다.
-  - Ethan은 혼자서 세탁소에서 의류를 찾아온 후에 갔다.
-  - Sean은 하이킹하는 도중에 걸려 넘어졌다.
+  - Grace는 Ethan과 Sean의 관계를 부러워했다고 말했다.
+  - Grace는 Ethan에게 Sean과 둘이서 하이킹할 것을 권했다.
+  - Sean의 선글라스가 서랍장 안에 있었다.
+  - Ethan은 혼자서 세탁소에 하이킹 재킷을 찾으러 갔다.
+  - Sean은 하이킹하는 도중 돌에 걸려 넘어졌다.
   correct_answer: 4
   points: 2
   explanation: null
-  passage_id: null
+  passage_id: p15

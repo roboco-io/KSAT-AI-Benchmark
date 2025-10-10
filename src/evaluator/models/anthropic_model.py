@@ -70,18 +70,39 @@ class AnthropicModel(BaseModel):
             
             # 응답 파싱
             content = message.content[0].text
-            
-            # JSON 추출 시도
-            json_match = re.search(r'\{[^}]+\}', content, re.DOTALL)
-            if json_match:
+
+            # 1차 시도: 그대로 JSON 파싱
+            try:
+                result = json.loads(content)
+                answer = int(result.get('answer', 0))
+                reasoning = result.get('reasoning', '')
+
+                if not (1 <= answer <= 5):
+                    answer = self._extract_answer_from_text(content) or 0
+
+                return ModelResponse(
+                    answer=answer,
+                    reasoning=reasoning or content,
+                    time_taken=time_taken,
+                    raw_response=content,
+                    model_name=self.model_name,
+                    success=(1 <= answer <= 5),
+                    error=None if (1 <= answer <= 5) else "유효하지 않은 답"
+                )
+            except (json.JSONDecodeError, ValueError):
+                pass
+
+            # 2차 시도: 강력한 JSON 추출 (중첩된 중괄호, 마크다운 처리)
+            extracted_json = self._extract_json_from_text(content)
+            if extracted_json:
                 try:
-                    result = json.loads(json_match.group())
+                    result = json.loads(extracted_json)
                     answer = int(result.get('answer', 0))
                     reasoning = result.get('reasoning', '')
-                    
+
                     if not (1 <= answer <= 5):
                         answer = self._extract_answer_from_text(content) or 0
-                    
+
                     return ModelResponse(
                         answer=answer,
                         reasoning=reasoning or content,
@@ -93,10 +114,10 @@ class AnthropicModel(BaseModel):
                     )
                 except (json.JSONDecodeError, ValueError):
                     pass
-            
-            # JSON 파싱 실패시 텍스트에서 추출
+
+            # 3차 시도: 텍스트에서 답 추출
             answer = self._extract_answer_from_text(content) or 0
-            
+
             return ModelResponse(
                 answer=answer,
                 reasoning=content,

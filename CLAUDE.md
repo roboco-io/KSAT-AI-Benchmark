@@ -203,14 +203,20 @@ PDF → Claude Code Manual Parsing → YAML (Optimized/Legacy Schema) → exams/
 ```
 
 **2. Evaluator System** (`src/evaluator/`)
-- `evaluate.py`: Main CLI for evaluation
+- `evaluate.py`: Main CLI for evaluation with parallel processing support
 - `evaluator.py`: Core evaluation engine that orchestrates the process
   - **Passages Schema Support**: Automatically handles both legacy (inline passage) and optimized (passage_id reference) schemas
-  - `passages_map`: Maps passage_id → passage_text for efficient lookup
+  - `passages_map`: Maps passage_id → passage_text for efficient lookup (built once per exam)
   - `load_exam()`: Builds passage map from passages section if present
   - `_solve_single_question()`: Resolves passage_id references before sending to model
+  - **Parallel Processing**: ThreadPoolExecutor for 3-5x speedup (default: 10 workers)
+  - **Debug Logging**: Optional detailed logging with `--verbose` flag
 - `base_model.py`: Abstract base class defining the model interface
+  - `solve_question()`: Required method that all models must implement
+  - `_build_prompt()`: Constructs prompts with question type analysis (긍정형/부정형)
+  - `_extract_json_from_text()`: Robust JSON extraction with nested brace handling
 - `models/`: Provider-specific model implementations (OpenAI, Anthropic, Google, Upstage, Perplexity)
+  - Each inherits from BaseModel and implements solve_question()
 
 **Evaluation Flow**:
 ```
@@ -403,31 +409,76 @@ results:
 
 ## Adding New Models
 
-1. Add model configuration to `models/models.json`
-2. If a new provider, create `src/evaluator/models/{provider}_model.py` implementing `BaseModel`
-3. Register in `src/evaluator/evaluator.py` provider_map
-4. Set API key in `.env` file
-5. Enable the model by setting `"enabled": true` in models.json
-6. Test with `make evaluate EXAM=<path> MODEL=<model_name>`
+### Quick Start
+1. Add model configuration to `models/models.json`:
+   ```json
+   {
+     "name": "new-model",
+     "provider": "existing_provider",
+     "model_id": "actual-api-model-id",
+     "api_key_env": "PROVIDER_API_KEY",
+     "max_tokens": 4096,
+     "temperature": 0.3,
+     "enabled": true
+   }
+   ```
+2. Set API key in `.env` file
+3. Test: `make new-model 2025 korean`
+
+### For New Providers
+1. Create `src/evaluator/models/{provider}_model.py`:
+   ```python
+   from ..base_model import BaseModel, ModelResponse
+
+   class NewProviderModel(BaseModel):
+       def solve_question(self, question_text, choices, passage=None, **kwargs):
+           # Implement API call logic
+           # Return ModelResponse with answer (1-5), reasoning, time_taken
+   ```
+2. Register in `src/evaluator/evaluator.py` provider_map:
+   ```python
+   provider_map = {
+       'openai': OpenAIModel,
+       'new_provider': NewProviderModel,  # Add here
+   }
+   ```
+3. Add to `models/models.json` and test
+
+### Model Interface Requirements
+- MUST inherit from `BaseModel`
+- MUST implement `solve_question()` returning `ModelResponse`
+- Response MUST include: `answer` (int 1-5), `reasoning` (str), `time_taken` (float)
+- Handle errors gracefully with `success=False` and error message
+- Use `_build_prompt()` helper for consistent prompt formatting
+- Use `_extract_json_from_text()` for robust JSON parsing from model responses
 
 ## Critical Patterns
 
 **Model Interface Contract**:
-- All models MUST inherit from `BaseModel`
+- All models MUST inherit from `BaseModel` (src/evaluator/base_model.py:26)
 - MUST implement `solve_question()` returning `ModelResponse`
 - Response MUST include: answer (int 1-5), reasoning (str), time_taken (float)
 - Handle errors gracefully with `success=False` and error message
+- **Question Type Detection**: BaseModel automatically detects 긍정형/부정형 questions and includes this in prompts
 
 **Parsing Strategy**:
 - Manual parsing using Claude Code (연 1회 작업)
-- Optimized Schema for passage-heavy subjects (Korean, Social)
+- Optimized Schema for passage-heavy subjects (Korean, Social) - 40% size reduction
 - Legacy Schema for independent questions (Math, English)
 - See `PARSING_GUIDE.md` for detailed instructions
 
+**Schema Compatibility**:
+- Evaluator automatically detects schema type (evaluator.py:96-103)
+- `passages_map` built once per exam for efficient passage lookup
+- Both `passage` field and `passage_id` reference are supported
+- Priority: Direct `passage` field → `passage_id` reference → None
+
 **Evaluation Concurrency**:
-- Models evaluate questions sequentially to respect rate limits
-- Time tracking starts before API call, ends after response parsing
-- Retry logic with exponential backoff (via tenacity package)
+- **Parallel Processing** (default): ThreadPoolExecutor with 10 workers for 3-5x speedup
+- **Sequential Mode** (optional): Use `SEQUENTIAL=1` for debugging or rate limit issues
+- Time tracking: Starts before API call, ends after response parsing
+- Retry logic: Exponential backoff via tenacity package (MAX_RETRIES=3)
+- Progress tracking: Real-time output of question results as they complete
 
 **Result Storage & Automatic Deployment**:
 - Results stored per exam per model: `results/{exam_id}/{model_name}.yaml`
@@ -492,15 +543,46 @@ Optional settings:
 
 ### Debug Tips
 
-**Verbose Evaluation**:
+**Verbose Logging**:
 ```bash
-# Run evaluation with Python verbose mode
-python -v src/evaluator/evaluate.py exams/parsed/2025-korean-sat.yaml --model gpt-4o
+# Enable detailed logging (file + console)
+make gpt-5 2025 korean  # Verbose mode is default now
+python src/evaluator/evaluate.py exams/parsed/2025-korean-sat.yaml --model gpt-4o --verbose
+
+# Log file location: logs/{exam_id}_{model_name}_{timestamp}.log
+# Includes: question details, API requests/responses, timing, reasoning
 ```
 
-**Test Single Question**:
+**Simple Logging**:
 ```bash
-# Create minimal test YAML with 1-2 questions
+# Minimal console output only
+SIMPLE=1 make gpt-5 2025 korean
+python src/evaluator/evaluate.py exams/parsed/2025-korean-sat.yaml --model gpt-4o  # No --verbose flag
+```
+
+**Test Specific Questions**:
+```bash
+# Test only questions 1-5 (saves API costs)
+python src/evaluator/evaluate.py exams/parsed/2025-korean-sat.yaml --model gpt-4o -q "1-5"
+
+# Test specific questions: 1, 3, 5
+python src/evaluator/evaluate.py exams/parsed/2025-korean-sat.yaml --model gpt-4o -q "1,3,5"
+
+# Test questions 1-3, 7, and 10-12
+python src/evaluator/evaluate.py exams/parsed/2025-korean-sat.yaml --model gpt-4o -q "1-3,7,10-12"
+```
+
+**Sequential Mode (Debugging)**:
+```bash
+# Disable parallel processing for debugging
+SEQUENTIAL=1 make gpt-5 2025 korean
+
+# Adjust max workers
+MAX_WORKERS=5 make gpt-5 2025 korean
+```
+
+**Test Rapid Evaluation**:
+```bash
+# Uses pre-configured test file (2 questions only)
 make evaluate-test
-# Uses 2025-math-sat-p1-2.yaml (2 questions only)
 ```
