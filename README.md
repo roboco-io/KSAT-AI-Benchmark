@@ -9,6 +9,8 @@
 
 **🌐 리더보드 바로가기:** [https://roboco.io/KSAT-AI-Benchmark/](https://roboco.io/KSAT-AI-Benchmark/)
 
+> **📅 2026학년도 수능 예정**: 2025년 11월 13일(목) 시행 예정 - 시험 후 빠른 벤치마크 결과 업데이트
+
 ## 📖 소개
 
 KSAT AI Benchmark는 대한민국 수학능력시험 문제를 활용하여 다양한 AI 모델의 문제 해결 능력을 평가하고, 그 결과를 공개적으로 공유하는 오픈소스 프로젝트입니다.
@@ -35,7 +37,7 @@ KSAT AI Benchmark는 대한민국 수학능력시험 문제를 활용하여 다�
 
 **지속적인 AI 발전 추적**
 
-- 엄선된 최신 모델 6종으로 집중 벤치마킹
+- 엄선된 최신 모델 6종으로 집중 벤치마킹 (Gemini 2.5 Pro는 안전 필터 이슈로 제외)
   - **OpenAI**: GPT-5, GPT-4o
   - **Anthropic**: Claude Opus 4.1, Claude Sonnet 4.5 (via Perplexity)
   - **Upstage**: Solar Pro (한국어 특화)
@@ -92,12 +94,14 @@ make clean
 
 ## 🔄 자동화 워크플로우
 
-**완전 자동화 파이프라인:**
+### 완전 자동화 파이프라인
 
-```
-평가 실행 → results/ 저장 → Git Push → GitHub Actions → 자동 배포
-   (1)          (2)            (3)       (4)               (5)
-   ✅           ✅             ✅        ✅                ✅
+```mermaid
+graph LR
+    A[평가 실행] --> B[results/ 저장]
+    B --> C[Git Push]
+    C --> D[GitHub Actions]
+    D --> E[자동 배포]
 ```
 
 **자동화 단계:**
@@ -109,6 +113,59 @@ make clean
    - Next.js 웹사이트 빌드
    - GitHub Pages 자동 배포
 4. **웹사이트 자동 업데이트**: https://roboco.io/KSAT-AI-Benchmark/
+
+### Vibe Coding 워크플로우
+
+```mermaid
+graph TD
+    A[PDF 업로드<br/>exams/pdf/] --> B[Vision API 파싱<br/>GPT-4o Vision]
+    B --> C[YAML 생성<br/>exams/parsed/]
+    C --> D[모델 평가<br/>AI 모델 실행]
+    D --> E[결과 저장<br/>results/]
+    E --> F[Git Commit & Push]
+    F --> G[GitHub Actions 트리거]
+    G --> H[웹 배포<br/>GitHub Pages]
+    
+    B1[수식 → LaTeX] -.-> B
+    B2[그래프 인식] -.-> B
+    B3[2단 레이아웃 처리] -.-> B
+    
+    D1[문제 읽기] -.-> D
+    D2[사고 & 추론] -.-> D
+    D3[답변 선택] -.-> D
+    D4[이유 설명] -.-> D
+```
+
+### 사용자 관점 전체 플로우
+
+```mermaid
+sequenceDiagram
+    participant User as 👤 사용자
+    participant Make as 🔧 Makefile
+    participant Parser as 📄 Parser
+    participant Eval as 🤖 Evaluator
+    participant Git as 📦 Git
+    participant GHA as ⚙️ GitHub Actions
+    participant Web as 🌐 Website
+    
+    User->>Make: make korean
+    Make->>Parser: PDF 파싱 (Vision API)
+    Parser->>Parser: YAML 생성
+    Parser-->>User: ✅ YAML 파일 생성 완료
+    
+    User->>Make: make gpt-5 2025 korean
+    Make->>Eval: 모델 평가 실행
+    Eval->>Eval: AI 모델로 문제 풀이
+    Eval->>Eval: results/ 저장
+    Eval-->>User: ✅ 평가 완료
+    
+    User->>Git: git push
+    Git->>GHA: 트리거
+    GHA->>GHA: YAML → JSON 변환
+    GHA->>GHA: Next.js 빌드
+    GHA->>Web: GitHub Pages 배포
+    Web-->>User: 🎉 리더보드 업데이트 완료
+```
 
 ### 🚀 GitHub Pages 활성화 방법
 
@@ -125,7 +182,9 @@ GitHub Actions 워크플로우가 작동하려면 GitHub Pages 설정이 필요�
 - Actions 탭에서 워크플로우 실행 상태 확인
 - 배포 완료 후 https://roboco.io/KSAT-AI-Benchmark/ 접속
 
-### Vibe Coding in Action
+## 🎨 Vibe Coding in Action
+
+이 프로젝트의 전체 워크플로우를 단계별로 살펴봅니다:
 
 **1. PDF 업로드**: `exams/pdf/`에 시험지 PDF 추가
 - 수능 문제지를 그대로 업로드 (OCR 불필요)
@@ -134,7 +193,7 @@ GitHub Actions 워크플로우가 작동하려면 GitHub Pages 설정이 필요�
 - 복잡한 수학 수식 → LaTeX로 정확하게 변환
 - 그래프, 도표 → 시각적 요소 인식 및 설명
 - 2단 레이아웃 → 구조 파악 및 논리적 순서로 재배열
-- 한 번의 명령: `make korean` 또는 `make math --vision`
+- 한 번의 명령: `make korean` 또는 `make math`
 
 **3. YAML 생성**: `exams/parsed/`에 구조화된 데이터 저장
 - 사람이 읽기 쉬운 포맷
@@ -233,7 +292,7 @@ git push
 
 **파싱 가이드**: 상세한 파싱 방법은 [`docs/PARSER_GUIDE.md`](docs/PARSER_GUIDE.md)를 참고하세요.
 
-#### 방법 2: 수동 YAML 작성
+#### 방법 3: 수동 YAML 작성
 
 `exams/parsed/` 폴더에 YAML 파일을 직접 작성할 수도 있습니다.
 
@@ -354,17 +413,21 @@ KSAT-AI-Benchmark/
 - 수동 실행
 
 **프로세스:**
-```
-Job 1: PDF 파싱
-  - PDF 텍스트/이미지 추출
-  - YAML 생성
-  - exams/parsed/에 커밋
 
-Job 2: 모델 평가 (Job 1 완료 후)
-  - YAML 로드
-  - 각 모델로 문제 풀이
-  - 결과 YAML 저장
-  - results/에 커밋
+```mermaid
+graph TD
+    subgraph "Job 1: PDF 파싱"
+        A1[PDF 텍스트/이미지 추출] --> A2[YAML 생성]
+        A2 --> A3[exams/parsed/ 커밋]
+    end
+    
+    subgraph "Job 2: 모델 평가"
+        B1[YAML 로드] --> B2[각 모델로 문제 풀이]
+        B2 --> B3[결과 YAML 저장]
+        B3 --> B4[results/ 커밋]
+    end
+    
+    A3 --> B1
 ```
 
 ### 2. 웹사이트 배포 (`deploy-pages.yml`)
@@ -375,11 +438,37 @@ Job 2: 모델 평가 (Job 1 완료 후)
 - `web/` 폴더 변경
 
 **프로세스:**
+
+```mermaid
+graph TD
+    C1[YAML → JSON 변환] --> C2[Next.js 빌드]
+    C2 --> C3[정적 HTML 생성]
+    C3 --> C4[GitHub Pages 배포]
 ```
-- YAML 데이터를 public/data/로 복사
-- Next.js 빌드 (npm run build)
-- 정적 HTML 생성
-- GitHub Pages에 배포
+
+### 3. 트리거별 워크플로우
+
+```mermaid
+graph TD
+    subgraph "트리거"
+        T1[exams/pdf/ 변경]
+        T2[models/models.json 변경]
+        T3[results/ 변경]
+        T4[web/ 변경]
+    end
+    
+    subgraph "워크플로우"
+        W1[parse-and-evaluate.yml]
+        W2[deploy-pages.yml]
+    end
+    
+    T1 --> W1
+    T2 --> W1
+    T3 --> W2
+    T4 --> W2
+    
+    W1 --> R1[PDF 파싱 & 평가]
+    W2 --> R2[웹사이트 배포]
 ```
 
 ## 🌐 결과 확인
@@ -569,7 +658,7 @@ Job 2: 모델 평가 (Job 1 완료 후)
 
 ## 📊 벤치마크 대상 모델
 
-**현재 활성화된 모델 (7종)**:
+**현재 활성화된 모델 (6종)**:
 
 | 제공사 | 모델 | 버전 | 특징 |
 |--------|------|------|------|
@@ -577,7 +666,6 @@ Job 2: 모델 평가 (Job 1 완료 후)
 | **OpenAI** | GPT-4o | 2024-08 | 최신 멀티모달 모델 |
 | **Anthropic** | Claude Opus 4.1 | 2025-08 | 에이전트, 코딩, 추론 강화 |
 | **Anthropic** | Claude Sonnet 4.5 | 2025 | Perplexity API로 제공 |
-| **Google** | Gemini 2.5 Pro | 2025-01 | 가장 강력한 Gemini 모델 |
 | **Upstage** | Solar Pro | 2024 | 한국어 특화 모델 |
 | **Perplexity** | Sonar Pro | 2024-11 | 최신 추론 모델 |
 
@@ -674,26 +762,34 @@ Source: https://github.com/roboco-io/KSAT-AI-Benchmark
 
 ## 🗺️ 로드맵
 
-### 2025 Q4
-- [x] 프로젝트 초기 설정
-- [x] PDF 파싱 시스템 설계
-- [x] YAML 데이터 형식 정의
-- [ ] PDF 파서 구현
-- [ ] 기본 평가 시스템 구현
-- [ ] GitHub Actions 자동화
+### 2025 Q3-Q4 ✅ 완료
+- [x] 프로젝트 초기 설정 및 아키텍처 설계
+- [x] PDF 파싱 시스템 구현 (Vision API 기반)
+- [x] YAML 데이터 형식 정의 및 검증
+- [x] AI 모델 평가 시스템 구현
+- [x] GitHub Actions 자동화 파이프라인
+- [x] Next.js + Mantine UI 웹 인터페이스
+- [x] 리더보드 및 문제 목록 페이지
+- [x] 답안 상세 모달 및 인터랙션
+- [x] 2025 수능 3개 과목 파싱 완료 (국어, 수학, 영어)
+- [x] 6개 최신 AI 모델 벤치마킹
 
-### 2026 Q1
-- [ ] Next.js + Mantine UI 웹 인터페이스
-- [ ] 문제 목록 및 답안 그리드
-- [ ] 답안 상세 모달
-- [ ] 과거 수능 문제 데이터베이스 확장
-- [ ] 더 많은 AI 모델 지원
+### 2025 Q4 - 2026 Q1 🚧 진행 중
+- [ ] **2026학년도 수능 벤치마크** (2025년 11월 13일 시행 예정)
+- [ ] 과거 수능 문제 데이터베이스 확장 (2024, 2023...)
+- [ ] 과목별 상세 분석 페이지 구현
+- [ ] 차트 및 시각화 고도화 (성능 추이 그래프)
+- [ ] 모델별 강점/약점 분석 리포트
+- [ ] 연도별 성능 비교 분석
+- [ ] 성능 최적화 (평가 속도, 웹 로딩)
+- [ ] 테스트 커버리지 확대
 
-### 2026 Q2
-- [ ] 상세 분석 리포트 기능
-- [ ] 차트 및 시각화 고도화
-- [ ] 다국어 시험 지원 (SAT, 가오카오 등)
-- [ ] API 서비스 제공
+### 2026 Q2 💡 계획
+- [ ] 다국어 시험 지원 (SAT, 일본 센터시험 등)
+- [ ] RESTful API 서비스 제공
+- [ ] 실시간 모델 비교 기능
+- [ ] 커뮤니티 기여 모델 추가 지원
+- [ ] 모바일 앱 검토
 
 ## 📄 저작권 및 출처
 

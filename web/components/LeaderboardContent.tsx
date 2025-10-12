@@ -18,6 +18,7 @@ export function LeaderboardContent() {
 
   // URL 쿼리 파라미터 상태 관리
   const [activeTab, setActiveTab] = useState<string>('overall');
+  const [activeYear, setActiveYear] = useState<string>('2025');
   const [openModel, setOpenModel] = useState<string | null>(null);
   const [openQuestion, setOpenQuestion] = useState<string | null>(null);
 
@@ -370,6 +371,18 @@ export function LeaderboardContent() {
             </Text>
 
             <div>
+              <Text size="sm" fw={600} c="blue" mb="xs">
+                📅 2026학년도 수능 예정
+              </Text>
+              <Text size="sm" c="dimmed">
+                • 2026학년도 대학수학능력시험은 <strong>2025년 11월 13일(목)</strong>에 시행됩니다
+              </Text>
+              <Text size="sm" c="dimmed">
+                • 시험 후 빠른 시일 내에 벤치마크 결과가 업데이트될 예정입니다
+              </Text>
+            </div>
+
+            <div>
               <Text size="sm" fw={600} c="dark" mb="xs">
                 📊 현재 개발 및 테스트 단계입니다
               </Text>
@@ -456,28 +469,47 @@ export function LeaderboardContent() {
         <div>
           <Title order={2} mb="md">리더보드</Title>
           <Card shadow="sm" padding="lg" radius="md" withBorder>
-            <Tabs value={activeTab} onChange={(value) => {
+            {/* 연도별 탭 */}
+            <Tabs value={activeYear} onChange={(value) => {
               if (value) {
-                setActiveTab(value);
-                updateURL({ subject: value, model: undefined, question: undefined });
+                setActiveYear(value);
                 setOpenModel(null);
                 setOpenQuestion(null);
               }
-            }}>
+            }} mb="md">
               <Tabs.List>
-                <Tabs.Tab value="overall">
-                  📊 종합
+                <Tabs.Tab value="2025">
+                  📘 2025학년도
                 </Tabs.Tab>
-                <Tabs.Tab value="korean">
-                  📚 국어
-                </Tabs.Tab>
-                <Tabs.Tab value="math">
-                  🔢 수학
-                </Tabs.Tab>
-                <Tabs.Tab value="english">
-                  🌐 영어 (듣기 제외)
+                <Tabs.Tab value="2026" disabled>
+                  📗 2026학년도 (2025.11.13 시행 예정)
                 </Tabs.Tab>
               </Tabs.List>
+
+              <Tabs.Panel value="2025" pt="md">
+                {/* 과목별 탭 */}
+                <Tabs value={activeTab} onChange={(value) => {
+                  if (value) {
+                    setActiveTab(value);
+                    updateURL({ subject: value, model: undefined, question: undefined });
+                    setOpenModel(null);
+                    setOpenQuestion(null);
+                  }
+                }}>
+                  <Tabs.List>
+                    <Tabs.Tab value="overall">
+                      📊 종합
+                    </Tabs.Tab>
+                    <Tabs.Tab value="korean">
+                      📚 국어
+                    </Tabs.Tab>
+                    <Tabs.Tab value="math">
+                      🔢 수학
+                    </Tabs.Tab>
+                    <Tabs.Tab value="english">
+                      🌐 영어 (듣기 제외)
+                    </Tabs.Tab>
+                  </Tabs.List>
 
               <Tabs.Panel value="overall" pt="md">
                 {leaderboard.length > 0 ? (
@@ -711,6 +743,16 @@ export function LeaderboardContent() {
 
               <Tabs.Panel value="english" pt="md">
                 {renderSubjectLeaderboard('english', '영어')}
+              </Tabs.Panel>
+                </Tabs>
+              </Tabs.Panel>
+
+              <Tabs.Panel value="2026" pt="md">
+                <Text ta="center" c="dimmed" py="xl">
+                  2026학년도 대학수학능력시험은 2025년 11월 13일(목)에 시행될 예정입니다.
+                  <br />
+                  시험 후 곧 결과가 업데이트됩니다.
+                </Text>
               </Tabs.Panel>
             </Tabs>
           </Card>
