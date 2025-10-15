@@ -34,6 +34,10 @@ def load_results() -> Dict[str, List[Dict]]:
         if not exam_dir.is_dir():
             continue
 
+        # .backup, .bak 등의 백업 디렉토리 무시
+        if exam_dir.name.endswith(('.backup', '.bak', '.old')):
+            continue
+
         exam_id = exam_dir.name
 
         for result_file in exam_dir.glob("*.yaml"):
