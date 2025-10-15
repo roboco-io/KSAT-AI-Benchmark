@@ -324,7 +324,7 @@ export function LeaderboardContent() {
                                                       <Badge color={badgeColor} variant="light" size="lg" mt={4}>
                                                         {choiceNum}
                                                       </Badge>
-                                                      <div style={{ flex: 1 }}><MathContent text={choice} /></div>
+                                                      <div style={{ flex: 1 }}><MathContent text={choice} autoWrapMath /></div>
                                                       {isCorrectAnswer && <Text c="blue" fw={600}>✓ 정답</Text>}
                                                       {isModelAnswer && !isCorrectAnswer && <Text c="red" fw={600}>✗ 선택</Text>}
                                                       {isModelAnswer && isCorrectAnswer && <Text c="green" fw={600}>✓ 선택</Text>}
@@ -715,7 +715,7 @@ export function LeaderboardContent() {
                                                               <Badge color={badgeColor} variant="light" size="lg" mt={4}>
                                                                 {choiceNum}
                                                               </Badge>
-                                                              <div style={{ flex: 1 }}><MathContent text={choice} /></div>
+                                                              <div style={{ flex: 1 }}><MathContent text={choice} autoWrapMath /></div>
                                                               {isCorrectAnswer && <Text c="blue" fw={600}>✓ 정답</Text>}
                                                               {isModelAnswer && !isCorrectAnswer && <Text c="red" fw={600}>✗ 선택</Text>}
                                                               {isModelAnswer && isCorrectAnswer && <Text c="green" fw={600}>✓ 선택</Text>}
