@@ -107,6 +107,32 @@ export function LeaderboardContent() {
     year: exam.year,
   }));
 
+  // 지문 조회 헬퍼 함수
+  const getPassageText = (examInfo: any, questionData: any): string | null => {
+    if (!examInfo || !questionData) return null;
+
+    // Legacy Schema: passage 필드가 직접 있는 경우
+    if (questionData.passage) {
+      return questionData.passage;
+    }
+
+    // Optimized Schema: passage_id로 참조하는 경우
+    if (questionData.passage_id && examInfo.passages) {
+      const passage = examInfo.passages.find((p: any) => p.passage_id === questionData.passage_id);
+      return passage?.passage_text || null;
+    }
+
+    return null;
+  };
+
+  // 같은 지문을 공유하는 문제 번호들을 가져오는 함수
+  const getSharedQuestionNumbers = (examInfo: any, passageId: string): number[] => {
+    if (!examInfo || !passageId || !examInfo.passages) return [];
+
+    const passage = examInfo.passages.find((p: any) => p.passage_id === passageId);
+    return passage?.question_numbers || [];
+  };
+
   // 모델 웹사이트 매핑
   const modelWebsites: Record<string, string> = {
     'gpt-5': 'https://openai.com/ko-KR/index/introducing-gpt-5/',
@@ -240,18 +266,32 @@ export function LeaderboardContent() {
                                   <Accordion.Panel>
                                     <Stack gap="md">
                                       {/* 지문 표시 */}
-                                      {questionData?.passage && (
-                                        <Card withBorder bg="blue.0">
-                                          <Stack gap="xs">
-                                            <Text fw={700} size="md" c="blue">
-                                              📖 지문
-                                            </Text>
-                                            <Text style={{ whiteSpace: 'pre-wrap', lineHeight: 1.6 }}>
-                                              {questionData.passage}
-                                            </Text>
-                                          </Stack>
-                                        </Card>
-                                      )}
+                                      {(() => {
+                                        const passageText = getPassageText(examInfo, questionData);
+                                        const sharedQuestions = questionData?.passage_id
+                                          ? getSharedQuestionNumbers(examInfo, questionData.passage_id)
+                                          : [];
+
+                                        return passageText && (
+                                          <Card withBorder bg="blue.0">
+                                            <Stack gap="xs">
+                                              <Group justify="space-between" align="center">
+                                                <Text fw={700} size="md" c="blue">
+                                                  📖 지문
+                                                </Text>
+                                                {sharedQuestions.length > 1 && (
+                                                  <Badge color="blue" variant="light" size="sm">
+                                                    공유 문제: {sharedQuestions.join(', ')}번
+                                                  </Badge>
+                                                )}
+                                              </Group>
+                                              <Text style={{ whiteSpace: 'pre-wrap', lineHeight: 1.6 }}>
+                                                {passageText}
+                                              </Text>
+                                            </Stack>
+                                          </Card>
+                                        );
+                                      })()}
 
                                       {/* 문제 */}
                                       {questionData && (
@@ -617,18 +657,32 @@ export function LeaderboardContent() {
                                           <Accordion.Panel>
                                             <Stack gap="md">
                                               {/* 지문 표시 */}
-                                              {questionData?.passage && (
-                                                <Card withBorder bg="blue.0">
-                                                  <Stack gap="xs">
-                                                    <Text fw={700} size="md" c="blue">
-                                                      📖 지문
-                                                    </Text>
-                                                    <Text style={{ whiteSpace: 'pre-wrap', lineHeight: 1.6 }}>
-                                                      {questionData.passage}
-                                                    </Text>
-                                                  </Stack>
-                                                </Card>
-                                              )}
+                                              {(() => {
+                                                const passageText = getPassageText(examInfo, questionData);
+                                                const sharedQuestions = questionData?.passage_id
+                                                  ? getSharedQuestionNumbers(examInfo, questionData.passage_id)
+                                                  : [];
+
+                                                return passageText && (
+                                                  <Card withBorder bg="blue.0">
+                                                    <Stack gap="xs">
+                                                      <Group justify="space-between" align="center">
+                                                        <Text fw={700} size="md" c="blue">
+                                                          📖 지문
+                                                        </Text>
+                                                        {sharedQuestions.length > 1 && (
+                                                          <Badge color="blue" variant="light" size="sm">
+                                                            공유 문제: {sharedQuestions.join(', ')}번
+                                                          </Badge>
+                                                        )}
+                                                      </Group>
+                                                      <Text style={{ whiteSpace: 'pre-wrap', lineHeight: 1.6 }}>
+                                                        {passageText}
+                                                      </Text>
+                                                    </Stack>
+                                                  </Card>
+                                                );
+                                              })()}
 
                                               {/* 문제 */}
                                               {questionData && (
