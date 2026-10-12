@@ -1,0 +1,14 @@
+{
+  "name": "ksat-codex-benchmark",
+  "private": true,
+  "version": "2.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "solve": "node run.mjs",
+    "export": "node export.mjs"
+  },
+  "dependencies": {
+    "@openai/codex-sdk": "0.162.1"
+  }
+}

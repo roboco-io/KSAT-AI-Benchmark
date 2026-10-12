@@ -77,6 +77,8 @@ web/build/
 *.tmp
 *.temp
 .cache/
+.runtime/
+.playwright-mcp/
 
 # API Keys and Secrets
 secrets/
