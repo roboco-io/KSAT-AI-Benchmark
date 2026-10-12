@@ -22,7 +22,7 @@
 - [x] Astra·Luna의 147문항을 각각 완료하고 오류·기권·사용량을 검증한다.
 - [x] Claude 추가 유료 사용 OFF 확인 후 지정한 4모델을 각각 완료한다.
 - [x] 전체 결과를 독립 채점해 schema_version=3 비교 JSON을 생성한다.
-- [ ] 테스트·정적 빌드·모바일/데스크톱·콘솔·공개 JSON 검증을 통과한 뒤 기존 GitHub Pages 주소로 배포한다.
+- [x] 테스트·정적 빌드·모바일/데스크톱·콘솔·공개 JSON 검증을 통과한 뒤 기존 GitHub Pages 주소로 배포한다.
 
 실행 명령:
 
@@ -53,3 +53,21 @@ npm run build --prefix web
 - [Claude SDK의 개인 구독 사용](https://support.claude.com/en/articles/15036540-use-the-claude-agent-sdk-with-your-claude-plan).
 - [Claude 추가 사용 크레딧과 자동 유료 전환](https://support.claude.com/en/articles/12429409-manage-usage-credits-for-paid-claude-plans).
 - 최신 모델 명세: [Astra](https://developers.openai.com/api/docs/models/gpt-6-astra), [Luna](https://developers.openai.com/api/docs/models/gpt-6-luna), [Claude](https://platform.claude.com/docs/en/models/overview).
+
+## 실행 결과와 배포 검증
+
+2026-10-12 실행을 완료했다. 각 모델은 고유 문항 147개를 제출했고 실행 오류·미제출은 0개다. 기권은 정답률 분모에 포함한다.
+
+| 모델 | 정답 | 기권 | 실제 경과 시간 | API 환산 참고 USD |
+| --- | ---: | ---: | ---: | ---: |
+| GPT-6.1 Sol | 142 | 0 | 1,045.3초 | 0.9136 |
+| GPT-6 Astra | 147 | 0 | 480.3초 | 3.9673 |
+| GPT-6 Luna | 112 | 2 | 453.0초 | 0.0642 |
+| Claude Sonnet 5.5 | 141 | 0 | 407.9초 | 2.0340 |
+| Claude Opus 5.5 | 146 | 0 | 323.2초 | 3.0655 |
+| Claude Haiku 5.5 | 129 | 10 | 720.9초 | 0.1830 |
+| Claude Fable 5.1 | 146 | 0 | 492.1초 | 8.4610 |
+
+Sonnet의 첫 11문항 시험 실행 후 실제 잔여량을 확인하고 전체 평가를 이어갔다. 각 후속 모델 전에 구독 한도와 Usage credits OFF를 확인했다. 계정별 잔여량은 비공개 로컬 기록으로만 보존한다. 표의 비용은 청구액이 아니다.
+
+오프라인 테스트 24개와 로컬·CI 정적 빌드가 통과했다. [배포 실행](https://github.com/roboco-io/KSAT-AI-Benchmark/actions/runs/38243439170)이 성공했다. [공개 대시보드](https://roboco.io/KSAT-AI-Benchmark/) HTTP 200, 7모델 요약·1,029개 문항 기록 일치, 데스크톱·모바일 표시와 Fable·Haiku 상세 선택, GitHub 링크를 확인했다. 브라우저 콘솔 오류와 가로 넘침은 없었다.
