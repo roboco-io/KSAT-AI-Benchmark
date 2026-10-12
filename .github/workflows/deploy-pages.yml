@@ -55,7 +55,9 @@ jobs:
           node benchmark/export.mjs
 
       - name: Verify benchmark grading and metrics
-        run: npm test --prefix benchmark
+        run: |
+          npm ci --prefix benchmark
+          npm test --prefix benchmark
 
       - name: Install Node dependencies
         working-directory: ./web

@@ -4,20 +4,35 @@ import {resolve,join,basename} from 'node:path';
 import {tmpdir} from 'node:os';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
-import {validateAnswers,mergeSubmitted,addUsage,estimateCost,fatalStreamError,attemptsRemaining,elapsedWall,verifyResume} from './core.mjs';
+import {validateAnswers,mergeSubmitted,addUsage,estimateCost,fatalStreamError,attemptsRemaining,elapsedWall,verifyResume,runBatches} from './core.mjs';
+import {modelById} from './models.mjs';
+import {codexSubscriptionStatus,subscriptionEnvironment,claudeAccountFingerprint,assertFreshClaudeProof} from './subscription.mjs';
+import {claudeEvents} from './claude-adapter.mjs';
 
 const root=resolve(import.meta.dirname,'..');
 const dataset=JSON.parse(readFileSync(join(root,'exams/datasets/2026-ksat.json'),'utf8'));
 const hash=s=>createHash('sha256').update(s).digest('hex');
-const runDir=join(root,'results/codex-2026');mkdirSync(runDir,{recursive:true});
+const modelArg=process.argv.indexOf('--model');const selected=modelById(modelArg>=0?process.argv[modelArg+1]:'gpt-6.1-sol');
+const groupArg=process.argv.indexOf('--group');const requestedGroup=groupArg>=0?process.argv[groupArg+1]:null;
+const allowedGroups=requestedGroup?dataset.solver_groups.filter(g=>g.id===requestedGroup):dataset.solver_groups;
+if(!allowedGroups.length)throw new Error('Unknown solver group');
+const once=process.argv.includes('--once');
+const runDir=join(root,selected.directory);mkdirSync(runDir,{recursive:true});
 const statePath=join(runDir,'run.json');
-const protocol={model:'gpt-6.1-sol',effort:'high',sdk_version:'0.162.1',tools:'disabled',input:'original PDF rendered at 200 DPI',english_listening:'official transcript rendered as images',max_iterations:3,group_timeout_seconds:900,concurrency:2,cost_limit_usd:25};
+if(existsSync(statePath)&&JSON.parse(readFileSync(statePath,'utf8')).completed){console.log(`ALREADY COMPLETE: ${selected.id}; preserving locked answers`);process.exit(0);}
+const protocol={model:selected.id,provider:selected.provider,effort:'high',sdk_version:selected.provider==='openai'?'0.162.1':'0.3.296',tools:'disabled',input:'original PDF rendered at 200 DPI',english_listening:'official transcript rendered as images',max_iterations:3,group_timeout_seconds:selected.provider==='openai'?900:600,concurrency:2,cost_limit_usd:25,subscription_only:true,api_key_fallback:false};
+if(selected.provider==='anthropic') {
+ for(const id of ['gpt-6-astra','gpt-6-luna']){const p=join(root,modelById(id).directory,'run.json');if(!existsSync(p)||!JSON.parse(readFileSync(p,'utf8')).completed)throw new Error('SUBSCRIPTION_BLOCKED: finish Astra and Luna before Claude');}
+ const guard=join(root,'.runtime/claude-subscription-only.json');
+ if(!existsSync(guard))throw new Error('SUBSCRIPTION_BLOCKED: Claude extra paid usage OFF has not been confirmed');
+ assertFreshClaudeProof(JSON.parse(readFileSync(guard,'utf8')),claudeAccountFingerprint());
+}
 const datasetHash=hash(readFileSync(join(root,'exams/datasets/2026-ksat.json')));
 const sourcePaths=[...new Set(dataset.solver_groups.flatMap(g=>[g.pdf_path,g.transcript_path].filter(Boolean)))].sort();
 const sourceHashes=Object.fromEntries(sourcePaths.map(p=>[p,hash(readFileSync(join(root,p)))]));
 const sourceManifest=JSON.parse(readFileSync(join(root,'exams/pdf/2026/sources.json'),'utf8'));
 for(const p of sourcePaths)if(sourceManifest.files.find(f=>f.path===p)?.sha256!==sourceHashes[p])throw new Error(`Source integrity check failed: ${p}`);
-let state=existsSync(statePath)?JSON.parse(readFileSync(statePath,'utf8')):{schema_version:2,run_id:'2026-pre-exam-codex-gpt-6.1-sol',academic_year:2026,phase:'pre_exam',started_at:new Date().toISOString(),protocol,dataset_hash:datasetHash,answers:{},errors:{},groups:{},iterations:[],usage:{},wall_time_seconds:0};
+let state=existsSync(statePath)?JSON.parse(readFileSync(statePath,'utf8')):{schema_version:2,run_id:`2026-pre-exam-${selected.provider==='openai'?'codex':'claude'}-${selected.id}`,academic_year:2026,phase:'pre_exam',started_at:new Date().toISOString(),protocol,dataset_hash:datasetHash,answers:{},errors:{},groups:{},iterations:[],usage:{},wall_time_seconds:0};
 if(state.dataset_hash!==datasetHash||JSON.stringify(state.protocol)!==JSON.stringify(protocol))throw new Error('Resume refused: input or protocol changed. Preserve existing run and start a new run directory.');
 const save=()=>{state.updated_at=new Date().toISOString();writeFileSync(statePath+'.tmp',JSON.stringify(state,null,2)+'\n');execFileSync('mv',[statePath+'.tmp',statePath]);};
 const renderDir=join(root,'.runtime/2026-pages');mkdirSync(renderDir,{recursive:true});
@@ -38,27 +53,39 @@ const prompt=`당신은 2026학년도 수능 문제를 푸는 AI입니다. 제�
 const schema={type:'object',properties:{answers:{type:'array',items:{type:'object',properties:{question_id:{type:'string'},decision:{type:'string',enum:['answered','abstained']},answer:{type:['integer','null']},explanation:{type:'string'},abstain_reason:{type:['string','null'],enum:[null,'uncertain','unreadable','budget_exhausted','unsupported_input']}},required:['question_id','decision','answer','explanation','abstain_reason'],additionalProperties:false}}},required:['answers'],additionalProperties:false};
 verifyResume(state,protocol,datasetHash,hash(prompt),sourceHashes);
 state.prompt_hash=hash(prompt);state.source_hashes=sourceHashes;save();
-const sdk=new Codex({codexPathOverride:join(root,'benchmark/codex-isolated.sh'),config:{features:{shell_tool:false,unified_exec:false,apps:false,plugins:false,multi_agent:false,browser_use:false,computer_use:false,code_mode:false},web_search:'disabled'}});
+if(state.blocked_reason){delete state.blocked_reason;save();} // Each resumed request re-verifies authentication/quota before input.
+const sdk=selected.provider==='openai'?new Codex({env:subscriptionEnvironment(),codexPathOverride:join(root,'benchmark/codex-isolated.sh'),config:{features:{shell_tool:false,unified_exec:false,apps:false,plugins:false,multi_agent:false,browser_use:false,computer_use:false,code_mode:false},web_search:'disabled'}}):null;
+const invocationController=new AbortController();
 async function solveGroup(group,iteration) {
+ if(state.blocked_reason||invocationController.signal.aborted)return;
  const questions=dataset.questions.filter(q=>group.question_ids.includes(q.id)&&!state.answers[q.id]);
  if(!questions.length)return;
- if(estimateCost(state.usage)>=protocol.cost_limit_usd)throw new Error('Estimated cost limit reached');
+ if(estimateCost(state.usage,selected.pricing)>=protocol.cost_limit_usd)throw new Error('Estimated cost limit reached');
+ if(selected.provider==='openai') {
+  try{const proof=await codexSubscriptionStatus();state.billing={method:proof.method,api_key_used:false,purchased_credits_available:false,included_usage_verified:true,verified_at:proof.verified_at};save();}
+  catch(error){state.blocked_reason=error.message;save();invocationController.abort(error);throw error;}
+ }else {
+  try{assertFreshClaudeProof(JSON.parse(readFileSync(join(root,'.runtime/claude-subscription-only.json'),'utf8')),claudeAccountFingerprint());}
+  catch(error){state.blocked_reason=error.message;save();invocationController.abort(error);throw error;}
+  state.billing={method:'claude_subscription',api_key_used:false,extra_usage_disabled:true,verification:'live_UI_disabled_extra_usage_and_SDK_accountInfo'};
+ }
  const images=render(group.pdf_path,group.pages);
  if(group.transcript_path){const info=execFileSync('pdfinfo',[join(root,group.transcript_path)],{encoding:'utf8'});const n=Number(info.match(/^Pages:\s+(\d+)/m)[1]);images.push(...render(group.transcript_path,Array.from({length:n},(_,i)=>i+1)));}
  const allowed=questions.map(({id,number,section,kind})=>({question_id:id,number,section,kind}));
  const input=[{type:'text',text:prompt+'\n요청 문항:\n'+JSON.stringify(allowed)},...images.map(path=>({type:'local_image',path}))];
- const thread=sdk.startThread({model:protocol.model,modelReasoningEffort:protocol.effort,workingDirectory:mkdtempSync(join(tmpdir(),'ksat-solver-')),skipGitRepoCheck:true,sandboxMode:'read-only',approvalPolicy:'never',networkAccessEnabled:false,webSearchMode:'disabled'});
+ const thread=sdk?.startThread({model:protocol.model,modelReasoningEffort:protocol.effort,workingDirectory:mkdtempSync(join(tmpdir(),'ksat-solver-')),skipGitRepoCheck:true,sandboxMode:'read-only',approvalPolicy:'never',networkAccessEnabled:false,webSearchMode:'disabled'});
  const started=Date.now();const attempt={iteration,started_at:new Date().toISOString(),question_ids:questions.map(q=>q.id),image_encoding:'lossless WebP, original 200 DPI pixels',image_hashes:images.map(p=>hash(readFileSync(p))),usage:{},time_seconds:0,thread_id:null,status:'running'};
- const logPath=join(eventsDir,`${group.id}-${iteration}-${Date.now()}.jsonl`);
+ const logPath=join(eventsDir,`${selected.id}-${group.id}-${iteration}-${Date.now()}.jsonl`);
  state.groups[group.id]??={attempts:[]};state.groups[group.id].attempts.push(attempt);save();
  console.log(`[iteration ${iteration}] ${group.id}: ${questions.length} questions, ${images.length} images`);
  let final='';
  try {
-  const {events}=await thread.runStreamed(input,{outputSchema:schema,signal:AbortSignal.timeout(protocol.group_timeout_seconds*1000)});
+  const signal=AbortSignal.any([AbortSignal.timeout(protocol.group_timeout_seconds*1000),invocationController.signal]);
+  const events=thread?(await thread.runStreamed(input,{outputSchema:schema,signal})).events:claudeEvents({model:selected.id,prompt:input[0].text,images,schema,signal});
   for await(const event of events) {
    appendFileSync(logPath,JSON.stringify(event)+'\n');
    if(event.type==='thread.started'){attempt.thread_id=event.thread_id;save();}
-   if(event.type==='turn.completed'){attempt.usage=addUsage(attempt.usage,event.usage);state.usage=addUsage(state.usage,event.usage);save();}
+   if(event.type==='turn.completed'){attempt.usage=addUsage(attempt.usage,event.usage);state.usage=addUsage(state.usage,event.usage);if(Number.isFinite(event.estimated_cost_usd))attempt.estimated_cost_usd=event.estimated_cost_usd;save();}
    if(event.type==='item.completed'&&event.item.type==='agent_message')final=event.item.text;
    if(event.type==='item.started'&&['command_execution','mcp_tool_call','web_search','file_change'].includes(event.item.type))throw new Error('Tool execution violates locked protocol');
    const fatal=fatalStreamError(event);if(fatal)throw new Error(fatal);
@@ -73,20 +100,22 @@ async function solveGroup(group,iteration) {
   attempt.status='error';attempt.error=String(error.message);
   for(const q of questions)state.errors[q.id]={status:'error',message:attempt.error};
   console.log(`${group.id}: execution error: ${attempt.error.slice(0,200)}`);
+  if(/^(SUBSCRIPTION_BLOCKED|MODEL_MISMATCH|TOOL_BLOCKED)/.test(attempt.error)){state.blocked_reason=attempt.error;invocationController.abort(error);}
  } finally {attempt.time_seconds=(Date.now()-started)/1000;attempt.finished_at=new Date().toISOString();save();}
 }
 const invocationStart=Date.now(),baseWall=state.wall_time_seconds;
 const heartbeat=setInterval(()=>{state.wall_time_seconds=elapsedWall(baseWall,invocationStart,Date.now());save();},10000);
 try {
- for(let i=1;i<=protocol.max_iterations;i++) {
-  const pending=dataset.solver_groups.filter(g=>g.question_ids.some(id=>!state.answers[id])&&attemptsRemaining(state.groups[g.id]?.attempts,protocol.max_iterations)>0);
+ for(let i=1;i<=(once?1:protocol.max_iterations);i++) {
+  if(state.blocked_reason)break;
+  const pending=allowedGroups.filter(g=>g.question_ids.some(id=>!state.answers[id])&&attemptsRemaining(state.groups[g.id]?.attempts,protocol.max_iterations)>0);
   if(!pending.length)break;
   state.iterations.push({iteration:i,started_at:new Date().toISOString(),pending_groups:pending.map(g=>g.id)});save();
-  for(let j=0;j<pending.length;j+=protocol.concurrency)await Promise.all(pending.slice(j,j+protocol.concurrency).map(g=>solveGroup(g,i)));
+  await runBatches(pending,protocol.concurrency,invocationController,()=>Boolean(state.blocked_reason),g=>solveGroup(g,i));
  }
 } finally {
  clearInterval(heartbeat);state.wall_time_seconds=elapsedWall(baseWall,invocationStart,Date.now());
  state.completed=dataset.questions.every(q=>state.answers[q.id]);state.finished_at=new Date().toISOString();save();
- console.log(`RALPH ${state.completed?'COMPLETE':'INCOMPLETE'}: ${Object.keys(state.answers).length}/${dataset.questions.length}, API-equivalent $${estimateCost(state.usage).toFixed(4)}`);
+ console.log(`RALPH ${state.completed?'COMPLETE':'INCOMPLETE'} ${selected.id}: ${Object.keys(state.answers).length}/${dataset.questions.length}, API-equivalent $${estimateCost(state.usage,selected.pricing).toFixed(4)}`);
 }
-if(!state.completed)process.exitCode=1;
+if(!state.completed&&!allowedGroups.every(g=>g.question_ids.every(id=>state.answers[id])))process.exitCode=1;

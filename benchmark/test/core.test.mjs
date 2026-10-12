@@ -1,6 +1,7 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {validateAnswers, estimateCost, summarize, mergeSubmitted, fatalStreamError, attemptsRemaining, elapsedWall, verifyResume} from '../core.mjs';
+import {validateAnswers, estimateCost, summarize, mergeSubmitted, fatalStreamError, attemptsRemaining, elapsedWall, verifyResume, runBatches} from '../core.mjs';
+import {modelById} from '../models.mjs';
 
 const questions=[
  {id:'q1',kind:'multiple_choice',correct_answer:2,points:2},
@@ -23,6 +24,22 @@ test('unknown duplicate IDs and contradictory abstention cannot become submitted
 test('cached tokens charged once and zero attempts have null accuracy',()=>{
  assert.equal(estimateCost({input_tokens:1000000,cached_input_tokens:200000,output_tokens:100000}),2.62);
  const s=summarize(questions,{}, {},{},0,0);assert.equal(s.attempt_accuracy,null);assert.equal(s.pending,4);
+});
+test('different model rates produce different token cost estimates',()=>{
+ const usage={input_tokens:1000000,cached_input_tokens:200000,output_tokens:100000};
+ assert.equal(estimateCost(usage,{input_per_million:10,cached_input_per_million:1,cache_write_per_million:12.5,output_per_million:50}),13.2);
+ assert.equal(estimateCost(usage,{input_per_million:0.1,cached_input_per_million:0.01,cache_write_per_million:0.125,output_per_million:0.5}),0.132);
+});
+test('Claude current cache-only fallback estimates use provider model rates',()=>{
+ const allCached={input_tokens:1000000,cached_input_tokens:1000000,output_tokens:0};
+ assert.equal(estimateCost(allCached,modelById('claude-sonnet-5-5').pricing),0.1);
+ assert.equal(estimateCost(allCached,modelById('claude-opus-5-5').pricing),0.2);
+ assert.equal(estimateCost(allCached,modelById('claude-fable-5-1').pricing),0.25);
+});
+test('aborted billing batch never starts subsequent requests',async()=>{
+ const controller=new AbortController(),started=[];
+ await runBatches([1,2,3,4],2,controller,()=>false,async item=>{started.push(item);if(item===1)controller.abort();});
+ assert.deepEqual(started,[1]);
 });
 test('Ralph resumes only unfinished work without changing submitted answer or abstention',()=>{
  const original={q1:{decision:'answered',answer:2},q2:{decision:'abstained',answer:null}};
