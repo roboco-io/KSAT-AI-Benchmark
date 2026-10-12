@@ -15,6 +15,20 @@
 - 모델은 확신하지 못한 문항에서 기권할 수 있습니다. 기권은 `answer: null`로 저장하며 실행 오류와 구분합니다.
 - 도구·검색·MCP·플러그인을 비활성화합니다. 정답은 모델 요청에 넣지 않습니다.
 
+## 수험 스킬
+
+`$ksat-exam` 또는 모델명을 포함한 수험 요청으로 실행·채점·대시보드 등록을 진행합니다. [수험 스킬](skills/ksat-exam/SKILL.md)은 이 저장소에서 관리하며 `~/.codex/skills/ksat-exam`에 설치됩니다. 새 모델은 검증된 메타데이터 프로필로 등록하고, 기존 완료 답안은 재호출하지 않습니다.
+
+OpenAI는 Codex SDK, Anthropic은 Claude Code SDK, Google은 Antigravity CLI, 나머지는 Pi agent를 사용합니다. 현재 Antigravity CLI 1.3.2 headless 입력은 텍스트만 지원하므로 Google의 원본 이미지 수험은 차단 사유를 표시합니다. 다른 에이전트로 바꾸지 않습니다.
+
+```bash
+python3 skills/ksat-exam/scripts/run_exam.py --model gpt-6.1-sol --dry-run
+# 지정한 API 모델 사용이 승인된 경우
+python3 skills/ksat-exam/scripts/run_exam.py --model kimi-k3 --authorize-api
+```
+
+실행기는 해당 모델 결과·프로필·정적 JSON만 등록하고 배포를 검증합니다. 실제 모델 호출은 로컬에서만 수행하며 CI는 저장된 결과를 채점·빌드합니다.
+
 ## 연례 운영
 
 수능 전에 전년도 문제를 최신 모델로 한 번 평가하고, 수능 직후 새 문제를 같은 모델·프로토콜로 평가합니다. 최초 공개 정답으로 잠정 결과를 만들고, 최종 정답 확정 후 저장한 답안을 재채점합니다. 모델을 다시 호출하지 않습니다.

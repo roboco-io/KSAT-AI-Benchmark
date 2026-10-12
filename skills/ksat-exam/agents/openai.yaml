@@ -1,0 +1,4 @@
+interface:
+  display_name: "수능 수험"
+  short_description: "모델별 수능 풀이와 채점·대시보드 등록 자동화"
+  default_prompt: "Use $ksat-exam to evaluate the named models and publish their KSAT results."

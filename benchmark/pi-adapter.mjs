@@ -5,6 +5,7 @@ import {mkdtemp,mkdir,writeFile,readFile,rm} from 'node:fs/promises';
 import {tmpdir} from 'node:os';
 import {join,resolve} from 'node:path';
 import {piEnvironment} from './pi-env.mjs';
+import {inspectionScope} from './moderation.mjs';
 
 export class PiJsonlDecoder {
  decoder=new StringDecoder('utf8');
@@ -70,9 +71,25 @@ function modelsConfig(model) {
  return {providers:{'ksat-pi':{baseUrl:route.base_url,api:route.api??'openai-completions',apiKey:'$KSAT_PI_API_KEY',models:[definition]}}};
 }
 
+export function redactPiError(value,apiKey) {
+ return String(value??'').replaceAll(apiKey,'[REDACTED]').replace(/Bearer\s+[^\s"',}]+/gi,'Bearer [REDACTED]').replace(/sk-[A-Za-z0-9._:+/-]+/g,'[REDACTED]').slice(0,8000);
+}
+async function privateFailure(model,message,apiKey) {
+ try {
+  const folder=resolve(import.meta.dirname,'../.runtime/pi-diagnostics');
+  await mkdir(folder,{recursive:true,mode:0o700});
+  await writeFile(join(folder,`${model.id}-${Date.now()}.json`),JSON.stringify({model:model.id,stop_reason:message.stopReason,error:redactPiError(message.errorMessage,apiKey)},null,2)+'\n',{mode:0o600});
+ }catch{} // Diagnostics must never replace a billing or authentication rejection.
+}
 function responseFailure(message) {
- if (/quota|insufficient.*(?:balance|funds)|credit|billing|payment|unauthorized|authentication|invalid.*api.?key|(?:^|\D)(?:401|402|403)(?:\D|$)/i.test(message.errorMessage??'')) return new Error('PI_BLOCKED: provider authentication, quota, or billing rejected the request');
- return new Error('PI_TURN_FAILED: provider did not finish a complete answer');
+ const detail=message.errorMessage??'';
+ const scope=inspectionScope(detail);
+ if(scope)return new Error(`PI_CONTENT_BLOCKED: provider content inspection rejected response; scope=${scope}; code=DataInspectionFailed`);
+ const knownCodes=['RateLimitExceeded','PayloadTooLarge','Arrearage','InsufficientBalance','InvalidParameter','InvalidParameter.UnsupportedMediaType','DataInspectionFailed','RequestTimeout','InternalError','model_not_found','context_length_exceeded','insufficient_quota'];
+ const normalized=detail.toLowerCase().replace(/[^a-z]/g,'');
+ const code=knownCodes.find(value=>normalized.includes(value.toLowerCase().replace(/[^a-z]/g,'')));
+ if (/quota|Arrearage|insufficient.*(?:balance|funds)|credit|billing|payment|unauthorized|authentication|invalid.*api.?key|(?:^|\D)(?:401|402|403)(?:\D|$)/i.test(message.errorMessage??'')) return new Error('PI_BLOCKED: provider authentication, quota, or billing rejected the request');
+ return new Error('PI_TURN_FAILED: provider did not finish a complete answer'+(code?`; code=${code}`:''));
 }
 
 // No credentials are read here. The caller supplies one explicitly authorized API key.
@@ -140,7 +157,7 @@ export async function* piEvents({model,prompt,images=[],schema,signal,apiKey,piE
      yield completion; // Retain consumed tokens even when answer parsing fails.
      assertPiMessage(message,model);
      if (++messageCount!==1) throw new Error('PI_PROTOCOL_INVALID: unexpected additional assistant response');
-     if (!['stop','length'].includes(message.stopReason)) throw responseFailure(message);
+     if (!['stop','length'].includes(message.stopReason)) {await privateFailure(model,message,apiKey);throw responseFailure(message);}
      if (message.stopReason==='length') throw new Error('PI_TURN_FAILED: response reached output token limit');
      try {output=parsePiAnswers(message.content.filter(block=>block.type==='text').map(block=>block.text).join(''));}
      catch(error) {parseError=error;}

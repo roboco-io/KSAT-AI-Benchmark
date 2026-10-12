@@ -1,3 +1,5 @@
+import {join} from 'node:path';
+import {loadProfiles} from './profiles.mjs';
 const pricing=(input,cached,output)=>({input_per_million:input,cached_input_per_million:cached,cache_write_per_million:input*1.25,output_per_million:output,currency:'USD',as_of:'2026-10-12',basis:'API-equivalent estimate only; subscription actual billing differs'});
 export const MODELS=[
  {id:'gpt-6.1-sol',label:'GPT-6.1 Sol',provider:'openai',directory:'results/codex-2026',pricing:pricing(2,0.1,10)},
@@ -13,4 +15,8 @@ export const MODELS=[
  {id:'kimi-k3',label:'Kimi K3',provider:'moonshot',directory:'results/pi-2026-kimi-k3',pricing:{...pricing(3,0.3,15),cache_write_per_million:3,basis:'Global API reference rates; automatic 5m cache write $3/M; not an invoice',source:'https://platform.kimi.ai/docs/guide/context-caching'},pi:{provider:'ksat-pi',model_id:'kimi-k3',base_url:'https://api.moonshot.ai/v1',secret_name:'KIMI_API_KEY',context_window:1048576,max_tokens:65536,compat:{thinkingFormat:'openai',supportsReasoningEffort:true,supportsDeveloperRole:false,supportsStore:false,maxTokensField:'max_tokens'}}},
 ];
 for(const model of MODELS.filter(m=>m.provider==='anthropic'))model.pricing.basis+='; cache write is 5m base; SDK estimate takes precedence for tier/TTL';
+for(const model of loadProfiles(join(import.meta.dirname,'profiles'))) {
+ if(MODELS.some(existing=>existing.id===model.id||existing.directory===model.directory))throw new Error('MODEL_PROFILE_INVALID: existing model or result directory cannot be replaced');
+ MODELS.push(model);
+}
 export function modelById(id) {const model=MODELS.find(m=>m.id===id);if(!model)throw new Error(`Unsupported exact model: ${id}`);return model;}

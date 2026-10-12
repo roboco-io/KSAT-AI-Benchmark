@@ -1,0 +1,11 @@
+# KSAT AI Benchmark 작업 지침
+
+## 수험 스킬
+
+사용자가 모델명을 주며 수험·수능 평가·벤치마크 실행·대시보드 등록을 요청하거나, 이 프로젝트의 수험 대화에서 모델명만 지정하면 `skills/ksat-exam/SKILL.md`를 읽고 실행한다. 모델명만 받은 경우 현재 검증된 수능 데이터셋을 사용한다. 기존 완료 답안은 재호출하거나 덮어쓰지 않는다.
+
+OpenAI는 Codex SDK, Anthropic은 Claude Code SDK, Google은 Antigravity CLI, 기타 공급자는 Pi agent로 실행한다. 에이전트를 자동 대체하지 않는다. Google의 현재 headless 이미지 입력 차단 조건은 스킬의 공식 근거를 참조한다.
+
+현재 사용자 승인 API 범위는 Pi의 DeepSeek V4.1 Flash·GLM 5.3 Flash·Qwen3.8-27B·Kimi K3다. 새 요청의 모델·예산·인증 제약을 존중하고, 필요한 키 변수만 읽는다. 키 값은 채팅·명령 인수·로그·git·웹에 넣지 않는다.
+
+결과와 실행 상태만 정적 웹에 등록한다. 사용자 기존 2025 수학 문제·결과 변경은 보존한다. 시험 모델을 테스트나 GitHub Actions에서 호출하지 않는다.

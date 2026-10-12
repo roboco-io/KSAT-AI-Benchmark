@@ -9,4 +9,10 @@ test('each model is scored independently and shared questions are not double cou
  const report=buildReport(dataset,run,[],pricing,'Codex SDK / Ralph loop');
  assert.equal(report.summary.total_questions,2);assert.equal(report.summary.accuracy,50);assert.equal(report.summary.abstention_rate,50);assert.equal(report.summary.estimated_cost_usd,15);assert.equal(report.exams[0].summary.score,2);assert.equal(report.exams[0].summary.max_score,6);
  assert.equal(report.questions[0].estimated_cost_usd,7.5);assert.equal(report.questions[0].time_seconds,5);
+ const recovered=structuredClone(run);
+ recovered.protocol.agent='Pi';
+ recovered.groups={group:{attempts:[{status:'error',error:'PI_TURN_FAILED: transport ended',usage:{input_tokens:0,output_tokens:0},time_seconds:3}]},'group--split-1':{original_group_id:'group',attempts:run.groups.group.attempts}};
+ const recoveredReport=buildReport(dataset,recovered,[],pricing,'Pi CLI / Ralph loop');
+ assert.equal(recoveredReport.summary.estimated_cost_usd,15);
+ assert.equal(recoveredReport.usage_complete,false);
 });

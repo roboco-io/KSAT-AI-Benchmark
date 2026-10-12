@@ -10,18 +10,27 @@ import {codexSubscriptionStatus,subscriptionEnvironment,claudeAccountFingerprint
 import {claudeEvents} from './claude-adapter.mjs';
 import {piEvents} from './pi-adapter.mjs';
 import {readPiSecret} from './pi-env.mjs';
+import {splitSolverGroups,applySplitRecovery} from './recovery.mjs';
+import {acquireRunLock} from './run-lock.mjs';
+import {repeatedInspectionBlock,inspectionScope} from './moderation.mjs';
 
 const root=resolve(import.meta.dirname,'..');
 const dataset=JSON.parse(readFileSync(join(root,'exams/datasets/2026-ksat.json'),'utf8'));
 const hash=s=>createHash('sha256').update(s).digest('hex');
 const modelArg=process.argv.indexOf('--model');const selected=modelById(modelArg>=0?process.argv[modelArg+1]:'gpt-6.1-sol');
 const groupArg=process.argv.indexOf('--group');const requestedGroup=groupArg>=0?process.argv[groupArg+1]:null;
-const allowedGroups=requestedGroup?dataset.solver_groups.filter(g=>g.id===requestedGroup):dataset.solver_groups;
+let allowedGroups=requestedGroup?dataset.solver_groups.filter(g=>g.id===requestedGroup):dataset.solver_groups;
 if(!allowedGroups.length)throw new Error('Unknown solver group');
 const once=process.argv.includes('--once');
+const recoveryIndex=process.argv.indexOf('--recover-with-batches');
+const requestedBatchSize=recoveryIndex>=0?Number(process.argv[recoveryIndex+1]):null;
+if(selected.provider==='google'||selected.agent==='antigravity')throw new Error('ANTIGRAVITY_BLOCKED: agy 1.3.2 headless native image input is unsupported; no substitute agent');
+if(!['openai','anthropic'].includes(selected.provider)&&!selected.pi)throw new Error('RUNTIME_BLOCKED: this provider requires a verified Pi profile');
 const runDir=join(root,selected.directory);mkdirSync(runDir,{recursive:true});
 const statePath=join(runDir,'run.json');
 if(existsSync(statePath)&&JSON.parse(readFileSync(statePath,'utf8')).completed){console.log(`ALREADY COMPLETE: ${selected.id}; preserving locked answers`);process.exit(0);}
+const releaseLock=acquireRunLock(join(root,'.runtime/locks',selected.id+'.json'),existsSync(statePath)?JSON.parse(readFileSync(statePath,'utf8')):{});
+process.once('exit',releaseLock);
 const protocol={model:selected.id,provider:selected.provider,effort:'high',sdk_version:selected.pi?'Pi CLI 0.87.1':selected.provider==='openai'?'0.162.1':'0.3.296',tools:'disabled',input:'original PDF rendered at 200 DPI',english_listening:'official transcript rendered as images',max_iterations:3,group_timeout_seconds:selected.pi||selected.provider==='openai'?900:600,concurrency:2,cost_limit_usd:25,subscription_only:!selected.pi,api_key_fallback:false};
 if(selected.pi) {
  const authorization=join(root,'.runtime/pi-api-authorization.json');
@@ -30,7 +39,6 @@ if(selected.pi) {
  readPiSecret(selected.pi.secret_name);
 }
 if(selected.provider==='anthropic') {
- for(const id of ['gpt-6-astra','gpt-6-luna']){const p=join(root,modelById(id).directory,'run.json');if(!existsSync(p)||!JSON.parse(readFileSync(p,'utf8')).completed)throw new Error('SUBSCRIPTION_BLOCKED: finish Astra and Luna before Claude');}
  const guard=join(root,'.runtime/claude-subscription-only.json');
  if(!existsSync(guard))throw new Error('SUBSCRIPTION_BLOCKED: Claude extra paid usage OFF has not been confirmed');
  assertFreshClaudeProof(JSON.parse(readFileSync(guard,'utf8')),claudeAccountFingerprint());
@@ -41,7 +49,18 @@ const sourceHashes=Object.fromEntries(sourcePaths.map(p=>[p,hash(readFileSync(jo
 const sourceManifest=JSON.parse(readFileSync(join(root,'exams/pdf/2026/sources.json'),'utf8'));
 for(const p of sourcePaths)if(sourceManifest.files.find(f=>f.path===p)?.sha256!==sourceHashes[p])throw new Error(`Source integrity check failed: ${p}`);
 let state=existsSync(statePath)?JSON.parse(readFileSync(statePath,'utf8')):{schema_version:2,run_id:`2026-pre-exam-${selected.provider==='openai'?'codex':'claude'}-${selected.id}`,academic_year:2026,phase:'pre_exam',started_at:new Date().toISOString(),protocol,dataset_hash:datasetHash,answers:{},errors:{},groups:{},iterations:[],usage:{},wall_time_seconds:0};
-if(state.dataset_hash!==datasetHash||JSON.stringify(state.protocol)!==JSON.stringify(protocol))throw new Error('Resume refused: input or protocol changed. Preserve existing run and start a new run directory.');
+if(state.dataset_hash!==datasetHash)throw new Error('Resume refused: input changed. Preserve existing run and start a new run directory.');
+const batchSize=requestedBatchSize??state.protocol.batch_max_questions;
+if(batchSize!==undefined&&batchSize!==null) {
+ if(!selected.pi)throw new Error('RECOVERY_BLOCKED: split recovery requires an authorized Pi API run');
+ if(!state.protocol.batch_max_questions) {
+  const attempts=Object.values(state.groups).flatMap(g=>g.attempts);
+  if(state.blocked_reason||!state.finished_at||attempts.some(a=>a.status==='running')||!attempts.some(a=>/PI_TURN_FAILED|PI_ABORTED/.test(a.error||'')))throw new Error('RECOVERY_BLOCKED: finish the original run before one controlled execution-error recovery');
+ }
+ protocol.batch_max_questions=batchSize;protocol.recovery_policy='one_split_recovery_pass';
+ applySplitRecovery(state,protocol);
+ allowedGroups=splitSolverGroups(allowedGroups,batchSize);
+}else if(JSON.stringify(state.protocol)!==JSON.stringify(protocol))throw new Error('Resume refused: protocol changed. Preserve existing run and start a new run directory.');
 const save=()=>{state.updated_at=new Date().toISOString();writeFileSync(statePath+'.tmp',JSON.stringify(state,null,2)+'\n');execFileSync('mv',[statePath+'.tmp',statePath]);};
 const renderDir=join(root,'.runtime/2026-pages');mkdirSync(renderDir,{recursive:true});
 const eventsDir=join(root,'.runtime/events');mkdirSync(eventsDir,{recursive:true});
@@ -64,6 +83,8 @@ state.prompt_hash=hash(prompt);state.source_hashes=sourceHashes;save();
 if(state.blocked_reason){delete state.blocked_reason;save();} // Each resumed request re-verifies authentication/quota before input.
 const sdk=selected.provider==='openai'?new Codex({env:subscriptionEnvironment(),codexPathOverride:join(root,'benchmark/codex-isolated.sh'),config:{features:{shell_tool:false,unified_exec:false,apps:false,plugins:false,multi_agent:false,browser_use:false,computer_use:false,code_mode:false},web_search:'disabled'}}):null;
 const invocationController=new AbortController();
+const stopInvocation=()=>{state.blocked_reason='RUN_INTERRUPTED: interrupted by process signal; resume explicitly';invocationController.abort(new Error(state.blocked_reason));};
+process.once('SIGINT',stopInvocation);process.once('SIGTERM',stopInvocation);
 async function solveGroup(group,iteration) {
  if(state.blocked_reason||invocationController.signal.aborted)return;
  const questions=dataset.questions.filter(q=>group.question_ids.includes(q.id)&&!state.answers[q.id]);
@@ -87,7 +108,8 @@ async function solveGroup(group,iteration) {
  const thread=sdk?.startThread({model:protocol.model,modelReasoningEffort:protocol.effort,workingDirectory:mkdtempSync(join(tmpdir(),'ksat-solver-')),skipGitRepoCheck:true,sandboxMode:'read-only',approvalPolicy:'never',networkAccessEnabled:false,webSearchMode:'disabled'});
  const started=Date.now();const attempt={iteration,started_at:new Date().toISOString(),question_ids:questions.map(q=>q.id),image_encoding:'lossless WebP, original 200 DPI pixels',image_hashes:images.map(p=>hash(readFileSync(p))),usage:{},time_seconds:0,thread_id:null,status:'running'};
  const logPath=join(eventsDir,`${selected.id}-${group.id}-${iteration}-${Date.now()}.jsonl`);
- state.groups[group.id]??={attempts:[]};state.groups[group.id].attempts.push(attempt);save();
+ state.groups[group.id]??={attempts:[]};
+ if(group.original_id)state.groups[group.id].original_group_id=group.original_id;state.groups[group.id].attempts.push(attempt);save();
  console.log(`[iteration ${iteration}] ${group.id}: ${questions.length} questions, ${images.length} images`);
  let final='';
  try {
@@ -110,6 +132,11 @@ async function solveGroup(group,iteration) {
  } catch(error) {
   attempt.status='error';attempt.error=String(error.message);
   for(const q of questions)state.errors[q.id]={status:'error',message:attempt.error};
+  if(repeatedInspectionBlock(state.groups[group.id].attempts)) {
+   const scope=inspectionScope(attempt.error)||'unspecified';
+   state.groups[group.id].retry_stopped={reason:'provider_content_inspection',scope,recorded_at:new Date().toISOString()};
+   for(const q of questions)state.errors[q.id].detail=`제공자 ${scope==='output'?'출력':scope==='input'?'입력':'콘텐츠'} 검사 차단 반복으로 재시도 종료. 모델 기권과 구분한 실행 오류입니다.`;
+  }
   console.log(`${group.id}: execution error: ${attempt.error.slice(0,200)}`);
   if(/^(SUBSCRIPTION_BLOCKED|PI_BLOCKED|MODEL_MISMATCH|TOOL_BLOCKED)/.test(attempt.error)){state.blocked_reason=attempt.error;invocationController.abort(error);}
  } finally {attempt.time_seconds=(Date.now()-started)/1000;attempt.finished_at=new Date().toISOString();save();}
@@ -119,12 +146,13 @@ const heartbeat=setInterval(()=>{state.wall_time_seconds=elapsedWall(baseWall,in
 try {
  for(let i=1;i<=(once?1:protocol.max_iterations);i++) {
   if(state.blocked_reason)break;
-  const pending=allowedGroups.filter(g=>g.question_ids.some(id=>!state.answers[id])&&attemptsRemaining(state.groups[g.id]?.attempts,protocol.max_iterations)>0);
+  const pending=allowedGroups.filter(g=>g.question_ids.some(id=>!state.answers[id])&&attemptsRemaining(state.groups[g.id]?.attempts,protocol.max_iterations)>0&&!repeatedInspectionBlock(state.groups[g.id]?.attempts)&&(!g.original_id||!repeatedInspectionBlock(state.groups[g.original_id]?.attempts)));
   if(!pending.length)break;
   state.iterations.push({iteration:i,started_at:new Date().toISOString(),pending_groups:pending.map(g=>g.id)});save();
   await runBatches(pending,protocol.concurrency,invocationController,()=>Boolean(state.blocked_reason),g=>solveGroup(g,i));
  }
 } finally {
+ process.removeListener('SIGINT',stopInvocation);process.removeListener('SIGTERM',stopInvocation);
  clearInterval(heartbeat);state.wall_time_seconds=elapsedWall(baseWall,invocationStart,Date.now());
  state.completed=dataset.questions.every(q=>state.answers[q.id]);state.finished_at=new Date().toISOString();save();
  console.log(`RALPH ${state.completed?'COMPLETE':'INCOMPLETE'} ${selected.id}: ${Object.keys(state.answers).length}/${dataset.questions.length}, API-equivalent $${estimateCost(state.usage,selected.pricing).toFixed(4)}`);

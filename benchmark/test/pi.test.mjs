@@ -1,3 +1,4 @@
+import {redactPiError} from '../pi-adapter.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {PiJsonlDecoder,normalizePiUsage,parsePiAnswers,assertPiMessage} from '../pi-adapter.mjs';
@@ -113,4 +114,10 @@ test('bounded timeout terminates Pi subprocess without exposing provider text',a
 test('Kimi-style normalized cache reads and writes preserve original prompt total',()=>{
  // A 1000-token provider prompt has 200 read tokens and 100 newly written tokens.
  assert.deepEqual(normalizePiUsage({input:700,cacheRead:200,cacheWrite:100,output:30,reasoning:12}),{input_tokens:1000,cached_input_tokens:200,cache_write_input_tokens:100,output_tokens:30,reasoning_output_tokens:12});
+});
+
+test('private transport diagnostics redact exact credentials and authorization headers',()=>{
+ const value=redactPiError('Authorization: Bearer fixture-private-key; api=fixture-private-key; token=sk-fixturefragment', 'fixture-private-key');
+ assert.equal(value.includes('fixture-private-key'),false);
+ assert.equal(value.includes('sk-fixturefragment'),false);
 });
