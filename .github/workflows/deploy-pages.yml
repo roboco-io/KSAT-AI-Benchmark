@@ -12,6 +12,8 @@ on:
       - 'exams/parsed/**'
       - 'web/**'
       - 'scripts/export_data.py'
+      - 'benchmark/**'
+      - 'exams/datasets/**'
       - '.github/workflows/deploy-pages.yml'
   workflow_dispatch:
 
@@ -50,6 +52,10 @@ jobs:
       - name: Export evaluation data to JSON
         run: |
           python scripts/export_data.py
+          node benchmark/export.mjs
+
+      - name: Verify benchmark grading and metrics
+        run: npm test --prefix benchmark
 
       - name: Install Node dependencies
         working-directory: ./web

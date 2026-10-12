@@ -2,10 +2,7 @@ import '@mantine/core/styles.css';
 import './globals.css';
 import 'katex/dist/katex.min.css';
 
-import { ColorSchemeScript, MantineProvider } from '@mantine/core';
-import { Inter } from 'next/font/google';
-
-const inter = Inter({ subsets: ['latin'] });
+import { MantineProvider } from '@mantine/core';
 
 export const metadata = {
   title: 'KSAT AI Benchmark - 수능 기반 AI 모델 평가',
@@ -18,12 +15,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ko">
-      <head>
-        <ColorSchemeScript defaultColorScheme="light" />
-      </head>
-      <body className={inter.className}>
-        <MantineProvider defaultColorScheme="light">
+    <html lang="ko" data-mantine-color-scheme="light">
+      <body>
+        <MantineProvider forceColorScheme="light">
           {children}
         </MantineProvider>
       </body>

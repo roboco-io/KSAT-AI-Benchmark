@@ -1,15 +1,7 @@
-import { Suspense } from 'react';
-import { Container, Text } from '@mantine/core';
-import { LeaderboardContent } from '@/components/LeaderboardContent';
+import data from '@/public/data/benchmark-v2.json';
+import { BenchmarkDashboard } from '@/components/BenchmarkDashboard';
+import type { BenchmarkData } from '@/components/benchmark-types';
 
 export default function Home() {
-  return (
-    <Suspense fallback={
-      <Container size="xl" py="xl">
-        <Text>로딩 중...</Text>
-      </Container>
-    }>
-      <LeaderboardContent />
-    </Suspense>
-  );
+  return <BenchmarkDashboard data={data as BenchmarkData} />;
 }
