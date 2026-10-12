@@ -109,11 +109,11 @@ assert.equal(estimateCost(usage), 2.62);
 
 - [x] 전체 오프라인 테스트, 실제 답안 검증, JSON 집계와 시험별 100점 검증을 실행한다.
 - [x] `npm run build --prefix web`로 정적 export를 생성한다.
-- [ ] `web/out/`에서 JSON과 HTML의 실제 지표를 확인하고 새 화면을 검수한다.
+- [x] `web/out/`에서 JSON과 HTML의 실제 지표를 확인하고 새 화면을 검수한다.
 - [x] `.github/workflows/deploy-pages.yml`이 benchmark 결과 변경을 포함하도록 경로와 내보내기를 갱신한다.
-- [ ] 사용자의 기존 미커밋 수학 YAML·결과 6개를 제외하고 새 작업만 논리적 커밋으로 나눈다.
-- [ ] 모든 configured remote에 push하고 원격 커밋을 확인한다. 현재 remote는 `origin` 하나다.
-- [ ] GitHub Actions 배포 성공과 `https://roboco.io/KSAT-AI-Benchmark/`의 응답·실제 결과 지표를 확인한다.
+- [x] 사용자의 기존 미커밋 수학 YAML·결과 6개를 제외하고 새 작업만 논리적 커밋으로 나눈다.
+- [x] 모든 configured remote에 push하고 원격 커밋을 확인한다. 현재 remote는 `origin` 하나다.
+- [x] GitHub Actions 배포 성공과 `https://roboco.io/KSAT-AI-Benchmark/`의 응답·실제 결과 지표를 확인한다.
 
 Pages의 현재 `html_url`은 이미 요청한 주소다. `basePath=/KSAT-AI-Benchmark`를 유지하고 저장소별 도메인을 새로 붙여 경로를 바꾸지 않는다.
 
@@ -137,3 +137,6 @@ npm run build --prefix web
 - 실제 경과 1045.260초, 입력 297936토큰, 출력 31770토큰, API 환산 비용 하한 추정 0.913572 USD.
 - 초기 대용량 PNG 연결 실패 후 무손실 WebP로 전송량을 줄였다. 41장 모두 디코딩 RGB 픽셀 동일성을 검증했다. 제출 답안은 유지했다.
 - 독립 검토의 4개 중요 발견(재개 횟수·시간 heartbeat·입력 잠금·사용량 없는 실패 비용)을 회귀 테스트 또는 공개 조건으로 수정했다. 테스트 8/8, 정적 빌드 통과.
+
+- 공개 검증: GitHub Actions run 38233915520 배포 성공, HTTPS 200 응답, 공개 JSON의 147문항과 지표가 로컬 결과와 일치했다.
+- 공개 화면에서 서버와 브라우저의 ICU 날짜 표기 차이를 발견했다. KST ISO 형식으로 고정하고 날짜 회귀 테스트를 추가했다. 전체 테스트 9/9, 정적 빌드 통과.

@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from 'react';
 import type { BenchmarkData, QuestionStatus, Usage } from './benchmark-types';
+import { formatKst } from '@/lib/format-date.mjs';
 
 const labels: Record<QuestionStatus, string> = { correct: '정답', incorrect: '오답', abstained: '기권', error: '실행 오류', pending: '평가 대기' };
 const subjects: Record<string, string> = { korean: '국어', math: '수학', english: '영어' };
@@ -35,7 +36,7 @@ export function BenchmarkDashboard({ data }: { data: BenchmarkData }) {
     (!search || `${q.number} ${q.id} ${sections[q.section] || q.section} ${q.explanation}`.toLowerCase().includes(search.toLowerCase()))
   ), [data.questions, selectedExam, status, search]);
   const basePath = process.env.NODE_ENV === 'production' ? '/KSAT-AI-Benchmark' : '';
-  const generatedAt = data.generated_at ? new Intl.DateTimeFormat('ko-KR', { dateStyle: 'medium', timeStyle: 'short', timeZone: 'Asia/Seoul' }).format(new Date(data.generated_at)) : '결과 생성 대기';
+  const generatedAt = formatKst(data.generated_at);
 
   return <div className="benchmark-shell">
     <a className="skip-link" href="#results">평가 결과로 이동</a>
