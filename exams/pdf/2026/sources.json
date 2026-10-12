@@ -1,0 +1,139 @@
+{
+  "academic_year": 2026,
+  "exam_date": "2025-11-13",
+  "publisher": "한국교육과정평가원",
+  "retrieved_at": "2026-10-12T09:29:24.205417+00:00",
+  "files": [
+    {
+      "subject": "korean",
+      "kind": "exam",
+      "path": "exams/pdf/2026/국어영역_문제지.pdf",
+      "source_page": "https://www.suneung.re.kr/boardCnts/view.do?boardID=1500234&boardSeq=5093801&lev=0&m=0403&s=suneung",
+      "download_url": "https://www.suneung.re.kr/boardCnts/fileDown.do?fileSeq=60defdef6d83db1b756f841089563c5a",
+      "sha256": "ddb1ede52e317cb67c94172b39aad24b0150bf888455be33f8e333010ce16a0a",
+      "size_bytes": 4135202,
+      "pages": 40,
+      "verification": "pdf_structure_checked_sample_visual_review",
+      "answer_key_status": null,
+      "visual_review": {
+        "pages": [
+          1
+        ],
+        "checks": [
+          "2026학년도 표제",
+          "과목 표제",
+          "홀수형 표제"
+        ]
+      }
+    },
+    {
+      "subject": "korean",
+      "kind": "answer_key",
+      "path": "exams/pdf/2026/국어영역_정답표.pdf",
+      "source_page": "https://www.suneung.re.kr/boardCnts/view.do?boardID=1500234&boardSeq=5093801&lev=0&m=0403&s=suneung",
+      "download_url": "https://www.suneung.re.kr/boardCnts/fileDown.do?fileSeq=46c7d36aa9208016099f9a4cf2e7cc2a",
+      "sha256": "e5912f96dca0cb54d05b6c5f3147cb79ab34f9a931462264a5b57f90e581aac8",
+      "size_bytes": 80931,
+      "pages": 2,
+      "verification": "pdf_structure_checked",
+      "answer_key_status": "confirmed_unchanged"
+    },
+    {
+      "subject": "math",
+      "kind": "exam",
+      "path": "exams/pdf/2026/수학영역_문제지.pdf",
+      "source_page": "https://www.suneung.re.kr/boardCnts/view.do?boardID=1500234&boardSeq=5093800&lev=0&m=0403&s=suneung",
+      "download_url": "https://www.suneung.re.kr/boardCnts/fileDown.do?fileSeq=f9055b3484e9176cea7c74b9819a7d2c",
+      "sha256": "74e7e4a614559c3a94618e568d00b0392b12e25b6f5caa5e86334768f080d850",
+      "size_bytes": 2485943,
+      "pages": 40,
+      "verification": "pdf_structure_checked_sample_visual_review",
+      "answer_key_status": null,
+      "visual_review": {
+        "pages": [
+          1,
+          13
+        ],
+        "checks": [
+          "2026학년도 표제",
+          "과목 표제",
+          "홀수형 표제"
+        ]
+      }
+    },
+    {
+      "subject": "math",
+      "kind": "answer_key",
+      "path": "exams/pdf/2026/수학영역_정답표.pdf",
+      "source_page": "https://www.suneung.re.kr/boardCnts/view.do?boardID=1500234&boardSeq=5093800&lev=0&m=0403&s=suneung",
+      "download_url": "https://www.suneung.re.kr/boardCnts/fileDown.do?fileSeq=970fb683af8df94b36d29efe00741532",
+      "sha256": "4a6482e853d2674cb79232abcf30d302197c374dd4b18aa9c80427660aec4f53",
+      "size_bytes": 78878,
+      "pages": 2,
+      "verification": "pdf_structure_checked_sample_visual_review",
+      "answer_key_status": "confirmed_unchanged",
+      "visual_review": {
+        "pages": [
+          1
+        ],
+        "checks": [
+          "2026학년도 표제",
+          "홀수형 정답표",
+          "공통과목 및 미적분 정답·배점 표"
+        ]
+      }
+    },
+    {
+      "subject": "english",
+      "kind": "exam",
+      "path": "exams/pdf/2026/영어영역_문제지.pdf",
+      "source_page": "https://www.suneung.re.kr/boardCnts/view.do?boardID=1500234&boardSeq=5093799&lev=0&m=0403&s=suneung",
+      "download_url": "https://www.suneung.re.kr/boardCnts/fileDown.do?fileSeq=e0431cad0731556faee928fd38c81241",
+      "sha256": "788830081bb2a3adef1014c1625b7cc9562ad0af4438edafb8449782595af88a",
+      "size_bytes": 2252492,
+      "pages": 16,
+      "verification": "pdf_structure_checked_sample_visual_review",
+      "answer_key_status": null,
+      "visual_review": {
+        "pages": [
+          1
+        ],
+        "checks": [
+          "2026학년도 표제",
+          "과목 표제",
+          "홀수형 표제"
+        ]
+      }
+    },
+    {
+      "subject": "english",
+      "kind": "answer_key",
+      "path": "exams/pdf/2026/영어영역_정답표.pdf",
+      "source_page": "https://www.suneung.re.kr/boardCnts/view.do?boardID=1500234&boardSeq=5093799&lev=0&m=0403&s=suneung",
+      "download_url": "https://www.suneung.re.kr/boardCnts/fileDown.do?fileSeq=6d7129b9f7dae9c58c6789c2b9215e48",
+      "sha256": "363ce5277acb4fda6a6499fc546d2bf8e51a4d584bcaa6944e4885cbe22de58d",
+      "size_bytes": 73852,
+      "pages": 2,
+      "verification": "pdf_structure_checked",
+      "answer_key_status": "confirmed_unchanged"
+    },
+    {
+      "subject": "english",
+      "kind": "listening_transcript",
+      "path": "exams/pdf/2026/영어영역듣기평가대본.pdf",
+      "download_url": "https://www.suneung.re.kr/boardCnts/fileDown.do?fileSeq=4a3fe87d815c0a29d963a6cd801ae6ae",
+      "source_page": "https://www.suneung.re.kr/boardCnts/view.do?boardID=1500234&boardSeq=5093799&lev=0&m=0403&s=suneung",
+      "sha256": "2b042ba7c4d0e672bda6ffd7f01b162591938210df7efed2e919a1963bca83a4",
+      "size_bytes": 323624,
+      "verification": "pdf_structure_checked"
+    }
+  ],
+  "answer_confirmation": {
+    "status": "confirmed_unchanged",
+    "confirmed_on": "2025-11-25",
+    "source_page": "https://www.suneung.re.kr/boardCnts/view.do?boardID=1500230&boardSeq=5094220&lev=0&m=0302&s=suneung",
+    "download_url": "https://www.suneung.re.kr/boardCnts/fileDown.do?fileSeq=1509c4bf423721571e340deacd626b56",
+    "method": "visual_review_of_official_announcement_page_1",
+    "summary": "이의신청 심사 대상 51개 문항 모두 문제 및 정답에 이상 없음; 정답 확정 발표"
+  }
+}
