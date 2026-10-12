@@ -30,6 +30,11 @@ test('different model rates produce different token cost estimates',()=>{
  assert.equal(estimateCost(usage,{input_per_million:10,cached_input_per_million:1,cache_write_per_million:12.5,output_per_million:50}),13.2);
  assert.equal(estimateCost(usage,{input_per_million:0.1,cached_input_per_million:0.01,cache_write_per_million:0.125,output_per_million:0.5}),0.132);
 });
+test('Pi Kimi cache writes use the published 5m write rate rather than a generic multiplier',()=>{
+ const price=modelById('kimi-k3').pricing;
+ assert.equal(estimateCost({input_tokens:1000000,cache_write_input_tokens:1000000,output_tokens:0},price),3);
+ assert.equal(estimateCost({input_tokens:1000000,cached_input_tokens:1000000,output_tokens:0},price),0.3);
+});
 test('Claude current cache-only fallback estimates use provider model rates',()=>{
  const allCached={input_tokens:1000000,cached_input_tokens:1000000,output_tokens:0};
  assert.equal(estimateCost(allCached,modelById('claude-sonnet-5-5').pricing),0.1);

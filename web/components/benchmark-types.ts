@@ -23,11 +23,11 @@ export type BenchmarkData = {
 };
 
 export type RequestedModel = {
-  id: string; label: string; provider: 'openai' | 'anthropic';
+  id: string; label: string; provider: 'openai' | 'anthropic' | 'deepseek' | 'zai' | 'qwen' | 'moonshot';
   state: 'complete' | 'partial' | 'pending' | 'blocked'; reason?: string | null;
 };
 export type BenchmarkComparison = {
   schema_version: 3; generated_at: string; academic_year: number; repository_url: string;
   models: BenchmarkData[]; requested_models: RequestedModel[];
-  billing_policy: { subscription_only: boolean; api_key_fallback: boolean };
+  billing_policy: { subscription_only: boolean; api_key_fallback: boolean; pi_api_models?: string[] };
 };

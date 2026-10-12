@@ -6,6 +6,7 @@ import { BenchmarkDashboard } from './BenchmarkDashboard';
 import type { BenchmarkComparison, BenchmarkData, RequestedModel } from './benchmark-types';
 import { formatKst } from '@/lib/format-date.mjs';
 
+const providerLabels: Record<RequestedModel['provider'], string> = { openai: 'OpenAI', anthropic: 'Anthropic', deepseek: 'DeepSeek', zai: 'Z.ai', qwen: 'Qwen', moonshot: 'Moonshot AI' };
 const states = { complete: '평가 완료', partial: '평가 불완전', pending: '평가 대기', blocked: '실행 차단' };
 const tracks = [
   { subject: 'korean', track: 'hwajak', label: '화작' },
@@ -67,6 +68,12 @@ export function ComparisonDashboard({ data }: { data: BenchmarkComparison }) {
     const difference = typeof av === 'string' && typeof bv === 'string' ? av.localeCompare(bv, 'en') : Number(av) - Number(bv);
     return sort.direction === 'asc' ? difference : -difference;
   });
+  const piApiModels = data.billing_policy.pi_api_models ?? [];
+  const executionPolicy = piApiModels.length
+    ? `OpenAI·Anthropic 모델은 Codex·Claude 구독 인증으로 실행합니다. 추가 지정한 ${piApiModels.length}개 모델은 Pi API로 실행합니다. 구독 실행을 API 키로 대체하지 않습니다.`
+    : data.billing_policy.subscription_only
+      ? '구독 인증으로 실행합니다. API 키로 전환하지 않습니다.'
+      : '모델별 실행 방식은 아래 평가 기록에서 확인할 수 있습니다.';
   const completed = data.requested_models.filter(model => complete(model, data.models.find(result => result.model === model.id))).length;
   return <div className="benchmark-shell comparison-shell">
     <a className="skip-link" href="#comparison">모델 비교로 이동</a>
@@ -80,13 +87,13 @@ export function ComparisonDashboard({ data }: { data: BenchmarkComparison }) {
           const isComplete = complete(model, result);
           const measured = result && result.questions.some(q => q.status !== 'pending') && (model.state === 'complete' || model.state === 'partial');
           const effectiveState = model.state === 'complete' && !isComplete ? 'partial' : model.state;
-          return <tr key={model.id} onClick={() => showModelRecords(model.id)} className={`${selected === model.id ? 'selected-row' : ''} ${effectiveState}`}><th scope="row" className="model-cell"><button aria-pressed={selected === model.id} type="button" aria-controls="model-records">{model.label}</button><small>{model.provider === 'openai' ? 'OpenAI' : 'Anthropic'}</small>{model.reason && <span className="model-reason">{model.reason}</span>}</th><td data-label="평가 상태"><span className={`comparison-state ${effectiveState}`}>{states[effectiveState]}</span></td><td data-label="정답률" className="comparison-accuracy">{measured ? percent(result.summary.accuracy) : '—'}{measured && !isComplete && <small>중간 집계</small>}</td><td data-label="기권률">{measured ? percent(result.summary.abstention_rate) : '—'}</td><td data-label="원점수 / 100점" className="track-column"><div className="subject-score-groups">{scoreSubjects.map(subject => <div className="subject-score-group" key={subject.id}><strong className="score-subject-label">{subject.label}</strong><div className="track-scores" style={{gridTemplateColumns: `repeat(${subject.columns}, 1fr)`}}>{tracks.filter(track => track.subject === subject.id).map(track => {
+          return <tr key={model.id} onClick={() => showModelRecords(model.id)} className={`${selected === model.id ? 'selected-row' : ''} ${effectiveState}`}><th scope="row" className="model-cell"><button aria-pressed={selected === model.id} type="button" aria-controls="model-records">{model.label}</button><small>{providerLabels[model.provider]}</small>{model.reason && <span className="model-reason">{model.reason}</span>}</th><td data-label="평가 상태"><span className={`comparison-state ${effectiveState}`}>{states[effectiveState]}</span></td><td data-label="정답률" className="comparison-accuracy">{measured ? percent(result.summary.accuracy) : '—'}{measured && !isComplete && <small>중간 집계</small>}</td><td data-label="기권률">{measured ? percent(result.summary.abstention_rate) : '—'}</td><td data-label="원점수 / 100점" className="track-column"><div className="subject-score-groups">{scoreSubjects.map(subject => <div className="subject-score-group" key={subject.id}><strong className="score-subject-label">{subject.label}</strong><div className="track-scores" style={{gridTemplateColumns: `repeat(${subject.columns}, 1fr)`}}>{tracks.filter(track => track.subject === subject.id).map(track => {
             const exam = measured ? result.exams.find(item => item.subject === track.subject && (item.track === track.track || track.subject === 'english')) : undefined;
             const scored = exam && exam.summary.total_questions > exam.summary.pending;
             return <span key={track.track}><small>{track.label}</small><b>{scored ? exam.summary.score : '—'}</b></span>;
           })}</div></div>)}</div></td><td data-label="총 실행 시간">{measured ? elapsed(result.summary.wall_time_seconds) : '—'}</td><td data-label="토큰 사용량" className="comparison-tokens">{measured ? <><span>입력 {number(result.summary.usage.input_tokens)}</span><span>캐시 {number(result.summary.usage.cached_input_tokens)}</span><span>출력 {number(result.summary.usage.output_tokens)}</span></> : '—'}</td><td data-label="API 환산 USD">{measured ? `$${result.summary.estimated_cost_usd.toFixed(4)}` : '—'}</td></tr>;
         })}</tbody></table></div>
-        <p className="comparison-note">구독 인증으로 실행합니다. API 키로 전환하지 않습니다. 비용은 토큰 사용량을 API 단가로 환산한 추정값이며 실제 구독 청구액이 아닙니다. 토큰 정렬은 입력과 출력의 합계 기준이며 캐시는 입력에 포함됩니다. 화작·언매는 국어, 확통·미적·기하는 수학 선택과목입니다.</p>
+        <p className="comparison-note">{executionPolicy} 비용은 토큰 사용량을 API 단가로 환산한 추정값이며 실제 청구액이 아닙니다. 토큰 정렬은 입력과 출력의 합계 기준이며 캐시는 입력에 포함됩니다. 화작·언매는 국어, 확통·미적·기하는 수학 선택과목입니다.</p>
       </section>
       <section id="model-records" ref={detailRef} className="model-detail-section" aria-labelledby="model-detail-title"><div className="detail-heading"><div><h2 id="model-detail-title" aria-live="polite">{request?.label} 평가 기록</h2><p>공통 문항은 전체 집계에서 한 번만 계산합니다.</p></div><label>평가 모델<select value={selected} onChange={event => setSelected(event.target.value)}>{data.requested_models.map(model => <option key={model.id} value={model.id}>{model.label} · {states[model.state]}</option>)}</select></label></div>
         {current && (request?.state === 'complete' || request?.state === 'partial') ? <BenchmarkDashboard key={selected} data={current} embedded /> : <div className="unrun-model" role="status"><strong>{request?.label}</strong><span>{request ? states[request.state] : '평가 대기'}</span><p>{request?.reason || '이 모델의 실제 평가 결과가 아직 없습니다.'}</p></div>}
