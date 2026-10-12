@@ -21,3 +21,13 @@ export type BenchmarkData = {
   exams: { id: string; title: string; subject: 'korean' | 'math' | 'english'; track: string; question_ids: string[]; max_score: number; summary: Summary & {score: number} }[];
   questions: Question[]; sources: { subject: string; url: string }[]; limitations: string[];
 };
+
+export type RequestedModel = {
+  id: string; label: string; provider: 'openai' | 'anthropic';
+  state: 'complete' | 'partial' | 'pending' | 'blocked'; reason?: string;
+};
+export type BenchmarkComparison = {
+  schema_version: 3; generated_at: string; academic_year: number; repository_url: string;
+  models: BenchmarkData[]; requested_models: RequestedModel[];
+  billing_policy: { subscription_only: boolean; api_key_fallback: boolean };
+};

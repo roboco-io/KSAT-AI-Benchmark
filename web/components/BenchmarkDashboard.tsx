@@ -21,7 +21,7 @@ function Tokens({ usage }: { usage: Usage }) {
   return <span className="token-line">입력 {number(usage.input_tokens)} · 캐시 {number(usage.cached_input_tokens)} · 출력 {number(usage.output_tokens)}</span>;
 }
 
-export function BenchmarkDashboard({ data }: { data: BenchmarkData }) {
+export function BenchmarkDashboard({ data, embedded = false }: { data: BenchmarkData; embedded?: boolean }) {
   const [exam, setExam] = useState('all');
   const [status, setStatus] = useState('all');
   const [search, setSearch] = useState('');
@@ -38,14 +38,15 @@ export function BenchmarkDashboard({ data }: { data: BenchmarkData }) {
   const basePath = process.env.NODE_ENV === 'production' ? '/KSAT-AI-Benchmark' : '';
   const generatedAt = formatKst(data.generated_at);
 
-  return <div className="benchmark-shell">
-    <a className="skip-link" href="#results">평가 결과로 이동</a>
-    <header className="site-header"><a className="brand" href={`${basePath}/`}>roboco<span>수능 AI 평가</span></a><nav aria-label="주요 메뉴"><a href="#questions">문항별 결과</a><a href={`${basePath}/archive.html`}>기존 평가 기록</a><a className="download" href={`${basePath}/data/benchmark-v2.json`} download="benchmark-v2.json">결과 JSON 다운로드</a></nav></header>
-    <main>
-      <section className="report-heading" aria-labelledby="title">
+  const Content = embedded ? 'div' : 'main';
+  return <div className={embedded ? "benchmark-detail" : "benchmark-shell"}>
+    {!embedded && <><a className="skip-link" href="#results">평가 결과로 이동</a>
+    <header className="site-header"><a className="brand" href={`${basePath}/`}>roboco<span>수능 AI 평가</span></a><nav aria-label="주요 메뉴"><a href="#questions">문항별 결과</a><a href={`${basePath}/archive.html`}>기존 평가 기록</a><a className="download" href={`${basePath}/data/benchmark-v2.json`} download="benchmark-v2.json">결과 JSON 다운로드</a></nav></header></>}
+    <Content>
+      {!embedded && <section className="report-heading" aria-labelledby="title">
         <div><p className="year-label">{data.academic_year}학년도 대학수학능력시험</p><h1 id="title">AI의 수능 성적표</h1><p className="intro">국어·수학·영어를 풀고, 문항별 답과 평가 과정을 공개합니다.</p></div>
         <div className="report-stamp"><span className="phase">{data.phase === 'pre_exam' ? '사전 평가' : data.phase}</span><strong>{runStatus}</strong><span>{generatedAt} {data.generated_at && '(KST)'}</span></div>
-      </section>
+      </section>}
       <section className="run-info" aria-label="평가 실행 정보"><div><span>평가 모델</span><strong>{data.model}</strong></div><div><span>실행 방식</span><strong>{data.engine}</strong></div><div><span>실행 ID</span><strong className="run-id">{data.run_id}</strong></div></section>
       {!hasResults && <div className="pending-note" role="status">아직 측정 결과가 없습니다. 평가가 완료되면 이 성적표에 실제 점수와 실행 기록이 표시됩니다.</div>}
       <section id="results" className="results-section" aria-labelledby="results-heading">
@@ -68,6 +69,6 @@ export function BenchmarkDashboard({ data }: { data: BenchmarkData }) {
         <div className="question-list">{questions.length ? questions.map(q => <details className="question" key={q.id}><summary><span className="question-number">{q.number}<small>번</small></span><span className="question-title"><strong>{subjects[q.subject] || q.subject} · {sections[q.section] || q.section}</strong><small>{q.points}점 · {q.kind === 'short_answer' ? '단답형' : '객관식'}</small></span><span className={`status-badge ${q.status}`}>{labels[q.status]}</span><span className="question-time">{duration(q.time_seconds)} 추정</span><span className="expand" aria-hidden="true">+</span></summary><div className="question-body"><div className="answer-line"><div><span>모델 답</span><strong>{q.answer ?? '응답 없음'}</strong></div><div><span>정답</span><strong>{q.correct_answer}</strong></div><div><span>원문 페이지</span><strong>{q.source_page}</strong></div></div>{q.abstain_reason && <p className="abstain-reason">기권 사유: {abstainReasons[q.abstain_reason] || q.abstain_reason}</p>}<h4>모델 풀이</h4><p className="explanation">{q.explanation || (q.status === 'pending' ? '문항 풀이를 기다리고 있습니다.' : '기록된 풀이가 없습니다.')}</p><div className="question-usage"><Tokens usage={q.usage} /><span>{money(q.estimated_cost_usd)} USD · 시간·사용량·비용 균등 배분 추정</span></div><small className="question-id">{q.id}</small></div></details>) : <p className="empty-state">{data.questions.length ? '선택한 조건에 맞는 문항이 없습니다.' : '실제 평가가 완료되면 문항별 기록이 표시됩니다.'}</p>}</div>
       </section>
       <section className="method-section" aria-labelledby="method-heading"><div><h2 id="method-heading">평가 조건과 해석</h2><p>점수는 이 실행에서 얻은 원점수입니다. 표준점수, 백분위, 수능 등급으로 환산하지 않습니다.</p><p>영어 듣기 문항은 공식 대본을 읽는 텍스트 조건입니다. 원음 청취 성능을 평가한 결과가 아닙니다.</p><ul>{data.limitations.map((item, i) => <li key={i}>{item}</li>)}</ul></div><aside><h3>비용 산정 기준</h3><p>100만 토큰당 입력 ${data.pricing.input_per_million}, 캐시 입력 ${data.pricing.cached_input_per_million}, 출력 ${data.pricing.output_per_million}.</p><p>API 환산 추정값입니다. ChatGPT 구독의 실제 청구액과 다릅니다. 단가 기준일: {data.pricing.as_of}</p><h3>문제 출처</h3>{data.sources.length ? <ul>{data.sources.map((source, i) => <li key={i}><a href={source.url} target="_blank" rel="noreferrer">{subjects[source.subject] || source.subject} 공식 자료 ↗</a></li>)}</ul> : <p>평가 데이터와 함께 공식 출처가 공개됩니다.</p>}</aside></section>
-    </main><footer><span>roboco · KSAT AI Benchmark</span><span>{data.academic_year}학년도 평가 기록 · 정적 공개 자료</span></footer>
+    </Content>{!embedded && <footer><span>roboco · KSAT AI Benchmark</span><span>{data.academic_year}학년도 평가 기록 · 정적 공개 자료</span></footer>}
   </div>;
 }
