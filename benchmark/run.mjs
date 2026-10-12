@@ -8,6 +8,8 @@ import {validateAnswers,mergeSubmitted,addUsage,estimateCost,fatalStreamError,at
 import {modelById} from './models.mjs';
 import {codexSubscriptionStatus,subscriptionEnvironment,claudeAccountFingerprint,assertFreshClaudeProof} from './subscription.mjs';
 import {claudeEvents} from './claude-adapter.mjs';
+import {piEvents} from './pi-adapter.mjs';
+import {readPiSecret} from './pi-secrets.mjs';
 
 const root=resolve(import.meta.dirname,'..');
 const dataset=JSON.parse(readFileSync(join(root,'exams/datasets/2026-ksat.json'),'utf8'));
@@ -20,7 +22,13 @@ const once=process.argv.includes('--once');
 const runDir=join(root,selected.directory);mkdirSync(runDir,{recursive:true});
 const statePath=join(runDir,'run.json');
 if(existsSync(statePath)&&JSON.parse(readFileSync(statePath,'utf8')).completed){console.log(`ALREADY COMPLETE: ${selected.id}; preserving locked answers`);process.exit(0);}
-const protocol={model:selected.id,provider:selected.provider,effort:'high',sdk_version:selected.provider==='openai'?'0.162.1':'0.3.296',tools:'disabled',input:'original PDF rendered at 200 DPI',english_listening:'official transcript rendered as images',max_iterations:3,group_timeout_seconds:selected.provider==='openai'?900:600,concurrency:2,cost_limit_usd:25,subscription_only:true,api_key_fallback:false};
+const protocol={model:selected.id,provider:selected.provider,effort:'high',sdk_version:selected.pi?'Pi CLI 0.87.1':selected.provider==='openai'?'0.162.1':'0.3.296',tools:'disabled',input:'original PDF rendered at 200 DPI',english_listening:'official transcript rendered as images',max_iterations:3,group_timeout_seconds:selected.pi||selected.provider==='openai'?900:600,concurrency:2,cost_limit_usd:25,subscription_only:!selected.pi,api_key_fallback:false};
+if(selected.pi) {
+ const authorization=join(root,'.runtime/pi-api-authorization.json');
+ if(!existsSync(authorization)||!JSON.parse(readFileSync(authorization,'utf8')).allowed_models?.includes(selected.id))throw new Error('PI_BLOCKED: this model has not been authorized for API billing');
+ protocol.agent='Pi';protocol.api_model=selected.pi.model_id;protocol.api_base_url=selected.pi.base_url;protocol.max_output_tokens=selected.pi.max_tokens;protocol.effort_semantics=selected.pi.effort_semantics||'high';protocol.output_format='prompted JSON; no tools';protocol.image_resize=false;protocol.route_hash=hash(JSON.stringify({route:selected.pi,pricing:selected.pricing}));
+ readPiSecret(selected.pi.secret_name);
+}
 if(selected.provider==='anthropic') {
  for(const id of ['gpt-6-astra','gpt-6-luna']){const p=join(root,modelById(id).directory,'run.json');if(!existsSync(p)||!JSON.parse(readFileSync(p,'utf8')).completed)throw new Error('SUBSCRIPTION_BLOCKED: finish Astra and Luna before Claude');}
  const guard=join(root,'.runtime/claude-subscription-only.json');
@@ -64,6 +72,9 @@ async function solveGroup(group,iteration) {
  if(selected.provider==='openai') {
   try{const proof=await codexSubscriptionStatus();state.billing={method:proof.method,api_key_used:false,purchased_credits_available:false,included_usage_verified:true,verified_at:proof.verified_at};save();}
   catch(error){state.blocked_reason=error.message;save();invocationController.abort(error);throw error;}
+ }else if(selected.pi) {
+  state.billing={method:'pi_api',api_key_used:true,subscription_only:false,user_authorized:true,api_model:selected.pi.model_id,api_endpoint:selected.pi.base_url,reference_cost_is_invoice:false};
+  readPiSecret(selected.pi.secret_name);save();
  }else {
   try{assertFreshClaudeProof(JSON.parse(readFileSync(join(root,'.runtime/claude-subscription-only.json'),'utf8')),claudeAccountFingerprint());}
   catch(error){state.blocked_reason=error.message;save();invocationController.abort(error);throw error;}
@@ -81,7 +92,7 @@ async function solveGroup(group,iteration) {
  let final='';
  try {
   const signal=AbortSignal.any([AbortSignal.timeout(protocol.group_timeout_seconds*1000),invocationController.signal]);
-  const events=thread?(await thread.runStreamed(input,{outputSchema:schema,signal})).events:claudeEvents({model:selected.id,prompt:input[0].text,images,schema,signal});
+  const events=thread?(await thread.runStreamed(input,{outputSchema:schema,signal})).events:selected.pi?piEvents({model:selected,prompt:input[0].text,images,schema,signal,apiKey:readPiSecret(selected.pi.secret_name)}):claudeEvents({model:selected.id,prompt:input[0].text,images,schema,signal});
   for await(const event of events) {
    appendFileSync(logPath,JSON.stringify(event)+'\n');
    if(event.type==='thread.started'){attempt.thread_id=event.thread_id;save();}
@@ -100,7 +111,7 @@ async function solveGroup(group,iteration) {
   attempt.status='error';attempt.error=String(error.message);
   for(const q of questions)state.errors[q.id]={status:'error',message:attempt.error};
   console.log(`${group.id}: execution error: ${attempt.error.slice(0,200)}`);
-  if(/^(SUBSCRIPTION_BLOCKED|MODEL_MISMATCH|TOOL_BLOCKED)/.test(attempt.error)){state.blocked_reason=attempt.error;invocationController.abort(error);}
+  if(/^(SUBSCRIPTION_BLOCKED|PI_BLOCKED|MODEL_MISMATCH|TOOL_BLOCKED)/.test(attempt.error)){state.blocked_reason=attempt.error;invocationController.abort(error);}
  } finally {attempt.time_seconds=(Date.now()-started)/1000;attempt.finished_at=new Date().toISOString();save();}
 }
 const invocationStart=Date.now(),baseWall=state.wall_time_seconds;

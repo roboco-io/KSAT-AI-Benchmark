@@ -6,7 +6,7 @@
 
 ## 현재 평가 방식
 
-2026학년도 수능 홀수형 원본을 구독 로그인 기반 SDK로 평가합니다. GPT-6.1 Sol 기존 결과와 GPT-6 Astra·Luna, Claude Sonnet 5.5·Opus 5.5·Haiku 5.5·Fable 5.1을 모델별로 비교합니다. 원본 PDF를 200 DPI 이미지로 렌더링하고, 전송량을 줄이기 위해 동일한 픽셀의 무손실 WebP로 인코딩합니다. 문제 본문을 텍스트로 전사하지 않습니다.
+2026학년도 수능 홀수형 원본을 Codex·Claude SDK 및 Pi CLI로 평가합니다. GPT-6.1 Sol 기존 결과와 GPT-6 Astra·Luna, Claude Sonnet 5.5·Opus 5.5·Haiku 5.5·Fable 5.1과 Pi의 DeepSeek V4.1 Flash·GLM 5.3 Flash·Qwen3.8-27B·Kimi K3를 모델별로 비교합니다. 원본 PDF를 200 DPI 이미지로 렌더링하고, 전송량을 줄이기 위해 동일한 픽셀의 무손실 WebP로 인코딩합니다. 문제 본문을 텍스트로 전사하지 않습니다.
 
 - 국어: 공통, 화법과 작문, 언어와 매체. 선택과목별 45문항·100점.
 - 수학: 공통, 확률과 통계, 미적분, 기하. 선택과목별 30문항·100점.
@@ -56,9 +56,22 @@ Ralph 반복은 SDK에서 동일한 기본 지시와 저장된 진행 기록을 
 
 현재 실행기는 2026학년도 자료를 사용하며 모델별 결과 경로는 `benchmark/models.mjs`에 지정합니다. 다음 학년도에는 데이터·실행 경로를 분리한 설정 확장이 필요합니다. 이전 실행을 새 학년도 결과로 덮어쓰지 마세요.
 
-## 구독 전용 실행 조건
+## Pi API 실행 조건
 
-API 키와 유료 클라우드 공급자 환경 변수를 SDK 자식 프로세스에 전달하지 않습니다. Codex 요청 전 ChatGPT 로그인·포함 사용량·유료 크레딧 없음 상태를 확인합니다. Claude는 OAuth 구독 인증과 Usage credits OFF를 확인합니다. 인증 불명·한도 초과·유료 전환·모델 대체가 감지되면 다음 요청을 멈추고 활성 요청도 취소합니다.
+사용자가 API 사용을 승인한 네 모델만 Pi CLI 0.87.1로 호출합니다. 필요한 키를 `~/.zsh_secrets`에서 읽고, 해당 키 하나만 격리된 Pi 프로세스에 전달합니다. 파일을 셸로 실행하거나 키를 명령 인수·로그·결과에 남기지 않습니다. 재실행 시 `.runtime/pi-api-authorization.json`의 명시적인 모델 승인 목록을 확인합니다.
+
+```bash
+node benchmark/run.mjs --model deepseek-v4.1-flash
+node benchmark/run.mjs --model glm-5.3-flash
+node benchmark/run.mjs --model qwen3.8-27b
+node benchmark/run.mjs --model kimi-k3
+```
+
+Pi는 도구·확장·자동 재시도·문맥 압축·이미지 자동 축소를 끕니다. 모델별 경로·요율·출력 상한을 실행 기록에 보존합니다. Qwen의 thinking 활성화와 다른 모델의 high 설정은 같은 계산량으로 해석하지 않습니다. [Pi 실행 계획](docs/superpowers/plans/2026-10-12-pi-models.md)을 참조하세요.
+
+## Codex·Claude 구독 전용 실행 조건
+
+Codex·Claude SDK 자식 프로세스에는 API 키와 유료 클라우드 공급자 환경 변수를 전달하지 않습니다. Codex 요청 전 ChatGPT 로그인·포함 사용량·유료 크레딧 없음 상태를 확인합니다. Claude는 OAuth 구독 인증과 Usage credits OFF를 확인합니다. 인증 불명·한도 초과·유료 전환·모델 대체가 감지되면 다음 요청을 멈추고 활성 요청도 취소합니다.
 
 Claude의 과금 차단 확인은 계정 지문에 묶인 30분 유효의 로컬 기록 `.runtime/claude-subscription-only.json`을 사용합니다. Settings → Usage 또는 CLI의 `/usage`에서 Usage credits OFF를 직접 확인한 경우에만 확인 기록을 갱신합니다. 만료되면 모델을 호출하지 않습니다. API 키나 비용 상한 설정만으로 추가 과금 차단을 보장하지 않습니다. 확인 파일과 계정별 잔여 용량은 git·웹에 공개하지 않습니다.
 

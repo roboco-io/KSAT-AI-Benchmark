@@ -6,7 +6,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 The active 2026 evaluation uses `benchmark/run.mjs`, `models.mjs`, provider SDK adapters and `benchmark/export.mjs`. The legacy Python evaluator below is for archived results. New SDK adapters do not inherit `BaseModel` and must not use `.env` API keys.
 
-- Subscription-only authentication. No API key, paid provider, purchased-credit fallback or automatic billing route.
+- Codex/Claude remain subscription-only: no API key, paid provider, purchased-credit fallback or automatic billing route.
+- User explicitly authorized Pi CLI API use only for DeepSeek V4.1 Flash, GLM 5.3 Flash, Qwen3.8-27B and Kimi K3. Read only selected literal credentials from `~/.zsh_secrets`; never source the file or publish credentials. Require the private per-model API authorization list, exact routes and no fallback.
 - Codex: verify ChatGPT included allowance and no purchased credits before each request.
 - Claude: require first-party OAuth subscription plus fresh, account-bound confirmation that Settings → Usage credits is OFF. Confirmation is private and expires in30minutes.
 - Authenticate before releasing prompts; never pass answer keys or other model answers to a solver.
