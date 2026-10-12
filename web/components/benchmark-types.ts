@@ -15,7 +15,7 @@ export type Question = {
 };
 export type BenchmarkData = {
   schema_version: 2; generated_at: string; run_id: string; model: string; engine: string;
-  academic_year: number; phase: string; completed?: boolean;
+  academic_year: number; phase: string; completed?: boolean; usage_complete?: boolean;
   pricing: { input_per_million: number; cached_input_per_million: number; output_per_million: number; currency: string; as_of: string; basis: string };
   summary: Summary;
   exams: { id: string; title: string; subject: 'korean' | 'math' | 'english'; track: string; question_ids: string[]; max_score: number; summary: Summary & {score: number} }[];
@@ -23,7 +23,7 @@ export type BenchmarkData = {
 };
 
 export type RequestedModel = {
-  id: string; label: string; provider: 'openai' | 'anthropic' | 'deepseek' | 'zai' | 'qwen' | 'moonshot';
+  id: string; label: string; provider: string;
   state: 'complete' | 'partial' | 'pending' | 'blocked'; reason?: string | null;
 };
 export type BenchmarkComparison = {

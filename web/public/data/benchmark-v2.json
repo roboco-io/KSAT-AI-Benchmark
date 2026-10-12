@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-12T11:32:33.751Z",
+  "generated_at": "2026-10-12T14:57:20.360Z",
   "run_id": "2026-pre-exam-codex-gpt-6.1-sol",
   "model": "gpt-6.1-sol",
   "engine": "Codex SDK / Ralph loop",
@@ -4014,6 +4014,7 @@
     "concurrency": 2,
     "cost_limit_usd": 25
   },
+  "protocol_history": [],
   "billing": {
     "method": "previous_record"
   },
@@ -4025,7 +4026,7 @@
     "문항별 시간·사용량·시험별 비용은 묶음 값을 균등 배분한 추정치입니다.",
     "USD 비용은 API 요율 환산 참고값으로 실제 구독 청구액이나 API 결제액이 아닙니다.",
     "사용량 없는 실패 요청은 비용에서 제외될 수 있어 확인 가능한 사용량의 하한 추정입니다.",
-    "원본 200 DPI 이미지, high 추론, 외부 도구·검색 비활성 조건입니다. Claude의 StructuredOutput은 외부 IO가 없는 SDK 출력 형식 캐리어만 허용합니다.",
+    "원본 200 DPI 이미지, protocol에 기록한 추론 설정, 외부 도구·검색 비활성 조건입니다. Claude의 StructuredOutput은 외부 IO가 없는 SDK 출력 형식 캐리어만 허용합니다.",
     "공개된 전년도 시험의 학습 데이터 포함 가능성과 모델별 토크나이저·SDK·추론 차이를 배제하지 않습니다.",
     "Claude의 사고 토큰은 별도 보고되지 않습니다. 내부 정규화의 0은 사고 토큰이 없다는 뜻이 아니며 총 출력 토큰에 포함됩니다."
   ]

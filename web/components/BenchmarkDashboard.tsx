@@ -55,7 +55,7 @@ export function BenchmarkDashboard({ data, embedded = false }: { data: Benchmark
           <div className="metric primary"><span>전체 정답률</span><strong>{hasResults ? percent(summary.accuracy) : '—'}</strong><small>정답 {number(summary.correct)} / 전체 {number(summary.total_questions)}문항</small></div>
           <div className="metric"><span>기권률</span><strong>{hasResults ? percent(summary.abstention_rate) : '—'}</strong><small>기권 {number(summary.abstained)}문항</small></div>
           <div className="metric"><span>총 실행 시간</span><strong>{hasResults ? duration(summary.wall_time_seconds) : '—'}</strong><small>풀이 그룹 시간 합계 {duration(summary.solver_time_seconds)}</small></div>
-          <div className="metric"><span>API 환산 비용</span><strong>{hasResults ? money(summary.estimated_cost_usd) : '—'}</strong><small>USD 추정값 · 실제 청구액과 다름</small></div>
+          <div className="metric"><span>API 환산 비용</span><strong>{hasResults ? money(summary.estimated_cost_usd) : '—'}</strong><small>{data.usage_complete === false ? '일부 실패 사용량 미보고 · 하한 추정' : 'USD 추정값 · 실제 청구액과 다름'}</small></div>
         </div>
         <div className="summary-strip"><div className="status-counts">{(Object.keys(labels) as QuestionStatus[]).map(key => <span key={key}><i className={`dot ${key}`} />{labels[key]} <b>{number(key === 'error' ? summary.errors : key === 'abstained' ? summary.abstained : summary[key])}</b></span>)}</div><span>응답 문항 정답률 <b>{summary.attempt_accuracy === null ? '—' : percent(summary.attempt_accuracy)}</b></span></div>
         <div className="token-summary"><strong>토큰 사용량</strong><Tokens usage={summary.usage} /><span>캐시 토큰은 입력 토큰에 포함됩니다.</span></div>
