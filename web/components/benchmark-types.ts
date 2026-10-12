@@ -24,7 +24,7 @@ export type BenchmarkData = {
 
 export type RequestedModel = {
   id: string; label: string; provider: 'openai' | 'anthropic';
-  state: 'complete' | 'partial' | 'pending' | 'blocked'; reason?: string;
+  state: 'complete' | 'partial' | 'pending' | 'blocked'; reason?: string | null;
 };
 export type BenchmarkComparison = {
   schema_version: 3; generated_at: string; academic_year: number; repository_url: string;
