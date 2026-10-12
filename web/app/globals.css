@@ -446,6 +446,30 @@ h1 {
 .abstain-reason {
   font-size:13px;
   color:var(--badge-warn-text)}
+.question-note-label {
+  display:inline-block;
+  margin-left:8px;
+  color:var(--badge-warn-text);
+  font-weight:700}
+.question-note {
+  margin-top:22px;
+  padding:16px 20px;
+  border:1px solid var(--line);
+  border-left:3px solid var(--badge-warn-text);
+  border-radius:8px;
+  background:var(--surface)}
+.question-note h4 {
+  margin:0 0 10px;
+  color:var(--badge-warn-text)}
+.question-note p,.question-note li {
+  font-size:13px;
+  line-height:1.8;
+  overflow-wrap:anywhere}
+.question-note p {
+  margin:0 0 10px}
+.question-note ul {
+  margin:12px 0 0;
+  padding-left:20px}
 .question-usage {
   display:flex;
   flex-wrap:wrap;
