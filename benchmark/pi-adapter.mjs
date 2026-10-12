@@ -4,7 +4,7 @@ import {promisify} from 'node:util';
 import {mkdtemp,mkdir,writeFile,readFile,rm} from 'node:fs/promises';
 import {tmpdir} from 'node:os';
 import {join,resolve} from 'node:path';
-import {piEnvironment} from './pi-secrets.mjs';
+import {piEnvironment} from './pi-env.mjs';
 
 export class PiJsonlDecoder {
  decoder=new StringDecoder('utf8');

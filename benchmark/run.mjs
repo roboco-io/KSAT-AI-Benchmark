@@ -9,7 +9,7 @@ import {modelById} from './models.mjs';
 import {codexSubscriptionStatus,subscriptionEnvironment,claudeAccountFingerprint,assertFreshClaudeProof} from './subscription.mjs';
 import {claudeEvents} from './claude-adapter.mjs';
 import {piEvents} from './pi-adapter.mjs';
-import {readPiSecret} from './pi-secrets.mjs';
+import {readPiSecret} from './pi-env.mjs';
 
 const root=resolve(import.meta.dirname,'..');
 const dataset=JSON.parse(readFileSync(join(root,'exams/datasets/2026-ksat.json'),'utf8'));
