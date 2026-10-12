@@ -6,7 +6,7 @@
 
 ## 현재 평가 방식
 
-2026학년도 수능 홀수형 원본을 Codex SDK + GPT-6.1-Sol로 평가합니다. 원본 PDF를 200 DPI 이미지로 렌더링하고, 전송량을 줄이기 위해 동일한 픽셀의 무손실 WebP로 인코딩합니다. 문제 본문을 텍스트로 전사하지 않습니다.
+2026학년도 수능 홀수형 원본을 구독 로그인 기반 SDK로 평가합니다. GPT-6.1 Sol 기존 결과와 GPT-6 Astra·Luna, Claude Sonnet 5.5·Opus 5.5·Haiku 5.5·Fable 5.1을 모델별로 비교합니다. 원본 PDF를 200 DPI 이미지로 렌더링하고, 전송량을 줄이기 위해 동일한 픽셀의 무손실 WebP로 인코딩합니다. 문제 본문을 텍스트로 전사하지 않습니다.
 
 - 국어: 공통, 화법과 작문, 언어와 매체. 선택과목별 45문항·100점.
 - 수학: 공통, 확률과 통계, 미적분, 기하. 선택과목별 30문항·100점.
@@ -24,7 +24,8 @@
 ## 실행 환경
 
 - Node.js 24 이상, npm
-- Codex CLI 0.162.1, 해당 계정에서 `gpt-6.1-sol` 사용 가능
+- Codex CLI 0.162.1 및 해당 GPT 모델의 ChatGPT 구독 접근 권한
+- Claude Code 2.1.296 및 Claude 구독. API 키 인증·유료 공급자·추가 사용 크레딧을 사용하지 않습니다.
 - Poppler (`pdfinfo`, `pdftoppm`), libwebp (`cwebp`)
 - Codex 로그인: `codex login`
 
@@ -42,14 +43,26 @@ npm ci --prefix web
 
 ```bash
 npm test --prefix benchmark
-node benchmark/run.mjs
+node benchmark/run.mjs --model gpt-6-astra
+node benchmark/run.mjs --model gpt-6-luna
+# Astra·Luna 완료 후 Claude 구독의 Usage credits OFF를 직접 확인
+node benchmark/run.mjs --model claude-sonnet-5-5
+# 토큰과 실제 잔여 용량을 확인한 뒤 다른 Claude 모델을 진행
 node benchmark/export.mjs
 npm run build --prefix web
 ```
 
-Ralph 반복은 Codex SDK에서 동일한 기본 지시와 저장된 진행 기록을 사용합니다. Claude 종료 훅을 사용하지 않습니다. 제출한 답과 기권은 고정하고 미제출·실행 오류만 재개합니다. 기본 상한은 묶음당 총 3회, 900초, 동시 요청 2개, API 환산 예상 비용 25 USD입니다. 입력·프롬프트·프로토콜이 바뀌면 같은 실행에 이어 붙일 수 없습니다.
+Ralph 반복은 SDK에서 동일한 기본 지시와 저장된 진행 기록을 사용합니다. Claude 종료 훅을 사용하지 않습니다. 제출한 답과 기권은 고정하고 미제출·실행 오류만 재개합니다. 기본 상한은 묶음당 총 3회, Codex 900초·Claude 600초, 동시 요청 2개, API 환산 예상 비용 25 USD입니다. 입력·프롬프트·프로토콜이 바뀌면 같은 실행에 이어 붙일 수 없습니다.
 
-현재 실행기는 2026학년도 자료와 `results/codex-2026/`에 고정되어 있습니다. 다음 학년도에는 데이터·실행 경로를 분리한 설정 확장이 필요합니다. 이전 실행을 새 학년도 결과로 덮어쓰지 마세요.
+현재 실행기는 2026학년도 자료를 사용하며 모델별 결과 경로는 `benchmark/models.mjs`에 지정합니다. 다음 학년도에는 데이터·실행 경로를 분리한 설정 확장이 필요합니다. 이전 실행을 새 학년도 결과로 덮어쓰지 마세요.
+
+## 구독 전용 실행 조건
+
+API 키와 유료 클라우드 공급자 환경 변수를 SDK 자식 프로세스에 전달하지 않습니다. Codex 요청 전 ChatGPT 로그인·포함 사용량·유료 크레딧 없음 상태를 확인합니다. Claude는 OAuth 구독 인증과 Usage credits OFF를 확인합니다. 인증 불명·한도 초과·유료 전환·모델 대체가 감지되면 다음 요청을 멈추고 활성 요청도 취소합니다.
+
+Claude의 과금 차단 확인은 계정 지문에 묶인 30분 유효의 로컬 기록 `.runtime/claude-subscription-only.json`을 사용합니다. Settings → Usage 또는 CLI의 `/usage`에서 Usage credits OFF를 직접 확인한 경우에만 확인 기록을 갱신합니다. 만료되면 모델을 호출하지 않습니다. API 키나 비용 상한 설정만으로 추가 과금 차단을 보장하지 않습니다. 확인 파일과 계정별 잔여 용량은 git·웹에 공개하지 않습니다.
+
+첫 Claude 모델을 작은 묶음으로 확인할 때는 `--group 2026-korean-hwajak --once`를 사용합니다. 부분 실행은 완료 모델 순위에 넣지 않습니다. 제출된 답은 전체 평가를 이어갈 때도 그대로 유지합니다.
 
 ## 지표 해석
 
@@ -57,7 +70,7 @@ Ralph 반복은 Codex SDK에서 동일한 기본 지시와 저장된 진행 기�
 - 기권률: 모델이 자발적으로 기권한 문항 / 전체 평가 문항.
 - 응답 문항 정답률: 정답 문항 / 유효 답 제출 문항. 시도가 없으면 표시하지 않습니다.
 - 총 실행 시간: 실제 경과 시간. 병렬 묶음 요청 시간 합계와 구분합니다.
-- 토큰 비용: SDK가 반환한 입력·캐시·출력 토큰에 공개 API 요율을 적용한 USD 예상치. ChatGPT 구독의 실제 청구액이 아닙니다.
+- 토큰 비용: SDK의 USD 예상치 또는 입력·캐시·출력 토큰에 공개 API 요율을 적용한 참고값. 구독의 실제 청구액이 아닙니다. Claude는 SDK 예상치를 우선 사용해 캐시 보관 시간과 토큰 구간별 요율을 반영합니다.
 
 문항별 시간·토큰·시험별 비용은 묶음 요청 값을 균등 배분한 추정치입니다. 사용량을 반환하지 않은 실패 요청은 비용 추정에서 제외될 수 있습니다. 공개된 전년도 문제가 학습 데이터에 포함되었을 가능성이 있으며, 원점수를 학생의 표준점수·백분위·등급으로 환산하지 않습니다.
 
@@ -72,8 +85,10 @@ Next.js는 결과 JSON을 빌드 시 읽고 `web/out/`에 정적 HTML을 생성�
 - 공식 원본·해시: `exams/pdf/2026/sources.json`
 - 검수한 문항·정답: `exams/datasets/2026-ksat.json`
 - 실제 답안·사용량·프로토콜: `results/codex-2026/run.json`
-- 공개 데이터: `web/public/data/benchmark-v2.json`
-- 구현 계획: [Codex SDK 연례 평가 계획](docs/superpowers/plans/2026-10-12-codex-sdk-annual-benchmark.md)
+- 모델 비교 공개 데이터: `web/public/data/benchmark-comparison.json`
+- 기존 Sol 공개 데이터 호환: `web/public/data/benchmark-v2.json`
+- 구현 계획: [구독 전용 다중 모델 비교](docs/superpowers/plans/2026-10-12-multi-model-subscription.md)
+- 최초 구현: [Codex SDK 연례 평가 계획](docs/superpowers/plans/2026-10-12-codex-sdk-annual-benchmark.md)
 - 이전 방식의 문서: [이전 README](docs/LEGACY_README.md)
 
 원본 이벤트와 렌더 이미지는 `.runtime/`에 두며 git·웹에 공개하지 않습니다. 과거 방식의 결과는 대시보드의 기존 평가 기록에서 별도로 볼 수 있습니다.

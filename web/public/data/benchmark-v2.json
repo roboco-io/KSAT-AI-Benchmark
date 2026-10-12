@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-12T10:02:13.845Z",
+  "generated_at": "2026-10-12T11:32:33.751Z",
   "run_id": "2026-pre-exam-codex-gpt-6.1-sol",
   "model": "gpt-6.1-sol",
   "engine": "Codex SDK / Ralph loop",
@@ -13,7 +13,7 @@
     "output_per_million": 10,
     "currency": "USD",
     "as_of": "2026-10-12",
-    "basis": "API-equivalent estimate; ChatGPT subscription actual billing differs"
+    "basis": "API-equivalent estimate only; subscription actual billing differs"
   },
   "summary": {
     "total_questions": 147,
@@ -113,7 +113,7 @@
           "output_tokens": 11528,
           "reasoning_output_tokens": 8709.000000000002
         },
-        "estimated_cost_usd": 0.26309
+        "estimated_cost_usd": 0.26309000000000005
       }
     },
     {
@@ -190,7 +190,7 @@
           "output_tokens": 12277.00000000001,
           "reasoning_output_tokens": 9452.000000000004
         },
-        "estimated_cost_usd": 0.270558
+        "estimated_cost_usd": 0.2705580000000001
       }
     },
     {
@@ -252,7 +252,7 @@
           "output_tokens": 6921.999999999998,
           "reasoning_output_tokens": 4732
         },
-        "estimated_cost_usd": 0.19216
+        "estimated_cost_usd": 0.19216000000000005
       }
     },
     {
@@ -314,7 +314,7 @@
           "output_tokens": 8364.999999999998,
           "reasoning_output_tokens": 6234
         },
-        "estimated_cost_usd": 0.206578
+        "estimated_cost_usd": 0.20657800000000007
       }
     },
     {
@@ -376,7 +376,7 @@
           "output_tokens": 8980.999999999998,
           "reasoning_output_tokens": 6797
         },
-        "estimated_cost_usd": 0.212718
+        "estimated_cost_usd": 0.2127180000000001
       }
     },
     {
@@ -453,7 +453,7 @@
           "output_tokens": 2957.9999999999973,
           "reasoning_output_tokens": 419.9999999999998
         },
-        "estimated_cost_usd": 0.207428
+        "estimated_cost_usd": 0.20742799999999995
       }
     }
   ],
@@ -479,8 +479,8 @@
         "output_tokens": 266.02941176470586,
         "reasoning_output_tokens": 202.14705882352942
       },
-      "estimated_cost_usd": 0.00556012,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.005560117647058823,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-korean-common-q02",
@@ -503,8 +503,8 @@
         "output_tokens": 266.02941176470586,
         "reasoning_output_tokens": 202.14705882352942
       },
-      "estimated_cost_usd": 0.00556012,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.005560117647058823,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-korean-common-q03",
@@ -527,8 +527,8 @@
         "output_tokens": 266.02941176470586,
         "reasoning_output_tokens": 202.14705882352942
       },
-      "estimated_cost_usd": 0.00556012,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.005560117647058823,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-korean-common-q04",
@@ -551,8 +551,8 @@
         "output_tokens": 266.02941176470586,
         "reasoning_output_tokens": 202.14705882352942
       },
-      "estimated_cost_usd": 0.00556012,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.005560117647058823,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-korean-common-q05",
@@ -575,8 +575,8 @@
         "output_tokens": 266.02941176470586,
         "reasoning_output_tokens": 202.14705882352942
       },
-      "estimated_cost_usd": 0.00556012,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.005560117647058823,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-korean-common-q06",
@@ -599,8 +599,8 @@
         "output_tokens": 266.02941176470586,
         "reasoning_output_tokens": 202.14705882352942
       },
-      "estimated_cost_usd": 0.00556012,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.005560117647058823,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-korean-common-q07",
@@ -623,8 +623,8 @@
         "output_tokens": 266.02941176470586,
         "reasoning_output_tokens": 202.14705882352942
       },
-      "estimated_cost_usd": 0.00556012,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.005560117647058823,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-korean-common-q08",
@@ -647,8 +647,8 @@
         "output_tokens": 266.02941176470586,
         "reasoning_output_tokens": 202.14705882352942
       },
-      "estimated_cost_usd": 0.00556012,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.005560117647058823,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-korean-common-q09",
@@ -671,8 +671,8 @@
         "output_tokens": 266.02941176470586,
         "reasoning_output_tokens": 202.14705882352942
       },
-      "estimated_cost_usd": 0.00556012,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.005560117647058823,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-korean-common-q10",
@@ -695,8 +695,8 @@
         "output_tokens": 266.02941176470586,
         "reasoning_output_tokens": 202.14705882352942
       },
-      "estimated_cost_usd": 0.00556012,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.005560117647058823,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-korean-common-q11",
@@ -719,8 +719,8 @@
         "output_tokens": 266.02941176470586,
         "reasoning_output_tokens": 202.14705882352942
       },
-      "estimated_cost_usd": 0.00556012,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.005560117647058823,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-korean-common-q12",
@@ -743,8 +743,8 @@
         "output_tokens": 266.02941176470586,
         "reasoning_output_tokens": 202.14705882352942
       },
-      "estimated_cost_usd": 0.00556012,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.005560117647058823,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-korean-common-q13",
@@ -767,8 +767,8 @@
         "output_tokens": 266.02941176470586,
         "reasoning_output_tokens": 202.14705882352942
       },
-      "estimated_cost_usd": 0.00556012,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.005560117647058823,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-korean-common-q14",
@@ -791,8 +791,8 @@
         "output_tokens": 266.02941176470586,
         "reasoning_output_tokens": 202.14705882352942
       },
-      "estimated_cost_usd": 0.00556012,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.005560117647058823,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-korean-common-q15",
@@ -815,8 +815,8 @@
         "output_tokens": 266.02941176470586,
         "reasoning_output_tokens": 202.14705882352942
       },
-      "estimated_cost_usd": 0.00556012,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.005560117647058823,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-korean-common-q16",
@@ -839,8 +839,8 @@
         "output_tokens": 266.02941176470586,
         "reasoning_output_tokens": 202.14705882352942
       },
-      "estimated_cost_usd": 0.00556012,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.005560117647058823,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-korean-common-q17",
@@ -863,8 +863,8 @@
         "output_tokens": 266.02941176470586,
         "reasoning_output_tokens": 202.14705882352942
       },
-      "estimated_cost_usd": 0.00556012,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.005560117647058823,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-korean-common-q18",
@@ -887,8 +887,8 @@
         "output_tokens": 266.02941176470586,
         "reasoning_output_tokens": 202.14705882352942
       },
-      "estimated_cost_usd": 0.00556012,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.005560117647058823,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-korean-common-q19",
@@ -911,8 +911,8 @@
         "output_tokens": 266.02941176470586,
         "reasoning_output_tokens": 202.14705882352942
       },
-      "estimated_cost_usd": 0.00556012,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.005560117647058823,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-korean-common-q20",
@@ -935,8 +935,8 @@
         "output_tokens": 266.02941176470586,
         "reasoning_output_tokens": 202.14705882352942
       },
-      "estimated_cost_usd": 0.00556012,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.005560117647058823,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-korean-common-q21",
@@ -959,8 +959,8 @@
         "output_tokens": 266.02941176470586,
         "reasoning_output_tokens": 202.14705882352942
       },
-      "estimated_cost_usd": 0.00556012,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.005560117647058823,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-korean-common-q22",
@@ -983,8 +983,8 @@
         "output_tokens": 266.02941176470586,
         "reasoning_output_tokens": 202.14705882352942
       },
-      "estimated_cost_usd": 0.00556012,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.005560117647058823,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-korean-common-q23",
@@ -1007,8 +1007,8 @@
         "output_tokens": 266.02941176470586,
         "reasoning_output_tokens": 202.14705882352942
       },
-      "estimated_cost_usd": 0.00556012,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.005560117647058823,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-korean-common-q24",
@@ -1031,8 +1031,8 @@
         "output_tokens": 266.02941176470586,
         "reasoning_output_tokens": 202.14705882352942
       },
-      "estimated_cost_usd": 0.00556012,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.005560117647058823,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-korean-common-q25",
@@ -1055,8 +1055,8 @@
         "output_tokens": 266.02941176470586,
         "reasoning_output_tokens": 202.14705882352942
       },
-      "estimated_cost_usd": 0.00556012,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.005560117647058823,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-korean-common-q26",
@@ -1079,8 +1079,8 @@
         "output_tokens": 266.02941176470586,
         "reasoning_output_tokens": 202.14705882352942
       },
-      "estimated_cost_usd": 0.00556012,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.005560117647058823,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-korean-common-q27",
@@ -1103,8 +1103,8 @@
         "output_tokens": 266.02941176470586,
         "reasoning_output_tokens": 202.14705882352942
       },
-      "estimated_cost_usd": 0.00556012,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.005560117647058823,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-korean-common-q28",
@@ -1127,8 +1127,8 @@
         "output_tokens": 266.02941176470586,
         "reasoning_output_tokens": 202.14705882352942
       },
-      "estimated_cost_usd": 0.00556012,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.005560117647058823,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-korean-common-q29",
@@ -1151,8 +1151,8 @@
         "output_tokens": 266.02941176470586,
         "reasoning_output_tokens": 202.14705882352942
       },
-      "estimated_cost_usd": 0.00556012,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.005560117647058823,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-korean-common-q30",
@@ -1175,8 +1175,8 @@
         "output_tokens": 266.02941176470586,
         "reasoning_output_tokens": 202.14705882352942
       },
-      "estimated_cost_usd": 0.00556012,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.005560117647058823,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-korean-common-q31",
@@ -1199,8 +1199,8 @@
         "output_tokens": 266.02941176470586,
         "reasoning_output_tokens": 202.14705882352942
       },
-      "estimated_cost_usd": 0.00556012,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.005560117647058823,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-korean-common-q32",
@@ -1223,8 +1223,8 @@
         "output_tokens": 266.02941176470586,
         "reasoning_output_tokens": 202.14705882352942
       },
-      "estimated_cost_usd": 0.00556012,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.005560117647058823,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-korean-common-q33",
@@ -1247,8 +1247,8 @@
         "output_tokens": 266.02941176470586,
         "reasoning_output_tokens": 202.14705882352942
       },
-      "estimated_cost_usd": 0.00556012,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.005560117647058823,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-korean-common-q34",
@@ -1271,8 +1271,8 @@
         "output_tokens": 266.02941176470586,
         "reasoning_output_tokens": 202.14705882352942
       },
-      "estimated_cost_usd": 0.00556012,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.005560117647058823,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-korean-hwajak-q35",
@@ -1295,8 +1295,8 @@
         "output_tokens": 225.72727272727272,
         "reasoning_output_tokens": 166.9090909090909
       },
-      "estimated_cost_usd": 0.00673145,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.006731454545454546,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-korean-hwajak-q36",
@@ -1319,8 +1319,8 @@
         "output_tokens": 225.72727272727272,
         "reasoning_output_tokens": 166.9090909090909
       },
-      "estimated_cost_usd": 0.00673145,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.006731454545454546,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-korean-hwajak-q37",
@@ -1343,8 +1343,8 @@
         "output_tokens": 225.72727272727272,
         "reasoning_output_tokens": 166.9090909090909
       },
-      "estimated_cost_usd": 0.00673145,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.006731454545454546,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-korean-hwajak-q38",
@@ -1367,8 +1367,8 @@
         "output_tokens": 225.72727272727272,
         "reasoning_output_tokens": 166.9090909090909
       },
-      "estimated_cost_usd": 0.00673145,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.006731454545454546,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-korean-hwajak-q39",
@@ -1391,8 +1391,8 @@
         "output_tokens": 225.72727272727272,
         "reasoning_output_tokens": 166.9090909090909
       },
-      "estimated_cost_usd": 0.00673145,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.006731454545454546,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-korean-hwajak-q40",
@@ -1415,8 +1415,8 @@
         "output_tokens": 225.72727272727272,
         "reasoning_output_tokens": 166.9090909090909
       },
-      "estimated_cost_usd": 0.00673145,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.006731454545454546,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-korean-hwajak-q41",
@@ -1439,8 +1439,8 @@
         "output_tokens": 225.72727272727272,
         "reasoning_output_tokens": 166.9090909090909
       },
-      "estimated_cost_usd": 0.00673145,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.006731454545454546,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-korean-hwajak-q42",
@@ -1463,8 +1463,8 @@
         "output_tokens": 225.72727272727272,
         "reasoning_output_tokens": 166.9090909090909
       },
-      "estimated_cost_usd": 0.00673145,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.006731454545454546,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-korean-hwajak-q43",
@@ -1487,8 +1487,8 @@
         "output_tokens": 225.72727272727272,
         "reasoning_output_tokens": 166.9090909090909
       },
-      "estimated_cost_usd": 0.00673145,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.006731454545454546,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-korean-hwajak-q44",
@@ -1511,8 +1511,8 @@
         "output_tokens": 225.72727272727272,
         "reasoning_output_tokens": 166.9090909090909
       },
-      "estimated_cost_usd": 0.00673145,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.006731454545454546,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-korean-hwajak-q45",
@@ -1535,8 +1535,8 @@
         "output_tokens": 225.72727272727272,
         "reasoning_output_tokens": 166.9090909090909
       },
-      "estimated_cost_usd": 0.00673145,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.006731454545454546,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-korean-language_media-q35",
@@ -1559,8 +1559,8 @@
         "output_tokens": 293.8181818181818,
         "reasoning_output_tokens": 234.45454545454547
       },
-      "estimated_cost_usd": 0.00741036,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.007410363636363637,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-korean-language_media-q36",
@@ -1583,8 +1583,8 @@
         "output_tokens": 293.8181818181818,
         "reasoning_output_tokens": 234.45454545454547
       },
-      "estimated_cost_usd": 0.00741036,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.007410363636363637,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-korean-language_media-q37",
@@ -1607,8 +1607,8 @@
         "output_tokens": 293.8181818181818,
         "reasoning_output_tokens": 234.45454545454547
       },
-      "estimated_cost_usd": 0.00741036,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.007410363636363637,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-korean-language_media-q38",
@@ -1631,8 +1631,8 @@
         "output_tokens": 293.8181818181818,
         "reasoning_output_tokens": 234.45454545454547
       },
-      "estimated_cost_usd": 0.00741036,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.007410363636363637,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-korean-language_media-q39",
@@ -1655,8 +1655,8 @@
         "output_tokens": 293.8181818181818,
         "reasoning_output_tokens": 234.45454545454547
       },
-      "estimated_cost_usd": 0.00741036,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.007410363636363637,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-korean-language_media-q40",
@@ -1679,8 +1679,8 @@
         "output_tokens": 293.8181818181818,
         "reasoning_output_tokens": 234.45454545454547
       },
-      "estimated_cost_usd": 0.00741036,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.007410363636363637,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-korean-language_media-q41",
@@ -1703,8 +1703,8 @@
         "output_tokens": 293.8181818181818,
         "reasoning_output_tokens": 234.45454545454547
       },
-      "estimated_cost_usd": 0.00741036,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.007410363636363637,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-korean-language_media-q42",
@@ -1727,8 +1727,8 @@
         "output_tokens": 293.8181818181818,
         "reasoning_output_tokens": 234.45454545454547
       },
-      "estimated_cost_usd": 0.00741036,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.007410363636363637,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-korean-language_media-q43",
@@ -1751,8 +1751,8 @@
         "output_tokens": 293.8181818181818,
         "reasoning_output_tokens": 234.45454545454547
       },
-      "estimated_cost_usd": 0.00741036,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.007410363636363637,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-korean-language_media-q44",
@@ -1775,8 +1775,8 @@
         "output_tokens": 293.8181818181818,
         "reasoning_output_tokens": 234.45454545454547
       },
-      "estimated_cost_usd": 0.00741036,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.007410363636363637,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-korean-language_media-q45",
@@ -1799,8 +1799,8 @@
         "output_tokens": 293.8181818181818,
         "reasoning_output_tokens": 234.45454545454547
       },
-      "estimated_cost_usd": 0.00741036,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.007410363636363637,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-math-common-q01",
@@ -1823,8 +1823,8 @@
         "output_tokens": 232.1818181818182,
         "reasoning_output_tokens": 158.95454545454547
       },
-      "estimated_cost_usd": 0.00567991,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.0056799090909090905,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-math-common-q02",
@@ -1847,8 +1847,8 @@
         "output_tokens": 232.1818181818182,
         "reasoning_output_tokens": 158.95454545454547
       },
-      "estimated_cost_usd": 0.00567991,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.0056799090909090905,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-math-common-q03",
@@ -1871,8 +1871,8 @@
         "output_tokens": 232.1818181818182,
         "reasoning_output_tokens": 158.95454545454547
       },
-      "estimated_cost_usd": 0.00567991,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.0056799090909090905,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-math-common-q04",
@@ -1895,8 +1895,8 @@
         "output_tokens": 232.1818181818182,
         "reasoning_output_tokens": 158.95454545454547
       },
-      "estimated_cost_usd": 0.00567991,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.0056799090909090905,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-math-common-q05",
@@ -1919,8 +1919,8 @@
         "output_tokens": 232.1818181818182,
         "reasoning_output_tokens": 158.95454545454547
       },
-      "estimated_cost_usd": 0.00567991,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.0056799090909090905,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-math-common-q06",
@@ -1943,8 +1943,8 @@
         "output_tokens": 232.1818181818182,
         "reasoning_output_tokens": 158.95454545454547
       },
-      "estimated_cost_usd": 0.00567991,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.0056799090909090905,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-math-common-q07",
@@ -1967,8 +1967,8 @@
         "output_tokens": 232.1818181818182,
         "reasoning_output_tokens": 158.95454545454547
       },
-      "estimated_cost_usd": 0.00567991,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.0056799090909090905,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-math-common-q08",
@@ -1991,8 +1991,8 @@
         "output_tokens": 232.1818181818182,
         "reasoning_output_tokens": 158.95454545454547
       },
-      "estimated_cost_usd": 0.00567991,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.0056799090909090905,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-math-common-q09",
@@ -2015,8 +2015,8 @@
         "output_tokens": 232.1818181818182,
         "reasoning_output_tokens": 158.95454545454547
       },
-      "estimated_cost_usd": 0.00567991,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.0056799090909090905,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-math-common-q10",
@@ -2039,8 +2039,8 @@
         "output_tokens": 232.1818181818182,
         "reasoning_output_tokens": 158.95454545454547
       },
-      "estimated_cost_usd": 0.00567991,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.0056799090909090905,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-math-common-q11",
@@ -2063,8 +2063,8 @@
         "output_tokens": 232.1818181818182,
         "reasoning_output_tokens": 158.95454545454547
       },
-      "estimated_cost_usd": 0.00567991,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.0056799090909090905,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-math-common-q12",
@@ -2087,8 +2087,8 @@
         "output_tokens": 232.1818181818182,
         "reasoning_output_tokens": 158.95454545454547
       },
-      "estimated_cost_usd": 0.00567991,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.0056799090909090905,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-math-common-q13",
@@ -2111,8 +2111,8 @@
         "output_tokens": 232.1818181818182,
         "reasoning_output_tokens": 158.95454545454547
       },
-      "estimated_cost_usd": 0.00567991,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.0056799090909090905,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-math-common-q14",
@@ -2135,8 +2135,8 @@
         "output_tokens": 232.1818181818182,
         "reasoning_output_tokens": 158.95454545454547
       },
-      "estimated_cost_usd": 0.00567991,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.0056799090909090905,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-math-common-q15",
@@ -2159,8 +2159,8 @@
         "output_tokens": 232.1818181818182,
         "reasoning_output_tokens": 158.95454545454547
       },
-      "estimated_cost_usd": 0.00567991,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.0056799090909090905,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-math-common-q16",
@@ -2183,8 +2183,8 @@
         "output_tokens": 232.1818181818182,
         "reasoning_output_tokens": 158.95454545454547
       },
-      "estimated_cost_usd": 0.00567991,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.0056799090909090905,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-math-common-q17",
@@ -2207,8 +2207,8 @@
         "output_tokens": 232.1818181818182,
         "reasoning_output_tokens": 158.95454545454547
       },
-      "estimated_cost_usd": 0.00567991,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.0056799090909090905,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-math-common-q18",
@@ -2231,8 +2231,8 @@
         "output_tokens": 232.1818181818182,
         "reasoning_output_tokens": 158.95454545454547
       },
-      "estimated_cost_usd": 0.00567991,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.0056799090909090905,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-math-common-q19",
@@ -2255,8 +2255,8 @@
         "output_tokens": 232.1818181818182,
         "reasoning_output_tokens": 158.95454545454547
       },
-      "estimated_cost_usd": 0.00567991,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.0056799090909090905,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-math-common-q20",
@@ -2279,8 +2279,8 @@
         "output_tokens": 232.1818181818182,
         "reasoning_output_tokens": 158.95454545454547
       },
-      "estimated_cost_usd": 0.00567991,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.0056799090909090905,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-math-common-q21",
@@ -2303,8 +2303,8 @@
         "output_tokens": 232.1818181818182,
         "reasoning_output_tokens": 158.95454545454547
       },
-      "estimated_cost_usd": 0.00567991,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.0056799090909090905,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-math-common-q22",
@@ -2327,8 +2327,8 @@
         "output_tokens": 232.1818181818182,
         "reasoning_output_tokens": 158.95454545454547
       },
-      "estimated_cost_usd": 0.00567991,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.0056799090909090905,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-math-probability-q23",
@@ -2352,7 +2352,7 @@
         "reasoning_output_tokens": 154.375
       },
       "estimated_cost_usd": 0.00840025,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-math-probability-q24",
@@ -2376,7 +2376,7 @@
         "reasoning_output_tokens": 154.375
       },
       "estimated_cost_usd": 0.00840025,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-math-probability-q25",
@@ -2400,7 +2400,7 @@
         "reasoning_output_tokens": 154.375
       },
       "estimated_cost_usd": 0.00840025,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-math-probability-q26",
@@ -2424,7 +2424,7 @@
         "reasoning_output_tokens": 154.375
       },
       "estimated_cost_usd": 0.00840025,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-math-probability-q27",
@@ -2448,7 +2448,7 @@
         "reasoning_output_tokens": 154.375
       },
       "estimated_cost_usd": 0.00840025,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-math-probability-q28",
@@ -2472,7 +2472,7 @@
         "reasoning_output_tokens": 154.375
       },
       "estimated_cost_usd": 0.00840025,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-math-probability-q29",
@@ -2496,7 +2496,7 @@
         "reasoning_output_tokens": 154.375
       },
       "estimated_cost_usd": 0.00840025,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-math-probability-q30",
@@ -2520,7 +2520,7 @@
         "reasoning_output_tokens": 154.375
       },
       "estimated_cost_usd": 0.00840025,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-math-calculus-q23",
@@ -2544,7 +2544,7 @@
         "reasoning_output_tokens": 342.125
       },
       "estimated_cost_usd": 0.0102025,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-math-calculus-q24",
@@ -2568,7 +2568,7 @@
         "reasoning_output_tokens": 342.125
       },
       "estimated_cost_usd": 0.0102025,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-math-calculus-q25",
@@ -2592,7 +2592,7 @@
         "reasoning_output_tokens": 342.125
       },
       "estimated_cost_usd": 0.0102025,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-math-calculus-q26",
@@ -2616,7 +2616,7 @@
         "reasoning_output_tokens": 342.125
       },
       "estimated_cost_usd": 0.0102025,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-math-calculus-q27",
@@ -2640,7 +2640,7 @@
         "reasoning_output_tokens": 342.125
       },
       "estimated_cost_usd": 0.0102025,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-math-calculus-q28",
@@ -2664,7 +2664,7 @@
         "reasoning_output_tokens": 342.125
       },
       "estimated_cost_usd": 0.0102025,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-math-calculus-q29",
@@ -2688,7 +2688,7 @@
         "reasoning_output_tokens": 342.125
       },
       "estimated_cost_usd": 0.0102025,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-math-calculus-q30",
@@ -2712,7 +2712,7 @@
         "reasoning_output_tokens": 342.125
       },
       "estimated_cost_usd": 0.0102025,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-math-geometry-q23",
@@ -2736,7 +2736,7 @@
         "reasoning_output_tokens": 412.5
       },
       "estimated_cost_usd": 0.01097,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-math-geometry-q24",
@@ -2760,7 +2760,7 @@
         "reasoning_output_tokens": 412.5
       },
       "estimated_cost_usd": 0.01097,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-math-geometry-q25",
@@ -2784,7 +2784,7 @@
         "reasoning_output_tokens": 412.5
       },
       "estimated_cost_usd": 0.01097,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-math-geometry-q26",
@@ -2808,7 +2808,7 @@
         "reasoning_output_tokens": 412.5
       },
       "estimated_cost_usd": 0.01097,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-math-geometry-q27",
@@ -2832,7 +2832,7 @@
         "reasoning_output_tokens": 412.5
       },
       "estimated_cost_usd": 0.01097,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-math-geometry-q28",
@@ -2856,7 +2856,7 @@
         "reasoning_output_tokens": 412.5
       },
       "estimated_cost_usd": 0.01097,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-math-geometry-q29",
@@ -2880,7 +2880,7 @@
         "reasoning_output_tokens": 412.5
       },
       "estimated_cost_usd": 0.01097,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-math-geometry-q30",
@@ -2904,7 +2904,7 @@
         "reasoning_output_tokens": 412.5
       },
       "estimated_cost_usd": 0.01097,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-english-english-q01",
@@ -2927,8 +2927,8 @@
         "output_tokens": 65.73333333333333,
         "reasoning_output_tokens": 9.333333333333334
       },
-      "estimated_cost_usd": 0.00460951,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.004609511111111111,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-english-english-q02",
@@ -2951,8 +2951,8 @@
         "output_tokens": 65.73333333333333,
         "reasoning_output_tokens": 9.333333333333334
       },
-      "estimated_cost_usd": 0.00460951,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.004609511111111111,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-english-english-q03",
@@ -2975,8 +2975,8 @@
         "output_tokens": 65.73333333333333,
         "reasoning_output_tokens": 9.333333333333334
       },
-      "estimated_cost_usd": 0.00460951,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.004609511111111111,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-english-english-q04",
@@ -2999,8 +2999,8 @@
         "output_tokens": 65.73333333333333,
         "reasoning_output_tokens": 9.333333333333334
       },
-      "estimated_cost_usd": 0.00460951,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.004609511111111111,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-english-english-q05",
@@ -3023,8 +3023,8 @@
         "output_tokens": 65.73333333333333,
         "reasoning_output_tokens": 9.333333333333334
       },
-      "estimated_cost_usd": 0.00460951,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.004609511111111111,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-english-english-q06",
@@ -3047,8 +3047,8 @@
         "output_tokens": 65.73333333333333,
         "reasoning_output_tokens": 9.333333333333334
       },
-      "estimated_cost_usd": 0.00460951,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.004609511111111111,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-english-english-q07",
@@ -3071,8 +3071,8 @@
         "output_tokens": 65.73333333333333,
         "reasoning_output_tokens": 9.333333333333334
       },
-      "estimated_cost_usd": 0.00460951,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.004609511111111111,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-english-english-q08",
@@ -3095,8 +3095,8 @@
         "output_tokens": 65.73333333333333,
         "reasoning_output_tokens": 9.333333333333334
       },
-      "estimated_cost_usd": 0.00460951,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.004609511111111111,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-english-english-q09",
@@ -3119,8 +3119,8 @@
         "output_tokens": 65.73333333333333,
         "reasoning_output_tokens": 9.333333333333334
       },
-      "estimated_cost_usd": 0.00460951,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.004609511111111111,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-english-english-q10",
@@ -3143,8 +3143,8 @@
         "output_tokens": 65.73333333333333,
         "reasoning_output_tokens": 9.333333333333334
       },
-      "estimated_cost_usd": 0.00460951,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.004609511111111111,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-english-english-q11",
@@ -3167,8 +3167,8 @@
         "output_tokens": 65.73333333333333,
         "reasoning_output_tokens": 9.333333333333334
       },
-      "estimated_cost_usd": 0.00460951,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.004609511111111111,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-english-english-q12",
@@ -3191,8 +3191,8 @@
         "output_tokens": 65.73333333333333,
         "reasoning_output_tokens": 9.333333333333334
       },
-      "estimated_cost_usd": 0.00460951,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.004609511111111111,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-english-english-q13",
@@ -3215,8 +3215,8 @@
         "output_tokens": 65.73333333333333,
         "reasoning_output_tokens": 9.333333333333334
       },
-      "estimated_cost_usd": 0.00460951,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.004609511111111111,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-english-english-q14",
@@ -3239,8 +3239,8 @@
         "output_tokens": 65.73333333333333,
         "reasoning_output_tokens": 9.333333333333334
       },
-      "estimated_cost_usd": 0.00460951,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.004609511111111111,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-english-english-q15",
@@ -3263,8 +3263,8 @@
         "output_tokens": 65.73333333333333,
         "reasoning_output_tokens": 9.333333333333334
       },
-      "estimated_cost_usd": 0.00460951,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.004609511111111111,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-english-english-q16",
@@ -3287,8 +3287,8 @@
         "output_tokens": 65.73333333333333,
         "reasoning_output_tokens": 9.333333333333334
       },
-      "estimated_cost_usd": 0.00460951,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.004609511111111111,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-english-english-q17",
@@ -3311,8 +3311,8 @@
         "output_tokens": 65.73333333333333,
         "reasoning_output_tokens": 9.333333333333334
       },
-      "estimated_cost_usd": 0.00460951,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.004609511111111111,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-english-english-q18",
@@ -3335,8 +3335,8 @@
         "output_tokens": 65.73333333333333,
         "reasoning_output_tokens": 9.333333333333334
       },
-      "estimated_cost_usd": 0.00460951,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.004609511111111111,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-english-english-q19",
@@ -3359,8 +3359,8 @@
         "output_tokens": 65.73333333333333,
         "reasoning_output_tokens": 9.333333333333334
       },
-      "estimated_cost_usd": 0.00460951,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.004609511111111111,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-english-english-q20",
@@ -3383,8 +3383,8 @@
         "output_tokens": 65.73333333333333,
         "reasoning_output_tokens": 9.333333333333334
       },
-      "estimated_cost_usd": 0.00460951,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.004609511111111111,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-english-english-q21",
@@ -3407,8 +3407,8 @@
         "output_tokens": 65.73333333333333,
         "reasoning_output_tokens": 9.333333333333334
       },
-      "estimated_cost_usd": 0.00460951,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.004609511111111111,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-english-english-q22",
@@ -3431,8 +3431,8 @@
         "output_tokens": 65.73333333333333,
         "reasoning_output_tokens": 9.333333333333334
       },
-      "estimated_cost_usd": 0.00460951,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.004609511111111111,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-english-english-q23",
@@ -3455,8 +3455,8 @@
         "output_tokens": 65.73333333333333,
         "reasoning_output_tokens": 9.333333333333334
       },
-      "estimated_cost_usd": 0.00460951,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.004609511111111111,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-english-english-q24",
@@ -3479,8 +3479,8 @@
         "output_tokens": 65.73333333333333,
         "reasoning_output_tokens": 9.333333333333334
       },
-      "estimated_cost_usd": 0.00460951,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.004609511111111111,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-english-english-q25",
@@ -3503,8 +3503,8 @@
         "output_tokens": 65.73333333333333,
         "reasoning_output_tokens": 9.333333333333334
       },
-      "estimated_cost_usd": 0.00460951,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.004609511111111111,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-english-english-q26",
@@ -3527,8 +3527,8 @@
         "output_tokens": 65.73333333333333,
         "reasoning_output_tokens": 9.333333333333334
       },
-      "estimated_cost_usd": 0.00460951,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.004609511111111111,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-english-english-q27",
@@ -3551,8 +3551,8 @@
         "output_tokens": 65.73333333333333,
         "reasoning_output_tokens": 9.333333333333334
       },
-      "estimated_cost_usd": 0.00460951,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.004609511111111111,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-english-english-q28",
@@ -3575,8 +3575,8 @@
         "output_tokens": 65.73333333333333,
         "reasoning_output_tokens": 9.333333333333334
       },
-      "estimated_cost_usd": 0.00460951,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.004609511111111111,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-english-english-q29",
@@ -3599,8 +3599,8 @@
         "output_tokens": 65.73333333333333,
         "reasoning_output_tokens": 9.333333333333334
       },
-      "estimated_cost_usd": 0.00460951,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.004609511111111111,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-english-english-q30",
@@ -3623,8 +3623,8 @@
         "output_tokens": 65.73333333333333,
         "reasoning_output_tokens": 9.333333333333334
       },
-      "estimated_cost_usd": 0.00460951,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.004609511111111111,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-english-english-q31",
@@ -3647,8 +3647,8 @@
         "output_tokens": 65.73333333333333,
         "reasoning_output_tokens": 9.333333333333334
       },
-      "estimated_cost_usd": 0.00460951,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.004609511111111111,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-english-english-q32",
@@ -3671,8 +3671,8 @@
         "output_tokens": 65.73333333333333,
         "reasoning_output_tokens": 9.333333333333334
       },
-      "estimated_cost_usd": 0.00460951,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.004609511111111111,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-english-english-q33",
@@ -3695,8 +3695,8 @@
         "output_tokens": 65.73333333333333,
         "reasoning_output_tokens": 9.333333333333334
       },
-      "estimated_cost_usd": 0.00460951,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.004609511111111111,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-english-english-q34",
@@ -3719,8 +3719,8 @@
         "output_tokens": 65.73333333333333,
         "reasoning_output_tokens": 9.333333333333334
       },
-      "estimated_cost_usd": 0.00460951,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.004609511111111111,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-english-english-q35",
@@ -3743,8 +3743,8 @@
         "output_tokens": 65.73333333333333,
         "reasoning_output_tokens": 9.333333333333334
       },
-      "estimated_cost_usd": 0.00460951,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.004609511111111111,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-english-english-q36",
@@ -3767,8 +3767,8 @@
         "output_tokens": 65.73333333333333,
         "reasoning_output_tokens": 9.333333333333334
       },
-      "estimated_cost_usd": 0.00460951,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.004609511111111111,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-english-english-q37",
@@ -3791,8 +3791,8 @@
         "output_tokens": 65.73333333333333,
         "reasoning_output_tokens": 9.333333333333334
       },
-      "estimated_cost_usd": 0.00460951,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.004609511111111111,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-english-english-q38",
@@ -3815,8 +3815,8 @@
         "output_tokens": 65.73333333333333,
         "reasoning_output_tokens": 9.333333333333334
       },
-      "estimated_cost_usd": 0.00460951,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.004609511111111111,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-english-english-q39",
@@ -3839,8 +3839,8 @@
         "output_tokens": 65.73333333333333,
         "reasoning_output_tokens": 9.333333333333334
       },
-      "estimated_cost_usd": 0.00460951,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.004609511111111111,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-english-english-q40",
@@ -3863,8 +3863,8 @@
         "output_tokens": 65.73333333333333,
         "reasoning_output_tokens": 9.333333333333334
       },
-      "estimated_cost_usd": 0.00460951,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.004609511111111111,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-english-english-q41",
@@ -3887,8 +3887,8 @@
         "output_tokens": 65.73333333333333,
         "reasoning_output_tokens": 9.333333333333334
       },
-      "estimated_cost_usd": 0.00460951,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.004609511111111111,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-english-english-q42",
@@ -3911,8 +3911,8 @@
         "output_tokens": 65.73333333333333,
         "reasoning_output_tokens": 9.333333333333334
       },
-      "estimated_cost_usd": 0.00460951,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.004609511111111111,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-english-english-q43",
@@ -3935,8 +3935,8 @@
         "output_tokens": 65.73333333333333,
         "reasoning_output_tokens": 9.333333333333334
       },
-      "estimated_cost_usd": 0.00460951,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.004609511111111111,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-english-english-q44",
@@ -3959,8 +3959,8 @@
         "output_tokens": 65.73333333333333,
         "reasoning_output_tokens": 9.333333333333334
       },
-      "estimated_cost_usd": 0.00460951,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.004609511111111111,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     },
     {
       "id": "2026-english-english-q45",
@@ -3983,8 +3983,8 @@
         "output_tokens": 65.73333333333333,
         "reasoning_output_tokens": 9.333333333333334
       },
-      "estimated_cost_usd": 0.00460951,
-      "measurement_basis": "Group request duration and usage divided equally across questions; not individual measurement"
+      "estimated_cost_usd": 0.004609511111111111,
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
     }
   ],
   "sources": [
@@ -4001,16 +4001,7 @@
       "url": "https://www.suneung.re.kr/boardCnts/view.do?boardID=1500234&boardSeq=5093799&lev=0&m=0403&s=suneung"
     }
   ],
-  "limitations": [
-    "영어 듣기 1~17번은 공식 대본 이미지로 평가했습니다. 실제 음성 청취 성능이 아닙니다.",
-    "정답률·기권률 전체는 선택과목 공통 문항을 한 번만 센 147개 고유 문항 기준입니다.",
-    "전체 풀이 시간은 실제 경과 시간이며 묶음별 시간 합계는 병렬 처리로 더 클 수 있습니다.",
-    "문항별 시간·사용량과 시험별 비용은 묶음 요청의 값을 균등 배분한 추정치입니다.",
-    "비용은 공개 API 요율의 USD 예상치입니다. ChatGPT 구독 인증의 실제 청구액이 아닙니다.",
-    "원본 PDF 이미지 입력, high 추론, 외부 도구·검색 비활성 조건입니다.",
-    "공개된 전년도 시험이 학습 데이터에 포함되었을 가능성을 배제하지 않습니다.",
-    "토큰 사용량을 반환하지 않은 연결 실패 시도의 사용량·비용은 포함하지 못했습니다. 비용은 확인 가능한 사용량 기준의 하한 추정치입니다."
-  ],
+  "completed": true,
   "protocol": {
     "model": "gpt-6.1-sol",
     "effort": "high",
@@ -4023,6 +4014,19 @@
     "concurrency": 2,
     "cost_limit_usd": 25
   },
-  "completed": true,
-  "usage_complete": false
+  "billing": {
+    "method": "previous_record"
+  },
+  "usage_complete": false,
+  "limitations": [
+    "영어 듣기 1~17번은 공식 대본 이미지로 평가합니다. 실제 음성 청취 성능이 아닙니다.",
+    "전체 지표는 공통 문항을 한 번만 센 147개 고유 문항 기준입니다.",
+    "전체 풀이 시간은 실제 경과 시간이며 병렬 묶음 시간 합계와 다릅니다.",
+    "문항별 시간·사용량·시험별 비용은 묶음 값을 균등 배분한 추정치입니다.",
+    "USD 비용은 API 요율 환산 참고값으로 실제 구독 청구액이나 API 결제액이 아닙니다.",
+    "사용량 없는 실패 요청은 비용에서 제외될 수 있어 확인 가능한 사용량의 하한 추정입니다.",
+    "원본 200 DPI 이미지, high 추론, 외부 도구·검색 비활성 조건입니다. Claude의 StructuredOutput은 외부 IO가 없는 SDK 출력 형식 캐리어만 허용합니다.",
+    "공개된 전년도 시험의 학습 데이터 포함 가능성과 모델별 토크나이저·SDK·추론 차이를 배제하지 않습니다.",
+    "Claude의 사고 토큰은 별도 보고되지 않습니다. 내부 정규화의 0은 사고 토큰이 없다는 뜻이 아니며 총 출력 토큰에 포함됩니다."
+  ]
 }
