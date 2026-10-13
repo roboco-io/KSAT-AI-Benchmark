@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import raw from '@/public/data/english-q37-debate.json';
+import comparison from '@/public/data/benchmark-comparison.json';
+import type { BenchmarkComparison } from '@/components/benchmark-types';
 import { questionNotes } from '@/lib/question-notes';
 import { formatKst } from '@/lib/format-date.mjs';
 
@@ -15,7 +17,15 @@ type Debate = { completed: boolean; started_at: string; finished_at?: string; pr
 const data = raw as Debate;
 const models = [{ id: 'claude-fable-5-1', label: 'Claude Fable 5.1' }, { id: 'gpt-6-astra', label: 'GPT-6 Astra' }];
 const verdicts: Record<string, string> = { single_4: '④번 단일정답', single_5: '⑤번 단일정답', both_plausible: '두 배열 모두 성립 가능', undetermined: '판단 유보' };
-const choice = (value: number | null | undefined) => value === 4 ? '④ (C → A → B)' : value === 5 ? '⑤ (C → B → A)' : '선호 답 유보';
+const choices: Record<number, string> = { 1: '① (A → C → B)', 2: '② (B → A → C)', 3: '③ (B → C → A)', 4: '④ (C → A → B)', 5: '⑤ (C → B → A)' };
+const choice = (value: number | null | undefined) => value ? choices[value] || `${value}번` : '선호 답 유보';
+const existingResults = comparison as BenchmarkComparison;
+const otherAnswers = existingResults.requested_models.filter(model => !models.some(participant => participant.id === model.id)).map(model => ({
+  model,
+  question: existingResults.models.find(result => result.model === model.id)?.questions.find(question => question.id === '2026-english-english-q37'),
+}));
+const answerCounts = Object.entries(choices).map(([answer, label]) => ({ label, count: otherAnswers.filter(entry => entry.question?.answer === Number(answer)).length })).filter(entry => entry.count > 0);
+const gradingLabels = { correct: '정답', incorrect: '오답', abstained: '기권', error: '실행 오류', pending: '미제출' };
 const basePath = process.env.NODE_ENV === 'production' ? '/KSAT-AI-Benchmark' : '';
 const sources = questionNotes['2026-english-english-q37'].sources;
 
@@ -42,6 +52,7 @@ export default function DebatePage() {
         return response && <details className="debate-statement" key={model.id} open={round.number === 3}><summary>{model.label}<span>{choice(response.preferred_answer)}</span></summary><div><p className="explanation">{response.statement}</p><h4>본문 근거</h4><ul>{response.evidence.map((evidence, index) => <li key={index}>{evidence}</li>)}</ul><h4>가장 강한 반론과 답변</h4><p className="explanation">{response.counterargument}</p><h4>판단 변화</h4><p className="explanation">{response.change}</p><p className="debate-confidence">확신: {response.confidence} / 100 · 검증된 확률이 아닌 모델 자기평가</p></div></details>;
       })}</section>)}</section>
       <section className="debate-section" aria-labelledby="baseline-heading"><h2 id="baseline-heading">원래 시험 답안과의 차이</h2><p>원래 시험에서는 Fable이 ④번, Astra가 ⑤번을 제출했습니다. 새 토론의 최종 선호는 각각 ⑤번과 ④번으로 바뀌었습니다. 이 기록은 모델의 판단이 일관되게 고정되지 않았음을 보여줍니다. 입력 맥락과 검토 방식이 다르므로 조건 차이도 결과 해석에 포함해야 합니다. 이 기존 답안 정보는 토론 종료 후에만 추가했습니다.</p><ul>{data.context_added_after_debate?.previous_exam_answers.map(answer => <li key={answer.model}><a href={`https://github.com/roboco-io/KSAT-AI-Benchmark/blob/main/${answer.source}`} target="_blank" rel="noreferrer">{models.find(model => model.id === answer.model)?.label}의 기존 제출 답안 {answer.answer}번 ↗</a><p className="explanation">{answer.explanation}</p></li>)}</ul></section>
+      <section id="other-model-answers" className="debate-section" aria-labelledby="other-models-heading"><h2 id="other-models-heading">다른 모델의 기존 답안과 근거</h2><p>Fable·Astra를 제외한 {otherAnswers.length}개 모델이 원래 시험에서 제출한 영어 37번 답안과 설명을 그대로 모았습니다. 새 토론 발언이 아니며, 두 토론 모델의 입력에도 제공하지 않았습니다.</p><p><strong>제출 답안 분포:</strong> {answerCounts.map(entry => `${entry.label} ${entry.count}개`).join(' · ')}. 이 분포는 정답을 결정하는 다수결이 아닙니다.</p><div className="debate-table-wrap"><table className="debate-table other-model-table"><caption className="sr-only">다른 모델의 기존 영어 37번 제출 답안, 공식 채점과 원문 풀이</caption><thead><tr><th scope="col">모델</th><th scope="col">제출 답안</th><th scope="col">공식 채점</th><th scope="col">제출 근거 원문</th></tr></thead><tbody>{otherAnswers.map(({model, question}) => <tr key={model.id}><th scope="row">{model.label}{model.state === 'partial' && <small>전체 시험 불완전 · 이 문항은 {question?.answer !== null && question?.answer !== undefined ? '제출 완료' : '미제출'}</small>}</th><td data-label="제출 답안">{question?.answer !== null && question?.answer !== undefined ? choice(question.answer) : '답안 없음'}</td><td data-label="공식 채점">{gradingLabels[question?.status || 'pending']}</td><td data-label="제출 근거 원문">{question && ['correct', 'incorrect', 'abstained'].includes(question.status) ? question.explanation || '기록된 설명 없음' : '제출된 풀이 없음'}</td></tr>)}</tbody></table></div><p><a href={`${basePath}/data/benchmark-comparison.json`} download>기존 수험 답안·근거 전체 JSON 다운로드</a> · 공식 정답 ⑤번을 기준으로 한 채점입니다.</p></section>
       <section className="debate-section" aria-labelledby="method-heading"><h2 id="method-heading">토론 조건과 한계</h2><ul><li>Fable은 Claude Agent SDK, Astra는 Codex SDK의 지정 모델로 실행했습니다. API 키나 유료 대체 모델을 사용하지 않았습니다.</li><li>두 모델에 동일한 원본 문제지 7쪽의 200 DPI 무손실 이미지를 제공했습니다. 37번만 분석하도록 지시했습니다.</li><li>초기 판단에는 공식 정답, 기존 모델 답안, 논쟁 기사를 제공하지 않았습니다. 모델이 학습 과정에서 문제나 정답을 접했을 가능성은 배제할 수 없습니다.</li><li>각 발언은 새 격리 세션에서 생성했습니다. 2단계부터는 앞선 두 모델의 발언 원문 전체를 동일하게 제공했습니다.</li><li>검색과 외부 도구는 비활성화했습니다. 특정 답을 옹호하는 역할을 부여하지 않았으며, 반론 수용과 판단 변경을 허용했습니다.</li><li>모델별 high 설정의 내부 계산량은 동일하다고 볼 수 없습니다. 한 번의 토론이며 사람 전문가의 독립 검증을 대신하지 않습니다.</li><li>원문 문장 연결만 검토한 사후 토론입니다. 원래 수능 평가와 입력 맥락·목적이 다르므로 새 벤치마크 점수로 집계하지 않습니다.</li></ul><details className="debate-statement"><summary>실행·사용량 기록</summary><div>{models.map(model => {
         const turns = data.rounds.flatMap(round => round.participants).filter(participant => participant.model === model.id);
         return <p key={model.id}>{model.label}: {turns.filter(turn => turn.status === 'completed').length}회 발언 · 입력 {turns.reduce((sum, turn) => sum + (turn.usage?.input_tokens || 0), 0).toLocaleString('ko-KR')}토큰 · 출력 {turns.reduce((sum, turn) => sum + (turn.usage?.output_tokens || 0), 0).toLocaleString('ko-KR')}토큰 · API 환산 참고 비용 ${turns.reduce((sum, turn) => sum + (turn.estimated_cost_usd || 0), 0).toFixed(4)} (실측 청구액이 아님)</p>;
