@@ -470,6 +470,78 @@ h1 {
 .question-note ul {
   margin:12px 0 0;
   padding-left:20px}
+.debate-shell {
+  max-width:1100px}
+.debate-section {
+  margin:36px 0;
+  padding-bottom:28px;
+  border-bottom:1px solid var(--line)}
+.debate-section>p,.debate-section>ul {
+  max-width:80ch}
+.debate-section h2 {
+  font-size:24px}
+.debate-verdicts {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:24px;
+  margin:24px 0}
+.debate-verdicts article {
+  padding:20px;
+  background:var(--surface);
+  border-top:3px solid var(--indigo)}
+.debate-verdicts h3 {
+  margin:0 0 12px}
+.debate-choice {
+  font-size:24px;
+  font-weight:700;
+  margin:0 0 8px}
+.debate-verdicts small,.debate-confidence {
+  color:var(--muted)}
+.debate-issues>div {
+  margin:16px 0}
+.debate-issues dt {
+  font-weight:700}
+.debate-issues dd {
+  margin:6px 0}
+.debate-table-wrap {
+  overflow-x:auto}
+.debate-table {
+  width:100%;
+  border-collapse:collapse;
+  background:var(--surface)}
+.debate-table th,.debate-table td {
+  padding:16px;
+  border-bottom:1px solid var(--line);
+  text-align:left}
+.debate-table td small {
+  display:block;
+  color:var(--muted)}
+.debate-round {
+  margin:28px 0}
+.debate-statement {
+  margin:12px 0;
+  border:1px solid var(--line);
+  background:var(--surface)}
+.debate-statement summary {
+  cursor:pointer;
+  padding:16px;
+  font-weight:700}
+.debate-statement summary span {
+  display:inline-block;
+  margin-left:20px;
+  color:var(--indigo)}
+.debate-statement>div {
+  padding:4px 24px 24px;
+  overflow-wrap:anywhere}
+.debate-statement li {
+  margin-bottom:8px}
+@media(max-width:640px) {
+  .debate-verdicts {grid-template-columns:1fr;gap:12px}
+  .debate-table th,.debate-table td {padding:10px;font-size:12px}
+  .debate-choice {font-size:22px}
+  .debate-statement>div {padding:4px 16px 16px}
+  .debate-statement summary span {display:block;margin:6px 0 0}
+}
 .question-usage {
   display:flex;
   flex-wrap:wrap;
