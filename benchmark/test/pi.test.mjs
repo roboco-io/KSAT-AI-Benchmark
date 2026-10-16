@@ -61,7 +61,7 @@ if(settings.images.autoResize!==false||settings.compaction.enabled!==false||sett
 const promptPath=argv.find(a=>a.startsWith('@')).slice(1);
 if(!fs.readFileSync(promptPath,'utf8').includes('"answers"'))process.exit(9);
 if(fixture.hang){setInterval(()=>{},1000);return;}
-const message={role:'assistant',provider:'ksat-pi',model:'qwen3.8-27b',content:[{type:'thinking',thinking:'private reasoning'},{type:'text',text:fixture.text??'{"answers":[{"id":"q1","answer":2}]}'}],usage:{input:100,cacheRead:20,cacheWrite:3,output:40,reasoning:12,cost:{total:0.002}},stopReason:'stop',timestamp:1};
+const message={role:'assistant',provider:'ksat-pi',model:'qwen3.8-27b',content:[{type:'thinking',thinking:'private reasoning'},{type:'text',text:fixture.text??'{"answers":[{"id":"q1","answer":2}]}'}],usage:{input:100,cacheRead:20,cacheWrite:3,output:40,reasoning:12,cost:{total:0.002}},stopReason:fixture.stopReason??'stop',errorMessage:fixture.errorMessage,timestamp:1};
 const events=[{type:'session',id:'offline-session'},{type:'agent_start'},{type:'message_end',message},{type:'agent_end',willRetry:false}];
 if(!fixture.noSettled)events.push({type:'agent_settled'});
 for(const event of events)process.stdout.write(JSON.stringify(event)+'\\n');
@@ -120,4 +120,10 @@ test('private transport diagnostics redact exact credentials and authorization h
  const value=redactPiError('Authorization: Bearer fixture-private-key; api=fixture-private-key; token=sk-fixturefragment', 'fixture-private-key');
  assert.equal(value.includes('fixture-private-key'),false);
  assert.equal(value.includes('sk-fixturefragment'),false);
+});
+
+test('Pi provider timeout detail remains identifiable after public error normalization',async t=>{
+ const result=await collectPi({piExecutable:await fakePi(t,{stopReason:'error',errorMessage:'Request timed out.'})});
+ assert.match(result.error.message,/code=RequestTimeout/);
+ assert.equal(result.events.some(event=>event.type==='item.completed'),false);
 });

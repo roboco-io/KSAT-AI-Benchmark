@@ -87,7 +87,7 @@ function responseFailure(message) {
  if(scope)return new Error(`PI_CONTENT_BLOCKED: provider content inspection rejected response; scope=${scope}; code=DataInspectionFailed`);
  const knownCodes=['RateLimitExceeded','PayloadTooLarge','Arrearage','InsufficientBalance','InvalidParameter','InvalidParameter.UnsupportedMediaType','DataInspectionFailed','RequestTimeout','InternalError','model_not_found','context_length_exceeded','insufficient_quota'];
  const normalized=detail.toLowerCase().replace(/[^a-z]/g,'');
- const code=knownCodes.find(value=>normalized.includes(value.toLowerCase().replace(/[^a-z]/g,'')));
+ const code=/\btimed out\b|TimeoutError/i.test(detail)?'RequestTimeout':knownCodes.find(value=>normalized.includes(value.toLowerCase().replace(/[^a-z]/g,'')));
  if (/quota|Arrearage|insufficient.*(?:balance|funds)|credit|billing|payment|unauthorized|authentication|invalid.*api.?key|(?:^|\D)(?:401|402|403)(?:\D|$)/i.test(message.errorMessage??'')) return new Error('PI_BLOCKED: provider authentication, quota, or billing rejected the request');
  return new Error('PI_TURN_FAILED: provider did not finish a complete answer'+(code?`; code=${code}`:''));
 }

@@ -17,3 +17,10 @@ test('counts recorded refusal and timeout attempts including retries, not affect
  assert.deepEqual(executionStats(run),{refusal_count:3,timeout_count:2});
  assert.deepEqual(executionStats({groups:{},protocol:{}}),{refusal_count:0,timeout_count:0});
 });
+
+test('preserved Argon diagnostic corrects only its exact historical failed request',()=>{
+ const run={run_id:'2026-pre-exam-pi-gemini-4-argon',protocol:{model:'gemini-4-argon',group_timeout_seconds:900},groups:{'2026-korean-language_media':{attempts:[{iteration:1,status:'error',error:'PI_TURN_FAILED: provider did not finish a complete answer',started_at:'2026-10-16T04:06:11.585Z',time_seconds:303.333}]}}};
+ assert.deepEqual(executionStats(run),{refusal_count:0,timeout_count:1});
+ const changed=structuredClone(run);changed.groups['2026-korean-language_media'].attempts[0].started_at='different';
+ assert.deepEqual(executionStats(changed),{refusal_count:0,timeout_count:0});
+});

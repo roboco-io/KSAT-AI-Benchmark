@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-16T22:02:56.593Z",
+  "generated_at": "2026-10-16T22:18:00.584Z",
   "run_id": "2026-pre-exam-codex-gpt-6.1-sol",
   "model": "gpt-6.1-sol",
   "engine": "Codex SDK / Ralph loop",
@@ -9,6 +9,7 @@
     "refusal_count": 0,
     "timeout_count": 0
   },
+  "execution_stats_evidence": [],
   "phase": "pre_exam",
   "pricing": {
     "input_per_million": 2,
