@@ -1,11 +1,12 @@
 'use client';
 
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { ThemeControl } from './ThemeControl';
 import { BenchmarkDashboard } from './BenchmarkDashboard';
 import type { BenchmarkComparison, BenchmarkData, RequestedModel } from './benchmark-types';
 import { formatKst } from '@/lib/format-date.mjs';
 import { RobocoBrand } from './RobocoBrand';
+import { modelFromSearch, modelShareUrl } from '@/lib/model-link.mjs';
 
 const providerLabels: Record<string, string> = { openai: 'OpenAI', anthropic: 'Anthropic', deepseek: 'DeepSeek', zai: 'Z.ai', qwen: 'Qwen', moonshot: 'Moonshot AI', google: 'Google' };
 const states = { complete: '평가 완료', partial: '평가 불완전', pending: '평가 대기', blocked: '실행 차단' };
@@ -32,7 +33,19 @@ function complete(model: RequestedModel, result?: BenchmarkData) {
 }
 
 export function ComparisonDashboard({ data }: { data: BenchmarkComparison }) {
-  const [selected, setSelected] = useState(data.models[0]?.model ?? data.requested_models[0]?.id ?? '');
+  const defaultModel = data.models[0]?.model ?? data.requested_models[0]?.id ?? '';
+  const [selected, setSelected] = useState(defaultModel);
+  useEffect(() => {
+    const syncSelection = () => setSelected(modelFromSearch(window.location.search, data.requested_models.map(model => model.id)) ?? defaultModel);
+    syncSelection();
+    window.addEventListener('popstate', syncSelection);
+    return () => window.removeEventListener('popstate', syncSelection);
+  }, [data.requested_models, defaultModel]);
+  function selectModel(modelId: string) {
+    setSelected(modelId);
+    const url = modelShareUrl(window.location.href, modelId);
+    if (url !== window.location.href) window.history.pushState(null, '', url);
+  }
   const [sort, setSort] = useState<{ key: SortKey; direction: 'asc' | 'desc' }>({ key: 'accuracy', direction: 'desc' });
   function changeSort(key: SortKey) {
     setSort(previous => ({ key, direction: previous.key === key ? (previous.direction === 'desc' ? 'asc' : 'desc') : key === 'model' || key === 'state' ? 'asc' : 'desc' }));
@@ -41,7 +54,7 @@ export function ComparisonDashboard({ data }: { data: BenchmarkComparison }) {
   const sortButton = (key: SortKey, label = sortLabels[key]) => <button type="button" className="sort-header" onClick={() => changeSort(key)} aria-label={`${label} 정렬`} title={`${label} 정렬 방향 전환`}>{label}<span aria-hidden="true">{sort.key === key ? sort.direction === 'asc' ? '↑' : '↓' : '↕'}</span></button>;
   const detailRef = useRef<HTMLElement>(null);
   function showModelRecords(modelId: string) {
-    setSelected(modelId);
+    selectModel(modelId);
     detailRef.current?.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth', block: 'start' });
   }
   const current = data.models.find(model => model.model === selected);
@@ -96,7 +109,7 @@ export function ComparisonDashboard({ data }: { data: BenchmarkComparison }) {
         })}</tbody></table></div>
         <p className="comparison-note">{executionPolicy} 비용은 토큰 사용량을 API 단가로 환산한 추정값이며 실제 청구액이 아닙니다. 토큰 정렬은 입력과 출력의 합계 기준이며 캐시는 입력에 포함됩니다. 화작·언매는 국어, 확통·미적·기하는 수학 선택과목입니다.</p>
       </section>
-      <section id="model-records" ref={detailRef} className="model-detail-section" aria-labelledby="model-detail-title"><div className="detail-heading"><div><h2 id="model-detail-title" aria-live="polite">{request?.label} 평가 기록</h2><p>공통 문항은 전체 집계에서 한 번만 계산합니다.</p></div><label>평가 모델<select value={selected} onChange={event => setSelected(event.target.value)}>{data.requested_models.map(model => <option key={model.id} value={model.id}>{model.label} · {states[model.state]}</option>)}</select></label></div>
+      <section id="model-records" ref={detailRef} className="model-detail-section" aria-labelledby="model-detail-title"><div className="detail-heading"><div><h2 id="model-detail-title" aria-live="polite">{request?.label} 평가 기록</h2><p>공통 문항은 전체 집계에서 한 번만 계산합니다.</p></div><label>평가 모델<select value={selected} onChange={event => selectModel(event.target.value)}>{data.requested_models.map(model => <option key={model.id} value={model.id}>{model.label} · {states[model.state]}</option>)}</select></label></div>
         {current && (request?.state === 'complete' || request?.state === 'partial') ? <BenchmarkDashboard key={selected} data={current} embedded /> : <div className="unrun-model" role="status"><strong>{request?.label}</strong><span>{request ? states[request.state] : '평가 대기'}</span><p>{request?.reason || '이 모델의 실제 평가 결과가 아직 없습니다.'}</p></div>}
       </section>
     </main><footer><a href={data.repository_url} target="_blank" rel="noreferrer">GitHub에서 코드·평가 자료 확인 ↗</a><span>roboco · KSAT AI Benchmark · {data.academic_year}학년도</span></footer>
