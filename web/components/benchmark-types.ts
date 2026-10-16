@@ -23,7 +23,8 @@ export type BenchmarkData = {
   summary: Summary;
   official_summary?: Summary;
   grading_policy?: { id: string; effective_date: string; question_id: string; official_answer: number; accepted_answers: number[]; annotation: string; rationale: string };
-  execution_stats?: { refusal_count: number; timeout_count: number };
+  execution_stats?: { refusal_count: number; timeout_count: number; retry_count: number };
+  protocol?: { effort?: string; tools?: string; input?: string; english_listening?: string };
   exams: { id: string; title: string; subject: 'korean' | 'math' | 'english'; track: string; question_ids: string[]; max_score: number; summary: Summary & {score: number}; official_summary?: Summary }[];
   questions: Question[]; sources: { subject: string; url: string }[]; limitations: string[];
 };

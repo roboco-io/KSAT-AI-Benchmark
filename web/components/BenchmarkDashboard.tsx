@@ -57,7 +57,7 @@ export function BenchmarkDashboard({ data, embedded = false }: { data: Benchmark
         <div className="section-title"><h2 id="results-heading">전체 평가</h2><span>공통 문항은 한 번만 집계</span></div>
         <div className="metrics">
           <div className="metric primary"><span>{data.grading_policy ? '벤치마크 정답률' : '전체 정답률'}</span><strong>{hasResults ? percent(summary.accuracy) : '—'}<GradingMark adjusted={summary.adjusted_correct} /></strong><small>정답 {number(summary.correct)} / 전체 {number(summary.total_questions)}문항</small>{data.official_summary && <small>공식 기준 {percent(data.official_summary.accuracy)} · {data.official_summary.correct}/{data.official_summary.total_questions}문항</small>}</div>
-          <div className="metric"><span>기권률</span><strong>{hasResults ? percent(summary.abstention_rate) : '—'}</strong><small>기권 {number(summary.abstained)}문항</small></div>
+          <div className="metric"><span>기권 횟수</span><strong>{hasResults ? `${number(summary.abstained)}회` : '—'}</strong><small>기권을 확정한 문항 수</small></div>
           <div className="metric"><span>총 실행 시간</span><strong>{hasResults ? duration(summary.wall_time_seconds) : '—'}</strong><small>풀이 그룹 시간 합계 {duration(summary.solver_time_seconds)}</small></div>
           <div className="metric"><span>API 환산 비용</span><strong>{hasResults ? money(summary.estimated_cost_usd) : '—'}</strong><small>{data.usage_complete === false ? '일부 실패 사용량 미보고 · 하한 추정' : 'USD 추정값 · 실제 청구액과 다름'}</small></div>
         </div>

@@ -938,3 +938,36 @@ html body {
 .academic-year-picker p,.legacy-year-note p { color:var(--muted); font-size:12px; }
 .legacy-year-note { padding-bottom:0; }.legacy-year-note h1 { font-size:30px; }
 @media(max-width:640px) { .academic-year-picker { align-items:flex-start; flex-direction:column; gap:7px; }.academic-year-picker p { margin:0; } }
+
+/* Keep the comparison compact; execution diagnostics open with the selected model. */
+.accordion-indicator { color:var(--muted); margin-left:8px; font-size:15px; font-weight:400; }
+.comparison-table .model-analysis-row>td { background:var(--surface); padding:0; }
+.model-analysis { border-left:3px solid var(--indigo); padding:22px 24px; }
+.model-analysis h3 { font-size:16px; margin:0 0 12px; }
+.model-analysis-summary { max-width:78ch; font-size:13px; line-height:1.8; }
+.model-analysis-summary p { margin:0 0 7px; }
+.execution-metrics { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; border-top:1px solid var(--line); padding-top:16px; margin:18px 0; }
+.execution-metrics dt { color:var(--muted); font-size:11px; margin-bottom:5px; }
+.execution-metrics dd { margin:0; font-size:13px; font-weight:650; overflow-wrap:anywhere; }
+.execution-definition,.execution-method { font-size:11px; color:var(--muted); line-height:1.7; max-width:95ch; }
+.execution-method summary,.comparison-method summary { cursor:pointer; font-size:12px; color:var(--muted); }
+.show-model-answers,.hide-model-answers { background:transparent; color:var(--indigo); border:0; padding:0; margin-top:16px; font-size:12px; cursor:pointer; font-weight:650; }
+.comparison-method { margin-top:10px; }
+@media(max-width:640px) {
+  .comparison-table .model-analysis-row { display:table-row; }
+  .comparison-table .model-analysis-row>td { display:table-cell; width:auto; padding:0; }
+  .comparison-table .model-analysis-row>td:before { display:none; }
+  .model-analysis { padding:18px 16px; }
+  .execution-metrics { grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
+}
+/* A compact grid avoids anonymous table columns from the expanded detail row. */
+@media(max-width:640px) {
+  .comparison-table,.comparison-table thead,.comparison-table tbody { display:block; }
+  .comparison-table tr { display:grid; grid-template-columns:minmax(0,39fr) minmax(0,25fr) minmax(0,21fr) minmax(0,15fr); }
+  .comparison-table .model-cell { display:block; width:auto; grid-column:auto; }
+  .comparison-table thead th:first-child,.comparison-table thead th:nth-child(2) { width:auto; }
+  .comparison-table thead th,.comparison-table td { display:block; min-width:0; }
+  .comparison-table .model-analysis-row { display:block; }
+  .comparison-table .model-analysis-row>td { display:block; width:100%; }
+}
+.comparison-table tbody .model-analysis-row { cursor:default; }
