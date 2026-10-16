@@ -1,13 +1,14 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-16T22:18:00.584Z",
+  "generated_at": "2026-10-16T22:23:15.246Z",
   "run_id": "2026-pre-exam-codex-gpt-6.1-sol",
   "model": "gpt-6.1-sol",
   "engine": "Codex SDK / Ralph loop",
   "academic_year": 2026,
   "execution_stats": {
     "refusal_count": 0,
-    "timeout_count": 0
+    "timeout_count": 0,
+    "retry_count": 3
   },
   "execution_stats_evidence": [],
   "phase": "pre_exam",

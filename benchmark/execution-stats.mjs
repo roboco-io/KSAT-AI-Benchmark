@@ -1,6 +1,12 @@
 import {executionEvidence} from './execution-evidence.mjs';
 export function executionStats(run) {
- const stats={refusal_count:0,timeout_count:0};
+ const stats={refusal_count:0,timeout_count:0,retry_count:0};
+ const originalGroups=new Map();
+ for(const [id,group] of Object.entries(run.groups??{})) {
+  const original=group.original_group_id??id;
+  originalGroups.set(original,(originalGroups.get(original)??0)+(group.attempts?.length??0));
+ }
+ stats.retry_count=[...originalGroups.values()].reduce((sum,count)=>sum+Math.max(0,count-1),0);
  const evidence=executionEvidence(run);
  for(const [groupId,group] of Object.entries(run.groups??{}))for(const attempt of group.attempts??[]) {
   if(attempt.status!=='error')continue;
