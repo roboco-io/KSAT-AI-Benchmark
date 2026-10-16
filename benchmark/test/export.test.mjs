@@ -23,3 +23,48 @@ test('Pi report uses the recorded model output limit and generic API wording',()
  assert.ok(report.limitations.some(text=>text.includes('32,768')));
  assert.ok(!report.limitations.some(text=>text.includes('네 모델')||text.includes('65,536')||text.includes('DeepSeek')));
 });
+
+test('English 37 accepts 4 and 5 with official grading retained and only 4 marked',()=>{
+ const question={id:'2026-english-english-q37',kind:'multiple_choice',correct_answer:5,points:3};
+ const dataset={academic_year:2026,questions:[question],solver_groups:[{id:'english',question_ids:[question.id]}],exams:[{id:'english',question_ids:[question.id],max_score:3}]};
+ for(const [answer,correct,officialCorrect,adjusted] of [[4,1,0,1],[5,1,1,0],[3,0,0,0],[null,0,0,0]]) {
+  const run={protocol:{model:'fixture'},groups:{},answers:{[question.id]:{decision:answer===null?'abstained':'answered',answer,explanation:'original',abstain_reason:answer===null?'uncertain':null}},errors:{},usage:{input_tokens:100,output_tokens:20},wall_time_seconds:7};
+  const before=JSON.stringify({dataset,run});
+  const report=buildReport(dataset,run,[],{},'fixture');
+  assert.equal(report.summary.correct,correct);
+  assert.equal(report.summary.adjusted_correct,adjusted);
+  assert.equal(report.summary.score,correct*3);
+  assert.equal(report.official_summary.correct,officialCorrect);
+  assert.equal(report.exams[0].summary.score,correct*3);
+  assert.equal(report.exams[0].official_summary.score,officialCorrect*3);
+  assert.equal(report.questions[0].benchmark_adjusted,Boolean(adjusted));
+  assert.equal(report.questions[0].official_status,answer===null?'abstained':answer===5?'correct':'incorrect');
+  assert.equal(report.questions[0].answer,answer);
+  assert.equal(report.questions[0].correct_answer,5);
+  assert.deepEqual(report.questions[0].accepted_answers,[4,5]);
+  assert.equal(JSON.stringify({dataset,run}),before);
+ }
+ for(const errors of [{},{[question.id]:{message:'failed'}}]) {
+  const report=buildReport(dataset,{protocol:{model:'fixture'},groups:{},answers:{},errors,usage:{},wall_time_seconds:0},[],{},'fixture');
+  assert.equal(report.summary.correct,0);
+  assert.equal(report.summary.adjusted_correct,0);
+  assert.equal(report.questions[0].status,errors[question.id]?'error':'pending');
+ }
+ const older=buildReport({...dataset,academic_year:2025},{protocol:{model:'fixture'},groups:{},answers:{[question.id]:{decision:'answered',answer:4}},errors:{},usage:{},wall_time_seconds:0},[],{},'fixture');
+ assert.equal(older.summary.correct,0);
+ assert.equal(older.grading_policy,undefined);
+});
+test('Q37 policy does not credit other fourth-choice answers or change usage and timing',()=>{
+ const ids=['2026-english-english-q37','2026-english-english-q36','2026-math-common-q37'];
+ const questions=ids.map(id=>({id,kind:'multiple_choice',correct_answer:5,points:3}));
+ const dataset={academic_year:2026,questions,solver_groups:[{id:'group',question_ids:ids}],exams:[{id:'exam',question_ids:ids,max_score:9}]};
+ const run={protocol:{model:'fixture'},groups:{group:{attempts:[{usage:{input_tokens:100,output_tokens:20},time_seconds:9}]}},answers:Object.fromEntries(ids.map(id=>[id,{decision:'answered',answer:4,explanation:'original'}])),errors:{},usage:{input_tokens:100,output_tokens:20},wall_time_seconds:7};
+ const report=buildReport(dataset,run,[],{input_per_million:2,output_per_million:10},'fixture');
+ assert.deepEqual(report.questions.map(q=>q.status),['correct','incorrect','incorrect']);
+ assert.equal(report.summary.correct,1);
+ assert.equal(report.summary.incorrect,2);
+ assert.equal(report.summary.score,3);
+ assert.ok(Math.abs(report.summary.accuracy-33.33333333333333)<1e-12);
+ assert.equal(report.official_summary.correct,0);
+ for(const key of ['usage','wall_time_seconds','solver_time_seconds','estimated_cost_usd'])assert.deepEqual(report.summary[key],report.official_summary[key]);
+});

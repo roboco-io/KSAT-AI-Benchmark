@@ -1,3 +1,5 @@
+import {executionStats} from './execution-stats.mjs';
+import {applyBenchmarkGrading} from './grading.mjs';
 import {addUsage,summarize,outcome,estimateCost} from './core.mjs';
 export function buildReport(dataset,run,sources,pricing,engine) {
  const stats={};
@@ -20,7 +22,7 @@ export function buildReport(dataset,run,sources,pricing,engine) {
  });
  const summary=summarize(dataset.questions,run.answers,run.errors,run.usage,run.wall_time_seconds,totalSeconds,pricing);
  summary.estimated_cost_usd=Number(Object.values(stats).reduce((s,g)=>s+g.cost,0).toFixed(8));
- return {schema_version:2,generated_at:new Date().toISOString(),run_id:run.run_id,model:run.protocol.model,engine,academic_year:dataset.academic_year||2026,phase:run.phase,pricing,summary,exams,questions,sources,completed:run.completed===true,protocol:run.protocol,protocol_history:run.protocol_history||[],billing:run.billing||{method:'previous_record'},usage_complete:Object.values(run.groups).every(g=>g.attempts.every(a=>Number.isFinite(a.usage?.input_tokens)&&Number.isFinite(a.usage?.output_tokens)&&!a.api_usage_unknown&&(run.protocol.agent!=='Pi'||a.usage.input_tokens+a.usage.output_tokens>0))),limitations:[...(run.protocol.batch_max_questions?[`기존 묶음 실행 오류 후 미제출 문항을 최대 ${run.protocol.batch_max_questions}문항씩 한 차례 복구했습니다. 이전 실행 조건·실패 사용량·답안은 protocol_history와 원본 실행 기록에 보존합니다.`]:[]),...(run.protocol.agent==='Pi'?[
+ return applyBenchmarkGrading({schema_version:2,generated_at:new Date().toISOString(),run_id:run.run_id,model:run.protocol.model,engine,academic_year:dataset.academic_year||2026,execution_stats:executionStats(run),phase:run.phase,pricing,summary,exams,questions,sources,completed:run.completed===true,protocol:run.protocol,protocol_history:run.protocol_history||[],billing:run.billing||{method:'previous_record'},usage_complete:Object.values(run.groups).every(g=>g.attempts.every(a=>Number.isFinite(a.usage?.input_tokens)&&Number.isFinite(a.usage?.output_tokens)&&!a.api_usage_unknown&&(run.protocol.agent!=='Pi'||a.usage.input_tokens+a.usage.output_tokens>0))),limitations:[...(run.protocol.batch_max_questions?[`기존 묶음 실행 오류 후 미제출 문항을 최대 ${run.protocol.batch_max_questions}문항씩 한 차례 복구했습니다. 이전 실행 조건·실패 사용량·답안은 protocol_history와 원본 실행 기록에 보존합니다.`]:[]),...(run.protocol.agent==='Pi'?[
   'Pi 모델은 사용자 승인 API 인증으로 실행합니다. Codex·Claude 구독 결과와 인증 경로가 다릅니다.',
   `Pi CLI 0.87.1, 도구·확장·자동 재시도·문맥 압축·이미지 자동 축소 비활성, 묶음당 출력 상한 ${(run.protocol.max_output_tokens??65536).toLocaleString('en-US')}토큰입니다.`,
   'Pi의 총 입력은 비캐시 입력·캐시 읽기·캐시 쓰기의 합이며 추론 토큰은 총 출력의 부분집합입니다. 제공자가 별도 추론 값을 주지 않으면 0은 미보고를 뜻할 수 있습니다.',
@@ -36,5 +38,5 @@ export function buildReport(dataset,run,sources,pricing,engine) {
   '원본 200 DPI 이미지, protocol에 기록한 추론 설정, 외부 도구·검색 비활성 조건입니다. Claude의 StructuredOutput은 외부 IO가 없는 SDK 출력 형식 캐리어만 허용합니다.',
   '공개된 전년도 시험의 학습 데이터 포함 가능성과 모델별 토크나이저·SDK·추론 차이를 배제하지 않습니다.',
   'Claude의 사고 토큰은 별도 보고되지 않습니다. 내부 정규화의 0은 사고 토큰이 없다는 뜻이 아니며 총 출력 토큰에 포함됩니다.',
- ]};
+ ]});
 }
