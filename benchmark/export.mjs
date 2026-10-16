@@ -8,7 +8,7 @@ const sources=JSON.parse(readFileSync(join(root,'exams/pdf/2026/sources.json'),'
 const reports=[];const requested=[];
 for(const model of MODELS) {
  const path=join(root,model.directory,'run.json');
- if(!existsSync(path)){requested.push({id:model.id,label:model.label,provider:model.provider,state:model.provider==='google'?'blocked':'pending',reason:model.provider==='google'?'Antigravity CLI headless 네이티브 이미지 입력 미지원':model.pi?'Pi API 인증·실행 준비 중':model.provider==='anthropic'?'Claude 구독의 추가 유료 사용 OFF 확인 후 실행':'구독 포함 사용량으로 실행 예정'});continue;}
+ if(!existsSync(path)){requested.push({id:model.id,label:model.label,provider:model.provider,state:model.provider==='google'&&!model.pi?'blocked':'pending',reason:model.provider==='google'&&!model.pi?'Antigravity CLI headless 네이티브 이미지 입력 미지원':model.pi?'Pi API 인증·실행 준비 중':model.provider==='anthropic'?'Claude 구독의 추가 유료 사용 OFF 확인 후 실행':'구독 포함 사용량으로 실행 예정'});continue;}
  const run=JSON.parse(readFileSync(path,'utf8'));
  const report=buildReport(dataset,run,sources,model.pricing,model.pi?'Pi CLI 0.87.1 / Ralph loop':model.provider==='openai'?'Codex SDK / Ralph loop':'Claude Agent SDK / Ralph loop');
  reports.push(report);requested.push({id:model.id,label:model.label,provider:model.provider,state:run.completed?'complete':run.blocked_reason?'blocked':'partial',reason:run.blocked_reason||run.finalization?.reason||(!run.completed?'아직 모든 문항이 제출되지 않았습니다.':null)});

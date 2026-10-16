@@ -24,7 +24,7 @@ if(!allowedGroups.length)throw new Error('Unknown solver group');
 const once=process.argv.includes('--once');
 const recoveryIndex=process.argv.indexOf('--recover-with-batches');
 const requestedBatchSize=recoveryIndex>=0?Number(process.argv[recoveryIndex+1]):null;
-if(selected.provider==='google'||selected.agent==='antigravity')throw new Error('ANTIGRAVITY_BLOCKED: agy 1.3.2 headless native image input is unsupported; no substitute agent');
+if((selected.provider==='google'&&!selected.pi)||selected.agent==='antigravity')throw new Error('ANTIGRAVITY_BLOCKED: agy 1.3.2 headless native image input is unsupported; no substitute agent');
 if(!['openai','anthropic'].includes(selected.provider)&&!selected.pi)throw new Error('RUNTIME_BLOCKED: this provider requires a verified Pi profile');
 const runDir=join(root,selected.directory);mkdirSync(runDir,{recursive:true});
 const statePath=join(runDir,'run.json');
@@ -48,7 +48,7 @@ const sourcePaths=[...new Set(dataset.solver_groups.flatMap(g=>[g.pdf_path,g.tra
 const sourceHashes=Object.fromEntries(sourcePaths.map(p=>[p,hash(readFileSync(join(root,p)))]));
 const sourceManifest=JSON.parse(readFileSync(join(root,'exams/pdf/2026/sources.json'),'utf8'));
 for(const p of sourcePaths)if(sourceManifest.files.find(f=>f.path===p)?.sha256!==sourceHashes[p])throw new Error(`Source integrity check failed: ${p}`);
-let state=existsSync(statePath)?JSON.parse(readFileSync(statePath,'utf8')):{schema_version:2,run_id:`2026-pre-exam-${selected.provider==='openai'?'codex':'claude'}-${selected.id}`,academic_year:2026,phase:'pre_exam',started_at:new Date().toISOString(),protocol,dataset_hash:datasetHash,answers:{},errors:{},groups:{},iterations:[],usage:{},wall_time_seconds:0};
+let state=existsSync(statePath)?JSON.parse(readFileSync(statePath,'utf8')):{schema_version:2,run_id:`2026-pre-exam-${selected.pi?'pi':selected.provider==='openai'?'codex':'claude'}-${selected.id}`,academic_year:2026,phase:'pre_exam',started_at:new Date().toISOString(),protocol,dataset_hash:datasetHash,answers:{},errors:{},groups:{},iterations:[],usage:{},wall_time_seconds:0};
 if(state.dataset_hash!==datasetHash)throw new Error('Resume refused: input changed. Preserve existing run and start a new run directory.');
 const batchSize=requestedBatchSize??state.protocol.batch_max_questions;
 if(batchSize!==undefined&&batchSize!==null) {

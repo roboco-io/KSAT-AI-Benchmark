@@ -1,6 +1,7 @@
 import {existsSync,readdirSync,readFileSync} from 'node:fs';
 import {join} from 'node:path';
 export function routeAgent(model) {
+ if(model.provider==='google'&&model.agent==='pi'&&model.pi)return 'pi';
  return model.provider==='openai'?'codex':model.provider==='anthropic'?'claude':model.provider==='google'?'antigravity':'pi';
 }
 export function validateProfile(model) {
@@ -19,6 +20,7 @@ export function validateProfile(model) {
  if(agent==='pi') {
   const p=model.pi;let url;try{url=new URL(p?.base_url);}catch{}
   if(!p||p.provider!=='ksat-pi'||typeof p.model_id!=='string'||!p.model_id||!url||url.protocol!=='https:'||url.username||url.password||url.search||url.hash||!/^[A-Z][A-Z0-9_]*$/.test(p.secret_name)||![p.context_window,p.max_tokens].every(n=>Number.isSafeInteger(n)&&n>0)||p.max_tokens>p.context_window)throw new Error('MODEL_PROFILE_INVALID: explicit Pi image-capable route and credential variable required');
+  if(model.provider==='google'&&(p.base_url!=='https://generativelanguage.googleapis.com/v1beta/openai/'||p.model_id!==model.id||p.secret_name!=='GEMINI_API_KEY'||(p.api&&p.api!=='openai-completions')))throw new Error('MODEL_PROFILE_INVALID: Google Pi requires its explicit official Gemini API route');
   fields(p,['provider','model_id','base_url','secret_name','context_window','max_tokens','compat','effort_semantics','thinking_level_map','api']);
   if(p.compat)fields(p.compat,['thinkingFormat','supportsReasoningEffort','supportsDeveloperRole','supportsStore','maxTokensField','supportsUsageInStreaming','supportsFinishReason','requiresReasoningContentOnAssistantMessages','supportsStrictMode','supportsThinkingTokenBudget','thinkingTokenBudgetField']);
   if(p.thinking_level_map) {

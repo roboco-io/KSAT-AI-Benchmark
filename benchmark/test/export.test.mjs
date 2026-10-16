@@ -16,3 +16,10 @@ test('each model is scored independently and shared questions are not double cou
  assert.equal(recoveredReport.summary.estimated_cost_usd,15);
  assert.equal(recoveredReport.usage_complete,false);
 });
+test('Pi report uses the recorded model output limit and generic API wording',()=>{
+ const dataset={questions:[],solver_groups:[],exams:[]};
+ const run={protocol:{model:'gemini-4-argon',agent:'Pi',max_output_tokens:32768,effort_semantics:'high'},groups:{},answers:{},errors:{},usage:{},wall_time_seconds:0};
+ const report=buildReport(dataset,run,[],{},'Pi CLI');
+ assert.ok(report.limitations.some(text=>text.includes('32,768')));
+ assert.ok(!report.limitations.some(text=>text.includes('네 모델')||text.includes('65,536')||text.includes('DeepSeek')));
+});
