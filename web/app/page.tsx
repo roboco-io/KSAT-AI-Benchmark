@@ -1,7 +1,7 @@
 import data from '@/public/data/benchmark-comparison.json';
-import { ComparisonDashboard } from '@/components/ComparisonDashboard';
+import { AcademicYearDashboard } from '@/components/AcademicYearDashboard';
 import type { BenchmarkComparison } from '@/components/benchmark-types';
 
 export default function Home() {
-  return <ComparisonDashboard data={data as BenchmarkComparison} />;
+  return <AcademicYearDashboard data={data as BenchmarkComparison} />;
 }

@@ -928,3 +928,13 @@ html body {
 .model-cell button { display:inline; }
 .grading-policy-note { background:var(--selection); border-left:3px solid var(--indigo); padding:12px 16px; font-size:12px; line-height:1.7; }
 .official-score { color:var(--muted); font-size:12px; margin:0 0 10px; }
+
+.academic-year-panel { padding-bottom:0; }
+.upcoming-exam { background:var(--selection); border-left:3px solid var(--indigo); padding:14px 18px; font-size:13px; }
+.upcoming-exam p { margin:5px 0; }.upcoming-exam a { font-size:11px; }
+.academic-year-picker { display:flex; align-items:center; gap:20px; padding:20px 0 0; }
+.academic-year-picker label { display:flex; align-items:center; gap:12px; font-weight:650; font-size:13px; }
+.academic-year-picker select { background:var(--surface); color:var(--ink); border:1px solid var(--line); padding:9px 12px; border-radius:4px; }
+.academic-year-picker p,.legacy-year-note p { color:var(--muted); font-size:12px; }
+.legacy-year-note { padding-bottom:0; }.legacy-year-note h1 { font-size:30px; }
+@media(max-width:640px) { .academic-year-picker { align-items:flex-start; flex-direction:column; gap:7px; }.academic-year-picker p { margin:0; } }
