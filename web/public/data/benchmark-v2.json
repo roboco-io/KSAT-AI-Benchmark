@@ -1,10 +1,14 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-16T04:19:34.900Z",
+  "generated_at": "2026-10-16T22:02:56.593Z",
   "run_id": "2026-pre-exam-codex-gpt-6.1-sol",
   "model": "gpt-6.1-sol",
   "engine": "Codex SDK / Ralph loop",
   "academic_year": 2026,
+  "execution_stats": {
+    "refusal_count": 0,
+    "timeout_count": 0
+  },
   "phase": "pre_exam",
   "pricing": {
     "input_per_million": 2,
@@ -17,16 +21,16 @@
   },
   "summary": {
     "total_questions": 147,
-    "correct": 142,
-    "incorrect": 5,
+    "correct": 143,
+    "incorrect": 4,
     "abstained": 0,
     "errors": 0,
     "pending": 0,
-    "score": 365,
+    "score": 368,
     "max_score": 376,
-    "accuracy": 96.5986394557823,
+    "accuracy": 97.27891156462584,
     "abstention_rate": 0,
-    "attempt_accuracy": 96.5986394557823,
+    "attempt_accuracy": 97.27891156462584,
     "wall_time_seconds": 1045.259758752823,
     "solver_time_seconds": 1365.3157588806152,
     "usage": {
@@ -36,7 +40,8 @@
       "output_tokens": 31770,
       "reasoning_output_tokens": 22477
     },
-    "estimated_cost_usd": 0.913572
+    "estimated_cost_usd": 0.913572,
+    "adjusted_correct": 1
   },
   "exams": [
     {
@@ -93,6 +98,30 @@
       ],
       "max_score": 100,
       "summary": {
+        "total_questions": 45,
+        "correct": 41,
+        "incorrect": 4,
+        "abstained": 0,
+        "errors": 0,
+        "pending": 0,
+        "score": 92,
+        "max_score": 100,
+        "accuracy": 91.11111111111111,
+        "abstention_rate": 0,
+        "attempt_accuracy": 91.11111111111111,
+        "wall_time_seconds": 475.04899999999975,
+        "solver_time_seconds": 475.04899999999975,
+        "usage": {
+          "input_tokens": 73905,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 11528,
+          "reasoning_output_tokens": 8709.000000000002
+        },
+        "estimated_cost_usd": 0.26309000000000005,
+        "adjusted_correct": 0
+      },
+      "official_summary": {
         "total_questions": 45,
         "correct": 41,
         "incorrect": 4,
@@ -190,6 +219,30 @@
           "output_tokens": 12277.00000000001,
           "reasoning_output_tokens": 9452.000000000004
         },
+        "estimated_cost_usd": 0.2705580000000001,
+        "adjusted_correct": 0
+      },
+      "official_summary": {
+        "total_questions": 45,
+        "correct": 41,
+        "incorrect": 4,
+        "abstained": 0,
+        "errors": 0,
+        "pending": 0,
+        "score": 92,
+        "max_score": 100,
+        "accuracy": 91.11111111111111,
+        "abstention_rate": 0,
+        "attempt_accuracy": 91.11111111111111,
+        "wall_time_seconds": 509.64200000000005,
+        "solver_time_seconds": 509.64200000000005,
+        "usage": {
+          "input_tokens": 73894,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 12277.00000000001,
+          "reasoning_output_tokens": 9452.000000000004
+        },
         "estimated_cost_usd": 0.2705580000000001
       }
     },
@@ -232,6 +285,30 @@
       ],
       "max_score": 100,
       "summary": {
+        "total_questions": 30,
+        "correct": 30,
+        "incorrect": 0,
+        "abstained": 0,
+        "errors": 0,
+        "pending": 0,
+        "score": 100,
+        "max_score": 100,
+        "accuracy": 100,
+        "abstention_rate": 0,
+        "attempt_accuracy": 100,
+        "wall_time_seconds": 279.159,
+        "solver_time_seconds": 279.159,
+        "usage": {
+          "input_tokens": 61470.000000000015,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 6921.999999999998,
+          "reasoning_output_tokens": 4732
+        },
+        "estimated_cost_usd": 0.19216000000000005,
+        "adjusted_correct": 0
+      },
+      "official_summary": {
         "total_questions": 30,
         "correct": 30,
         "incorrect": 0,
@@ -314,6 +391,30 @@
           "output_tokens": 8364.999999999998,
           "reasoning_output_tokens": 6234
         },
+        "estimated_cost_usd": 0.20657800000000007,
+        "adjusted_correct": 0
+      },
+      "official_summary": {
+        "total_questions": 30,
+        "correct": 30,
+        "incorrect": 0,
+        "abstained": 0,
+        "errors": 0,
+        "pending": 0,
+        "score": 100,
+        "max_score": 100,
+        "accuracy": 100,
+        "abstention_rate": 0,
+        "attempt_accuracy": 100,
+        "wall_time_seconds": 275.859,
+        "solver_time_seconds": 275.859,
+        "usage": {
+          "input_tokens": 61464.000000000015,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 8364.999999999998,
+          "reasoning_output_tokens": 6234
+        },
         "estimated_cost_usd": 0.20657800000000007
       }
     },
@@ -356,6 +457,30 @@
       ],
       "max_score": 100,
       "summary": {
+        "total_questions": 30,
+        "correct": 30,
+        "incorrect": 0,
+        "abstained": 0,
+        "errors": 0,
+        "pending": 0,
+        "score": 100,
+        "max_score": 100,
+        "accuracy": 100,
+        "abstention_rate": 0,
+        "attempt_accuracy": 100,
+        "wall_time_seconds": 453.40475888061525,
+        "solver_time_seconds": 453.40475888061525,
+        "usage": {
+          "input_tokens": 61454.000000000015,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 8980.999999999998,
+          "reasoning_output_tokens": 6797
+        },
+        "estimated_cost_usd": 0.2127180000000001,
+        "adjusted_correct": 0
+      },
+      "official_summary": {
         "total_questions": 30,
         "correct": 30,
         "incorrect": 0,
@@ -433,6 +558,30 @@
       ],
       "max_score": 100,
       "summary": {
+        "total_questions": 45,
+        "correct": 45,
+        "incorrect": 0,
+        "abstained": 0,
+        "errors": 0,
+        "pending": 0,
+        "score": 100,
+        "max_score": 100,
+        "accuracy": 100,
+        "abstention_rate": 0,
+        "attempt_accuracy": 100,
+        "wall_time_seconds": 104.56000000000006,
+        "solver_time_seconds": 104.56000000000006,
+        "usage": {
+          "input_tokens": 88923.99999999996,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 2957.9999999999973,
+          "reasoning_output_tokens": 419.9999999999998
+        },
+        "estimated_cost_usd": 0.20742799999999995,
+        "adjusted_correct": 1
+      },
+      "official_summary": {
         "total_questions": 45,
         "correct": 44,
         "incorrect": 1,
@@ -3779,7 +3928,7 @@
       "points": 3,
       "correct_answer": 5,
       "source_page": 7,
-      "status": "incorrect",
+      "status": "correct",
       "answer": 4,
       "explanation": "C의 비경험적 철학 설명을 A가 경험적 보완의 필요성으로 연결하고, B가 신경과학과의 협력을 제시한다.",
       "abstain_reason": null,
@@ -3792,7 +3941,13 @@
         "reasoning_output_tokens": 9.333333333333334
       },
       "estimated_cost_usd": 0.004609511111111111,
-      "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
+      "measurement_basis": "Group request duration and usage divided equally; not individual measurement",
+      "official_status": "incorrect",
+      "accepted_answers": [
+        4,
+        5
+      ],
+      "benchmark_adjusted": true
     },
     {
       "id": "2026-english-english-q38",
@@ -4020,6 +4175,7 @@
   },
   "usage_complete": false,
   "limitations": [
+    "공식 정답은 ⑤번입니다. 본 벤치마크는 문장 연결의 대안적 해석을 수용해 ④번도 정답으로 인정합니다.",
     "영어 듣기 1~17번은 공식 대본 이미지로 평가합니다. 실제 음성 청취 성능이 아닙니다.",
     "전체 지표는 공통 문항을 한 번만 센 147개 고유 문항 기준입니다.",
     "전체 풀이 시간은 실제 경과 시간이며 병렬 묶음 시간 합계와 다릅니다.",
@@ -4029,5 +4185,40 @@
     "원본 200 DPI 이미지, protocol에 기록한 추론 설정, 외부 도구·검색 비활성 조건입니다. Claude의 StructuredOutput은 외부 IO가 없는 SDK 출력 형식 캐리어만 허용합니다.",
     "공개된 전년도 시험의 학습 데이터 포함 가능성과 모델별 토크나이저·SDK·추론 차이를 배제하지 않습니다.",
     "Claude의 사고 토큰은 별도 보고되지 않습니다. 내부 정규화의 0은 사고 토큰이 없다는 뜻이 아니며 총 출력 토큰에 포함됩니다."
-  ]
+  ],
+  "grading_policy": {
+    "id": "2026-english-q37-dual-answer-v1",
+    "effective_date": "2026-10-17",
+    "question_id": "2026-english-english-q37",
+    "official_answer": 5,
+    "accepted_answers": [
+      4,
+      5
+    ],
+    "annotation": "공식 정답은 ⑤번입니다. 본 벤치마크는 문장 연결의 대안적 해석을 수용해 ④번도 정답으로 인정합니다.",
+    "rationale": "④(C→A→B)는 (C)의 비경험적 접근을 (A)의 경험적 보완 필요성으로 연결하고, (B)의 신경과학 협력으로 구체화하는 해석입니다. ⑤(C→B→A)는 학제 간 역할과 협력에서 경험적 보완 필요성으로 종합하는 해석입니다. 두 해석을 수용하는 벤치마크 운영 정책이며, 공식 복수정답 인정이나 모델들의 합의에 따른 판정이 아닙니다."
+  },
+  "official_summary": {
+    "total_questions": 147,
+    "correct": 142,
+    "incorrect": 5,
+    "abstained": 0,
+    "errors": 0,
+    "pending": 0,
+    "score": 365,
+    "max_score": 376,
+    "accuracy": 96.5986394557823,
+    "abstention_rate": 0,
+    "attempt_accuracy": 96.5986394557823,
+    "wall_time_seconds": 1045.259758752823,
+    "solver_time_seconds": 1365.3157588806152,
+    "usage": {
+      "input_tokens": 297936,
+      "cached_input_tokens": 0,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 31770,
+      "reasoning_output_tokens": 22477
+    },
+    "estimated_cost_usd": 0.913572
+  }
 }
