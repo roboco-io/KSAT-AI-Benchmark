@@ -4,11 +4,12 @@ import comparison from '@/public/data/benchmark-comparison.json';
 import type { BenchmarkComparison } from '@/components/benchmark-types';
 import { questionNotes } from '@/lib/question-notes';
 import { formatKst } from '@/lib/format-date.mjs';
+import { RobocoBrand } from '@/components/RobocoBrand';
 
 export const metadata: Metadata = {
   title: '영어 37번 정답 토론 · Fable × Astra | KSAT AI Benchmark',
   description: '2026학년도 수능 영어 37번의 ④·⑤번을 Fable과 Astra가 독립 검토하고 상호 반박한 실제 AI 토론 기록입니다.',
-  openGraph: { url: 'https://roboco.io/KSAT-AI-Benchmark/debates/english-q37.html', title: '영어 37번, ④번인가 ⑤번인가? Fable × Astra 토론', description: '독립 판단, 상호 반박, 최종 판단과 토론 원문을 공개합니다.' },
+  openGraph: { url: 'https://roboco.io/KSAT-AI-Benchmark/debates/english-q37.html', title: '영어 37번, ④번인가 ⑤번인가? Fable × Astra 토론', description: '독립 판단, 상호 반박, 최종 판단과 토론 원문을 공개합니다.', images: [{ url: 'https://roboco.io/KSAT-AI-Benchmark/images/ksat-ai-benchmark-social-roboco.png', width: 1672, height: 941, alt: 'ROBOCO · KSAT AI Benchmark' }] },
 };
 
 type Response = { preferred_answer: 4 | 5 | null; verdict: string; statement: string; evidence: string[]; counterargument: string; change: string; confidence: number };
@@ -33,7 +34,7 @@ export default function DebatePage() {
   const final = data.rounds.find(round => round.number === 3);
   return <div className="benchmark-shell debate-shell">
     <a className="skip-link" href="#debate-conclusion">토론 결론으로 이동</a>
-    <header className="site-header"><a className="brand" href={`${basePath}/`}>roboco<span>수능 AI 평가</span></a><nav aria-label="주요 메뉴"><a href={`${basePath}/`}>모델 성적표</a><a href="#debate-transcript">발언 원문</a><a className="download" href={`${basePath}/data/english-q37-debate.json`} download>토론 JSON 다운로드</a></nav></header>
+    <header className="site-header"><RobocoBrand /><nav aria-label="주요 메뉴"><a href={`${basePath}/`}>모델 성적표</a><a href="#debate-transcript">발언 원문</a><a className="download" href={`${basePath}/data/english-q37-debate.json`} download>토론 JSON 다운로드</a></nav></header>
     <main>
       <section className="report-heading"><div><p className="year-label">2026학년도 수능 영어 37번 · 사후 검토</p><h1>④번인가, ⑤번인가?</h1><p className="intro">Fable과 Astra가 문장 연결을 독립적으로 검토하고 서로의 논거를 반박했습니다.</p></div><div className="report-stamp"><strong>실제 AI 토론 기록</strong><span>{formatKst(data.finished_at || data.started_at)} (KST)</span><span>독립 판단 → 상호 반박 → 최종 판단</span></div></section>
       <section id="debate-conclusion" className="debate-section" aria-labelledby="conclusion-heading"><h2 id="conclusion-heading">최종 판단</h2>

@@ -1,5 +1,6 @@
 'use client';
 
+import { RobocoBrand } from './RobocoBrand';
 import { Container, Title, Text, Stack, Group, Badge, Card, SimpleGrid, Accordion, Table, ScrollArea, Box, Anchor, Tabs } from '@mantine/core';
 import { useState, useEffect } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
@@ -399,7 +400,7 @@ export function LeaderboardContent() {
       <Stack gap="xl">
         {/* 헤더 */}
         <div>
-          <Title order={1}>KSAT AI Benchmark</Title>
+          <RobocoBrand /><Title order={1}>KSAT AI Benchmark</Title>
           <Text size="lg" c="dimmed">대한민국 수능 기반 AI 모델 평가 플랫폼</Text>
         </div>
 

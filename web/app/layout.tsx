@@ -7,10 +7,10 @@ import type { Metadata } from 'next';
 
 const siteUrl = 'https://roboco.io/KSAT-AI-Benchmark/';
 const socialImage = {
-  url: `${siteUrl}images/ksat-ai-benchmark-social.png`,
+  url: `${siteUrl}images/ksat-ai-benchmark-social-roboco.png`,
   width: 1672,
   height: 941,
-  alt: 'AI가 수능을 풀면? 2026학년도 국어·수학·영어, 11개 모델 비교 — KSAT AI Benchmark',
+  alt: 'AI가 수능을 풀면? 2026학년도 국어·수학·영어, 11개 모델 비교 — ROBOCO · KSAT AI Benchmark',
 };
 
 export const metadata: Metadata = {

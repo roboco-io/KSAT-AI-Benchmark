@@ -3,6 +3,7 @@
 import { useMemo, useState } from 'react';
 import type { BenchmarkData, QuestionStatus, Usage } from './benchmark-types';
 import { formatKst } from '@/lib/format-date.mjs';
+import { RobocoBrand } from './RobocoBrand';
 import { questionNotes } from '@/lib/question-notes';
 import { QuestionNote } from './QuestionNote';
 
@@ -43,7 +44,7 @@ export function BenchmarkDashboard({ data, embedded = false }: { data: Benchmark
   const Content = embedded ? 'div' : 'main';
   return <div className={embedded ? "benchmark-detail" : "benchmark-shell"}>
     {!embedded && <><a className="skip-link" href="#results">평가 결과로 이동</a>
-    <header className="site-header"><a className="brand" href={`${basePath}/`}>roboco<span>수능 AI 평가</span></a><nav aria-label="주요 메뉴"><a href="#questions">문항별 결과</a><a href={`${basePath}/archive.html`}>기존 평가 기록</a><a className="download" href={`${basePath}/data/benchmark-v2.json`} download="benchmark-v2.json">결과 JSON 다운로드</a></nav></header></>}
+    <header className="site-header"><RobocoBrand /><nav aria-label="주요 메뉴"><a href="#questions">문항별 결과</a><a href={`${basePath}/archive.html`}>기존 평가 기록</a><a className="download" href={`${basePath}/data/benchmark-v2.json`} download="benchmark-v2.json">결과 JSON 다운로드</a></nav></header></>}
     <Content>
       {!embedded && <section className="report-heading" aria-labelledby="title">
         <div><p className="year-label">{data.academic_year}학년도 대학수학능력시험</p><h1 id="title">AI의 수능 성적표</h1><p className="intro">국어·수학·영어를 풀고, 문항별 답과 평가 과정을 공개합니다.</p></div>

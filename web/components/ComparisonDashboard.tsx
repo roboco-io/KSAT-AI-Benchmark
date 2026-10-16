@@ -5,6 +5,7 @@ import { ThemeControl } from './ThemeControl';
 import { BenchmarkDashboard } from './BenchmarkDashboard';
 import type { BenchmarkComparison, BenchmarkData, RequestedModel } from './benchmark-types';
 import { formatKst } from '@/lib/format-date.mjs';
+import { RobocoBrand } from './RobocoBrand';
 
 const providerLabels: Record<string, string> = { openai: 'OpenAI', anthropic: 'Anthropic', deepseek: 'DeepSeek', zai: 'Z.ai', qwen: 'Qwen', moonshot: 'Moonshot AI', google: 'Google' };
 const states = { complete: '평가 완료', partial: '평가 불완전', pending: '평가 대기', blocked: '실행 차단' };
@@ -77,7 +78,7 @@ export function ComparisonDashboard({ data }: { data: BenchmarkComparison }) {
   const completed = data.requested_models.filter(model => complete(model, data.models.find(result => result.model === model.id))).length;
   return <div className="benchmark-shell comparison-shell">
     <a className="skip-link" href="#comparison">모델 비교로 이동</a>
-    <header className="site-header"><a className="brand" href={`${basePath}/`}>roboco<span>수능 AI 평가</span></a><nav aria-label="주요 메뉴"><a href={data.repository_url} target="_blank" rel="noreferrer" className="repository-link">GitHub 저장소 ↗</a><a href={`${basePath}/debates/english-q37.html`}>영어 37번 정답 토론</a><a href={`${basePath}/archive.html`}>기존 평가</a><a className="download" href={`${basePath}/data/benchmark-comparison.json`} download="benchmark-comparison.json">비교 JSON 다운로드</a><ThemeControl /></nav></header>
+    <header className="site-header"><RobocoBrand /><nav aria-label="주요 메뉴"><a href={data.repository_url} target="_blank" rel="noreferrer" className="repository-link">GitHub 저장소 ↗</a><a href={`${basePath}/debates/english-q37.html`}>영어 37번 정답 토론</a><a href={`${basePath}/archive.html`}>기존 평가</a><a className="download" href={`${basePath}/data/benchmark-comparison.json`} download="benchmark-comparison.json">비교 JSON 다운로드</a><ThemeControl /></nav></header>
     <main>
       <section className="comparison-heading" aria-labelledby="comparison-title"><div><p className="year-label">{data.academic_year}학년도 대학수학능력시험 · 사전 평가</p><h1 id="comparison-title">모델별 수능 성적표</h1><p className="intro">같은 국어·수학·영어 문제로 비교합니다. 모델을 선택하면 문항별 답과 풀이를 볼 수 있습니다.</p></div><div className="comparison-count"><strong>{completed}<span> / {data.requested_models.length}</span></strong><span>모델 평가 완료</span><small>{formatKst(data.generated_at)} (KST)</small></div></section>
       <section id="comparison" aria-labelledby="comparison-table-title"><div className="section-title"><h2 id="comparison-table-title">모델 비교</h2><span>{sortLabels[sort.key]} {sort.direction === 'desc' ? '내림차순' : '오름차순'} · 불완전 실행은 지표 순위에서 제외</span></div>
