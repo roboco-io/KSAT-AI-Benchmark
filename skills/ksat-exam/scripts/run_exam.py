@@ -17,8 +17,8 @@ def command(args, capture=False, check=True):
     return subprocess.run(args, cwd=ROOT, text=True, capture_output=capture, check=check)
 
 
-def catalog():
-    result = command(['node', '--input-type=module', '-e', "import {MODELS} from './benchmark/models.mjs'; import {routeAgent} from './benchmark/profiles.mjs';console.log(JSON.stringify(MODELS.map(m=>({...m,agent:routeAgent(m)}))))"], capture=True)
+def catalog(year=2026):
+    result = command(['node', '--input-type=module', '-e', "import {modelsForYear} from './benchmark/academic-years.mjs'; import {routeAgent} from './benchmark/profiles.mjs';const year=Number(process.argv[1]);console.log(JSON.stringify(modelsForYear(year).map(m=>({...m,agent:routeAgent(m),academic_year:year}))))", str(year)], capture=True)
     return json.loads(result.stdout)
 
 
@@ -38,7 +38,8 @@ def register(path):
 
 
 def in_progress(model):
-    lock = ROOT / '.runtime/locks' / (model['id'] + '.json')
+    year = model.get('academic_year', 2026)
+    lock = ROOT / '.runtime/locks' / ((str(year) + '-' if year != 2026 else '') + model['id'] + '.json')
     if lock.exists():
         try:
             pid = json.loads(lock.read_text())['pid']
@@ -61,7 +62,9 @@ def in_progress(model):
 def snapshot(model):
     path = ROOT / model['directory'] / 'run.json'
     run = json.loads(path.read_text()) if path.exists() else {}
-    return {'model': model['id'], 'agent': model['agent'], 'completed': run.get('completed', False), 'in_progress': in_progress(model), 'submitted': len(run.get('answers', {})), 'blocked_reason': GOOGLE_BLOCK if model['agent'] == 'antigravity' else run.get('blocked_reason'), 'authentication': 'API scope must be authorized' if model.get('pi') else 'Existing subscription; runner checks before input'}
+    status_path = path.parent / 'status.json'
+    status = json.loads(status_path.read_text()) if status_path.exists() else {}
+    return {'model': model['id'], 'agent': model['agent'], 'completed': run.get('completed', False), 'in_progress': in_progress(model), 'submitted': len(run.get('answers', {})), 'blocked_reason': GOOGLE_BLOCK if model['agent'] == 'antigravity' else run.get('blocked_reason') or status.get('reason'), 'authentication': 'API scope must be authorized' if model.get('pi') else 'Existing subscription; runner checks before input'}
 
 
 def authorize(models):
@@ -79,9 +82,13 @@ def publish(models):
     branch = command(["git", "branch", "--show-current"], capture=True).stdout.strip()
     if branch != "main":
         raise RuntimeError("Pages publication requires main; preserve the current branch and integrate deliberately")
-    paths = ['web/public/data/benchmark-comparison.json', 'web/public/data/benchmark-v2.json']
+    year = models[0].get('academic_year', 2026)
+    filename = 'benchmark-comparison.json' if year == 2026 else f'benchmark-comparison-{year}.json'
+    paths = ['web/public/data/' + filename]
+    if year == 2026:
+        paths.append('web/public/data/benchmark-v2.json')
     for model in models:
-        for path in [model['directory'] + '/run.json', 'benchmark/profiles/' + model['id'] + '.json']:
+        for path in [model['directory'] + '/run.json', model['directory'] + '/status.json', 'benchmark/profiles/' + model['id'] + '.json']:
             if (ROOT / path).exists():
                 paths.append(path)
     command(['git', 'add', '--', *paths])
@@ -109,10 +116,10 @@ def publish(models):
     else:
         raise RuntimeError('A deployment workflow was not found; verify Pages before reporting completion')
     import urllib.request
-    url = 'https://roboco.io/KSAT-AI-Benchmark/data/benchmark-comparison.json?v=' + head
+    url = 'https://roboco.io/KSAT-AI-Benchmark/data/' + filename + '?v=' + head
     with urllib.request.urlopen(url, timeout=30) as response:
         public = json.load(response)
-    local = json.loads((ROOT / 'web/public/data/benchmark-comparison.json').read_text())
+    local = json.loads((ROOT / ('web/public/data/' + filename)).read_text())
     for model in models:
         expected = next((r for r in local['models'] if r['model'] == model['id']), None)
         actual = next((r for r in public['models'] if r['model'] == model['id']), None)
@@ -127,6 +134,7 @@ def publish(models):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--year', type=int, choices=[2025, 2026], default=2026)
     parser.add_argument('--model', action='append', default=[])
     parser.add_argument('--register', help='Register a verified metadata-only profile JSON')
     parser.add_argument('--dry-run', action='store_true', help='Read metadata and progress; do not call models or publish')
@@ -137,7 +145,7 @@ def main():
         parser.error("--register changes metadata; use --dry-run separately")
     if args.register:
         register(args.register)
-    available = catalog()
+    available = catalog(args.year)
     if not args.model:
         if args.register:
             return 0
@@ -168,13 +176,13 @@ def main():
             print(model['id'] + ': execution finalized with errors; preserve recorded results', flush=True)
             failed.append(model['id'])
             continue
-        result = command(['node', 'benchmark/run.mjs', '--model', model['id']], check=False)
+        result = command(['node', 'benchmark/run.mjs', '--model', model['id'], '--year', str(args.year)], check=False)
         if result.returncode and model.get('pi'):
             state_path = ROOT / model['directory'] / 'run.json'
             state = json.loads(state_path.read_text()) if state_path.exists() else {}
             errors = [a.get('error', '') for g in state.get('groups', {}).values() for a in g.get('attempts', [])]
             if not state.get('blocked_reason') and not state.get('protocol', {}).get('batch_max_questions') and any(('PI_TURN_FAILED' in e or 'PI_ABORTED' in e) and 'DataInspectionFailed' not in e for e in errors):
-                result = command(['node', 'benchmark/run.mjs', '--model', model['id'], '--recover-with-batches', '6'], check=False)
+                result = command(['node', 'benchmark/run.mjs', '--model', model['id'], '--year', str(args.year), '--recover-with-batches', '6'], check=False)
         if result.returncode:
             failed.append(model['id'])
     command(['node', 'benchmark/export.mjs'])

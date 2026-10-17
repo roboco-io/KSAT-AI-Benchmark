@@ -64,6 +64,17 @@ test('heartbeat wall time uses persisted base rather than double-counting',()=>{
  assert.equal(elapsedWall(50,1000,21000),70);
  assert.equal(elapsedWall(50,1000,31000),80);
 });
+test('a fatal parallel request waits for sibling cleanup before releasing its caller',async()=>{
+ const controller=new AbortController();let notifyStarted;const started=new Promise(resolve=>notifyStarted=resolve);let cleaned=false;
+ const running=runBatches([1,2],2,controller,()=>false,async item=>{
+  if(item===1){await started;throw new Error('fatal preflight');}
+  notifyStarted();
+  await new Promise(resolve=>controller.signal.addEventListener('abort',resolve,{once:true}));
+  await new Promise(resolve=>setTimeout(resolve,10));cleaned=true;
+ });
+ await assert.rejects(running,/fatal preflight/);
+ assert.equal(cleaned,true);
+});
 test('resume refuses modified prompt or source hashes',()=>{
  const state={dataset_hash:'dataset',prompt_hash:'prompt',source_hashes:{pdf:'one'},protocol:{model:'model'}};
  assert.throws(()=>verifyResume(state,{model:'model'},'dataset','other',{pdf:'one'}));

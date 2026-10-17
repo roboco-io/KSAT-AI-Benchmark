@@ -28,10 +28,12 @@ export function attemptsRemaining(attempts=[],limit=3) {return Math.max(0,limit-
 export async function runBatches(groups,concurrency,controller,shouldStop,solve) {
  for(let offset=0;offset<groups.length;offset+=concurrency) {
   if(controller.signal.aborted||shouldStop())break;
-  await Promise.all(groups.slice(offset,offset+concurrency).map(async group=>{
+  const settled=await Promise.allSettled(groups.slice(offset,offset+concurrency).map(async group=>{
    if(controller.signal.aborted||shouldStop())return;
    try{await solve(group,controller.signal);}catch(error){controller.abort(error);throw error;}
   }));
+  const failure=settled.find(result=>result.status==='rejected');
+  if(failure)throw failure.reason;
  }
 }
 export function elapsedWall(base,started,now) {return base+Math.max(0,now-started)/1000;}

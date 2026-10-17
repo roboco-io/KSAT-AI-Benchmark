@@ -1,0 +1,197 @@
+{
+  "academic_year": 2025,
+  "exam_date": "2024-11-14",
+  "publisher": "한국교육과정평가원",
+  "retrieved_at": "2026-10-17T01:07:46.873488+00:00",
+  "files": [
+    {
+      "subject": "korean",
+      "kind": "exam",
+      "path": "exams/pdf/2025/국어영역_문제지_홀수형.pdf",
+      "source_page": "https://www.suneung.re.kr/boardCnts/view.do?boardID=1500234&boardSeq=5089364&lev=0&m=0403&s=suneung",
+      "download_url": "https://www.suneung.re.kr/boardCnts/fileDown.do?fileSeq=f69d814736f441f73178e9fadbdbd309",
+      "sha256": "fd03b004f35e39da2380c68bf8efadcdbdd9ef2e18c53f03c435d3e2fb31f247",
+      "size_bytes": 4706719,
+      "pages": 20,
+      "verification": "pdf_structure_checked_all_pages_visual_review",
+      "answer_key_status": null,
+      "visual_review": {
+        "pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "checks": [
+          "2025학년도 표제",
+          "홀수형 표제",
+          "문항 시작 페이지 전수 대조"
+        ]
+      }
+    },
+    {
+      "subject": "korean",
+      "kind": "answer_key",
+      "path": "exams/pdf/2025/국어영역_정답표.pdf",
+      "source_page": "https://www.suneung.re.kr/boardCnts/view.do?boardID=1500234&boardSeq=5089364&lev=0&m=0403&s=suneung",
+      "download_url": "https://www.suneung.re.kr/boardCnts/fileDown.do?fileSeq=2dbf59c5b70f143d01ca2545229d96ff",
+      "sha256": "26b9fbe6b16a3d2b9e3639fd7501686082050e3f5e1050f7fee6379c115b9f4f",
+      "size_bytes": 303699,
+      "pages": 2,
+      "verification": "pdf_structure_checked_full_odd_key_visual_review",
+      "answer_key_status": "official_published",
+      "visual_review": {
+        "pages": [
+          1
+        ],
+        "checks": [
+          "2025학년도 표제",
+          "홀수형 정답표",
+          "공통 및 모든 선택과목 정답·배점 전수 대조"
+        ]
+      }
+    },
+    {
+      "subject": "math",
+      "kind": "exam",
+      "path": "exams/pdf/2025/수학영역_문제지_홀수형.pdf",
+      "source_page": "https://www.suneung.re.kr/boardCnts/view.do?boardID=1500234&boardSeq=5089363&lev=0&m=0403&s=suneung",
+      "download_url": "https://www.suneung.re.kr/boardCnts/fileDown.do?fileSeq=20b8f2daf89db9ff668b257f6b51ea75",
+      "sha256": "ad13d3f1858b880e79384e65fffd6bcb762e52b3bacd3be0a1e0c879675abe86",
+      "size_bytes": 1090050,
+      "pages": 20,
+      "verification": "pdf_structure_checked_all_pages_visual_review",
+      "answer_key_status": null,
+      "visual_review": {
+        "pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "checks": [
+          "2025학년도 표제",
+          "홀수형 표제",
+          "문항 시작 페이지 전수 대조"
+        ]
+      }
+    },
+    {
+      "subject": "math",
+      "kind": "answer_key",
+      "path": "exams/pdf/2025/수학영역_정답표.pdf",
+      "source_page": "https://www.suneung.re.kr/boardCnts/view.do?boardID=1500234&boardSeq=5089363&lev=0&m=0403&s=suneung",
+      "download_url": "https://www.suneung.re.kr/boardCnts/fileDown.do?fileSeq=e6db150eafd49585cea94f1770b59326",
+      "sha256": "987fa768dc669042df4e018a157535407583e5564cd540cac7ddd2fd414b5e9e",
+      "size_bytes": 296524,
+      "pages": 2,
+      "verification": "pdf_structure_checked_full_odd_key_visual_review",
+      "answer_key_status": "official_published",
+      "visual_review": {
+        "pages": [
+          1
+        ],
+        "checks": [
+          "2025학년도 표제",
+          "홀수형 정답표",
+          "공통 및 모든 선택과목 정답·배점 전수 대조"
+        ]
+      }
+    },
+    {
+      "subject": "english",
+      "kind": "exam",
+      "path": "exams/pdf/2025/영어영역_문제지_홀수형.pdf",
+      "source_page": "https://www.suneung.re.kr/boardCnts/view.do?boardID=1500234&boardSeq=5089362&lev=0&m=0403&s=suneung",
+      "download_url": "https://www.suneung.re.kr/boardCnts/fileDown.do?fileSeq=1050e33a51398273bdb891bd1d4cc2e4",
+      "sha256": "7750c0be3c0511c4055e23f8d994508a117bab87c62d19411f1dff31db3ea03b",
+      "size_bytes": 1889278,
+      "pages": 8,
+      "verification": "pdf_structure_checked_all_pages_visual_review",
+      "answer_key_status": null,
+      "visual_review": {
+        "pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "checks": [
+          "2025학년도 표제",
+          "홀수형 표제",
+          "문항 시작 페이지 전수 대조"
+        ]
+      }
+    },
+    {
+      "subject": "english",
+      "kind": "listening_transcript",
+      "path": "exams/pdf/2025/영어영역_듣기평가대본.pdf",
+      "source_page": "https://www.suneung.re.kr/boardCnts/view.do?boardID=1500234&boardSeq=5089362&lev=0&m=0403&s=suneung",
+      "download_url": "https://www.suneung.re.kr/boardCnts/fileDown.do?fileSeq=4b5094defbb23ce597d983ca03076f81",
+      "sha256": "1cb48ebdbbdb7c503b8b42befd0ecaa7f6146b674a865516f13ec8a5d806abc9",
+      "size_bytes": 245767,
+      "pages": 17,
+      "verification": "pdf_structure_checked",
+      "answer_key_status": null
+    },
+    {
+      "subject": "english",
+      "kind": "answer_key",
+      "path": "exams/pdf/2025/영어영역_정답표.pdf",
+      "source_page": "https://www.suneung.re.kr/boardCnts/view.do?boardID=1500234&boardSeq=5089362&lev=0&m=0403&s=suneung",
+      "download_url": "https://www.suneung.re.kr/boardCnts/fileDown.do?fileSeq=8a38c5eb0033817b668427c0fcfdd593",
+      "sha256": "65b52a6719e9caf250c7ade6ede24eb824abb0ee689bf7526f208b8cb2c0eb3e",
+      "size_bytes": 235064,
+      "pages": 2,
+      "verification": "pdf_structure_checked_full_odd_key_visual_review",
+      "answer_key_status": "official_published",
+      "visual_review": {
+        "pages": [
+          1
+        ],
+        "checks": [
+          "2025학년도 표제",
+          "홀수형 정답표",
+          "공통 및 모든 선택과목 정답·배점 전수 대조"
+        ]
+      }
+    }
+  ]
+}
