@@ -361,7 +361,7 @@ export function LeaderboardContent({embedded=false}: {embedded?:boolean}) {
 
                                           <div>
                                             <Text size="sm" fw={600} mb="xs">풀이 과정:</Text>
-                                            <MathContent text={q.reasoning || '풀이 정보 없음'} />
+                                            <MathContent normalizeMath={examInfo?.subject === 'math'} text={q.reasoning || '풀이 정보 없음'} />
                                           </div>
 
                                           <Text size="xs" c="dimmed">
@@ -747,7 +747,7 @@ export function LeaderboardContent({embedded=false}: {embedded?:boolean}) {
 
                                                   <div>
                                                     <Text size="sm" fw={600} mb="xs">풀이 과정:</Text>
-                                                    <MathContent text={q.reasoning || '풀이 정보 없음'} />
+                                                    <MathContent normalizeMath={examInfo?.subject === 'math'} text={q.reasoning || '풀이 정보 없음'} />
                                                   </div>
 
                                                   <Text size="xs" c="dimmed">

@@ -3,15 +3,18 @@
 import { useMemo } from 'react';
 import { renderMathSegments } from '@/lib/math-content.mjs';
 import styles from './MathContent.module.css';
+import { normalizeLegacyMath } from '@/lib/legacy-math.mjs';
 
 interface MathContentProps {
   text: string;
   autoWrapMath?: boolean;
   className?: string;
+  normalizeMath?: boolean;
 }
 
-export function MathContent({ text, autoWrapMath = false, className }: MathContentProps) {
-  const segments = useMemo(() => renderMathSegments(text, autoWrapMath), [text, autoWrapMath]);
+export function MathContent({ text, autoWrapMath = false, className, normalizeMath = false }: MathContentProps) {
+  const displayText = useMemo(() => normalizeMath ? normalizeLegacyMath(text) : text, [text, normalizeMath]);
+  const segments = useMemo(() => renderMathSegments(displayText, autoWrapMath), [displayText, autoWrapMath]);
 
   return (
     <div className={`${styles.content}${className ? ` ${className}` : ''}`}>
@@ -23,6 +26,7 @@ export function MathContent({ text, autoWrapMath = false, className }: MathConte
           dangerouslySetInnerHTML={{ __html: segment.html }}
         />
       ))}
+      {displayText !== text && <details className={styles.source}><summary>수식 표기 정리 전 풀이 원문</summary><p>{text}</p></details>}
     </div>
   );
 }
