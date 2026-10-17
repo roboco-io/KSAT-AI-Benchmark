@@ -563,7 +563,7 @@
     "output_tokens": 34061,
     "reasoning_output_tokens": 29106
   },
-  "wall_time_seconds": 680.344,
+  "wall_time_seconds": 870.385,
   "prompt_hash": "c1af6df049d84a1dd0bfeb763795ed69e50ca32b73aa6edcc3020ca6dccc46ee",
   "source_hashes": {
     "exams/pdf/2025/국어영역_문제지_홀수형.pdf": "fd03b004f35e39da2380c68bf8efadcdbdd9ef2e18c53f03c435d3e2fb31f247",
@@ -571,7 +571,7 @@
     "exams/pdf/2025/영어영역_문제지_홀수형.pdf": "7750c0be3c0511c4055e23f8d994508a117bab87c62d19411f1dff31db3ea03b",
     "exams/pdf/2025/영어영역_듣기평가대본.pdf": "1cb48ebdbbdb7c503b8b42befd0ecaa7f6146b674a865516f13ec8a5d806abc9"
   },
-  "updated_at": "2026-10-17T02:23:14.507Z",
+  "updated_at": "2026-10-17T02:26:24.548Z",
   "billing": {
     "method": "pi_api",
     "api_key_used": true,

@@ -27,7 +27,7 @@ export function EnglishQ37Passage() {
   const basePath = process.env.NODE_ENV === 'production' ? '/KSAT-AI-Benchmark' : '';
   return <div className={styles.passage}>
     <p>주어진 글 다음에 이어질 글의 순서로 가장 적절한 것을 고르시오. <span>[3점]</span></p>
-    <div className={styles.paragraphs}>{paragraphs.map(paragraph => <section key={paragraph.label} id={`q37-passage-${paragraph.label.replace(/[()]/g, '')}`} className={styles.paragraph}>
+    <div className={styles.paragraphs}>{paragraphs.map(paragraph => <section key={paragraph.label} id={`q37-passage-${paragraph.label === '주어진 글' ? 'intro' : paragraph.label.replace(/[()]/g, '')}`} className={styles.paragraph}>
       <h4>{paragraph.label}</h4>
       <div className={styles.parallel}>
         <div><span className={styles.label}>영어 원문</span><p lang="en">{paragraph.english}</p></div>
