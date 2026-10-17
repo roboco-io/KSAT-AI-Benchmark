@@ -30,7 +30,3 @@
 .content :global(.katex) {
   overflow-wrap: normal;
 }
-
-.source { margin-top: 14px; font-size: 12px; color: var(--muted); white-space: normal; }
-.source summary { cursor: pointer; }
-.source p { white-space: pre-wrap; overflow-wrap: anywhere; line-height: 1.8; }

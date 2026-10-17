@@ -26,7 +26,6 @@ export function MathContent({ text, autoWrapMath = false, className, normalizeMa
           dangerouslySetInnerHTML={{ __html: segment.html }}
         />
       ))}
-      {displayText !== text && <details className={styles.source}><summary>수식 표기 정리 전 풀이 원문</summary><p>{text}</p></details>}
     </div>
   );
 }
