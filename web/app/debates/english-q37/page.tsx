@@ -6,6 +6,8 @@ import { questionNotes } from '@/lib/question-notes';
 import { formatKst } from '@/lib/format-date.mjs';
 import { GradingMark } from '@/components/GradingMark';
 import { RobocoBrand } from '@/components/RobocoBrand';
+import { EnglishQ37Passage } from '@/components/EnglishQ37Passage';
+import { EnglishQ37Diagram } from '@/components/EnglishQ37Diagram';
 
 export const metadata: Metadata = {
   title: '영어 37번 정답 토론 · Fable × Astra | KSAT AI Benchmark',
@@ -51,6 +53,8 @@ export default function DebatePage() {
         const policy = existingResults.models.find(model => model.grading_policy)!.grading_policy!;
         return <section id="grading-policy" className="debate-section" aria-labelledby="grading-policy-heading"><h2 id="grading-policy-heading">벤치마크 보정 채점 정책</h2><p>{policy.annotation}</p><p>{policy.rationale}</p><p>모든 모델의 원래 수험 답안에 동일하게 적용합니다. ④번 제출은 정답*으로 표시하며, 원래 답안과 공식 기준 점수는 보존합니다. 기권·실행 오류·미제출은 정답으로 바꾸지 않습니다.</p><p>정책 ID: {policy.id} · 적용일: {policy.effective_date}</p></section>;
       })()}
+      <section id="question-passage" className="debate-section" aria-labelledby="passage-heading"><h2 id="passage-heading">문제 원문과 한국어 번역</h2><EnglishQ37Passage /></section>
+      <section id="question-diagram" className="debate-section" aria-labelledby="diagram-heading"><h2 id="diagram-heading">④·⑤번의 논리 흐름을 비교하면</h2><EnglishQ37Diagram /></section>
       <section className="debate-section" aria-labelledby="issue-heading"><h2 id="issue-heading">무엇이 쟁점인가?</h2><p>(A)의 “This means that”이 받는 내용과 문단의 일반화·구체화 방향이 쟁점입니다.</p><dl className="debate-issues"><div><dt>④ (C → A → B)</dt><dd>철학의 비경험적 방법 → 경험적 연구로 보완할 필요 → 신경과학과 협력할 필요</dd></div><div><dt>⑤ (C → B → A)</dt><dd>철학의 방법과 학제 간 역할 → 의식 연구에서의 역할·협력 → 경험적 보완 필요성으로 종합</dd></div></dl><p>문항은 단순히 가능한 배열이 아니라 “가장 적절한” 순서를 묻습니다. 어느 배열이 자연스러운지와 경쟁 배열을 배제할 근거가 충분한지를 함께 검토했습니다.</p><p><a href={`${basePath}/images/english-q37-debate-input.webp`} target="_blank" rel="noreferrer">두 모델에 제공한 원본 문제지 이미지 보기 · 홀수형 7쪽 ↗</a></p></section>
       <section className="debate-section" aria-labelledby="trajectory-heading"><h2 id="trajectory-heading">단계별 판단 변화</h2><div className="debate-table-wrap"><table className="debate-table"><thead><tr><th scope="col">단계</th>{models.map(model => <th scope="col" key={model.id}>{model.label}</th>)}</tr></thead><tbody>{data.rounds.map(round => <tr key={round.number}><th scope="row">{round.number}. {round.stage}</th>{models.map(model => { const response = round.participants.find(participant => participant.model === model.id)?.response; return <td key={model.id}>{choice(response?.preferred_answer)}<small>{response ? verdicts[response.verdict] : '실행 중'}</small></td>; })}</tr>)}</tbody></table></div></section>
       <section id="debate-transcript" className="debate-section" aria-labelledby="transcript-heading"><h2 id="transcript-heading">토론 발언 원문</h2><p>공개 논증을 그대로 표시합니다. 비공개 내부 추론은 요청하거나 게시하지 않았습니다. 전체 입력 지시와 응답은 토론 JSON에 보존했습니다.</p>{data.rounds.map(round => <section className="debate-round" key={round.number}><h3>{round.number}. {round.stage}</h3>{models.map(model => {
