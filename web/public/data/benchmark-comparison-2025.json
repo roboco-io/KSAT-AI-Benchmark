@@ -1,12 +1,12 @@
 {
   "schema_version": 3,
-  "generated_at": "2026-10-17T02:26:03.926Z",
+  "generated_at": "2026-10-17T02:37:50.634Z",
   "academic_year": 2025,
   "repository_url": "https://github.com/roboco-io/KSAT-AI-Benchmark",
   "models": [
     {
       "schema_version": 2,
-      "generated_at": "2026-10-17T02:26:03.902Z",
+      "generated_at": "2026-10-17T02:37:50.620Z",
       "run_id": "2025-pre-exam-codex-gpt-6-luna",
       "model": "gpt-6-luna",
       "engine": "Codex SDK / Ralph loop",
@@ -4056,7 +4056,7 @@
     },
     {
       "schema_version": 2,
-      "generated_at": "2026-10-17T02:26:03.904Z",
+      "generated_at": "2026-10-17T02:37:50.622Z",
       "run_id": "2025-pre-exam-codex-gpt-6.1-sol",
       "model": "gpt-6.1-sol",
       "engine": "Codex SDK / Ralph loop",
@@ -8106,7 +8106,7 @@
     },
     {
       "schema_version": 2,
-      "generated_at": "2026-10-17T02:26:03.907Z",
+      "generated_at": "2026-10-17T02:37:50.623Z",
       "run_id": "2025-pre-exam-codex-gpt-6-astra",
       "model": "gpt-6-astra",
       "engine": "Codex SDK / Ralph loop",
@@ -12153,7 +12153,7 @@
     },
     {
       "schema_version": 2,
-      "generated_at": "2026-10-17T02:26:03.910Z",
+      "generated_at": "2026-10-17T02:37:50.625Z",
       "run_id": "2025-pre-exam-claude-claude-haiku-5-5",
       "model": "claude-haiku-5-5",
       "engine": "Claude Agent SDK / Ralph loop",
@@ -16199,7 +16199,7 @@
     },
     {
       "schema_version": 2,
-      "generated_at": "2026-10-17T02:26:03.913Z",
+      "generated_at": "2026-10-17T02:37:50.627Z",
       "run_id": "2025-pre-exam-claude-claude-sonnet-5-5",
       "model": "claude-sonnet-5-5",
       "engine": "Claude Agent SDK / Ralph loop",
@@ -20245,7 +20245,7 @@
     },
     {
       "schema_version": 2,
-      "generated_at": "2026-10-17T02:26:03.917Z",
+      "generated_at": "2026-10-17T02:37:50.629Z",
       "run_id": "2025-pre-exam-claude-claude-opus-5-5",
       "model": "claude-opus-5-5",
       "engine": "Claude Agent SDK / Ralph loop",
@@ -24291,7 +24291,7 @@
     },
     {
       "schema_version": 2,
-      "generated_at": "2026-10-17T02:26:03.922Z",
+      "generated_at": "2026-10-17T02:37:50.631Z",
       "run_id": "2025-pre-exam-claude-claude-fable-5-1",
       "model": "claude-fable-5-1",
       "engine": "Claude Agent SDK / Ralph loop",
@@ -28337,7 +28337,7 @@
     },
     {
       "schema_version": 2,
-      "generated_at": "2026-10-17T02:26:03.925Z",
+      "generated_at": "2026-10-17T02:37:50.633Z",
       "run_id": "2025-pre-exam-pi-gemini-4-argon",
       "model": "gemini-4-argon",
       "engine": "Pi CLI 0.87.1 / Ralph loop",
@@ -32399,7 +32399,7 @@
     },
     {
       "schema_version": 2,
-      "generated_at": "2026-10-17T02:26:03.926Z",
+      "generated_at": "2026-10-17T02:37:50.634Z",
       "run_id": "2025-pre-exam-pi-kimi-k3",
       "model": "kimi-k3",
       "engine": "Pi CLI 0.87.1 / Ralph loop",
@@ -32424,26 +32424,26 @@
       },
       "summary": {
         "total_questions": 147,
-        "correct": 42,
-        "incorrect": 3,
+        "correct": 139,
+        "incorrect": 8,
         "abstained": 0,
         "errors": 0,
-        "pending": 102,
-        "score": 93,
+        "pending": 0,
+        "score": 357,
         "max_score": 376,
-        "accuracy": 28.57142857142857,
+        "accuracy": 94.5578231292517,
         "abstention_rate": 0,
-        "attempt_accuracy": 93.33333333333333,
-        "wall_time_seconds": 840.382,
-        "solver_time_seconds": 932.665,
+        "attempt_accuracy": 94.5578231292517,
+        "wall_time_seconds": 1552.565,
+        "solver_time_seconds": 2416.9849999999997,
         "usage": {
-          "input_tokens": 163345,
+          "input_tokens": 578306,
           "cached_input_tokens": 0,
-          "cache_write_input_tokens": 163333,
-          "output_tokens": 34061,
-          "reasoning_output_tokens": 29106
+          "cache_write_input_tokens": 578222,
+          "output_tokens": 93535,
+          "reasoning_output_tokens": 79629
         },
-        "estimated_cost_usd": 1.00095
+        "estimated_cost_usd": 3.137943
       },
       "exams": [
         {
@@ -32578,26 +32578,26 @@
           "max_score": 100,
           "summary": {
             "total_questions": 45,
-            "correct": 31,
-            "incorrect": 3,
+            "correct": 39,
+            "incorrect": 6,
             "abstained": 0,
             "errors": 0,
-            "pending": 11,
-            "score": 69,
+            "pending": 0,
+            "score": 86,
             "max_score": 100,
-            "accuracy": 68.88888888888889,
+            "accuracy": 86.66666666666667,
             "abstention_rate": 0,
-            "attempt_accuracy": 91.17647058823529,
-            "wall_time_seconds": 637.6269999999996,
-            "solver_time_seconds": 637.6269999999996,
+            "attempt_accuracy": 86.66666666666667,
+            "wall_time_seconds": 1116.613,
+            "solver_time_seconds": 1116.613,
             "usage": {
-              "input_tokens": 122111.9999999999,
+              "input_tokens": 163312,
               "cached_input_tokens": 0,
-              "cache_write_input_tokens": 122111.9999999999,
-              "output_tokens": 23780.99999999998,
-              "reasoning_output_tokens": 19990.99999999999
+              "cache_write_input_tokens": 163299.99999999997,
+              "output_tokens": 42906.99999999998,
+              "reasoning_output_tokens": 38035
             },
-            "estimated_cost_usd": 0.7230510000000002
+            "estimated_cost_usd": 1.1335410000000004
           }
         },
         {
@@ -32640,26 +32640,26 @@
           "max_score": 100,
           "summary": {
             "total_questions": 30,
-            "correct": 0,
-            "incorrect": 0,
+            "correct": 29,
+            "incorrect": 1,
             "abstained": 0,
             "errors": 0,
-            "pending": 30,
-            "score": 0,
+            "pending": 0,
+            "score": 97,
             "max_score": 100,
-            "accuracy": 0,
+            "accuracy": 96.66666666666667,
             "abstention_rate": 0,
-            "attempt_accuracy": null,
-            "wall_time_seconds": 0,
-            "solver_time_seconds": 0,
+            "attempt_accuracy": 96.66666666666667,
+            "wall_time_seconds": 410.903,
+            "solver_time_seconds": 410.903,
             "usage": {
-              "input_tokens": 0,
+              "input_tokens": 122734,
               "cached_input_tokens": 0,
-              "cache_write_input_tokens": 0,
-              "output_tokens": 0,
-              "reasoning_output_tokens": 0
+              "cache_write_input_tokens": 122709.99999999999,
+              "output_tokens": 15752.000000000004,
+              "reasoning_output_tokens": 13012.999999999996
             },
-            "estimated_cost_usd": 0
+            "estimated_cost_usd": 0.6044819999999997
           }
         },
         {
@@ -32702,26 +32702,26 @@
           "max_score": 100,
           "summary": {
             "total_questions": 30,
-            "correct": 0,
-            "incorrect": 0,
+            "correct": 29,
+            "incorrect": 1,
             "abstained": 0,
             "errors": 0,
-            "pending": 30,
-            "score": 0,
+            "pending": 0,
+            "score": 97,
             "max_score": 100,
-            "accuracy": 0,
+            "accuracy": 96.66666666666667,
             "abstention_rate": 0,
-            "attempt_accuracy": null,
-            "wall_time_seconds": 0,
-            "solver_time_seconds": 0,
+            "attempt_accuracy": 96.66666666666667,
+            "wall_time_seconds": 532.751,
+            "solver_time_seconds": 532.751,
             "usage": {
-              "input_tokens": 0,
+              "input_tokens": 122740,
               "cached_input_tokens": 0,
-              "cache_write_input_tokens": 0,
-              "output_tokens": 0,
-              "reasoning_output_tokens": 0
+              "cache_write_input_tokens": 122715.99999999999,
+              "output_tokens": 20808.000000000004,
+              "reasoning_output_tokens": 18161.999999999996
             },
-            "estimated_cost_usd": 0
+            "estimated_cost_usd": 0.6803399999999997
           }
         },
         {
@@ -32764,26 +32764,26 @@
           "max_score": 100,
           "summary": {
             "total_questions": 30,
-            "correct": 0,
-            "incorrect": 0,
+            "correct": 29,
+            "incorrect": 1,
             "abstained": 0,
             "errors": 0,
-            "pending": 30,
-            "score": 0,
+            "pending": 0,
+            "score": 97,
             "max_score": 100,
-            "accuracy": 0,
+            "accuracy": 96.66666666666667,
             "abstention_rate": 0,
-            "attempt_accuracy": null,
-            "wall_time_seconds": 0,
-            "solver_time_seconds": 0,
+            "attempt_accuracy": 96.66666666666667,
+            "wall_time_seconds": 445.3459999999998,
+            "solver_time_seconds": 445.3459999999998,
             "usage": {
-              "input_tokens": 0,
+              "input_tokens": 122732,
               "cached_input_tokens": 0,
-              "cache_write_input_tokens": 0,
-              "output_tokens": 0,
-              "reasoning_output_tokens": 0
+              "cache_write_input_tokens": 122707.99999999999,
+              "output_tokens": 17676.000000000004,
+              "reasoning_output_tokens": 14868.999999999996
             },
-            "estimated_cost_usd": 0
+            "estimated_cost_usd": 0.6333359999999997
           }
         },
         {
@@ -32841,26 +32841,26 @@
           "max_score": 100,
           "summary": {
             "total_questions": 45,
-            "correct": 0,
-            "incorrect": 0,
+            "correct": 44,
+            "incorrect": 1,
             "abstained": 0,
             "errors": 0,
-            "pending": 45,
-            "score": 0,
+            "pending": 0,
+            "score": 98,
             "max_score": 100,
-            "accuracy": 0,
+            "accuracy": 97.77777777777777,
             "abstention_rate": 0,
-            "attempt_accuracy": null,
-            "wall_time_seconds": 0,
-            "solver_time_seconds": 0,
+            "attempt_accuracy": 97.77777777777777,
+            "wall_time_seconds": 189.82599999999996,
+            "solver_time_seconds": 189.82599999999996,
             "usage": {
-              "input_tokens": 0,
+              "input_tokens": 168802.9999999999,
               "cached_input_tokens": 0,
-              "cache_write_input_tokens": 0,
-              "output_tokens": 0,
-              "reasoning_output_tokens": 0
+              "cache_write_input_tokens": 168791.00000000003,
+              "output_tokens": 7720.000000000004,
+              "reasoning_output_tokens": 4275
             },
-            "estimated_cost_usd": 0
+            "estimated_cost_usd": 0.6222089999999998
           }
         }
       ],
@@ -33954,19 +33954,19 @@
           "points": 2,
           "correct_answer": 5,
           "source_page": 17,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 5,
+          "explanation": "‘혼자’는 용비어천가 ‘흐븟샤’, 석보상절·월인천강지곡 ‘흐오샤’로 세 문헌 통틀어 두 가지 형태만 나타나므로 ‘세 가지’라는 설명은 틀렸다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 43.54418181818182,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3745.4545454545455,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3744.3636363636365,
+            "output_tokens": 1738.7272727272727,
+            "reasoning_output_tokens": 1640.3636363636363
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.03731727272727273,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -33978,19 +33978,19 @@
           "points": 3,
           "correct_answer": 4,
           "source_page": 17,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "incorrect",
+          "answer": 2,
+          "explanation": "㉡ ‘닮아(닮-+-아)’는 어간 끝소리가 ㄹ이라 석보상절에서도 이어 적기로 ‘닮아’처럼 적히지 ‘다마’로 적힐 근거가 없다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 43.54418181818182,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3745.4545454545455,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3744.3636363636365,
+            "output_tokens": 1738.7272727272727,
+            "reasoning_output_tokens": 1640.3636363636363
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.03731727272727273,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -34002,19 +34002,19 @@
           "points": 2,
           "correct_answer": 3,
           "source_page": 17,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "incorrect",
+          "answer": 2,
+          "explanation": "‘가위표를 치다’의 ‘치다’와 ‘구슬 치다’의 ‘치다’는 ‘치다’의 기본 의미에서 확장된 관련 의미라 의미 연관성이 있는 다의어 관계(㉡)에 해당한다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 43.54418181818182,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3745.4545454545455,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3744.3636363636365,
+            "output_tokens": 1738.7272727272727,
+            "reasoning_output_tokens": 1640.3636363636363
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.03731727272727273,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -34026,19 +34026,19 @@
           "points": 2,
           "correct_answer": 1,
           "source_page": 18,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 1,
+          "explanation": "㉠ 덧쌍는[던짠는]에서 ㅆ(치조·마찰)→ㅉ(경구개·파찰)처럼 조음 위치와 조음 방법이 모두 바뀌는 자음 교체가 포함된다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 43.54418181818182,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3745.4545454545455,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3744.3636363636365,
+            "output_tokens": 1738.7272727272727,
+            "reasoning_output_tokens": 1640.3636363636363
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.03731727272727273,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -34050,19 +34050,19 @@
           "points": 2,
           "correct_answer": 2,
           "source_page": 18,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "incorrect",
+          "answer": 3,
+          "explanation": "간접 인용에서 인칭은 맥락에 따라 조정되므로 ㉡의 ‘자기’는 원 발화의 2인칭 주어가 조정된 결과일 수도 있다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 43.54418181818182,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3745.4545454545455,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3744.3636363636365,
+            "output_tokens": 1738.7272727272727,
+            "reasoning_output_tokens": 1640.3636363636363
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.03731727272727273,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -34074,19 +34074,19 @@
           "points": 2,
           "correct_answer": 4,
           "source_page": 19,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 4,
+          "explanation": "㉣이 가리키는 아래 화면은 출연자 둘이 함께 나오는 분할 화면이 아니라 전선 한 사람과 플러그 유형 이미지가 제시된 화면이다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 43.54418181818182,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3745.4545454545455,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3744.3636363636365,
+            "output_tokens": 1738.7272727272727,
+            "reasoning_output_tokens": 1640.3636363636363
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.03731727272727273,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -34098,19 +34098,19 @@
           "points": 2,
           "correct_answer": 3,
           "source_page": 19,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 3,
+          "explanation": "‘풍경’은 국제 표준 제정의 효과를 말한 뒤 그 제정을 위한 ‘움직임이 있었는지’를 물은 것이지 제정 가능 여부에 대한 답변을 요청한 것이 아니다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 43.54418181818182,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3745.4545454545455,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3744.3636363636365,
+            "output_tokens": 1738.7272727272727,
+            "reasoning_output_tokens": 1640.3636363636363
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.03731727272727273,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -34122,19 +34122,19 @@
           "points": 2,
           "correct_answer": 5,
           "source_page": 19,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 5,
+          "explanation": "(나)는 A열 용지처럼 규격이 국제 표준으로 ‘정해진’ 사례를 소개하고 그 자료를 첨부했으므로 ‘정해지지 않은 사례’라는 설명은 맞지 않다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 43.54418181818182,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3745.4545454545455,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3744.3636363636365,
+            "output_tokens": 1738.7272727272727,
+            "reasoning_output_tokens": 1640.3636363636363
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.03731727272727273,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -34146,19 +34146,19 @@
           "points": 2,
           "correct_answer": 2,
           "source_page": 19,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 2,
+          "explanation": "㉡의 ‘-다 보니’는 나라마다 독자적으로 시스템을 구축해 온 것이 원인이 되어 모양이 다양해졌음을 나타낸다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 43.54418181818182,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3745.4545454545455,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3744.3636363636365,
+            "output_tokens": 1738.7272727272727,
+            "reasoning_output_tokens": 1640.3636363636363
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.03731727272727273,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -34170,19 +34170,19 @@
           "points": 2,
           "correct_answer": 1,
           "source_page": 20,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 1,
+          "explanation": "(가)의 순서도는 행사의 ‘일정(시간 순서)’을 보여 줄 뿐 각 행사별 세부 진행 절차를 단계별로 제시한 것은 아니다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 43.54418181818182,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3745.4545454545455,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3744.3636363636365,
+            "output_tokens": 1738.7272727272727,
+            "reasoning_output_tokens": 1640.3636363636363
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.03731727272727273,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -34194,19 +34194,19 @@
           "points": 3,
           "correct_answer": 3,
           "source_page": 20,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 3,
+          "explanation": "승윤·혜린의 대화는 본선 진출 팀의 ‘요청 사항’이 아니라 진출 팀과 대진 정보를 알려 관전을 돕자는 취지이므로 ‘요청 사항 반영’이라는 설명이 부적절하다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 43.54418181818182,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3745.4545454545455,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3744.3636363636365,
+            "output_tokens": 1738.7272727272727,
+            "reasoning_output_tokens": 1640.3636363636363
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.03731727272727273,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -34218,19 +34218,19 @@
           "points": 2,
           "correct_answer": 5,
           "source_page": 1,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 5,
+          "explanation": "5^{1/3}×25^{1/3}=5^{1/3}×5^{2/3}=5이다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 13.03390909090909,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3710.181818181818,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3709.6363636363635,
+            "output_tokens": 491.09090909090907,
+            "reasoning_output_tokens": 405.45454545454544
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.01849690909090909,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -34242,19 +34242,19 @@
           "points": 2,
           "correct_answer": 4,
           "source_page": 1,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 4,
+          "explanation": "주어진 극한은 f'(2)이고, f'(x)=3x^2-8이므로 f'(2)=4이다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 13.03390909090909,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3710.181818181818,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3709.6363636363635,
+            "output_tokens": 491.09090909090907,
+            "reasoning_output_tokens": 405.45454545454544
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.01849690909090909,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -34266,19 +34266,19 @@
           "points": 3,
           "correct_answer": 5,
           "source_page": 1,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 5,
+          "explanation": "a4/a2=k^2, a2/a1=k이므로 k^2+k=30, 양수 k=5이다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 13.03390909090909,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3710.181818181818,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3709.6363636363635,
+            "output_tokens": 491.09090909090907,
+            "reasoning_output_tokens": 405.45454545454544
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.01849690909090909,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -34290,19 +34290,19 @@
           "points": 3,
           "correct_answer": 2,
           "source_page": 1,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 2,
+          "explanation": "x=-2에서 연속이려면 a-10=4-a여야 하므로 a=7이다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 13.03390909090909,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3710.181818181818,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3709.6363636363635,
+            "output_tokens": 491.09090909090907,
+            "reasoning_output_tokens": 405.45454545454544
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.01849690909090909,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -34314,19 +34314,19 @@
           "points": 3,
           "correct_answer": 4,
           "source_page": 2,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 4,
+          "explanation": "곱의 미분으로 f'(1)=2(3-1)+2(6-1)=14이다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 13.03390909090909,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3710.181818181818,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3709.6363636363635,
+            "output_tokens": 491.09090909090907,
+            "reasoning_output_tokens": 405.45454545454544
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.01849690909090909,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -34338,19 +34338,19 @@
           "points": 3,
           "correct_answer": 5,
           "source_page": 2,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 5,
+          "explanation": "cos(π/2+θ)=-sinθ=-1/5라서 sinθ=1/5이고, 분모는 sin^2θ이므로 값은 1/sinθ=5이다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 13.03390909090909,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3710.181818181818,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3709.6363636363635,
+            "output_tokens": 491.09090909090907,
+            "reasoning_output_tokens": 405.45454545454544
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.01849690909090909,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -34362,19 +34362,19 @@
           "points": 3,
           "correct_answer": 3,
           "source_page": 2,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 3,
+          "explanation": "양변을 미분하면 f(x)=9x^2+2이므로 f(1)=11이다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 13.03390909090909,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3710.181818181818,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3709.6363636363635,
+            "output_tokens": 491.09090909090907,
+            "reasoning_output_tokens": 405.45454545454544
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.01849690909090909,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -34386,19 +34386,19 @@
           "points": 3,
           "correct_answer": 1,
           "source_page": 3,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 1,
+          "explanation": "a=-1+log_2 20=log_2 10이고 b=log 2이므로 a×b=log_2 10·log 2=1이다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 13.03390909090909,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3710.181818181818,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3709.6363636363635,
+            "output_tokens": 491.09090909090907,
+            "reasoning_output_tokens": 405.45454545454544
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.01849690909090909,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -34410,19 +34410,19 @@
           "points": 4,
           "correct_answer": 4,
           "source_page": 3,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 4,
+          "explanation": "조건은 ∫_0^a f(x)dx=0과 같고, a^3-8a^2-20a=0에서 양수 a=10이다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 13.03390909090909,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3710.181818181818,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3709.6363636363635,
+            "output_tokens": 491.09090909090907,
+            "reasoning_output_tokens": 405.45454545454544
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.01849690909090909,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -34434,19 +34434,19 @@
           "points": 4,
           "correct_answer": 3,
           "source_page": 3,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 3,
+          "explanation": "최댓값 13에서 a=10이고, x=π/3이 최대가 되려면 cos(bπ/3)=1이라 최소 자연수 b=6이다. 따라서 a+b=16으로 ③이다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 13.03390909090909,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3710.181818181818,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3709.6363636363635,
+            "output_tokens": 491.09090909090907,
+            "reasoning_output_tokens": 405.45454545454544
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.01849690909090909,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -34458,19 +34458,19 @@
           "points": 4,
           "correct_answer": 2,
           "source_page": 4,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 2,
+          "explanation": "속도 v=3(t-2)(t+1)이라 t≥0에서 방향은 t=2에서 바뀌고, 가속도 6t-3의 값은 9이다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 13.03390909090909,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3710.181818181818,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3709.6363636363635,
+            "output_tokens": 491.09090909090907,
+            "reasoning_output_tokens": 405.45454545454544
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.01849690909090909,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -34482,19 +34482,19 @@
           "points": 4,
           "correct_answer": 1,
           "source_page": 4,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 1,
+          "explanation": "n=1에서 b2=4라 공차는 2, b_n=2n이다. 합의 차로 a_n=(2n-1)(n+1)을 얻고 k=1부터 5까지 합하면 120이다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 13.03390909090909,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3710.181818181818,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3709.6363636363635,
+            "output_tokens": 491.09090909090907,
+            "reasoning_output_tokens": 405.45454545454544
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.01849690909090909,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -34506,19 +34506,19 @@
           "points": 4,
           "correct_answer": 5,
           "source_page": 5,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 5,
+          "explanation": "f(x)=(x-1)(x-2)(x+3)=x^3-7x+6이고 OP는 y=4x이다. B-A는 ∫_0^3{(4x)-f(x)}dx로 정리되어 45/4, 즉 ⑤이다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 13.03390909090909,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3710.181818181818,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3709.6363636363635,
+            "output_tokens": 491.09090909090907,
+            "reasoning_output_tokens": 405.45454545454544
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.01849690909090909,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -34530,19 +34530,19 @@
           "points": 4,
           "correct_answer": 4,
           "source_page": 5,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 4,
+          "explanation": "사인법칙과 넓이비에서 삼각형 변의 비는 8:7:5이고 외접원 반지름 7에서 스케일은 √3이다. BC=8√3, A에서 BC까지 높이 15/2에 원 반지름 3√3을 더해 최대 높이를 얻으면 넓이는 36+30√3으로 ④이다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 13.03390909090909,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3710.181818181818,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3709.6363636363635,
+            "output_tokens": 491.09090909090907,
+            "reasoning_output_tokens": 405.45454545454544
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.01849690909090909,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -34554,19 +34554,19 @@
           "points": 4,
           "correct_answer": 2,
           "source_page": 6,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 2,
+          "explanation": "미분가능성에서 f(x)=px^2+15x+7(p<0)이고, 근이 4개가 되려면 왼쪽 도함수 근이 -5,-1로 a=9, 오른쪽 근이 3이 되어 p=-5/2이다. g(-2)=5, g(2)=27이라 합은 32로 ②이다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 13.03390909090909,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3710.181818181818,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3709.6363636363635,
+            "output_tokens": 491.09090909090907,
+            "reasoning_output_tokens": 405.45454545454544
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.01849690909090909,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -34578,19 +34578,19 @@
           "points": 3,
           "correct_answer": 7,
           "source_page": 6,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 7,
+          "explanation": "밑을 2로 통일하면 (x-3)^2=3x-5이고 x^2-9x+14=0이다. 정의역 x>3을 만족하는 해는 7이다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 13.03390909090909,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3710.181818181818,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3709.6363636363635,
+            "output_tokens": 491.09090909090907,
+            "reasoning_output_tokens": 405.45454545454544
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.01849690909090909,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -34602,19 +34602,19 @@
           "points": 3,
           "correct_answer": 33,
           "source_page": 6,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 33,
+          "explanation": "f(x)=3x^3+2x^2+C이고 f(1)=6에서 C=1이다. 따라서 f(2)=24+8+1=33이다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 13.03390909090909,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3710.181818181818,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3709.6363636363635,
+            "output_tokens": 491.09090909090907,
+            "reasoning_output_tokens": 405.45454545454544
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.01849690909090909,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -34626,19 +34626,19 @@
           "points": 3,
           "correct_answer": 96,
           "source_page": 7,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 96,
+          "explanation": "각 n mod 4 잔여류마다 네 항은 x,y,x,y 꼴이고 x+y=12라 합은 24이다. 네 잔여류 전체 합은 96이다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 13.03390909090909,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3710.181818181818,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3709.6363636363635,
+            "output_tokens": 491.09090909090907,
+            "reasoning_output_tokens": 405.45454545454544
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.01849690909090909,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -34650,19 +34650,19 @@
           "points": 3,
           "correct_answer": 41,
           "source_page": 7,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "incorrect",
+          "answer": 33,
+          "explanation": "f'(x)=6(x-2a)(x+a)라 극댓값은 f(-a)=7a^3=7/27에서 a=1/3이다. f(3)=54-9-12=33이다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 13.03390909090909,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3710.181818181818,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3709.6363636363635,
+            "output_tokens": 491.09090909090907,
+            "reasoning_output_tokens": 405.45454545454544
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.01849690909090909,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -34674,19 +34674,19 @@
           "points": 4,
           "correct_answer": 36,
           "source_page": 7,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 36,
+          "explanation": "교점에서 k5^k=125라 목표 입력은 1/(k^3 5^{3k})=5^{-9}이다. x>k에서 f(x)=5^{3-x}이고 f(f(x))=3x를 역으로 쓰면 0<y<k에서 f(y)=9-3log_5 y이므로 f(5^{-9})=36이다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 13.03390909090909,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3710.181818181818,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3709.6363636363635,
+            "output_tokens": 491.09090909090907,
+            "reasoning_output_tokens": 405.45454545454544
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.01849690909090909,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -34698,19 +34698,19 @@
           "points": 4,
           "correct_answer": 16,
           "source_page": 8,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 16,
+          "explanation": "모든 실수 α에서 극한이 존재하려면 f의 유일한 실근은 -1이어야 하므로 f(x)=(x+1){x^2+(a-1)x+4}이고 이차식은 실근이 없어야 한다. -3<a<5의 정수 a 중 f(1)=8+2a를 최대로 하는 a=4에서 값은 16이다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 13.03390909090909,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3710.181818181818,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3709.6363636363635,
+            "output_tokens": 491.09090909090907,
+            "reasoning_output_tokens": 405.45454545454544
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.01849690909090909,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -34722,19 +34722,19 @@
           "points": 4,
           "correct_answer": 64,
           "source_page": 8,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 64,
+          "explanation": "|a3|=|a5|가 되려면 a3∈{1,-3,2,-6,0}이고, 앞의 두 gap-2 부등식 |a1|≠|a3|, |a2|≠|a4|를 검사하면 가능한 |a1|은 6,7,8,9,10,24이다. 합은 64이다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 13.03390909090909,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3710.181818181818,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3709.6363636363635,
+            "output_tokens": 491.09090909090907,
+            "reasoning_output_tokens": 405.45454545454544
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.01849690909090909,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -34746,19 +34746,19 @@
           "points": 2,
           "correct_answer": 5,
           "source_page": 9,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 5,
+          "explanation": "일반항은 C(5,k)2^(5-k)x^(3k)이고 x^6은 k=2일 때 나온다. 계수는 C(5,2)·2^3=80이므로 ⑤이다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 15.519625,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 5138.75,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 5137.25,
+            "output_tokens": 618.5,
+            "reasoning_output_tokens": 511.625
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.02469375,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -34770,19 +34770,19 @@
           "points": 3,
           "correct_answer": 3,
           "source_page": 9,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 3,
+          "explanation": "P(A|B)=P(A∩B)/P(B)=1/2에서 P(B)=2/5이다. 따라서 P(A∪B)=1/2+2/5-1/5=7/10이므로 ③이다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 15.519625,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 5138.75,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 5137.25,
+            "output_tokens": 618.5,
+            "reasoning_output_tokens": 511.625
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.02469375,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -34794,19 +34794,19 @@
           "points": 3,
           "correct_answer": 1,
           "source_page": 10,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 1,
+          "explanation": "95% 신뢰구간의 길이는 2·1.96·σ/√n=2·1.96·2/16=0.49이다. 따라서 ①이다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 15.519625,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 5138.75,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 5137.25,
+            "output_tokens": 618.5,
+            "reasoning_output_tokens": 511.625
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.02469375,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -34818,19 +34818,19 @@
           "points": 3,
           "correct_answer": 3,
           "source_page": 10,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 3,
+          "explanation": "적어도 한 명이 B를 선택할 확률은 1-P(모두 A)=1-C(9,3)/C(16,3)=1-84/560=17/20이다. 따라서 ③이다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 15.519625,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 5138.75,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 5137.25,
+            "output_tokens": 618.5,
+            "reasoning_output_tokens": 511.625
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.02469375,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -34842,19 +34842,19 @@
           "points": 3,
           "correct_answer": 3,
           "source_page": 11,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 3,
+          "explanation": "한 번 뽑을 때 분산은 8이고, 3번 평균의 분산은 8/3이다. V(aXbar+6)=a^2·8/3=24에서 양수 a=3이므로 ③이다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 15.519625,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 5138.75,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 5137.25,
+            "output_tokens": 618.5,
+            "reasoning_output_tokens": 511.625
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.02469375,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -34866,19 +34866,19 @@
           "points": 4,
           "correct_answer": 2,
           "source_page": 11,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 2,
+          "explanation": "f(1)f(6)이 6의 약수인 (f(1),f(6))은 8쌍이고, 각각에 대해 f(2)≤…≤f(5)가 구간 [2f(1),2f(6)]에 들어가는 경우를 중복조합으로 세면 1+15+70+70+15=171이다. 따라서 ②이다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 15.519625,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 5138.75,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 5137.25,
+            "output_tokens": 618.5,
+            "reasoning_output_tokens": 511.625
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.02469375,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -34890,19 +34890,19 @@
           "points": 4,
           "correct_answer": 25,
           "source_page": 12,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 25,
+          "explanation": "첫 조건에서 X는 20에 대해 대칭이라 m1=20이고, 둘째 조건에서 Y는 X-10과 같은 분포라 σ2=σ1이다. 주어진 확률합은 P(0≤Z≤10/σ)=0.4772가 되어 10/σ=2, 즉 σ=5이므로 m1+σ2=25이다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 15.519625,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 5138.75,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 5137.25,
+            "output_tokens": 618.5,
+            "reasoning_output_tokens": 511.625
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.02469375,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -34914,19 +34914,19 @@
           "points": 4,
           "correct_answer": 19,
           "source_page": 12,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 19,
+          "explanation": "3번의 주사위 결과로 각 동전의 뒤집힘 횟수 패리티가 (0,0,1,1,1)이어야 한다. 가능한 순서쌍은 3·4·5만 뒤집는 6가지와 6 한 번·1·2를 뒤집는 6가지로 총 12가지이므로 확률은 12/216=1/18이고 p+q=19이다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 15.519625,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 5138.75,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 5137.25,
+            "output_tokens": 618.5,
+            "reasoning_output_tokens": 511.625
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.02469375,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -34938,19 +34938,19 @@
           "points": 2,
           "correct_answer": 3,
           "source_page": 13,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 3,
+          "explanation": "x→0에서 sin x~x이므로 sin²x~x², 따라서 3x²/sin²x→3이다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 30.750625,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 5139.5,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 5138,
+            "output_tokens": 1250.5,
+            "reasoning_output_tokens": 1155.25
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.034176,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -34962,19 +34962,19 @@
           "points": 3,
           "correct_answer": 4,
           "source_page": 13,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 4,
+          "explanation": "(x+2)/(x+1)=1+1/(x+1)이므로 적분값은 [x+ln(x+1)]_0^10=10+ln11이다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 30.750625,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 5139.5,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 5138,
+            "output_tokens": 1250.5,
+            "reasoning_output_tokens": 1155.25
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.034176,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -34986,19 +34986,19 @@
           "points": 3,
           "correct_answer": 2,
           "source_page": 14,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 2,
+          "explanation": "조건에서 a_n~n이므로 √(a_n²+n)-a_n=n/(√(a_n²+n)+a_n)→1/2이다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 30.750625,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 5139.5,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 5138,
+            "output_tokens": 1250.5,
+            "reasoning_output_tokens": 1155.25
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.034176,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -35010,19 +35010,19 @@
           "points": 3,
           "correct_answer": 1,
           "source_page": 14,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 1,
+          "explanation": "단면이 정사각형이라 부피는 ∫_1^e y²dx=∫_1^e (x+1)/(x(x+ln x))dx이고, u=x+ln x로 치환하면 ln(e+1)이 된다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 30.750625,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 5139.5,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 5138,
+            "output_tokens": 1250.5,
+            "reasoning_output_tokens": 1155.25
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.034176,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -35034,19 +35034,19 @@
           "points": 3,
           "correct_answer": 1,
           "source_page": 15,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 1,
+          "explanation": "g(0)=g′(0)=0과 역함수 존재 조건에서 g(x)=(e^x-1)^3이 되고, h(y)=ln(1+y^(1/3))이므로 h′(8)=1/36이다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 30.750625,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 5139.5,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 5138,
+            "output_tokens": 1250.5,
+            "reasoning_output_tokens": 1155.25
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.034176,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -35058,19 +35058,19 @@
           "points": 4,
           "correct_answer": 2,
           "source_page": 15,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 2,
+          "explanation": "접선과 곡선 사이 넓이를 g(t)=∫_0^t(L-f)dx로 두면 g′(t)=-(t²/2)f″(t)이고, t=1에서 계산하면 g(1)+g′(1)=e/2+2/3이다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 30.750625,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 5139.5,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 5138,
+            "output_tokens": 1250.5,
+            "reasoning_output_tokens": 1155.25
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.034176,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -35082,19 +35082,19 @@
           "points": 4,
           "correct_answer": 25,
           "source_page": 16,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 25,
+          "explanation": "양수항 합과 음수항 합에서 공비는 -1/2, 첫째항은 5이다. 주기 부호를 곱한 급수의 값은 (-1/2)^(m-1)이 되어 1/700보다 큰 자연수 m은 1,3,5,7,9이고 합은 25이다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 30.750625,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 5139.5,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 5138,
+            "output_tokens": 1250.5,
+            "reasoning_output_tokens": 1155.25
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.034176,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -35106,19 +35106,19 @@
           "points": 4,
           "correct_answer": 17,
           "source_page": 16,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 17,
+          "explanation": "조건 (나)에서 a=3/2, (가)에서 b=-3π이 된다. u(x)=ax+b+sin x는 증가하고 (0,4π)에서 극대는 3개, 가장 작은 극대점은 α1=π이다. 따라서 nα1-ab=3π+9π/2=15π/2이므로 p+q=2+15=17이다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 30.750625,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 5139.5,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 5138,
+            "output_tokens": 1250.5,
+            "reasoning_output_tokens": 1155.25
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.034176,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -35130,19 +35130,19 @@
           "points": 2,
           "correct_answer": 3,
           "source_page": 17,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 3,
+          "explanation": "a+3b=(k+3,3+6)=(6,9)이므로 k+3=6에서 k=3.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 19.825,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 5138.5,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 5137,
+            "output_tokens": 859,
+            "reasoning_output_tokens": 743.625
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.0283005,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -35154,19 +35154,19 @@
           "points": 3,
           "correct_answer": 4,
           "source_page": 17,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 4,
+          "explanation": "준선 x=-1, 꼭짓점 (1,0)이면 초점은 (3,0)이고 포물선은 y²=8(x-1). (3,a) 대입 시 a²=16, 양수 a=4.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 19.825,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 5138.5,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 5137,
+            "output_tokens": 859,
+            "reasoning_output_tokens": 743.625
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.0283005,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -35178,19 +35178,19 @@
           "points": 3,
           "correct_answer": 3,
           "source_page": 18,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 3,
+          "explanation": "내분점 (2A+3B)/5가 z축 위에 있으려면 x,y성분이 0이라 a=6,b=3. 외분점 -2A+3B가 xy평면 위이려면 z성분 -12+3c=0, c=4. 합은 13.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 19.825,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 5138.5,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 5137,
+            "output_tokens": 859,
+            "reasoning_output_tokens": 743.625
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.0283005,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -35202,19 +35202,19 @@
           "points": 3,
           "correct_answer": 1,
           "source_page": 18,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 1,
+          "explanation": "타원 접선의 x절편은 a²/x₀이므로 α=2n, β=n/2. α-β=3n/2가 6과 15 사이이려면 4≤n≤10, 총 7개.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 19.825,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 5138.5,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 5137,
+            "output_tokens": 859,
+            "reasoning_output_tokens": 743.625
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.0283005,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -35226,19 +35226,19 @@
           "points": 3,
           "correct_answer": 1,
           "source_page": 19,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 1,
+          "explanation": "BC⊥평면AMD에서 AM=√(36-20)=4이고 △AMD는 한 변 4인 정삼각형. △ACD는 AC=CD=6, AD=4인 이등변삼각형으로 내접원 반지름 √2, 두 평면 ACD·BCD의 이면각 코사인은 √10/8. 정사영 넓이=π·2·√10/8=(√10/4)π.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 19.825,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 5138.5,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 5137,
+            "output_tokens": 859,
+            "reasoning_output_tokens": 743.625
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.0283005,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -35250,19 +35250,19 @@
           "points": 4,
           "correct_answer": 4,
           "source_page": 19,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 4,
+          "explanation": "B(0,0,0),A(8,0,0),C(0,6,0)으로 두면 구의 중심 (4,3,0), 반지름 5이고 원 O는 y=0 평면에서 중심 (4,0,0), 반지름 4. 직선 AC까지 거리 4 조건과 원 방정식을 연립하면 x=11/2, z=±√55/2이어서 PQ=√55.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 19.825,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 5138.5,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 5137,
+            "output_tokens": 859,
+            "reasoning_output_tokens": 743.625
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.0283005,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -35274,19 +35274,19 @@
           "points": 4,
           "correct_answer": 107,
           "source_page": 20,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 107,
+          "explanation": "c=6, PF=r, PF'=r+2, QF'=2r+2. 닮음비 (r+1)/6=12/(r+2)에서 r=7이고 △FF'P 넓이 14√5, 높이를 이용해 △PFQ 넓이=98√5/9. p=9,q=98이므로 p+q=107.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 19.825,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 5138.5,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 5137,
+            "output_tokens": 859,
+            "reasoning_output_tokens": 743.625
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.0283005,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -35298,19 +35298,19 @@
           "points": 4,
           "correct_answer": 316,
           "source_page": 20,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 316,
+          "explanation": "|XB+XC|=|XB-XC|에서 XB⊥XC라 S는 BC를 지름으로 하는 원 (중심 (2,0), 반지름 2). Q=(P+B+2D)/4를 대입하면 AC·AQ=16+x-y이고 원 위에서 x-y∈[2-2√2,2+2√2]. M·m=(18+2√2)(18-2√2)=324-8=316.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 19.825,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 5138.5,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 5137,
+            "output_tokens": 859,
+            "reasoning_output_tokens": 743.625
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.0283005,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -35322,19 +35322,19 @@
           "points": 2,
           "correct_answer": 2,
           "source_page": 1,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 2,
+          "explanation": "부교장이 다음 화요일 수업 시간이 50분에서 40분으로 단축됨을 알리는 내용이므로 수업 시간 단축 공지가 목적이다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 4.218355555555555,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3751.177777777778,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3750.911111111111,
+            "output_tokens": 171.55555555555554,
+            "reasoning_output_tokens": 95
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.013826866666666666,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -35346,19 +35346,19 @@
           "points": 2,
           "correct_answer": 5,
           "source_page": 1,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 5,
+          "explanation": "남자는 드라마 캠프가 다양한 역할을 통해 타인의 관점을 보게 해준다며 다양한 시각을 얻는 데 도움이 된다고 말한다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 4.218355555555555,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3751.177777777778,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3750.911111111111,
+            "output_tokens": 171.55555555555554,
+            "reasoning_output_tokens": 95
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.013826866666666666,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -35370,19 +35370,19 @@
           "points": 2,
           "correct_answer": 1,
           "source_page": 1,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 1,
+          "explanation": "여자는 예술가의 삶과 경험을 알면 그들의 작품을 더 깊이 이해하고 감상할 수 있다고 말한다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 4.218355555555555,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3751.177777777778,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3750.911111111111,
+            "output_tokens": 171.55555555555554,
+            "reasoning_output_tokens": 95
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.013826866666666666,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -35394,19 +35394,19 @@
           "points": 2,
           "correct_answer": 3,
           "source_page": 1,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 3,
+          "explanation": "대화에서 텐트는 줄무늬(stripe)라고 했지만 그림의 텐트에는 꽃/눈송이 무늬가 있어 일치하지 않는다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 4.218355555555555,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3751.177777777778,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3750.911111111111,
+            "output_tokens": 171.55555555555554,
+            "reasoning_output_tokens": 95
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.013826866666666666,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -35418,19 +35418,19 @@
           "points": 2,
           "correct_answer": 1,
           "source_page": 1,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 1,
+          "explanation": "남자는 우승 트로피가 자기 집에 있으며 내일 가져오겠다고 말한다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 4.218355555555555,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3751.177777777778,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3750.911111111111,
+            "output_tokens": 171.55555555555554,
+            "reasoning_output_tokens": 95
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.013826866666666666,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -35442,19 +35442,19 @@
           "points": 2,
           "correct_answer": 4,
           "source_page": 1,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 4,
+          "explanation": "일반 2매($60)+시니어 2매($40)+점심 4매($100)로 총 $200이다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 4.218355555555555,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3751.177777777778,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3750.911111111111,
+            "output_tokens": 171.55555555555554,
+            "reasoning_output_tokens": 95
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.013826866666666666,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -35466,19 +35466,19 @@
           "points": 2,
           "correct_answer": 3,
           "source_page": 1,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 3,
+          "explanation": "남자는 그날 야구 경기 티켓이 있어 워크숍에 갈 수 없다고 말한다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 4.218355555555555,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3751.177777777778,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3750.911111111111,
+            "output_tokens": 171.55555555555554,
+            "reasoning_output_tokens": 95
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.013826866666666666,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -35490,19 +35490,19 @@
           "points": 2,
           "correct_answer": 4,
           "source_page": 1,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 4,
+          "explanation": "목적, 프로그램, 후원 기관, 기간은 언급되었지만 입장료는 언급되지 않았다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 4.218355555555555,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3751.177777777778,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3750.911111111111,
+            "output_tokens": 171.55555555555554,
+            "reasoning_output_tokens": 95
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.013826866666666666,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -35514,19 +35514,19 @@
           "points": 2,
           "correct_answer": 5,
           "source_page": 1,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 5,
+          "explanation": "대본에서 지정석이 없다(no assigned seats)고 했으므로 '지정석이 있다'는 일치하지 않는다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 4.218355555555555,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3751.177777777778,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3750.911111111111,
+            "output_tokens": 171.55555555555554,
+            "reasoning_output_tokens": 95
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.013826866666666666,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -35538,19 +35538,19 @@
           "points": 2,
           "correct_answer": 2,
           "source_page": 1,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 2,
+          "explanation": "4종 이상, 세라믹 아님, 재배 가이드 포함, 최고가 아님 조건을 모두 만족하는 것은 B 키트이다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 4.218355555555555,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3751.177777777778,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3750.911111111111,
+            "output_tokens": 171.55555555555554,
+            "reasoning_output_tokens": 95
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.013826866666666666,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -35562,19 +35562,19 @@
           "points": 3,
           "correct_answer": 2,
           "source_page": 1,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 2,
+          "explanation": "코치가 견과류 알레르기가 있다는 말에 여자는 주문을 바꿀 수 있는지 확인해 보겠다고 응답하는 것이 적절하다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 4.218355555555555,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3751.177777777778,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3750.911111111111,
+            "output_tokens": 171.55555555555554,
+            "reasoning_output_tokens": 95
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.013826866666666666,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -35586,19 +35586,19 @@
           "points": 2,
           "correct_answer": 1,
           "source_page": 1,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 1,
+          "explanation": "완전 초보자용 수업이니 같이 하자는 여자의 제안에 남자는 '그렇다면 해보자'고 수락하는 것이 자연스럽다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 4.218355555555555,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3751.177777777778,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3750.911111111111,
+            "output_tokens": 171.55555555555554,
+            "reasoning_output_tokens": 95
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.013826866666666666,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -35610,19 +35610,19 @@
           "points": 2,
           "correct_answer": 5,
           "source_page": 2,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 5,
+          "explanation": "남자가 안 타는 자전거를 경매에 기부하겠다고 하자 기부가 감사히 여겨질 것이라는 응답이 적절하다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 4.218355555555555,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3751.177777777778,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3750.911111111111,
+            "output_tokens": 171.55555555555554,
+            "reasoning_output_tokens": 95
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.013826866666666666,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -35634,19 +35634,19 @@
           "points": 3,
           "correct_answer": 1,
           "source_page": 2,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 1,
+          "explanation": "여자가 오늘 중으로 심사위원 참석 여부를 알려주겠다고 하자, 심사할 수 있길 바란다는 응답이 적절하다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 4.218355555555555,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3751.177777777778,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3750.911111111111,
+            "output_tokens": 171.55555555555554,
+            "reasoning_output_tokens": 95
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.013826866666666666,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -35658,19 +35658,19 @@
           "points": 3,
           "correct_answer": 2,
           "source_page": 2,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 2,
+          "explanation": "Sophia는 보안 검색과 기념품점 방문 등을 위해 훨씬 일찍 출발하자고 제안하고 싶어한다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 4.218355555555555,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3751.177777777778,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3750.911111111111,
+            "output_tokens": 171.55555555555554,
+            "reasoning_output_tokens": 95
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.013826866666666666,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -35682,19 +35682,19 @@
           "points": 2,
           "correct_answer": 3,
           "source_page": 2,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 3,
+          "explanation": "여자는 미래 식량 부족에 대비할 수 있는 적합한 식품들(해조류, 콩, 호박, 버섯)을 소개한다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 4.218355555555555,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3751.177777777778,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3750.911111111111,
+            "output_tokens": 171.55555555555554,
+            "reasoning_output_tokens": 95
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.013826866666666666,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -35706,19 +35706,19 @@
           "points": 2,
           "correct_answer": 4,
           "source_page": 2,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 4,
+          "explanation": "해조류, 콩, 호박, 버섯이 언급되었고 감자는 언급되지 않았다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 4.218355555555555,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3751.177777777778,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3750.911111111111,
+            "output_tokens": 171.55555555555554,
+            "reasoning_output_tokens": 95
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.013826866666666666,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -35730,19 +35730,19 @@
           "points": 2,
           "correct_answer": 1,
           "source_page": 2,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 1,
+          "explanation": "편지는 폭우로 인해 마라톤 경기를 취소한다는 사실을 참가자들에게 공지하는 것이다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 4.218355555555555,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3751.177777777778,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3750.911111111111,
+            "output_tokens": 171.55555555555554,
+            "reasoning_output_tokens": 95
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.013826866666666666,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -35754,19 +35754,19 @@
           "points": 2,
           "correct_answer": 2,
           "source_page": 2,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 2,
+          "explanation": "Peter는 아내가 깜짝 선물을 좋아할 것이라 확신했으나 예약이 다 차자 실망했다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 4.218355555555555,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3751.177777777778,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3750.911111111111,
+            "output_tokens": 171.55555555555554,
+            "reasoning_output_tokens": 95
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.013826866666666666,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -35778,19 +35778,19 @@
           "points": 2,
           "correct_answer": 1,
           "source_page": 2,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 1,
+          "explanation": "필자는 게임의 주의 집중력을 활용해 학습 성과와 연결된 게임을 개발해야 한다고 주장한다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 4.218355555555555,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3751.177777777778,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3750.911111111111,
+            "output_tokens": 171.55555555555554,
+            "reasoning_output_tokens": 95
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.013826866666666666,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -35802,19 +35802,19 @@
           "points": 3,
           "correct_answer": 3,
           "source_page": 3,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 3,
+          "explanation": "이론과 학문에만 의존하고 실기를 갖추지 못한 건축가를 비판한 표현으로, 실용적 기술 없이 이상만 추구한다는 뜻이다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 4.218355555555555,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3751.177777777778,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3750.911111111111,
+            "output_tokens": 171.55555555555554,
+            "reasoning_output_tokens": 95
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.013826866666666666,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -35826,19 +35826,19 @@
           "points": 2,
           "correct_answer": 2,
           "source_page": 3,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 2,
+          "explanation": "글은 감정 이해 능력이 집단 내 소통, 협력, 갈등 해결을 촉진한다는 내용이다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 4.218355555555555,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3751.177777777778,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3750.911111111111,
+            "output_tokens": 171.55555555555554,
+            "reasoning_output_tokens": 95
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.013826866666666666,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -35850,19 +35850,19 @@
           "points": 2,
           "correct_answer": 1,
           "source_page": 3,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 1,
+          "explanation": "산업화로 노동이 시계 중심이 되고 시간·노동·자본의 관계가 바뀌었다는 근무 시간 패러다임의 전환이 주제이다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 4.218355555555555,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3751.177777777778,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3750.911111111111,
+            "output_tokens": 171.55555555555554,
+            "reasoning_output_tokens": 95
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.013826866666666666,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -35874,19 +35874,19 @@
           "points": 2,
           "correct_answer": 5,
           "source_page": 3,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "incorrect",
+          "answer": 3,
+          "explanation": "셀카가 자화상의 역사를 계승·확장하며 새 시대의 시각적 서명이자 세계적 시각 문화의 대상이 되었음을 다루므로 ③이 적합하다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 4.218355555555555,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3751.177777777778,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3750.911111111111,
+            "output_tokens": 171.55555555555554,
+            "reasoning_output_tokens": 95
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.013826866666666666,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -35898,19 +35898,19 @@
           "points": 2,
           "correct_answer": 4,
           "source_page": 4,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 4,
+          "explanation": "편집자 여성 비율은 2021년에 21%로 20% 미만이 아니므로 ④가 일치하지 않는다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 4.218355555555555,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3751.177777777778,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3750.911111111111,
+            "output_tokens": 171.55555555555554,
+            "reasoning_output_tokens": 95
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.013826866666666666,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -35922,19 +35922,19 @@
           "points": 2,
           "correct_answer": 4,
           "source_page": 4,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 4,
+          "explanation": "그는 2016년 마지막 생방송 후 이듬해 사망했으므로 3년 뒤라는 진술은 틀렸다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 4.218355555555555,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3751.177777777778,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3750.911111111111,
+            "output_tokens": 171.55555555555554,
+            "reasoning_output_tokens": 95
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.013826866666666666,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -35946,19 +35946,19 @@
           "points": 2,
           "correct_answer": 3,
           "source_page": 4,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 3,
+          "explanation": "입장료 10% 할인 혜택은 모든 카드 종류에 동일하게 적용되므로 ③이 일치하지 않는다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 4.218355555555555,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3751.177777777778,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3750.911111111111,
+            "output_tokens": 171.55555555555554,
+            "reasoning_output_tokens": 95
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.013826866666666666,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -35970,19 +35970,19 @@
           "points": 2,
           "correct_answer": 3,
           "source_page": 4,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 3,
+          "explanation": "눈 조각 경연에 11개 팀이 참가한다고 명시되어 있다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 4.218355555555555,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3751.177777777778,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3750.911111111111,
+            "output_tokens": 171.55555555555554,
+            "reasoning_output_tokens": 95
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.013826866666666666,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -35994,19 +35994,19 @@
           "points": 2,
           "correct_answer": 2,
           "source_page": 5,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 2,
+          "explanation": "주어가 복수 patients이므로 knows가 아니라 know가 맞다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 4.218355555555555,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3751.177777777778,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3750.911111111111,
+            "output_tokens": 171.55555555555554,
+            "reasoning_output_tokens": 95
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.013826866666666666,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -36018,19 +36018,19 @@
           "points": 3,
           "correct_answer": 4,
           "source_page": 5,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 4,
+          "explanation": "경쟁 유인이 동기 저하를 초래한다는 맥락이므로 stronger가 아니라 weaker 등이 와야 한다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 4.218355555555555,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3751.177777777778,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3750.911111111111,
+            "output_tokens": 171.55555555555554,
+            "reasoning_output_tokens": 95
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.013826866666666666,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -36042,19 +36042,19 @@
           "points": 2,
           "correct_answer": 5,
           "source_page": 5,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 5,
+          "explanation": "독자가 텍스트에 몰입하고 인물에 감정 이입하게 되는 개인적 참여(personal involvement)를 기르기 때문이다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 4.218355555555555,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3751.177777777778,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3750.911111111111,
+            "output_tokens": 171.55555555555554,
+            "reasoning_output_tokens": 95
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.013826866666666666,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -36066,19 +36066,19 @@
           "points": 2,
           "correct_answer": 3,
           "source_page": 5,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 3,
+          "explanation": "비판적 사고는 자극에 즉각 반응하는 삶의 짐에서 사람을 해방시킨다는 맥락이다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 4.218355555555555,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3751.177777777778,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3750.911111111111,
+            "output_tokens": 171.55555555555554,
+            "reasoning_output_tokens": 95
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.013826866666666666,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -36090,19 +36090,19 @@
           "points": 3,
           "correct_answer": 2,
           "source_page": 6,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 2,
+          "explanation": "무료로 보이는 것의 비용을 누가 내는지 보이지 않으면 실제로 팔리는 상품은 바로 당신이라는 상식적 논지다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 4.218355555555555,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3751.177777777778,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3750.911111111111,
+            "output_tokens": 171.55555555555554,
+            "reasoning_output_tokens": 95
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.013826866666666666,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -36114,19 +36114,19 @@
           "points": 3,
           "correct_answer": 5,
           "source_page": 6,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 5,
+          "explanation": "규칙이 야구·음악처럼 실천 자체를 만들고 역할을 창출해 새로운 기회와 생산적 활동을 가능하게 한다는 내용이다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 4.218355555555555,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3751.177777777778,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3750.911111111111,
+            "output_tokens": 171.55555555555554,
+            "reasoning_output_tokens": 95
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.013826866666666666,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -36138,19 +36138,19 @@
           "points": 2,
           "correct_answer": 4,
           "source_page": 6,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 4,
+          "explanation": "숙박 시설 확장이 지역 식당 성장을 촉진했다는 ④는 자동차와 스포츠 관광이라는 흐름과 무관하다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 4.218355555555555,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3751.177777777778,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3750.911111111111,
+            "output_tokens": 171.55555555555554,
+            "reasoning_output_tokens": 95
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.013826866666666666,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -36162,19 +36162,19 @@
           "points": 2,
           "correct_answer": 5,
           "source_page": 6,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 5,
+          "explanation": "(C) 평판 형성 → (B) 감시와 농부의 기회주의 → (A) 마찬가지로 지주의 기회주의와 거래 거절 결론 순이 자연스럽다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 4.218355555555555,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3751.177777777778,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3750.911111111111,
+            "output_tokens": 171.55555555555554,
+            "reasoning_output_tokens": 95
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.013826866666666666,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -36186,19 +36186,19 @@
           "points": 3,
           "correct_answer": 3,
           "source_page": 7,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 3,
+          "explanation": "(B) 연구 결과(원형이 일렬보다 협조적) → (C) 일렬 새들의 구체적 행동 → (A) 그 이유에 대한 Marc의 추론 순이다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 4.218355555555555,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3751.177777777778,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3750.911111111111,
+            "output_tokens": 171.55555555555554,
+            "reasoning_output_tokens": 95
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.013826866666666666,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -36210,19 +36210,19 @@
           "points": 3,
           "correct_answer": 4,
           "source_page": 7,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 4,
+          "explanation": "비밀 유지의 위험을 말한 뒤 '일단 공개되면 자유로운 공기처럼 된다'는 ④ 앞에 연결되고, ⑤의 '그런 곤경'이 이를 받는다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 4.218355555555555,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3751.177777777778,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3750.911111111111,
+            "output_tokens": 171.55555555555554,
+            "reasoning_output_tokens": 95
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.013826866666666666,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -36234,19 +36234,19 @@
           "points": 2,
           "correct_answer": 4,
           "source_page": 7,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 4,
+          "explanation": "선형 생애주기의 불완전한 정의를 지적한 뒤 '실제로 사물은 선형 모델에 맞지 않는다'가 이어지고 Additionally 문장이 덧붙는다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 4.218355555555555,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3751.177777777778,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3750.911111111111,
+            "output_tokens": 171.55555555555554,
+            "reasoning_output_tokens": 95
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.013826866666666666,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -36258,19 +36258,19 @@
           "points": 2,
           "correct_answer": 1,
           "source_page": 7,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 1,
+          "explanation": "합성 식품 재료의 통제 가능성(controllability)과 천연 재료의 변동성이 '천연이 더 안전하다'는 통념에 도전(challenge)한다는 요약이다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 4.218355555555555,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3751.177777777778,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3750.911111111111,
+            "output_tokens": 171.55555555555554,
+            "reasoning_output_tokens": 95
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.013826866666666666,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -36282,19 +36282,19 @@
           "points": 2,
           "correct_answer": 2,
           "source_page": 8,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 2,
+          "explanation": "정밀 파지가 인류 진화의 돌파구이며 인간의 손이 역사를 만들었다는 내용이므로 ②가 제목으로 적합하다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 4.218355555555555,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3751.177777777778,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3750.911111111111,
+            "output_tokens": 171.55555555555554,
+            "reasoning_output_tokens": 95
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.013826866666666666,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -36306,19 +36306,19 @@
           "points": 3,
           "correct_answer": 5,
           "source_page": 8,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 5,
+          "explanation": "창끝 만들기는 강한 파지 등을 '필요로 하며', excludes(배제한다)는 문맥에 맞지 않는다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 4.218355555555555,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3751.177777777778,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3750.911111111111,
+            "output_tokens": 171.55555555555554,
+            "reasoning_output_tokens": 95
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.013826866666666666,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -36330,19 +36330,19 @@
           "points": 2,
           "correct_answer": 2,
           "source_page": 8,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 2,
+          "explanation": "(A)에서 세탁소에 함께 가기로 한 뒤 (C) 세탁소 방문 → (B) 재킷을 가져와 하이킹 제안 → (D) 하이킹 출발 순이다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 4.218355555555555,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3751.177777777778,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3750.911111111111,
+            "output_tokens": 171.55555555555554,
+            "reasoning_output_tokens": 95
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.013826866666666666,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -36354,19 +36354,19 @@
           "points": 2,
           "correct_answer": 3,
           "source_page": 8,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 3,
+          "explanation": "(a), (b), (d), (e)는 Ethan을 가리키고 (c) he는 Sean을 가리킨다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 4.218355555555555,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3751.177777777778,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3750.911111111111,
+            "output_tokens": 171.55555555555554,
+            "reasoning_output_tokens": 95
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.013826866666666666,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         },
         {
@@ -36378,19 +36378,19 @@
           "points": 2,
           "correct_answer": 4,
           "source_page": 8,
-          "status": "pending",
-          "answer": null,
-          "explanation": "",
+          "status": "correct",
+          "answer": 4,
+          "explanation": "Ethan은 아내에게 함께 세탁소에 가자고 했으므로 혼자 갔다는 ④는 틀렸다.",
           "abstain_reason": null,
-          "time_seconds": 0,
+          "time_seconds": 4.218355555555555,
           "usage": {
-            "input_tokens": 0,
+            "input_tokens": 3751.177777777778,
             "cached_input_tokens": 0,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 0,
-            "reasoning_output_tokens": 0
+            "cache_write_input_tokens": 3750.911111111111,
+            "output_tokens": 171.55555555555554,
+            "reasoning_output_tokens": 95
           },
-          "estimated_cost_usd": 0,
+          "estimated_cost_usd": 0.013826866666666666,
           "measurement_basis": "Group request duration and usage divided equally; not individual measurement"
         }
       ],
@@ -36408,7 +36408,7 @@
           "url": "https://www.suneung.re.kr/boardCnts/view.do?boardID=1500234&boardSeq=5089362&lev=0&m=0403&s=suneung"
         }
       ],
-      "completed": false,
+      "completed": true,
       "protocol": {
         "model": "kimi-k3",
         "provider": "moonshot",
@@ -36442,7 +36442,7 @@
         "api_endpoint": "https://api.moonshot.ai/v1",
         "reference_cost_is_invoice": false
       },
-      "usage_complete": false,
+      "usage_complete": true,
       "limitations": [
         "Pi 모델은 사용자 승인 API 인증으로 실행합니다. Codex·Claude 구독 결과와 인증 경로가 다릅니다.",
         "Pi CLI 0.87.1, 도구·확장·자동 재시도·문맥 압축·이미지 자동 축소 비활성, 묶음당 출력 상한 65,536토큰입니다.",
@@ -36521,8 +36521,8 @@
       "id": "kimi-k3",
       "label": "Kimi K3",
       "provider": "moonshot",
-      "state": "partial",
-      "reason": "아직 모든 문항이 제출되지 않았습니다."
+      "state": "complete",
+      "reason": null
     }
   ],
   "billing_policy": {
