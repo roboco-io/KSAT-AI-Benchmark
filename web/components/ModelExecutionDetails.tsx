@@ -28,7 +28,7 @@ export function ModelExecutionDetails({data,label,onShowAnswers}:{data:Benchmark
       <div><dt>토큰 사용량</dt><dd>입력 {data.summary.usage.input_tokens.toLocaleString('ko-KR')}<br/>출력 {data.summary.usage.output_tokens.toLocaleString('ko-KR')}<br/>캐시 {data.summary.usage.cached_input_tokens.toLocaleString('ko-KR')}</dd></div>
     </dl>
     <p className="execution-definition">재시도는 원래 묶음의 첫 실행 이후 추가 시도 횟수이며 분할 복구를 포함합니다. 답변 거부는 명시적 거부·콘텐츠 검사 차단 요청 횟수로, 확정된 기권 문항 수와 구분합니다.</p>
-    <details className="execution-method"><summary>시험 조건·측정 한계</summary><p>원본 PDF 200 DPI 이미지 · 영어 듣기는 공식 대본 이미지 · 추론 설정 {data.protocol?.effort??'기록 없음'} · 검색·외부 도구 비활성 조건입니다. 모델별 내부 계산량이 같다는 뜻은 아닙니다.</p><p>{data.usage_complete===false?'일부 실패 요청의 사용량이 보고되지 않았습니다. 비용은 확인 가능한 사용량의 하한 추정입니다.':'비용은 보고된 사용량을 API 요율로 환산한 참고값입니다.'} 실측 청구액이 아닙니다. 이 총평은 이번 시험의 성적과 실행 기록을 요약하며, 모델의 모든 과제 수행 능력을 대표하지 않습니다.</p></details>
+    <details className="execution-method"><summary>시험 조건·측정 한계</summary>{data.execution_notes?.map((note,index)=><p key={index}>{note}</p>)}<p>원본 PDF 200 DPI 이미지 · 영어 듣기는 공식 대본 이미지 · 추론 설정 {data.protocol?.effort??'기록 없음'} · 검색·외부 도구 비활성 조건입니다. 모델별 내부 계산량이 같다는 뜻은 아닙니다.</p><p>{data.usage_complete===false?'일부 실패 요청의 사용량이 보고되지 않았습니다. 비용은 확인 가능한 사용량의 하한 추정입니다.':'비용은 보고된 사용량을 API 요율로 환산한 참고값입니다.'} 실측 청구액이 아닙니다. 이 총평은 이번 시험의 성적과 실행 기록을 요약하며, 모델의 모든 과제 수행 능력을 대표하지 않습니다.</p></details>
     <button type="button" className="show-model-answers" onClick={onShowAnswers}>문항별 답안·풀이 보기 →</button>
   </section>;
 }

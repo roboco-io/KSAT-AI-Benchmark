@@ -1,12 +1,12 @@
 {
   "schema_version": 3,
-  "generated_at": "2026-10-16T22:23:15.283Z",
+  "generated_at": "2026-10-17T01:20:48.582Z",
   "academic_year": 2026,
   "repository_url": "https://github.com/roboco-io/KSAT-AI-Benchmark",
   "models": [
     {
       "schema_version": 2,
-      "generated_at": "2026-10-16T22:23:15.246Z",
+      "generated_at": "2026-10-17T01:20:48.552Z",
       "run_id": "2026-pre-exam-codex-gpt-6.1-sol",
       "model": "gpt-6.1-sol",
       "engine": "Codex SDK / Ralph loop",
@@ -16,6 +16,7 @@
         "timeout_count": 0,
         "retry_count": 3
       },
+      "execution_notes": [],
       "execution_stats_evidence": [],
       "phase": "pre_exam",
       "pricing": {
@@ -4232,7 +4233,7 @@
     },
     {
       "schema_version": 2,
-      "generated_at": "2026-10-16T22:23:15.249Z",
+      "generated_at": "2026-10-17T01:20:48.554Z",
       "run_id": "2026-pre-exam-codex-gpt-6-astra",
       "model": "gpt-6-astra",
       "engine": "Codex SDK / Ralph loop",
@@ -4242,6 +4243,7 @@
         "timeout_count": 0,
         "retry_count": 0
       },
+      "execution_notes": [],
       "execution_stats_evidence": [],
       "phase": "pre_exam",
       "pricing": {
@@ -8465,7 +8467,7 @@
     },
     {
       "schema_version": 2,
-      "generated_at": "2026-10-16T22:23:15.251Z",
+      "generated_at": "2026-10-17T01:20:48.556Z",
       "run_id": "2026-pre-exam-codex-gpt-6-luna",
       "model": "gpt-6-luna",
       "engine": "Codex SDK / Ralph loop",
@@ -8475,6 +8477,7 @@
         "timeout_count": 0,
         "retry_count": 0
       },
+      "execution_notes": [],
       "execution_stats_evidence": [],
       "phase": "pre_exam",
       "pricing": {
@@ -12698,7 +12701,7 @@
     },
     {
       "schema_version": 2,
-      "generated_at": "2026-10-16T22:23:15.253Z",
+      "generated_at": "2026-10-17T01:20:48.557Z",
       "run_id": "2026-pre-exam-claude-claude-sonnet-5-5",
       "model": "claude-sonnet-5-5",
       "engine": "Claude Agent SDK / Ralph loop",
@@ -12708,6 +12711,7 @@
         "timeout_count": 0,
         "retry_count": 0
       },
+      "execution_notes": [],
       "execution_stats_evidence": [],
       "phase": "pre_exam",
       "pricing": {
@@ -16930,7 +16934,7 @@
     },
     {
       "schema_version": 2,
-      "generated_at": "2026-10-16T22:23:15.255Z",
+      "generated_at": "2026-10-17T01:20:48.559Z",
       "run_id": "2026-pre-exam-claude-claude-opus-5-5",
       "model": "claude-opus-5-5",
       "engine": "Claude Agent SDK / Ralph loop",
@@ -16940,6 +16944,7 @@
         "timeout_count": 0,
         "retry_count": 0
       },
+      "execution_notes": [],
       "execution_stats_evidence": [],
       "phase": "pre_exam",
       "pricing": {
@@ -21162,7 +21167,7 @@
     },
     {
       "schema_version": 2,
-      "generated_at": "2026-10-16T22:23:15.258Z",
+      "generated_at": "2026-10-17T01:20:48.560Z",
       "run_id": "2026-pre-exam-claude-claude-haiku-5-5",
       "model": "claude-haiku-5-5",
       "engine": "Claude Agent SDK / Ralph loop",
@@ -21172,6 +21177,7 @@
         "timeout_count": 0,
         "retry_count": 0
       },
+      "execution_notes": [],
       "execution_stats_evidence": [],
       "phase": "pre_exam",
       "pricing": {
@@ -25394,7 +25400,7 @@
     },
     {
       "schema_version": 2,
-      "generated_at": "2026-10-16T22:23:15.260Z",
+      "generated_at": "2026-10-17T01:20:48.562Z",
       "run_id": "2026-pre-exam-claude-claude-fable-5-1",
       "model": "claude-fable-5-1",
       "engine": "Claude Agent SDK / Ralph loop",
@@ -25404,6 +25410,7 @@
         "timeout_count": 0,
         "retry_count": 0
       },
+      "execution_notes": [],
       "execution_stats_evidence": [],
       "phase": "pre_exam",
       "pricing": {
@@ -29626,7 +29633,7 @@
     },
     {
       "schema_version": 2,
-      "generated_at": "2026-10-16T22:23:15.263Z",
+      "generated_at": "2026-10-17T01:20:48.563Z",
       "run_id": "2026-pre-exam-claude-deepseek-v4.1-flash",
       "model": "deepseek-v4.1-flash",
       "engine": "Pi CLI 0.87.1 / Ralph loop",
@@ -29636,6 +29643,7 @@
         "timeout_count": 0,
         "retry_count": 5
       },
+      "execution_notes": [],
       "execution_stats_evidence": [],
       "phase": "pre_exam",
       "pricing": {
@@ -33875,7 +33883,7 @@
     },
     {
       "schema_version": 2,
-      "generated_at": "2026-10-16T22:23:15.277Z",
+      "generated_at": "2026-10-17T01:20:48.576Z",
       "run_id": "2026-pre-exam-claude-glm-5.3-flash",
       "model": "glm-5.3-flash",
       "engine": "Pi CLI 0.87.1 / Ralph loop",
@@ -33885,6 +33893,7 @@
         "timeout_count": 9,
         "retry_count": 9
       },
+      "execution_notes": [],
       "execution_stats_evidence": [],
       "phase": "pre_exam",
       "pricing": {
@@ -38123,7 +38132,7 @@
     },
     {
       "schema_version": 2,
-      "generated_at": "2026-10-16T22:23:15.279Z",
+      "generated_at": "2026-10-17T01:20:48.579Z",
       "run_id": "2026-pre-exam-claude-qwen3.8-27b",
       "model": "qwen3.8-27b",
       "engine": "Pi CLI 0.87.1 / Ralph loop",
@@ -38133,6 +38142,7 @@
         "timeout_count": 2,
         "retry_count": 16
       },
+      "execution_notes": [],
       "execution_stats_evidence": [],
       "phase": "pre_exam",
       "pricing": {
@@ -42403,7 +42413,7 @@
     },
     {
       "schema_version": 2,
-      "generated_at": "2026-10-16T22:23:15.281Z",
+      "generated_at": "2026-10-17T01:20:48.580Z",
       "run_id": "2026-pre-exam-claude-kimi-k3",
       "model": "kimi-k3",
       "engine": "Pi CLI 0.87.1 / Ralph loop",
@@ -42413,6 +42423,7 @@
         "timeout_count": 0,
         "retry_count": 0
       },
+      "execution_notes": [],
       "execution_stats_evidence": [],
       "phase": "pre_exam",
       "pricing": {
@@ -46651,7 +46662,7 @@
     },
     {
       "schema_version": 2,
-      "generated_at": "2026-10-16T22:23:15.283Z",
+      "generated_at": "2026-10-17T01:20:48.581Z",
       "run_id": "2026-pre-exam-pi-gemini-4-argon",
       "model": "gemini-4-argon",
       "engine": "Pi CLI 0.87.1 / Ralph loop",
@@ -46661,6 +46672,7 @@
         "timeout_count": 1,
         "retry_count": 1
       },
+      "execution_notes": [],
       "execution_stats_evidence": [
         {
           "run_id": "2026-pre-exam-pi-gemini-4-argon",

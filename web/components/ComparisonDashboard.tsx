@@ -75,6 +75,7 @@ export function ComparisonDashboard({ data }: { data: BenchmarkComparison }) {
   }
   const current = data.models.find(model => model.model === selected);
   const request = data.requested_models.find(model => model.id === selected);
+  const comparisonFile = data.academic_year === 2026 ? 'benchmark-comparison.json' : `benchmark-comparison-${data.academic_year}.json`;
   const basePath = process.env.NODE_ENV === 'production' ? '/KSAT-AI-Benchmark' : '';
   function sortValue(model: RequestedModel): string | number | null {
     if (sort.key === 'model') return model.label;
@@ -107,9 +108,9 @@ export function ComparisonDashboard({ data }: { data: BenchmarkComparison }) {
   const completed = data.requested_models.filter(model => complete(model, data.models.find(result => result.model === model.id))).length;
   return <div className="benchmark-shell comparison-shell">
     <a className="skip-link" href="#comparison">모델 비교로 이동</a>
-    <header className="site-header"><RobocoBrand /><nav aria-label="주요 메뉴"><a href={data.repository_url} target="_blank" rel="noreferrer" className="repository-link">GitHub 저장소 ↗</a><a href={`${basePath}/debates/english-q37.html`}>영어 37번 정답 토론</a><a href={`${basePath}/archive.html`}>기존 평가</a><a className="download" href={`${basePath}/data/benchmark-comparison.json`} download="benchmark-comparison.json">비교 JSON 다운로드</a><ThemeControl /></nav></header>
+    <header className="site-header"><RobocoBrand /><nav aria-label="주요 메뉴"><a href={data.repository_url} target="_blank" rel="noreferrer" className="repository-link">GitHub 저장소 ↗</a>{data.academic_year === 2026 && <a href={`${basePath}/debates/english-q37.html`}>영어 37번 정답 토론</a>}<a href={`${basePath}/archive.html`}>기존 평가</a><a className="download" href={`${basePath}/data/${comparisonFile}`} download={comparisonFile}>비교 JSON 다운로드</a><ThemeControl /></nav></header>
     <main>
-      <section className="comparison-heading" aria-labelledby="comparison-title"><div><p className="year-label">{data.academic_year}학년도 대학수학능력시험 · 사전 평가</p><h1 id="comparison-title">모델별 수능 성적표</h1><p className="intro">같은 국어·수학·영어 문제로 비교합니다. 모델을 누르면 실행 내역과 총평을 펼쳐 볼 수 있습니다.</p></div><div className="comparison-count"><strong>{completed}<span> / {data.requested_models.length}</span></strong><span>모델 평가 완료</span><small>{formatKst(data.generated_at)} (KST)</small></div></section>
+      <section className="comparison-heading" aria-labelledby="comparison-title"><div><p className="year-label">{data.academic_year}학년도 대학수학능력시험 · 모델 평가</p><h1 id="comparison-title">모델별 수능 성적표</h1><p className="intro">같은 국어·수학·영어 문제로 비교합니다. 모델을 누르면 실행 내역과 총평을 펼쳐 볼 수 있습니다.</p></div><div className="comparison-count"><strong>{completed}<span> / {data.requested_models.length}</span></strong><span>모델 평가 완료</span><small>{formatKst(data.generated_at)} (KST)</small></div></section>
       <section id="comparison" aria-labelledby="comparison-table-title"><div className="section-title"><h2 id="comparison-table-title">모델 비교</h2><span>{sortLabels[sort.key]} {sort.direction === 'desc' ? '내림차순' : '오름차순'} · 불완전 실행은 지표 순위에서 제외</span></div>
         {gradingPolicy && <p className="grading-policy-note"><strong>채점 기준:</strong> 영어 37번 ④·⑤ 인정 · 보정 점수 * 표시 · 공식 점수 병기. <a href={`${basePath}/debates/english-q37.html#grading-policy`}>보정 근거·정책 보기 →</a></p>}
         <div className="comparison-sort-controls"><label>정렬 기준<select value={sort.key} onChange={event => changeSort(event.target.value as SortKey)}>{Object.entries(sortLabels).map(([key, label]) => <option key={key} value={key}>{label}</option>)}</select></label><button type="button" onClick={() => changeSort(sort.key)}>{sort.direction === 'desc' ? '내림차순 ↓' : '오름차순 ↑'}</button><span>헤더 클릭으로 정렬 · 다시 클릭하면 방향 전환</span></div>
