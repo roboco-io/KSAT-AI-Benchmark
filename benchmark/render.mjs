@@ -2,6 +2,7 @@ import {existsSync,mkdirSync,renameSync,rmSync} from 'node:fs';
 import {join} from 'node:path';
 import {randomUUID} from 'node:crypto';
 import {execFileSync} from 'node:child_process';
+import {sourcePath} from './source-path.mjs';
 
 export function renderPages({root,renderDir,pdf,pages,sourceHashes,exec=execFileSync}) {
  mkdirSync(renderDir,{recursive:true});
@@ -10,7 +11,7 @@ export function renderPages({root,renderDir,pdf,pages,sourceHashes,exec=execFile
   const temporary=join(renderDir,`.render-${process.pid}-${randomUUID()}`);
   try {
    if(!existsSync(prefix+'.png')) {
-    exec('pdftoppm',['-f',String(page),'-l',String(page),'-r','200','-singlefile','-png',join(root,pdf),temporary],{stdio:'ignore'});
+    exec('pdftoppm',['-f',String(page),'-l',String(page),'-r','200','-singlefile','-png',sourcePath(root,pdf),temporary],{stdio:'ignore'});
     renameSync(temporary+'.png',prefix+'.png');
    }
    if(!existsSync(prefix+'.webp')) {

@@ -12,6 +12,7 @@ import {claudeEvents} from './claude-adapter.mjs';
 import {piEvents} from './pi-adapter.mjs';
 import {readPiSecret} from './pi-env.mjs';
 import {splitSolverGroups,applySplitRecovery} from './recovery.mjs';
+import {sourcePath} from './source-path.mjs';
 import {renderPages} from './render.mjs';
 import {acquireRunLock} from './run-lock.mjs';
 import {repeatedInspectionBlock,inspectionScope} from './moderation.mjs';
@@ -51,7 +52,7 @@ if(selected.provider==='anthropic') {
 }
 const datasetHash=hash(readFileSync(join(root,paths.dataset)));
 const sourcePaths=[...new Set(dataset.solver_groups.flatMap(g=>[g.pdf_path,g.transcript_path].filter(Boolean)))].sort();
-const sourceHashes=Object.fromEntries(sourcePaths.map(p=>[p,hash(readFileSync(join(root,p)))]));
+const sourceHashes=Object.fromEntries(sourcePaths.map(p=>[p,hash(readFileSync(sourcePath(root,p)))]));
 const sourceManifest=JSON.parse(readFileSync(join(root,paths.manifest),'utf8'));
 for(const p of sourcePaths)if(sourceManifest.files.find(f=>f.path===p)?.sha256!==sourceHashes[p])throw new Error(`Source integrity check failed: ${p}`);
 let state=existsSync(statePath)?JSON.parse(readFileSync(statePath,'utf8')):{schema_version:2,run_id:`${year}-pre-exam-${selected.pi?'pi':selected.provider==='openai'?'codex':'claude'}-${selected.id}`,academic_year:year,phase:'pre_exam',started_at:new Date().toISOString(),protocol,dataset_hash:datasetHash,answers:{},errors:{},groups:{},iterations:[],usage:{},wall_time_seconds:0};
@@ -103,7 +104,7 @@ async function solveGroup(group,iteration) {
   state.billing={method:'claude_subscription',api_key_used:false,extra_usage_disabled:true,verification:'live_UI_disabled_extra_usage_and_SDK_accountInfo'};
  }
  const images=render(group.pdf_path,group.pages);
- if(group.transcript_path){const info=execFileSync('pdfinfo',[join(root,group.transcript_path)],{encoding:'utf8'});const n=Number(info.match(/^Pages:\s+(\d+)/m)[1]);images.push(...render(group.transcript_path,Array.from({length:n},(_,i)=>i+1)));}
+ if(group.transcript_path){const info=execFileSync('pdfinfo',[sourcePath(root,group.transcript_path)],{encoding:'utf8'});const n=Number(info.match(/^Pages:\s+(\d+)/m)[1]);images.push(...render(group.transcript_path,Array.from({length:n},(_,i)=>i+1)));}
  const allowed=questions.map(({id,number,section,kind})=>({question_id:id,number,section,kind}));
  const input=[{type:'text',text:prompt+'\n요청 문항:\n'+JSON.stringify(allowed)},...images.map(path=>({type:'local_image',path}))];
  const thread=sdk?.startThread({model:protocol.model,modelReasoningEffort:protocol.effort,workingDirectory:mkdtempSync(join(tmpdir(),'ksat-solver-')),skipGitRepoCheck:true,sandboxMode:'read-only',approvalPolicy:'never',networkAccessEnabled:false,webSearchMode:'disabled'});

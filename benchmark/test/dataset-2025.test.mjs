@@ -3,6 +3,8 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {yearPaths} from '../academic-years.mjs';
+import {sourcePath} from '../source-path.mjs';
+import {fileURLToPath} from 'node:url';
 
 const root=new URL('../../',import.meta.url);
 const paths=yearPaths(2025);
@@ -89,7 +91,7 @@ test('2025 manifest identifies official sources and matches every local PDF hash
   assert.ok(file.path.startsWith('exams/pdf/2025/'),file.path);
   assert.equal(new URL(file.source_page).hostname,'www.suneung.re.kr');
   assert.equal(new URL(file.download_url).hostname,'www.suneung.re.kr');
-  const bytes=readFileSync(new URL(file.path,root));
+  const bytes=readFileSync(sourcePath(fileURLToPath(root),file.path));
   assert.equal(bytes.subarray(0,5).toString(),'%PDF-',file.path);
   assert.equal(bytes.length,file.size_bytes,file.path);
   assert.equal(createHash('sha256').update(bytes).digest('hex'),file.sha256,file.path);
