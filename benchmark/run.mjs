@@ -1,4 +1,5 @@
 import {Codex} from '@openai/codex-sdk';
+import {buildSolverPrompt} from './solver-prompt.mjs';
 import {readFileSync,writeFileSync,mkdirSync,existsSync,mkdtempSync,appendFileSync} from 'node:fs';
 import {resolve,join,basename} from 'node:path';
 import {tmpdir} from 'node:os';
@@ -55,7 +56,7 @@ const sourcePaths=[...new Set(dataset.solver_groups.flatMap(g=>[g.pdf_path,g.tra
 const sourceHashes=Object.fromEntries(sourcePaths.map(p=>[p,hash(readFileSync(sourcePath(root,p)))]));
 const sourceManifest=JSON.parse(readFileSync(join(root,paths.manifest),'utf8'));
 for(const p of sourcePaths)if(sourceManifest.files.find(f=>f.path===p)?.sha256!==sourceHashes[p])throw new Error(`Source integrity check failed: ${p}`);
-let state=existsSync(statePath)?JSON.parse(readFileSync(statePath,'utf8')):{schema_version:2,run_id:`${year}-pre-exam-${selected.pi?'pi':selected.provider==='openai'?'codex':'claude'}-${selected.id}`,academic_year:year,phase:'pre_exam',started_at:new Date().toISOString(),protocol,dataset_hash:datasetHash,answers:{},errors:{},groups:{},iterations:[],usage:{},wall_time_seconds:0};
+let state=existsSync(statePath)?JSON.parse(readFileSync(statePath,'utf8')):{schema_version:2,prompt_version:2,run_id:`${year}-pre-exam-${selected.pi?'pi':selected.provider==='openai'?'codex':'claude'}-${selected.id}`,academic_year:year,phase:'pre_exam',started_at:new Date().toISOString(),protocol,dataset_hash:datasetHash,answers:{},errors:{},groups:{},iterations:[],usage:{},wall_time_seconds:0};
 if(state.dataset_hash!==datasetHash)throw new Error('Resume refused: input changed. Preserve existing run and start a new run directory.');
 const batchSize=requestedBatchSize??state.protocol.batch_max_questions;
 if(batchSize!==undefined&&batchSize!==null) {
@@ -75,10 +76,7 @@ function render(pdf,pages) {
  return renderPages({root,renderDir,pdf,pages,sourceHashes});
 }
 
-const prompt=`당신은 ${year}학년도 수능 문제를 푸는 AI입니다. 제공한 원본 이미지와 요청한 문항 정보만 사용하세요. 검색, 파일 읽기, 정답표, 다른 모델, 도구는 사용하지 마세요.
-문제를 직접 풀고 최종 답과 짧은 한국어 설명을 제출하세요. 잘 모르거나 입력을 읽을 수 없으면 억지로 추측하지 않고 기권할 수 있습니다. 기권은 decision=abstained, answer=null로 제출하세요. 기권 사유는 uncertain, unreadable, budget_exhausted, unsupported_input 중 하나입니다.
-객관식은 선택지 번호 1~5, 단답형은 정수 0~999를 answer에 넣으세요. answered이면 abstain_reason=null입니다. 이전에 제출한 답안은 변경하지 않습니다. 요청된 모든 문항에 대해 답 또는 기권을 제출하세요. 주어진 문제지에는 다른 선택과목이 있을 수 있으므로 요청한 section과 번호만 풀이하세요. 영어 듣기는 공식 대본 이미지가 추가로 제공되며 대본으로 풀이합니다.
-각 explanation은 핵심 근거를 1~3문장으로 적으세요. 내부 추론을 길게 출력할 필요가 없습니다. 답안 JSON 외의 출력은 하지 마세요.`;
+const prompt=buildSolverPrompt(year,state.prompt_version??1);
 const schema={type:'object',properties:{answers:{type:'array',items:{type:'object',properties:{question_id:{type:'string'},decision:{type:'string',enum:['answered','abstained']},answer:{type:['integer','null']},explanation:{type:'string'},abstain_reason:{type:['string','null'],enum:[null,'uncertain','unreadable','budget_exhausted','unsupported_input']}},required:['question_id','decision','answer','explanation','abstain_reason'],additionalProperties:false}}},required:['answers'],additionalProperties:false};
 verifyResume(state,protocol,datasetHash,hash(prompt),sourceHashes);
 state.prompt_hash=hash(prompt);state.source_hashes=sourceHashes;save();
