@@ -1,0 +1,32 @@
+.content {
+  min-width: 0;
+  max-width: 100%;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.inline {
+  display: inline-block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  vertical-align: middle;
+  white-space: normal;
+}
+
+.display {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: normal;
+}
+
+.display :global(.katex-display) {
+  margin: 0.8em 0;
+  text-align: left;
+}
+
+.content :global(.katex) {
+  overflow-wrap: normal;
+}
