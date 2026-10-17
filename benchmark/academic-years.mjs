@@ -1,6 +1,6 @@
 import {MODELS} from './models.mjs';
 import {routeAgent} from './profiles.mjs';
-export const MODELS_2025=['gpt-6-luna','gpt-6.1-sol','gpt-6-astra','claude-haiku-5-5','claude-sonnet-5-5','claude-opus-5-5','claude-fable-5-1'];
+export const MODELS_2025=['gpt-6-luna','gpt-6.1-sol','gpt-6-astra','claude-haiku-5-5','claude-sonnet-5-5','claude-opus-5-5','claude-fable-5-1','gemini-4-argon','kimi-k3'];
 export function yearPaths(year) {
  if(![2025,2026].includes(year))throw new Error('Academic year not supported');
  return {dataset:`exams/datasets/${year}-ksat.json`,manifest:`exams/pdf/${year}/sources.json`,comparison:year===2026?'benchmark-comparison.json':`benchmark-comparison-${year}.json`};
