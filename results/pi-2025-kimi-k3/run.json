@@ -1,0 +1,584 @@
+{
+  "schema_version": 2,
+  "run_id": "2025-pre-exam-pi-kimi-k3",
+  "academic_year": 2025,
+  "phase": "pre_exam",
+  "started_at": "2026-10-17T02:11:54.157Z",
+  "protocol": {
+    "model": "kimi-k3",
+    "provider": "moonshot",
+    "effort": "high",
+    "sdk_version": "Pi CLI 0.87.1",
+    "tools": "disabled",
+    "input": "original PDF rendered at 200 DPI",
+    "english_listening": "official transcript rendered as images",
+    "max_iterations": 3,
+    "group_timeout_seconds": 900,
+    "concurrency": 2,
+    "cost_limit_usd": 25,
+    "subscription_only": false,
+    "api_key_fallback": false,
+    "agent": "Pi",
+    "api_model": "kimi-k3",
+    "api_base_url": "https://api.moonshot.ai/v1",
+    "max_output_tokens": 65536,
+    "effort_semantics": "high",
+    "output_format": "prompted JSON; no tools",
+    "image_resize": false,
+    "route_hash": "ea0995243d026f36b17e67e25dd957ea3478c0e0b278737cca8b8e97ec2c268c"
+  },
+  "dataset_hash": "0b885a2f36bdca9059bb47a61caa00b18d15e542ad15e0e4ffdebb555bc9bca3",
+  "answers": {
+    "2025-korean-common-q01": {
+      "question_id": "2025-korean-common-q01",
+      "decision": "answered",
+      "answer": 3,
+      "explanation": "글은 밑줄 긋기가 쉬워 보여 연습 없이 능숙하다고 오해됐지만, 실제로는 중요 정보 판단이 선행돼야 한다고 말한다. 따라서 ‘누구나 연습 없이도 능숙’하다는 ③은 일치하지 않는다.",
+      "abstain_reason": null
+    },
+    "2025-korean-common-q02": {
+      "question_id": "2025-korean-common-q02",
+      "decision": "answered",
+      "answer": 4,
+      "explanation": "㉠은 밑줄 긋기의 ‘방법’을 이해하고 잘 써야 능동적 독서에 도움이 된다는 뜻이다. 자신만의 표시 체계를 세워 주요 정보를 추려 표시하는 ④가 이에 부합한다.",
+      "abstain_reason": null
+    },
+    "2025-korean-common-q03": {
+      "question_id": "2025-korean-common-q03",
+      "decision": "answered",
+      "answer": 5,
+      "explanation": "독서 목적은 고래의 ‘외형적 특징’ 습득인데, 3문단의 물결 표시 문장은 폐 호흡이라는 생리적 내용이라 목적상 주요 문장으로 보기 어렵다. 따라서 ⑤의 평가가 적절하지 않다.",
+      "abstain_reason": null
+    },
+    "2025-korean-common-q04": {
+      "question_id": "2025-korean-common-q04",
+      "decision": "answered",
+      "answer": 4,
+      "explanation": "(나)는 과학 정신이 전제되지 않은 정치적 변혁은 뿌리내릴 수 없다고 했지, 정치적 변혁이 과학 정신보다 선행해야 한다고 하지 않았다. ④는 인과·선후 관계를 뒤집었다.",
+      "abstain_reason": null
+    },
+    "2025-korean-common-q05": {
+      "question_id": "2025-korean-common-q05",
+      "decision": "answered",
+      "answer": 5,
+      "explanation": "『한성순보』의 개화 개념에 이미 국가 독립 주권의 소중함을 깨닫는 의식 변화가 내포돼 있다고 했다. 따라서 국가 주권과 결부한 개화가 『대한매일신보』에 이르러서야 제기됐다는 ⑤는 틀렸다.",
+      "abstain_reason": null
+    },
+    "2025-korean-common-q06": {
+      "question_id": "2025-korean-common-q06",
+      "decision": "answered",
+      "answer": 3,
+      "explanation": "천두슈는 1차 대전의 비극을 과학 자체의 죄악이 아니라 오용의 결과로 봤고, 장쥔마이도 과학적 방법 자체는 부정하지 않았다. 둘 모두 과학 이용의 문제와 과학적 방법 부정은 다르다고 볼 수 있다.",
+      "abstain_reason": null
+    },
+    "2025-korean-common-q07": {
+      "question_id": "2025-korean-common-q07",
+      "decision": "answered",
+      "answer": 3,
+      "explanation": "㉠의 박은식은 생존·편리를 위한 과학 연구가 시급하다고 봤고, ㉡의 신문화 운동 쪽은 사상·철학도 과학의 방법을 쓰지 않으면 공상에 그친다고 봤다. ③이 두 밑줄 친 내용을 가장 정확히 짚는다.",
+      "abstain_reason": null
+    },
+    "2025-korean-common-q08": {
+      "question_id": "2025-korean-common-q08",
+      "decision": "answered",
+      "answer": 1,
+      "explanation": "『한성순보』는 반서양 정서 교정이 취지였지만, <보기>의 마을 사람들은 이미 정책 필요성에 공감하고 있고 문제는 발전 확신의 부족이다. 반감 해소라는 지점에서 곧바로 부합한다고 보기 어렵다.",
+      "abstain_reason": null
+    },
+    "2025-korean-common-q09": {
+      "question_id": "2025-korean-common-q09",
+      "decision": "answered",
+      "answer": 2,
+      "explanation": "문맥상 ‘공상에 그칠 뿐’의 ‘그치다’는 더 나아가지 못하고 어떤 한계에 머문다는 뜻이다. ‘16강에 그쳤다’의 용법이 가장 가깝다.",
+      "abstain_reason": null
+    },
+    "2025-korean-common-q10": {
+      "question_id": "2025-korean-common-q10",
+      "decision": "answered",
+      "answer": 3,
+      "explanation": "글은 노이즈의 의미와 역할, 단계별 특성은 설명하지만 노이즈 ‘종류’가 모델 성능에 미치는 영향은 다루지 않는다. ③은 글에 없는 내용을 확인하며 읽은 셈이다.",
+      "abstain_reason": null
+    },
+    "2025-korean-common-q11": {
+      "question_id": "2025-korean-common-q11",
+      "decision": "answered",
+      "answer": 1,
+      "explanation": "노이즈 생성기는 순확산 과정에서 노이즈를 만들어 이미지 연산기에 제공하는 장치로 설명된다. 학습은 순확산에서, 복원은 역확산에서 이뤄지므로 ②~⑤는 틀리고 ①이 적절하다.",
+      "abstain_reason": null
+    },
+    "2025-korean-common-q12": {
+      "question_id": "2025-korean-common-q12",
+      "decision": "answered",
+      "answer": 5,
+      "explanation": "잠재 표현은 노이즈 예측기가 ‘원본 이미지’가 아니라 노이즈가 포함된 확산 이미지를 입력받아 특성을 추출한 수치들이다. ⑤는 입력 대상을 잘못 말했다.",
+      "abstain_reason": null
+    },
+    "2025-korean-common-q13": {
+      "question_id": "2025-korean-common-q13",
+      "decision": "answered",
+      "answer": 3,
+      "explanation": "순확산의 중간 단계에서 이미지 연산기에 더해지는 노이즈는 노이즈 생성기가 만든 노이즈이지, 노이즈 예측기가 예측한 노이즈가 아니다. ③은 순확산 작동 방식을 혼동했다.",
+      "abstain_reason": null
+    },
+    "2025-korean-common-q14": {
+      "question_id": "2025-korean-common-q14",
+      "decision": "answered",
+      "answer": 1,
+      "explanation": "형식에 집중하는 연기는 표면 연기이고, 심층 연기는 내면의 솔직한 정서를 불러내 진정성을 보여 주는 것이다. ①은 둘을 뒤바꿔 말했다.",
+      "abstain_reason": null
+    },
+    "2025-korean-common-q15": {
+      "question_id": "2025-korean-common-q15",
+      "decision": "answered",
+      "answer": 2,
+      "explanation": "㉠은 인터넷 ID의 자기 정체성도 사용자 개인의 자기 정체성 일부로 보아 ID의 명예 보호를 주장한다. 따라서 ID 공격을 개인에 대한 공격으로 보는 ②가 적절하다.",
+      "abstain_reason": null
+    },
+    "2025-korean-common-q16": {
+      "question_id": "2025-korean-common-q16",
+      "decision": "answered",
+      "answer": 5,
+      "explanation": "A는 실명이 노출됐고, B는 직무 공개 정보로 특정 가능하며, C가 공격한 a도 A로 식별 가능하다. 대법원·다수·소수 모두 C의 책임을 인정하므로 판단이 모두 같지 않다는 ⑤가 틀렸다.",
+      "abstain_reason": null
+    },
+    "2025-korean-common-q17": {
+      "question_id": "2025-korean-common-q17",
+      "decision": "answered",
+      "answer": 3,
+      "explanation": "ⓒ ‘나타난다고’는 자기 정체성이 다양하게 드러난다는 뜻이므로 ‘표출된다고’로 바꿔 쓸 수 있다. 나머지는 완성·요청·기만·확충이 문맥의미와 맞지 않는다.",
+      "abstain_reason": null
+    },
+    "2025-korean-common-q18": {
+      "question_id": "2025-korean-common-q18",
+      "decision": "answered",
+      "answer": 3,
+      "explanation": "㉡은 왕비가 승상에게 ‘그놈’이 충렬부인 방에 간 것을 어떻게 알았느냐고 묻는 말이다. 이를 승상이 왕비가 알게 된 경위를 중시했다고 읽은 ③은 화자와 방향을 혼동했다.",
+      "abstain_reason": null
+    },
+    "2025-korean-common-q19": {
+      "question_id": "2025-korean-common-q19",
+      "decision": "answered",
+      "answer": 4,
+      "explanation": "정렬부인은 거짓으로 앓아누워 충렬부인을 자기 침소로 오게 하는 등 누명을 씌울 계략 속에 특정 장소로 가게 하는 장치를 둔다. ④가 이를 정확히 설명한다.",
+      "abstain_reason": null
+    },
+    "2025-korean-common-q20": {
+      "question_id": "2025-korean-common-q20",
+      "decision": "answered",
+      "answer": 1,
+      "explanation": "원수는 집안 변고로 먼저 가고 중군장은 뒤에 군사를 인솔해 오라고 했지, 서흥을 쳐서 사로잡으라고 명령하지 않았다. ①은 상소 속 정을선의 전공과 혼동한 정리다.",
+      "abstain_reason": null
+    },
+    "2025-korean-common-q21": {
+      "question_id": "2025-korean-common-q21",
+      "decision": "answered",
+      "answer": 4,
+      "explanation": "월매가 매를 맞는 장면에서 월매는 진실을 밝히기보다 죽음을 각오하며 금섭의 뒤를 따르겠다고 한다. 능동성은 볼 수 있어도 ‘진실을 밝힘으로써’라는 설명은 정확하지 않다.",
+      "abstain_reason": null
+    },
+    "2025-korean-common-q22": {
+      "question_id": "2025-korean-common-q22",
+      "decision": "answered",
+      "answer": 4,
+      "explanation": "(가)는 배 미는 행위, (나)는 당신을 부르는 행위, (다)는 편지 쓰는 행위를 중심으로 주체와 대상의 관계를 드러낸다. 공통점은 ④이다.",
+      "abstain_reason": null
+    },
+    "2025-korean-common-q23": {
+      "question_id": "2025-korean-common-q23",
+      "decision": "answered",
+      "answer": 5,
+      "explanation": "마지막의 ‘밀려들어오는 배’는 떠난 대상과의 재회 성사를 낙관하는 표현이라기보다 슬픔·사랑이 다시 화자 안으로 들어오는 양상을 보여 준다. ⑤는 재회가 예상대로 이뤄졌다고 단정해 부적절하다.",
+      "abstain_reason": null
+    },
+    "2025-korean-common-q24": {
+      "question_id": "2025-korean-common-q24",
+      "decision": "answered",
+      "answer": 2,
+      "explanation": "시에서 ‘병자처럼’은 화자 자신의 처지를 비유한 것이지, ‘당신’이 화자 내면의 병자로서 연민의 대상이라는 뜻이 아니다. ②가 부적절하다.",
+      "abstain_reason": null
+    },
+    "2025-korean-common-q25": {
+      "question_id": "2025-korean-common-q25",
+      "decision": "answered",
+      "answer": 2,
+      "explanation": "말줄임표와 쉼표는 기억이 희미해짐을 보여 주기보다 끊어질 듯 이어지는 호흡 속에서 떠오르는 사랑의 기억과 상처를 드러낸다. ②는 ‘기억이 희미해지는 심적 상태’로 잘못 읽었다.",
+      "abstain_reason": null
+    },
+    "2025-korean-common-q26": {
+      "question_id": "2025-korean-common-q26",
+      "decision": "answered",
+      "answer": 1,
+      "explanation": "ⓐ는 병을 다스리려는 노력과 병 자체가 따로라는 인식을 담고 있어, 치병의 노력으로 환후가 사라지는 것은 아니라는 뜻으로 읽힌다. ①이 가장 적절하다.",
+      "abstain_reason": null
+    },
+    "2025-korean-common-q27": {
+      "question_id": "2025-korean-common-q27",
+      "decision": "answered",
+      "answer": 1,
+      "explanation": "‘익명의 욕구’는 사랑이 운명적이라 멈출 수 없다는 뜻이 아니라 표현하지 않고는 견딜 수 없는 글쓰기 욕구를 가리킨다. ①은 대상을 잘못 연결했다.",
+      "abstain_reason": null
+    },
+    "2025-korean-common-q28": {
+      "question_id": "2025-korean-common-q28",
+      "decision": "answered",
+      "answer": 4,
+      "explanation": "㉣은 ‘어느 해 여름’, ‘세 번째 여름’처럼 인물이 처한 시기·상황 정보를 서술자가 부가하는 방식이다. ④가 이를 정확히 설명한다.",
+      "abstain_reason": null
+    },
+    "2025-korean-common-q29": {
+      "question_id": "2025-korean-common-q29",
+      "decision": "answered",
+      "answer": 3,
+      "explanation": "‘비밀’은 배꼽이 없다는 비일상적 경험을 허원이 의식하게 하는 계기로 작동해 그의 심리적 동요와 사념을 불러일으킨다. ③이 서사적 기능을 가장 잘 설명한다.",
+      "abstain_reason": null
+    },
+    "2025-korean-common-q30": {
+      "question_id": "2025-korean-common-q30",
+      "decision": "answered",
+      "answer": 5,
+      "explanation": "허원은 세상 사람들의 배꼽 논의를 접한 뒤에도 오히려 배꼽론을 확고히 하고 전문가가 되어 간다. 사념을 그만두게 된다는 ⑤는 내용과 반대다.",
+      "abstain_reason": null
+    },
+    "2025-korean-common-q31": {
+      "question_id": "2025-korean-common-q31",
+      "decision": "answered",
+      "answer": 4,
+      "explanation": "허원은 배꼽이라는 사소한 것에 얽매여 허전함과 사념에 사로잡히지, 그것에 얽매이지 않는 자유로운 상태에 있지 않다. ④는 인물의 상태를 반대로 설명했다.",
+      "abstain_reason": null
+    },
+    "2025-korean-common-q32": {
+      "question_id": "2025-korean-common-q32",
+      "decision": "answered",
+      "answer": 3,
+      "explanation": "(가)의 의문적 표현들은 도망해도 어디에도 숨을 수 없다는 결과나 처지를 강조하는 것이지, 상대의 행적을 의심하는 데 초점이 있지 않다. ③이 부적절하다.",
+      "abstain_reason": null
+    },
+    "2025-korean-common-q33": {
+      "question_id": "2025-korean-common-q33",
+      "decision": "answered",
+      "answer": 5,
+      "explanation": "㉠ 인삼은 그대가 자네에게 캐서 살림을 꾸리라고 권하는 행위의 대상이고, ㉡ 고기는 화자가 아이들에게 잡아 달라고 요청하는 행위의 대상이다. 둘 다 상대가 했으면 하는 행위의 대상이다.",
+      "abstain_reason": null
+    },
+    "2025-korean-common-q34": {
+      "question_id": "2025-korean-common-q34",
+      "decision": "answered",
+      "answer": 2,
+      "explanation": "(가)의 ‘이내’ 말씀은 집안 내력과 신역의 고통을 토로해 그대의 권유를 받아들이기 어렵다는 취지이지, 사회 부조리를 해결하자는 주장까지는 아니다. ②는 입장을 과대 해석했다.",
+      "abstain_reason": null
+    },
+    "2025-korean-hwajak-q35": {
+      "question_id": "2025-korean-hwajak-q35",
+      "decision": "answered",
+      "answer": 2,
+      "explanation": "발표자는 ‘아시나요?’처럼 내용 관련 질문을 던져 청중의 배경지식을 확인한다. 행동 변화 요구나 용어 정의, 중간 요약은 드러나지 않는다.",
+      "abstain_reason": null
+    },
+    "2025-korean-hwajak-q36": {
+      "question_id": "2025-korean-hwajak-q36",
+      "decision": "answered",
+      "answer": 4,
+      "explanation": "㉣ 동영상은 개다래 잎 색 변화를 보여 곤충 유인 전략을 설명하는 자료다. 꽃이 작고 잎에 가려진 ‘이유’ 자체를 설명하는 데 쓰였다고 보기는 어렵다.",
+      "abstain_reason": null
+    },
+    "2025-korean-hwajak-q37": {
+      "question_id": "2025-korean-hwajak-q37",
+      "decision": "answered",
+      "answer": 3,
+      "explanation": "학생2는 학생1의 아쉬움에 공감하며 추가 탐색 의사를 밝힐 뿐, 발표에 없는 내용을 추론해 답하지는 않는다. 나머지 반응 이해는 보기 내용과 맞는다.",
+      "abstain_reason": null
+    },
+    "2025-korean-hwajak-q38": {
+      "question_id": "2025-korean-hwajak-q38",
+      "decision": "answered",
+      "answer": 4,
+      "explanation": "㉣는 교훈 변경의 필요성과 효과를 알리는 일의 중요성을 강조한 발화다. 상대 대안의 문제를 제기한 것은 ㉤에 해당한다.",
+      "abstain_reason": null
+    },
+    "2025-korean-hwajak-q39": {
+      "question_id": "2025-korean-hwajak-q39",
+      "decision": "answered",
+      "answer": 5,
+      "explanation": "동문 선배 의견 수렴은 학생회 회의 전이 아니라 학교에 건의할 때 함께 요청하기로 한 사안이다. 회의 전 수렴으로 정리한 ⑤는 대화 내용과 어긋난다.",
+      "abstain_reason": null
+    },
+    "2025-korean-hwajak-q40": {
+      "question_id": "2025-korean-hwajak-q40",
+      "decision": "answered",
+      "answer": 4,
+      "explanation": "[D]의 학생 의견 조사 제안은 ㉣ 단계를 거쳐 (나)에서 설문 결과 91.8%를 건의 근거로 제시하는 것으로 반영됐다. 다른 보기는 단계나 내용 대응이 맞지 않다.",
+      "abstain_reason": null
+    },
+    "2025-korean-hwajak-q41": {
+      "question_id": "2025-korean-hwajak-q41",
+      "decision": "answered",
+      "answer": 3,
+      "explanation": "ⓒ는 교훈이 단순 표현이 아니라 가치를 담는다는 작성자의 전제를 진술한 것이다. 예상 반론을 제시·반박하는 구조로 보기 어렵다.",
+      "abstain_reason": null
+    },
+    "2025-korean-hwajak-q42": {
+      "question_id": "2025-korean-hwajak-q42",
+      "decision": "answered",
+      "answer": 1,
+      "explanation": "5문단 초고에는 다른 학교·교육적 효과만 있어 학교 구성원에게 미치는 긍정적 효과가 부족하다. 완성문도 불편 해소, 자부심, 애교심 상승 등 구성원 측면을 먼저 제시한다.",
+      "abstain_reason": null
+    },
+    "2025-korean-hwajak-q43": {
+      "question_id": "2025-korean-hwajak-q43",
+      "decision": "answered",
+      "answer": 1,
+      "explanation": "초고는 지속 가능 항공유를 기존 항공유와 구조·원료·배출량 측면에서 대비하며 설명한다. 생산 단계 서술, 문답식 장단점, 국가별 경제 효과 분석은 아니다.",
+      "abstain_reason": null
+    },
+    "2025-korean-hwajak-q44": {
+      "question_id": "2025-korean-hwajak-q44",
+      "decision": "answered",
+      "answer": 5,
+      "explanation": "사용 확대의 의의를 먼저 제시하고 이어서 학생이 실천할 수 있는 항공편 선택 제안이 필요하다. ⑤가 그 순서와 독자 실천 제안에 가장 맞다.",
+      "abstain_reason": null
+    },
+    "2025-korean-hwajak-q45": {
+      "question_id": "2025-korean-hwajak-q45",
+      "decision": "answered",
+      "answer": 2,
+      "explanation": "ㄱ-2는 필요량 전망 자료라 혼합 비율 70% 상향이라는 EU 정책 목표의 직접적 근거로 쓰기 어렵다. 나머지는 각 자료와 보강 위치·내용이 자연스럽게 연결된다.",
+      "abstain_reason": null
+    }
+  },
+  "errors": {},
+  "groups": {
+    "2025-korean-common": {
+      "attempts": [
+        {
+          "iteration": 1,
+          "started_at": "2026-10-17T02:11:54.180Z",
+          "question_ids": [
+            "2025-korean-common-q01",
+            "2025-korean-common-q02",
+            "2025-korean-common-q03",
+            "2025-korean-common-q04",
+            "2025-korean-common-q05",
+            "2025-korean-common-q06",
+            "2025-korean-common-q07",
+            "2025-korean-common-q08",
+            "2025-korean-common-q09",
+            "2025-korean-common-q10",
+            "2025-korean-common-q11",
+            "2025-korean-common-q12",
+            "2025-korean-common-q13",
+            "2025-korean-common-q14",
+            "2025-korean-common-q15",
+            "2025-korean-common-q16",
+            "2025-korean-common-q17",
+            "2025-korean-common-q18",
+            "2025-korean-common-q19",
+            "2025-korean-common-q20",
+            "2025-korean-common-q21",
+            "2025-korean-common-q22",
+            "2025-korean-common-q23",
+            "2025-korean-common-q24",
+            "2025-korean-common-q25",
+            "2025-korean-common-q26",
+            "2025-korean-common-q27",
+            "2025-korean-common-q28",
+            "2025-korean-common-q29",
+            "2025-korean-common-q30",
+            "2025-korean-common-q31",
+            "2025-korean-common-q32",
+            "2025-korean-common-q33",
+            "2025-korean-common-q34"
+          ],
+          "image_encoding": "lossless WebP, original 200 DPI pixels",
+          "image_hashes": [
+            "a384c1d69de8444ceebdc56adbba8532595ff9cfdf2e7165a1e1328623bf0917",
+            "6cc32a109fd89ddfd13b510093a5aaaa4d79a7575fc9b7efd7c1cb17d28f4652",
+            "36e72c56c4fa9dab931b9f040b1a2a62e89bc65e527f816c1862c4ad12607bd5",
+            "1605a07b71fca2c0ade9e08e0d7dfdd3346e7343161a6a5a5c52048cd22df321",
+            "1f6772be0e205a663ff93907d8dd3dd8f4f0e3afd2d51cb5c747d4841fc3dbcf",
+            "2c3e58067a89e4c9eb3087c42b2ff5cec74aa012b1579197bd6e70734cf74696",
+            "be572ca3123fca6a8a34e35e160dab66b2e950fa2a5d888586247b1d015ebeed",
+            "62eb2601cb53627e2bf14430fb1c517d66f08f8aec9bda04fb2e83c091b46763",
+            "3f58214119dd52443c78d1cdc5da1b2df653f9fdb80534ff8f42e902bc312f0d",
+            "90fe4bd3226d75b55237e76d85176e3c089072214fa3c22365533f963274e176",
+            "d61e9a46fc2ebc100680da6886f488aa5648c997710460fa61414160ab9a4178",
+            "445dc16608ccd8a7a38babdb85e248b55373b68d67ab76004c6f0588e1d751b5"
+          ],
+          "usage": {
+            "input_tokens": 122112,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 122112,
+            "output_tokens": 23781,
+            "reasoning_output_tokens": 19991
+          },
+          "time_seconds": 637.627,
+          "thread_id": "01a147a1-485d-770a-9f4d-1646818536cf",
+          "status": "completed",
+          "estimated_cost_usd": 0.723051,
+          "response": "{\"answers\":[{\"question_id\":\"2025-korean-common-q01\",\"decision\":\"answered\",\"answer\":3,\"explanation\":\"글은 밑줄 긋기가 쉬워 보여 연습 없이 능숙하다고 오해됐지만, 실제로는 중요 정보 판단이 선행돼야 한다고 말한다. 따라서 ‘누구나 연습 없이도 능숙’하다는 ③은 일치하지 않는다.\",\"abstain_reason\":null},{\"question_id\":\"2025-korean-common-q02\",\"decision\":\"answered\",\"answer\":4,\"explanation\":\"㉠은 밑줄 긋기의 ‘방법’을 이해하고 잘 써야 능동적 독서에 도움이 된다는 뜻이다. 자신만의 표시 체계를 세워 주요 정보를 추려 표시하는 ④가 이에 부합한다.\",\"abstain_reason\":null},{\"question_id\":\"2025-korean-common-q03\",\"decision\":\"answered\",\"answer\":5,\"explanation\":\"독서 목적은 고래의 ‘외형적 특징’ 습득인데, 3문단의 물결 표시 문장은 폐 호흡이라는 생리적 내용이라 목적상 주요 문장으로 보기 어렵다. 따라서 ⑤의 평가가 적절하지 않다.\",\"abstain_reason\":null},{\"question_id\":\"2025-korean-common-q04\",\"decision\":\"answered\",\"answer\":4,\"explanation\":\"(나)는 과학 정신이 전제되지 않은 정치적 변혁은 뿌리내릴 수 없다고 했지, 정치적 변혁이 과학 정신보다 선행해야 한다고 하지 않았다. ④는 인과·선후 관계를 뒤집었다.\",\"abstain_reason\":null},{\"question_id\":\"2025-korean-common-q05\",\"decision\":\"answered\",\"answer\":5,\"explanation\":\"『한성순보』의 개화 개념에 이미 국가 독립 주권의 소중함을 깨닫는 의식 변화가 내포돼 있다고 했다. 따라서 국가 주권과 결부한 개화가 『대한매일신보』에 이르러서야 제기됐다는 ⑤는 틀렸다.\",\"abstain_reason\":null},{\"question_id\":\"2025-korean-common-q06\",\"decision\":\"answered\",\"answer\":3,\"explanation\":\"천두슈는 1차 대전의 비극을 과학 자체의 죄악이 아니라 오용의 결과로 봤고, 장쥔마이도 과학적 방법 자체는 부정하지 않았다. 둘 모두 과학 이용의 문제와 과학적 방법 부정은 다르다고 볼 수 있다.\",\"abstain_reason\":null},{\"question_id\":\"2025-korean-common-q07\",\"decision\":\"answered\",\"answer\":3,\"explanation\":\"㉠의 박은식은 생존·편리를 위한 과학 연구가 시급하다고 봤고, ㉡의 신문화 운동 쪽은 사상·철학도 과학의 방법을 쓰지 않으면 공상에 그친다고 봤다. ③이 두 밑줄 친 내용을 가장 정확히 짚는다.\",\"abstain_reason\":null},{\"question_id\":\"2025-korean-common-q08\",\"decision\":\"answered\",\"answer\":1,\"explanation\":\"『한성순보』는 반서양 정서 교정이 취지였지만, <보기>의 마을 사람들은 이미 정책 필요성에 공감하고 있고 문제는 발전 확신의 부족이다. 반감 해소라는 지점에서 곧바로 부합한다고 보기 어렵다.\",\"abstain_reason\":null},{\"question_id\":\"2025-korean-common-q09\",\"decision\":\"answered\",\"answer\":2,\"explanation\":\"문맥상 ‘공상에 그칠 뿐’의 ‘그치다’는 더 나아가지 못하고 어떤 한계에 머문다는 뜻이다. ‘16강에 그쳤다’의 용법이 가장 가깝다.\",\"abstain_reason\":null},{\"question_id\":\"2025-korean-common-q10\",\"decision\":\"answered\",\"answer\":3,\"explanation\":\"글은 노이즈의 의미와 역할, 단계별 특성은 설명하지만 노이즈 ‘종류’가 모델 성능에 미치는 영향은 다루지 않는다. ③은 글에 없는 내용을 확인하며 읽은 셈이다.\",\"abstain_reason\":null},{\"question_id\":\"2025-korean-common-q11\",\"decision\":\"answered\",\"answer\":1,\"explanation\":\"노이즈 생성기는 순확산 과정에서 노이즈를 만들어 이미지 연산기에 제공하는 장치로 설명된다. 학습은 순확산에서, 복원은 역확산에서 이뤄지므로 ②~⑤는 틀리고 ①이 적절하다.\",\"abstain_reason\":null},{\"question_id\":\"2025-korean-common-q12\",\"decision\":\"answered\",\"answer\":5,\"explanation\":\"잠재 표현은 노이즈 예측기가 ‘원본 이미지’가 아니라 노이즈가 포함된 확산 이미지를 입력받아 특성을 추출한 수치들이다. ⑤는 입력 대상을 잘못 말했다.\",\"abstain_reason\":null},{\"question_id\":\"2025-korean-common-q13\",\"decision\":\"answered\",\"answer\":3,\"explanation\":\"순확산의 중간 단계에서 이미지 연산기에 더해지는 노이즈는 노이즈 생성기가 만든 노이즈이지, 노이즈 예측기가 예측한 노이즈가 아니다. ③은 순확산 작동 방식을 혼동했다.\",\"abstain_reason\":null},{\"question_id\":\"2025-korean-common-q14\",\"decision\":\"answered\",\"answer\":1,\"explanation\":\"형식에 집중하는 연기는 표면 연기이고, 심층 연기는 내면의 솔직한 정서를 불러내 진정성을 보여 주는 것이다. ①은 둘을 뒤바꿔 말했다.\",\"abstain_reason\":null},{\"question_id\":\"2025-korean-common-q15\",\"decision\":\"answered\",\"answer\":2,\"explanation\":\"㉠은 인터넷 ID의 자기 정체성도 사용자 개인의 자기 정체성 일부로 보아 ID의 명예 보호를 주장한다. 따라서 ID 공격을 개인에 대한 공격으로 보는 ②가 적절하다.\",\"abstain_reason\":null},{\"question_id\":\"2025-korean-common-q16\",\"decision\":\"answered\",\"answer\":5,\"explanation\":\"A는 실명이 노출됐고, B는 직무 공개 정보로 특정 가능하며, C가 공격한 a도 A로 식별 가능하다. 대법원·다수·소수 모두 C의 책임을 인정하므로 판단이 모두 같지 않다는 ⑤가 틀렸다.\",\"abstain_reason\":null},{\"question_id\":\"2025-korean-common-q17\",\"decision\":\"answered\",\"answer\":3,\"explanation\":\"ⓒ ‘나타난다고’는 자기 정체성이 다양하게 드러난다는 뜻이므로 ‘표출된다고’로 바꿔 쓸 수 있다. 나머지는 완성·요청·기만·확충이 문맥의미와 맞지 않는다.\",\"abstain_reason\":null},{\"question_id\":\"2025-korean-common-q18\",\"decision\":\"answered\",\"answer\":3,\"explanation\":\"㉡은 왕비가 승상에게 ‘그놈’이 충렬부인 방에 간 것을 어떻게 알았느냐고 묻는 말이다. 이를 승상이 왕비가 알게 된 경위를 중시했다고 읽은 ③은 화자와 방향을 혼동했다.\",\"abstain_reason\":null},{\"question_id\":\"2025-korean-common-q19\",\"decision\":\"answered\",\"answer\":4,\"explanation\":\"정렬부인은 거짓으로 앓아누워 충렬부인을 자기 침소로 오게 하는 등 누명을 씌울 계략 속에 특정 장소로 가게 하는 장치를 둔다. ④가 이를 정확히 설명한다.\",\"abstain_reason\":null},{\"question_id\":\"2025-korean-common-q20\",\"decision\":\"answered\",\"answer\":1,\"explanation\":\"원수는 집안 변고로 먼저 가고 중군장은 뒤에 군사를 인솔해 오라고 했지, 서흥을 쳐서 사로잡으라고 명령하지 않았다. ①은 상소 속 정을선의 전공과 혼동한 정리다.\",\"abstain_reason\":null},{\"question_id\":\"2025-korean-common-q21\",\"decision\":\"answered\",\"answer\":4,\"explanation\":\"월매가 매를 맞는 장면에서 월매는 진실을 밝히기보다 죽음을 각오하며 금섭의 뒤를 따르겠다고 한다. 능동성은 볼 수 있어도 ‘진실을 밝힘으로써’라는 설명은 정확하지 않다.\",\"abstain_reason\":null},{\"question_id\":\"2025-korean-common-q22\",\"decision\":\"answered\",\"answer\":4,\"explanation\":\"(가)는 배 미는 행위, (나)는 당신을 부르는 행위, (다)는 편지 쓰는 행위를 중심으로 주체와 대상의 관계를 드러낸다. 공통점은 ④이다.\",\"abstain_reason\":null},{\"question_id\":\"2025-korean-common-q23\",\"decision\":\"answered\",\"answer\":5,\"explanation\":\"마지막의 ‘밀려들어오는 배’는 떠난 대상과의 재회 성사를 낙관하는 표현이라기보다 슬픔·사랑이 다시 화자 안으로 들어오는 양상을 보여 준다. ⑤는 재회가 예상대로 이뤄졌다고 단정해 부적절하다.\",\"abstain_reason\":null},{\"question_id\":\"2025-korean-common-q24\",\"decision\":\"answered\",\"answer\":2,\"explanation\":\"시에서 ‘병자처럼’은 화자 자신의 처지를 비유한 것이지, ‘당신’이 화자 내면의 병자로서 연민의 대상이라는 뜻이 아니다. ②가 부적절하다.\",\"abstain_reason\":null},{\"question_id\":\"2025-korean-common-q25\",\"decision\":\"answered\",\"answer\":2,\"explanation\":\"말줄임표와 쉼표는 기억이 희미해짐을 보여 주기보다 끊어질 듯 이어지는 호흡 속에서 떠오르는 사랑의 기억과 상처를 드러낸다. ②는 ‘기억이 희미해지는 심적 상태’로 잘못 읽었다.\",\"abstain_reason\":null},{\"question_id\":\"2025-korean-common-q26\",\"decision\":\"answered\",\"answer\":1,\"explanation\":\"ⓐ는 병을 다스리려는 노력과 병 자체가 따로라는 인식을 담고 있어, 치병의 노력으로 환후가 사라지는 것은 아니라는 뜻으로 읽힌다. ①이 가장 적절하다.\",\"abstain_reason\":null},{\"question_id\":\"2025-korean-common-q27\",\"decision\":\"answered\",\"answer\":1,\"explanation\":\"‘익명의 욕구’는 사랑이 운명적이라 멈출 수 없다는 뜻이 아니라 표현하지 않고는 견딜 수 없는 글쓰기 욕구를 가리킨다. ①은 대상을 잘못 연결했다.\",\"abstain_reason\":null},{\"question_id\":\"2025-korean-common-q28\",\"decision\":\"answered\",\"answer\":4,\"explanation\":\"㉣은 ‘어느 해 여름’, ‘세 번째 여름’처럼 인물이 처한 시기·상황 정보를 서술자가 부가하는 방식이다. ④가 이를 정확히 설명한다.\",\"abstain_reason\":null},{\"question_id\":\"2025-korean-common-q29\",\"decision\":\"answered\",\"answer\":3,\"explanation\":\"‘비밀’은 배꼽이 없다는 비일상적 경험을 허원이 의식하게 하는 계기로 작동해 그의 심리적 동요와 사념을 불러일으킨다. ③이 서사적 기능을 가장 잘 설명한다.\",\"abstain_reason\":null},{\"question_id\":\"2025-korean-common-q30\",\"decision\":\"answered\",\"answer\":5,\"explanation\":\"허원은 세상 사람들의 배꼽 논의를 접한 뒤에도 오히려 배꼽론을 확고히 하고 전문가가 되어 간다. 사념을 그만두게 된다는 ⑤는 내용과 반대다.\",\"abstain_reason\":null},{\"question_id\":\"2025-korean-common-q31\",\"decision\":\"answered\",\"answer\":4,\"explanation\":\"허원은 배꼽이라는 사소한 것에 얽매여 허전함과 사념에 사로잡히지, 그것에 얽매이지 않는 자유로운 상태에 있지 않다. ④는 인물의 상태를 반대로 설명했다.\",\"abstain_reason\":null},{\"question_id\":\"2025-korean-common-q32\",\"decision\":\"answered\",\"answer\":3,\"explanation\":\"(가)의 의문적 표현들은 도망해도 어디에도 숨을 수 없다는 결과나 처지를 강조하는 것이지, 상대의 행적을 의심하는 데 초점이 있지 않다. ③이 부적절하다.\",\"abstain_reason\":null},{\"question_id\":\"2025-korean-common-q33\",\"decision\":\"answered\",\"answer\":5,\"explanation\":\"㉠ 인삼은 그대가 자네에게 캐서 살림을 꾸리라고 권하는 행위의 대상이고, ㉡ 고기는 화자가 아이들에게 잡아 달라고 요청하는 행위의 대상이다. 둘 다 상대가 했으면 하는 행위의 대상이다.\",\"abstain_reason\":null},{\"question_id\":\"2025-korean-common-q34\",\"decision\":\"answered\",\"answer\":2,\"explanation\":\"(가)의 ‘이내’ 말씀은 집안 내력과 신역의 고통을 토로해 그대의 권유를 받아들이기 어렵다는 취지이지, 사회 부조리를 해결하자는 주장까지는 아니다. ②는 입장을 과대 해석했다.\",\"abstain_reason\":null}]}",
+          "finished_at": "2026-10-17T02:22:31.807Z"
+        }
+      ]
+    },
+    "2025-korean-hwajak": {
+      "attempts": [
+        {
+          "iteration": 1,
+          "started_at": "2026-10-17T02:11:54.195Z",
+          "question_ids": [
+            "2025-korean-hwajak-q35",
+            "2025-korean-hwajak-q36",
+            "2025-korean-hwajak-q37",
+            "2025-korean-hwajak-q38",
+            "2025-korean-hwajak-q39",
+            "2025-korean-hwajak-q40",
+            "2025-korean-hwajak-q41",
+            "2025-korean-hwajak-q42",
+            "2025-korean-hwajak-q43",
+            "2025-korean-hwajak-q44",
+            "2025-korean-hwajak-q45"
+          ],
+          "image_encoding": "lossless WebP, original 200 DPI pixels",
+          "image_hashes": [
+            "72f0f485a9aff39e1732f710ca679a356e5ec2bce3276d2d1944f7d4e22b5746",
+            "db6c9249bae6b63fe06d1f27e4fc8a6ed97e3eecb4afaf0b3cd78d3b04691a3b",
+            "7ee7023b5adfb224e6ef6cdda02d48ba1a3d9a6465bd2bc4c52fc76c2c6e595e",
+            "7647774f88956732e227a3a434749b3f7f983d7e3f590c64a1f200523e983c7b"
+          ],
+          "usage": {
+            "input_tokens": 41233,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 41221,
+            "output_tokens": 10280,
+            "reasoning_output_tokens": 9115
+          },
+          "time_seconds": 295.038,
+          "thread_id": "01a147a1-485d-76e7-b599-c3821bfce599",
+          "status": "completed",
+          "estimated_cost_usd": 0.277899,
+          "response": "{\"answers\":[{\"question_id\":\"2025-korean-hwajak-q35\",\"decision\":\"answered\",\"answer\":2,\"explanation\":\"발표자는 ‘아시나요?’처럼 내용 관련 질문을 던져 청중의 배경지식을 확인한다. 행동 변화 요구나 용어 정의, 중간 요약은 드러나지 않는다.\",\"abstain_reason\":null},{\"question_id\":\"2025-korean-hwajak-q36\",\"decision\":\"answered\",\"answer\":4,\"explanation\":\"㉣ 동영상은 개다래 잎 색 변화를 보여 곤충 유인 전략을 설명하는 자료다. 꽃이 작고 잎에 가려진 ‘이유’ 자체를 설명하는 데 쓰였다고 보기는 어렵다.\",\"abstain_reason\":null},{\"question_id\":\"2025-korean-hwajak-q37\",\"decision\":\"answered\",\"answer\":3,\"explanation\":\"학생2는 학생1의 아쉬움에 공감하며 추가 탐색 의사를 밝힐 뿐, 발표에 없는 내용을 추론해 답하지는 않는다. 나머지 반응 이해는 보기 내용과 맞는다.\",\"abstain_reason\":null},{\"question_id\":\"2025-korean-hwajak-q38\",\"decision\":\"answered\",\"answer\":4,\"explanation\":\"㉣는 교훈 변경의 필요성과 효과를 알리는 일의 중요성을 강조한 발화다. 상대 대안의 문제를 제기한 것은 ㉤에 해당한다.\",\"abstain_reason\":null},{\"question_id\":\"2025-korean-hwajak-q39\",\"decision\":\"answered\",\"answer\":5,\"explanation\":\"동문 선배 의견 수렴은 학생회 회의 전이 아니라 학교에 건의할 때 함께 요청하기로 한 사안이다. 회의 전 수렴으로 정리한 ⑤는 대화 내용과 어긋난다.\",\"abstain_reason\":null},{\"question_id\":\"2025-korean-hwajak-q40\",\"decision\":\"answered\",\"answer\":4,\"explanation\":\"[D]의 학생 의견 조사 제안은 ㉣ 단계를 거쳐 (나)에서 설문 결과 91.8%를 건의 근거로 제시하는 것으로 반영됐다. 다른 보기는 단계나 내용 대응이 맞지 않다.\",\"abstain_reason\":null},{\"question_id\":\"2025-korean-hwajak-q41\",\"decision\":\"answered\",\"answer\":3,\"explanation\":\"ⓒ는 교훈이 단순 표현이 아니라 가치를 담는다는 작성자의 전제를 진술한 것이다. 예상 반론을 제시·반박하는 구조로 보기 어렵다.\",\"abstain_reason\":null},{\"question_id\":\"2025-korean-hwajak-q42\",\"decision\":\"answered\",\"answer\":1,\"explanation\":\"5문단 초고에는 다른 학교·교육적 효과만 있어 학교 구성원에게 미치는 긍정적 효과가 부족하다. 완성문도 불편 해소, 자부심, 애교심 상승 등 구성원 측면을 먼저 제시한다.\",\"abstain_reason\":null},{\"question_id\":\"2025-korean-hwajak-q43\",\"decision\":\"answered\",\"answer\":1,\"explanation\":\"초고는 지속 가능 항공유를 기존 항공유와 구조·원료·배출량 측면에서 대비하며 설명한다. 생산 단계 서술, 문답식 장단점, 국가별 경제 효과 분석은 아니다.\",\"abstain_reason\":null},{\"question_id\":\"2025-korean-hwajak-q44\",\"decision\":\"answered\",\"answer\":5,\"explanation\":\"사용 확대의 의의를 먼저 제시하고 이어서 학생이 실천할 수 있는 항공편 선택 제안이 필요하다. ⑤가 그 순서와 독자 실천 제안에 가장 맞다.\",\"abstain_reason\":null},{\"question_id\":\"2025-korean-hwajak-q45\",\"decision\":\"answered\",\"answer\":2,\"explanation\":\"ㄱ-2는 필요량 전망 자료라 혼합 비율 70% 상향이라는 EU 정책 목표의 직접적 근거로 쓰기 어렵다. 나머지는 각 자료와 보강 위치·내용이 자연스럽게 연결된다.\",\"abstain_reason\":null}]}",
+          "finished_at": "2026-10-17T02:16:49.233Z"
+        }
+      ]
+    },
+    "2025-korean-language_media": {
+      "attempts": [
+        {
+          "iteration": 1,
+          "started_at": "2026-10-17T02:22:31.819Z",
+          "question_ids": [
+            "2025-korean-language_media-q35",
+            "2025-korean-language_media-q36",
+            "2025-korean-language_media-q37",
+            "2025-korean-language_media-q38",
+            "2025-korean-language_media-q39",
+            "2025-korean-language_media-q40",
+            "2025-korean-language_media-q41",
+            "2025-korean-language_media-q42",
+            "2025-korean-language_media-q43",
+            "2025-korean-language_media-q44",
+            "2025-korean-language_media-q45"
+          ],
+          "image_encoding": "lossless WebP, original 200 DPI pixels",
+          "image_hashes": [
+            "04c9d34524e1f900e18a9d2af77b3793473822dc23aac87d6ca6f7e2acae67f7",
+            "e5cb2859e48b5725d46062e4e8d35a4d9e4ea6e717b68bd082024de1a81567a9",
+            "c39b94de3637352915001196360b38fdb1f46ce1956fc7e5da1edd1ff2cfede3",
+            "b8625c1219effb6849cf70b4ff1cddbdd55266980872684d182f6010697c76bd"
+          ],
+          "usage": {},
+          "time_seconds": 0,
+          "thread_id": "01a147ab-0306-71c4-8cdc-61242119e8f1",
+          "status": "running"
+        }
+      ]
+    },
+    "2025-math-common": {
+      "attempts": [
+        {
+          "iteration": 1,
+          "started_at": "2026-10-17T02:22:31.829Z",
+          "question_ids": [
+            "2025-math-common-q01",
+            "2025-math-common-q02",
+            "2025-math-common-q03",
+            "2025-math-common-q04",
+            "2025-math-common-q05",
+            "2025-math-common-q06",
+            "2025-math-common-q07",
+            "2025-math-common-q08",
+            "2025-math-common-q09",
+            "2025-math-common-q10",
+            "2025-math-common-q11",
+            "2025-math-common-q12",
+            "2025-math-common-q13",
+            "2025-math-common-q14",
+            "2025-math-common-q15",
+            "2025-math-common-q16",
+            "2025-math-common-q17",
+            "2025-math-common-q18",
+            "2025-math-common-q19",
+            "2025-math-common-q20",
+            "2025-math-common-q21",
+            "2025-math-common-q22"
+          ],
+          "image_encoding": "lossless WebP, original 200 DPI pixels",
+          "image_hashes": [
+            "60354d0e72bc3ac97180bce4c8fccd52b5aa7fecfd4ff520ab1e2e4af0f3684d",
+            "f4eb3a24d5816b930dcc55e368fcab61549ad94c4bca7de5a5add60021b70a5b",
+            "40a3c8be8cf267ba4ae92ce3752c22bb258134ca8d90d898d7f602aa1176fcbd",
+            "7b5e03bfbcc5458814ec59544b42e31a04630290895ff6422a6eeaa0788dce05",
+            "88d6975da307d308a33d97ea30477558200fa1ec98c019df2a45cc43910ca4c3",
+            "250fe27373a16cf43a524a6bff153cfc44400f54f6873d28baa46206ec9a9d75",
+            "79aad2e11d5b201efc0b4d5ade26b2b3e8df58809aca7266f2706ffc06d01bf3",
+            "21309d9d3ddfd529313d39f0417c91060c3e2e6152127b5c71aaa98ed86d50b4"
+          ],
+          "usage": {},
+          "time_seconds": 0,
+          "thread_id": "01a147ab-0301-7736-a264-43f05a1febd7",
+          "status": "running"
+        }
+      ]
+    }
+  },
+  "iterations": [
+    {
+      "iteration": 1,
+      "started_at": "2026-10-17T02:11:54.163Z",
+      "pending_groups": [
+        "2025-korean-common",
+        "2025-korean-hwajak",
+        "2025-korean-language_media",
+        "2025-math-common",
+        "2025-math-probability",
+        "2025-math-calculus",
+        "2025-math-geometry",
+        "2025-english-english"
+      ]
+    }
+  ],
+  "usage": {
+    "input_tokens": 163345,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 163333,
+    "output_tokens": 34061,
+    "reasoning_output_tokens": 29106
+  },
+  "wall_time_seconds": 680.344,
+  "prompt_hash": "c1af6df049d84a1dd0bfeb763795ed69e50ca32b73aa6edcc3020ca6dccc46ee",
+  "source_hashes": {
+    "exams/pdf/2025/국어영역_문제지_홀수형.pdf": "fd03b004f35e39da2380c68bf8efadcdbdd9ef2e18c53f03c435d3e2fb31f247",
+    "exams/pdf/2025/수학영역_문제지_홀수형.pdf": "ad13d3f1858b880e79384e65fffd6bcb762e52b3bacd3be0a1e0c879675abe86",
+    "exams/pdf/2025/영어영역_문제지_홀수형.pdf": "7750c0be3c0511c4055e23f8d994508a117bab87c62d19411f1dff31db3ea03b",
+    "exams/pdf/2025/영어영역_듣기평가대본.pdf": "1cb48ebdbbdb7c503b8b42befd0ecaa7f6146b674a865516f13ec8a5d806abc9"
+  },
+  "updated_at": "2026-10-17T02:23:14.507Z",
+  "billing": {
+    "method": "pi_api",
+    "api_key_used": true,
+    "subscription_only": false,
+    "user_authorized": true,
+    "api_model": "kimi-k3",
+    "api_endpoint": "https://api.moonshot.ai/v1",
+    "reference_cost_is_invoice": false
+  }
+}
