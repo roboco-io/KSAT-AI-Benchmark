@@ -8,7 +8,7 @@ pdfplumber==0.10.3
 PyPDF2==3.0.1
 pdf2image==1.16.3
 pytesseract==0.3.10
-Pillow==10.1.0
+Pillow==13.0.0
 
 # YAML Processing
 PyYAML==6.0.1
@@ -74,7 +74,7 @@ backoff==2.2.1   # Exponential backoff
 asyncio==3.4.3
 
 # Optional: Image Processing (for visual questions)
-# Pillow==10.1.0
+# Pillow==13.0.0
 # opencv-python==4.9.0.80
 
 # Development Tools
