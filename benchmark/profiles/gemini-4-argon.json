@@ -1,0 +1,33 @@
+{
+  "id": "gemini-4-argon",
+  "label": "Gemini 4 Argon",
+  "provider": "google",
+  "agent": "pi",
+  "directory": "results/pi-2026-gemini-4-argon",
+  "pricing": {
+    "input_per_million": 2,
+    "cached_input_per_million": 0.1,
+    "cache_write_per_million": 0,
+    "output_per_million": 10,
+    "currency": "USD",
+    "as_of": "2026-10-16",
+    "basis": "Google standard API reference rates through 2026-11-30; implicit caching only; not an invoice",
+    "source": "https://ai.google.dev/gemini-api/docs/pricing"
+  },
+  "pi": {
+    "provider": "ksat-pi",
+    "model_id": "gemini-4-argon",
+    "base_url": "https://generativelanguage.googleapis.com/v1beta/openai/",
+    "secret_name": "GEMINI_API_KEY",
+    "context_window": 1048576,
+    "max_tokens": 32768,
+    "api": "openai-completions",
+    "compat": {
+      "supportsReasoningEffort": true,
+      "supportsDeveloperRole": false,
+      "supportsStore": false,
+      "maxTokensField": "max_tokens"
+    },
+    "effort_semantics": "high"
+  }
+}

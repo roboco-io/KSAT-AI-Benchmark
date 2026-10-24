@@ -1,821 +1,121 @@
-# 🎓 KSAT AI Benchmark
+# KSAT AI Benchmark
 
-> 대한민국 수학능력시험(KSAT)으로 AI 모델의 실력을 측정합니다
+대한민국 수능 문제를 최신 AI 모델로 풀고, 답안과 채점 결과를 연도별로 공개합니다.
 
-[![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
-[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
-[![Deploy to GitHub Pages](https://github.com/roboco-io/KSAT-AI-Benchmark/actions/workflows/deploy-pages.yml/badge.svg)](https://github.com/roboco-io/KSAT-AI-Benchmark/actions/workflows/deploy-pages.yml)
-[![GitHub Pages](https://img.shields.io/badge/GitHub-Pages-brightgreen)](https://roboco.io/KSAT-AI-Benchmark/)
+**대시보드:** https://roboco.io/KSAT-AI-Benchmark/
 
-**🌐 리더보드 바로가기:** [https://roboco.io/KSAT-AI-Benchmark/](https://roboco.io/KSAT-AI-Benchmark/)
+## 현재 평가 방식
 
-> **📅 2026학년도 수능 예정**: 2025년 11월 13일(목) 시행 예정 - 시험 후 빠른 벤치마크 결과 업데이트
+2026학년도 수능 홀수형 원본을 Codex·Claude SDK 및 Pi CLI로 평가합니다. GPT-6.1 Sol 기존 결과와 GPT-6 Astra·Luna, Claude Sonnet 5.5·Opus 5.5·Haiku 5.5·Fable 5.1과 Pi의 DeepSeek V4.1 Flash·GLM 5.3 Flash·Qwen3.8-27B·Kimi K3를 모델별로 비교합니다. 원본 PDF를 200 DPI 이미지로 렌더링하고, 전송량을 줄이기 위해 동일한 픽셀의 무손실 WebP로 인코딩합니다. 문제 본문을 텍스트로 전사하지 않습니다.
 
-## 📖 소개
+- 국어: 공통, 화법과 작문, 언어와 매체. 선택과목별 45문항·100점.
+- 수학: 공통, 확률과 통계, 미적분, 기하. 선택과목별 30문항·100점.
+- 영어: 45문항·100점. 듣기 1~17번은 공식 대본 이미지로 평가하며 음성 청취 평가와 구분합니다.
+- 전체 지표는 공통 문항을 한 번만 센 147개 고유 문항 기준입니다.
+- 모델은 확신하지 못한 문항에서 기권할 수 있습니다. 기권은 `answer: null`로 저장하며 실행 오류와 구분합니다.
+- 도구·검색·MCP·플러그인을 비활성화합니다. 정답은 모델 요청에 넣지 않습니다.
 
-KSAT AI Benchmark는 대한민국 수학능력시험 문제를 활용하여 다양한 AI 모델의 문제 해결 능력을 평가하고, 그 결과를 공개적으로 공유하는 오픈소스 프로젝트입니다.
+## 수험 스킬
 
-### 🎯 프로젝트 철학
+`$ksat-exam` 또는 모델명을 포함한 수험 요청으로 실행·채점·대시보드 등록을 진행합니다. [수험 스킬](skills/ksat-exam/SKILL.md)은 이 저장소에서 관리하며 `~/.codex/skills/ksat-exam`에 설치됩니다. 새 모델은 검증된 메타데이터 프로필로 등록하고, 기존 완료 답안은 재호출하지 않습니다.
 
-**인간 중심의 AI 평가 (Human-Centered AI Evaluation)**
-
-기존의 AI 벤치마크들은 대부분 AI를 위해 설계된 합성 데이터셋이나 특정 태스크에 최적화된 문제들을 사용합니다. 하지만 우리는 다른 접근을 택했습니다:
-
-- **진짜 인간이 보는 시험으로 평가**: 대한민국 고등학생들이 실제로 치르는 수능 문제로 AI를 평가합니다
-- **표준화된 측정**: 매년 동일한 난이도와 형식으로 출제되는 수능은 AI 능력의 일관된 비교 기준을 제공합니다
-- **종합적 사고력 요구**: 단순 암기가 아닌 독해력, 추론력, 문제해결력을 종합적으로 평가합니다
-- **투명한 벤치마킹**: 모든 문제, 답변, 채점 과정이 공개되어 누구나 검증 가능합니다
-
-**Vibe Coding: 자연스러운 개발 경험**
-
-이 프로젝트는 "Vibe Coding" 철학으로 구축되었습니다:
-
-- **자연스러운 워크플로우**: `make korean`, `make gpt-5 2025 korean` 같은 직관적인 명령어
-- **지능형 자동화**: Vision API로 PDF를 파싱하고, GitHub Actions로 평가를 자동화
-- **즉각적인 피드백**: 평가 후 바로 리더보드와 상세 분석 결과 제공
-- **확장 가능한 설계**: 새 모델, 새 시험을 쉽게 추가할 수 있는 구조
-
-**지속적인 AI 발전 추적**
-
-- 엄선된 최신 모델 6종으로 집중 벤치마킹 (Gemini 2.5 Pro는 안전 필터 이슈로 제외)
-  - **OpenAI**: GPT-5, GPT-4o
-  - **Anthropic**: Claude Opus 4.1, Claude Sonnet 4.5 (via Perplexity)
-  - **Upstage**: Solar Pro (한국어 특화)
-  - **Perplexity**: Sonar Pro
-- 동일한 시험으로 시간에 따른 AI 발전을 객관적으로 비교
-- 과목별(국어, 수학, 영어), 영역별(언어이해, 수리추론, 문제해결) 강점과 약점 파악
-
-> **⚠️ Google Gemini 2.5 Pro 제외 사유**
-> Google의 안전 필터가 한국어 수능 문제 콘텐츠를 유해 콘텐츠로 오인하여 대부분의 문제에서 SAFETY 응답(finish_reason=2)을 반환합니다. BLOCK_NONE 설정에도 불구하고 정상적인 평가가 불가능하여 벤치마크에서 제외하였습니다.
-
-### 주요 특징
-
-- 🤖 **Vision API 기반 지능형 파싱**: GPT-4o Vision으로 복잡한 수식, 그래프, 2단 레이아웃 완벽 처리
-- 🎯 **엄선된 최신 AI 모델**: GPT-5, GPT-4o, Claude Opus 4.1, Claude Sonnet 4.5, Solar Pro, Sonar Pro
-- 📊 **상세한 결과 분석**: 정답률, 답변 선택 이유, 풀이 시간, 과목별 등수까지 모두 기록
-- ⚡ **완전 자동화 파이프라인**: PDF → Vision 파싱 → 평가 → 웹 배포까지 GitHub Actions로 자동화
-- 🌐 **현대적인 웹 UI**: Next.js + Mantine UI로 구현된 인터랙티브 리더보드
-- 🔄 **지속적인 업데이트**: 새로운 시험이나 모델이 추가되면 자동으로 평가하고 배포
-
-## 🎯 평가 지표
-
-각 AI 모델은 다음 기준으로 평가됩니다:
-
-1. **정답률 & 점수**: 정답을 맞힌 문제의 비율과 획득 점수
-2. **답변 선택 이유**: 해당 답을 선택한 상세한 논리와 설명
-3. **풀이 시간**: 각 문제를 푸는데 소요된 시간 (초 단위)
-4. **과목별 성적**: 국어, 수학, 영어, 탐구 영역별 점수
-
-## ⚡ Makefile 빠른 시작
+OpenAI는 Codex SDK, Anthropic은 Claude Code SDK, Google은 Antigravity CLI, 나머지는 Pi agent를 사용합니다. 현재 Antigravity CLI 1.3.2 headless 입력은 텍스트만 지원하므로 Google의 원본 이미지 수험은 차단 사유를 표시합니다. 다른 에이전트로 바꾸지 않습니다.
 
 ```bash
-# 도움말
-make help
-
-# 국어 파싱 + 정답 입력
-make korean
-
-# 수학 파싱 + 정답 입력 (Vision API)
-make math
-
-# 모든 과목 처리
-make all
-
-# 커스텀 PDF 파싱
-make parse PDF=exams/pdf/2025/국어영역_문제지_홀수형.pdf
-make parse-vision PDF=exams/pdf/2025/수학영역_문제지_홀수형.pdf
-
-# YAML 검증
-make validate
-
-# 정리
-make clean
+python3 skills/ksat-exam/scripts/run_exam.py --model gpt-6.1-sol --dry-run
+# 지정한 API 모델 사용이 승인된 경우
+python3 skills/ksat-exam/scripts/run_exam.py --model kimi-k3 --authorize-api
 ```
 
-## 🔄 자동화 워크플로우
+실행기는 해당 모델 결과·프로필·정적 JSON만 등록하고 배포를 검증합니다. 실제 모델 호출은 로컬에서만 수행하며 CI는 저장된 결과를 채점·빌드합니다.
 
-### 완전 자동화 파이프라인
+## 연례 운영
 
-```mermaid
-graph LR
-    A[평가 실행] --> B[results/ 저장]
-    B --> C[Git Push]
-    C --> D[GitHub Actions]
-    D --> E[자동 배포]
-```
+수능 전에 전년도 문제를 최신 모델로 한 번 평가하고, 수능 직후 새 문제를 같은 모델·프로토콜로 평가합니다. 최초 공개 정답으로 잠정 결과를 만들고, 최종 정답 확정 후 저장한 답안을 재채점합니다. 모델을 다시 호출하지 않습니다.
 
-**자동화 단계:**
+학년도와 실제 시행 연도는 구분합니다. 2026년 사전 평가는 2026학년도 시험이며, 2026년 11월 19일 직후 평가는 2027학년도 시험입니다.
 
-1. **로컬 평가**: `make gpt-5 2025 korean` 실행 → `results/` 디렉토리에 YAML 저장
-2. **Git 커밋/푸시**: `results/` 변경사항을 main 브랜치에 푸시
-3. **GitHub Actions 자동 실행** (`.github/workflows/deploy-pages.yml`):
-   - Python으로 YAML → JSON 변환 (`scripts/export_data.py`)
-   - Next.js 웹사이트 빌드
-   - GitHub Pages 자동 배포
-4. **웹사이트 자동 업데이트**: https://roboco.io/KSAT-AI-Benchmark/
+## 실행 환경
 
-### Vibe Coding 워크플로우
+- Node.js 24 이상, npm
+- Codex CLI 0.162.1 및 해당 GPT 모델의 ChatGPT 구독 접근 권한
+- Claude Code 2.1.296 및 Claude 구독. API 키 인증·유료 공급자·추가 사용 크레딧을 사용하지 않습니다.
+- Poppler (`pdfinfo`, `pdftoppm`), libwebp (`cwebp`)
+- Codex 로그인: `codex login`
 
-```mermaid
-graph TD
-    A[PDF 업로드<br/>exams/pdf/] --> B[Vision API 파싱<br/>GPT-4o Vision]
-    B --> C[YAML 생성<br/>exams/parsed/]
-    C --> D[모델 평가<br/>AI 모델 실행]
-    D --> E[결과 저장<br/>results/]
-    E --> F[Git Commit & Push]
-    F --> G[GitHub Actions 트리거]
-    G --> H[웹 배포<br/>GitHub Pages]
-    
-    B1[수식 → LaTeX] -.-> B
-    B2[그래프 인식] -.-> B
-    B3[2단 레이아웃 처리] -.-> B
-    
-    D1[문제 읽기] -.-> D
-    D2[사고 & 추론] -.-> D
-    D3[답변 선택] -.-> D
-    D4[이유 설명] -.-> D
-```
-
-### 사용자 관점 전체 플로우
-
-```mermaid
-sequenceDiagram
-    participant User as 👤 사용자
-    participant Make as 🔧 Makefile
-    participant Parser as 📄 Parser
-    participant Eval as 🤖 Evaluator
-    participant Git as 📦 Git
-    participant GHA as ⚙️ GitHub Actions
-    participant Web as 🌐 Website
-    
-    User->>Make: make korean
-    Make->>Parser: PDF 파싱 (Vision API)
-    Parser->>Parser: YAML 생성
-    Parser-->>User: ✅ YAML 파일 생성 완료
-    
-    User->>Make: make gpt-5 2025 korean
-    Make->>Eval: 모델 평가 실행
-    Eval->>Eval: AI 모델로 문제 풀이
-    Eval->>Eval: results/ 저장
-    Eval-->>User: ✅ 평가 완료
-    
-    User->>Git: git push
-    Git->>GHA: 트리거
-    GHA->>GHA: YAML → JSON 변환
-    GHA->>GHA: Next.js 빌드
-    GHA->>Web: GitHub Pages 배포
-    Web-->>User: 🎉 리더보드 업데이트 완료
-```
-
-### 🚀 GitHub Pages 활성화 방법
-
-GitHub Actions 워크플로우가 작동하려면 GitHub Pages 설정이 필요합니다:
-
-1. **GitHub 저장소 → Settings → Pages**
-2. **Source**: "GitHub Actions" 선택
-3. 저장 후 자동으로 워크플로우 실행
-
-**수동 트리거 방법:**
-- GitHub 저장소 → Actions 탭 → "Deploy to GitHub Pages" → "Run workflow"
-
-**배포 상태 확인:**
-- Actions 탭에서 워크플로우 실행 상태 확인
-- 배포 완료 후 https://roboco.io/KSAT-AI-Benchmark/ 접속
-
-## 🎨 Vibe Coding in Action
-
-이 프로젝트의 전체 워크플로우를 단계별로 살펴봅니다:
-
-**1. PDF 업로드**: `exams/pdf/`에 시험지 PDF 추가
-- 수능 문제지를 그대로 업로드 (OCR 불필요)
-
-**2. Vision API 파싱**: GPT-4o Vision으로 지능형 추출
-- 복잡한 수학 수식 → LaTeX로 정확하게 변환
-- 그래프, 도표 → 시각적 요소 인식 및 설명
-- 2단 레이아웃 → 구조 파악 및 논리적 순서로 재배열
-- 한 번의 명령: `make korean` 또는 `make math`
-
-**3. YAML 생성**: `exams/parsed/`에 구조화된 데이터 저장
-- 사람이 읽기 쉬운 포맷
-- 버전 관리 가능
-- 재사용 및 검증 용이
-
-**4. 모델 평가**: 각 AI 모델이 실제 시험 응시
-- 문제 읽기 → 사고 → 답변 선택 → 이유 설명
-- 실시간 소요 시간 측정
-- 유연한 평가: `make gpt-5 2025 korean,math`
-
-**5. 결과 저장**: `results/`에 YAML 형식으로 저장
-- 모델별, 시험별 결과 분리
-- 답변 이유와 시간 모두 기록
-- 언제든 재분석 가능
-
-**6. 웹 배포**: GitHub Actions로 자동 배포
-- 결과 커밋 → 자동 빌드 → GitHub Pages 배포
-- 실시간 리더보드 업데이트
-- 과목별 등수, 상세 통계 자동 생성
-
-## 🚀 빠른 시작
-
-### 필요 조건
-
-- Python 3.10 이상
-- Node.js 18 이상
-- AI 모델 API 키:
-  - OpenAI (GPT-4, GPT-3.5)
-  - Anthropic (Claude)
-  - Google (Gemini)
-  - Upstage (Solar)
-  - Perplexity (Sonar)
-
-### 설치
+macOS 도구 설치:
 
 ```bash
-# 저장소 클론
-git clone https://github.com/roboco-io/KSAT-AI-Benchmark.git
-cd KSAT-AI-Benchmark
-
-# Python 의존성 설치
-pip install -r requirements.txt
-
-# 환경 변수 설정
-cp .env.example .env
-# .env 파일에 API 키 입력
+brew install poppler webp
+npm ci --prefix benchmark
+npm ci --prefix web
 ```
 
-### 새로운 시험 추가하기
+## 풀이와 채점
 
-#### 방법 1: Makefile 사용 ⭐️ **가장 간편!**
+저장소 루트에서 실행합니다.
 
 ```bash
-# 국어 파싱 + 정답 입력 (한 번에)
-make korean
-
-# 수학 파싱 + 정답 입력 (한 번에)
-make math
-
-# 영어 파싱 + 정답 입력 (한 번에)
-make english
-
-# 모든 과목 처리
-make all
-
-# 도움말 보기
-make help
+npm test --prefix benchmark
+node benchmark/run.mjs --model gpt-6-astra
+node benchmark/run.mjs --model gpt-6-luna
+# Astra·Luna 완료 후 Claude 구독의 Usage credits OFF를 직접 확인
+node benchmark/run.mjs --model claude-sonnet-5-5
+# 토큰과 실제 잔여 용량을 확인한 뒤 다른 Claude 모델을 진행
+node benchmark/export.mjs
+npm run build --prefix web
 ```
 
-#### 방법 2: Python 스크립트 직접 실행
+Ralph 반복은 SDK에서 동일한 기본 지시와 저장된 진행 기록을 사용합니다. Claude 종료 훅을 사용하지 않습니다. 제출한 답과 기권은 고정하고 미제출·실행 오류만 재개합니다. 기본 상한은 묶음당 총 3회, Codex 900초·Claude 600초, 동시 요청 2개, API 환산 예상 비용 25 USD입니다. 입력·프롬프트·프로토콜이 바뀌면 같은 실행에 이어 붙일 수 없습니다.
+
+현재 실행기는 2026학년도 자료를 사용하며 모델별 결과 경로는 `benchmark/models.mjs`에 지정합니다. 다음 학년도에는 데이터·실행 경로를 분리한 설정 확장이 필요합니다. 이전 실행을 새 학년도 결과로 덮어쓰지 마세요.
+
+## Pi API 실행 조건
+
+사용자가 API 사용을 승인한 네 모델만 Pi CLI 0.87.1로 호출합니다. 필요한 키를 `~/.zsh_secrets`에서 읽고, 해당 키 하나만 격리된 Pi 프로세스에 전달합니다. 파일을 셸로 실행하거나 키를 명령 인수·로그·결과에 남기지 않습니다. 재실행 시 `.runtime/pi-api-authorization.json`의 명시적인 모델 승인 목록을 확인합니다.
 
 ```bash
-# 1. PDF 파싱 (로컬에서)
-# 텍스트 기반 (국어, 사회 등)
-python src/parser/parse_exam.py exams/pdf/2025/국어영역_문제지_홀수형.pdf
-
-# Vision API (수학, 과학 등) - 수식과 그래프 완벽 인식
-python src/parser/parse_exam.py exams/pdf/2025/수학영역_문제지_홀수형.pdf --vision
-
-# 2. 정답표 파싱 및 자동 입력
-python src/parser/parse_answer_key.py \
-  exams/pdf/2025/수학영역_정답표.pdf \
-  exams/parsed/2025-math-sat.yaml
-
-# 3. Git에 추가 및 커밋
-git add exams/parsed/2025-math-sat.yaml
-git commit -m "feat: 2025 수학 시험 추가"
-git push
-
-# 4. GitHub Actions가 자동으로:
-#    - 모든 AI 모델로 평가 실행
-#    - 결과를 results/에 저장
-#    - 웹사이트 업데이트
+node benchmark/run.mjs --model deepseek-v4.1-flash
+node benchmark/run.mjs --model glm-5.3-flash
+node benchmark/run.mjs --model qwen3.8-27b
+node benchmark/run.mjs --model kimi-k3
 ```
 
-**파싱 가이드**: 상세한 파싱 방법은 [`docs/PARSER_GUIDE.md`](docs/PARSER_GUIDE.md)를 참고하세요.
+Pi는 도구·확장·자동 재시도·문맥 압축·이미지 자동 축소를 끕니다. 모델별 경로·요율·출력 상한을 실행 기록에 보존합니다. Qwen의 thinking 활성화와 다른 모델의 high 설정은 같은 계산량으로 해석하지 않습니다. [Pi 실행 계획](docs/superpowers/plans/2026-10-12-pi-models.md)을 참조하세요.
 
-#### 방법 3: 수동 YAML 작성
+## Codex·Claude 구독 전용 실행 조건
 
-`exams/parsed/` 폴더에 YAML 파일을 직접 작성할 수도 있습니다.
+Codex·Claude SDK 자식 프로세스에는 API 키와 유료 클라우드 공급자 환경 변수를 전달하지 않습니다. Codex 요청 전 ChatGPT 로그인·포함 사용량·유료 크레딧 없음 상태를 확인합니다. Claude는 OAuth 구독 인증과 Usage credits OFF를 확인합니다. 인증 불명·한도 초과·유료 전환·모델 대체가 감지되면 다음 요청을 멈추고 활성 요청도 취소합니다.
 
-**국어 시험 (Optimized Schema - 지문 중복 제거):**
-```yaml
-exam_id: 2024-korean-sat
-title: 2024학년도 수능 국어영역
-subject: korean
-year: 2024
+Claude의 과금 차단 확인은 계정 지문에 묶인 30분 유효의 로컬 기록 `.runtime/claude-subscription-only.json`을 사용합니다. Settings → Usage 또는 CLI의 `/usage`에서 Usage credits OFF를 직접 확인한 경우에만 확인 기록을 갱신합니다. 만료되면 모델을 호출하지 않습니다. API 키나 비용 상한 설정만으로 추가 과금 차단을 보장하지 않습니다. 확인 파일과 계정별 잔여 용량은 git·웹에 공개하지 않습니다.
 
-# 지문 중앙 관리 (같은 지문을 공유하는 문제 그룹)
-passages:
-  - passage_id: p1
-    passage_text: "긴 지문 내용..."
-    question_numbers: [1, 2, 3]
+첫 Claude 모델을 작은 묶음으로 확인할 때는 `--group 2026-korean-hwajak --once`를 사용합니다. 부분 실행은 완료 모델 순위에 넣지 않습니다. 제출된 답은 전체 평가를 이어갈 때도 그대로 유지합니다.
 
-# 문제들은 passage_id로 지문 참조
-questions:
-  - question_id: q1
-    question_number: 1
-    question_text: "윗글의 내용과 일치하는 것은?"
-    passage_id: p1  # 지문 참조
-    choices: ["선택지1", "선택지2", ...]
-    correct_answer: 3
-    points: 2
-```
+## 지표 해석
 
-**수학 시험 (Legacy Schema - 기존 방식):**
-```yaml
-exam_id: 2024-math-sat
-title: 2024학년도 수능 수학영역
-subject: math
-year: 2024
+- 정답률: 정답 문항 / 전체 평가 문항. 기권·실패도 분모에 포함합니다.
+- 기권률: 모델이 자발적으로 기권한 문항 / 전체 평가 문항.
+- 응답 문항 정답률: 정답 문항 / 유효 답 제출 문항. 시도가 없으면 표시하지 않습니다.
+- 총 실행 시간: 실제 경과 시간. 병렬 묶음 요청 시간 합계와 구분합니다.
+- 토큰 비용: SDK의 USD 예상치 또는 입력·캐시·출력 토큰에 공개 API 요율을 적용한 참고값. 구독의 실제 청구액이 아닙니다. Claude는 SDK 예상치를 우선 사용해 캐시 보관 시간과 토큰 구간별 요율을 반영합니다.
 
-questions:
-  - question_id: q1
-    question_number: 1
-    question_text: "다음 중 옳은 것은?"
-    passage: "지문 내용 (선택적)"  # 직접 포함
-    choices: ["1", "2", "3", "4", "5"]
-    correct_answer: "3"
-    points: 2
-```
+문항별 시간·토큰·시험별 비용은 묶음 요청 값을 균등 배분한 추정치입니다. 사용량을 반환하지 않은 실패 요청은 비용 추정에서 제외될 수 있습니다. 공개된 전년도 문제가 학습 데이터에 포함되었을 가능성이 있으며, 원점수를 학생의 표준점수·백분위·등급으로 환산하지 않습니다.
 
-### 새로운 모델 추가하기
+## 정적 사이트 배포
 
-`models/models.json` 파일에 모델 정보를 추가합니다:
+Next.js는 결과 JSON을 빌드 시 읽고 `web/out/`에 정적 HTML을 생성합니다. 서버 API·데이터베이스·실시간 연결은 없습니다.
 
-```json
-{
-  "models": [
-    {
-      "name": "gpt-4-turbo",
-      "provider": "openai",
-      "version": "2024-01",
-      "api_key_env": "OPENAI_API_KEY",
-      "max_tokens": 2000,
-      "timeout": 60
-    }
-  ]
-}
-```
+`main`에 결과·웹·평가기 변경을 push하면 GitHub Actions가 오프라인 테스트, 데이터 내보내기, 정적 빌드와 GitHub Pages 배포를 수행합니다. 배포 경로는 `/KSAT-AI-Benchmark`이며 조직 도메인 `roboco.io`를 유지합니다.
 
-### 로컬에서 평가 실행
+## 자료와 구현 문서
 
-```bash
-# PDF 파싱
-python -m src.parser.main --input exams/pdf/2024-ksat-math.pdf
+- 공식 원본·해시: `exams/pdf/2026/sources.json`
+- 검수한 문항·정답: `exams/datasets/2026-ksat.json`
+- 실제 답안·사용량·프로토콜: `results/codex-2026/run.json`
+- 모델 비교 공개 데이터: `web/public/data/benchmark-comparison.json`
+- 기존 Sol 공개 데이터 호환: `web/public/data/benchmark-v2.json`
+- 구현 계획: [구독 전용 다중 모델 비교](docs/superpowers/plans/2026-10-12-multi-model-subscription.md)
+- 최초 구현: [Codex SDK 연례 평가 계획](docs/superpowers/plans/2026-10-12-codex-sdk-annual-benchmark.md)
+- 이전 방식의 문서: [이전 README](docs/LEGACY_README.md)
 
-# 모든 모델로 모든 시험 평가
-python -m src.evaluator.main
-
-# 특정 모델로 특정 시험 평가
-python -m src.evaluator.main --model gpt-4-turbo --exam 2024-ksat-math
-```
-
-### 웹 인터페이스 로컬 실행
-
-```bash
-cd web
-npm install
-npm run dev
-# http://localhost:3000 접속
-```
-
-## 📁 프로젝트 구조
-
-```
-KSAT-AI-Benchmark/
-├── .github/
-│   └── workflows/              # GitHub Actions 워크플로우
-│       ├── parse-and-evaluate.yml
-│       └── deploy-pages.yml
-├── exams/
-│   ├── pdf/                    # 원본 PDF 시험지
-│   └── parsed/                 # 파싱된 YAML 파일
-├── models/                     # AI 모델 설정
-├── src/
-│   ├── parser/                 # PDF 파싱 시스템
-│   ├── evaluator/              # 평가 시스템
-│   └── models/                 # 모델 인터페이스
-├── results/                    # 평가 결과 YAML
-├── web/                        # Next.js 프론트엔드
-│   ├── app/                    # App Router 페이지
-│   ├── components/             # React 컴포넌트
-│   └── lib/                    # YAML 로더 등
-├── docs/                       # 프로젝트 문서
-└── tests/                      # 테스트 코드
-```
-
-## ⚙️ GitHub Actions 워크플로우
-
-### 1. PDF 파싱 및 평가 (`parse-and-evaluate.yml`)
-
-**트리거:**
-- `exams/pdf/`에 새 PDF 추가
-- `models/models.json` 수정
-- 수동 실행
-
-**프로세스:**
-
-```mermaid
-graph TD
-    subgraph "Job 1: PDF 파싱"
-        A1[PDF 텍스트/이미지 추출] --> A2[YAML 생성]
-        A2 --> A3[exams/parsed/ 커밋]
-    end
-    
-    subgraph "Job 2: 모델 평가"
-        B1[YAML 로드] --> B2[각 모델로 문제 풀이]
-        B2 --> B3[결과 YAML 저장]
-        B3 --> B4[results/ 커밋]
-    end
-    
-    A3 --> B1
-```
-
-### 2. 웹사이트 배포 (`deploy-pages.yml`)
-
-**트리거:**
-- `results/` 폴더 변경
-- `exams/parsed/` 폴더 변경
-- `web/` 폴더 변경
-
-**프로세스:**
-
-```mermaid
-graph TD
-    C1[YAML → JSON 변환] --> C2[Next.js 빌드]
-    C2 --> C3[정적 HTML 생성]
-    C3 --> C4[GitHub Pages 배포]
-```
-
-### 3. 트리거별 워크플로우
-
-```mermaid
-graph TD
-    subgraph "트리거"
-        T1[exams/pdf/ 변경]
-        T2[models/models.json 변경]
-        T3[results/ 변경]
-        T4[web/ 변경]
-    end
-    
-    subgraph "워크플로우"
-        W1[parse-and-evaluate.yml]
-        W2[deploy-pages.yml]
-    end
-    
-    T1 --> W1
-    T2 --> W1
-    T3 --> W2
-    T4 --> W2
-    
-    W1 --> R1[PDF 파싱 & 평가]
-    W2 --> R2[웹사이트 배포]
-```
-
-## 🌐 결과 확인
-
-평가 결과는 다음 링크에서 확인할 수 있습니다:
-
-**👉 [https://roboco.io/KSAT-AI-Benchmark/](https://roboco.io/KSAT-AI-Benchmark/)**
-
-### 주요 페이지
-
-#### 1. 리더보드 (메인)
-- 모델별 전체 순위 테이블
-- 과목별 점수 필터링
-- 정답률과 평균 풀이 시간
-
-#### 2. 문제 목록 페이지
-- 시험의 모든 문제 표시
-- 각 문제별로 모든 모델의 답안 그리드
-- 정답(초록) / 오답(빨강) 색상 구분
-- 답안 클릭 → 상세 모달 팝업
-
-#### 3. 답안 상세 모달
-- 선택한 답안
-- **답변 선택 이유** (전체 설명)
-- 풀이 소요 시간
-- 획득 점수
-
-#### 4. 모델별 상세 페이지
-- 해당 모델의 전체 성적
-- 과목별 탭
-- 문제별 정답/오답 상세
-- 차트 및 통계
-
-## 🤝 기여하기
-
-> 🌟 **이 프로젝트는 개발 초기 단계입니다!**
->
-> 여러분의 기여를 환영합니다. 함께 AI 벤치마킹의 새로운 표준을 만들어가요!
-
-### 🚀 기여 프로세스
-
-**1. 이슈 확인 또는 생성**
-   - [이슈 트래커](https://github.com/roboco-io/KSAT-AI-Benchmark/issues)에서 기존 이슈 확인
-   - 새로운 아이디어가 있다면 이슈 생성 후 토론
-   - `good first issue` 라벨로 초보자 친화적인 태스크 찾기
-
-**2. Fork & Clone**
-   ```bash
-   # Repository fork 후
-   git clone https://github.com/YOUR_USERNAME/KSAT-AI-Benchmark.git
-   cd KSAT-AI-Benchmark
-   ```
-
-**3. 개발 환경 설정**
-   ```bash
-   # Python 의존성 설치
-   make install
-
-   # .env 파일 생성 및 API 키 설정
-   make env
-   code .env  # API 키 입력
-
-   # 개발 도구 설치
-   make dev-install
-   ```
-
-**4. Feature Branch 생성**
-   ```bash
-   git checkout -b feature/amazing-feature
-   # 또는
-   git checkout -b fix/bug-description
-   ```
-
-**5. 개발 및 테스트**
-   ```bash
-   # 코드 작성
-
-   # 테스트 실행
-   make test
-
-   # 코드 포맷팅
-   make format
-
-   # Linting
-   make lint
-   ```
-
-**6. 커밋 & 푸시**
-   ```bash
-   git add .
-   git commit -m "feat: 멋진 기능 추가"
-   git push origin feature/amazing-feature
-   ```
-
-**7. Pull Request 생성**
-   - GitHub에서 PR 생성
-   - 제목: 명확하고 간결하게 (예: `feat: 과목별 리더보드 탭 추가`)
-   - 설명: 변경 사항, 테스트 방법, 스크린샷(UI 변경 시) 포함
-
----
-
-### 📋 기여 가이드라인
-
-#### 🆕 새로운 시험 추가
-- ✅ 공개 가능한 시험 문제만 추가 (저작권 확인 필수)
-- ✅ Vision API 파싱 후 반드시 수동 검증
-- ✅ 정답표 파싱 후 샘플 평가로 검증
-- 📁 위치: `exams/pdf/YYYY/과목영역_문제지_홀수형.pdf`
-
-#### 🤖 새로운 모델 추가
-- ✅ `models/models.json`에 설정 추가
-- ✅ `src/evaluator/models/`에 provider 구현 (새 provider인 경우)
-- ✅ 최소 1개 시험으로 테스트 후 PR
-- 📝 README.md의 모델 목록 업데이트
-
-#### 💻 코드 기여
-- ✅ **PEP 8** 스타일 가이드 준수
-- ✅ 새 기능은 **테스트 코드** 함께 작성
-- ✅ `CLAUDE.md` 업데이트 (중요한 변경사항의 경우)
-- ✅ **Vibe Coding** 철학 유지:
-  - 직관적인 명령어와 API
-  - 지능형 자동화
-  - 투명한 프로세스
-
-#### 📚 문서화
-- 📖 **README.md**: 사용자 관점의 가이드
-- 🔧 **CLAUDE.md**: 개발자 관점의 가이드
-- 💬 **코드 주석**: 복잡한 로직은 설명 추가
-- 🌐 **한국어 우선**: 문서는 한국어로 작성
-
-#### 🎨 프론트엔드 기여
-- ✅ Next.js 15 + App Router 사용
-- ✅ Mantine UI v7 컴포넌트 활용
-- ✅ 반응형 디자인 (모바일 지원)
-- ✅ 접근성(a11y) 고려
-
----
-
-### 🏗️ 주요 기여 영역
-
-#### 🔥 긴급 (High Priority)
-- [ ] **GitHub Actions 워크플로우 구현** - 자동 배포 파이프라인
-- [ ] **웹사이트 UI/UX 개선** - 과목별 탭, 차트, 필터
-- [ ] **모델 추가** - 최신 AI 모델 벤치마킹
-
-#### ⚡ 중요 (Medium Priority)
-- [ ] **PDF 파싱 개선** - 정확도 향상, 오류 처리
-- [ ] **테스트 커버리지** - 단위 테스트, 통합 테스트 추가
-- [ ] **성능 최적화** - 평가 속도, 웹 로딩 시간
-
-#### 💡 개선 (Nice to Have)
-- [ ] **다국어 시험 지원** - SAT, 가오카오 등
-- [ ] **API 서비스** - 평가 결과 조회 API
-- [ ] **차트 & 시각화** - 성능 추이, 비교 그래프
-
----
-
-### 🐛 버그 리포트
-
-버그를 발견하셨나요? [이슈를 생성](https://github.com/roboco-io/KSAT-AI-Benchmark/issues/new)해주세요!
-
-**포함할 내용:**
-- 🔍 **재현 방법**: 단계별 설명
-- 🎯 **예상 동작**: 어떻게 작동해야 하는지
-- 💥 **실제 동작**: 실제로 어떻게 작동하는지
-- 🖼️ **스크린샷**: 가능하면 첨부
-- 🔧 **환경**: OS, Python 버전, Node.js 버전
-
----
-
-### 💬 질문 & 토론
-
-- 💡 아이디어 제안: [Discussions](https://github.com/roboco-io/KSAT-AI-Benchmark/discussions)
-- 🐛 버그 리포트: [Issues](https://github.com/roboco-io/KSAT-AI-Benchmark/issues)
-- 📧 직접 연락: [이메일](mailto:contact@roboco.io)
-
----
-
-### 🙌 기여자 행동 강령
-
-- 🤝 **존중**: 모든 기여자를 존중합니다
-- 🌈 **포용**: 다양한 배경과 관점을 환영합니다
-- 🎯 **건설적**: 피드백은 건설적이고 구체적으로
-- 🚀 **협력**: 함께 성장하는 커뮤니티
-
-**함께 만들어가요!** 작은 기여도 큰 영향을 만듭니다. 💪
-
-## 📊 벤치마크 대상 모델
-
-**현재 활성화된 모델 (6종)**:
-
-| 제공사 | 모델 | 버전 | 특징 |
-|--------|------|------|------|
-| **OpenAI** | GPT-5 | 2025 | 수학/과학 능력 대폭 향상 |
-| **OpenAI** | GPT-4o | 2024-08 | 최신 멀티모달 모델 |
-| **Anthropic** | Claude Opus 4.1 | 2025-08 | 에이전트, 코딩, 추론 강화 |
-| **Anthropic** | Claude Sonnet 4.5 | 2025 | Perplexity API로 제공 |
-| **Upstage** | Solar Pro | 2024 | 한국어 특화 모델 |
-| **Perplexity** | Sonar Pro | 2024-11 | 최신 추론 모델 |
-
-**비활성화된 모델**: GPT-4 Turbo, GPT-4, GPT-3.5-turbo, Claude 3.5 Sonnet, Claude 3 시리즈, Gemini 2.0/1.5 시리즈, Solar Mini, Sonar 온라인 시리즈
-
-> 💡 **모델 선정 기준**: 각 제공사의 최신/최강 모델 중심으로 엄선하여 벤치마크 효율성 극대화
-
-새로운 모델 추가 요청은 [이슈](https://github.com/roboco-io/KSAT-AI-Benchmark/issues)로 남겨주세요.
-
-## 📋 시험 과목
-
-- 국어
-- 수학
-- 영어
-- 한국사
-- 사회탐구
-- 과학탐구
-
-## ⚙️ 환경 변수
-
-`.env` 파일에 다음 환경 변수를 설정해주세요:
-
-```bash
-# AI Model API Keys
-OPENAI_API_KEY=your_openai_api_key
-ANTHROPIC_API_KEY=your_anthropic_api_key
-GOOGLE_API_KEY=your_google_api_key
-UPSTAGE_API_KEY=your_upstage_api_key
-PERPLEXITY_API_KEY=your_perplexity_api_key
-
-# Evaluation Settings
-MAX_RETRIES=3
-TIMEOUT=60
-API_CALL_DELAY=1
-```
-
-## 🧪 테스트
-
-```bash
-# 전체 테스트 실행
-pytest
-
-# 특정 테스트 실행
-pytest tests/test_evaluator.py
-
-# 커버리지 리포트
-pytest --cov=src tests/
-```
-
-## 📝 라이선스
-
-이 프로젝트는 **CC BY-NC 4.0 (Creative Commons Attribution-NonCommercial 4.0 International)** 라이선스를 따릅니다.
-
-- ✅ **비상업적 사용**: 교육 및 연구 목적으로 자유롭게 사용 가능
-- 📝 **출처 표기 필수**: 사용 시 반드시 원본 출처를 명시해야 합니다
-- 🚫 **상업적 사용 금지**: 상업적 목적으로는 사용할 수 없습니다 (별도 문의 필요)
-
-자세한 내용은 [LICENSE](LICENSE) 파일을 참고하세요.
-
-### 출처 표기 예시
-
-```
-KSAT AI Benchmark by roboco-io
-Licensed under CC BY-NC 4.0
-Source: https://github.com/roboco-io/KSAT-AI-Benchmark
-```
-
-## 📮 연락처
-
-- 📦 프로젝트 저장소: [https://github.com/roboco-io/KSAT-AI-Benchmark](https://github.com/roboco-io/KSAT-AI-Benchmark)
-- 💬 이슈 트래커: [https://github.com/roboco-io/KSAT-AI-Benchmark/issues](https://github.com/roboco-io/KSAT-AI-Benchmark/issues)
-- 🌐 리더보드 웹사이트: [https://roboco.io/KSAT-AI-Benchmark/](https://roboco.io/KSAT-AI-Benchmark/)
-
-## 🙏 감사의 말
-
-- **한국교육과정평가원** - 표준화된 고품질 평가 도구(수능) 제공
-- **OpenAI, Anthropic, Google, Upstage, Perplexity** - 강력한 AI 모델과 API 제공
-- **오픈소스 커뮤니티** - 이 프로젝트의 기반이 되는 수많은 도구와 라이브러리
-- **모든 기여자들** - 코드, 문서, 피드백으로 프로젝트를 발전시켜주신 분들
-
-## 💡 영감과 동기
-
-이 프로젝트는 다음과 같은 질문에서 시작되었습니다:
-
-> "AI가 얼마나 똑똑한지 어떻게 측정할까?"
-
-합성 벤치마크는 AI를 위해 만들어진 것이고, 인간이 실제로 얼마나 어려운지 체감하기 어렵습니다. 그래서 우리는 **인간이 실제로 보는 시험**을 선택했습니다.
-
-수능은 대한민국에서 가장 표준화되고, 공정하며, 종합적인 사고력을 평가하는 시험입니다. 매년 50만 명의 학생이 동일한 조건에서 응시하고, 문제의 질과 난이도가 철저히 검증됩니다.
-
-**Vibe Coding**으로 이 벤치마크를 구축하면서, 단순히 점수를 매기는 것을 넘어 **AI가 어떻게 생각하는지**를 들여다볼 수 있게 되었습니다. 각 문제마다 AI의 답변 이유를 보면서, 인간과 AI의 사고 방식 차이를 발견하고, 앞으로 AI가 어떻게 발전해야 할지 힌트를 얻을 수 있습니다.
-
-이 프로젝트가 AI 발전을 추적하고, AI 능력을 이해하며, 더 나은 AI를 만드는 데 작은 기여가 되길 바랍니다.
-
-## 🗺️ 로드맵
-
-### 2025 Q3-Q4 ✅ 완료
-- [x] 프로젝트 초기 설정 및 아키텍처 설계
-- [x] PDF 파싱 시스템 구현 (Vision API 기반)
-- [x] YAML 데이터 형식 정의 및 검증
-- [x] AI 모델 평가 시스템 구현
-- [x] GitHub Actions 자동화 파이프라인
-- [x] Next.js + Mantine UI 웹 인터페이스
-- [x] 리더보드 및 문제 목록 페이지
-- [x] 답안 상세 모달 및 인터랙션
-- [x] 2025 수능 3개 과목 파싱 완료 (국어, 수학, 영어)
-- [x] 6개 최신 AI 모델 벤치마킹
-
-### 2025 Q4 - 2026 Q1 🚧 진행 중
-- [ ] **2026학년도 수능 벤치마크** (2025년 11월 13일 시행 예정)
-- [ ] 과거 수능 문제 데이터베이스 확장 (2024, 2023...)
-- [ ] 과목별 상세 분석 페이지 구현
-- [ ] 차트 및 시각화 고도화 (성능 추이 그래프)
-- [ ] 모델별 강점/약점 분석 리포트
-- [ ] 연도별 성능 비교 분석
-- [ ] 성능 최적화 (평가 속도, 웹 로딩)
-- [ ] 테스트 커버리지 확대
-
-### 2026 Q2 💡 계획
-- [ ] 다국어 시험 지원 (SAT, 일본 센터시험 등)
-- [ ] RESTful API 서비스 제공
-- [ ] 실시간 모델 비교 기능
-- [ ] 커뮤니티 기여 모델 추가 지원
-- [ ] 모바일 앱 검토
-
-## 📄 저작권 및 출처
-
-### 시험 문제 저작권
-
-본 프로젝트에서 사용하는 대한민국 수학능력시험(KSAT) 문제의 모든 저작권은 **한국교육과정평가원**에 있습니다.
-
-- **출처**: [한국교육과정평가원 수능 자료실](https://www.suneung.re.kr/boardCnts/list.do?boardID=1500234&m=0403&s=suneung)
-- **저작권자**: 한국교육과정평가원 (Korea Institute for Curriculum and Evaluation)
-- **사용 목적**: 본 프로젝트는 AI 모델의 성능을 평가하기 위한 비영리 연구 및 교육 목적으로만 시험 문제를 활용합니다.
-
-시험 문제와 관련한 모든 권리는 한국교육과정평가원에 있으며, 본 프로젝트는 공개된 자료를 연구 목적으로 활용하고 있습니다.
-
-### 프로젝트 라이선스
-
-본 프로젝트의 소스 코드 및 평가 결과는 [CC BY-NC 4.0 라이선스](https://creativecommons.org/licenses/by-nc/4.0/)를 따릅니다.
-
-- ✅ 출처를 표시하면 자유롭게 공유 및 변경 가능
-- ❌ 상업적 이용 불가
-- ℹ️ 시험 문제 원본은 한국교육과정평가원의 저작권 정책을 따릅니다
-
-## ⭐ Star History
-
-이 프로젝트가 유용하다면 ⭐️를 눌러주세요!
-
----
-
-**Made with ❤️ by the KSAT AI Benchmark Team**
-
+원본 이벤트와 렌더 이미지는 `.runtime/`에 두며 git·웹에 공개하지 않습니다. 과거 방식의 결과는 대시보드의 기존 평가 기록에서 별도로 볼 수 있습니다.

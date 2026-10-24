@@ -1,0 +1,31 @@
+.diagram { margin: 24px 0; min-width: 0; }
+.diagram figcaption { display: grid; gap: 6px; }
+.diagram figcaption > strong { font-size: 20px; }
+.diagram figcaption > span { font-size: 13px; color: var(--muted); }
+.start { max-width: 65ch; margin: 24px auto; text-align: center; }
+.start p { line-height: 1.7; margin: 8px 0; }
+.start > span { display: block; color: var(--indigo); font-size: 25px; }
+.start small { color: var(--muted); }
+.flows { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.flow { min-width: 0; padding: 18px; border: 1px solid var(--line); border-radius: 8px; }
+.flow header { margin-bottom: 20px; }
+.flow header h4 { margin: 0 0 6px; font-size: 20px; }
+.flow header > span { font-size: 12px; color: var(--muted); }
+.flow ol { list-style: none; padding: 0; margin: 0; }
+.node { display: flex; gap: 12px; padding: 14px; border: 1px solid var(--line); background: var(--surface); border-radius: 6px; }
+.target { border: 2px solid var(--indigo); }
+.letter { flex-shrink: 0; font-weight: 700; color: var(--indigo); }
+.node p { font-size: 14px; line-height: 1.8; margin: 8px 0; }
+.cue { font-size: 12px; color: var(--muted); }
+.connector { display: grid; justify-items: center; gap: 4px; padding: 10px 0; text-align: center; }
+.connector > span { color: var(--indigo); font-size: 22px; }
+.connector small { font-size: 12px; line-height: 1.6; }
+.reading, .question, .issue { font-size: 14px; line-height: 1.8; }
+.reading > strong, .question > strong, .issue > strong { display: block; margin-bottom: 6px; }
+.question { border-top: 1px dashed var(--line); padding-top: 14px; }
+.issue { border-left: 3px solid var(--indigo); padding-left: 16px; margin-top: 24px; }
+@media (max-width: 700px) {
+  .flows { grid-template-columns: 1fr; gap: 18px; }
+  .flow { padding: 14px; }
+  .node { padding: 12px; }
+}

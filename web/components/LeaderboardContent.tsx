@@ -1,11 +1,12 @@
 'use client';
 
+import { RobocoBrand } from './RobocoBrand';
 import { Container, Title, Text, Stack, Group, Badge, Card, SimpleGrid, Accordion, Table, ScrollArea, Box, Anchor, Tabs } from '@mantine/core';
 import { useState, useEffect } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { MathContent } from '@/components/MathContent';
 
-export function LeaderboardContent() {
+export function LeaderboardContent({embedded=false}: {embedded?:boolean}) {
   const searchParams = useSearchParams();
   const router = useRouter();
 
@@ -77,7 +78,9 @@ export function LeaderboardContent() {
 
   // URL 업데이트 함수
   const updateURL = (params: { subject?: string; model?: string; question?: string }) => {
-    const newParams = new URLSearchParams();
+    const newParams = new URLSearchParams(searchParams.toString());
+    for (const key of ['subject','model','question']) newParams.delete(key);
+    if (embedded) newParams.set('year','2025');
 
     if (params.subject) newParams.set('subject', params.subject);
     if (params.model) newParams.set('model', params.model);
@@ -358,7 +361,7 @@ export function LeaderboardContent() {
 
                                           <div>
                                             <Text size="sm" fw={600} mb="xs">풀이 과정:</Text>
-                                            <MathContent text={q.reasoning || '풀이 정보 없음'} />
+                                            <MathContent normalizeMath={examInfo?.subject === 'math'} text={q.reasoning || '풀이 정보 없음'} />
                                           </div>
 
                                           <Text size="xs" c="dimmed">
@@ -398,13 +401,13 @@ export function LeaderboardContent() {
     <Container size="xl" py="xl">
       <Stack gap="xl">
         {/* 헤더 */}
-        <div>
-          <Title order={1}>KSAT AI Benchmark</Title>
+        {!embedded && <div>
+          <RobocoBrand /><Title order={1}>KSAT AI Benchmark</Title>
           <Text size="lg" c="dimmed">대한민국 수능 기반 AI 모델 평가 플랫폼</Text>
-        </div>
+        </div>}
 
         {/* 공지사항 - 상단으로 이동 */}
-        <Card shadow="sm" padding="lg" radius="md" withBorder bg="yellow.0">
+        {!embedded && <Card shadow="sm" padding="lg" radius="md" withBorder bg="yellow.0">
           <Stack gap="sm">
             <Text size="lg" fw={700} c="orange">
               ⚠️ 벤치마크 개발 중 - 중요 안내
@@ -504,7 +507,7 @@ export function LeaderboardContent() {
               </Text>
             </div>
           </Stack>
-        </Card>
+        </Card>}
 
         <div>
           <Title order={2} mb="md">리더보드</Title>
@@ -517,14 +520,9 @@ export function LeaderboardContent() {
                 setOpenQuestion(null);
               }
             }} mb="md">
-              <Tabs.List>
-                <Tabs.Tab value="2025">
-                  📘 2025학년도
-                </Tabs.Tab>
-                <Tabs.Tab value="2026" disabled>
-                  📗 2026학년도 (2025.11.13 시행 예정)
-                </Tabs.Tab>
-              </Tabs.List>
+              {!embedded && <Tabs.List>
+                <Tabs.Tab value="2025">2025학년도 기존 기록</Tabs.Tab>
+              </Tabs.List>}
 
               <Tabs.Panel value="2025" pt="md">
                 {/* 과목별 탭 */}
@@ -749,7 +747,7 @@ export function LeaderboardContent() {
 
                                                   <div>
                                                     <Text size="sm" fw={600} mb="xs">풀이 과정:</Text>
-                                                    <MathContent text={q.reasoning || '풀이 정보 없음'} />
+                                                    <MathContent normalizeMath={examInfo?.subject === 'math'} text={q.reasoning || '풀이 정보 없음'} />
                                                   </div>
 
                                                   <Text size="xs" c="dimmed">
@@ -801,13 +799,7 @@ export function LeaderboardContent() {
                 </Tabs>
               </Tabs.Panel>
 
-              <Tabs.Panel value="2026" pt="md">
-                <Text ta="center" c="dimmed" py="xl">
-                  2026학년도 대학수학능력시험은 2025년 11월 13일(목)에 시행될 예정입니다.
-                  <br />
-                  시험 후 곧 결과가 업데이트됩니다.
-                </Text>
-              </Tabs.Panel>
+
             </Tabs>
           </Card>
         </div>
