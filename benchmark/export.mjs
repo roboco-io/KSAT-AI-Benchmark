@@ -5,7 +5,7 @@ import {buildReport} from './report.mjs';
 import {transcriptManifestPath,loadTranscriptManifest} from './transcript.mjs';
 const root=resolve(import.meta.dirname,'..');
 const dir=join(root,'web/public/data');mkdirSync(dir,{recursive:true});
-for(const year of [2026,2025]) {
+for(const year of [2027,2026,2025]) {
  const paths=yearPaths(year),models=modelsForYear(year).filter(model=>model.publish!==false); // publish:false keeps an unfinished run out of public data
  const datasetPath=join(root,paths.dataset);
  const dataset=existsSync(datasetPath)?JSON.parse(readFileSync(datasetPath,'utf8')):null;
