@@ -1,0 +1,3 @@
+3. 다음을 듣고, 여자가 하는 말의 요지로 가장 적절한 것을 고르시오.
+
+> W: Hello, viewers. I’m Dr. Sandra Frasier from the *Everyday’s Tips* channel. Do you want to have strong interpersonal relationships with people around you? Here’s a tip. Sharing your personal stories builds strong interpersonal relationships. One of the possible reasons is that when you tell your personal stories to others, they feel like you trust them. In addition, once you tell your personal stories, there’s a high chance that others will feel safe and open up about themselves, too. By sharing these stories, you and others become closer, and this makes your bonds stronger. So, don’t forget that sharing your personal stories strengthens interpersonal relationships. I’ll be back with more tips tomorrow.

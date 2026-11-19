@@ -1,0 +1,3 @@
+9. Hanbok Day에 관한 다음 내용을 듣고, 일치하지 <u>않는</u> 것을 고르시오.
+
+> M: Hello, students! I’m Vice Principal Minsu Kim. I’m excited to announce the upcoming Hanbok Day event at our school! This event will be held next Friday. On that day, you’ll have the opportunity to participate in traditional Korean cultural activities, like games and dances. Also, you can learn about how Hanboks are designed. Students are encouraged to come to school dressed in a Hanbok. If you don’t own a Hanbok, our school will lend you one. However, Hanbok accessories, such as hats or bags, are not provided. Lastly, to remember this special event, there will be a Hanbok photo zone in the art room. For more information, visit our school website.

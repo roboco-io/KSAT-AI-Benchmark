@@ -1,0 +1,3 @@
+1. 다음을 듣고, 여자가 하는 말의 목적으로 가장 적절한 것을 고르시오.
+
+> W: Attention, Be-Stronger Gym members. I’m Jenny Smith, a gym manager here. I’d like to remind all members of an important rule that everyone must follow. Please remember to wear a clean pair of exercise shoes when using our gym. Wearing dirty shoes inside our gym brings in dirt. This can cause problems for our machines when it gets into the moving parts. Also, if dirt gets on the mats or equipment you use, it can affect your health. So, make sure that you wear a clean pair of exercise shoes when you use our gym. This will keep everyone safe and healthy. Thank you for your cooperation.

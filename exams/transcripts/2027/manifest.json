@@ -1,0 +1,309 @@
+{
+  "academic_year": 2027,
+  "format_version": 1,
+  "frozen_at": "2026-11-19T11:43:15.233Z",
+  "method": "Pages transcribed from the original PDF by a Claude Code session without access to answer keys, checked against the PDF text layer and by a second independent read; see exams/transcripts/README.md",
+  "sources": {
+    "exams/pdf/2027/국어영역_문제지.pdf": {
+      "sha256": "6d9560b193a4e68d61a356215447f5268408793615ba013f777ac309ce109b84",
+      "pages": {
+        "1": {
+          "path": "exams/transcripts/2027/korean/page-01.md",
+          "sha256": "16da498439f7483e17ea70ac547cf80f68858d57352871b37bbcfe61784ae13b"
+        },
+        "2": {
+          "path": "exams/transcripts/2027/korean/page-02.md",
+          "sha256": "5ef5a240b882808fee84e1d5d824dca055dcdc9fb47679aa72e7662445e667d0"
+        },
+        "3": {
+          "path": "exams/transcripts/2027/korean/page-03.md",
+          "sha256": "77d9be95eee39dcb94b4f8663ee9b918a59059b2a2eee7afd79236967caf7b7a"
+        },
+        "4": {
+          "path": "exams/transcripts/2027/korean/page-04.md",
+          "sha256": "1326e325e746eb945044bec6a65edf2514952de5c0070cff497c9b3dbf2ec5a9"
+        },
+        "5": {
+          "path": "exams/transcripts/2027/korean/page-05.md",
+          "sha256": "21f92a7996a1e2e7282e8a0b3e69c5e06340fde5dcf9beecb0b620592e474e16"
+        },
+        "6": {
+          "path": "exams/transcripts/2027/korean/page-06.md",
+          "sha256": "ef92cbca2fbd2f200489e8f0dff454853b7d0a06fb11b5cfbd3ec3b149997237"
+        },
+        "7": {
+          "path": "exams/transcripts/2027/korean/page-07.md",
+          "sha256": "9febb7d474de61aa7ec98399fb8ec3500cbfcf85bd3a733ebcc27973688e4190"
+        },
+        "8": {
+          "path": "exams/transcripts/2027/korean/page-08.md",
+          "sha256": "99718e58e16aa6efc43a791e772667da4311d8b361b8cff9a201595affdf0f33"
+        },
+        "9": {
+          "path": "exams/transcripts/2027/korean/page-09.md",
+          "sha256": "a700446fd103f4f069c810f08b13edd7c876c8a3e8a7ccb4ea81944847a7690b"
+        },
+        "10": {
+          "path": "exams/transcripts/2027/korean/page-10.md",
+          "sha256": "2c6593bf53a1d5dbb23030959d66b01bc3c29883bd9a5155259de17216ee6e60"
+        },
+        "11": {
+          "path": "exams/transcripts/2027/korean/page-11.md",
+          "sha256": "7de4a9d586c3ce028f028d7f8fa59093d7cda852fdef022df6381651853e098b"
+        },
+        "12": {
+          "path": "exams/transcripts/2027/korean/page-12.md",
+          "sha256": "c26b3f417bfc5ecbf84d928ea5fac19f79593b89143b9508e3eb5f935f858a43"
+        },
+        "13": {
+          "path": "exams/transcripts/2027/korean/page-13.md",
+          "sha256": "4a08c5cdac9a49c1a12df105711b883a1df82970afbf6953e79aced47266dca6"
+        },
+        "14": {
+          "path": "exams/transcripts/2027/korean/page-14.md",
+          "sha256": "f016ad0265f5a2bd361a7ce23c319758fe7f12a5692e855218d262e0702f008c"
+        },
+        "15": {
+          "path": "exams/transcripts/2027/korean/page-15.md",
+          "sha256": "790b05709f5060843905457ed093f6a3686e66d93e5dab58fc5b5bc37d1aef13"
+        },
+        "16": {
+          "path": "exams/transcripts/2027/korean/page-16.md",
+          "sha256": "692c377d70d00d951709150f9bdda9c710d9809bc9317d3d696b6e460a07b323"
+        },
+        "17": {
+          "path": "exams/transcripts/2027/korean/page-17.md",
+          "sha256": "3f655f8c4f7d02881aabd2b918bff179d49ba632cc52b1aa07b8cbcf70c03d7c"
+        },
+        "18": {
+          "path": "exams/transcripts/2027/korean/page-18.md",
+          "sha256": "1fd628ec2c9424af5d566eda07ba57ec1d2cb7efd196c014976cc9798a5093d6"
+        },
+        "19": {
+          "path": "exams/transcripts/2027/korean/page-19.md",
+          "sha256": "6b2a19d1984229f63a2c450ffc9c5db5656e992403f2db7dfd929545e3c41c8c"
+        },
+        "20": {
+          "path": "exams/transcripts/2027/korean/page-20.md",
+          "sha256": "8dd15c827c84571b69b8fa0f1ef3597df21a9d55f953fb921bc3a10a8310b103"
+        }
+      }
+    },
+    "exams/pdf/2027/수학영역_문제지.pdf": {
+      "sha256": "bb8b8a8cf982d208f75a0114b9c9ada2cd438c5a658c46ae72df527478fff22f",
+      "pages": {
+        "1": {
+          "path": "exams/transcripts/2027/math/page-01.md",
+          "sha256": "8b283efaa492e7cfc72f480525a846f30505ab63c22ed99610f09bce2bcbe75c"
+        },
+        "2": {
+          "path": "exams/transcripts/2027/math/page-02.md",
+          "sha256": "8e3c0a3aeb8c50fced8919ba60ca6f97c2cc8499e2f5e7c61ba79174ceb7baae"
+        },
+        "3": {
+          "path": "exams/transcripts/2027/math/page-03.md",
+          "sha256": "7e321bbd3072781472fefbddca4b33f42d50d91c4d45a862f925db39b852cbe4"
+        },
+        "4": {
+          "path": "exams/transcripts/2027/math/page-04.md",
+          "sha256": "ff1024d828ed2c757d9238238565ea760115a2ca5603631898ee9068fee4273c"
+        },
+        "5": {
+          "path": "exams/transcripts/2027/math/page-05.md",
+          "sha256": "b20276f1395dee9afdf987eadbb034e07c11d1d1d0715acb98b099172dd9cf6c"
+        },
+        "6": {
+          "path": "exams/transcripts/2027/math/page-06.md",
+          "sha256": "349e17b93b0564ba434e91cc35bea46b4eab2e625d4852f5c64b52c16b84f301"
+        },
+        "7": {
+          "path": "exams/transcripts/2027/math/page-07.md",
+          "sha256": "d21cbe7a7f3a7623d92fd7e0b22a9fc5c92da5e332b555af4f79aefc63358a82"
+        },
+        "8": {
+          "path": "exams/transcripts/2027/math/page-08.md",
+          "sha256": "51da954c72308fbe3d9bb919b696d9b76b6a432e843209bab5105f28a5b5fe13"
+        },
+        "9": {
+          "path": "exams/transcripts/2027/math/page-09.md",
+          "sha256": "7b00dfbe90cda2746bd6433932f321615ca9496e03541392fe71faecba0cc12c"
+        },
+        "10": {
+          "path": "exams/transcripts/2027/math/page-10.md",
+          "sha256": "e0e13d2ff97304346063a39205d4e67d9b3744548f8ee8285b2bc838e51d118f"
+        },
+        "11": {
+          "path": "exams/transcripts/2027/math/page-11.md",
+          "sha256": "177fbd98614dfe21269299a33ddca90761637304dbdf232f550d62034df8d16a"
+        },
+        "12": {
+          "path": "exams/transcripts/2027/math/page-12.md",
+          "sha256": "4fc80f3e487197f311002df048b542b7045341c1d146622fe52d1a72d0f1629a"
+        },
+        "13": {
+          "path": "exams/transcripts/2027/math/page-13.md",
+          "sha256": "f481adc2ea0d254311542ee4a0cf50d82ab811d17c082dd3f97735a83c7cbf2b"
+        },
+        "14": {
+          "path": "exams/transcripts/2027/math/page-14.md",
+          "sha256": "44658c925c2eed6281cd8683a83478b27ea15daee64a072b33c1e96c0ded2ec3"
+        },
+        "15": {
+          "path": "exams/transcripts/2027/math/page-15.md",
+          "sha256": "56ce986f837c1958d6f51b8bbf19e8938b47b4df1ff3a06c58f3b2de3cc58c5b"
+        },
+        "16": {
+          "path": "exams/transcripts/2027/math/page-16.md",
+          "sha256": "fba75843f7d5316666c1e30317a2eb8dba7c865786915420a8b9339165a60c03"
+        },
+        "17": {
+          "path": "exams/transcripts/2027/math/page-17.md",
+          "sha256": "f5487d2a74738cb648182c55f05e7f5b7e685c9609c6f2f3b0784bbe489768d8"
+        },
+        "18": {
+          "path": "exams/transcripts/2027/math/page-18.md",
+          "sha256": "e3ce834c8af09154478324e71e28e3b9c2e69fd74ee891cd4c1ba3b1271f8130"
+        },
+        "19": {
+          "path": "exams/transcripts/2027/math/page-19.md",
+          "sha256": "080d381f2091542ad142578162a68d65bca0b4208cfc355ea815b7c641de13f3"
+        },
+        "20": {
+          "path": "exams/transcripts/2027/math/page-20.md",
+          "sha256": "e34b4dfb6fd0f68f40e810f88d21bb43b95d8b2364ba3d3a881119164d21d877"
+        }
+      }
+    },
+    "exams/pdf/2027/영어영역_문제지.pdf": {
+      "sha256": "139f0f9e0a746948a982ff1b37418f808130132000b5435e6a9c101a81a4ec2f",
+      "pages": {
+        "1": {
+          "path": "exams/transcripts/2027/english/page-01.md",
+          "sha256": "2ece2fd44a19825962cb176a69a87065139970095e890c2d2ad8fe413d5c7726"
+        },
+        "2": {
+          "path": "exams/transcripts/2027/english/page-02.md",
+          "sha256": "f938fc360dc45948a2d6a6cab22232dcc256279dc0be93da732bf3ba526c6c21"
+        },
+        "3": {
+          "path": "exams/transcripts/2027/english/page-03.md",
+          "sha256": "c64d6c0bb568b90299742cbd95e7fb518b3fe3399a714a9f4fc84eca448fb125"
+        },
+        "4": {
+          "path": "exams/transcripts/2027/english/page-04.md",
+          "sha256": "bdd815ff874a66dd38c9f1fa9072d0ae9d7d3650403c881cf23636383b000ea6"
+        },
+        "5": {
+          "path": "exams/transcripts/2027/english/page-05.md",
+          "sha256": "9b0985c0189be14b8fb6b8a808c186a6dab323b02efe65e01937e2ddd985c15b"
+        },
+        "6": {
+          "path": "exams/transcripts/2027/english/page-06.md",
+          "sha256": "323f11e8d9172dd0826dfd2386dc106c07b41175b4656a48527e7d09156d7ff3"
+        },
+        "7": {
+          "path": "exams/transcripts/2027/english/page-07.md",
+          "sha256": "33abca9cb7eda161e3ff48c1c11b502db7512545b0cf3b20ac3a8c98a916b7ee"
+        },
+        "8": {
+          "path": "exams/transcripts/2027/english/page-08.md",
+          "sha256": "ea224baed8c9482843d86e240edfbce558f197b26e6fb4cfe58b23ade74bf8be"
+        }
+      }
+    },
+    "exams/pdf/2027/영어영역듣기평가대본.pdf": {
+      "sha256": "bc481f077e4f80fa06ed26b10d1e2cfbc8e443e756148411f5824fda8b3a3725",
+      "pages": {
+        "1": {
+          "path": "exams/transcripts/2027/listening/page-01.md",
+          "sha256": "7a610c9ffb7c226643e0ffbff38da8e9a3ad104f9bcfe158a4ae55975c369525"
+        },
+        "2": {
+          "path": "exams/transcripts/2027/listening/page-02.md",
+          "sha256": "76adddffd5b046457647f7d25b93d747eb02dff7b0cbdd1e86cb48e4e331c59c"
+        },
+        "3": {
+          "path": "exams/transcripts/2027/listening/page-03.md",
+          "sha256": "df5fbb0eb991e7087e91ab4e3b75b38625fa793c531330501c1c1cce1973f838"
+        },
+        "4": {
+          "path": "exams/transcripts/2027/listening/page-04.md",
+          "sha256": "5fc760fcd4335aa22454f116b94ccc2dba63d477515d6cc2e8b3f93d5f202ede"
+        },
+        "5": {
+          "path": "exams/transcripts/2027/listening/page-05.md",
+          "sha256": "7f7d7801cf62357e3cfab2c418984c5a20ab1204adcdc56278cba80e6d12af19"
+        },
+        "6": {
+          "path": "exams/transcripts/2027/listening/page-06.md",
+          "sha256": "68a5620d82c8ed8120312316e1b06e461cbbe62c5e73e612f4fb96084c37cb4d"
+        },
+        "7": {
+          "path": "exams/transcripts/2027/listening/page-07.md",
+          "sha256": "8cdf1b2d2cb013e932370c1b34d899c53648d88a4f9cf5ea2e5eb0f402c97b77"
+        },
+        "8": {
+          "path": "exams/transcripts/2027/listening/page-08.md",
+          "sha256": "a420f6a20568a97958120b9c9acfe691cc2b1dcb82d98c4d03ec98cb04abb4e6"
+        },
+        "9": {
+          "path": "exams/transcripts/2027/listening/page-09.md",
+          "sha256": "705302bbfca32411257b7488e19547606763eb113b18923bf937290982585713"
+        },
+        "10": {
+          "path": "exams/transcripts/2027/listening/page-10.md",
+          "sha256": "bc10f0ec6b256f773a87d81291746f654fefae53bdea5107fc009082edb3700f"
+        },
+        "11": {
+          "path": "exams/transcripts/2027/listening/page-11.md",
+          "sha256": "c5c5d7fb4113912d5af25638802d669dd683c1f39a5783634453ae4459911671"
+        },
+        "12": {
+          "path": "exams/transcripts/2027/listening/page-12.md",
+          "sha256": "6483264ad67e243caf097324a925be346edd02237a49559870b3b188453b6830"
+        },
+        "13": {
+          "path": "exams/transcripts/2027/listening/page-13.md",
+          "sha256": "61e7979e848c2d1cb7876cf1e94f2ba59f71fd333dd549528a84655adea2cc31"
+        },
+        "14": {
+          "path": "exams/transcripts/2027/listening/page-14.md",
+          "sha256": "8319ecab82e4ac35b7e198ea4ed9f5c205460a2db52bc0111d29395873217920"
+        },
+        "15": {
+          "path": "exams/transcripts/2027/listening/page-15.md",
+          "sha256": "54db2d29d036ca83f6c91783952e33a28571ce6fafd385a6c3db050b8c686482"
+        },
+        "16": {
+          "path": "exams/transcripts/2027/listening/page-16.md",
+          "sha256": "eaaef6d8b5052bf732684727a074f53121ee00434950bcf25cf59ed3facb0ab3"
+        },
+        "17": {
+          "path": "exams/transcripts/2027/listening/page-17.md",
+          "sha256": "97c4379158e85aff1fe4ae2022f7acaa63ee0e085b3ce635b10718af05764f64"
+        }
+      },
+      "page_count": 17
+    }
+  },
+  "figure_dependent": [
+    "2027-english-english-q04",
+    "2027-english-english-q25",
+    "2027-korean-hwajak-q36",
+    "2027-korean-hwajak-q45",
+    "2027-korean-language_media-q40",
+    "2027-korean-language_media-q41",
+    "2027-korean-language_media-q42",
+    "2027-korean-language_media-q43",
+    "2027-korean-language_media-q44",
+    "2027-korean-language_media-q45",
+    "2027-math-calculus-q26",
+    "2027-math-common-q04",
+    "2027-math-common-q14",
+    "2027-math-geometry-q27",
+    "2027-math-geometry-q29",
+    "2027-math-geometry-q30",
+    "2027-math-probability-q28",
+    "2027-math-probability-q30"
+  ]
+}

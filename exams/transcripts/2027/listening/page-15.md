@@ -1,0 +1,3 @@
+15. 다음 상황 설명을 듣고, Amy가 Jake에게 할 말로 가장 적절한 것을 고르시오. [3점]
+
+> M: Jake owns a brunch café, and Amy works at his café. His café is doing okay, but not as well as he hoped, so he’s trying to find ways to increase sales. Recently, Amy has noticed that more and more customers are asking for drinks that don’t contain sugar. She remembers an article that said many people are trying to cut down on the amount of sugar in their daily lives. Amy thinks serving sugar-free drinks will increase sales by attracting customers who are concerned about their health. So, Amy wants to suggest to Jake that he introduce zero-sugar beverages to the menu. In this situation, what would Amy most likely say to Jake?
