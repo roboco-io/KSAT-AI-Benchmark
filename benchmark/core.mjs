@@ -59,3 +59,14 @@ export function summarize(questions,answers,errors,usage,wall,solver,pricing=PRI
  const attempts=counts.correct+counts.incorrect,total=questions.length;
  return {total_questions:total,...counts,score,max_score:questions.reduce((s,q)=>s+q.points,0),accuracy:total?counts.correct/total*100:0,abstention_rate:total?counts.abstained/total*100:0,attempt_accuracy:attempts?counts.correct/attempts*100:null,wall_time_seconds:wall,solver_time_seconds:solver,usage:addUsage({},usage),estimated_cost_usd:estimateCost(usage,pricing)};
 }
+// Spaces request starts for providers with a per-second request limit; concurrent callers queue in call order.
+export function createPacer(intervalMs,now=Date.now,sleep=ms=>new Promise(resolve=>setTimeout(resolve,ms))) {
+ let next=0;
+ return async()=>{
+  if(!intervalMs)return 0;
+  const current=now(),at=Math.max(current,next);
+  next=at+intervalMs;
+  if(at>current)await sleep(at-current);
+  return at-current;
+ };
+}

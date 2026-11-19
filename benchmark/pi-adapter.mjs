@@ -65,7 +65,7 @@ function assertRoute(model,apiKey) {
 function modelsConfig(model) {
  const route=model.pi;
  const pricing=model.pricing??{};
- const definition={id:route.model_id,name:model.id,reasoning:true,input:['text','image'],contextWindow:route.context_window,maxTokens:route.max_tokens,cost:{input:pricing.input_per_million??0,output:pricing.output_per_million??0,cacheRead:pricing.cached_input_per_million??0,cacheWrite:pricing.cache_write_per_million??0}};
+ const definition={id:route.model_id,name:model.id,reasoning:true,input:model.input==='text'?['text']:['text','image'],contextWindow:route.context_window,maxTokens:route.max_tokens,cost:{input:pricing.input_per_million??0,output:pricing.output_per_million??0,cacheRead:pricing.cached_input_per_million??0,cacheWrite:pricing.cache_write_per_million??0}};
  if (route.compat) definition.compat=route.compat;
  if (route.thinking_level_map) definition.thinkingLevelMap=route.thinking_level_map;
  return {providers:{'ksat-pi':{baseUrl:route.base_url,api:route.api??'openai-completions',apiKey:'$KSAT_PI_API_KEY',models:[definition]}}};
@@ -96,6 +96,7 @@ function responseFailure(message) {
 export async function* piEvents({model,prompt,images=[],schema,signal,apiKey,piExecutable='pi',timeoutMs=900000}) {
  assertRoute(model,apiKey);
  if (typeof prompt!=='string' || !prompt || !schema || typeof schema!=='object' || !Array.isArray(images)) throw new Error('PI_BLOCKED: prompt, image paths, and JSON schema are required');
+ if (model.input==='text' && images.length) throw new Error('PI_BLOCKED: this model takes the frozen text transcript only; images must not be sent');
  if (!Number.isFinite(timeoutMs) || timeoutMs<=0 || timeoutMs>900000) throw new Error('PI_BLOCKED: request timeout must be within fifteen minutes');
  if (signal?.aborted) throw new Error('PI_ABORTED: request cancelled');
  const dir=await mkdtemp(join(tmpdir(),'ksat-pi-'));

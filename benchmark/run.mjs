@@ -5,7 +5,7 @@ import {resolve,join,basename} from 'node:path';
 import {tmpdir} from 'node:os';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
-import {validateAnswers,mergeSubmitted,addUsage,estimateCost,fatalStreamError,attemptsRemaining,elapsedWall,verifyResume,runBatches} from './core.mjs';
+import {validateAnswers,mergeSubmitted,addUsage,estimateCost,fatalStreamError,attemptsRemaining,elapsedWall,verifyResume,runBatches,createPacer} from './core.mjs';
 import {modelById} from './models.mjs';
 import {modelForYear,yearPaths} from './academic-years.mjs';
 import {codexSubscriptionStatus,subscriptionEnvironment,claudeAccountFingerprint,assertFreshClaudeProof} from './subscription.mjs';
@@ -17,6 +17,7 @@ import {sourcePath} from './source-path.mjs';
 import {renderPages} from './render.mjs';
 import {acquireRunLock} from './run-lock.mjs';
 import {repeatedInspectionBlock,inspectionScope} from './moderation.mjs';
+import {loadTranscriptManifest,groupTranscript,verifyTranscripts,TRANSCRIPT_FORMAT_VERSION} from './transcript.mjs';
 
 const root=resolve(import.meta.dirname,'..');
 const yearIndex=process.argv.indexOf('--year');
@@ -30,6 +31,8 @@ const groupArg=process.argv.indexOf('--group');const requestedGroup=groupArg>=0?
 let allowedGroups=requestedGroup?dataset.solver_groups.filter(g=>g.id===requestedGroup):dataset.solver_groups;
 if(!allowedGroups.length)throw new Error('Unknown solver group');
 const once=process.argv.includes('--once');
+// Text-only models receive the frozen transcript instead of page images; see exams/transcripts/README.md.
+const textInput=selected.input==='text';
 const recoveryIndex=process.argv.indexOf('--recover-with-batches');
 const requestedBatchSize=recoveryIndex>=0?Number(process.argv[recoveryIndex+1]):null;
 if((selected.provider==='google'&&!selected.pi)||selected.agent==='antigravity')throw new Error('ANTIGRAVITY_BLOCKED: agy 1.3.2 headless native image input is unsupported; no substitute agent');
@@ -39,11 +42,11 @@ const statePath=join(runDir,'run.json');
 if(existsSync(statePath)&&JSON.parse(readFileSync(statePath,'utf8')).completed){console.log(`ALREADY COMPLETE: ${selected.id}; preserving locked answers`);process.exit(0);}
 const releaseLock=acquireRunLock(join(root,'.runtime/locks',(year===2026?selected.id:`${year}-${selected.id}`)+'.json'),existsSync(statePath)?JSON.parse(readFileSync(statePath,'utf8')):{});
 process.once('exit',releaseLock);
-const protocol={model:selected.id,provider:selected.provider,effort:'high',sdk_version:selected.pi?'Pi CLI 0.87.1':selected.provider==='openai'?'0.162.1':'0.3.296',tools:'disabled',input:'original PDF rendered at 200 DPI',english_listening:'official transcript rendered as images',max_iterations:3,group_timeout_seconds:selected.pi||selected.provider==='openai'?900:600,concurrency:2,cost_limit_usd:25,subscription_only:!selected.pi,api_key_fallback:false};
+const protocol={model:selected.id,provider:selected.provider,effort:'high',sdk_version:selected.pi?'Pi CLI 0.87.1':selected.provider==='openai'?'0.162.1':'0.3.296',tools:'disabled',input:textInput?`frozen text transcription of the original PDF, format version ${TRANSCRIPT_FORMAT_VERSION}`:'original PDF rendered at 200 DPI',english_listening:textInput?'official transcript transcribed as text':'official transcript rendered as images',max_iterations:3,group_timeout_seconds:selected.pi||selected.provider==='openai'?900:600,concurrency:2,cost_limit_usd:25,subscription_only:!selected.pi,api_key_fallback:false};
 if(selected.pi) {
  const authorization=join(root,'.runtime/pi-api-authorization.json');
  if(!existsSync(authorization)||!JSON.parse(readFileSync(authorization,'utf8')).allowed_models?.includes(selected.id))throw new Error('PI_BLOCKED: this model has not been authorized for API billing');
- protocol.agent='Pi';protocol.api_model=selected.pi.model_id;protocol.api_base_url=selected.pi.base_url;protocol.max_output_tokens=selected.pi.max_tokens;protocol.effort_semantics=selected.pi.effort_semantics||'high';protocol.output_format='prompted JSON; no tools';protocol.image_resize=false;protocol.route_hash=hash(JSON.stringify({route:selected.pi,pricing:selected.pricing}));
+ protocol.agent='Pi';protocol.api_model=selected.pi.model_id;protocol.api_base_url=selected.pi.base_url;protocol.max_output_tokens=selected.pi.max_tokens;protocol.effort_semantics=selected.pi.effort_semantics||'high';protocol.output_format='prompted JSON; no tools';protocol.image_resize=false;if(selected.pi.min_request_interval_ms)protocol.min_request_interval_ms=selected.pi.min_request_interval_ms;protocol.route_hash=hash(JSON.stringify({route:selected.pi,pricing:selected.pricing}));
  readPiSecret(selected.pi.secret_name);
 }
 if(selected.provider==='anthropic') {
@@ -56,7 +59,9 @@ const sourcePaths=[...new Set(dataset.solver_groups.flatMap(g=>[g.pdf_path,g.tra
 const sourceHashes=Object.fromEntries(sourcePaths.map(p=>[p,hash(readFileSync(sourcePath(root,p)))]));
 const sourceManifest=JSON.parse(readFileSync(join(root,paths.manifest),'utf8'));
 for(const p of sourcePaths)if(sourceManifest.files.find(f=>f.path===p)?.sha256!==sourceHashes[p])throw new Error(`Source integrity check failed: ${p}`);
-let state=existsSync(statePath)?JSON.parse(readFileSync(statePath,'utf8')):{schema_version:2,prompt_version:2,run_id:`${year}-pre-exam-${selected.pi?'pi':selected.provider==='openai'?'codex':'claude'}-${selected.id}`,academic_year:year,phase:'pre_exam',started_at:new Date().toISOString(),protocol,dataset_hash:datasetHash,answers:{},errors:{},groups:{},iterations:[],usage:{},wall_time_seconds:0};
+const transcript=textInput?loadTranscriptManifest(root,year):null;
+if(transcript){verifyTranscripts(root,transcript.manifest,dataset.solver_groups,sourceHashes);protocol.transcript_manifest_hash=transcript.hash;}
+let state=existsSync(statePath)?JSON.parse(readFileSync(statePath,'utf8')):{schema_version:2,prompt_version:textInput?3:2,run_id:`${year}-pre-exam-${selected.pi?'pi':selected.provider==='openai'?'codex':'claude'}-${selected.id}`,academic_year:year,phase:'pre_exam',started_at:new Date().toISOString(),protocol,dataset_hash:datasetHash,answers:{},errors:{},groups:{},iterations:[],usage:{},wall_time_seconds:0};
 if(state.dataset_hash!==datasetHash)throw new Error('Resume refused: input changed. Preserve existing run and start a new run directory.');
 const batchSize=requestedBatchSize??state.protocol.batch_max_questions;
 if(batchSize!==undefined&&batchSize!==null) {
@@ -85,6 +90,7 @@ const sdk=selected.provider==='openai'?new Codex({env:subscriptionEnvironment(),
 const invocationController=new AbortController();
 const stopInvocation=()=>{state.blocked_reason='RUN_INTERRUPTED: interrupted by process signal; resume explicitly';invocationController.abort(new Error(state.blocked_reason));};
 process.once('SIGINT',stopInvocation);process.once('SIGTERM',stopInvocation);
+const pace=createPacer(selected.pi?.min_request_interval_ms);
 async function solveGroup(group,iteration) {
  if(state.blocked_reason||invocationController.signal.aborted)return;
  const questions=dataset.questions.filter(q=>group.question_ids.includes(q.id)&&!state.answers[q.id]);
@@ -101,18 +107,20 @@ async function solveGroup(group,iteration) {
   catch(error){state.blocked_reason=error.message;save();invocationController.abort(error);throw error;}
   state.billing={method:'claude_subscription',api_key_used:false,extra_usage_disabled:true,verification:'live_UI_disabled_extra_usage_and_SDK_accountInfo'};
  }
- const images=render(group.pdf_path,group.pages);
- if(group.transcript_path){const info=execFileSync('pdfinfo',[sourcePath(root,group.transcript_path)],{encoding:'utf8'});const n=Number(info.match(/^Pages:\s+(\d+)/m)[1]);images.push(...render(group.transcript_path,Array.from({length:n},(_,i)=>i+1)));}
+ const text=textInput?groupTranscript(root,transcript.manifest,group,sourceHashes):null;
+ const images=textInput?[]:render(group.pdf_path,group.pages);
+ if(!textInput&&group.transcript_path){const info=execFileSync('pdfinfo',[sourcePath(root,group.transcript_path)],{encoding:'utf8'});const n=Number(info.match(/^Pages:\s+(\d+)/m)[1]);images.push(...render(group.transcript_path,Array.from({length:n},(_,i)=>i+1)));}
  const allowed=questions.map(({id,number,section,kind})=>({question_id:id,number,section,kind}));
- const input=[{type:'text',text:prompt+'\n요청 문항:\n'+JSON.stringify(allowed)},...images.map(path=>({type:'local_image',path}))];
+ const input=[{type:'text',text:prompt+'\n요청 문항:\n'+JSON.stringify(allowed)+(text?'\n\n'+text.text:'')},...images.map(path=>({type:'local_image',path}))];
  const thread=sdk?.startThread({model:protocol.model,modelReasoningEffort:protocol.effort,workingDirectory:mkdtempSync(join(tmpdir(),'ksat-solver-')),skipGitRepoCheck:true,sandboxMode:'read-only',approvalPolicy:'never',networkAccessEnabled:false,webSearchMode:'disabled'});
- const started=Date.now();const attempt={iteration,started_at:new Date().toISOString(),question_ids:questions.map(q=>q.id),image_encoding:'lossless WebP, original 200 DPI pixels',image_hashes:images.map(p=>hash(readFileSync(p))),usage:{},time_seconds:0,thread_id:null,status:'running'};
+ const started=Date.now();const attempt={iteration,started_at:new Date().toISOString(),question_ids:questions.map(q=>q.id),...(text?{input_encoding:`UTF-8 Markdown transcript, format version ${TRANSCRIPT_FORMAT_VERSION}`,transcript_hashes:text.hashes}:{image_encoding:'lossless WebP, original 200 DPI pixels',image_hashes:images.map(p=>hash(readFileSync(p)))}),usage:{},time_seconds:0,thread_id:null,status:'running'};
  const logPath=join(eventsDir,`${selected.id}-${group.id}-${iteration}-${Date.now()}.jsonl`);
  state.groups[group.id]??={attempts:[]};
  if(group.original_id)state.groups[group.id].original_group_id=group.original_id;state.groups[group.id].attempts.push(attempt);save();
- console.log(`[iteration ${iteration}] ${group.id}: ${questions.length} questions, ${images.length} images`);
+ console.log(`[iteration ${iteration}] ${group.id}: ${questions.length} questions, ${text?`${text.hashes.length} transcript pages`:`${images.length} images`}`);
  let final='';
  try {
+  await pace(); // provider per-second request limit; waiting is not counted against the group timeout
   const signal=AbortSignal.any([AbortSignal.timeout(protocol.group_timeout_seconds*1000),invocationController.signal]);
   const events=thread?(await thread.runStreamed(input,{outputSchema:schema,signal})).events:selected.pi?piEvents({model:selected,prompt:input[0].text,images,schema,signal,apiKey:readPiSecret(selected.pi.secret_name)}):claudeEvents({model:selected.id,prompt:input[0].text,images,schema,signal});
   for await(const event of events) {

@@ -1,0 +1,36 @@
+{
+  "id": "k-exaone-2.5",
+  "label": "K-EXAONE 2.5",
+  "provider": "lgai",
+  "agent": "pi",
+  "directory": "results/pi-2026-k-exaone-2.5",
+  "input": "text",
+  "publish": false,
+  "pricing": {
+    "input_per_million": 0,
+    "cached_input_per_million": 0,
+    "cache_write_per_million": 0,
+    "output_per_million": 0,
+    "currency": "USD",
+    "as_of": "2026-11-19",
+    "basis": "Provider changelog dated 2026-11-09 states the service is currently free; no per-token rates are published, so cost is recorded as 0",
+    "source": "https://docs.exaone.ai/ko/docs/changelog"
+  },
+  "pi": {
+    "provider": "ksat-pi",
+    "model_id": "k-exaone_v2.5",
+    "base_url": "https://api.exaone.ai/v1",
+    "secret_name": "EXAONE_API_KEY",
+    "context_window": 524288,
+    "max_tokens": 65536,
+    "min_request_interval_ms": 2000,
+    "api": "openai-completions",
+    "compat": {
+      "supportsReasoningEffort": true,
+      "supportsDeveloperRole": false,
+      "supportsStore": false,
+      "maxTokensField": "max_tokens"
+    },
+    "effort_semantics": "high"
+  }
+}

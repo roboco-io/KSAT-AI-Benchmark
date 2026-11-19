@@ -15,13 +15,16 @@ export function validateProfile(model) {
  const fields=(value,allowed)=>{
   if(Object.keys(value).some(key=>!allowed.includes(key)))throw new Error('MODEL_PROFILE_INVALID: only approved metadata fields may be registered');
  };
- fields(model,['id','label','provider','agent','directory','pricing','pi','google']);
+ fields(model,['id','label','provider','agent','directory','pricing','pi','google','input','publish']);
+ if(model.publish!==undefined&&model.publish!==false)throw new Error('MODEL_PROFILE_INVALID: publish may only be set to false to keep a model out of public data');
+ if(model.input!==undefined&&(model.input!=='text'||agent!=='pi'))throw new Error('MODEL_PROFILE_INVALID: input may only declare text for a Pi route that cannot take images');
  fields(price,['input_per_million','cached_input_per_million','cache_write_per_million','output_per_million','currency','as_of','basis','source']);
  if(agent==='pi') {
   const p=model.pi;let url;try{url=new URL(p?.base_url);}catch{}
   if(!p||p.provider!=='ksat-pi'||typeof p.model_id!=='string'||!p.model_id||!url||url.protocol!=='https:'||url.username||url.password||url.search||url.hash||!/^[A-Z][A-Z0-9_]*$/.test(p.secret_name)||![p.context_window,p.max_tokens].every(n=>Number.isSafeInteger(n)&&n>0)||p.max_tokens>p.context_window)throw new Error('MODEL_PROFILE_INVALID: explicit Pi image-capable route and credential variable required');
   if(model.provider==='google'&&(p.base_url!=='https://generativelanguage.googleapis.com/v1beta/openai/'||p.model_id!==model.id||p.secret_name!=='GEMINI_API_KEY'||(p.api&&p.api!=='openai-completions')))throw new Error('MODEL_PROFILE_INVALID: Google Pi requires its explicit official Gemini API route');
-  fields(p,['provider','model_id','base_url','secret_name','context_window','max_tokens','compat','effort_semantics','thinking_level_map','api']);
+  fields(p,['provider','model_id','base_url','secret_name','context_window','max_tokens','compat','effort_semantics','thinking_level_map','api','min_request_interval_ms']);
+  if(p.min_request_interval_ms!==undefined&&!(Number.isSafeInteger(p.min_request_interval_ms)&&p.min_request_interval_ms>0&&p.min_request_interval_ms<=60000))throw new Error('MODEL_PROFILE_INVALID: request interval must be 1-60000 ms');
   if(p.compat)fields(p.compat,['thinkingFormat','supportsReasoningEffort','supportsDeveloperRole','supportsStore','maxTokensField','supportsUsageInStreaming','supportsFinishReason','requiresReasoningContentOnAssistantMessages','supportsStrictMode','supportsThinkingTokenBudget','thinkingTokenBudgetField']);
   if(p.thinking_level_map) {
    const levels=['off','minimal','low','medium','high','xhigh','max'];

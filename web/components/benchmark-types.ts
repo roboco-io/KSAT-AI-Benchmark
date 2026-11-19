@@ -26,6 +26,8 @@ export type BenchmarkData = {
   execution_stats?: { refusal_count: number; timeout_count: number; retry_count: number };
   protocol?: { effort?: string; tools?: string; input?: string; english_listening?: string };
   execution_notes?: string[];
+  input_mode?: 'text_transcript';
+  figure_dependent?: { excluded_question_ids: string[]; total_questions: number; correct: number; accuracy: number; score: number; max_score: number; exams: { id: string; excluded: number; score: number; max_score: number; correct: number; total_questions: number }[] };
   exams: { id: string; title: string; subject: 'korean' | 'math' | 'english'; track: string; question_ids: string[]; max_score: number; summary: Summary & {score: number}; official_summary?: Summary }[];
   questions: Question[]; sources: { subject: string; url: string }[]; limitations: string[];
 };
@@ -33,6 +35,7 @@ export type BenchmarkData = {
 export type RequestedModel = {
   id: string; label: string; provider: string;
   state: 'complete' | 'partial' | 'pending' | 'blocked'; reason?: string | null;
+  input_mode?: 'text_transcript';
 };
 export type BenchmarkComparison = {
   schema_version: 3; generated_at: string; academic_year: number; repository_url: string;
