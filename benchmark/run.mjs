@@ -10,7 +10,7 @@ import {modelById} from './models.mjs';
 import {modelForYear,yearPaths} from './academic-years.mjs';
 import {codexSubscriptionStatus,subscriptionEnvironment,claudeAccountFingerprint,assertFreshClaudeProof} from './subscription.mjs';
 import {claudeEvents} from './claude-adapter.mjs';
-import {piEvents} from './pi-adapter.mjs';
+import {piEvents,PI_HTTP_IDLE_TIMEOUT_MS} from './pi-adapter.mjs';
 import {readPiSecret} from './pi-env.mjs';
 import {splitSolverGroups,applySplitRecovery} from './recovery.mjs';
 import {sourcePath} from './source-path.mjs';
@@ -113,7 +113,7 @@ async function solveGroup(group,iteration) {
  const allowed=questions.map(({id,number,section,kind})=>({question_id:id,number,section,kind}));
  const input=[{type:'text',text:prompt+'\n요청 문항:\n'+JSON.stringify(allowed)+(text?'\n\n'+text.text:'')},...images.map(path=>({type:'local_image',path}))];
  const thread=sdk?.startThread({model:protocol.model,modelReasoningEffort:protocol.effort,workingDirectory:mkdtempSync(join(tmpdir(),'ksat-solver-')),skipGitRepoCheck:true,sandboxMode:'read-only',approvalPolicy:'never',networkAccessEnabled:false,webSearchMode:'disabled'});
- const started=Date.now();const attempt={iteration,started_at:new Date().toISOString(),question_ids:questions.map(q=>q.id),...(text?{input_encoding:`UTF-8 Markdown transcript, format version ${TRANSCRIPT_FORMAT_VERSION}`,transcript_hashes:text.hashes}:{image_encoding:'lossless WebP, original 200 DPI pixels',image_hashes:images.map(p=>hash(readFileSync(p)))}),usage:{},time_seconds:0,thread_id:null,status:'running'};
+ const started=Date.now();const attempt={iteration,started_at:new Date().toISOString(),question_ids:questions.map(q=>q.id),...(selected.pi?{http_idle_timeout_ms:PI_HTTP_IDLE_TIMEOUT_MS}:{}),...(text?{input_encoding:`UTF-8 Markdown transcript, format version ${TRANSCRIPT_FORMAT_VERSION}`,transcript_hashes:text.hashes}:{image_encoding:'lossless WebP, original 200 DPI pixels',image_hashes:images.map(p=>hash(readFileSync(p)))}),usage:{},time_seconds:0,thread_id:null,status:'running'};
  const logPath=join(eventsDir,`${selected.id}-${group.id}-${iteration}-${Date.now()}.jsonl`);
  state.groups[group.id]??={attempts:[]};
  if(group.original_id)state.groups[group.id].original_group_id=group.original_id;state.groups[group.id].attempts.push(attempt);save();

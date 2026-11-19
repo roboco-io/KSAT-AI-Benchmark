@@ -1,0 +1,1529 @@
+{
+  "schema_version": 2,
+  "prompt_version": 2,
+  "run_id": "2027-pre-exam-pi-kimi-k3.1-pro",
+  "academic_year": 2027,
+  "phase": "pre_exam",
+  "started_at": "2026-11-19T09:49:56.350Z",
+  "protocol": {
+    "model": "kimi-k3.1-pro",
+    "provider": "moonshot",
+    "effort": "high",
+    "sdk_version": "Pi CLI 0.87.1",
+    "tools": "disabled",
+    "input": "original PDF rendered at 200 DPI",
+    "english_listening": "official transcript rendered as images",
+    "max_iterations": 3,
+    "group_timeout_seconds": 900,
+    "concurrency": 2,
+    "cost_limit_usd": 25,
+    "subscription_only": false,
+    "api_key_fallback": false,
+    "agent": "Pi",
+    "api_model": "kimi-k3.1-pro",
+    "api_base_url": "https://api.moonshot.ai/v1",
+    "max_output_tokens": 65536,
+    "effort_semantics": "high",
+    "output_format": "prompted JSON; no tools",
+    "image_resize": false,
+    "route_hash": "edb6b99cfd7e3fa3b8201a2b3c8ef920eab4c9c5db42ffa1ba0c8ccfa05295db"
+  },
+  "dataset_hash": "4c69e03b69b31b050d595a2b9905e1c2f7a1e425f2a90ed9cce44315833bd086",
+  "answers": {
+    "2027-math-geometry-q23": {
+      "question_id": "2027-math-geometry-q23",
+      "decision": "answered",
+      "answer": 3,
+      "explanation": "$2\\vec a+\\vec b=(5,-2)$이므로 모든 성분의 합은 $5-2=3$이다.",
+      "abstain_reason": null
+    },
+    "2027-math-geometry-q24": {
+      "question_id": "2027-math-geometry-q24",
+      "decision": "answered",
+      "answer": 4,
+      "explanation": "꼭짓점에서 초점까지의 거리가 $4$이므로 포물선은 $y^{2}=16(x+1)$이다. $x=0$을 대입하면 $a^{2}=16$이고, 양수이므로 $a=4$이다.",
+      "abstain_reason": null
+    },
+    "2027-math-geometry-q25": {
+      "question_id": "2027-math-geometry-q25",
+      "decision": "answered",
+      "answer": 3,
+      "explanation": "내분점의 $x$좌표 조건에서 $\\frac{a-6}{3}=0$이어서 $a=6$이다. 외분점의 $y,z$좌표 조건에서 $3b+6=0$, $3c-12=0$이므로 $a+b+c=8$이다.",
+      "abstain_reason": null
+    },
+    "2027-math-geometry-q26": {
+      "question_id": "2027-math-geometry-q26",
+      "decision": "answered",
+      "answer": 5,
+      "explanation": "$\\overline{PF}=3$이고 $\\overline{PF'}=7$이므로 $2a=10$, 즉 $a=5$이다. 또 $\\overline{PQ}=\\frac{2b^{2}}{a}=6$에서 $b^{2}=15$이므로 $a^{2}+b^{2}=40$이다.",
+      "abstain_reason": null
+    },
+    "2027-math-geometry-q27": {
+      "question_id": "2027-math-geometry-q27",
+      "decision": "answered",
+      "answer": 1,
+      "explanation": "밑면에서 $\\overline{GI}=4\\sqrt{3}$이고, $M$의 정사영과 직선 $GI$ 사이의 거리는 $5$이다. 높이가 $2\\sqrt{6}$이므로 삼각형의 높이는 $\\sqrt{5^{2}+(2\\sqrt{6})^{2}}=7$이고, 넓이는 $14\\sqrt{3}$이다.",
+      "abstain_reason": null
+    },
+    "2027-math-geometry-q28": {
+      "question_id": "2027-math-geometry-q28",
+      "decision": "answered",
+      "answer": 4,
+      "explanation": "좌표를 $O=(0,0)$, $A=(2,2)$, $B=(2,0)$으로 놓으면 가능한 $R=(x,y)$의 영역은 $(2,4),(4,4),(\\frac{10}{3},\\frac{10}{3})$을 꼭짓점으로 하는 삼각형이다. 목적식은 $\\vec{OR}\\cdot\\vec{BR}=(x-1)^{2}+y^{2}-1$이므로 $M=24$, $m=\\frac{76}{5}$이고 $M+m=\\frac{196}{5}$이다.",
+      "abstain_reason": null
+    },
+    "2027-math-geometry-q29": {
+      "question_id": "2027-math-geometry-q29",
+      "decision": "answered",
+      "answer": 45,
+      "explanation": "$r=\\sqrt{\\overline{AF}/p}$라 하면 $\\overline{BF}=2pr$, $\\overline{BC}=pr(r-1)$이므로 조건에서 $r=\\frac{5}{4}$이다. 이를 이용하면 쌍곡선의 양의 기울기 점근선과 $F$ 사이의 거리가 $\\frac{15p}{8}$이어서 $p=8$이고, 삼각형의 둘레는 $2\\overline{AF}+\\overline{BF}=\\frac{45p}{8}=45$이다.",
+      "abstain_reason": null
+    },
+    "2027-math-geometry-q30": {
+      "question_id": "2027-math-geometry-q30",
+      "decision": "answered",
+      "answer": 223,
+      "explanation": "$H$를 원점으로, $\\alpha$를 $z=0$으로 놓으면 $O=(0,0,2\\sqrt{5})$, $A=(-5,0,0)$, $B=(5,0,0)$, $C=(1,2\\sqrt{6},0)$, $D=(1,2\\sqrt{6},4\\sqrt{5})$로 둘 수 있다. 두 구의 교선이 놓인 평면은 $x+2\\sqrt{6}y+2\\sqrt{5}z=53$이고, 원 $C_{2}$의 반지름의 제곱은 $\\frac{104}{5}$이며 $\\alpha$와 이루는 각의 코사인은 $\\frac{2}{3}$이다. 따라서 정사영의 넓이는 $\\frac{208}{15}\\pi$이므로 $p+q=223$이다.",
+      "abstain_reason": null
+    },
+    "2027-english-english-q01": {
+      "question_id": "2027-english-english-q01",
+      "decision": "answered",
+      "answer": 3,
+      "explanation": "여자는 헬스장 이용 시 깨끗한 운동화를 신어야 기계와 회원의 건강에 문제가 생기지 않는다며 이를 당부한다.",
+      "abstain_reason": null
+    },
+    "2027-english-english-q02": {
+      "question_id": "2027-english-english-q02",
+      "decision": "answered",
+      "answer": 1,
+      "explanation": "남자는 불꽃놀이가 독성 화학물질을 남겨 공기·토양·물을 오염시키고 새들을 놀라게 할 수 있다며 환경에 해롭다고 말한다.",
+      "abstain_reason": null
+    },
+    "2027-english-english-q03": {
+      "question_id": "2027-english-english-q03",
+      "decision": "answered",
+      "answer": 1,
+      "explanation": "개인적인 이야기를 공유하면 신뢰와 개방이 생겨 서로 가까워지고 대인 관계가 강화된다는 것이 핵심이다.",
+      "abstain_reason": null
+    },
+    "2027-english-english-q04": {
+      "question_id": "2027-english-english-q04",
+      "decision": "answered",
+      "answer": 3,
+      "explanation": "대화에서는 줄무늬 블라인드를 언급하지만 그림의 ③은 하트 무늬 블라인드이므로 일치하지 않는다.",
+      "abstain_reason": null
+    },
+    "2027-english-english-q05": {
+      "question_id": "2027-english-english-q05",
+      "decision": "answered",
+      "answer": 5,
+      "explanation": "남자가 학교 로비에 배달된 동아리 티셔츠를 가져와야 한다고 하자 여자가 자신이 하겠다고 답한다.",
+      "abstain_reason": null
+    },
+    "2027-english-english-q06": {
+      "question_id": "2027-english-english-q06",
+      "decision": "answered",
+      "answer": 4,
+      "explanation": "입장권 50달러와 특별전시 관람권 20달러의 합계 70달러에서 10%를 할인하면 지불액은 63달러이다.",
+      "abstain_reason": null
+    },
+    "2027-english-english-q07": {
+      "question_id": "2027-english-english-q07",
+      "decision": "answered",
+      "answer": 1,
+      "explanation": "여자는 이번 주말에 가족과 캠핑을 가기 때문에 팝업 마켓에 갈 수 없다고 말한다.",
+      "abstain_reason": null
+    },
+    "2027-english-english-q08": {
+      "question_id": "2027-english-english-q08",
+      "decision": "answered",
+      "answer": 3,
+      "explanation": "행사 기간, 온라인 등록 방법, 2달러의 참가비, 특별 강연이 언급되지만 기념품은 언급되지 않는다.",
+      "abstain_reason": null
+    },
+    "2027-english-english-q09": {
+      "question_id": "2027-english-english-q09",
+      "decision": "answered",
+      "answer": 4,
+      "explanation": "학교에서 한복은 빌려주지만 모자나 가방 같은 한복 액세서리는 제공하지 않는다고 안내한다.",
+      "abstain_reason": null
+    },
+    "2027-english-english-q10": {
+      "question_id": "2027-english-english-q10",
+      "decision": "answered",
+      "answer": 4,
+      "explanation": "30인치와 40달러 제품 및 나비 모양을 제외하면 B와 D가 남고, 꼬리가 있는 연을 선택하므로 D 모델이다.",
+      "abstain_reason": null
+    },
+    "2027-english-english-q11": {
+      "question_id": "2027-english-english-q11",
+      "decision": "answered",
+      "answer": 1,
+      "explanation": "여자가 John이 속한 A조에 자신의 이름을 추가해 달라고 요청하므로 이를 수락하는 ①이 적절하다.",
+      "abstain_reason": null
+    },
+    "2027-english-english-q12": {
+      "question_id": "2027-english-english-q12",
+      "decision": "answered",
+      "answer": 5,
+      "explanation": "여자는 더 늦은 기차표를 예약할 수 있는지 확인한 뒤 다시 전화하겠다고 응답하는 것이 자연스럽다.",
+      "abstain_reason": null
+    },
+    "2027-english-english-q13": {
+      "question_id": "2027-english-english-q13",
+      "decision": "answered",
+      "answer": 2,
+      "explanation": "여자가 과학실에 돌아가 열쇠고리를 확인해 보겠다고 하므로 그곳에서 찾기를 바란다는 ②가 적절하다.",
+      "abstain_reason": null
+    },
+    "2027-english-english-q14": {
+      "question_id": "2027-english-english-q14",
+      "decision": "answered",
+      "answer": 4,
+      "explanation": "배우의 식사를 방해하지 말고 사생활을 존중하자는 아버지의 말에 딸이 그녀를 귀찮게 하지 않겠다고 수긍한다.",
+      "abstain_reason": null
+    },
+    "2027-english-english-q15": {
+      "question_id": "2027-english-english-q15",
+      "decision": "answered",
+      "answer": 5,
+      "explanation": "Amy는 무설탕 음료를 찾는 고객이 늘고 있으므로 메뉴에 무설탕 음료를 포함하자고 제안할 것이다.",
+      "abstain_reason": null
+    },
+    "2027-english-english-q16": {
+      "question_id": "2027-english-english-q16",
+      "decision": "answered",
+      "answer": 1,
+      "explanation": "보드게임·아이스크림·거울·튤립처럼 현재는 흔하지만 과거에는 소유자의 높은 지위를 보여 준 물건들을 설명한다.",
+      "abstain_reason": null
+    },
+    "2027-english-english-q17": {
+      "question_id": "2027-english-english-q17",
+      "decision": "answered",
+      "answer": 2,
+      "explanation": "보드게임, 아이스크림, 거울, 튤립은 언급되지만 초콜릿은 언급되지 않는다.",
+      "abstain_reason": null
+    },
+    "2027-english-english-q18": {
+      "question_id": "2027-english-english-q18",
+      "decision": "answered",
+      "answer": 5,
+      "explanation": "작성자는 호텔 베개 덕분에 잘 잤다며 같은 베개를 어디에서 구입할 수 있는지 문의한다.",
+      "abstain_reason": null
+    },
+    "2027-english-english-q19": {
+      "question_id": "2027-english-english-q19",
+      "decision": "answered",
+      "answer": 1,
+      "explanation": "반죽이 부풀지 않을 때 Christine은 좌절했지만, 베이킹파우더를 추가한 뒤 반죽이 부풀자 흥분하고 기뻐한다.",
+      "abstain_reason": null
+    },
+    "2027-english-english-q20": {
+      "question_id": "2027-english-english-q20",
+      "decision": "answered",
+      "answer": 2,
+      "explanation": "촬영 전에 대상 동물을 충분히 공부해 행동을 예측해야 촬영 성공 가능성이 커지고 현장에서의 시간도 즐거워진다고 주장한다.",
+      "abstain_reason": null
+    },
+    "2027-english-english-q21": {
+      "question_id": "2027-english-english-q21",
+      "decision": "answered",
+      "answer": 2,
+      "explanation": "데이터를 밀폐된 상자처럼 비공개로 고수하는 것이 연결과 학습을 통한 가치 창출을 막아 회사의 발전을 저해한다는 의미이다.",
+      "abstain_reason": null
+    },
+    "2027-english-english-q22": {
+      "question_id": "2027-english-english-q22",
+      "decision": "answered",
+      "answer": 5,
+      "explanation": "독자가 글에서 찾으려는 바를 미리 명확히 하고 저자의 질문과 답을 추적하면 더 빠르고 효율적으로 읽을 수 있다는 요지이다.",
+      "abstain_reason": null
+    },
+    "2027-english-english-q23": {
+      "question_id": "2027-english-english-q23",
+      "decision": "answered",
+      "answer": 2,
+      "explanation": "환경에 적응한 부모 식물의 변화가 자손에게 전달되어 자손이 같은 어려움에 더 잘 대처한다는 세대 간 적응이 주제이다.",
+      "abstain_reason": null
+    },
+    "2027-english-english-q24": {
+      "question_id": "2027-english-english-q24",
+      "decision": "answered",
+      "answer": 5,
+      "explanation": "실시간 정보와 발달한 운송 기술로 전 세계에서 생산된 신선식품이 소비자 근처의 슈퍼마켓까지 이동하는 과정을 설명한다.",
+      "abstain_reason": null
+    },
+    "2027-english-english-q25": {
+      "question_id": "2027-english-english-q25",
+      "decision": "answered",
+      "answer": 5,
+      "explanation": "워싱턴 D.C.의 폭염일은 2023년 13일에서 2024년 32일로 늘었지만, 2023년의 세 배인 39일을 넘지 않으므로 ⑤가 틀렸다.",
+      "abstain_reason": null
+    },
+    "2027-english-english-q26": {
+      "question_id": "2027-english-english-q26",
+      "decision": "answered",
+      "answer": 4,
+      "explanation": "Baboon Metaphysics는 Cheney가 남편과 함께 쓴 책이므로 단독 집필했다는 ④가 일치하지 않는다.",
+      "abstain_reason": null
+    },
+    "2027-english-english-q27": {
+      "question_id": "2027-english-english-q27",
+      "decision": "answered",
+      "answer": 5,
+      "explanation": "등록은 컨벤션 센터를 직접 방문해서만 할 수 있고 온라인 등록은 불가능하므로 ⑤가 일치하지 않는다.",
+      "abstain_reason": null
+    },
+    "2027-english-english-q28": {
+      "question_id": "2027-english-english-q28",
+      "decision": "answered",
+      "answer": 4,
+      "explanation": "특별 활동에 오후 1시부터 4시까지 어린이를 위한 자전거 타기 수업이 포함되어 있다.",
+      "abstain_reason": null
+    },
+    "2027-english-english-q29": {
+      "question_id": "2027-english-english-q29",
+      "decision": "answered",
+      "answer": 3,
+      "explanation": "③ 자리는 문장의 주어이므로 동사원형 think가 아니라 동명사 thinking이어야 한다.",
+      "abstain_reason": null
+    },
+    "2027-english-english-q30": {
+      "question_id": "2027-english-english-q30",
+      "decision": "answered",
+      "answer": 3,
+      "explanation": "글은 인간의 지능이 단순히 합산되지 않는 개인의 능력이라고 설명하므로 additive가 문맥에 맞지 않는다.",
+      "abstain_reason": null
+    },
+    "2027-english-english-q31": {
+      "question_id": "2027-english-english-q31",
+      "decision": "answered",
+      "answer": 1,
+      "explanation": "여러 행동과 결정 단계를 거치면 조작자가 장치를 작동하려는 선택을 각 단계에서 재고할 기회를 갖게 된다.",
+      "abstain_reason": null
+    },
+    "2027-english-english-q32": {
+      "question_id": "2027-english-english-q32",
+      "decision": "answered",
+      "answer": 1,
+      "explanation": "VR 관람자는 특정 세부 장면을 보는 시점과 방식을 제작자가 정확히 통제할 수 없으며 다른 곳을 볼 수도 있다는 설명과 이어진다.",
+      "abstain_reason": null
+    },
+    "2027-english-english-q33": {
+      "question_id": "2027-english-english-q33",
+      "decision": "answered",
+      "answer": 5,
+      "explanation": "뚜렷한 문화적 차이가 존재하려면 각 사회 내부에서 규범에 대한 상당한 순응이 필요하다는 논리이다.",
+      "abstain_reason": null
+    },
+    "2027-english-english-q34": {
+      "question_id": "2027-english-english-q34",
+      "decision": "answered",
+      "answer": 3,
+      "explanation": "공간의 회화적 구성이 시간에 따라 연속적으로 지각되는 선과 색의 패턴이 될 때 리듬이 된다는 문맥에 맞다.",
+      "abstain_reason": null
+    },
+    "2027-english-english-q35": {
+      "question_id": "2027-english-english-q35",
+      "decision": "answered",
+      "answer": 3,
+      "explanation": "③은 소셜미디어 콘텐츠 전반의 다양성을 설명할 뿐 온라인 게임과 e스포츠 확산 요인과는 관련이 없다.",
+      "abstain_reason": null
+    },
+    "2027-english-english-q36": {
+      "question_id": "2027-english-english-q36",
+      "decision": "answered",
+      "answer": 2,
+      "explanation": "(B)가 인간 식량 공급에 미치는 영향을 제시하고, (A)가 곤충 섭취에 대한 서구의 거부감과 세계적 일반성을 대비하며, (C)가 구체적 사례를 덧붙인다.",
+      "abstain_reason": null
+    },
+    "2027-english-english-q37": {
+      "question_id": "2027-english-english-q37",
+      "decision": "answered",
+      "answer": 4,
+      "explanation": "(C)가 수집품의 부와 인지적 권력 과시를 설명하고, (A)가 그 숨은 의미에 대한 접근을 다룬 뒤, (B)가 박물관으로의 변화와 지속되는 특성을 정리한다.",
+      "abstain_reason": null
+    },
+    "2027-english-english-q38": {
+      "question_id": "2027-english-english-q38",
+      "decision": "answered",
+      "answer": 3,
+      "explanation": "수면의 기능이 여전히 미스터리라는 문장 뒤에 제시문을 넣으면, 단순한 휴식이 아니라는 설명과 이어지는 해먹 예시가 자연스럽다.",
+      "abstain_reason": null
+    },
+    "2027-english-english-q39": {
+      "question_id": "2027-english-english-q39",
+      "decision": "answered",
+      "answer": 4,
+      "explanation": "④ 앞의 지리적 거리, 운송비, 소비자의 제한된 비교 능력, 규제 활동이 경쟁을 줄이는 기제들이므로 제시문은 그 직후에 위치한다.",
+      "abstain_reason": null
+    },
+    "2027-english-english-q40": {
+      "question_id": "2027-english-english-q40",
+      "decision": "answered",
+      "answer": 2,
+      "explanation": "광고는 소비자의 기대를 형성해 브랜드에 대한 태도를 길러 주고, 이후 브랜드 사용 경험에도 영향을 주어 장기 소비를 유도한다.",
+      "abstain_reason": null
+    },
+    "2027-english-english-q41": {
+      "question_id": "2027-english-english-q41",
+      "decision": "answered",
+      "answer": 1,
+      "explanation": "지구와 유사한 환경에서 생명체를 찾는 관점과 지구 생명체가 보편적이지 않다는 대안적 관점을 대비하므로 ①이 적절하다.",
+      "abstain_reason": null
+    },
+    "2027-english-english-q42": {
+      "question_id": "2027-english-english-q42",
+      "decision": "answered",
+      "answer": 2,
+      "explanation": "지구 중심의 탐색 논리는 항성 거주 가능 영역 개념의 기반이 되므로 contradicts가 아니라 supports에 해당하는 표현이어야 한다.",
+      "abstain_reason": null
+    },
+    "2027-english-english-q43": {
+      "question_id": "2027-english-english-q43",
+      "decision": "answered",
+      "answer": 4,
+      "explanation": "(D)에서 아버지가 상담을 권하고, (B)에서 Andy가 상담 교사와 대화하며, (C)에서 팀 훈련에 복귀하는 순서이다.",
+      "abstain_reason": null
+    },
+    "2027-english-english-q44": {
+      "question_id": "2027-english-english-q44",
+      "decision": "answered",
+      "answer": 2,
+      "explanation": "(b)의 His는 상담 교사 Mr. Johnson을 가리키지만, 나머지 (a), (c), (d), (e)는 모두 Andy를 가리킨다.",
+      "abstain_reason": null
+    },
+    "2027-english-english-q45": {
+      "question_id": "2027-english-english-q45",
+      "decision": "answered",
+      "answer": 3,
+      "explanation": "Andy는 상담 후 팀 훈련에 다시 참여했고 팀원들의 환영을 받았으므로 복귀하지 않았다는 ③이 사실과 다르다.",
+      "abstain_reason": null
+    },
+    "2027-math-probability-q23": {
+      "question_id": "2027-math-probability-q23",
+      "decision": "answered",
+      "answer": 3,
+      "explanation": "일곱 자리 각각에 $a$, $b$ 중 하나를 선택할 수 있으므로 중복순열의 수는 $2^7=128$이다.",
+      "abstain_reason": null
+    },
+    "2027-math-probability-q24": {
+      "question_id": "2027-math-probability-q24",
+      "decision": "answered",
+      "answer": 2,
+      "explanation": "$P(A\\cap B)=P(A)+P(B)-P(A\\cup B)=\\frac12+\\frac5{12}-\\frac34=\\frac16$이다.",
+      "abstain_reason": null
+    },
+    "2027-math-probability-q25": {
+      "question_id": "2027-math-probability-q25",
+      "decision": "answered",
+      "answer": 5,
+      "explanation": "이항분포의 분산은 $V(X)=n\\cdot\\frac23\\cdot\\frac13=\\frac{2n}{9}=16$이므로 $n=72$이다. $E(X)=72\\cdot\\frac23=48$이므로 $n+E(X)=120$이다.",
+      "abstain_reason": null
+    },
+    "2027-math-probability-q26": {
+      "question_id": "2027-math-probability-q26",
+      "decision": "answered",
+      "answer": 5,
+      "explanation": "$ab\\le 4$인 순서쌍은 $8$개이고, $ab\\ge 29$인 순서쌍은 $(5,6),(6,5),(6,6)$의 $3$개이다. 따라서 구하는 확률은 $\\frac{36-8-3}{36}=\\frac{25}{36}$이다.",
+      "abstain_reason": null
+    },
+    "2027-math-probability-q27": {
+      "question_id": "2027-math-probability-q27",
+      "decision": "answered",
+      "answer": 1,
+      "explanation": "신뢰구간의 중심이 $\\bar{x}=260$이고, $1.96\\frac{\\sigma}{\\sqrt{64}}=7.84$이므로 $\\sigma=32$이다. 따라서 $\\bar{x}+\\sigma=292$이다.",
+      "abstain_reason": null
+    },
+    "2027-math-probability-q28": {
+      "question_id": "2027-math-probability-q28",
+      "decision": "answered",
+      "answer": 3,
+      "explanation": "조건을 위반하는 인접은 $\\frac12$과 $1$이 이웃하는 경우뿐이다. $\\frac12$ 두 장을 제외한 일곱 장을 나열할 때 $1$의 연속 구간 수 $r=1,2,3$에 따른 나열 수는 각각 $20,80,40$이고 유효한 삽입 간격 수는 $4,3,2$이므로, 전체 경우의 수는 $20\\{4+\\binom{4}{2}\\}+80\\{3+\\binom{3}{2}\\}+40\\{2+\\binom{2}{2}\\}=800$이다.",
+      "abstain_reason": null
+    },
+    "2027-math-probability-q29": {
+      "question_id": "2027-math-probability-q29",
+      "decision": "answered",
+      "answer": 41,
+      "explanation": "확률의 합에서 $b=\\frac12-a-a^2$이고 $E(X)=0$이므로 $V(X)=k^2(10a^2-6a+4)$이다. $1\\le V(X)\\le\\sqrt{V(X)}$이려면 $V(X)=1$이어야 하고, $10a^2-6a+4$의 최솟값이 $a=\\frac3{10}$에서 $\\frac{31}{10}$이므로 $k^2$의 최댓값은 $\\frac{10}{31}$이다. 따라서 $p+q=41$이다.",
+      "abstain_reason": null
+    },
+    "2027-math-probability-q30": {
+      "question_id": "2027-math-probability-q30",
+      "decision": "answered",
+      "answer": 15,
+      "explanation": "한 시행에서 $A$와 $B$의 발생 횟수 합을 $t$의 지수로 표시하면 전체 $20$개 조합은 $2+12t+6t^2$로, $6$을 포함하는 조합은 $6t+4t^2$로 분류된다. 조건부 확률은 $\\frac{[t^4](6t+4t^2)^3}{[t^4](2+12t+6t^2)^3}=\\frac{432}{2808}=\\frac2{13}$이므로 $p+q=15$이다.",
+      "abstain_reason": null
+    },
+    "2027-math-calculus-q23": {
+      "question_id": "2027-math-calculus-q23",
+      "decision": "answered",
+      "answer": 1,
+      "explanation": "미분계수의 정의에 의해 $\\lim_{x\\to 0}\\frac{\\ln(1-3x)}{x}=-3$이다. 따라서 정답은 ①이다.",
+      "abstain_reason": null
+    },
+    "2027-math-calculus-q24": {
+      "question_id": "2027-math-calculus-q24",
+      "decision": "answered",
+      "answer": 4,
+      "explanation": "부분적분법을 적용하면 $\\int_0^{\\pi}x\\sin 4x\\,dx=\\left[-\\frac{x\\cos 4x}{4}\\right]_0^{\\pi}+\\frac14\\int_0^{\\pi}\\cos 4x\\,dx=-\\frac{\\pi}{4}$이다.",
+      "abstain_reason": null
+    },
+    "2027-math-calculus-q25": {
+      "question_id": "2027-math-calculus-q25",
+      "decision": "answered",
+      "answer": 1,
+      "explanation": "등비수열의 공비는 $2$이고, 극한식에서 첫째항 $a_1$은 $\\frac{2a_1}{3}=1$을 만족하므로 $a_1=\\frac32$이다. 따라서 $a_4=\\frac32\\cdot2^3=12$이다.",
+      "abstain_reason": null
+    },
+    "2027-math-calculus-q26": {
+      "question_id": "2027-math-calculus-q26",
+      "decision": "answered",
+      "answer": 5,
+      "explanation": "단면의 넓이는 $\\frac{\\sqrt3}{4}\\{(2x+1)e^x+\\sin\\pi x\\}$이므로 부피는 $\\frac{\\sqrt3}{4}\\int_0^2\\{(2x+1)e^x+\\sin\\pi x\\}\\,dx$이다. 적분값이 $3e^2+1$이므로 부피는 $\\frac{\\sqrt3(3e^2+1)}{4}$이다.",
+      "abstain_reason": null
+    },
+    "2027-math-calculus-q27": {
+      "question_id": "2027-math-calculus-q27",
+      "decision": "answered",
+      "answer": 3,
+      "explanation": "$y=1$에서 두 교점의 $x$좌표는 $\\frac2a,-\\frac3a$이고 접선의 기울기는 각각 $-\\frac{5a}{4},-5a$이다. 두 접선의 교점까지의 높이가 $\\frac{25}{3}$이므로 $\\frac12\\cdot\\frac5a\\cdot\\frac{25}{3}=5$에서 $a=\\frac{25}{6}$이다.",
+      "abstain_reason": null
+    },
+    "2027-math-calculus-q28": {
+      "question_id": "2027-math-calculus-q28",
+      "decision": "answered",
+      "answer": 4,
+      "explanation": "조건 (나)에서 $a=e$, $bk=2$이고 $f(k)=k+1$에서 $k=e$, $b=\\frac2e$를 얻는다. $g(k)=\\frac1b=\\frac e2$이고 $g'(k+1)=1-\\frac1{f'(k)}=-\\frac1{e-1}$이므로 합은 $\\frac{(e+1)(e-2)}{2(e-1)}$이다.",
+      "abstain_reason": null
+    },
+    "2027-math-calculus-q29": {
+      "question_id": "2027-math-calculus-q29",
+      "decision": "answered",
+      "answer": 12,
+      "explanation": "급수가 발산하려면 $b_n=1$이 무한히 많아야 한다. $k=5,7$에서는 충분히 큰 모든 $n$에 대해 $(a_n-1)(a_{n+1}+1)<0$이 성립하고 다른 자연수 $k$에서는 유한 번만 성립하므로, 구하는 합은 $5+7=12$이다.",
+      "abstain_reason": null
+    },
+    "2027-math-calculus-q30": {
+      "question_id": "2027-math-calculus-q30",
+      "decision": "answered",
+      "answer": 75,
+      "explanation": "미분가능성과 두 부등호에 의해 네 구간 $[0,\\frac\\pi2], [\\frac\\pi2,\\pi], [\\pi,\\frac{3\\pi}2], [\\frac{3\\pi}2,2\\pi]$에서 $f$의 부호는 각각 $+,-,+,+$이다. $J=\\int_0^{\\pi/2}\\sin x\\cos x(\\sqrt{1+3\\cos^2x}-1)\\,dx=\\frac5{18}$이고 $\\alpha=3J=\\frac56$이므로 $90\\alpha=75$이다.",
+      "abstain_reason": null
+    },
+    "2027-math-common-q01": {
+      "question_id": "2027-math-common-q01",
+      "decision": "answered",
+      "answer": 2,
+      "explanation": "$\\sqrt[3]{32}\\times 4^{-\\frac{1}{3}}=\\sqrt[3]{\\frac{32}{4}}=\\sqrt[3]{8}=2$이므로 ②이다.",
+      "abstain_reason": null
+    },
+    "2027-math-common-q02": {
+      "question_id": "2027-math-common-q02",
+      "decision": "answered",
+      "answer": 5,
+      "explanation": "주어진 극한은 $f'(1)$이다. $f'(x)=8x^3+2$이므로 $f'(1)=10$이다.",
+      "abstain_reason": null
+    },
+    "2027-math-common-q03": {
+      "question_id": "2027-math-common-q03",
+      "decision": "answered",
+      "answer": 3,
+      "explanation": "공비를 $r$라 하면 $\\frac{a_5}{a_3}=r^2=3$이다. $a_1=1$이므로 $a_7=r^6=(r^2)^3=27$이다.",
+      "abstain_reason": null
+    },
+    "2027-math-common-q04": {
+      "question_id": "2027-math-common-q04",
+      "decision": "answered",
+      "answer": 4,
+      "explanation": "그래프에서 $\\lim_{x\\to 0-}f(x)=3$, $\\lim_{x\\to 1+}f(x)=1$이다. 따라서 두 극한의 합은 $4$이다.",
+      "abstain_reason": null
+    },
+    "2027-math-common-q05": {
+      "question_id": "2027-math-common-q05",
+      "decision": "answered",
+      "answer": 1,
+      "explanation": "$\\int_0^2 f(x)\\,dx=F(2)-F(0)=(8-4+2)-0=6$이다.",
+      "abstain_reason": null
+    },
+    "2027-math-common-q06": {
+      "question_id": "2027-math-common-q06",
+      "decision": "answered",
+      "answer": 1,
+      "explanation": "주기가 $k$이므로 $k=8$이다. 함수의 최댓값은 $3+k=11$이다.",
+      "abstain_reason": null
+    },
+    "2027-math-common-q07": {
+      "question_id": "2027-math-common-q07",
+      "decision": "answered",
+      "answer": 2,
+      "explanation": "$f'(1)=3-a=0$에서 $a=3$이다. $f'(x)=3(x+3)(x-1)$이므로 $x=-3$에서 극대이고, $f(-3)=28$이다.",
+      "abstain_reason": null
+    },
+    "2027-math-common-q08": {
+      "question_id": "2027-math-common-q08",
+      "decision": "answered",
+      "answer": 3,
+      "explanation": "$a=2\\log_2 3$이고, $\\frac{1}{\\log_8 3}=\\log_3 8=3\\log_3 2$이므로 $b=4\\log_3 2$이다. 따라서 $ab=8$이다.",
+      "abstain_reason": null
+    },
+    "2027-math-common-q09": {
+      "question_id": "2027-math-common-q09",
+      "decision": "answered",
+      "answer": 4,
+      "explanation": "$v(t)=3(t-1)(t-5)$이므로 $[0,1]$에서는 양수, $[1,2]$에서는 음수이다. 위치함수를 $F(t)=t^3-9t^2+15t$라 하면 움직인 거리는 $F(1)-F(0)+F(1)-F(2)=7+5=12$이다.",
+      "abstain_reason": null
+    },
+    "2027-math-common-q10": {
+      "question_id": "2027-math-common-q10",
+      "decision": "answered",
+      "answer": 2,
+      "explanation": "$BC:CA=3:4$이므로 $BC=3k$, $CA=4k$라 하면 코사인법칙에서 $AB=\\sqrt{17}k$이다. 외접원의 반지름은 $\\sqrt{17}$이고 $\\sin C=\\frac{2\\sqrt{2}}{3}$이므로, 사인법칙을 이용하면 $BC=4\\sqrt{2}$이다.",
+      "abstain_reason": null
+    },
+    "2027-math-common-q11": {
+      "question_id": "2027-math-common-q11",
+      "decision": "answered",
+      "answer": 5,
+      "explanation": "접점이 접선 위에 있으므로 $f(1)=7-11=-4$이다. $y=x^2f(x)$의 $x=1$에서의 미분계수는 $2f(1)+f'(1)=7$이므로 $f'(1)=15$이다.",
+      "abstain_reason": null
+    },
+    "2027-math-common-q12": {
+      "question_id": "2027-math-common-q12",
+      "decision": "answered",
+      "answer": 3,
+      "explanation": "$S_8-S_3=a_4+a_5+a_6+a_7+a_8=5a_6=-15$이므로 $a_6=-3$이다. $a_3=|a_8|$과 등차수열의 성질을 이용하면 첫째항은 $27$, 공차는 $-6$이고, $S_4=72$이다.",
+      "abstain_reason": null
+    },
+    "2027-math-common-q13": {
+      "question_id": "2027-math-common-q13",
+      "decision": "answered",
+      "answer": 2,
+      "explanation": "ㄱ은 $\\int_0^2|1-x|\\,dx=1$로 참이고, ㄴ은 $f(x)+3=(x-1)(x-3)$의 부호를 나누면 참이다. ㄷ은 $\\alpha=f(1)$일 때도 주어진 등식이 성립하므로 거짓이다.",
+      "abstain_reason": null
+    },
+    "2027-math-common-q14": {
+      "question_id": "2027-math-common-q14",
+      "decision": "answered",
+      "answer": 2,
+      "explanation": "직선과 곡선의 교점 조건에서 $Q=(-1,2)$를 얻고, 무게중심 조건을 적용하면 $R=(1,9)$이다. $g(1)=9$에서 $\\log_a 3=7$이 되며, 이에 대응하는 선택지는 ②이다.",
+      "abstain_reason": null
+    },
+    "2027-math-common-q15": {
+      "question_id": "2027-math-common-q15",
+      "decision": "answered",
+      "answer": 3,
+      "explanation": "$g(u)$는 $u=0,1,4$에서 불연속이지만, $g(x^2)$는 $x=0$에서는 연속이고 $x=-2,-1,1,2$에서 불연속이다. 따라서 $n=4$, $a_3=1$이고 $g(1)=4$이므로 $n+g(a_3)=8$이다.",
+      "abstain_reason": null
+    },
+    "2027-math-common-q16": {
+      "question_id": "2027-math-common-q16",
+      "decision": "answered",
+      "answer": 2,
+      "explanation": "$5^x=5^{-2(x-3)}$이므로 $x=-2x+6$이다. 따라서 $x=2$이다.",
+      "abstain_reason": null
+    },
+    "2027-math-common-q17": {
+      "question_id": "2027-math-common-q17",
+      "decision": "answered",
+      "answer": 20,
+      "explanation": "$f(x)=2x^3+x+C$이고 $f(1)=5$에서 $C=2$이다. 따라서 $f(2)=16+2+2=20$이다.",
+      "abstain_reason": null
+    },
+    "2027-math-common-q18": {
+      "question_id": "2027-math-common-q18",
+      "decision": "answered",
+      "answer": 5,
+      "explanation": "좌변은 $30+5a$이고 우변은 $1+4+9+16+25=55$이다. $30+5a=55$이므로 $a=5$이다.",
+      "abstain_reason": null
+    },
+    "2027-math-common-q19": {
+      "question_id": "2027-math-common-q19",
+      "decision": "answered",
+      "answer": 31,
+      "explanation": "$y'=3(x+2)(x-4)$이므로 $x=-2$에서 극대, $x=4$에서 극소이다. 교점이 정확히 $2$개일 때 $k$는 극값이며, 양수인 극댓값은 $(-2)^3-3(-2)^2-24(-2)+3=31$이다.",
+      "abstain_reason": null
+    },
+    "2027-math-common-q20": {
+      "question_id": "2027-math-common-q20",
+      "decision": "answered",
+      "answer": 169,
+      "explanation": "직선 $l$의 기울기는 $x_1+x_2-2(b+1)=-2$이므로 $p=-2$이다. 이차방정식에서 $q=\\frac{1}{6}$이고, $a\\sin\\frac{\\pi}{6}=\\frac{5b}{3}$에서 $h(b)=\\frac{10b}{3}$이다. 따라서 $6(p+q+h(9))=6(-2+\\frac{1}{6}+30)=169$이다.",
+      "abstain_reason": null
+    },
+    "2027-math-common-q21": {
+      "question_id": "2027-math-common-q21",
+      "decision": "answered",
+      "answer": 54,
+      "explanation": "조건 (나)에서 $f$는 $x=2$에서 극소이고 $f(-1)=0$이다. 극솟값을 $V$라 하면 $f(x)-V=(x-\\gamma)(x-2)^2$로 놓을 수 있고, $f(-1)=0$에서 $V=9(1+\\gamma)$이다. 따라서 $f(5)=9(5-\\gamma)+9(1+\\gamma)=54$이다.",
+      "abstain_reason": null
+    },
+    "2027-math-common-q22": {
+      "question_id": "2027-math-common-q22",
+      "decision": "answered",
+      "answer": 98,
+      "explanation": "수열은 주기가 $3$이므로 첫 세 항을 $x,y,z$라 하면 $3x+3y+2z=11$, $7x+7y+6z=26$이다. 이를 풀면 $z=\\frac14$, $x+y=\\frac72$이고 로그 조건에서 $xy=2$이다. 한 주기의 역수 곱의 합은 $\\frac{1}{xy}+\\frac{x+y}{xyz}=\\frac{15}{2}$이므로 구하는 합은 $13\\cdot\\frac{15}{2}+\\frac12=98$이다.",
+      "abstain_reason": null
+    },
+    "2027-korean-language_media-q35": {
+      "question_id": "2027-korean-language_media-q35",
+      "decision": "answered",
+      "answer": 5,
+      "explanation": "‘바퀴만은’에는 의존 형태소 ‘만’, ‘은’이 있고, ‘돌아요’에는 어간 ‘돌-’과 어미 ‘-아-’, ‘-요’가 있어 의존 형태소의 개수가 서로 다릅니다.",
+      "abstain_reason": null
+    },
+    "2027-korean-language_media-q36": {
+      "question_id": "2027-korean-language_media-q36",
+      "decision": "answered",
+      "answer": 4,
+      "explanation": "ⓓ의 ‘밑층’, ‘아래층’뿐 아니라 ㄷ의 ‘꽃도미’, ‘붉돔’도 후행 직접 구성 요소가 모두 명사이므로 ④의 구별 설명이 틀렸습니다.",
+      "abstain_reason": null
+    },
+    "2027-korean-language_media-q37": {
+      "question_id": "2027-korean-language_media-q37",
+      "decision": "answered",
+      "answer": 5,
+      "explanation": "부사어가 생략된 안긴절은 ㉡의 ‘내 친구가 소속된’에도 있어 ‘동아리에’가 생략되었습니다. 따라서 ㉠만 제시한 ⑤가 적절하지 않습니다.",
+      "abstain_reason": null
+    },
+    "2027-korean-language_media-q38": {
+      "question_id": "2027-korean-language_media-q38",
+      "decision": "answered",
+      "answer": 3,
+      "explanation": "‘희수의 누나’는 ㉡, 한 장의 사진에 누나와 친구들을 함께 담으려 했다는 뜻은 ㉢에 해당합니다. ‘모두 참석하지는 않았다’에서 모임에 참석한 친구가 있다는 ㉫도 포함됩니다.",
+      "abstain_reason": null
+    },
+    "2027-korean-language_media-q39": {
+      "question_id": "2027-korean-language_media-q39",
+      "decision": "answered",
+      "answer": 4,
+      "explanation": "‘ㅅㅡ시＞사이’에서는 15세기에도 단모음이던 ‘ㅣ’가 현대에도 단모음으로 유지되어 ㉠이 확인됩니다. ‘고개＞고개’에서는 15세기 이중 모음이 현대 단모음 ‘ㅐ’로 변해 ㉡이 확인됩니다.",
+      "abstain_reason": null
+    },
+    "2027-korean-language_media-q40": {
+      "question_id": "2027-korean-language_media-q40",
+      "decision": "answered",
+      "answer": 1,
+      "explanation": "진행자는 어진의 보관 방법을 요청했을 뿐, 보관함을 오동나무로 만든 이유를 물으며 화제를 제시한 것은 아닙니다. 오동나무의 재료적 특성은 전문가의 설명에서 제시되었습니다.",
+      "abstain_reason": null
+    },
+    "2027-korean-language_media-q41": {
+      "question_id": "2027-korean-language_media-q41",
+      "decision": "answered",
+      "answer": 2,
+      "explanation": "세은은 방송에서 본 내용과 추가로 찾은 내용을 함께 정리한다고 밝혔고, 우디는 방송에는 장황에 대한 설명이 없었다며 자세한 설명을 요청했습니다.",
+      "abstain_reason": null
+    },
+    "2027-korean-language_media-q42": {
+      "question_id": "2027-korean-language_media-q42",
+      "decision": "answered",
+      "answer": 1,
+      "explanation": "이모티콘은 기록물 보존 상자를 늦게 알게 된 아쉬움을 나타낸 것이지, 보존 상자의 구매 절차에 대한 아쉬움을 표현한 것은 아닙니다.",
+      "abstain_reason": null
+    },
+    "2027-korean-language_media-q43": {
+      "question_id": "2027-korean-language_media-q43",
+      "decision": "answered",
+      "answer": 5,
+      "explanation": "㉫의 ‘-거든’은 보존 상자를 늦게 알게 되어 아쉬운 이유를 뒷받침하는 표현입니다. 편지가 변색된 구체적인 과정을 설명하는 것은 아닙니다.",
+      "abstain_reason": null
+    },
+    "2027-korean-language_media-q44": {
+      "question_id": "2027-korean-language_media-q44",
+      "decision": "answered",
+      "answer": 3,
+      "explanation": "보라는 특정 장소에 방문한 시기를 확인하려고 검색한 것이 아니라, △△산에 가 본 사람을 찾으려고 학급 대화방에서 검색했습니다.",
+      "abstain_reason": null
+    },
+    "2027-korean-language_media-q45": {
+      "question_id": "2027-korean-language_media-q45",
+      "decision": "answered",
+      "answer": 4,
+      "explanation": "태훈이 언급한 등산 용품 대여와 탐방 프로그램은 산에서 연상되는 구름 그림 안에 제시되었습니다. 이는 서비스 항목을 자연물 이미지에 배치한 구성과 일치합니다.",
+      "abstain_reason": null
+    },
+    "2027-korean-common-q01": {
+      "question_id": "2027-korean-common-q01",
+      "decision": "answered",
+      "answer": 1,
+      "explanation": "디지털 문서의 매체, 종이 문서와의 차이, 정보망의 형성, 읽기 목적에서 멀어지게 하는 요인은 모두 제시되어 있다. 등장 시기에 대한 내용은 없다.",
+      "abstain_reason": null
+    },
+    "2027-korean-common-q02": {
+      "question_id": "2027-korean-common-q02",
+      "decision": "answered",
+      "answer": 4,
+      "explanation": "적극적 탐색은 탐색의 양을 늘리는 것보다 심층적 이해에 도움이 되는 정보를 찾는 태도이다. 따라서 탐색의 양 늘리기를 우선시하는 것은 적절하지 않다.",
+      "abstain_reason": null
+    },
+    "2027-korean-common-q03": {
+      "question_id": "2027-korean-common-q03",
+      "decision": "answered",
+      "answer": 3,
+      "explanation": "㉢은 다른 누리집을 검색하여 해당 동물이 실존하지 않음을 확인했으므로, 정보의 신뢰성을 검증하는 ㄴ에 해당한다.",
+      "abstain_reason": null
+    },
+    "2027-korean-common-q04": {
+      "question_id": "2027-korean-common-q04",
+      "decision": "answered",
+      "answer": 2,
+      "explanation": "(가)는 고려 말과 조선 건국 이후의 불교 인식 및 배불 정책을, (나)는 전란 이후의 불교 정책과 유학자들의 반응을 제시한다. 모두 관련 논의의 사회적 배경을 설명한다.",
+      "abstain_reason": null
+    },
+    "2027-korean-common-q05": {
+      "question_id": "2027-korean-common-q05",
+      "decision": "answered",
+      "answer": 3,
+      "explanation": "기화는 불교의 사회적 책임을 인정하면서도 불교와 유교의 공존을 주장했다. 국가 운영의 책무를 두 체계가 서로 대신할 수 있다는 주장과는 다르다.",
+      "abstain_reason": null
+    },
+    "2027-korean-common-q06": {
+      "question_id": "2027-korean-common-q06",
+      "decision": "answered",
+      "answer": 5,
+      "explanation": "김만중은 유교와 불교의 유사성 및 불교가 주자학에 미친 영향을 인정했다. 따라서 두 사유 체계의 독자성만을 강조하는 입장에는 접점을 간과한다는 비판을 제기할 수 있다.",
+      "abstain_reason": null
+    },
+    "2027-korean-common-q07": {
+      "question_id": "2027-korean-common-q07",
+      "decision": "answered",
+      "answer": 3,
+      "explanation": "㉠은 유교적 국가 질서를 세우기 위해 불교를 배척하는 논의이고, ㉡은 기존의 불교 비판에서 벗어나 불교를 수용하려는 인식이다.",
+      "abstain_reason": null
+    },
+    "2027-korean-common-q08": {
+      "question_id": "2027-korean-common-q08",
+      "decision": "answered",
+      "answer": 2,
+      "explanation": "독일의 철학자는 ‘공’을 존재의 부정인 ‘무’로 이해했고, 기화는 모든 것이 상호 의존하여 존재한다는 뜻으로 이해했다. 두 이해가 상동하다는 평가는 부적절하다.",
+      "abstain_reason": null
+    },
+    "2027-korean-common-q09": {
+      "question_id": "2027-korean-common-q09",
+      "decision": "answered",
+      "answer": 1,
+      "explanation": "ⓐ는 사람의 도리라는 추상적인 가치나 질서를 무너지게 한다는 의미이다. 불합리한 차별이라는 추상적인 체계를 없앤 ①이 가장 가깝다.",
+      "abstain_reason": null
+    },
+    "2027-korean-common-q10": {
+      "question_id": "2027-korean-common-q10",
+      "decision": "answered",
+      "answer": 4,
+      "explanation": "프레임은 물리 메모리인 주기억 장치를 균등하게 분할한 것이다. 명령어가 저장되는 보조 기억 장치에 만들어진다는 설명은 틀렸다.",
+      "abstain_reason": null
+    },
+    "2027-korean-common-q11": {
+      "question_id": "2027-korean-common-q11",
+      "decision": "answered",
+      "answer": 2,
+      "explanation": "원하는 페이지와 프레임의 번호 쌍이 TLB에 있으면 히트가 발생한다. 이때 CPU는 해당 프레임의 명령어와 데이터를 즉시 처리하므로 명령어 실행이 중지되지 않는다.",
+      "abstain_reason": null
+    },
+    "2027-korean-common-q12": {
+      "question_id": "2027-korean-common-q12",
+      "decision": "answered",
+      "answer": 5,
+      "explanation": "TLB에서 번호 쌍이 계속 교체되면 미스가 반복되어 실행 속도가 떨어질 수 있다. 이를 정상 속도 회복의 원인으로 보는 ⑤는 적절하지 않다.",
+      "abstain_reason": null
+    },
+    "2027-korean-common-q13": {
+      "question_id": "2027-korean-common-q13",
+      "decision": "answered",
+      "answer": 3,
+      "explanation": "프로그램 실행 속도가 ‘떨어질 수 있다’는 표현은 속도가 ‘저하될 수 있다’로 자연스럽게 바꿀 수 있다.",
+      "abstain_reason": null
+    },
+    "2027-korean-common-q14": {
+      "question_id": "2027-korean-common-q14",
+      "decision": "answered",
+      "answer": 1,
+      "explanation": "사실 표현은 진위 검증이 가능하지만, 의견 표현은 가치 판단과 관련된 것이다. 가치 판단에 따라 의견 자체의 진위가 판별된다는 설명은 글과 일치하지 않는다.",
+      "abstain_reason": null
+    },
+    "2027-korean-common-q15": {
+      "question_id": "2027-korean-common-q15",
+      "decision": "answered",
+      "answer": 3,
+      "explanation": "㉠은 널리 알려진 사실을 밝히며 제시된 의견 표현의 책임 여부를 판단하는 법리이다. ㉡은 사실이 드러나지 않았지만 명예훼손적 사실이 암시된 경우에 적용된다.",
+      "abstain_reason": null
+    },
+    "2027-korean-common-q16": {
+      "question_id": "2027-korean-common-q16",
+      "decision": "answered",
+      "answer": 4,
+      "explanation": "대체 법리는 의견 표현의 자유와 명예 보호를 조화시키고 불법행위 유형에 관한 입장 차이를 해소하는 데 기여한다. 이는 공익 사항에 대한 정직한 의견 표현의 면책을 정당화하는 근거가 된다.",
+      "abstain_reason": null
+    },
+    "2027-korean-common-q17": {
+      "question_id": "2027-korean-common-q17",
+      "decision": "answered",
+      "answer": 3,
+      "explanation": "㉮은 모욕적·경멸적 인신공격 표현도 민사상 명예훼손 책임을 지는 것으로 본다. 명예훼손과 모욕을 엄밀히 구분해 책임을 물을 수 없다는 ③은 ㉮과 맞지 않는다.",
+      "abstain_reason": null
+    },
+    "2027-korean-common-q18": {
+      "question_id": "2027-korean-common-q18",
+      "decision": "answered",
+      "answer": 2,
+      "explanation": "심 씨는 상공이 자신과 화춘을 내리고 화진으로 대를 잇게 하려 한다고 생각했다. 그 때문에 가문 사람들이 자기 모자를 없는 사람처럼 무시했다고 판단했다.",
+      "abstain_reason": null
+    },
+    "2027-korean-common-q19": {
+      "question_id": "2027-korean-common-q19",
+      "decision": "answered",
+      "answer": 1,
+      "explanation": "ⓐ는 성준이 모친의 결정을 바꾸어 달라고 애걸하며 흘린 눈물이다. ⓑ는 화진의 간절한 권유를 받아들여 아들을 따라가기로 허락할 때의 눈물이다.",
+      "abstain_reason": null
+    },
+    "2027-korean-common-q20": {
+      "question_id": "2027-korean-common-q20",
+      "decision": "answered",
+      "answer": 5,
+      "explanation": "㉤는 평소 화진을 흠모하던 최형이 무고임을 알고 슬퍼하며 탄식한 장면이다. 범한에게 분노하며 화 씨 가문과의 관계를 추궁한 것은 아니다.",
+      "abstain_reason": null
+    },
+    "2027-korean-common-q21": {
+      "question_id": "2027-korean-common-q21",
+      "decision": "answered",
+      "answer": 4,
+      "explanation": "최형은 화진의 자백 내용을 사실로 인정한 것이 아니라, 무고한 사람에게 억울한 판결을 내릴 수 없다고 생각했다. 자백하게 된 사정을 딱하게 여겨 판결을 망설였다.",
+      "abstain_reason": null
+    },
+    "2027-korean-common-q22": {
+      "question_id": "2027-korean-common-q22",
+      "decision": "answered",
+      "answer": 1,
+      "explanation": "(가)는 ‘무슨 기쁨을 바라 살아왔던가’, ‘왜 그런 부끄러운 고백을 했던가’와 같은 물음을 사용한다. 이를 통해 자기 삶을 돌아보고 성찰하는 자세를 드러낸다.",
+      "abstain_reason": null
+    },
+    "2027-korean-common-q23": {
+      "question_id": "2027-korean-common-q23",
+      "decision": "answered",
+      "answer": 4,
+      "explanation": "거울은 대상이나 심층을 반영하여 보여 주는 사물이므로, 비친 형상에 대한 시선 자체가 가로막힌다고 볼 수 없다. 특히 (다)의 거울은 정확한 풍경을 보여 준다고 설명한다.",
+      "abstain_reason": null
+    },
+    "2027-korean-common-q24": {
+      "question_id": "2027-korean-common-q24",
+      "decision": "answered",
+      "answer": 3,
+      "explanation": "㉠에는 지나온 삶에서 무슨 기쁨을 바랐는지 돌아보는 내용이, ㉡에는 젊은 날의 부끄러운 고백을 후회하는 내용이 담겨 있다.",
+      "abstain_reason": null
+    },
+    "2027-korean-common-q25": {
+      "question_id": "2027-korean-common-q25",
+      "decision": "answered",
+      "answer": 3,
+      "explanation": "‘느닷없이 몸을 뒤집는’ 움직임은 대상에 대한 새로운 발상과 언어의 반전을 떠올리게 한다. 참신함에 대한 기대를 벗어난 침체된 언어로 보는 해석은 부적절하다.",
+      "abstain_reason": null
+    },
+    "2027-korean-common-q26": {
+      "question_id": "2027-korean-common-q26",
+      "decision": "answered",
+      "answer": 5,
+      "explanation": "대상을 ‘그대로’ 보는 것과 관련된 설명은 거울에 해당하고, 안과 밖에 대한 ‘동경’은 유리에 관한 내용이다. ⑤는 ⓐ와 ⓑ의 내용을 뒤바꾸어 설명했다.",
+      "abstain_reason": null
+    },
+    "2027-korean-common-q27": {
+      "question_id": "2027-korean-common-q27",
+      "decision": "answered",
+      "answer": 2,
+      "explanation": "[A]는 인물의 행동과 주변 상황을 서술하다가 ‘내가 없어진 까닭은’으로 시작하는 내면 독백으로 넘어간다. 서술자의 시선에서 인물의 시선으로 이동한 것이다.",
+      "abstain_reason": null
+    },
+    "2027-korean-common-q28": {
+      "question_id": "2027-korean-common-q28",
+      "decision": "answered",
+      "answer": 5,
+      "explanation": "㉁는 백화점과 지하철의 많은 사람들에 대한 기억을 현재의 텅 빈 거리와 대조한다. 기억 속 일이 반복되는 것에 대한 의아함을 나타낸 것은 아니다.",
+      "abstain_reason": null
+    },
+    "2027-korean-common-q29": {
+      "question_id": "2027-korean-common-q29",
+      "decision": "answered",
+      "answer": 4,
+      "explanation": "ⓐ에서 그는 기관지의 구체적 형상을 떠올리지 못해 의문을 해소하지 못한다. ⓑ는 화면이라는 매개물에 포착된 자신의 외적 형상을 보여 준다.",
+      "abstain_reason": null
+    },
+    "2027-korean-common-q30": {
+      "question_id": "2027-korean-common-q30",
+      "decision": "answered",
+      "answer": 2,
+      "explanation": "그는 상상력의 한도 안에서 자신과 삶을 다르게 만들 가능성을 기대한다. 상상력의 한계를 뛰어넘어야 새로운 삶을 찾을 수 있다는 해석은 어울리지 않는다.",
+      "abstain_reason": null
+    },
+    "2027-korean-common-q31": {
+      "question_id": "2027-korean-common-q31",
+      "decision": "answered",
+      "answer": 1,
+      "explanation": "(가)는 각종 악기 소리와 천지가 진동하는 표현 등 청각적 이미지를 활용한다. 이를 통해 행사 장면의 웅장하고 고조된 분위기를 드러낸다.",
+      "abstain_reason": null
+    },
+    "2027-korean-common-q32": {
+      "question_id": "2027-korean-common-q32",
+      "decision": "answered",
+      "answer": 2,
+      "explanation": "㉡는 가마를 끄는 말이 편하도록 지시한 내용이다. 이동 수단을 바꾸면서 동행하는 사람들까지 쉬게 했다는 설명은 표현을 지나치게 확대한 것이다.",
+      "abstain_reason": null
+    },
+    "2027-korean-common-q33": {
+      "question_id": "2027-korean-common-q33",
+      "decision": "answered",
+      "answer": 5,
+      "explanation": "(다)에서 문은 남풍에 의해 열리며 고향 소식에 대한 기대와 실망을 불러일으킨다. 화자의 장소 이동에 따른 정서 변화를 보여 주는 것은 아니다.",
+      "abstain_reason": null
+    },
+    "2027-korean-common-q34": {
+      "question_id": "2027-korean-common-q34",
+      "decision": "answered",
+      "answer": 4,
+      "explanation": "(가)의 ‘백련화 한 가지’ 비유는 달빛과 풍경의 아름다움을 형상화한 표현이다. 이를 풍경에 대한 경외감의 표현으로 보는 것은 적절하지 않다.",
+      "abstain_reason": null
+    },
+    "2027-korean-hwajak-q35": {
+      "question_id": "2027-korean-hwajak-q35",
+      "decision": "answered",
+      "answer": 1,
+      "explanation": "발표자는 정향을 주로 사용하는 요리를 질문한 뒤 청중의 반응을 확인했다. 이는 질문으로 청중의 배경지식을 확인하는 말하기 방식이다.",
+      "abstain_reason": null
+    },
+    "2027-korean-hwajak-q36": {
+      "question_id": "2027-korean-hwajak-q36",
+      "decision": "answered",
+      "answer": 5,
+      "explanation": "자료 3은 정향의 꽃봉오리를 보여 주어, 꽃이 피면 향이 날아가므로 피기 전에 채취해 건조한다는 설명을 뒷받침한다.",
+      "abstain_reason": null
+    },
+    "2027-korean-hwajak-q37": {
+      "question_id": "2027-korean-hwajak-q37",
+      "decision": "answered",
+      "answer": 5,
+      "explanation": "학생 1은 고추에 대한 기존 생각을 수정했지만, 학생 2는 후추의 구체적인 사용 시작 시점을 알려 주지 않은 점을 아쉬워했을 뿐이다. 따라서 두 학생 모두 기존에 알고 있던 바를 수정했다는 설명은 적절하지 않다.",
+      "abstain_reason": null
+    },
+    "2027-korean-hwajak-q38": {
+      "question_id": "2027-korean-hwajak-q38",
+      "decision": "answered",
+      "answer": 3,
+      "explanation": "[A]에서 학생 3은 낯선 식물을 찾기 어렵다는 학생 2의 의견에 동의하면서, 문제를 해결할 대안에 대한 의견을 구하고 있다.",
+      "abstain_reason": null
+    },
+    "2027-korean-hwajak-q39": {
+      "question_id": "2027-korean-hwajak-q39",
+      "decision": "answered",
+      "answer": 5,
+      "explanation": "대화에서 관찰할 식물은 활동을 시작할 때 알려 주기로 했으므로, 이를 사전에 안내한다는 ㉤의 생각은 적절하지 않다.",
+      "abstain_reason": null
+    },
+    "2027-korean-hwajak-q40": {
+      "question_id": "2027-korean-hwajak-q40",
+      "decision": "answered",
+      "answer": 5,
+      "explanation": "ⓔ의 새섬매자기 군락지 분포 면적 감소는 보고서에서 겨울 철새가 감소하는 원인으로 제시되었다. 이는 식물 조사에서 알아보기로 한 서식 실태 정보에 해당한다.",
+      "abstain_reason": null
+    },
+    "2027-korean-hwajak-q41": {
+      "question_id": "2027-korean-hwajak-q41",
+      "decision": "answered",
+      "answer": 1,
+      "explanation": "보고서는 동남참게가 산란한 알을 부화시키고 일정 크기로 키운 뒤 강으로 돌려보내는 과정을 제시했다.",
+      "abstain_reason": null
+    },
+    "2027-korean-hwajak-q42": {
+      "question_id": "2027-korean-hwajak-q42",
+      "decision": "answered",
+      "answer": 3,
+      "explanation": "수정된 [C]에는 기수역 생태계 훼손의 심각성을 새로 언급한 문장이 추가되지 않았다. 나머지 사항은 삭제, 구체화 또는 위치 변경으로 반영되었다.",
+      "abstain_reason": null
+    },
+    "2027-korean-hwajak-q43": {
+      "question_id": "2027-korean-hwajak-q43",
+      "decision": "answered",
+      "answer": 4,
+      "explanation": "초고에는 민간 영화관의 운영 주체를 기업으로, 작은 영화관의 운영 주체를 정부나 지방자치단체로 제시하는 계획이 반영되어 있다.",
+      "abstain_reason": null
+    },
+    "2027-korean-hwajak-q44": {
+      "question_id": "2027-korean-hwajak-q44",
+      "decision": "answered",
+      "answer": 2,
+      "explanation": "②는 경제적 논리를 넘어 사회적 가치와 문화 복지의 관점에서 반박하고, 수익이 나지 않아도 작은 영화관을 운영하는 지역의 사례를 제시한다.",
+      "abstain_reason": null
+    },
+    "2027-korean-hwajak-q45": {
+      "question_id": "2027-korean-hwajak-q45",
+      "decision": "answered",
+      "answer": 4,
+      "explanation": "ㄱ-2와 ㄴ은 작은 영화관의 문화 활동 참여 효과를 보여 줄 뿐, 민간 영화관과 다른 운영 목적을 갖게 된 이유를 설명하지는 않는다. 따라서 ④의 활용 방안은 적절하지 않다.",
+      "abstain_reason": null
+    }
+  },
+  "errors": {},
+  "groups": {
+    "2027-korean-common": {
+      "attempts": [
+        {
+          "iteration": 1,
+          "started_at": "2026-11-19T09:50:25.479Z",
+          "question_ids": [
+            "2027-korean-common-q01",
+            "2027-korean-common-q02",
+            "2027-korean-common-q03",
+            "2027-korean-common-q04",
+            "2027-korean-common-q05",
+            "2027-korean-common-q06",
+            "2027-korean-common-q07",
+            "2027-korean-common-q08",
+            "2027-korean-common-q09",
+            "2027-korean-common-q10",
+            "2027-korean-common-q11",
+            "2027-korean-common-q12",
+            "2027-korean-common-q13",
+            "2027-korean-common-q14",
+            "2027-korean-common-q15",
+            "2027-korean-common-q16",
+            "2027-korean-common-q17",
+            "2027-korean-common-q18",
+            "2027-korean-common-q19",
+            "2027-korean-common-q20",
+            "2027-korean-common-q21",
+            "2027-korean-common-q22",
+            "2027-korean-common-q23",
+            "2027-korean-common-q24",
+            "2027-korean-common-q25",
+            "2027-korean-common-q26",
+            "2027-korean-common-q27",
+            "2027-korean-common-q28",
+            "2027-korean-common-q29",
+            "2027-korean-common-q30",
+            "2027-korean-common-q31",
+            "2027-korean-common-q32",
+            "2027-korean-common-q33",
+            "2027-korean-common-q34"
+          ],
+          "image_encoding": "lossless WebP, original 200 DPI pixels",
+          "image_hashes": [
+            "354d77b1dbc3877d47f08fe17d8b71ada7bfef86fcc0f56571dfb3d2fdf7cedb",
+            "b1be861eb63a67f7ea3aac367c808660569eb91dfde3a66e9c7e0f47aef8c6ff",
+            "52fcd160aba78ef2be37aa86a006b957cdcb69d8d7547d1009b6c3749b126da2",
+            "372f5ef0ab087a0313d08be64ba792f707e9aa913f6c9cfd2cc7681e5675ea84",
+            "b3003a333a53a2c44544571f9c409e665afed84d39757ff828391c0a050fa526",
+            "a8409aa8db0e2b4b76b4936930284a24d90c6322f2d310a11872bf63e62125c3",
+            "33331a1e4bc9c0d3397f25b11288d77d1b2593fad692dbb1ae2661768bf4e897",
+            "c6050f606340d585ea5e1a28fa10c9d5ff49eea20fd912428ad6ecc7ba30f79d",
+            "b13bf230264be37233a56aa58ca531d8210b5fff162e7374347c4cacaf7d1a14",
+            "3e4d93d6d786455743370afad2a5598a97da29011d742c11d816f8dd984db400",
+            "8100c36d7521c3cedc02b467b476b970b418f1bf804702de26cf7829c0d812e1",
+            "c8dd83460f911e43aed496ea459ef5431c53010181fa384500053923f2fcb781"
+          ],
+          "usage": {
+            "input_tokens": 122276,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 122264,
+            "output_tokens": 14773,
+            "reasoning_output_tokens": 11362
+          },
+          "time_seconds": 498.678,
+          "thread_id": "01a1f337-1392-7224-963f-b070d8ca50bf",
+          "status": "completed",
+          "estimated_cost_usd": 0.147754,
+          "response": "{\"answers\":[{\"question_id\":\"2027-korean-common-q01\",\"decision\":\"answered\",\"answer\":1,\"explanation\":\"디지털 문서의 매체, 종이 문서와의 차이, 정보망의 형성, 읽기 목적에서 멀어지게 하는 요인은 모두 제시되어 있다. 등장 시기에 대한 내용은 없다.\",\"abstain_reason\":null},{\"question_id\":\"2027-korean-common-q02\",\"decision\":\"answered\",\"answer\":4,\"explanation\":\"적극적 탐색은 탐색의 양을 늘리는 것보다 심층적 이해에 도움이 되는 정보를 찾는 태도이다. 따라서 탐색의 양 늘리기를 우선시하는 것은 적절하지 않다.\",\"abstain_reason\":null},{\"question_id\":\"2027-korean-common-q03\",\"decision\":\"answered\",\"answer\":3,\"explanation\":\"㉢은 다른 누리집을 검색하여 해당 동물이 실존하지 않음을 확인했으므로, 정보의 신뢰성을 검증하는 ㄴ에 해당한다.\",\"abstain_reason\":null},{\"question_id\":\"2027-korean-common-q04\",\"decision\":\"answered\",\"answer\":2,\"explanation\":\"(가)는 고려 말과 조선 건국 이후의 불교 인식 및 배불 정책을, (나)는 전란 이후의 불교 정책과 유학자들의 반응을 제시한다. 모두 관련 논의의 사회적 배경을 설명한다.\",\"abstain_reason\":null},{\"question_id\":\"2027-korean-common-q05\",\"decision\":\"answered\",\"answer\":3,\"explanation\":\"기화는 불교의 사회적 책임을 인정하면서도 불교와 유교의 공존을 주장했다. 국가 운영의 책무를 두 체계가 서로 대신할 수 있다는 주장과는 다르다.\",\"abstain_reason\":null},{\"question_id\":\"2027-korean-common-q06\",\"decision\":\"answered\",\"answer\":5,\"explanation\":\"김만중은 유교와 불교의 유사성 및 불교가 주자학에 미친 영향을 인정했다. 따라서 두 사유 체계의 독자성만을 강조하는 입장에는 접점을 간과한다는 비판을 제기할 수 있다.\",\"abstain_reason\":null},{\"question_id\":\"2027-korean-common-q07\",\"decision\":\"answered\",\"answer\":3,\"explanation\":\"㉠은 유교적 국가 질서를 세우기 위해 불교를 배척하는 논의이고, ㉡은 기존의 불교 비판에서 벗어나 불교를 수용하려는 인식이다.\",\"abstain_reason\":null},{\"question_id\":\"2027-korean-common-q08\",\"decision\":\"answered\",\"answer\":2,\"explanation\":\"독일의 철학자는 ‘공’을 존재의 부정인 ‘무’로 이해했고, 기화는 모든 것이 상호 의존하여 존재한다는 뜻으로 이해했다. 두 이해가 상동하다는 평가는 부적절하다.\",\"abstain_reason\":null},{\"question_id\":\"2027-korean-common-q09\",\"decision\":\"answered\",\"answer\":1,\"explanation\":\"ⓐ는 사람의 도리라는 추상적인 가치나 질서를 무너지게 한다는 의미이다. 불합리한 차별이라는 추상적인 체계를 없앤 ①이 가장 가깝다.\",\"abstain_reason\":null},{\"question_id\":\"2027-korean-common-q10\",\"decision\":\"answered\",\"answer\":4,\"explanation\":\"프레임은 물리 메모리인 주기억 장치를 균등하게 분할한 것이다. 명령어가 저장되는 보조 기억 장치에 만들어진다는 설명은 틀렸다.\",\"abstain_reason\":null},{\"question_id\":\"2027-korean-common-q11\",\"decision\":\"answered\",\"answer\":2,\"explanation\":\"원하는 페이지와 프레임의 번호 쌍이 TLB에 있으면 히트가 발생한다. 이때 CPU는 해당 프레임의 명령어와 데이터를 즉시 처리하므로 명령어 실행이 중지되지 않는다.\",\"abstain_reason\":null},{\"question_id\":\"2027-korean-common-q12\",\"decision\":\"answered\",\"answer\":5,\"explanation\":\"TLB에서 번호 쌍이 계속 교체되면 미스가 반복되어 실행 속도가 떨어질 수 있다. 이를 정상 속도 회복의 원인으로 보는 ⑤는 적절하지 않다.\",\"abstain_reason\":null},{\"question_id\":\"2027-korean-common-q13\",\"decision\":\"answered\",\"answer\":3,\"explanation\":\"프로그램 실행 속도가 ‘떨어질 수 있다’는 표현은 속도가 ‘저하될 수 있다’로 자연스럽게 바꿀 수 있다.\",\"abstain_reason\":null},{\"question_id\":\"2027-korean-common-q14\",\"decision\":\"answered\",\"answer\":1,\"explanation\":\"사실 표현은 진위 검증이 가능하지만, 의견 표현은 가치 판단과 관련된 것이다. 가치 판단에 따라 의견 자체의 진위가 판별된다는 설명은 글과 일치하지 않는다.\",\"abstain_reason\":null},{\"question_id\":\"2027-korean-common-q15\",\"decision\":\"answered\",\"answer\":3,\"explanation\":\"㉠은 널리 알려진 사실을 밝히며 제시된 의견 표현의 책임 여부를 판단하는 법리이다. ㉡은 사실이 드러나지 않았지만 명예훼손적 사실이 암시된 경우에 적용된다.\",\"abstain_reason\":null},{\"question_id\":\"2027-korean-common-q16\",\"decision\":\"answered\",\"answer\":4,\"explanation\":\"대체 법리는 의견 표현의 자유와 명예 보호를 조화시키고 불법행위 유형에 관한 입장 차이를 해소하는 데 기여한다. 이는 공익 사항에 대한 정직한 의견 표현의 면책을 정당화하는 근거가 된다.\",\"abstain_reason\":null},{\"question_id\":\"2027-korean-common-q17\",\"decision\":\"answered\",\"answer\":3,\"explanation\":\"㉮은 모욕적·경멸적 인신공격 표현도 민사상 명예훼손 책임을 지는 것으로 본다. 명예훼손과 모욕을 엄밀히 구분해 책임을 물을 수 없다는 ③은 ㉮과 맞지 않는다.\",\"abstain_reason\":null},{\"question_id\":\"2027-korean-common-q18\",\"decision\":\"answered\",\"answer\":2,\"explanation\":\"심 씨는 상공이 자신과 화춘을 내리고 화진으로 대를 잇게 하려 한다고 생각했다. 그 때문에 가문 사람들이 자기 모자를 없는 사람처럼 무시했다고 판단했다.\",\"abstain_reason\":null},{\"question_id\":\"2027-korean-common-q19\",\"decision\":\"answered\",\"answer\":1,\"explanation\":\"ⓐ는 성준이 모친의 결정을 바꾸어 달라고 애걸하며 흘린 눈물이다. ⓑ는 화진의 간절한 권유를 받아들여 아들을 따라가기로 허락할 때의 눈물이다.\",\"abstain_reason\":null},{\"question_id\":\"2027-korean-common-q20\",\"decision\":\"answered\",\"answer\":5,\"explanation\":\"㉤는 평소 화진을 흠모하던 최형이 무고임을 알고 슬퍼하며 탄식한 장면이다. 범한에게 분노하며 화 씨 가문과의 관계를 추궁한 것은 아니다.\",\"abstain_reason\":null},{\"question_id\":\"2027-korean-common-q21\",\"decision\":\"answered\",\"answer\":4,\"explanation\":\"최형은 화진의 자백 내용을 사실로 인정한 것이 아니라, 무고한 사람에게 억울한 판결을 내릴 수 없다고 생각했다. 자백하게 된 사정을 딱하게 여겨 판결을 망설였다.\",\"abstain_reason\":null},{\"question_id\":\"2027-korean-common-q22\",\"decision\":\"answered\",\"answer\":1,\"explanation\":\"(가)는 ‘무슨 기쁨을 바라 살아왔던가’, ‘왜 그런 부끄러운 고백을 했던가’와 같은 물음을 사용한다. 이를 통해 자기 삶을 돌아보고 성찰하는 자세를 드러낸다.\",\"abstain_reason\":null},{\"question_id\":\"2027-korean-common-q23\",\"decision\":\"answered\",\"answer\":4,\"explanation\":\"거울은 대상이나 심층을 반영하여 보여 주는 사물이므로, 비친 형상에 대한 시선 자체가 가로막힌다고 볼 수 없다. 특히 (다)의 거울은 정확한 풍경을 보여 준다고 설명한다.\",\"abstain_reason\":null},{\"question_id\":\"2027-korean-common-q24\",\"decision\":\"answered\",\"answer\":3,\"explanation\":\"㉠에는 지나온 삶에서 무슨 기쁨을 바랐는지 돌아보는 내용이, ㉡에는 젊은 날의 부끄러운 고백을 후회하는 내용이 담겨 있다.\",\"abstain_reason\":null},{\"question_id\":\"2027-korean-common-q25\",\"decision\":\"answered\",\"answer\":3,\"explanation\":\"‘느닷없이 몸을 뒤집는’ 움직임은 대상에 대한 새로운 발상과 언어의 반전을 떠올리게 한다. 참신함에 대한 기대를 벗어난 침체된 언어로 보는 해석은 부적절하다.\",\"abstain_reason\":null},{\"question_id\":\"2027-korean-common-q26\",\"decision\":\"answered\",\"answer\":5,\"explanation\":\"대상을 ‘그대로’ 보는 것과 관련된 설명은 거울에 해당하고, 안과 밖에 대한 ‘동경’은 유리에 관한 내용이다. ⑤는 ⓐ와 ⓑ의 내용을 뒤바꾸어 설명했다.\",\"abstain_reason\":null},{\"question_id\":\"2027-korean-common-q27\",\"decision\":\"answered\",\"answer\":2,\"explanation\":\"[A]는 인물의 행동과 주변 상황을 서술하다가 ‘내가 없어진 까닭은’으로 시작하는 내면 독백으로 넘어간다. 서술자의 시선에서 인물의 시선으로 이동한 것이다.\",\"abstain_reason\":null},{\"question_id\":\"2027-korean-common-q28\",\"decision\":\"answered\",\"answer\":5,\"explanation\":\"㉁는 백화점과 지하철의 많은 사람들에 대한 기억을 현재의 텅 빈 거리와 대조한다. 기억 속 일이 반복되는 것에 대한 의아함을 나타낸 것은 아니다.\",\"abstain_reason\":null},{\"question_id\":\"2027-korean-common-q29\",\"decision\":\"answered\",\"answer\":4,\"explanation\":\"ⓐ에서 그는 기관지의 구체적 형상을 떠올리지 못해 의문을 해소하지 못한다. ⓑ는 화면이라는 매개물에 포착된 자신의 외적 형상을 보여 준다.\",\"abstain_reason\":null},{\"question_id\":\"2027-korean-common-q30\",\"decision\":\"answered\",\"answer\":2,\"explanation\":\"그는 상상력의 한도 안에서 자신과 삶을 다르게 만들 가능성을 기대한다. 상상력의 한계를 뛰어넘어야 새로운 삶을 찾을 수 있다는 해석은 어울리지 않는다.\",\"abstain_reason\":null},{\"question_id\":\"2027-korean-common-q31\",\"decision\":\"answered\",\"answer\":1,\"explanation\":\"(가)는 각종 악기 소리와 천지가 진동하는 표현 등 청각적 이미지를 활용한다. 이를 통해 행사 장면의 웅장하고 고조된 분위기를 드러낸다.\",\"abstain_reason\":null},{\"question_id\":\"2027-korean-common-q32\",\"decision\":\"answered\",\"answer\":2,\"explanation\":\"㉡는 가마를 끄는 말이 편하도록 지시한 내용이다. 이동 수단을 바꾸면서 동행하는 사람들까지 쉬게 했다는 설명은 표현을 지나치게 확대한 것이다.\",\"abstain_reason\":null},{\"question_id\":\"2027-korean-common-q33\",\"decision\":\"answered\",\"answer\":5,\"explanation\":\"(다)에서 문은 남풍에 의해 열리며 고향 소식에 대한 기대와 실망을 불러일으킨다. 화자의 장소 이동에 따른 정서 변화를 보여 주는 것은 아니다.\",\"abstain_reason\":null},{\"question_id\":\"2027-korean-common-q34\",\"decision\":\"answered\",\"answer\":4,\"explanation\":\"(가)의 ‘백련화 한 가지’ 비유는 달빛과 풍경의 아름다움을 형상화한 표현이다. 이를 풍경에 대한 경외감의 표현으로 보는 것은 적절하지 않다.\",\"abstain_reason\":null}]}",
+          "finished_at": "2026-11-19T09:58:44.157Z"
+        }
+      ]
+    },
+    "2027-korean-hwajak": {
+      "attempts": [
+        {
+          "iteration": 1,
+          "started_at": "2026-11-19T09:50:34.387Z",
+          "question_ids": [
+            "2027-korean-hwajak-q35",
+            "2027-korean-hwajak-q36",
+            "2027-korean-hwajak-q37",
+            "2027-korean-hwajak-q38",
+            "2027-korean-hwajak-q39",
+            "2027-korean-hwajak-q40",
+            "2027-korean-hwajak-q41",
+            "2027-korean-hwajak-q42",
+            "2027-korean-hwajak-q43",
+            "2027-korean-hwajak-q44",
+            "2027-korean-hwajak-q45"
+          ],
+          "image_encoding": "lossless WebP, original 200 DPI pixels",
+          "image_hashes": [
+            "ea9e234a8dfea52ff31fc139d3058603d45558b2b61ad43ed1d43f223d810087",
+            "b99b48cd1e2aaeeb256d2fb80631049e83d9921c1cfe71415964f160fd82ef8b",
+            "ae2d3f0518126799c147ee6c818fbf53728f3a526c553f35d3d8f53883b92901",
+            "11e16d14db6b07fb5df7d2668168dbba6b182886501eab75b7e2f55574b4d5f5"
+          ],
+          "usage": {
+            "input_tokens": 41397,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 41385,
+            "output_tokens": 5578,
+            "reasoning_output_tokens": 4482
+          },
+          "time_seconds": 187.12,
+          "thread_id": "01a1f337-1303-74ea-8bdb-30cafb2d757c",
+          "status": "completed",
+          "estimated_cost_usd": 0.055804000000000006,
+          "response": "{\"answers\":[{\"question_id\":\"2027-korean-hwajak-q35\",\"decision\":\"answered\",\"answer\":1,\"explanation\":\"발표자는 정향을 주로 사용하는 요리를 질문한 뒤 청중의 반응을 확인했다. 이는 질문으로 청중의 배경지식을 확인하는 말하기 방식이다.\",\"abstain_reason\":null},{\"question_id\":\"2027-korean-hwajak-q36\",\"decision\":\"answered\",\"answer\":5,\"explanation\":\"자료 3은 정향의 꽃봉오리를 보여 주어, 꽃이 피면 향이 날아가므로 피기 전에 채취해 건조한다는 설명을 뒷받침한다.\",\"abstain_reason\":null},{\"question_id\":\"2027-korean-hwajak-q37\",\"decision\":\"answered\",\"answer\":5,\"explanation\":\"학생 1은 고추에 대한 기존 생각을 수정했지만, 학생 2는 후추의 구체적인 사용 시작 시점을 알려 주지 않은 점을 아쉬워했을 뿐이다. 따라서 두 학생 모두 기존에 알고 있던 바를 수정했다는 설명은 적절하지 않다.\",\"abstain_reason\":null},{\"question_id\":\"2027-korean-hwajak-q38\",\"decision\":\"answered\",\"answer\":3,\"explanation\":\"[A]에서 학생 3은 낯선 식물을 찾기 어렵다는 학생 2의 의견에 동의하면서, 문제를 해결할 대안에 대한 의견을 구하고 있다.\",\"abstain_reason\":null},{\"question_id\":\"2027-korean-hwajak-q39\",\"decision\":\"answered\",\"answer\":5,\"explanation\":\"대화에서 관찰할 식물은 활동을 시작할 때 알려 주기로 했으므로, 이를 사전에 안내한다는 ㉤의 생각은 적절하지 않다.\",\"abstain_reason\":null},{\"question_id\":\"2027-korean-hwajak-q40\",\"decision\":\"answered\",\"answer\":5,\"explanation\":\"ⓔ의 새섬매자기 군락지 분포 면적 감소는 보고서에서 겨울 철새가 감소하는 원인으로 제시되었다. 이는 식물 조사에서 알아보기로 한 서식 실태 정보에 해당한다.\",\"abstain_reason\":null},{\"question_id\":\"2027-korean-hwajak-q41\",\"decision\":\"answered\",\"answer\":1,\"explanation\":\"보고서는 동남참게가 산란한 알을 부화시키고 일정 크기로 키운 뒤 강으로 돌려보내는 과정을 제시했다.\",\"abstain_reason\":null},{\"question_id\":\"2027-korean-hwajak-q42\",\"decision\":\"answered\",\"answer\":3,\"explanation\":\"수정된 [C]에는 기수역 생태계 훼손의 심각성을 새로 언급한 문장이 추가되지 않았다. 나머지 사항은 삭제, 구체화 또는 위치 변경으로 반영되었다.\",\"abstain_reason\":null},{\"question_id\":\"2027-korean-hwajak-q43\",\"decision\":\"answered\",\"answer\":4,\"explanation\":\"초고에는 민간 영화관의 운영 주체를 기업으로, 작은 영화관의 운영 주체를 정부나 지방자치단체로 제시하는 계획이 반영되어 있다.\",\"abstain_reason\":null},{\"question_id\":\"2027-korean-hwajak-q44\",\"decision\":\"answered\",\"answer\":2,\"explanation\":\"②는 경제적 논리를 넘어 사회적 가치와 문화 복지의 관점에서 반박하고, 수익이 나지 않아도 작은 영화관을 운영하는 지역의 사례를 제시한다.\",\"abstain_reason\":null},{\"question_id\":\"2027-korean-hwajak-q45\",\"decision\":\"answered\",\"answer\":4,\"explanation\":\"ㄱ-2와 ㄴ은 작은 영화관의 문화 활동 참여 효과를 보여 줄 뿐, 민간 영화관과 다른 운영 목적을 갖게 된 이유를 설명하지는 않는다. 따라서 ④의 활용 방안은 적절하지 않다.\",\"abstain_reason\":null}]}",
+          "finished_at": "2026-11-19T09:53:41.507Z"
+        }
+      ]
+    },
+    "2027-korean-language_media": {
+      "attempts": [
+        {
+          "iteration": 1,
+          "started_at": "2026-11-19T09:58:44.173Z",
+          "question_ids": [
+            "2027-korean-language_media-q35",
+            "2027-korean-language_media-q36",
+            "2027-korean-language_media-q37",
+            "2027-korean-language_media-q38",
+            "2027-korean-language_media-q39",
+            "2027-korean-language_media-q40",
+            "2027-korean-language_media-q41",
+            "2027-korean-language_media-q42",
+            "2027-korean-language_media-q43",
+            "2027-korean-language_media-q44",
+            "2027-korean-language_media-q45"
+          ],
+          "image_encoding": "lossless WebP, original 200 DPI pixels",
+          "image_hashes": [
+            "3f6d50f91ce2b59af95e6b6f7ffa5a9a60b07789f8967b4d127ba3b30efc2d6d",
+            "ad5bc6d0a78ee43846fa54a4747d8d49986b30d0b21693f2d071f1915fd969a0",
+            "29e603dc8977f7c69bab2ef73e19779f1f2b0f6805e23b9864810a9f00aad0a1",
+            "6cee2c908b141f970a0faf7e74677a291f1270862bd41b47c088c166af0c487b"
+          ],
+          "usage": {
+            "input_tokens": 41364,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 41352,
+            "output_tokens": 15809,
+            "reasoning_output_tokens": 14652
+          },
+          "time_seconds": 526.612,
+          "thread_id": "01a1f33e-8a60-76b1-86b0-d1f9acf0e4e1",
+          "status": "completed",
+          "estimated_cost_usd": 0.158114,
+          "response": "{\"answers\":[{\"question_id\":\"2027-korean-language_media-q35\",\"decision\":\"answered\",\"answer\":5,\"explanation\":\"‘바퀴만은’에는 의존 형태소 ‘만’, ‘은’이 있고, ‘돌아요’에는 어간 ‘돌-’과 어미 ‘-아-’, ‘-요’가 있어 의존 형태소의 개수가 서로 다릅니다.\",\"abstain_reason\":null},{\"question_id\":\"2027-korean-language_media-q36\",\"decision\":\"answered\",\"answer\":4,\"explanation\":\"ⓓ의 ‘밑층’, ‘아래층’뿐 아니라 ㄷ의 ‘꽃도미’, ‘붉돔’도 후행 직접 구성 요소가 모두 명사이므로 ④의 구별 설명이 틀렸습니다.\",\"abstain_reason\":null},{\"question_id\":\"2027-korean-language_media-q37\",\"decision\":\"answered\",\"answer\":5,\"explanation\":\"부사어가 생략된 안긴절은 ㉡의 ‘내 친구가 소속된’에도 있어 ‘동아리에’가 생략되었습니다. 따라서 ㉠만 제시한 ⑤가 적절하지 않습니다.\",\"abstain_reason\":null},{\"question_id\":\"2027-korean-language_media-q38\",\"decision\":\"answered\",\"answer\":3,\"explanation\":\"‘희수의 누나’는 ㉡, 한 장의 사진에 누나와 친구들을 함께 담으려 했다는 뜻은 ㉢에 해당합니다. ‘모두 참석하지는 않았다’에서 모임에 참석한 친구가 있다는 ㉫도 포함됩니다.\",\"abstain_reason\":null},{\"question_id\":\"2027-korean-language_media-q39\",\"decision\":\"answered\",\"answer\":4,\"explanation\":\"‘ㅅㅡ시＞사이’에서는 15세기에도 단모음이던 ‘ㅣ’가 현대에도 단모음으로 유지되어 ㉠이 확인됩니다. ‘고개＞고개’에서는 15세기 이중 모음이 현대 단모음 ‘ㅐ’로 변해 ㉡이 확인됩니다.\",\"abstain_reason\":null},{\"question_id\":\"2027-korean-language_media-q40\",\"decision\":\"answered\",\"answer\":1,\"explanation\":\"진행자는 어진의 보관 방법을 요청했을 뿐, 보관함을 오동나무로 만든 이유를 물으며 화제를 제시한 것은 아닙니다. 오동나무의 재료적 특성은 전문가의 설명에서 제시되었습니다.\",\"abstain_reason\":null},{\"question_id\":\"2027-korean-language_media-q41\",\"decision\":\"answered\",\"answer\":2,\"explanation\":\"세은은 방송에서 본 내용과 추가로 찾은 내용을 함께 정리한다고 밝혔고, 우디는 방송에는 장황에 대한 설명이 없었다며 자세한 설명을 요청했습니다.\",\"abstain_reason\":null},{\"question_id\":\"2027-korean-language_media-q42\",\"decision\":\"answered\",\"answer\":1,\"explanation\":\"이모티콘은 기록물 보존 상자를 늦게 알게 된 아쉬움을 나타낸 것이지, 보존 상자의 구매 절차에 대한 아쉬움을 표현한 것은 아닙니다.\",\"abstain_reason\":null},{\"question_id\":\"2027-korean-language_media-q43\",\"decision\":\"answered\",\"answer\":5,\"explanation\":\"㉫의 ‘-거든’은 보존 상자를 늦게 알게 되어 아쉬운 이유를 뒷받침하는 표현입니다. 편지가 변색된 구체적인 과정을 설명하는 것은 아닙니다.\",\"abstain_reason\":null},{\"question_id\":\"2027-korean-language_media-q44\",\"decision\":\"answered\",\"answer\":3,\"explanation\":\"보라는 특정 장소에 방문한 시기를 확인하려고 검색한 것이 아니라, △△산에 가 본 사람을 찾으려고 학급 대화방에서 검색했습니다.\",\"abstain_reason\":null},{\"question_id\":\"2027-korean-language_media-q45\",\"decision\":\"answered\",\"answer\":4,\"explanation\":\"태훈이 언급한 등산 용품 대여와 탐방 프로그램은 산에서 연상되는 구름 그림 안에 제시되었습니다. 이는 서비스 항목을 자연물 이미지에 배치한 구성과 일치합니다.\",\"abstain_reason\":null}]}",
+          "finished_at": "2026-11-19T10:07:30.785Z"
+        }
+      ]
+    },
+    "2027-math-common": {
+      "attempts": [
+        {
+          "iteration": 1,
+          "started_at": "2026-11-19T09:58:44.186Z",
+          "question_ids": [
+            "2027-math-common-q01",
+            "2027-math-common-q02",
+            "2027-math-common-q03",
+            "2027-math-common-q04",
+            "2027-math-common-q05",
+            "2027-math-common-q06",
+            "2027-math-common-q07",
+            "2027-math-common-q08",
+            "2027-math-common-q09",
+            "2027-math-common-q10",
+            "2027-math-common-q11",
+            "2027-math-common-q12",
+            "2027-math-common-q13",
+            "2027-math-common-q14",
+            "2027-math-common-q15",
+            "2027-math-common-q16",
+            "2027-math-common-q17",
+            "2027-math-common-q18",
+            "2027-math-common-q19",
+            "2027-math-common-q20",
+            "2027-math-common-q21",
+            "2027-math-common-q22"
+          ],
+          "image_encoding": "lossless WebP, original 200 DPI pixels",
+          "image_hashes": [
+            "540abb301a7433495aa3af71b135afb71a0df98cab574ff81bff1aeb1a79df43",
+            "f1cf6b03203afa582c4257e939d465cbb07c322fb27f000d0ed8b3c62ae3a386",
+            "4b30fb608761983b1301e681a59c4683785dc72ca15a83f40bbb6f530e541543",
+            "be1fe0298037df304ca475fef75025c7ac45f17396e9c4d8a2f270dd230a510c",
+            "911dd7d471a9767939d7800a1072a1a15d177973242a80c846cd296ed4572c54",
+            "cb09a537662beabd87a04dafbd44c451973408a5eb71ba586535d01e87cde9f4",
+            "d733bff6e2d48d92c661053fd228f15403ee84f3d08c3bf9d9827ced66313284",
+            "f3b2adbfdfcc1ca1ca776cf6fc50d57e94d002e3b2f9fdcdcab01873d987a3f5"
+          ],
+          "usage": {
+            "input_tokens": 81814,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 81802,
+            "output_tokens": 15452,
+            "reasoning_output_tokens": 13170
+          },
+          "time_seconds": 582.093,
+          "thread_id": "01a1f33e-8a62-75b1-aecd-7d9aec31580d",
+          "status": "completed",
+          "estimated_cost_usd": 0.15454400000000001,
+          "response": "{\"answers\":[{\"question_id\":\"2027-math-common-q01\",\"decision\":\"answered\",\"answer\":2,\"explanation\":\"$\\\\sqrt[3]{32}\\\\times 4^{-\\\\frac{1}{3}}=\\\\sqrt[3]{\\\\frac{32}{4}}=\\\\sqrt[3]{8}=2$이므로 ②이다.\",\"abstain_reason\":null},{\"question_id\":\"2027-math-common-q02\",\"decision\":\"answered\",\"answer\":5,\"explanation\":\"주어진 극한은 $f'(1)$이다. $f'(x)=8x^3+2$이므로 $f'(1)=10$이다.\",\"abstain_reason\":null},{\"question_id\":\"2027-math-common-q03\",\"decision\":\"answered\",\"answer\":3,\"explanation\":\"공비를 $r$라 하면 $\\\\frac{a_5}{a_3}=r^2=3$이다. $a_1=1$이므로 $a_7=r^6=(r^2)^3=27$이다.\",\"abstain_reason\":null},{\"question_id\":\"2027-math-common-q04\",\"decision\":\"answered\",\"answer\":4,\"explanation\":\"그래프에서 $\\\\lim_{x\\\\to 0-}f(x)=3$, $\\\\lim_{x\\\\to 1+}f(x)=1$이다. 따라서 두 극한의 합은 $4$이다.\",\"abstain_reason\":null},{\"question_id\":\"2027-math-common-q05\",\"decision\":\"answered\",\"answer\":1,\"explanation\":\"$\\\\int_0^2 f(x)\\\\,dx=F(2)-F(0)=(8-4+2)-0=6$이다.\",\"abstain_reason\":null},{\"question_id\":\"2027-math-common-q06\",\"decision\":\"answered\",\"answer\":1,\"explanation\":\"주기가 $k$이므로 $k=8$이다. 함수의 최댓값은 $3+k=11$이다.\",\"abstain_reason\":null},{\"question_id\":\"2027-math-common-q07\",\"decision\":\"answered\",\"answer\":2,\"explanation\":\"$f'(1)=3-a=0$에서 $a=3$이다. $f'(x)=3(x+3)(x-1)$이므로 $x=-3$에서 극대이고, $f(-3)=28$이다.\",\"abstain_reason\":null},{\"question_id\":\"2027-math-common-q08\",\"decision\":\"answered\",\"answer\":3,\"explanation\":\"$a=2\\\\log_2 3$이고, $\\\\frac{1}{\\\\log_8 3}=\\\\log_3 8=3\\\\log_3 2$이므로 $b=4\\\\log_3 2$이다. 따라서 $ab=8$이다.\",\"abstain_reason\":null},{\"question_id\":\"2027-math-common-q09\",\"decision\":\"answered\",\"answer\":4,\"explanation\":\"$v(t)=3(t-1)(t-5)$이므로 $[0,1]$에서는 양수, $[1,2]$에서는 음수이다. 위치함수를 $F(t)=t^3-9t^2+15t$라 하면 움직인 거리는 $F(1)-F(0)+F(1)-F(2)=7+5=12$이다.\",\"abstain_reason\":null},{\"question_id\":\"2027-math-common-q10\",\"decision\":\"answered\",\"answer\":2,\"explanation\":\"$BC:CA=3:4$이므로 $BC=3k$, $CA=4k$라 하면 코사인법칙에서 $AB=\\\\sqrt{17}k$이다. 외접원의 반지름은 $\\\\sqrt{17}$이고 $\\\\sin C=\\\\frac{2\\\\sqrt{2}}{3}$이므로, 사인법칙을 이용하면 $BC=4\\\\sqrt{2}$이다.\",\"abstain_reason\":null},{\"question_id\":\"2027-math-common-q11\",\"decision\":\"answered\",\"answer\":5,\"explanation\":\"접점이 접선 위에 있으므로 $f(1)=7-11=-4$이다. $y=x^2f(x)$의 $x=1$에서의 미분계수는 $2f(1)+f'(1)=7$이므로 $f'(1)=15$이다.\",\"abstain_reason\":null},{\"question_id\":\"2027-math-common-q12\",\"decision\":\"answered\",\"answer\":3,\"explanation\":\"$S_8-S_3=a_4+a_5+a_6+a_7+a_8=5a_6=-15$이므로 $a_6=-3$이다. $a_3=|a_8|$과 등차수열의 성질을 이용하면 첫째항은 $27$, 공차는 $-6$이고, $S_4=72$이다.\",\"abstain_reason\":null},{\"question_id\":\"2027-math-common-q13\",\"decision\":\"answered\",\"answer\":2,\"explanation\":\"ㄱ은 $\\\\int_0^2|1-x|\\\\,dx=1$로 참이고, ㄴ은 $f(x)+3=(x-1)(x-3)$의 부호를 나누면 참이다. ㄷ은 $\\\\alpha=f(1)$일 때도 주어진 등식이 성립하므로 거짓이다.\",\"abstain_reason\":null},{\"question_id\":\"2027-math-common-q14\",\"decision\":\"answered\",\"answer\":2,\"explanation\":\"직선과 곡선의 교점 조건에서 $Q=(-1,2)$를 얻고, 무게중심 조건을 적용하면 $R=(1,9)$이다. $g(1)=9$에서 $\\\\log_a 3=7$이 되며, 이에 대응하는 선택지는 ②이다.\",\"abstain_reason\":null},{\"question_id\":\"2027-math-common-q15\",\"decision\":\"answered\",\"answer\":3,\"explanation\":\"$g(u)$는 $u=0,1,4$에서 불연속이지만, $g(x^2)$는 $x=0$에서는 연속이고 $x=-2,-1,1,2$에서 불연속이다. 따라서 $n=4$, $a_3=1$이고 $g(1)=4$이므로 $n+g(a_3)=8$이다.\",\"abstain_reason\":null},{\"question_id\":\"2027-math-common-q16\",\"decision\":\"answered\",\"answer\":2,\"explanation\":\"$5^x=5^{-2(x-3)}$이므로 $x=-2x+6$이다. 따라서 $x=2$이다.\",\"abstain_reason\":null},{\"question_id\":\"2027-math-common-q17\",\"decision\":\"answered\",\"answer\":20,\"explanation\":\"$f(x)=2x^3+x+C$이고 $f(1)=5$에서 $C=2$이다. 따라서 $f(2)=16+2+2=20$이다.\",\"abstain_reason\":null},{\"question_id\":\"2027-math-common-q18\",\"decision\":\"answered\",\"answer\":5,\"explanation\":\"좌변은 $30+5a$이고 우변은 $1+4+9+16+25=55$이다. $30+5a=55$이므로 $a=5$이다.\",\"abstain_reason\":null},{\"question_id\":\"2027-math-common-q19\",\"decision\":\"answered\",\"answer\":31,\"explanation\":\"$y'=3(x+2)(x-4)$이므로 $x=-2$에서 극대, $x=4$에서 극소이다. 교점이 정확히 $2$개일 때 $k$는 극값이며, 양수인 극댓값은 $(-2)^3-3(-2)^2-24(-2)+3=31$이다.\",\"abstain_reason\":null},{\"question_id\":\"2027-math-common-q20\",\"decision\":\"answered\",\"answer\":169,\"explanation\":\"직선 $l$의 기울기는 $x_1+x_2-2(b+1)=-2$이므로 $p=-2$이다. 이차방정식에서 $q=\\\\frac{1}{6}$이고, $a\\\\sin\\\\frac{\\\\pi}{6}=\\\\frac{5b}{3}$에서 $h(b)=\\\\frac{10b}{3}$이다. 따라서 $6(p+q+h(9))=6(-2+\\\\frac{1}{6}+30)=169$이다.\",\"abstain_reason\":null},{\"question_id\":\"2027-math-common-q21\",\"decision\":\"answered\",\"answer\":54,\"explanation\":\"조건 (나)에서 $f$는 $x=2$에서 극소이고 $f(-1)=0$이다. 극솟값을 $V$라 하면 $f(x)-V=(x-\\\\gamma)(x-2)^2$로 놓을 수 있고, $f(-1)=0$에서 $V=9(1+\\\\gamma)$이다. 따라서 $f(5)=9(5-\\\\gamma)+9(1+\\\\gamma)=54$이다.\",\"abstain_reason\":null},{\"question_id\":\"2027-math-common-q22\",\"decision\":\"answered\",\"answer\":98,\"explanation\":\"수열은 주기가 $3$이므로 첫 세 항을 $x,y,z$라 하면 $3x+3y+2z=11$, $7x+7y+6z=26$이다. 이를 풀면 $z=\\\\frac14$, $x+y=\\\\frac72$이고 로그 조건에서 $xy=2$이다. 한 주기의 역수 곱의 합은 $\\\\frac{1}{xy}+\\\\frac{x+y}{xyz}=\\\\frac{15}{2}$이므로 구하는 합은 $13\\\\cdot\\\\frac{15}{2}+\\\\frac12=98$이다.\",\"abstain_reason\":null}]}",
+          "finished_at": "2026-11-19T10:08:26.279Z"
+        }
+      ]
+    },
+    "2027-math-probability": {
+      "attempts": [
+        {
+          "iteration": 1,
+          "started_at": "2026-11-19T10:08:26.292Z",
+          "question_ids": [
+            "2027-math-probability-q23",
+            "2027-math-probability-q24",
+            "2027-math-probability-q25",
+            "2027-math-probability-q26",
+            "2027-math-probability-q27",
+            "2027-math-probability-q28",
+            "2027-math-probability-q29",
+            "2027-math-probability-q30"
+          ],
+          "image_encoding": "lossless WebP, original 200 DPI pixels",
+          "image_hashes": [
+            "73dc995b36b2637297bc89e2e46b12936c01d7e0da846489c833e6d45b7ed4d9",
+            "4b4ebf92716044dca511ddf6e166d6d15241a137e4a7ee5f833fe5e031d51002",
+            "942bf775b7996b82d702b94b99d6837eb09a40ed9e068e04f969afbcdfe50a2a",
+            "02793d465588247c44f1d73e3999b5ce5ce3713579631bd4e69b93c146ff364f"
+          ],
+          "usage": {
+            "input_tokens": 41284,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 41272,
+            "output_tokens": 8874,
+            "reasoning_output_tokens": 7861
+          },
+          "time_seconds": 347.047,
+          "thread_id": "01a1f347-6c58-7411-bb09-345ad1d1bd9d",
+          "status": "completed",
+          "estimated_cost_usd": 0.08876400000000001,
+          "response": "{\"answers\":[{\"question_id\":\"2027-math-probability-q23\",\"decision\":\"answered\",\"answer\":3,\"explanation\":\"일곱 자리 각각에 $a$, $b$ 중 하나를 선택할 수 있으므로 중복순열의 수는 $2^7=128$이다.\",\"abstain_reason\":null},{\"question_id\":\"2027-math-probability-q24\",\"decision\":\"answered\",\"answer\":2,\"explanation\":\"$P(A\\\\cap B)=P(A)+P(B)-P(A\\\\cup B)=\\\\frac12+\\\\frac5{12}-\\\\frac34=\\\\frac16$이다.\",\"abstain_reason\":null},{\"question_id\":\"2027-math-probability-q25\",\"decision\":\"answered\",\"answer\":5,\"explanation\":\"이항분포의 분산은 $V(X)=n\\\\cdot\\\\frac23\\\\cdot\\\\frac13=\\\\frac{2n}{9}=16$이므로 $n=72$이다. $E(X)=72\\\\cdot\\\\frac23=48$이므로 $n+E(X)=120$이다.\",\"abstain_reason\":null},{\"question_id\":\"2027-math-probability-q26\",\"decision\":\"answered\",\"answer\":5,\"explanation\":\"$ab\\\\le 4$인 순서쌍은 $8$개이고, $ab\\\\ge 29$인 순서쌍은 $(5,6),(6,5),(6,6)$의 $3$개이다. 따라서 구하는 확률은 $\\\\frac{36-8-3}{36}=\\\\frac{25}{36}$이다.\",\"abstain_reason\":null},{\"question_id\":\"2027-math-probability-q27\",\"decision\":\"answered\",\"answer\":1,\"explanation\":\"신뢰구간의 중심이 $\\\\bar{x}=260$이고, $1.96\\\\frac{\\\\sigma}{\\\\sqrt{64}}=7.84$이므로 $\\\\sigma=32$이다. 따라서 $\\\\bar{x}+\\\\sigma=292$이다.\",\"abstain_reason\":null},{\"question_id\":\"2027-math-probability-q28\",\"decision\":\"answered\",\"answer\":3,\"explanation\":\"조건을 위반하는 인접은 $\\\\frac12$과 $1$이 이웃하는 경우뿐이다. $\\\\frac12$ 두 장을 제외한 일곱 장을 나열할 때 $1$의 연속 구간 수 $r=1,2,3$에 따른 나열 수는 각각 $20,80,40$이고 유효한 삽입 간격 수는 $4,3,2$이므로, 전체 경우의 수는 $20\\\\{4+\\\\binom{4}{2}\\\\}+80\\\\{3+\\\\binom{3}{2}\\\\}+40\\\\{2+\\\\binom{2}{2}\\\\}=800$이다.\",\"abstain_reason\":null},{\"question_id\":\"2027-math-probability-q29\",\"decision\":\"answered\",\"answer\":41,\"explanation\":\"확률의 합에서 $b=\\\\frac12-a-a^2$이고 $E(X)=0$이므로 $V(X)=k^2(10a^2-6a+4)$이다. $1\\\\le V(X)\\\\le\\\\sqrt{V(X)}$이려면 $V(X)=1$이어야 하고, $10a^2-6a+4$의 최솟값이 $a=\\\\frac3{10}$에서 $\\\\frac{31}{10}$이므로 $k^2$의 최댓값은 $\\\\frac{10}{31}$이다. 따라서 $p+q=41$이다.\",\"abstain_reason\":null},{\"question_id\":\"2027-math-probability-q30\",\"decision\":\"answered\",\"answer\":15,\"explanation\":\"한 시행에서 $A$와 $B$의 발생 횟수 합을 $t$의 지수로 표시하면 전체 $20$개 조합은 $2+12t+6t^2$로, $6$을 포함하는 조합은 $6t+4t^2$로 분류된다. 조건부 확률은 $\\\\frac{[t^4](6t+4t^2)^3}{[t^4](2+12t+6t^2)^3}=\\\\frac{432}{2808}=\\\\frac2{13}$이므로 $p+q=15$이다.\",\"abstain_reason\":null}]}",
+          "finished_at": "2026-11-19T10:14:13.339Z"
+        }
+      ]
+    },
+    "2027-math-calculus": {
+      "attempts": [
+        {
+          "iteration": 1,
+          "started_at": "2026-11-19T10:08:26.306Z",
+          "question_ids": [
+            "2027-math-calculus-q23",
+            "2027-math-calculus-q24",
+            "2027-math-calculus-q25",
+            "2027-math-calculus-q26",
+            "2027-math-calculus-q27",
+            "2027-math-calculus-q28",
+            "2027-math-calculus-q29",
+            "2027-math-calculus-q30"
+          ],
+          "image_encoding": "lossless WebP, original 200 DPI pixels",
+          "image_hashes": [
+            "73d5773541a7de65209bf2c7125720832e052b70a18c1f00302466b85ea4d80e",
+            "0b09d37e68e684f1237ab5d1368612cbd2518c66ed767ddde501b69248a3d292",
+            "0730c4d89429a514b6647687cb765f73fad2a514052ae5dc284d24e171d11d1c",
+            "33d9644ef62818783a1e9bf699976905f8fa3a2274ae2cd0decb32b0e3b7f2c7"
+          ],
+          "usage": {
+            "input_tokens": 41294,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 41282,
+            "output_tokens": 9124,
+            "reasoning_output_tokens": 8083
+          },
+          "time_seconds": 269.97,
+          "thread_id": "01a1f347-6c58-775b-82e5-856573c62420",
+          "status": "completed",
+          "estimated_cost_usd": 0.091264,
+          "response": "{\"answers\":[{\"question_id\":\"2027-math-calculus-q23\",\"decision\":\"answered\",\"answer\":1,\"explanation\":\"미분계수의 정의에 의해 $\\\\lim_{x\\\\to 0}\\\\frac{\\\\ln(1-3x)}{x}=-3$이다. 따라서 정답은 ①이다.\",\"abstain_reason\":null},{\"question_id\":\"2027-math-calculus-q24\",\"decision\":\"answered\",\"answer\":4,\"explanation\":\"부분적분법을 적용하면 $\\\\int_0^{\\\\pi}x\\\\sin 4x\\\\,dx=\\\\left[-\\\\frac{x\\\\cos 4x}{4}\\\\right]_0^{\\\\pi}+\\\\frac14\\\\int_0^{\\\\pi}\\\\cos 4x\\\\,dx=-\\\\frac{\\\\pi}{4}$이다.\",\"abstain_reason\":null},{\"question_id\":\"2027-math-calculus-q25\",\"decision\":\"answered\",\"answer\":1,\"explanation\":\"등비수열의 공비는 $2$이고, 극한식에서 첫째항 $a_1$은 $\\\\frac{2a_1}{3}=1$을 만족하므로 $a_1=\\\\frac32$이다. 따라서 $a_4=\\\\frac32\\\\cdot2^3=12$이다.\",\"abstain_reason\":null},{\"question_id\":\"2027-math-calculus-q26\",\"decision\":\"answered\",\"answer\":5,\"explanation\":\"단면의 넓이는 $\\\\frac{\\\\sqrt3}{4}\\\\{(2x+1)e^x+\\\\sin\\\\pi x\\\\}$이므로 부피는 $\\\\frac{\\\\sqrt3}{4}\\\\int_0^2\\\\{(2x+1)e^x+\\\\sin\\\\pi x\\\\}\\\\,dx$이다. 적분값이 $3e^2+1$이므로 부피는 $\\\\frac{\\\\sqrt3(3e^2+1)}{4}$이다.\",\"abstain_reason\":null},{\"question_id\":\"2027-math-calculus-q27\",\"decision\":\"answered\",\"answer\":3,\"explanation\":\"$y=1$에서 두 교점의 $x$좌표는 $\\\\frac2a,-\\\\frac3a$이고 접선의 기울기는 각각 $-\\\\frac{5a}{4},-5a$이다. 두 접선의 교점까지의 높이가 $\\\\frac{25}{3}$이므로 $\\\\frac12\\\\cdot\\\\frac5a\\\\cdot\\\\frac{25}{3}=5$에서 $a=\\\\frac{25}{6}$이다.\",\"abstain_reason\":null},{\"question_id\":\"2027-math-calculus-q28\",\"decision\":\"answered\",\"answer\":4,\"explanation\":\"조건 (나)에서 $a=e$, $bk=2$이고 $f(k)=k+1$에서 $k=e$, $b=\\\\frac2e$를 얻는다. $g(k)=\\\\frac1b=\\\\frac e2$이고 $g'(k+1)=1-\\\\frac1{f'(k)}=-\\\\frac1{e-1}$이므로 합은 $\\\\frac{(e+1)(e-2)}{2(e-1)}$이다.\",\"abstain_reason\":null},{\"question_id\":\"2027-math-calculus-q29\",\"decision\":\"answered\",\"answer\":12,\"explanation\":\"급수가 발산하려면 $b_n=1$이 무한히 많아야 한다. $k=5,7$에서는 충분히 큰 모든 $n$에 대해 $(a_n-1)(a_{n+1}+1)<0$이 성립하고 다른 자연수 $k$에서는 유한 번만 성립하므로, 구하는 합은 $5+7=12$이다.\",\"abstain_reason\":null},{\"question_id\":\"2027-math-calculus-q30\",\"decision\":\"answered\",\"answer\":75,\"explanation\":\"미분가능성과 두 부등호에 의해 네 구간 $[0,\\\\frac\\\\pi2], [\\\\frac\\\\pi2,\\\\pi], [\\\\pi,\\\\frac{3\\\\pi}2], [\\\\frac{3\\\\pi}2,2\\\\pi]$에서 $f$의 부호는 각각 $+,-,+,+$이다. $J=\\\\int_0^{\\\\pi/2}\\\\sin x\\\\cos x(\\\\sqrt{1+3\\\\cos^2x}-1)\\\\,dx=\\\\frac5{18}$이고 $\\\\alpha=3J=\\\\frac56$이므로 $90\\\\alpha=75$이다.\",\"abstain_reason\":null}]}",
+          "finished_at": "2026-11-19T10:12:56.276Z"
+        }
+      ]
+    },
+    "2027-math-geometry": {
+      "attempts": [
+        {
+          "iteration": 1,
+          "started_at": "2026-11-19T10:14:13.349Z",
+          "question_ids": [
+            "2027-math-geometry-q23",
+            "2027-math-geometry-q24",
+            "2027-math-geometry-q25",
+            "2027-math-geometry-q26",
+            "2027-math-geometry-q27",
+            "2027-math-geometry-q28",
+            "2027-math-geometry-q29",
+            "2027-math-geometry-q30"
+          ],
+          "image_encoding": "lossless WebP, original 200 DPI pixels",
+          "image_hashes": [
+            "4226c62b0bfaff9d268906c3196d214125380e2e92bfe11b9d73b12810916687",
+            "93a74c155ab08f42e224d0c6137e43736d55125813d9d664c0045a574f569d33",
+            "7211d0440868ec9d744679805df4c5305407697ccc23177a8a08ad5238275d1a",
+            "cb26fae3a687ee1c99a5cf0f976fc29fc9993e035c963c57821db0c8c3e4cb59"
+          ],
+          "usage": {
+            "input_tokens": 41286,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 41274,
+            "output_tokens": 7985,
+            "reasoning_output_tokens": 6857
+          },
+          "time_seconds": 254.311,
+          "thread_id": "01a1f34c-b831-71cc-99ca-2498ed26e4aa",
+          "status": "completed",
+          "estimated_cost_usd": 0.079874,
+          "response": "{\"answers\":[{\"question_id\":\"2027-math-geometry-q23\",\"decision\":\"answered\",\"answer\":3,\"explanation\":\"$2\\\\vec a+\\\\vec b=(5,-2)$이므로 모든 성분의 합은 $5-2=3$이다.\",\"abstain_reason\":null},{\"question_id\":\"2027-math-geometry-q24\",\"decision\":\"answered\",\"answer\":4,\"explanation\":\"꼭짓점에서 초점까지의 거리가 $4$이므로 포물선은 $y^{2}=16(x+1)$이다. $x=0$을 대입하면 $a^{2}=16$이고, 양수이므로 $a=4$이다.\",\"abstain_reason\":null},{\"question_id\":\"2027-math-geometry-q25\",\"decision\":\"answered\",\"answer\":3,\"explanation\":\"내분점의 $x$좌표 조건에서 $\\\\frac{a-6}{3}=0$이어서 $a=6$이다. 외분점의 $y,z$좌표 조건에서 $3b+6=0$, $3c-12=0$이므로 $a+b+c=8$이다.\",\"abstain_reason\":null},{\"question_id\":\"2027-math-geometry-q26\",\"decision\":\"answered\",\"answer\":5,\"explanation\":\"$\\\\overline{PF}=3$이고 $\\\\overline{PF'}=7$이므로 $2a=10$, 즉 $a=5$이다. 또 $\\\\overline{PQ}=\\\\frac{2b^{2}}{a}=6$에서 $b^{2}=15$이므로 $a^{2}+b^{2}=40$이다.\",\"abstain_reason\":null},{\"question_id\":\"2027-math-geometry-q27\",\"decision\":\"answered\",\"answer\":1,\"explanation\":\"밑면에서 $\\\\overline{GI}=4\\\\sqrt{3}$이고, $M$의 정사영과 직선 $GI$ 사이의 거리는 $5$이다. 높이가 $2\\\\sqrt{6}$이므로 삼각형의 높이는 $\\\\sqrt{5^{2}+(2\\\\sqrt{6})^{2}}=7$이고, 넓이는 $14\\\\sqrt{3}$이다.\",\"abstain_reason\":null},{\"question_id\":\"2027-math-geometry-q28\",\"decision\":\"answered\",\"answer\":4,\"explanation\":\"좌표를 $O=(0,0)$, $A=(2,2)$, $B=(2,0)$으로 놓으면 가능한 $R=(x,y)$의 영역은 $(2,4),(4,4),(\\\\frac{10}{3},\\\\frac{10}{3})$을 꼭짓점으로 하는 삼각형이다. 목적식은 $\\\\vec{OR}\\\\cdot\\\\vec{BR}=(x-1)^{2}+y^{2}-1$이므로 $M=24$, $m=\\\\frac{76}{5}$이고 $M+m=\\\\frac{196}{5}$이다.\",\"abstain_reason\":null},{\"question_id\":\"2027-math-geometry-q29\",\"decision\":\"answered\",\"answer\":45,\"explanation\":\"$r=\\\\sqrt{\\\\overline{AF}/p}$라 하면 $\\\\overline{BF}=2pr$, $\\\\overline{BC}=pr(r-1)$이므로 조건에서 $r=\\\\frac{5}{4}$이다. 이를 이용하면 쌍곡선의 양의 기울기 점근선과 $F$ 사이의 거리가 $\\\\frac{15p}{8}$이어서 $p=8$이고, 삼각형의 둘레는 $2\\\\overline{AF}+\\\\overline{BF}=\\\\frac{45p}{8}=45$이다.\",\"abstain_reason\":null},{\"question_id\":\"2027-math-geometry-q30\",\"decision\":\"answered\",\"answer\":223,\"explanation\":\"$H$를 원점으로, $\\\\alpha$를 $z=0$으로 놓으면 $O=(0,0,2\\\\sqrt{5})$, $A=(-5,0,0)$, $B=(5,0,0)$, $C=(1,2\\\\sqrt{6},0)$, $D=(1,2\\\\sqrt{6},4\\\\sqrt{5})$로 둘 수 있다. 두 구의 교선이 놓인 평면은 $x+2\\\\sqrt{6}y+2\\\\sqrt{5}z=53$이고, 원 $C_{2}$의 반지름의 제곱은 $\\\\frac{104}{5}$이며 $\\\\alpha$와 이루는 각의 코사인은 $\\\\frac{2}{3}$이다. 따라서 정사영의 넓이는 $\\\\frac{208}{15}\\\\pi$이므로 $p+q=223$이다.\",\"abstain_reason\":null}]}",
+          "finished_at": "2026-11-19T10:18:27.660Z"
+        }
+      ]
+    },
+    "2027-english-english": {
+      "attempts": [
+        {
+          "iteration": 1,
+          "started_at": "2026-11-19T10:14:13.390Z",
+          "question_ids": [
+            "2027-english-english-q01",
+            "2027-english-english-q02",
+            "2027-english-english-q03",
+            "2027-english-english-q04",
+            "2027-english-english-q05",
+            "2027-english-english-q06",
+            "2027-english-english-q07",
+            "2027-english-english-q08",
+            "2027-english-english-q09",
+            "2027-english-english-q10",
+            "2027-english-english-q11",
+            "2027-english-english-q12",
+            "2027-english-english-q13",
+            "2027-english-english-q14",
+            "2027-english-english-q15",
+            "2027-english-english-q16",
+            "2027-english-english-q17",
+            "2027-english-english-q18",
+            "2027-english-english-q19",
+            "2027-english-english-q20",
+            "2027-english-english-q21",
+            "2027-english-english-q22",
+            "2027-english-english-q23",
+            "2027-english-english-q24",
+            "2027-english-english-q25",
+            "2027-english-english-q26",
+            "2027-english-english-q27",
+            "2027-english-english-q28",
+            "2027-english-english-q29",
+            "2027-english-english-q30",
+            "2027-english-english-q31",
+            "2027-english-english-q32",
+            "2027-english-english-q33",
+            "2027-english-english-q34",
+            "2027-english-english-q35",
+            "2027-english-english-q36",
+            "2027-english-english-q37",
+            "2027-english-english-q38",
+            "2027-english-english-q39",
+            "2027-english-english-q40",
+            "2027-english-english-q41",
+            "2027-english-english-q42",
+            "2027-english-english-q43",
+            "2027-english-english-q44",
+            "2027-english-english-q45"
+          ],
+          "image_encoding": "lossless WebP, original 200 DPI pixels",
+          "image_hashes": [
+            "9b5fd3ecea0123fc394b993674e42c1bb2c0d3c914c9186d0113c459d5dc4d08",
+            "0be1c08a34116867984c51f3ab38f92697ce01a5cc85c616960de9e0290ba6f9",
+            "29aefb559ffd734a33e5f3e97121929f8a7aeee2e2388dfcc7ad5af489401d42",
+            "c1744acba72e8b9774604dee3f5807ca6e4df75a4b7fb1ef12b3d2c24f2e7e4d",
+            "9c25e02a0b2e0bf7e1d113729fe3fa5b9e86e79b44457556de9d0828c49ed03e",
+            "63713a1d555c9ebf249722c5900a4a701effa52eb6436c107f27528665aa97b5",
+            "1c1e1407595ffbc4069fa45378ed9bec12d1151878e8467dc1355a717d5a4e26",
+            "c19a9ede07cc36f1d4c1aaf40978915d0a71e099f2e1f32e217bfcb619acaf85",
+            "0c78089e36962204d73619eced10d7b5fde36d78ef45fffa0bf5aa1a131b6ad4",
+            "1a36430d2dc9dc9205af7826b36a46fa7d5e02e16d5589209127dcb93165c70c",
+            "450c43f7f474a2936aca2b0f93a05dba4e49fbd7bd16b29bbe58a89822810a4f",
+            "291ccc387440f6f3fc4e674ddee4f41b7e3361a9bc1ca431d4caeefc2a9bf12e",
+            "36f333d2157c913a2e0d1f78afe345a6a78f8128ff575bc021f1c633d5cd835e",
+            "25ce62d9153037c2835437cbeddbefba4fddcf026729674e1dbab689e3629656",
+            "d8bf7ec32ba5c2e174a14de785d3e44185148ffa38ea5de200b959edcd3bb563",
+            "19320ac393848a4750b748e52791feb9f0e8e0cd516b744f868db683ae58b42c",
+            "27edec7d048228b4ee14cd25ffcb906cacfdbaaf6a1906bb5ffd2c081179a964",
+            "ca9bb35b57496c11ece95a6f4e38880cd1c831aa93b36efcdb49d4cbb665cddf",
+            "5b29b55047cb6e5f3c9d3ece6db2ff047663c712434a3c89898f6ee0734ca969",
+            "d4d562e5f4e13f6edab10c9e47ea28fcd2f789df7ebb3647e4662171b17bfa83",
+            "220b247e04f8d228bcf29a504d4d35879bc39596be1a486e2d87747434ad1c0f",
+            "3171dc2f90333daf4a43d8b74b65b942be6afbd5142ef9be7410c7f02cd765ef",
+            "07fd21be0c36c2b8f94494b3b4b8eb4eb1f2b2a2fee32e9fffe3de0d99cc1030",
+            "e7a69ce6213d620f310eee142ce0b6b5c2d88d31fdd27346f84fbcb6fc9c1b34",
+            "e6aa5f8c5784c47b69544aba242171263764bdbc7e62fb4fa733c73df78a0ba6"
+          ],
+          "usage": {
+            "input_tokens": 168954,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 168942,
+            "output_tokens": 5351,
+            "reasoning_output_tokens": 1629
+          },
+          "time_seconds": 167.896,
+          "thread_id": "01a1f34c-b835-768c-9560-216b38845e9b",
+          "status": "completed",
+          "estimated_cost_usd": 0.053534000000000005,
+          "response": "{\"answers\":[{\"question_id\":\"2027-english-english-q01\",\"decision\":\"answered\",\"answer\":3,\"explanation\":\"여자는 헬스장 이용 시 깨끗한 운동화를 신어야 기계와 회원의 건강에 문제가 생기지 않는다며 이를 당부한다.\",\"abstain_reason\":null},{\"question_id\":\"2027-english-english-q02\",\"decision\":\"answered\",\"answer\":1,\"explanation\":\"남자는 불꽃놀이가 독성 화학물질을 남겨 공기·토양·물을 오염시키고 새들을 놀라게 할 수 있다며 환경에 해롭다고 말한다.\",\"abstain_reason\":null},{\"question_id\":\"2027-english-english-q03\",\"decision\":\"answered\",\"answer\":1,\"explanation\":\"개인적인 이야기를 공유하면 신뢰와 개방이 생겨 서로 가까워지고 대인 관계가 강화된다는 것이 핵심이다.\",\"abstain_reason\":null},{\"question_id\":\"2027-english-english-q04\",\"decision\":\"answered\",\"answer\":3,\"explanation\":\"대화에서는 줄무늬 블라인드를 언급하지만 그림의 ③은 하트 무늬 블라인드이므로 일치하지 않는다.\",\"abstain_reason\":null},{\"question_id\":\"2027-english-english-q05\",\"decision\":\"answered\",\"answer\":5,\"explanation\":\"남자가 학교 로비에 배달된 동아리 티셔츠를 가져와야 한다고 하자 여자가 자신이 하겠다고 답한다.\",\"abstain_reason\":null},{\"question_id\":\"2027-english-english-q06\",\"decision\":\"answered\",\"answer\":4,\"explanation\":\"입장권 50달러와 특별전시 관람권 20달러의 합계 70달러에서 10%를 할인하면 지불액은 63달러이다.\",\"abstain_reason\":null},{\"question_id\":\"2027-english-english-q07\",\"decision\":\"answered\",\"answer\":1,\"explanation\":\"여자는 이번 주말에 가족과 캠핑을 가기 때문에 팝업 마켓에 갈 수 없다고 말한다.\",\"abstain_reason\":null},{\"question_id\":\"2027-english-english-q08\",\"decision\":\"answered\",\"answer\":3,\"explanation\":\"행사 기간, 온라인 등록 방법, 2달러의 참가비, 특별 강연이 언급되지만 기념품은 언급되지 않는다.\",\"abstain_reason\":null},{\"question_id\":\"2027-english-english-q09\",\"decision\":\"answered\",\"answer\":4,\"explanation\":\"학교에서 한복은 빌려주지만 모자나 가방 같은 한복 액세서리는 제공하지 않는다고 안내한다.\",\"abstain_reason\":null},{\"question_id\":\"2027-english-english-q10\",\"decision\":\"answered\",\"answer\":4,\"explanation\":\"30인치와 40달러 제품 및 나비 모양을 제외하면 B와 D가 남고, 꼬리가 있는 연을 선택하므로 D 모델이다.\",\"abstain_reason\":null},{\"question_id\":\"2027-english-english-q11\",\"decision\":\"answered\",\"answer\":1,\"explanation\":\"여자가 John이 속한 A조에 자신의 이름을 추가해 달라고 요청하므로 이를 수락하는 ①이 적절하다.\",\"abstain_reason\":null},{\"question_id\":\"2027-english-english-q12\",\"decision\":\"answered\",\"answer\":5,\"explanation\":\"여자는 더 늦은 기차표를 예약할 수 있는지 확인한 뒤 다시 전화하겠다고 응답하는 것이 자연스럽다.\",\"abstain_reason\":null},{\"question_id\":\"2027-english-english-q13\",\"decision\":\"answered\",\"answer\":2,\"explanation\":\"여자가 과학실에 돌아가 열쇠고리를 확인해 보겠다고 하므로 그곳에서 찾기를 바란다는 ②가 적절하다.\",\"abstain_reason\":null},{\"question_id\":\"2027-english-english-q14\",\"decision\":\"answered\",\"answer\":4,\"explanation\":\"배우의 식사를 방해하지 말고 사생활을 존중하자는 아버지의 말에 딸이 그녀를 귀찮게 하지 않겠다고 수긍한다.\",\"abstain_reason\":null},{\"question_id\":\"2027-english-english-q15\",\"decision\":\"answered\",\"answer\":5,\"explanation\":\"Amy는 무설탕 음료를 찾는 고객이 늘고 있으므로 메뉴에 무설탕 음료를 포함하자고 제안할 것이다.\",\"abstain_reason\":null},{\"question_id\":\"2027-english-english-q16\",\"decision\":\"answered\",\"answer\":1,\"explanation\":\"보드게임·아이스크림·거울·튤립처럼 현재는 흔하지만 과거에는 소유자의 높은 지위를 보여 준 물건들을 설명한다.\",\"abstain_reason\":null},{\"question_id\":\"2027-english-english-q17\",\"decision\":\"answered\",\"answer\":2,\"explanation\":\"보드게임, 아이스크림, 거울, 튤립은 언급되지만 초콜릿은 언급되지 않는다.\",\"abstain_reason\":null},{\"question_id\":\"2027-english-english-q18\",\"decision\":\"answered\",\"answer\":5,\"explanation\":\"작성자는 호텔 베개 덕분에 잘 잤다며 같은 베개를 어디에서 구입할 수 있는지 문의한다.\",\"abstain_reason\":null},{\"question_id\":\"2027-english-english-q19\",\"decision\":\"answered\",\"answer\":1,\"explanation\":\"반죽이 부풀지 않을 때 Christine은 좌절했지만, 베이킹파우더를 추가한 뒤 반죽이 부풀자 흥분하고 기뻐한다.\",\"abstain_reason\":null},{\"question_id\":\"2027-english-english-q20\",\"decision\":\"answered\",\"answer\":2,\"explanation\":\"촬영 전에 대상 동물을 충분히 공부해 행동을 예측해야 촬영 성공 가능성이 커지고 현장에서의 시간도 즐거워진다고 주장한다.\",\"abstain_reason\":null},{\"question_id\":\"2027-english-english-q21\",\"decision\":\"answered\",\"answer\":2,\"explanation\":\"데이터를 밀폐된 상자처럼 비공개로 고수하는 것이 연결과 학습을 통한 가치 창출을 막아 회사의 발전을 저해한다는 의미이다.\",\"abstain_reason\":null},{\"question_id\":\"2027-english-english-q22\",\"decision\":\"answered\",\"answer\":5,\"explanation\":\"독자가 글에서 찾으려는 바를 미리 명확히 하고 저자의 질문과 답을 추적하면 더 빠르고 효율적으로 읽을 수 있다는 요지이다.\",\"abstain_reason\":null},{\"question_id\":\"2027-english-english-q23\",\"decision\":\"answered\",\"answer\":2,\"explanation\":\"환경에 적응한 부모 식물의 변화가 자손에게 전달되어 자손이 같은 어려움에 더 잘 대처한다는 세대 간 적응이 주제이다.\",\"abstain_reason\":null},{\"question_id\":\"2027-english-english-q24\",\"decision\":\"answered\",\"answer\":5,\"explanation\":\"실시간 정보와 발달한 운송 기술로 전 세계에서 생산된 신선식품이 소비자 근처의 슈퍼마켓까지 이동하는 과정을 설명한다.\",\"abstain_reason\":null},{\"question_id\":\"2027-english-english-q25\",\"decision\":\"answered\",\"answer\":5,\"explanation\":\"워싱턴 D.C.의 폭염일은 2023년 13일에서 2024년 32일로 늘었지만, 2023년의 세 배인 39일을 넘지 않으므로 ⑤가 틀렸다.\",\"abstain_reason\":null},{\"question_id\":\"2027-english-english-q26\",\"decision\":\"answered\",\"answer\":4,\"explanation\":\"Baboon Metaphysics는 Cheney가 남편과 함께 쓴 책이므로 단독 집필했다는 ④가 일치하지 않는다.\",\"abstain_reason\":null},{\"question_id\":\"2027-english-english-q27\",\"decision\":\"answered\",\"answer\":5,\"explanation\":\"등록은 컨벤션 센터를 직접 방문해서만 할 수 있고 온라인 등록은 불가능하므로 ⑤가 일치하지 않는다.\",\"abstain_reason\":null},{\"question_id\":\"2027-english-english-q28\",\"decision\":\"answered\",\"answer\":4,\"explanation\":\"특별 활동에 오후 1시부터 4시까지 어린이를 위한 자전거 타기 수업이 포함되어 있다.\",\"abstain_reason\":null},{\"question_id\":\"2027-english-english-q29\",\"decision\":\"answered\",\"answer\":3,\"explanation\":\"③ 자리는 문장의 주어이므로 동사원형 think가 아니라 동명사 thinking이어야 한다.\",\"abstain_reason\":null},{\"question_id\":\"2027-english-english-q30\",\"decision\":\"answered\",\"answer\":3,\"explanation\":\"글은 인간의 지능이 단순히 합산되지 않는 개인의 능력이라고 설명하므로 additive가 문맥에 맞지 않는다.\",\"abstain_reason\":null},{\"question_id\":\"2027-english-english-q31\",\"decision\":\"answered\",\"answer\":1,\"explanation\":\"여러 행동과 결정 단계를 거치면 조작자가 장치를 작동하려는 선택을 각 단계에서 재고할 기회를 갖게 된다.\",\"abstain_reason\":null},{\"question_id\":\"2027-english-english-q32\",\"decision\":\"answered\",\"answer\":1,\"explanation\":\"VR 관람자는 특정 세부 장면을 보는 시점과 방식을 제작자가 정확히 통제할 수 없으며 다른 곳을 볼 수도 있다는 설명과 이어진다.\",\"abstain_reason\":null},{\"question_id\":\"2027-english-english-q33\",\"decision\":\"answered\",\"answer\":5,\"explanation\":\"뚜렷한 문화적 차이가 존재하려면 각 사회 내부에서 규범에 대한 상당한 순응이 필요하다는 논리이다.\",\"abstain_reason\":null},{\"question_id\":\"2027-english-english-q34\",\"decision\":\"answered\",\"answer\":3,\"explanation\":\"공간의 회화적 구성이 시간에 따라 연속적으로 지각되는 선과 색의 패턴이 될 때 리듬이 된다는 문맥에 맞다.\",\"abstain_reason\":null},{\"question_id\":\"2027-english-english-q35\",\"decision\":\"answered\",\"answer\":3,\"explanation\":\"③은 소셜미디어 콘텐츠 전반의 다양성을 설명할 뿐 온라인 게임과 e스포츠 확산 요인과는 관련이 없다.\",\"abstain_reason\":null},{\"question_id\":\"2027-english-english-q36\",\"decision\":\"answered\",\"answer\":2,\"explanation\":\"(B)가 인간 식량 공급에 미치는 영향을 제시하고, (A)가 곤충 섭취에 대한 서구의 거부감과 세계적 일반성을 대비하며, (C)가 구체적 사례를 덧붙인다.\",\"abstain_reason\":null},{\"question_id\":\"2027-english-english-q37\",\"decision\":\"answered\",\"answer\":4,\"explanation\":\"(C)가 수집품의 부와 인지적 권력 과시를 설명하고, (A)가 그 숨은 의미에 대한 접근을 다룬 뒤, (B)가 박물관으로의 변화와 지속되는 특성을 정리한다.\",\"abstain_reason\":null},{\"question_id\":\"2027-english-english-q38\",\"decision\":\"answered\",\"answer\":3,\"explanation\":\"수면의 기능이 여전히 미스터리라는 문장 뒤에 제시문을 넣으면, 단순한 휴식이 아니라는 설명과 이어지는 해먹 예시가 자연스럽다.\",\"abstain_reason\":null},{\"question_id\":\"2027-english-english-q39\",\"decision\":\"answered\",\"answer\":4,\"explanation\":\"④ 앞의 지리적 거리, 운송비, 소비자의 제한된 비교 능력, 규제 활동이 경쟁을 줄이는 기제들이므로 제시문은 그 직후에 위치한다.\",\"abstain_reason\":null},{\"question_id\":\"2027-english-english-q40\",\"decision\":\"answered\",\"answer\":2,\"explanation\":\"광고는 소비자의 기대를 형성해 브랜드에 대한 태도를 길러 주고, 이후 브랜드 사용 경험에도 영향을 주어 장기 소비를 유도한다.\",\"abstain_reason\":null},{\"question_id\":\"2027-english-english-q41\",\"decision\":\"answered\",\"answer\":1,\"explanation\":\"지구와 유사한 환경에서 생명체를 찾는 관점과 지구 생명체가 보편적이지 않다는 대안적 관점을 대비하므로 ①이 적절하다.\",\"abstain_reason\":null},{\"question_id\":\"2027-english-english-q42\",\"decision\":\"answered\",\"answer\":2,\"explanation\":\"지구 중심의 탐색 논리는 항성 거주 가능 영역 개념의 기반이 되므로 contradicts가 아니라 supports에 해당하는 표현이어야 한다.\",\"abstain_reason\":null},{\"question_id\":\"2027-english-english-q43\",\"decision\":\"answered\",\"answer\":4,\"explanation\":\"(D)에서 아버지가 상담을 권하고, (B)에서 Andy가 상담 교사와 대화하며, (C)에서 팀 훈련에 복귀하는 순서이다.\",\"abstain_reason\":null},{\"question_id\":\"2027-english-english-q44\",\"decision\":\"answered\",\"answer\":2,\"explanation\":\"(b)의 His는 상담 교사 Mr. Johnson을 가리키지만, 나머지 (a), (c), (d), (e)는 모두 Andy를 가리킨다.\",\"abstain_reason\":null},{\"question_id\":\"2027-english-english-q45\",\"decision\":\"answered\",\"answer\":3,\"explanation\":\"Andy는 상담 후 팀 훈련에 다시 참여했고 팀원들의 환영을 받았으므로 복귀하지 않았다는 ③이 사실과 다르다.\",\"abstain_reason\":null}]}",
+          "finished_at": "2026-11-19T10:17:01.286Z"
+        }
+      ]
+    }
+  },
+  "iterations": [
+    {
+      "iteration": 1,
+      "started_at": "2026-11-19T09:49:56.377Z",
+      "pending_groups": [
+        "2027-korean-common",
+        "2027-korean-hwajak",
+        "2027-korean-language_media",
+        "2027-math-common",
+        "2027-math-probability",
+        "2027-math-calculus",
+        "2027-math-geometry",
+        "2027-english-english"
+      ]
+    }
+  ],
+  "usage": {
+    "input_tokens": 579669,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 579573,
+    "output_tokens": 82946,
+    "reasoning_output_tokens": 68096
+  },
+  "wall_time_seconds": 1711.289,
+  "prompt_hash": "8516ead6f5815329fcbea9ae6072c55f72fa318f47528b77bf4e0ecbd76613e0",
+  "source_hashes": {
+    "exams/pdf/2027/국어영역_문제지.pdf": "6d9560b193a4e68d61a356215447f5268408793615ba013f777ac309ce109b84",
+    "exams/pdf/2027/수학영역_문제지.pdf": "bb8b8a8cf982d208f75a0114b9c9ada2cd438c5a658c46ae72df527478fff22f",
+    "exams/pdf/2027/영어영역_문제지.pdf": "139f0f9e0a746948a982ff1b37418f808130132000b5435e6a9c101a81a4ec2f",
+    "exams/pdf/2027/영어영역듣기평가대본.pdf": "bc481f077e4f80fa06ed26b10d1e2cfbc8e443e756148411f5824fda8b3a3725"
+  },
+  "updated_at": "2026-11-19T10:18:27.666Z",
+  "billing": {
+    "method": "pi_api",
+    "api_key_used": true,
+    "subscription_only": false,
+    "user_authorized": true,
+    "api_model": "kimi-k3.1-pro",
+    "api_endpoint": "https://api.moonshot.ai/v1",
+    "reference_cost_is_invoice": false
+  },
+  "completed": true,
+  "finished_at": "2026-11-19T10:18:27.666Z"
+}

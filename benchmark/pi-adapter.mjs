@@ -53,6 +53,9 @@ export function assertPiMessage(message,model) {
 }
 
 export const PI_VERSION='0.87.1';
+// Pi's undici dispatcher drops a response after 300 s without bytes (DEFAULT_HTTP_IDLE_TIMEOUT_MS).
+// Long reasoning turns can stay silent longer, so the idle limit follows the group timeout instead.
+export const PI_HTTP_IDLE_TIMEOUT_MS=900000;
 
 function assertRoute(model,apiKey) {
  const route=model?.pi;
@@ -116,7 +119,7 @@ export async function* piEvents({model,prompt,images=[],schema,signal,apiKey,piE
   try {({stdout:version}=await promisify(execFile)(piExecutable,['--version'],{env:piEnvironment('',agentDir),cwd,timeout:10000,signal,maxBuffer:1024}));}
   catch {throw new Error(signal?.aborted?'PI_ABORTED: request cancelled':'PI_BLOCKED: Pi version preflight failed');}
   if (version.trim()!==PI_VERSION) throw new Error('PI_BLOCKED: benchmark requires Pi 0.87.1');
-  const settings={compaction:{enabled:false},retry:{enabled:false,maxRetries:0,provider:{maxRetries:0,timeoutMs}},cacheWarming:'off',images:{autoResize:false},enableInstallTelemetry:false};
+  const settings={compaction:{enabled:false},retry:{enabled:false,maxRetries:0,provider:{maxRetries:0,timeoutMs}},cacheWarming:'off',images:{autoResize:false},enableInstallTelemetry:false,httpIdleTimeoutMs:PI_HTTP_IDLE_TIMEOUT_MS};
   const promptPath=join(cwd,'prompt.txt');
   await writeFile(join(agentDir,'models.json'),JSON.stringify(modelsConfig(model)),{mode:0o600});
   await writeFile(join(agentDir,'settings.json'),JSON.stringify(settings),{mode:0o600});

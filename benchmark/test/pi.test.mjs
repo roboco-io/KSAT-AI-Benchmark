@@ -57,7 +57,7 @@ if(required.some(flag=>!argv.includes(flag))||argv.includes('offline-test-key')|
 const agent=process.env.PI_CODING_AGENT_DIR;
 const settings=JSON.parse(fs.readFileSync(path.join(agent,'settings.json'),'utf8'));
 const models=JSON.parse(fs.readFileSync(path.join(agent,'models.json'),'utf8'));
-if(settings.images.autoResize!==false||settings.compaction.enabled!==false||settings.retry.enabled!==false||settings.retry.provider.maxRetries!==0||settings.cacheWarming!=='off'||models.providers['ksat-pi'].apiKey!=='$KSAT_PI_API_KEY'||process.env.KSAT_PI_API_KEY!=='offline-test-key')process.exit(8);
+if(settings.images.autoResize!==false||settings.compaction.enabled!==false||settings.retry.enabled!==false||settings.retry.provider.maxRetries!==0||settings.cacheWarming!=='off'||settings.httpIdleTimeoutMs!==900000||models.providers['ksat-pi'].apiKey!=='$KSAT_PI_API_KEY'||process.env.KSAT_PI_API_KEY!=='offline-test-key')process.exit(8);
 const promptPath=argv.find(a=>a.startsWith('@')).slice(1);
 if(!fs.readFileSync(promptPath,'utf8').includes('"answers"'))process.exit(9);
 if(fixture.hang){setInterval(()=>{},1000);return;}
