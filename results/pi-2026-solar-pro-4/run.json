@@ -33,6 +33,48 @@
   },
   "dataset_hash": "de418de072e11d96364548de1113a6ad33c6f29fbe28ebfe259a8ff85c453074",
   "answers": {
+    "2026-math-calculus-q23": {
+      "question_id": "2026-math-calculus-q23",
+      "decision": "answered",
+      "answer": 3,
+      "explanation": "$\\lim_{x\\to 0}\\frac{\\tan 6x}{2x}$에서 $x\\to 0$일 때 $\\tan 6x \\sim 6x$이므로 $\\frac{6x}{2x}=3$이다.",
+      "abstain_reason": null
+    },
+    "2026-math-calculus-q24": {
+      "question_id": "2026-math-calculus-q24",
+      "decision": "answered",
+      "answer": 4,
+      "explanation": "$\\sqrt{\\sin x-\\sin^3 x}=\\sqrt{\\sin x(1-\\sin^2 x)}=\\cos x\\sqrt{\\sin x}$ ($0\\le x\\le\\pi/2$). 치환적분 $u=\\sin x$로 $\\int_0^1 u^{1/2}du=\\frac{2}{3}$.",
+      "abstain_reason": null
+    },
+    "2026-math-calculus-q25": {
+      "question_id": "2026-math-calculus-q25",
+      "decision": "answered",
+      "answer": 3,
+      "explanation": "$a_n$은 $5n$에 점근하며 $a_n=5n+c_n$이고 $c_n$은 유계이다. 분자 $(5n+2)^2\\sim 25n^2$, 분모 $n(5n)+5n^2\\sim 10n^2$이므로 극한은 $\\frac{25}{10}=\\frac{5}{2}$.",
+      "abstain_reason": null
+    },
+    "2026-math-calculus-q26": {
+      "question_id": "2026-math-calculus-q26",
+      "decision": "answered",
+      "answer": 1,
+      "explanation": "단면은 한 변의 길이가 $y=\\sqrt{x+x\\ln x}$인 정삼각형이므로 넓이 $\\frac{\\sqrt{3}}{4}(x+x\\ln x)$. 부피 $V=\\frac{\\sqrt{3}}{4}\\int_1^2 (x+x\\ln x)dx = \\frac{\\sqrt{3}(3+8\\ln 2)}{16}$.",
+      "abstain_reason": null
+    },
+    "2026-math-calculus-q27": {
+      "question_id": "2026-math-calculus-q27",
+      "decision": "answered",
+      "answer": 2,
+      "explanation": "$y=3x-5e$에 매개변수식을 대입하면 $e^{4t}(-5)+5e=0$에서 $t=1/4$. $dx/dt$, $dy/dt$를 계산하여 $dy/dx = \\frac{3\\pi-2}{\\pi+6}$을 얻는다.",
+      "abstain_reason": null
+    },
+    "2026-math-calculus-q28": {
+      "question_id": "2026-math-calculus-q28",
+      "decision": "answered",
+      "answer": 5,
+      "explanation": "$t=s f'(s)$, $s=g(t)$로 변수 치환하여 $\\int_{1/2}^{27/4} g(t)dt = \\int_1^3 s h'(s)ds = 157/12+\\ln 2$.",
+      "abstain_reason": null
+    },
     "2026-math-calculus-q29": {
       "question_id": "2026-math-calculus-q29",
       "decision": "answered",
@@ -1021,32 +1063,7 @@
       "abstain_reason": null
     }
   },
-  "errors": {
-    "2026-math-calculus-q23": {
-      "status": "error",
-      "message": "PI_OUTPUT_INVALID: response did not contain a complete JSON answer array"
-    },
-    "2026-math-calculus-q24": {
-      "status": "error",
-      "message": "PI_OUTPUT_INVALID: response did not contain a complete JSON answer array"
-    },
-    "2026-math-calculus-q25": {
-      "status": "error",
-      "message": "PI_OUTPUT_INVALID: response did not contain a complete JSON answer array"
-    },
-    "2026-math-calculus-q26": {
-      "status": "error",
-      "message": "PI_OUTPUT_INVALID: response did not contain a complete JSON answer array"
-    },
-    "2026-math-calculus-q27": {
-      "status": "error",
-      "message": "PI_OUTPUT_INVALID: response did not contain a complete JSON answer array"
-    },
-    "2026-math-calculus-q28": {
-      "status": "error",
-      "message": "PI_OUTPUT_INVALID: response did not contain a complete JSON answer array"
-    }
-  },
+  "errors": {},
   "groups": {
     "2026-math-probability": {
       "attempts": [
@@ -1881,6 +1898,74 @@
           "estimated_cost_usd": 0.02002365,
           "error": "PI_OUTPUT_INVALID: response did not contain a complete JSON answer array",
           "finished_at": "2026-11-19T07:16:51.676Z"
+        },
+        {
+          "iteration": 1,
+          "started_at": "2026-11-19T12:58:58.942Z",
+          "question_ids": [
+            "2026-math-calculus-q23",
+            "2026-math-calculus-q24",
+            "2026-math-calculus-q25",
+            "2026-math-calculus-q26",
+            "2026-math-calculus-q27",
+            "2026-math-calculus-q28"
+          ],
+          "http_idle_timeout_ms": 900000,
+          "user_retry": 1,
+          "input_encoding": "UTF-8 Markdown transcript, format version 1",
+          "transcript_hashes": [
+            "e08f57f850ea422029d25b295998ebb08199083dc9b916cad9040ba4f36502a6",
+            "e77f9e124bac3953d2d53fbdc37cf2c2fd6f84515af607f517f56411de29c102",
+            "edfb018120d3abcd084c94f52c5495dcce89ef662297096563eb9248ed3baf30",
+            "01cf9531f4c66d58786b328d70ce0ca609b883f947d0c630e35a81b7d38c8d95"
+          ],
+          "usage": {
+            "input_tokens": 2407,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 6365,
+            "reasoning_output_tokens": 5369
+          },
+          "time_seconds": 67.945,
+          "thread_id": "01a1f3e3-8f7c-70bf-8eaf-b082015c6f24",
+          "status": "error",
+          "estimated_cost_usd": 0.00418005,
+          "error": "PI_OUTPUT_INVALID: response did not contain a complete JSON answer array",
+          "finished_at": "2026-11-19T13:00:06.887Z"
+        },
+        {
+          "iteration": 2,
+          "started_at": "2026-11-19T13:00:06.910Z",
+          "question_ids": [
+            "2026-math-calculus-q23",
+            "2026-math-calculus-q24",
+            "2026-math-calculus-q25",
+            "2026-math-calculus-q26",
+            "2026-math-calculus-q27",
+            "2026-math-calculus-q28"
+          ],
+          "http_idle_timeout_ms": 900000,
+          "user_retry": 1,
+          "input_encoding": "UTF-8 Markdown transcript, format version 1",
+          "transcript_hashes": [
+            "e08f57f850ea422029d25b295998ebb08199083dc9b916cad9040ba4f36502a6",
+            "e77f9e124bac3953d2d53fbdc37cf2c2fd6f84515af607f517f56411de29c102",
+            "edfb018120d3abcd084c94f52c5495dcce89ef662297096563eb9248ed3baf30",
+            "01cf9531f4c66d58786b328d70ce0ca609b883f947d0c630e35a81b7d38c8d95"
+          ],
+          "usage": {
+            "input_tokens": 2407,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 33489,
+            "reasoning_output_tokens": 32768
+          },
+          "time_seconds": 370.481,
+          "thread_id": "01a1f3e4-991d-748b-84a3-730b7cc62636",
+          "status": "completed",
+          "estimated_cost_usd": 0.02045445,
+          "response": "{\"answers\":[{\"question_id\":\"2026-math-calculus-q23\",\"decision\":\"answered\",\"answer\":3,\"explanation\":\"$\\\\lim_{x\\\\to 0}\\\\frac{\\\\tan 6x}{2x}$에서 $x\\\\to 0$일 때 $\\\\tan 6x \\\\sim 6x$이므로 $\\\\frac{6x}{2x}=3$이다.\",\"abstain_reason\":null},{\"question_id\":\"2026-math-calculus-q24\",\"decision\":\"answered\",\"answer\":4,\"explanation\":\"$\\\\sqrt{\\\\sin x-\\\\sin^3 x}=\\\\sqrt{\\\\sin x(1-\\\\sin^2 x)}=\\\\cos x\\\\sqrt{\\\\sin x}$ ($0\\\\le x\\\\le\\\\pi/2$). 치환적분 $u=\\\\sin x$로 $\\\\int_0^1 u^{1/2}du=\\\\frac{2}{3}$.\",\"abstain_reason\":null},{\"question_id\":\"2026-math-calculus-q25\",\"decision\":\"answered\",\"answer\":3,\"explanation\":\"$a_n$은 $5n$에 점근하며 $a_n=5n+c_n$이고 $c_n$은 유계이다. 분자 $(5n+2)^2\\\\sim 25n^2$, 분모 $n(5n)+5n^2\\\\sim 10n^2$이므로 극한은 $\\\\frac{25}{10}=\\\\frac{5}{2}$.\",\"abstain_reason\":null},{\"question_id\":\"2026-math-calculus-q26\",\"decision\":\"answered\",\"answer\":1,\"explanation\":\"단면은 한 변의 길이가 $y=\\\\sqrt{x+x\\\\ln x}$인 정삼각형이므로 넓이 $\\\\frac{\\\\sqrt{3}}{4}(x+x\\\\ln x)$. 부피 $V=\\\\frac{\\\\sqrt{3}}{4}\\\\int_1^2 (x+x\\\\ln x)dx = \\\\frac{\\\\sqrt{3}(3+8\\\\ln 2)}{16}$.\",\"abstain_reason\":null},{\"question_id\":\"2026-math-calculus-q27\",\"decision\":\"answered\",\"answer\":2,\"explanation\":\"$y=3x-5e$에 매개변수식을 대입하면 $e^{4t}(-5)+5e=0$에서 $t=1/4$. $dx/dt$, $dy/dt$를 계산하여 $dy/dx = \\\\frac{3\\\\pi-2}{\\\\pi+6}$을 얻는다.\",\"abstain_reason\":null},{\"question_id\":\"2026-math-calculus-q28\",\"decision\":\"answered\",\"answer\":5,\"explanation\":\"$t=s f'(s)$, $s=g(t)$로 변수 치환하여 $\\\\int_{1/2}^{27/4} g(t)dt = \\\\int_1^3 s h'(s)ds = 157/12+\\\\ln 2$.\",\"abstain_reason\":null}]}",
+          "finished_at": "2026-11-19T13:06:17.391Z"
         }
       ],
       "original_group_id": "2026-math-calculus"
@@ -2549,16 +2634,30 @@
       "pending_groups": [
         "2026-math-calculus--split-1"
       ]
+    },
+    {
+      "iteration": 1,
+      "started_at": "2026-11-19T12:58:58.927Z",
+      "pending_groups": [
+        "2026-math-calculus--split-1"
+      ]
+    },
+    {
+      "iteration": 2,
+      "started_at": "2026-11-19T13:00:06.893Z",
+      "pending_groups": [
+        "2026-math-calculus--split-1"
+      ]
     }
   ],
   "usage": {
-    "input_tokens": 183453,
+    "input_tokens": 188267,
     "cached_input_tokens": 0,
     "cache_write_input_tokens": 0,
-    "output_tokens": 460454,
-    "reasoning_output_tokens": 413372
+    "output_tokens": 500308,
+    "reasoning_output_tokens": 451509
   },
-  "wall_time_seconds": 4329.457,
+  "wall_time_seconds": 4767.935,
   "prompt_hash": "fc8fa2901ae4c4d6cf2865e5b6e4116064697c976de9623c4030ef739ae6ef9a",
   "source_hashes": {
     "exams/pdf/2026/국어영역_문제지.pdf": "ddb1ede52e317cb67c94172b39aad24b0150bf888455be33f8e333010ce16a0a",
@@ -2566,7 +2665,7 @@
     "exams/pdf/2026/영어영역_문제지.pdf": "788830081bb2a3adef1014c1625b7cc9562ad0af4438edafb8449782595af88a",
     "exams/pdf/2026/영어영역듣기평가대본.pdf": "2b042ba7c4d0e672bda6ffd7f01b162591938210df7efed2e919a1963bca83a4"
   },
-  "updated_at": "2026-11-19T07:16:51.685Z",
+  "updated_at": "2026-11-19T13:06:17.405Z",
   "billing": {
     "method": "pi_api",
     "api_key_used": true,
@@ -2576,8 +2675,8 @@
     "api_endpoint": "https://api.upstage.ai/v1",
     "reference_cost_is_invoice": false
   },
-  "completed": false,
-  "finished_at": "2026-11-19T07:16:51.685Z",
+  "completed": true,
+  "finished_at": "2026-11-19T13:06:17.405Z",
   "protocol_history": [
     {
       "protocol": {
@@ -2609,9 +2708,18 @@
       "cause": "output_limit_or_timeout_split_recovery"
     }
   ],
-  "finalization": {
-    "state": "finished_with_errors",
-    "reason": "실행 종료: 141/147문항 제출. 수학 미적분 6문항은 최대 3회 시도와 1회 분할 복구 후에도 출력 형식 오류로 미제출 상태입니다.",
-    "recorded_at": "2026-11-19T09:30:16.959Z"
-  }
+  "user_retries": [
+    {
+      "index": 1,
+      "group": "2026-math-calculus",
+      "authorized_at": "2026-11-19T12:58:58.920Z",
+      "note": "2026-11-19 사용자 지시: 2026 미적분 미제출 문항 재시도(출력 형식 오류로 미제출)",
+      "answers_before": 141,
+      "finalization_before": {
+        "state": "finished_with_errors",
+        "reason": "실행 종료: 141/147문항 제출. 수학 미적분 6문항은 최대 3회 시도와 1회 분할 복구 후에도 출력 형식 오류로 미제출 상태입니다.",
+        "recorded_at": "2026-11-19T09:30:16.959Z"
+      }
+    }
+  ]
 }
