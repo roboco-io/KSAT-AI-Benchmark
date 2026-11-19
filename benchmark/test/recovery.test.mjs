@@ -91,3 +91,10 @@ test('a user-authorized retry reopens one finished Pi group with a fresh attempt
  assert.equal(attemptsRemaining(attempts,3,index),3);
  assert.equal(attemptsRemaining([...attempts,{user_retry:1}],3,index),2);
 });
+
+test('a per-question user retry records its batch size',async()=>{
+ const {openUserRetry}=await import('../core.mjs');
+ const state={protocol:{agent:'Pi'},finished_at:'2026-11-19T12:00:00Z',answers:{}};
+ openUserRetry(state,'g',{note:'one at a time',batchSize:1});
+ assert.equal(state.user_retries[0].batch_max_questions,1);
+});

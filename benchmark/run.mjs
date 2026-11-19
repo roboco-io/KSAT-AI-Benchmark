@@ -30,6 +30,8 @@ const modelArg=process.argv.indexOf('--model');const selected=modelForYear(model
 const groupArg=process.argv.indexOf('--group');const requestedGroup=groupArg>=0?process.argv[groupArg+1]:null;
 const retryArg=process.argv.indexOf('--user-retry');const userRetryNote=retryArg>=0?process.argv[retryArg+1]:null;
 if(userRetryNote!==null&&!requestedGroup)throw new Error('RETRY_BLOCKED: --user-retry requires --group');
+const retryBatchArg=process.argv.indexOf('--retry-per-question');const retryPerQuestion=retryBatchArg>=0;
+if(retryPerQuestion&&userRetryNote===null)throw new Error('RETRY_BLOCKED: --retry-per-question requires --user-retry');
 let allowedGroups=requestedGroup?dataset.solver_groups.filter(g=>g.id===requestedGroup):dataset.solver_groups;
 if(!allowedGroups.length)throw new Error('Unknown solver group');
 const once=process.argv.includes('--once');
@@ -151,7 +153,9 @@ async function solveGroup(group,iteration) {
   if(/^(SUBSCRIPTION_BLOCKED|PI_BLOCKED|MODEL_MISMATCH|TOOL_BLOCKED)/.test(attempt.error)){state.blocked_reason=attempt.error;invocationController.abort(error);}
  } finally {attempt.time_seconds=(Date.now()-started)/1000;attempt.finished_at=new Date().toISOString();save();}
 }
-const userRetry=userRetryNote!==null?openUserRetry(state,requestedGroup,{note:userRetryNote}):null;if(userRetry!==null)save();
+const userRetry=userRetryNote!==null?openUserRetry(state,requestedGroup,{note:userRetryNote,batchSize:retryPerQuestion?1:undefined}):null;if(userRetry!==null)save();
+// Per-question retry: each unsubmitted question of the group becomes its own request (ids never reuse earlier split ids).
+if(retryPerQuestion)allowedGroups=dataset.solver_groups.filter(g=>g.id===requestedGroup).flatMap(g=>g.question_ids.filter(id=>!state.answers[id]).map(id=>({...g,id:`${g.id}--retry${userRetry}-${id.split('-').pop()}`,original_id:g.id,question_ids:[id]})));
 const invocationStart=Date.now(),baseWall=state.wall_time_seconds;
 const heartbeat=setInterval(()=>{state.wall_time_seconds=elapsedWall(baseWall,invocationStart,Date.now());save();},10000);
 try {

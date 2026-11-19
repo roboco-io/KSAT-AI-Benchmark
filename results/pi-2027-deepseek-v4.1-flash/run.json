@@ -32,6 +32,48 @@
   },
   "dataset_hash": "4c69e03b69b31b050d595a2b9905e1c2f7a1e425f2a90ed9cce44315833bd086",
   "answers": {
+    "2027-korean-language_media-q39": {
+      "question_id": "2027-korean-language_media-q39",
+      "decision": "answered",
+      "answer": 4,
+      "explanation": "<보기>에서 ㉠은 현대 단모음이 15세기 국어에서도 단모음이었던 경우, ㉡은 15세기 이중 모음이 현대 단모음으로 변한 경우이다. ‘수식>사이’에서는 ㉠이 확인되고, ‘고게>고게’에서는 15세기의 ‘ㅔ’가 현대 단모음으로 변한 ㉡이 확인된다.",
+      "abstain_reason": null
+    },
+    "2027-korean-language_media-q40": {
+      "question_id": "2027-korean-language_media-q40",
+      "decision": "answered",
+      "answer": 3,
+      "explanation": "(가)에서 원통형 보관함의 사용 시점을 묻는 질문은 진행자가 직접 한 것이며, 청취자로부터 받은 질문이 아니다.",
+      "abstain_reason": null
+    },
+    "2027-korean-language_media-q37": {
+      "question_id": "2027-korean-language_media-q37",
+      "decision": "answered",
+      "answer": 5,
+      "explanation": "‘내 친구가 소속된 동아리’에서 안긴절 ‘내 친구가 소속된’은 부사어 ‘동아리에’가 생략된 안긴절에 해당한다. 따라서 ⑤의 탐구 결과에는 ②도 포함되어야 하므로 적절하지 않다.",
+      "abstain_reason": null
+    },
+    "2027-korean-language_media-q38": {
+      "question_id": "2027-korean-language_media-q38",
+      "decision": "answered",
+      "answer": 2,
+      "explanation": "대상 문장에서 ‘희수 누나’는 이름이 희수인 누나로 해석되고, ‘자신과 친구들의 모습을 담고 싶어 했다’는 함께 사진에 찍히고자 한 의미이며, ‘모두 참석하지 않았다’는 참석한 친구가 없음을 뜻한다. 따라서 ㉠, ㉢, ㉥의 의미를 포함한다.",
+      "abstain_reason": null
+    },
+    "2027-korean-language_media-q36": {
+      "question_id": "2027-korean-language_media-q36",
+      "decision": "answered",
+      "answer": 2,
+      "explanation": "㉢은 ‘멀찍이/멀찌이’의 파생어 짝으로, 통시적 설명과 비통시적 설명의 짝으로 보기 어렵다. 통시적·비통시적 대비는 ‘아랫층/아래층’과 같은 ㉣에 해당한다.",
+      "abstain_reason": null
+    },
+    "2027-korean-language_media-q35": {
+      "question_id": "2027-korean-language_media-q35",
+      "decision": "answered",
+      "answer": 3,
+      "explanation": "‘밤이 깊었다’의 직접 구성 요소는 ‘밤이’와 ‘깊었다’로 볼 수 있다. ‘밤이’는 ‘밤’+‘이’의 2개 형태소, ‘깊었다’는 ‘깊’+‘었’+‘다’의 3개 형태소로 이루어져 형태소 개수가 서로 다르다.",
+      "abstain_reason": null
+    },
     "2027-math-common-q19": {
       "question_id": "2027-math-common-q19",
       "decision": "answered",
@@ -1020,32 +1062,7 @@
       "abstain_reason": null
     }
   },
-  "errors": {
-    "2027-korean-language_media-q35": {
-      "status": "error",
-      "message": "PI_TURN_FAILED: response reached output token limit"
-    },
-    "2027-korean-language_media-q36": {
-      "status": "error",
-      "message": "PI_TURN_FAILED: response reached output token limit"
-    },
-    "2027-korean-language_media-q37": {
-      "status": "error",
-      "message": "PI_TURN_FAILED: response reached output token limit"
-    },
-    "2027-korean-language_media-q38": {
-      "status": "error",
-      "message": "PI_TURN_FAILED: response reached output token limit"
-    },
-    "2027-korean-language_media-q39": {
-      "status": "error",
-      "message": "PI_TURN_FAILED: response reached output token limit"
-    },
-    "2027-korean-language_media-q40": {
-      "status": "error",
-      "message": "PI_TURN_FAILED: response reached output token limit"
-    }
-  },
+  "errors": {},
   "groups": {
     "2027-korean-common": {
       "attempts": [
@@ -2020,6 +2037,210 @@
         }
       ],
       "original_group_id": "2027-math-common"
+    },
+    "2027-korean-language_media--retry1-q35": {
+      "attempts": [
+        {
+          "iteration": 1,
+          "started_at": "2026-11-19T13:24:12.251Z",
+          "question_ids": [
+            "2027-korean-language_media-q35"
+          ],
+          "http_idle_timeout_ms": 900000,
+          "user_retry": 1,
+          "image_encoding": "lossless WebP, original 200 DPI pixels",
+          "image_hashes": [
+            "3f6d50f91ce2b59af95e6b6f7ffa5a9a60b07789f8967b4d127ba3b30efc2d6d",
+            "ad5bc6d0a78ee43846fa54a4747d8d49986b30d0b21693f2d071f1915fd969a0",
+            "29e603dc8977f7c69bab2ef73e19779f1f2b0f6805e23b9864810a9f00aad0a1",
+            "6cee2c908b141f970a0faf7e74677a291f1270862bd41b47c088c166af0c487b"
+          ],
+          "usage": {
+            "input_tokens": 5022,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 4809,
+            "reasoning_output_tokens": 4682
+          },
+          "time_seconds": 25.145,
+          "thread_id": "01a1f3fa-a6da-77d1-b697-23a1ad581b0f",
+          "status": "completed",
+          "estimated_cost_usd": 0.0072774,
+          "response": "{\"answers\":[{\"question_id\":\"2027-korean-language_media-q35\",\"decision\":\"answered\",\"answer\":3,\"explanation\":\"‘밤이 깊었다’의 직접 구성 요소는 ‘밤이’와 ‘깊었다’로 볼 수 있다. ‘밤이’는 ‘밤’+‘이’의 2개 형태소, ‘깊었다’는 ‘깊’+‘었’+‘다’의 3개 형태소로 이루어져 형태소 개수가 서로 다르다.\",\"abstain_reason\":null}]}",
+          "finished_at": "2026-11-19T13:24:37.396Z"
+        }
+      ],
+      "original_group_id": "2027-korean-language_media"
+    },
+    "2027-korean-language_media--retry1-q36": {
+      "attempts": [
+        {
+          "iteration": 1,
+          "started_at": "2026-11-19T13:24:12.262Z",
+          "question_ids": [
+            "2027-korean-language_media-q36"
+          ],
+          "http_idle_timeout_ms": 900000,
+          "user_retry": 1,
+          "image_encoding": "lossless WebP, original 200 DPI pixels",
+          "image_hashes": [
+            "3f6d50f91ce2b59af95e6b6f7ffa5a9a60b07789f8967b4d127ba3b30efc2d6d",
+            "ad5bc6d0a78ee43846fa54a4747d8d49986b30d0b21693f2d071f1915fd969a0",
+            "29e603dc8977f7c69bab2ef73e19779f1f2b0f6805e23b9864810a9f00aad0a1",
+            "6cee2c908b141f970a0faf7e74677a291f1270862bd41b47c088c166af0c487b"
+          ],
+          "usage": {
+            "input_tokens": 5024,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 36909,
+            "reasoning_output_tokens": 36793
+          },
+          "time_seconds": 182.179,
+          "thread_id": "01a1f3fa-a6db-769a-9be1-b8855997d4c7",
+          "status": "completed",
+          "estimated_cost_usd": 0.045798,
+          "response": "{\"answers\":[{\"question_id\":\"2027-korean-language_media-q36\",\"decision\":\"answered\",\"answer\":2,\"explanation\":\"㉢은 ‘멀찍이/멀찌이’의 파생어 짝으로, 통시적 설명과 비통시적 설명의 짝으로 보기 어렵다. 통시적·비통시적 대비는 ‘아랫층/아래층’과 같은 ㉣에 해당한다.\",\"abstain_reason\":null}]}",
+          "finished_at": "2026-11-19T13:27:14.441Z"
+        }
+      ],
+      "original_group_id": "2027-korean-language_media"
+    },
+    "2027-korean-language_media--retry1-q37": {
+      "attempts": [
+        {
+          "iteration": 1,
+          "started_at": "2026-11-19T13:27:14.453Z",
+          "question_ids": [
+            "2027-korean-language_media-q37"
+          ],
+          "http_idle_timeout_ms": 900000,
+          "user_retry": 1,
+          "image_encoding": "lossless WebP, original 200 DPI pixels",
+          "image_hashes": [
+            "3f6d50f91ce2b59af95e6b6f7ffa5a9a60b07789f8967b4d127ba3b30efc2d6d",
+            "ad5bc6d0a78ee43846fa54a4747d8d49986b30d0b21693f2d071f1915fd969a0",
+            "29e603dc8977f7c69bab2ef73e19779f1f2b0f6805e23b9864810a9f00aad0a1",
+            "6cee2c908b141f970a0faf7e74677a291f1270862bd41b47c088c166af0c487b"
+          ],
+          "usage": {
+            "input_tokens": 5022,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 47937,
+            "reasoning_output_tokens": 47829
+          },
+          "time_seconds": 238.526,
+          "thread_id": "01a1f3fd-6e8c-7543-81f3-04de0bd2519a",
+          "status": "completed",
+          "estimated_cost_usd": 0.05903099999999999,
+          "response": "{\"answers\":[{\"question_id\":\"2027-korean-language_media-q37\",\"decision\":\"answered\",\"answer\":5,\"explanation\":\"‘내 친구가 소속된 동아리’에서 안긴절 ‘내 친구가 소속된’은 부사어 ‘동아리에’가 생략된 안긴절에 해당한다. 따라서 ⑤의 탐구 결과에는 ②도 포함되어야 하므로 적절하지 않다.\",\"abstain_reason\":null}]}",
+          "finished_at": "2026-11-19T13:31:12.979Z"
+        }
+      ],
+      "original_group_id": "2027-korean-language_media"
+    },
+    "2027-korean-language_media--retry1-q38": {
+      "attempts": [
+        {
+          "iteration": 1,
+          "started_at": "2026-11-19T13:27:14.467Z",
+          "question_ids": [
+            "2027-korean-language_media-q38"
+          ],
+          "http_idle_timeout_ms": 900000,
+          "user_retry": 1,
+          "image_encoding": "lossless WebP, original 200 DPI pixels",
+          "image_hashes": [
+            "3f6d50f91ce2b59af95e6b6f7ffa5a9a60b07789f8967b4d127ba3b30efc2d6d",
+            "ad5bc6d0a78ee43846fa54a4747d8d49986b30d0b21693f2d071f1915fd969a0",
+            "29e603dc8977f7c69bab2ef73e19779f1f2b0f6805e23b9864810a9f00aad0a1",
+            "6cee2c908b141f970a0faf7e74677a291f1270862bd41b47c088c166af0c487b"
+          ],
+          "usage": {
+            "input_tokens": 5020,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 14654,
+            "reasoning_output_tokens": 14517
+          },
+          "time_seconds": 72.039,
+          "thread_id": "01a1f3fd-6e8c-7369-9c39-da730b7a8997",
+          "status": "completed",
+          "estimated_cost_usd": 0.019090799999999998,
+          "response": "{\"answers\":[{\"question_id\":\"2027-korean-language_media-q38\",\"decision\":\"answered\",\"answer\":2,\"explanation\":\"대상 문장에서 ‘희수 누나’는 이름이 희수인 누나로 해석되고, ‘자신과 친구들의 모습을 담고 싶어 했다’는 함께 사진에 찍히고자 한 의미이며, ‘모두 참석하지 않았다’는 참석한 친구가 없음을 뜻한다. 따라서 ㉠, ㉢, ㉥의 의미를 포함한다.\",\"abstain_reason\":null}]}",
+          "finished_at": "2026-11-19T13:28:26.506Z"
+        }
+      ],
+      "original_group_id": "2027-korean-language_media"
+    },
+    "2027-korean-language_media--retry1-q39": {
+      "attempts": [
+        {
+          "iteration": 1,
+          "started_at": "2026-11-19T13:31:12.991Z",
+          "question_ids": [
+            "2027-korean-language_media-q39"
+          ],
+          "http_idle_timeout_ms": 900000,
+          "user_retry": 1,
+          "image_encoding": "lossless WebP, original 200 DPI pixels",
+          "image_hashes": [
+            "3f6d50f91ce2b59af95e6b6f7ffa5a9a60b07789f8967b4d127ba3b30efc2d6d",
+            "ad5bc6d0a78ee43846fa54a4747d8d49986b30d0b21693f2d071f1915fd969a0",
+            "29e603dc8977f7c69bab2ef73e19779f1f2b0f6805e23b9864810a9f00aad0a1",
+            "6cee2c908b141f970a0faf7e74677a291f1270862bd41b47c088c166af0c487b"
+          ],
+          "usage": {
+            "input_tokens": 5020,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 8473,
+            "reasoning_output_tokens": 8328
+          },
+          "time_seconds": 41.755,
+          "thread_id": "01a1f401-1285-7520-88b9-2292fbda92ac",
+          "status": "completed",
+          "estimated_cost_usd": 0.0116736,
+          "response": "{\"answers\":[{\"question_id\":\"2027-korean-language_media-q39\",\"decision\":\"answered\",\"answer\":4,\"explanation\":\"<보기>에서 ㉠은 현대 단모음이 15세기 국어에서도 단모음이었던 경우, ㉡은 15세기 이중 모음이 현대 단모음으로 변한 경우이다. ‘수식>사이’에서는 ㉠이 확인되고, ‘고게>고게’에서는 15세기의 ‘ㅔ’가 현대 단모음으로 변한 ㉡이 확인된다.\",\"abstain_reason\":null}]}",
+          "finished_at": "2026-11-19T13:31:54.746Z"
+        }
+      ],
+      "original_group_id": "2027-korean-language_media"
+    },
+    "2027-korean-language_media--retry1-q40": {
+      "attempts": [
+        {
+          "iteration": 1,
+          "started_at": "2026-11-19T13:31:13.005Z",
+          "question_ids": [
+            "2027-korean-language_media-q40"
+          ],
+          "http_idle_timeout_ms": 900000,
+          "user_retry": 1,
+          "image_encoding": "lossless WebP, original 200 DPI pixels",
+          "image_hashes": [
+            "3f6d50f91ce2b59af95e6b6f7ffa5a9a60b07789f8967b4d127ba3b30efc2d6d",
+            "ad5bc6d0a78ee43846fa54a4747d8d49986b30d0b21693f2d071f1915fd969a0",
+            "29e603dc8977f7c69bab2ef73e19779f1f2b0f6805e23b9864810a9f00aad0a1",
+            "6cee2c908b141f970a0faf7e74677a291f1270862bd41b47c088c166af0c487b"
+          ],
+          "usage": {
+            "input_tokens": 5020,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 6993,
+            "reasoning_output_tokens": 6913
+          },
+          "time_seconds": 38.887,
+          "thread_id": "01a1f401-1287-719a-a189-18333c25ab9e",
+          "status": "completed",
+          "estimated_cost_usd": 0.0098976,
+          "response": "{\"answers\":[{\"question_id\":\"2027-korean-language_media-q40\",\"decision\":\"answered\",\"answer\":3,\"explanation\":\"(가)에서 원통형 보관함의 사용 시점을 묻는 질문은 진행자가 직접 한 것이며, 청취자로부터 받은 질문이 아니다.\",\"abstain_reason\":null}]}",
+          "finished_at": "2026-11-19T13:31:51.892Z"
+        }
+      ],
+      "original_group_id": "2027-korean-language_media"
     }
   },
   "iterations": [
@@ -2080,16 +2301,28 @@
       "pending_groups": [
         "2027-korean-language_media--split-1"
       ]
+    },
+    {
+      "iteration": 1,
+      "started_at": "2026-11-19T13:24:12.239Z",
+      "pending_groups": [
+        "2027-korean-language_media--retry1-q35",
+        "2027-korean-language_media--retry1-q36",
+        "2027-korean-language_media--retry1-q37",
+        "2027-korean-language_media--retry1-q38",
+        "2027-korean-language_media--retry1-q39",
+        "2027-korean-language_media--retry1-q40"
+      ]
     }
   ],
   "usage": {
-    "input_tokens": 181533,
+    "input_tokens": 211661,
     "cached_input_tokens": 0,
     "cache_write_input_tokens": 0,
-    "output_tokens": 1176166,
-    "reasoning_output_tokens": 1164544
+    "output_tokens": 1295941,
+    "reasoning_output_tokens": 1283606
   },
-  "wall_time_seconds": 4659.778,
+  "wall_time_seconds": 5122.291,
   "prompt_hash": "8516ead6f5815329fcbea9ae6072c55f72fa318f47528b77bf4e0ecbd76613e0",
   "source_hashes": {
     "exams/pdf/2027/국어영역_문제지.pdf": "6d9560b193a4e68d61a356215447f5268408793615ba013f777ac309ce109b84",
@@ -2097,7 +2330,7 @@
     "exams/pdf/2027/영어영역_문제지.pdf": "139f0f9e0a746948a982ff1b37418f808130132000b5435e6a9c101a81a4ec2f",
     "exams/pdf/2027/영어영역듣기평가대본.pdf": "bc481f077e4f80fa06ed26b10d1e2cfbc8e443e756148411f5824fda8b3a3725"
   },
-  "updated_at": "2026-11-19T11:31:43.956Z",
+  "updated_at": "2026-11-19T13:31:54.752Z",
   "billing": {
     "method": "pi_api",
     "api_key_used": true,
@@ -2107,8 +2340,8 @@
     "api_endpoint": "https://api.deepseek.com",
     "reference_cost_is_invoice": false
   },
-  "completed": false,
-  "finished_at": "2026-11-19T11:31:43.956Z",
+  "completed": true,
+  "finished_at": "2026-11-19T13:31:54.752Z",
   "protocol_history": [
     {
       "protocol": {
@@ -2139,9 +2372,19 @@
       "cause": "output_limit_or_timeout_split_recovery"
     }
   ],
-  "finalization": {
-    "state": "finished_with_errors",
-    "reason": "실행 종료: 141/147문항 제출. 국어 언어와 매체 6문항은 최대 3회 시도와 1회 분할 복구 후에도 출력 토큰 상한에 걸려 미제출 상태입니다.",
-    "recorded_at": "2026-11-19T11:31:55.606Z"
-  }
+  "user_retries": [
+    {
+      "index": 1,
+      "group": "2027-korean-language_media",
+      "authorized_at": "2026-11-19T13:24:12.232Z",
+      "note": "2026-11-19 사용자 지시: 출력 상한(추론만으로 65,536 소진) 미제출 6문항을 1문항씩 재시도",
+      "answers_before": 141,
+      "finalization_before": {
+        "state": "finished_with_errors",
+        "reason": "실행 종료: 141/147문항 제출. 국어 언어와 매체 6문항은 최대 3회 시도와 1회 분할 복구 후에도 출력 토큰 상한에 걸려 미제출 상태입니다.",
+        "recorded_at": "2026-11-19T11:31:55.606Z"
+      },
+      "batch_max_questions": 1
+    }
+  ]
 }
