@@ -32,6 +32,62 @@
   },
   "dataset_hash": "4c69e03b69b31b050d595a2b9905e1c2f7a1e425f2a90ed9cce44315833bd086",
   "answers": {
+    "2027-math-geometry-q29": {
+      "question_id": "2027-math-geometry-q29",
+      "decision": "answered",
+      "answer": 45,
+      "explanation": "포물선의 정의에 의하여 $\\overline{\\mathrm{AB}}=\\overline{\\mathrm{AF}}$이고 $\\overline{\\mathrm{AF}}<2p<\\overline{\\mathrm{BF}}$이므로 쌍곡선의 주축의 길이는 $\\overline{\\mathrm{BF}}-\\overline{\\mathrm{AF}}$이며, $2\\overline{\\mathrm{BC}}=\\overline{\\mathrm{AB}}-(\\overline{\\mathrm{BF}}-\\overline{\\mathrm{AF}})=2\\overline{\\mathrm{AF}}-\\overline{\\mathrm{BF}}$와 $8\\overline{\\mathrm{BC}}=\\overline{\\mathrm{BF}}$에서 $5\\overline{\\mathrm{BF}}=8\\overline{\\mathrm{AF}}$이다. 점 $\\mathrm{A}(x_{1}, y_{1})$에 대하여 $\\overline{\\mathrm{AF}}=x_{1}+p$, $\\overline{\\mathrm{BF}}^{2}=4p^{2}+y_{1}^{2}=4p\\overline{\\mathrm{AF}}$이므로 $\\overline{\\mathrm{AF}}=\\frac{25}{16}p$, $\\mathrm{A}\\left(\\frac{9}{16}p, \\frac{3}{2}p\\right)$, $\\mathrm{B}\\left(-p, \\frac{3}{2}p\\right)$이고, 쌍곡선의 중심 $\\left(-\\frac{7}{32}p, \\frac{3}{2}p\\right)$을 지나며 기울기가 $\\frac{4}{3}$인 점근선 $l : 4x-3y+\\frac{43}{8}p=0$과 $\\mathrm{F}(p, 0)$ 사이의 거리가 $\\frac{15}{8}p=15$이므로 $p=8$이다. 따라서 $\\overline{\\mathrm{AB}}=\\overline{\\mathrm{AF}}=\\frac{25}{2}$, $\\overline{\\mathrm{BF}}=20$이므로 삼각형 $\\mathrm{ABF}$의 둘레의 길이는 $\\frac{25}{2}+\\frac{25}{2}+20=45$이다.",
+      "abstain_reason": null
+    },
+    "2027-math-geometry-q30": {
+      "question_id": "2027-math-geometry-q30",
+      "decision": "answered",
+      "answer": 223,
+      "explanation": "원 $C_{1}$의 반지름의 길이는 $\\sqrt{(3\\sqrt{5})^{2}-(2\\sqrt{5})^{2}}=5$이므로 $\\overline{\\mathrm{AB}}=10$인 선분 $\\mathrm{AB}$는 점 $\\mathrm{H}$를 지나는 지름이고, 평면 $\\mathrm{OAB}$는 평면 $\\alpha$에 수직이므로 구 $S_{2}$의 반지름의 길이는 점 $\\mathrm{C}$와 직선 $\\mathrm{AB}$ 사이의 거리인 $\\frac{2\\sqrt{10}\\cdot 2\\sqrt{15}}{10}=2\\sqrt{6}$이다. $\\overline{\\mathrm{OD}}=3\\sqrt{5}$인 두 구 $S_{1}, S_{2}$가 만나서 생기는 원 $C_{2}$의 반지름의 길이를 $r_{2}$라 하면 $r_{2}^{2}=\\frac{104}{5}$이고, 원 $C_{2}$를 포함하는 평면과 평면 $\\alpha$가 이루는 예각의 크기 $\\theta$에 대하여 $\\cos\\theta=\\frac{2\\sqrt{5}}{3\\sqrt{5}}=\\frac{2}{3}$이다. 따라서 정사영의 넓이는 $\\pi r_{2}^{2}\\cos\\theta=\\frac{208}{15}\\pi$이므로 $p=15$, $q=208$에서 $p+q=223$이다.",
+      "abstain_reason": null
+    },
+    "2027-math-geometry-q28": {
+      "question_id": "2027-math-geometry-q28",
+      "decision": "answered",
+      "answer": 4,
+      "explanation": "직각삼각형 $\\mathrm{OAB}$에서 $\\mathrm{O}(0,0)$, $\\mathrm{B}(2,0)$, $\\mathrm{A}(2,2)$로 놓으면 조건 (가)에 의하여 점 $\\mathrm{R}(x,y)$는 $0 \\le y \\le 4$, $y-2 \\le x \\le y$를 만족시키고, 조건 (나)는 $x+2y \\ge 10$으로 정리되어 점 $\\mathrm{R}$의 영역은 세 점 $(4,4)$, $(2,4)$, $\\left(\\frac{10}{3},\\frac{10}{3}\\right)$을 꼭짓점으로 하는 삼각형이 된다. 또한 $\\overrightarrow{\\mathrm{OR}} \\cdot \\overrightarrow{\\mathrm{BR}} = (x-1)^{2}+y^{2}-1$이므로 점 $(1,0)$으로부터의 거리를 이용하면 점 $(4,4)$에서 최댓값 $M = 3^{2}+4^{2}-1 = 24$를 갖는다. 한편 점 $(1,0)$에서 직선 $x+2y-10=0$에 내린 수선의 발 $\\left(\\frac{14}{5},\\frac{18}{5}\\right)$가 선분 위에 있으므로 최솟값은 $m = \\left(\\frac{9}{\\sqrt{5}}\\right)^{2}-1 = \\frac{76}{5}$이고, $M+m = \\frac{196}{5}$이다.",
+      "abstain_reason": null
+    },
+    "2027-math-geometry-q27": {
+      "question_id": "2027-math-geometry-q27",
+      "decision": "answered",
+      "answer": 1,
+      "explanation": "점 $\\mathrm{M}$의 밑면 $\\mathrm{GHIJKL}$ 위로의 정사영인 선분 $\\mathrm{KL}$의 중점을 $\\mathrm{M}'$, 점 $\\mathrm{M}'$에서 직선 $\\mathrm{GI}$에 내린 수선의 발을 $\\mathrm{P}$라 하면, 한 변의 길이가 $4$인 정육각형의 성질로부터 $\\overline{\\mathrm{GI}} = 4\\sqrt{3}$이고 $\\overline{\\mathrm{M}'\\mathrm{P}} = 4 + 1 = 5$이다. 삼수선의 정리에 의하여 $\\overline{\\mathrm{MP}} \\perp \\overline{\\mathrm{GI}}$이고 $\\overline{\\mathrm{MP}} = \\sqrt{5^{2} + (2\\sqrt{6})^{2}} = 7$이므로, 삼각형 $\\mathrm{MGI}$의 넓이는 $\\frac{1}{2} \\times 4\\sqrt{3} \\times 7 = 14\\sqrt{3}$이다.",
+      "abstain_reason": null
+    },
+    "2027-math-geometry-q26": {
+      "question_id": "2027-math-geometry-q26",
+      "decision": "answered",
+      "answer": 5,
+      "explanation": "타원의 대칭성에 의하여 $\\overline{\\mathrm{PF}} = \\frac{1}{2}\\overline{\\mathrm{PQ}} = 3$이므로, 타원의 정의에 의하여 $2a = \\overline{\\mathrm{PF}} + \\overline{\\mathrm{PF}'} = 3 + 7 = 10$에서 $a = 5$이다. 직각삼각형 $\\mathrm{PFF}'$에서 $\\overline{\\mathrm{FF}'}^{2} = \\overline{\\mathrm{PF}'}^{2} - \\overline{\\mathrm{PF}}^{2} = 49 - 9 = 40$이므로 두 초점 사이의 거리를 $2c$라 하면 $c^{2} = 10$이고, $b^{2} = a^{2} - c^{2} = 25 - 10 = 15$이다. 따라서 $a^{2} + b^{2} = 25 + 15 = 40$이다.",
+      "abstain_reason": null
+    },
+    "2027-math-geometry-q25": {
+      "question_id": "2027-math-geometry-q25",
+      "decision": "answered",
+      "answer": 3,
+      "explanation": "선분 $\\mathrm{AB}$를 $2:1$로 내분하는 점이 $yz$평면 위에 있으므로 $x$좌표가 $0$이 되어 $\\frac{2(-3)+a}{2+1}=0$에서 $a=6$이다. 또한 선분 $\\mathrm{AB}$를 $3:2$로 외분하는 점이 $x$축 위에 있으므로 $y$좌표와 $z$좌표가 모두 $0$이 되어 $\\frac{3b-2(-3)}{3-2}=0$, $\\frac{3c-2\\cdot 6}{3-2}=0$에서 $b=-2$, $c=4$이다. 따라서 $a+b+c=6+(-2)+4=8$이다.",
+      "abstain_reason": null
+    },
+    "2027-math-geometry-q24": {
+      "question_id": "2027-math-geometry-q24",
+      "decision": "answered",
+      "answer": 4,
+      "explanation": "꼭짓점의 좌표가 $(-1, 0)$이고 초점의 좌표가 $(3, 0)$이므로 $p = 3 - (-1) = 4$가 되어 포물선의 방정식은 $y^{2} = 16(x + 1)$이다. 이 포물선이 점 $(0, a)$를 지나므로 $a^{2} = 16$이고, $a > 0$이므로 $a = 4$이다.",
+      "abstain_reason": null
+    },
+    "2027-math-geometry-q23": {
+      "question_id": "2027-math-geometry-q23",
+      "decision": "answered",
+      "answer": 3,
+      "explanation": "$2\\vec{a} + \\vec{b} = 2(1, 0) + (3, -2) = (5, -2)$이므로 모든 성분의 합은 $5 + (-2) = 3$이다.",
+      "abstain_reason": null
+    },
     "2027-math-calculus-q29": {
       "question_id": "2027-math-calculus-q29",
       "decision": "answered",
@@ -1006,40 +1062,7 @@
       "abstain_reason": null
     }
   },
-  "errors": {
-    "2027-math-geometry-q23": {
-      "status": "error",
-      "message": "PI_TURN_FAILED: provider did not finish a complete answer"
-    },
-    "2027-math-geometry-q24": {
-      "status": "error",
-      "message": "PI_TURN_FAILED: provider did not finish a complete answer"
-    },
-    "2027-math-geometry-q25": {
-      "status": "error",
-      "message": "PI_TURN_FAILED: provider did not finish a complete answer"
-    },
-    "2027-math-geometry-q26": {
-      "status": "error",
-      "message": "PI_TURN_FAILED: provider did not finish a complete answer"
-    },
-    "2027-math-geometry-q27": {
-      "status": "error",
-      "message": "PI_TURN_FAILED: provider did not finish a complete answer"
-    },
-    "2027-math-geometry-q28": {
-      "status": "error",
-      "message": "PI_TURN_FAILED: provider did not finish a complete answer"
-    },
-    "2027-math-geometry-q29": {
-      "status": "error",
-      "message": "PI_TURN_FAILED: provider did not finish a complete answer"
-    },
-    "2027-math-geometry-q30": {
-      "status": "error",
-      "message": "PI_TURN_FAILED: provider did not finish a complete answer"
-    }
-  },
+  "errors": {},
   "groups": {
     "2027-korean-common": {
       "attempts": [
@@ -2859,6 +2882,278 @@
         }
       ],
       "original_group_id": "2027-math-geometry"
+    },
+    "2027-math-geometry--retry2-q23": {
+      "attempts": [
+        {
+          "iteration": 1,
+          "started_at": "2026-11-19T13:33:43.325Z",
+          "question_ids": [
+            "2027-math-geometry-q23"
+          ],
+          "http_idle_timeout_ms": 900000,
+          "user_retry": 2,
+          "image_encoding": "lossless WebP, original 200 DPI pixels",
+          "image_hashes": [
+            "4226c62b0bfaff9d268906c3196d214125380e2e92bfe11b9d73b12810916687",
+            "93a74c155ab08f42e224d0c6137e43736d55125813d9d664c0045a574f569d33",
+            "7211d0440868ec9d744679805df4c5305407697ccc23177a8a08ad5238275d1a",
+            "cb26fae3a687ee1c99a5cf0f976fc29fc9993e035c963c57821db0c8c3e4cb59"
+          ],
+          "usage": {
+            "input_tokens": 5333,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 95,
+            "reasoning_output_tokens": 0
+          },
+          "time_seconds": 19.041,
+          "thread_id": "01a1f403-5dce-7461-8fdd-7045761b2105",
+          "status": "completed",
+          "estimated_cost_usd": 0.011616,
+          "response": "{\"answers\":[{\"question_id\":\"2027-math-geometry-q23\",\"decision\":\"answered\",\"answer\":3,\"explanation\":\"$2\\\\vec{a} + \\\\vec{b} = 2(1, 0) + (3, -2) = (5, -2)$이므로 모든 성분의 합은 $5 + (-2) = 3$이다.\",\"abstain_reason\":null}]}",
+          "finished_at": "2026-11-19T13:34:02.366Z"
+        }
+      ],
+      "original_group_id": "2027-math-geometry"
+    },
+    "2027-math-geometry--retry2-q24": {
+      "attempts": [
+        {
+          "iteration": 1,
+          "started_at": "2026-11-19T13:33:43.341Z",
+          "question_ids": [
+            "2027-math-geometry-q24"
+          ],
+          "http_idle_timeout_ms": 900000,
+          "user_retry": 2,
+          "image_encoding": "lossless WebP, original 200 DPI pixels",
+          "image_hashes": [
+            "4226c62b0bfaff9d268906c3196d214125380e2e92bfe11b9d73b12810916687",
+            "93a74c155ab08f42e224d0c6137e43736d55125813d9d664c0045a574f569d33",
+            "7211d0440868ec9d744679805df4c5305407697ccc23177a8a08ad5238275d1a",
+            "cb26fae3a687ee1c99a5cf0f976fc29fc9993e035c963c57821db0c8c3e4cb59"
+          ],
+          "usage": {
+            "input_tokens": 5333,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 182,
+            "reasoning_output_tokens": 0
+          },
+          "time_seconds": 21.984,
+          "thread_id": "01a1f403-5dca-77c0-9b25-3afc15aa3c73",
+          "status": "completed",
+          "estimated_cost_usd": 0.012486,
+          "response": "{\"answers\":[{\"question_id\":\"2027-math-geometry-q24\",\"decision\":\"answered\",\"answer\":4,\"explanation\":\"꼭짓점의 좌표가 $(-1, 0)$이고 초점의 좌표가 $(3, 0)$이므로 $p = 3 - (-1) = 4$가 되어 포물선의 방정식은 $y^{2} = 16(x + 1)$이다. 이 포물선이 점 $(0, a)$를 지나므로 $a^{2} = 16$이고, $a > 0$이므로 $a = 4$이다.\",\"abstain_reason\":null}]}",
+          "finished_at": "2026-11-19T13:34:05.325Z"
+        }
+      ],
+      "original_group_id": "2027-math-geometry"
+    },
+    "2027-math-geometry--retry2-q25": {
+      "attempts": [
+        {
+          "iteration": 1,
+          "started_at": "2026-11-19T13:34:05.348Z",
+          "question_ids": [
+            "2027-math-geometry-q25"
+          ],
+          "http_idle_timeout_ms": 900000,
+          "user_retry": 2,
+          "image_encoding": "lossless WebP, original 200 DPI pixels",
+          "image_hashes": [
+            "4226c62b0bfaff9d268906c3196d214125380e2e92bfe11b9d73b12810916687",
+            "93a74c155ab08f42e224d0c6137e43736d55125813d9d664c0045a574f569d33",
+            "7211d0440868ec9d744679805df4c5305407697ccc23177a8a08ad5238275d1a",
+            "cb26fae3a687ee1c99a5cf0f976fc29fc9993e035c963c57821db0c8c3e4cb59"
+          ],
+          "usage": {
+            "input_tokens": 5331,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 213,
+            "reasoning_output_tokens": 0
+          },
+          "time_seconds": 28.632,
+          "thread_id": "01a1f403-b3a7-7241-bce2-604f61c80529",
+          "status": "completed",
+          "estimated_cost_usd": 0.012792,
+          "response": "{\"answers\":[{\"question_id\":\"2027-math-geometry-q25\",\"decision\":\"answered\",\"answer\":3,\"explanation\":\"선분 $\\\\mathrm{AB}$를 $2:1$로 내분하는 점이 $yz$평면 위에 있으므로 $x$좌표가 $0$이 되어 $\\\\frac{2(-3)+a}{2+1}=0$에서 $a=6$이다. 또한 선분 $\\\\mathrm{AB}$를 $3:2$로 외분하는 점이 $x$축 위에 있으므로 $y$좌표와 $z$좌표가 모두 $0$이 되어 $\\\\frac{3b-2(-3)}{3-2}=0$, $\\\\frac{3c-2\\\\cdot 6}{3-2}=0$에서 $b=-2$, $c=4$이다. 따라서 $a+b+c=6+(-2)+4=8$이다.\",\"abstain_reason\":null}]}",
+          "finished_at": "2026-11-19T13:34:33.980Z"
+        }
+      ],
+      "original_group_id": "2027-math-geometry"
+    },
+    "2027-math-geometry--retry2-q26": {
+      "attempts": [
+        {
+          "iteration": 1,
+          "started_at": "2026-11-19T13:34:05.368Z",
+          "question_ids": [
+            "2027-math-geometry-q26"
+          ],
+          "http_idle_timeout_ms": 900000,
+          "user_retry": 2,
+          "image_encoding": "lossless WebP, original 200 DPI pixels",
+          "image_hashes": [
+            "4226c62b0bfaff9d268906c3196d214125380e2e92bfe11b9d73b12810916687",
+            "93a74c155ab08f42e224d0c6137e43736d55125813d9d664c0045a574f569d33",
+            "7211d0440868ec9d744679805df4c5305407697ccc23177a8a08ad5238275d1a",
+            "cb26fae3a687ee1c99a5cf0f976fc29fc9993e035c963c57821db0c8c3e4cb59"
+          ],
+          "usage": {
+            "input_tokens": 5335,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 267,
+            "reasoning_output_tokens": 0
+          },
+          "time_seconds": 38.22,
+          "thread_id": "01a1f403-b3b3-7021-ae6f-dd905816c822",
+          "status": "completed",
+          "estimated_cost_usd": 0.01334,
+          "response": "{\"answers\":[{\"question_id\":\"2027-math-geometry-q26\",\"decision\":\"answered\",\"answer\":5,\"explanation\":\"타원의 대칭성에 의하여 $\\\\overline{\\\\mathrm{PF}} = \\\\frac{1}{2}\\\\overline{\\\\mathrm{PQ}} = 3$이므로, 타원의 정의에 의하여 $2a = \\\\overline{\\\\mathrm{PF}} + \\\\overline{\\\\mathrm{PF}'} = 3 + 7 = 10$에서 $a = 5$이다. 직각삼각형 $\\\\mathrm{PFF}'$에서 $\\\\overline{\\\\mathrm{FF}'}^{2} = \\\\overline{\\\\mathrm{PF}'}^{2} - \\\\overline{\\\\mathrm{PF}}^{2} = 49 - 9 = 40$이므로 두 초점 사이의 거리를 $2c$라 하면 $c^{2} = 10$이고, $b^{2} = a^{2} - c^{2} = 25 - 10 = 15$이다. 따라서 $a^{2} + b^{2} = 25 + 15 = 40$이다.\",\"abstain_reason\":null}]}",
+          "finished_at": "2026-11-19T13:34:43.588Z"
+        }
+      ],
+      "original_group_id": "2027-math-geometry"
+    },
+    "2027-math-geometry--retry2-q27": {
+      "attempts": [
+        {
+          "iteration": 1,
+          "started_at": "2026-11-19T13:34:43.601Z",
+          "question_ids": [
+            "2027-math-geometry-q27"
+          ],
+          "http_idle_timeout_ms": 900000,
+          "user_retry": 2,
+          "image_encoding": "lossless WebP, original 200 DPI pixels",
+          "image_hashes": [
+            "4226c62b0bfaff9d268906c3196d214125380e2e92bfe11b9d73b12810916687",
+            "93a74c155ab08f42e224d0c6137e43736d55125813d9d664c0045a574f569d33",
+            "7211d0440868ec9d744679805df4c5305407697ccc23177a8a08ad5238275d1a",
+            "cb26fae3a687ee1c99a5cf0f976fc29fc9993e035c963c57821db0c8c3e4cb59"
+          ],
+          "usage": {
+            "input_tokens": 5333,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 280,
+            "reasoning_output_tokens": 0
+          },
+          "time_seconds": 92.412,
+          "thread_id": "01a1f404-4938-7737-aaef-65e88546fc35",
+          "status": "completed",
+          "estimated_cost_usd": 0.013466,
+          "response": "{\"answers\":[{\"question_id\":\"2027-math-geometry-q27\",\"decision\":\"answered\",\"answer\":1,\"explanation\":\"점 $\\\\mathrm{M}$의 밑면 $\\\\mathrm{GHIJKL}$ 위로의 정사영인 선분 $\\\\mathrm{KL}$의 중점을 $\\\\mathrm{M}'$, 점 $\\\\mathrm{M}'$에서 직선 $\\\\mathrm{GI}$에 내린 수선의 발을 $\\\\mathrm{P}$라 하면, 한 변의 길이가 $4$인 정육각형의 성질로부터 $\\\\overline{\\\\mathrm{GI}} = 4\\\\sqrt{3}$이고 $\\\\overline{\\\\mathrm{M}'\\\\mathrm{P}} = 4 + 1 = 5$이다. 삼수선의 정리에 의하여 $\\\\overline{\\\\mathrm{MP}} \\\\perp \\\\overline{\\\\mathrm{GI}}$이고 $\\\\overline{\\\\mathrm{MP}} = \\\\sqrt{5^{2} + (2\\\\sqrt{6})^{2}} = 7$이므로, 삼각형 $\\\\mathrm{MGI}$의 넓이는 $\\\\frac{1}{2} \\\\times 4\\\\sqrt{3} \\\\times 7 = 14\\\\sqrt{3}$이다.\",\"abstain_reason\":null}]}",
+          "finished_at": "2026-11-19T13:36:16.013Z"
+        }
+      ],
+      "original_group_id": "2027-math-geometry"
+    },
+    "2027-math-geometry--retry2-q28": {
+      "attempts": [
+        {
+          "iteration": 1,
+          "started_at": "2026-11-19T13:34:43.615Z",
+          "question_ids": [
+            "2027-math-geometry-q28"
+          ],
+          "http_idle_timeout_ms": 900000,
+          "user_retry": 2,
+          "image_encoding": "lossless WebP, original 200 DPI pixels",
+          "image_hashes": [
+            "4226c62b0bfaff9d268906c3196d214125380e2e92bfe11b9d73b12810916687",
+            "93a74c155ab08f42e224d0c6137e43736d55125813d9d664c0045a574f569d33",
+            "7211d0440868ec9d744679805df4c5305407697ccc23177a8a08ad5238275d1a",
+            "cb26fae3a687ee1c99a5cf0f976fc29fc9993e035c963c57821db0c8c3e4cb59"
+          ],
+          "usage": {
+            "input_tokens": 5333,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 385,
+            "reasoning_output_tokens": 0
+          },
+          "time_seconds": 131.165,
+          "thread_id": "01a1f404-4938-73c3-b12b-093572271988",
+          "status": "completed",
+          "estimated_cost_usd": 0.014516000000000001,
+          "response": "{\"answers\":[{\"question_id\":\"2027-math-geometry-q28\",\"decision\":\"answered\",\"answer\":4,\"explanation\":\"직각삼각형 $\\\\mathrm{OAB}$에서 $\\\\mathrm{O}(0,0)$, $\\\\mathrm{B}(2,0)$, $\\\\mathrm{A}(2,2)$로 놓으면 조건 (가)에 의하여 점 $\\\\mathrm{R}(x,y)$는 $0 \\\\le y \\\\le 4$, $y-2 \\\\le x \\\\le y$를 만족시키고, 조건 (나)는 $x+2y \\\\ge 10$으로 정리되어 점 $\\\\mathrm{R}$의 영역은 세 점 $(4,4)$, $(2,4)$, $\\\\left(\\\\frac{10}{3},\\\\frac{10}{3}\\\\right)$을 꼭짓점으로 하는 삼각형이 된다. 또한 $\\\\overrightarrow{\\\\mathrm{OR}} \\\\cdot \\\\overrightarrow{\\\\mathrm{BR}} = (x-1)^{2}+y^{2}-1$이므로 점 $(1,0)$으로부터의 거리를 이용하면 점 $(4,4)$에서 최댓값 $M = 3^{2}+4^{2}-1 = 24$를 갖는다. 한편 점 $(1,0)$에서 직선 $x+2y-10=0$에 내린 수선의 발 $\\\\left(\\\\frac{14}{5},\\\\frac{18}{5}\\\\right)$가 선분 위에 있으므로 최솟값은 $m = \\\\left(\\\\frac{9}{\\\\sqrt{5}}\\\\right)^{2}-1 = \\\\frac{76}{5}$이고, $M+m = \\\\frac{196}{5}$이다.\",\"abstain_reason\":null}]}",
+          "finished_at": "2026-11-19T13:36:54.780Z"
+        }
+      ],
+      "original_group_id": "2027-math-geometry"
+    },
+    "2027-math-geometry--retry2-q29": {
+      "attempts": [
+        {
+          "iteration": 1,
+          "started_at": "2026-11-19T13:36:54.795Z",
+          "question_ids": [
+            "2027-math-geometry-q29"
+          ],
+          "http_idle_timeout_ms": 900000,
+          "user_retry": 2,
+          "image_encoding": "lossless WebP, original 200 DPI pixels",
+          "image_hashes": [
+            "4226c62b0bfaff9d268906c3196d214125380e2e92bfe11b9d73b12810916687",
+            "93a74c155ab08f42e224d0c6137e43736d55125813d9d664c0045a574f569d33",
+            "7211d0440868ec9d744679805df4c5305407697ccc23177a8a08ad5238275d1a",
+            "cb26fae3a687ee1c99a5cf0f976fc29fc9993e035c963c57821db0c8c3e4cb59"
+          ],
+          "usage": {
+            "input_tokens": 5333,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 527,
+            "reasoning_output_tokens": 0
+          },
+          "time_seconds": 175.544,
+          "thread_id": "01a1f406-49a4-711d-a2bd-122fc926d647",
+          "status": "completed",
+          "estimated_cost_usd": 0.015936,
+          "response": "{\"answers\":[{\"question_id\":\"2027-math-geometry-q29\",\"decision\":\"answered\",\"answer\":45,\"explanation\":\"포물선의 정의에 의하여 $\\\\overline{\\\\mathrm{AB}}=\\\\overline{\\\\mathrm{AF}}$이고 $\\\\overline{\\\\mathrm{AF}}<2p<\\\\overline{\\\\mathrm{BF}}$이므로 쌍곡선의 주축의 길이는 $\\\\overline{\\\\mathrm{BF}}-\\\\overline{\\\\mathrm{AF}}$이며, $2\\\\overline{\\\\mathrm{BC}}=\\\\overline{\\\\mathrm{AB}}-(\\\\overline{\\\\mathrm{BF}}-\\\\overline{\\\\mathrm{AF}})=2\\\\overline{\\\\mathrm{AF}}-\\\\overline{\\\\mathrm{BF}}$와 $8\\\\overline{\\\\mathrm{BC}}=\\\\overline{\\\\mathrm{BF}}$에서 $5\\\\overline{\\\\mathrm{BF}}=8\\\\overline{\\\\mathrm{AF}}$이다. 점 $\\\\mathrm{A}(x_{1}, y_{1})$에 대하여 $\\\\overline{\\\\mathrm{AF}}=x_{1}+p$, $\\\\overline{\\\\mathrm{BF}}^{2}=4p^{2}+y_{1}^{2}=4p\\\\overline{\\\\mathrm{AF}}$이므로 $\\\\overline{\\\\mathrm{AF}}=\\\\frac{25}{16}p$, $\\\\mathrm{A}\\\\left(\\\\frac{9}{16}p, \\\\frac{3}{2}p\\\\right)$, $\\\\mathrm{B}\\\\left(-p, \\\\frac{3}{2}p\\\\right)$이고, 쌍곡선의 중심 $\\\\left(-\\\\frac{7}{32}p, \\\\frac{3}{2}p\\\\right)$을 지나며 기울기가 $\\\\frac{4}{3}$인 점근선 $l : 4x-3y+\\\\frac{43}{8}p=0$과 $\\\\mathrm{F}(p, 0)$ 사이의 거리가 $\\\\frac{15}{8}p=15$이므로 $p=8$이다. 따라서 $\\\\overline{\\\\mathrm{AB}}=\\\\overline{\\\\mathrm{AF}}=\\\\frac{25}{2}$, $\\\\overline{\\\\mathrm{BF}}=20$이므로 삼각형 $\\\\mathrm{ABF}$의 둘레의 길이는 $\\\\frac{25}{2}+\\\\frac{25}{2}+20=45$이다.\",\"abstain_reason\":null}]}",
+          "finished_at": "2026-11-19T13:39:50.339Z"
+        }
+      ],
+      "original_group_id": "2027-math-geometry"
+    },
+    "2027-math-geometry--retry2-q30": {
+      "attempts": [
+        {
+          "iteration": 1,
+          "started_at": "2026-11-19T13:36:54.809Z",
+          "question_ids": [
+            "2027-math-geometry-q30"
+          ],
+          "http_idle_timeout_ms": 900000,
+          "user_retry": 2,
+          "image_encoding": "lossless WebP, original 200 DPI pixels",
+          "image_hashes": [
+            "4226c62b0bfaff9d268906c3196d214125380e2e92bfe11b9d73b12810916687",
+            "93a74c155ab08f42e224d0c6137e43736d55125813d9d664c0045a574f569d33",
+            "7211d0440868ec9d744679805df4c5305407697ccc23177a8a08ad5238275d1a",
+            "cb26fae3a687ee1c99a5cf0f976fc29fc9993e035c963c57821db0c8c3e4cb59"
+          ],
+          "usage": {
+            "input_tokens": 5335,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 386,
+            "reasoning_output_tokens": 0
+          },
+          "time_seconds": 154.325,
+          "thread_id": "01a1f406-49a3-74d8-8a99-050f32d12147",
+          "status": "completed",
+          "estimated_cost_usd": 0.01453,
+          "response": "{\"answers\":[{\"question_id\":\"2027-math-geometry-q30\",\"decision\":\"answered\",\"answer\":223,\"explanation\":\"원 $C_{1}$의 반지름의 길이는 $\\\\sqrt{(3\\\\sqrt{5})^{2}-(2\\\\sqrt{5})^{2}}=5$이므로 $\\\\overline{\\\\mathrm{AB}}=10$인 선분 $\\\\mathrm{AB}$는 점 $\\\\mathrm{H}$를 지나는 지름이고, 평면 $\\\\mathrm{OAB}$는 평면 $\\\\alpha$에 수직이므로 구 $S_{2}$의 반지름의 길이는 점 $\\\\mathrm{C}$와 직선 $\\\\mathrm{AB}$ 사이의 거리인 $\\\\frac{2\\\\sqrt{10}\\\\cdot 2\\\\sqrt{15}}{10}=2\\\\sqrt{6}$이다. $\\\\overline{\\\\mathrm{OD}}=3\\\\sqrt{5}$인 두 구 $S_{1}, S_{2}$가 만나서 생기는 원 $C_{2}$의 반지름의 길이를 $r_{2}$라 하면 $r_{2}^{2}=\\\\frac{104}{5}$이고, 원 $C_{2}$를 포함하는 평면과 평면 $\\\\alpha$가 이루는 예각의 크기 $\\\\theta$에 대하여 $\\\\cos\\\\theta=\\\\frac{2\\\\sqrt{5}}{3\\\\sqrt{5}}=\\\\frac{2}{3}$이다. 따라서 정사영의 넓이는 $\\\\pi r_{2}^{2}\\\\cos\\\\theta=\\\\frac{208}{15}\\\\pi$이므로 $p=15$, $q=208$에서 $p+q=223$이다.\",\"abstain_reason\":null}]}",
+          "finished_at": "2026-11-19T13:39:29.134Z"
+        }
+      ],
+      "original_group_id": "2027-math-geometry"
     }
   },
   "iterations": [
@@ -2959,16 +3254,30 @@
         "2027-math-geometry--split-1",
         "2027-math-geometry--split-2"
       ]
+    },
+    {
+      "iteration": 1,
+      "started_at": "2026-11-19T13:33:43.312Z",
+      "pending_groups": [
+        "2027-math-geometry--retry2-q23",
+        "2027-math-geometry--retry2-q24",
+        "2027-math-geometry--retry2-q25",
+        "2027-math-geometry--retry2-q26",
+        "2027-math-geometry--retry2-q27",
+        "2027-math-geometry--retry2-q28",
+        "2027-math-geometry--retry2-q29",
+        "2027-math-geometry--retry2-q30"
+      ]
     }
   ],
   "usage": {
-    "input_tokens": 197686,
+    "input_tokens": 240352,
     "cached_input_tokens": 0,
     "cache_write_input_tokens": 0,
-    "output_tokens": 16642,
+    "output_tokens": 18977,
     "reasoning_output_tokens": 0
   },
-  "wall_time_seconds": 4569.876,
+  "wall_time_seconds": 4936.914000000001,
   "prompt_hash": "8516ead6f5815329fcbea9ae6072c55f72fa318f47528b77bf4e0ecbd76613e0",
   "source_hashes": {
     "exams/pdf/2027/국어영역_문제지.pdf": "6d9560b193a4e68d61a356215447f5268408793615ba013f777ac309ce109b84",
@@ -2976,7 +3285,7 @@
     "exams/pdf/2027/영어영역_문제지.pdf": "139f0f9e0a746948a982ff1b37418f808130132000b5435e6a9c101a81a4ec2f",
     "exams/pdf/2027/영어영역듣기평가대본.pdf": "bc481f077e4f80fa06ed26b10d1e2cfbc8e443e756148411f5824fda8b3a3725"
   },
-  "updated_at": "2026-11-19T12:36:59.159Z",
+  "updated_at": "2026-11-19T13:39:50.350Z",
   "billing": {
     "method": "pi_api",
     "api_key_used": true,
@@ -2986,8 +3295,8 @@
     "api_endpoint": "https://generativelanguage.googleapis.com/v1beta/openai/",
     "reference_cost_is_invoice": false
   },
-  "completed": false,
-  "finished_at": "2026-11-19T12:36:59.159Z",
+  "completed": true,
+  "finished_at": "2026-11-19T13:39:50.350Z",
   "protocol_history": [
     {
       "protocol": {
@@ -3030,11 +3339,19 @@
         "reason": "실행 종료: 139/147문항 제출. 1-3회차의 미제출은 Pi HTTP 유휴 제한(300초) 초과였고, 유휴 제한을 900초로 늘린 1회 분할 복구에서 131문항을 추가 제출했습니다. 기하 8문항은 복구 중 API 요청 한도(429)에 걸려 미제출 상태입니다.",
         "recorded_at": "2026-11-19T11:06:44.544Z"
       }
+    },
+    {
+      "index": 2,
+      "group": "2027-math-geometry",
+      "authorized_at": "2026-11-19T13:33:43.304Z",
+      "note": "2026-11-19 사용자 지시: 지출 한도 증액 후 기하 미제출 8문항 재시도",
+      "answers_before": 139,
+      "finalization_before": {
+        "state": "in_progress_rate_limited",
+        "reason": "진행 중: 139/147문항 제출. 기하 8문항은 Gemini API 일일 호출 한도에 걸려 대기 중이며, 한도가 회복되는 2026-11-20에 다시 시도합니다.",
+        "recorded_at": "2026-11-19T12:43:57.500Z"
+      },
+      "batch_max_questions": 1
     }
-  ],
-  "finalization": {
-    "state": "in_progress_rate_limited",
-    "reason": "진행 중: 139/147문항 제출. 기하 8문항은 Gemini API 일일 호출 한도에 걸려 대기 중이며, 한도가 회복되는 2026-11-20에 다시 시도합니다.",
-    "recorded_at": "2026-11-19T12:43:57.500Z"
-  }
+  ]
 }

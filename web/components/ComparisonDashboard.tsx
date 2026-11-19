@@ -26,7 +26,7 @@ const scoreSubjects = [
   { id: 'english', label: '영어', columns: 1 },
 ];
 type SortKey = 'model' | 'state' | 'accuracy' | 'abstention' | 'time' | 'cost' | 'hwajak' | 'language_media' | 'probability' | 'calculus' | 'geometry' | 'english';
-const sortLabels: Record<SortKey, string> = { model: '모델', state: '평가 상태', accuracy: '정답률', abstention: '기권 횟수', time: '총 실행 시간', cost: 'API 환산 USD', hwajak: '국어 · 화작 원점수', language_media: '국어 · 언매 원점수', probability: '수학 · 확통 원점수', calculus: '수학 · 미적 원점수', geometry: '수학 · 기하 원점수', english: '영어 원점수' };
+const sortLabels: Record<SortKey, string> = { model: '모델', state: '평가 상태', accuracy: '정답률', abstention: '기권 횟수', time: '풀이 시간', cost: 'API 환산 USD', hwajak: '국어 · 화작 원점수', language_media: '국어 · 언매 원점수', probability: '수학 · 확통 원점수', calculus: '수학 · 미적 원점수', geometry: '수학 · 기하 원점수', english: '영어 원점수' };
 const percent = (value: number) => `${value.toFixed(1)}%`;
 const elapsed = (seconds: number) => `${Math.floor(seconds / 60)}분 ${Math.floor(seconds % 60)}초`;
 function complete(model: RequestedModel, result?: BenchmarkData) {
@@ -86,7 +86,7 @@ export function ComparisonDashboard({ data }: { data: BenchmarkComparison }) {
     switch (sort.key) {
       case 'accuracy': return summary.accuracy;
       case 'abstention': return summary.abstained;
-      case 'time': return summary.wall_time_seconds;
+      case 'time': return summary.solve_time_seconds ?? summary.wall_time_seconds;
       case 'cost': return summary.estimated_cost_usd;
       default: return result.exams.find(exam => exam.track === sort.key)?.summary.score ?? null;
     }
@@ -97,9 +97,9 @@ export function ComparisonDashboard({ data }: { data: BenchmarkComparison }) {
     if (bv === null) return -1;
     const difference = typeof av === 'string' && typeof bv === 'string' ? av.localeCompare(bv, 'en') : Number(av) - Number(bv);
     if (difference !== 0) return sort.direction === 'asc' ? difference : -difference;
-    // Ties (e.g. equal accuracy) go to the shorter total run time.
-    const at = data.models.find(item => item.model === a.id)?.summary.wall_time_seconds;
-    const bt = data.models.find(item => item.model === b.id)?.summary.wall_time_seconds;
+    // Ties (e.g. equal accuracy) go to the shorter solve time (requests that submitted answers; retries excluded).
+    const as = data.models.find(item => item.model === a.id)?.summary, bs = data.models.find(item => item.model === b.id)?.summary;
+    const at = as && (as.solve_time_seconds ?? as.wall_time_seconds), bt = bs && (bs.solve_time_seconds ?? bs.wall_time_seconds);
     return sort.key === 'time' || at == null || bt == null ? 0 : at - bt;
   });
   const gradingPolicy = data.models.find(model => model.grading_policy)?.grading_policy;
@@ -128,7 +128,7 @@ export function ComparisonDashboard({ data }: { data: BenchmarkComparison }) {
             const exam = measured ? result.exams.find(item => item.subject === track.subject && (item.track === track.track || track.subject === 'english')) : undefined;
             const scored = exam && exam.summary.total_questions > exam.summary.pending;
             return <span key={track.track}><small>{track.label}</small><b>{scored ? <>{exam.summary.score}<GradingMark adjusted={exam.summary.adjusted_correct} /></> : '—'}</b>{scored && !!exam.summary.adjusted_correct && <small>공식 {exam.official_summary?.score}</small>}</span>;
-          })}</div></div>)}</div></td><td data-label="총 실행 시간">{measured ? elapsed(result.summary.wall_time_seconds) : '—'}</td><td data-label="API 환산 USD">{measured ? `$${result.summary.estimated_cost_usd.toFixed(4)}` : '—'}{measured && result.usage_complete === false && <small>보고된 사용량 기준</small>}</td></tr>{expandedModel === model.id && <tr className="model-analysis-row" id={`analysis-${model.id}`}><td colSpan={7}>{result ? <ModelExecutionDetails data={result} label={model.label} onShowAnswers={() => showModelRecords(model.id)} /> : <p role="status">{model.reason || '아직 실행 기록이 없습니다.'}</p>}</td></tr>}</Fragment>;
+          })}</div></div>)}</div></td><td data-label="풀이 시간">{measured ? elapsed(result.summary.solve_time_seconds ?? result.summary.wall_time_seconds) : '—'}</td><td data-label="API 환산 USD">{measured ? `$${result.summary.estimated_cost_usd.toFixed(4)}` : '—'}{measured && result.usage_complete === false && <small>보고된 사용량 기준</small>}</td></tr>{expandedModel === model.id && <tr className="model-analysis-row" id={`analysis-${model.id}`}><td colSpan={7}>{result ? <ModelExecutionDetails data={result} label={model.label} onShowAnswers={() => showModelRecords(model.id)} /> : <p role="status">{model.reason || '아직 실행 기록이 없습니다.'}</p>}</td></tr>}</Fragment>;
         })}</tbody></table></div>
         <p className="comparison-note">기권 횟수는 기권을 확정한 문항 수입니다. 모델을 누르면 재시도·거부·타임아웃과 사용량을 확인할 수 있습니다.</p>
         <details className="comparison-method"><summary>실행·비용 산정 기준</summary><p className="comparison-note">{executionPolicy} 비용은 토큰 사용량을 API 단가로 환산한 추정값이며 실제 청구액이 아닙니다. 캐시 토큰은 입력에 포함됩니다. 화작·언매는 국어, 확통·미적·기하는 수학 선택과목입니다.</p></details>

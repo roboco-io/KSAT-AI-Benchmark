@@ -18,19 +18,29 @@ export function buildReport(dataset,run,sources,pricing,engine,figureDependent=[
   stats[g.id]={usage:attempts.reduce((a,b)=>addUsage(a,b.usage),{}),seconds:attempts.reduce((a,b)=>a+b.time_seconds,0),cost:attempts.reduce((a,b)=>a+(Number.isFinite(b.estimated_cost_usd)&&b.estimated_cost_usd>0?b.estimated_cost_usd:estimateCost(b.usage,pricing)),0)};
  }
  const totalSeconds=Object.values(stats).reduce((a,b)=>a+b.seconds,0);
+ // Solve time counts only the request that actually submitted each answer; failed attempts and retries are excluded.
+ const solveSeconds={};let solveTotal=0;
+ for(const attempt of Object.values(run.groups).flatMap(group=>group.attempts||[]).filter(a=>a.status==='completed'&&Number.isFinite(a.time_seconds)).sort((a,b)=>String(a.started_at).localeCompare(String(b.started_at)))) {
+  const ids=(attempt.question_ids||[]).filter(id=>run.answers[id]&&!(id in solveSeconds));
+  if(!ids.length)continue;
+  solveTotal+=attempt.time_seconds;
+  for(const id of ids)solveSeconds[id]=attempt.time_seconds/ids.length;
+ }
  const questions=dataset.questions.map(q=>{
   const answer=run.answers[q.id],group=dataset.solver_groups.find(g=>g.question_ids.includes(q.id)),stat=stats[group.id],n=group.question_ids.length;
   const usage=Object.fromEntries(Object.entries(addUsage({},stat.usage)).map(([k,v])=>[k,v/n]));
-  return {...q,status:outcome(q,run.answers,run.errors),answer:answer?.answer??null,explanation:answer?.explanation||run.errors[q.id]?.detail||run.errors[q.id]?.message||'',abstain_reason:answer?.abstain_reason??null,time_seconds:stat.seconds/n,usage,estimated_cost_usd:stat.cost/n,measurement_basis:'Group request duration and usage divided equally; not individual measurement'};
+  return {...q,status:outcome(q,run.answers,run.errors),answer:answer?.answer??null,explanation:answer?.explanation||run.errors[q.id]?.detail||run.errors[q.id]?.message||'',abstain_reason:answer?.abstain_reason??null,time_seconds:stat.seconds/n,solve_time_seconds:solveSeconds[q.id]??0,usage,estimated_cost_usd:stat.cost/n,measurement_basis:'Group request duration and usage divided equally; solve_time_seconds counts only the request that submitted the answer; not individual measurement'};
  });
  const exams=dataset.exams.map(exam=>{
   const qs=dataset.questions.filter(q=>exam.question_ids.includes(q.id)),items=questions.filter(q=>exam.question_ids.includes(q.id));
   const usage=items.reduce((u,q)=>addUsage(u,q.usage),{}),seconds=items.reduce((s,q)=>s+q.time_seconds,0);
   const summary=summarize(qs,run.answers,run.errors,usage,seconds,seconds,pricing);
+  summary.solve_time_seconds=items.reduce((s,q)=>s+q.solve_time_seconds,0);
   summary.estimated_cost_usd=items.reduce((s,q)=>s+q.estimated_cost_usd,0);
   return {...exam,summary};
  });
  const summary=summarize(dataset.questions,run.answers,run.errors,run.usage,run.wall_time_seconds,totalSeconds,pricing);
+ summary.solve_time_seconds=solveTotal;
  summary.estimated_cost_usd=Number(Object.values(stats).reduce((s,g)=>s+g.cost,0).toFixed(8));
  const report=applyBenchmarkGrading({schema_version:2,generated_at:new Date().toISOString(),run_id:run.run_id,model:run.protocol.model,engine,academic_year:dataset.academic_year||2026,execution_stats:executionStats(run),execution_notes:run.execution_notes??[],execution_stats_evidence:executionEvidence(run),phase:run.phase,pricing,summary,exams,questions,sources,completed:run.completed===true,protocol:run.protocol,protocol_history:run.protocol_history||[],billing:run.billing||{method:'previous_record'},usage_complete:Object.values(run.groups).every(g=>g.attempts.every(a=>Number.isFinite(a.usage?.input_tokens)&&Number.isFinite(a.usage?.output_tokens)&&!a.api_usage_unknown&&(run.protocol.agent!=='Pi'||a.usage.input_tokens+a.usage.output_tokens>0))),limitations:[...(run.protocol.batch_max_questions?[`기존 묶음 실행 오류 후 미제출 문항을 최대 ${run.protocol.batch_max_questions}문항씩 한 차례 복구했습니다. 이전 실행 조건·실패 사용량·답안은 protocol_history와 원본 실행 기록에 보존합니다.`]:[]),...(run.protocol.agent==='Pi'?[
   'Pi 모델은 사용자 승인 API 인증으로 실행합니다. Codex·Claude 구독 결과와 인증 경로가 다릅니다.',

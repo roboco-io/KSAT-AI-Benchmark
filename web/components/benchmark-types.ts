@@ -3,7 +3,7 @@ export type Summary = {
   score: number; max_score: number;
   total_questions: number; correct: number; incorrect: number; abstained: number;
   errors: number; pending: number; accuracy: number; abstention_rate: number;
-  attempt_accuracy: number | null; wall_time_seconds: number; solver_time_seconds: number;
+  attempt_accuracy: number | null; wall_time_seconds: number; solver_time_seconds: number; solve_time_seconds?: number;
   usage: Usage; estimated_cost_usd: number;
   adjusted_correct?: number;
 };
@@ -12,7 +12,7 @@ export type Question = {
   id: string; number: number; subject: string; section: string;
   kind: 'multiple_choice' | 'short_answer'; points: number; status: QuestionStatus;
   answer: number | null; correct_answer: number; explanation: string;
-  abstain_reason: string | null; time_seconds: number; usage: Usage;
+  abstain_reason: string | null; time_seconds: number; solve_time_seconds?: number; usage: Usage;
   estimated_cost_usd: number; source_page: number;
   official_status?: QuestionStatus; accepted_answers?: number[]; benchmark_adjusted?: boolean;
 };

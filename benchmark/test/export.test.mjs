@@ -68,3 +68,17 @@ test('Q37 policy does not credit other fourth-choice answers or change usage and
  assert.equal(report.official_summary.correct,0);
  for(const key of ['usage','wall_time_seconds','solver_time_seconds','estimated_cost_usd'])assert.deepEqual(report.summary[key],report.official_summary[key]);
 });
+
+test('solve time counts only the request that submitted each answer, not failed attempts or retries',()=>{
+ const questions=[{id:'a',kind:'multiple_choice',correct_answer:1,points:2},{id:'b',kind:'multiple_choice',correct_answer:2,points:2},{id:'c',kind:'multiple_choice',correct_answer:3,points:2}];
+ const dataset={academic_year:2027,questions,solver_groups:[{id:'g',question_ids:['a','b','c']}],exams:[{id:'e',question_ids:['a','b','c'],max_score:6}]};
+ const run={run_id:'t',academic_year:2027,protocol:{model:'fixture'},completed:true,wall_time_seconds:2000,usage:{},errors:{},
+  answers:{a:{decision:'answered',answer:1},b:{decision:'answered',answer:2},c:{decision:'answered',answer:3}},
+  groups:{g:{attempts:[{started_at:'1',status:'error',time_seconds:900,question_ids:['a','b','c'],usage:{}},{started_at:'2',status:'completed',time_seconds:60,question_ids:['a','b'],usage:{}}]},
+   'g--retry1-c':{original_group_id:'g',attempts:[{started_at:'3',status:'error',time_seconds:5,question_ids:['c'],usage:{}},{started_at:'4',status:'completed',time_seconds:30,question_ids:['c'],usage:{},user_retry:1}]}}};
+ const report=buildReport(dataset,run,[],{input_per_million:0,cached_input_per_million:0,cache_write_per_million:0,output_per_million:0},'fixture');
+ assert.equal(report.summary.solve_time_seconds,90);
+ assert.deepEqual(report.questions.map(q=>q.solve_time_seconds),[30,30,30]);
+ assert.equal(report.exams[0].summary.solve_time_seconds,90);
+ assert.equal(report.summary.wall_time_seconds,2000);
+});
