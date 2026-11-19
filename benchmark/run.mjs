@@ -5,7 +5,7 @@ import {resolve,join,basename} from 'node:path';
 import {tmpdir} from 'node:os';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
-import {validateAnswers,mergeSubmitted,addUsage,estimateCost,fatalStreamError,attemptsRemaining,elapsedWall,verifyResume,runBatches,createPacer} from './core.mjs';
+import {validateAnswers,mergeSubmitted,addUsage,estimateCost,fatalStreamError,attemptsRemaining,openUserRetry,elapsedWall,verifyResume,runBatches,createPacer} from './core.mjs';
 import {modelById} from './models.mjs';
 import {modelForYear,yearPaths} from './academic-years.mjs';
 import {codexSubscriptionStatus,subscriptionEnvironment,claudeAccountFingerprint,assertFreshClaudeProof} from './subscription.mjs';
@@ -28,6 +28,8 @@ if(dataset.academic_year!==year)throw new Error('Dataset academic year mismatch'
 const hash=s=>createHash('sha256').update(s).digest('hex');
 const modelArg=process.argv.indexOf('--model');const selected=modelForYear(modelById(modelArg>=0?process.argv[modelArg+1]:'gpt-6.1-sol'),year);
 const groupArg=process.argv.indexOf('--group');const requestedGroup=groupArg>=0?process.argv[groupArg+1]:null;
+const retryArg=process.argv.indexOf('--user-retry');const userRetryNote=retryArg>=0?process.argv[retryArg+1]:null;
+if(userRetryNote!==null&&!requestedGroup)throw new Error('RETRY_BLOCKED: --user-retry requires --group');
 let allowedGroups=requestedGroup?dataset.solver_groups.filter(g=>g.id===requestedGroup):dataset.solver_groups;
 if(!allowedGroups.length)throw new Error('Unknown solver group');
 const once=process.argv.includes('--once');
@@ -113,7 +115,7 @@ async function solveGroup(group,iteration) {
  const allowed=questions.map(({id,number,section,kind})=>({question_id:id,number,section,kind}));
  const input=[{type:'text',text:prompt+'\n요청 문항:\n'+JSON.stringify(allowed)+(text?'\n\n'+text.text:'')},...images.map(path=>({type:'local_image',path}))];
  const thread=sdk?.startThread({model:protocol.model,modelReasoningEffort:protocol.effort,workingDirectory:mkdtempSync(join(tmpdir(),'ksat-solver-')),skipGitRepoCheck:true,sandboxMode:'read-only',approvalPolicy:'never',networkAccessEnabled:false,webSearchMode:'disabled'});
- const started=Date.now();const attempt={iteration,started_at:new Date().toISOString(),question_ids:questions.map(q=>q.id),...(selected.pi?{http_idle_timeout_ms:PI_HTTP_IDLE_TIMEOUT_MS}:{}),...(text?{input_encoding:`UTF-8 Markdown transcript, format version ${TRANSCRIPT_FORMAT_VERSION}`,transcript_hashes:text.hashes}:{image_encoding:'lossless WebP, original 200 DPI pixels',image_hashes:images.map(p=>hash(readFileSync(p)))}),usage:{},time_seconds:0,thread_id:null,status:'running'};
+ const started=Date.now();const attempt={iteration,started_at:new Date().toISOString(),question_ids:questions.map(q=>q.id),...(selected.pi?{http_idle_timeout_ms:PI_HTTP_IDLE_TIMEOUT_MS}:{}),...(userRetry!==null?{user_retry:userRetry}:{}),...(text?{input_encoding:`UTF-8 Markdown transcript, format version ${TRANSCRIPT_FORMAT_VERSION}`,transcript_hashes:text.hashes}:{image_encoding:'lossless WebP, original 200 DPI pixels',image_hashes:images.map(p=>hash(readFileSync(p)))}),usage:{},time_seconds:0,thread_id:null,status:'running'};
  const logPath=join(eventsDir,`${selected.id}-${group.id}-${iteration}-${Date.now()}.jsonl`);
  state.groups[group.id]??={attempts:[]};
  if(group.original_id)state.groups[group.id].original_group_id=group.original_id;state.groups[group.id].attempts.push(attempt);save();
@@ -149,12 +151,13 @@ async function solveGroup(group,iteration) {
   if(/^(SUBSCRIPTION_BLOCKED|PI_BLOCKED|MODEL_MISMATCH|TOOL_BLOCKED)/.test(attempt.error)){state.blocked_reason=attempt.error;invocationController.abort(error);}
  } finally {attempt.time_seconds=(Date.now()-started)/1000;attempt.finished_at=new Date().toISOString();save();}
 }
+const userRetry=userRetryNote!==null?openUserRetry(state,requestedGroup,{note:userRetryNote}):null;if(userRetry!==null)save();
 const invocationStart=Date.now(),baseWall=state.wall_time_seconds;
 const heartbeat=setInterval(()=>{state.wall_time_seconds=elapsedWall(baseWall,invocationStart,Date.now());save();},10000);
 try {
  for(let i=1;i<=(once?1:protocol.max_iterations);i++) {
   if(state.blocked_reason)break;
-  const pending=allowedGroups.filter(g=>g.question_ids.some(id=>!state.answers[id])&&attemptsRemaining(state.groups[g.id]?.attempts,protocol.max_iterations)>0&&!repeatedInspectionBlock(state.groups[g.id]?.attempts)&&(!g.original_id||!repeatedInspectionBlock(state.groups[g.original_id]?.attempts)));
+  const pending=allowedGroups.filter(g=>g.question_ids.some(id=>!state.answers[id])&&attemptsRemaining(state.groups[g.id]?.attempts,protocol.max_iterations,userRetry)>0&&!repeatedInspectionBlock(state.groups[g.id]?.attempts)&&(!g.original_id||!repeatedInspectionBlock(state.groups[g.original_id]?.attempts)));
   if(!pending.length)break;
   state.iterations.push({iteration:i,started_at:new Date().toISOString(),pending_groups:pending.map(g=>g.id)});save();
   await runBatches(pending,protocol.concurrency,invocationController,()=>Boolean(state.blocked_reason),g=>solveGroup(g,i));

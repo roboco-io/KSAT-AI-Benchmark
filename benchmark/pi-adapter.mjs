@@ -163,8 +163,9 @@ export async function* piEvents({model,prompt,images=[],schema,signal,apiKey,piE
      if (++messageCount!==1) throw new Error('PI_PROTOCOL_INVALID: unexpected additional assistant response');
      if (!['stop','length'].includes(message.stopReason)) {await privateFailure(model,message,apiKey);throw responseFailure(message);}
      if (message.stopReason==='length') throw new Error('PI_TURN_FAILED: response reached output token limit');
-     try {output=parsePiAnswers(message.content.filter(block=>block.type==='text').map(block=>block.text).join(''));}
-     catch(error) {parseError=error;}
+     const responseText=message.content.filter(block=>block.type==='text').map(block=>block.text).join('');
+     try {output=parsePiAnswers(responseText);}
+     catch(error) {parseError=error;await privateFailure(model,{stopReason:'invalid_output',errorMessage:responseText},apiKey);} // keep the unparsable text privately for diagnosis
     }
     if (event.type==='agent_settled') settled=true;
    }

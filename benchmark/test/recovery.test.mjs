@@ -76,3 +76,18 @@ test('invalid interruption timestamps leave every attempt unchanged',()=>{
  assert.throws(()=>markInterruptedAttempts(state,when),/RECOVERY_BLOCKED/);assert.deepEqual(state,prior);
  assert.throws(()=>markInterruptedAttempts(state,'invalid'),/RECOVERY_BLOCKED/);assert.deepEqual(state,prior);
 });
+
+test('a user-authorized retry reopens one finished Pi group with a fresh attempt budget and is recorded',async()=>{
+ const {openUserRetry,attemptsRemaining}=await import('../core.mjs');
+ const attempts=[{status:'error'},{status:'error'},{status:'error'}];
+ assert.equal(attemptsRemaining(attempts,3),0);
+ const state={protocol:{agent:'Pi'},finished_at:'2026-11-19T12:00:00Z',answers:{a:{}},finalization:{state:'finished_with_errors'}};
+ assert.throws(()=>openUserRetry({...state,finished_at:undefined},'g',{note:'x'}),/RETRY_BLOCKED/);
+ assert.throws(()=>openUserRetry({...state,protocol:{agent:'Codex'}},'g',{note:'x'}),/RETRY_BLOCKED/);
+ assert.throws(()=>openUserRetry(structuredClone(state),'g',{note:' '}),/RETRY_BLOCKED/);
+ const index=openUserRetry(state,'g',{note:'user asked',at:'2026-11-19T13:00:00Z'});
+ assert.equal(index,1);assert.equal(state.finalization,undefined);
+ assert.deepEqual(state.user_retries[0],{index:1,group:'g',authorized_at:'2026-11-19T13:00:00Z',note:'user asked',answers_before:1,finalization_before:{state:'finished_with_errors'}});
+ assert.equal(attemptsRemaining(attempts,3,index),3);
+ assert.equal(attemptsRemaining([...attempts,{user_retry:1}],3,index),2);
+});

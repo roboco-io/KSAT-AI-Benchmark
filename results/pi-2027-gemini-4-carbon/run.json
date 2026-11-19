@@ -2581,6 +2581,105 @@
           "status": "error",
           "error": "PI_TURN_FAILED: provider did not finish a complete answer",
           "finished_at": "2026-11-19T11:06:14.364Z"
+        },
+        {
+          "iteration": 1,
+          "started_at": "2026-11-19T12:36:55.380Z",
+          "question_ids": [
+            "2027-math-geometry-q23",
+            "2027-math-geometry-q24",
+            "2027-math-geometry-q25",
+            "2027-math-geometry-q26",
+            "2027-math-geometry-q27",
+            "2027-math-geometry-q28"
+          ],
+          "http_idle_timeout_ms": 900000,
+          "user_retry": 1,
+          "image_encoding": "lossless WebP, original 200 DPI pixels",
+          "image_hashes": [
+            "4226c62b0bfaff9d268906c3196d214125380e2e92bfe11b9d73b12810916687",
+            "93a74c155ab08f42e224d0c6137e43736d55125813d9d664c0045a574f569d33",
+            "7211d0440868ec9d744679805df4c5305407697ccc23177a8a08ad5238275d1a",
+            "cb26fae3a687ee1c99a5cf0f976fc29fc9993e035c963c57821db0c8c3e4cb59"
+          ],
+          "usage": {
+            "input_tokens": 0,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 0,
+            "reasoning_output_tokens": 0
+          },
+          "time_seconds": 1.351,
+          "thread_id": "01a1f3cf-5d76-74d7-8b45-5c77d5971c78",
+          "status": "error",
+          "error": "PI_TURN_FAILED: provider did not finish a complete answer",
+          "finished_at": "2026-11-19T12:36:56.731Z"
+        },
+        {
+          "iteration": 2,
+          "started_at": "2026-11-19T12:36:56.750Z",
+          "question_ids": [
+            "2027-math-geometry-q23",
+            "2027-math-geometry-q24",
+            "2027-math-geometry-q25",
+            "2027-math-geometry-q26",
+            "2027-math-geometry-q27",
+            "2027-math-geometry-q28"
+          ],
+          "http_idle_timeout_ms": 900000,
+          "user_retry": 1,
+          "image_encoding": "lossless WebP, original 200 DPI pixels",
+          "image_hashes": [
+            "4226c62b0bfaff9d268906c3196d214125380e2e92bfe11b9d73b12810916687",
+            "93a74c155ab08f42e224d0c6137e43736d55125813d9d664c0045a574f569d33",
+            "7211d0440868ec9d744679805df4c5305407697ccc23177a8a08ad5238275d1a",
+            "cb26fae3a687ee1c99a5cf0f976fc29fc9993e035c963c57821db0c8c3e4cb59"
+          ],
+          "usage": {
+            "input_tokens": 0,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 0,
+            "reasoning_output_tokens": 0
+          },
+          "time_seconds": 1.124,
+          "thread_id": "01a1f3cf-62bd-70ce-b1df-15ebd0b06175",
+          "status": "error",
+          "error": "PI_TURN_FAILED: provider did not finish a complete answer",
+          "finished_at": "2026-11-19T12:36:57.874Z"
+        },
+        {
+          "iteration": 3,
+          "started_at": "2026-11-19T12:36:57.893Z",
+          "question_ids": [
+            "2027-math-geometry-q23",
+            "2027-math-geometry-q24",
+            "2027-math-geometry-q25",
+            "2027-math-geometry-q26",
+            "2027-math-geometry-q27",
+            "2027-math-geometry-q28"
+          ],
+          "http_idle_timeout_ms": 900000,
+          "user_retry": 1,
+          "image_encoding": "lossless WebP, original 200 DPI pixels",
+          "image_hashes": [
+            "4226c62b0bfaff9d268906c3196d214125380e2e92bfe11b9d73b12810916687",
+            "93a74c155ab08f42e224d0c6137e43736d55125813d9d664c0045a574f569d33",
+            "7211d0440868ec9d744679805df4c5305407697ccc23177a8a08ad5238275d1a",
+            "cb26fae3a687ee1c99a5cf0f976fc29fc9993e035c963c57821db0c8c3e4cb59"
+          ],
+          "usage": {
+            "input_tokens": 0,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 0,
+            "reasoning_output_tokens": 0
+          },
+          "time_seconds": 1.253,
+          "thread_id": "01a1f3cf-6717-74c8-90e1-e77d8750c768",
+          "status": "error",
+          "error": "PI_TURN_FAILED: provider did not finish a complete answer",
+          "finished_at": "2026-11-19T12:36:59.146Z"
         }
       ],
       "original_group_id": "2027-math-geometry"
@@ -2670,6 +2769,93 @@
           "status": "error",
           "error": "PI_TURN_FAILED: provider did not finish a complete answer",
           "finished_at": "2026-11-19T11:06:14.345Z"
+        },
+        {
+          "iteration": 1,
+          "started_at": "2026-11-19T12:36:55.392Z",
+          "question_ids": [
+            "2027-math-geometry-q29",
+            "2027-math-geometry-q30"
+          ],
+          "http_idle_timeout_ms": 900000,
+          "user_retry": 1,
+          "image_encoding": "lossless WebP, original 200 DPI pixels",
+          "image_hashes": [
+            "4226c62b0bfaff9d268906c3196d214125380e2e92bfe11b9d73b12810916687",
+            "93a74c155ab08f42e224d0c6137e43736d55125813d9d664c0045a574f569d33",
+            "7211d0440868ec9d744679805df4c5305407697ccc23177a8a08ad5238275d1a",
+            "cb26fae3a687ee1c99a5cf0f976fc29fc9993e035c963c57821db0c8c3e4cb59"
+          ],
+          "usage": {
+            "input_tokens": 0,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 0,
+            "reasoning_output_tokens": 0
+          },
+          "time_seconds": 1.226,
+          "thread_id": "01a1f3cf-5d95-7728-898c-980a3e2dbec0",
+          "status": "error",
+          "error": "PI_TURN_FAILED: provider did not finish a complete answer",
+          "finished_at": "2026-11-19T12:36:56.618Z"
+        },
+        {
+          "iteration": 2,
+          "started_at": "2026-11-19T12:36:56.765Z",
+          "question_ids": [
+            "2027-math-geometry-q29",
+            "2027-math-geometry-q30"
+          ],
+          "http_idle_timeout_ms": 900000,
+          "user_retry": 1,
+          "image_encoding": "lossless WebP, original 200 DPI pixels",
+          "image_hashes": [
+            "4226c62b0bfaff9d268906c3196d214125380e2e92bfe11b9d73b12810916687",
+            "93a74c155ab08f42e224d0c6137e43736d55125813d9d664c0045a574f569d33",
+            "7211d0440868ec9d744679805df4c5305407697ccc23177a8a08ad5238275d1a",
+            "cb26fae3a687ee1c99a5cf0f976fc29fc9993e035c963c57821db0c8c3e4cb59"
+          ],
+          "usage": {
+            "input_tokens": 0,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 0,
+            "reasoning_output_tokens": 0
+          },
+          "time_seconds": 1.104,
+          "thread_id": "01a1f3cf-62be-7370-ba51-327b30ec5770",
+          "status": "error",
+          "error": "PI_TURN_FAILED: provider did not finish a complete answer",
+          "finished_at": "2026-11-19T12:36:57.869Z"
+        },
+        {
+          "iteration": 3,
+          "started_at": "2026-11-19T12:36:57.902Z",
+          "question_ids": [
+            "2027-math-geometry-q29",
+            "2027-math-geometry-q30"
+          ],
+          "http_idle_timeout_ms": 900000,
+          "user_retry": 1,
+          "image_encoding": "lossless WebP, original 200 DPI pixels",
+          "image_hashes": [
+            "4226c62b0bfaff9d268906c3196d214125380e2e92bfe11b9d73b12810916687",
+            "93a74c155ab08f42e224d0c6137e43736d55125813d9d664c0045a574f569d33",
+            "7211d0440868ec9d744679805df4c5305407697ccc23177a8a08ad5238275d1a",
+            "cb26fae3a687ee1c99a5cf0f976fc29fc9993e035c963c57821db0c8c3e4cb59"
+          ],
+          "usage": {
+            "input_tokens": 0,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 0,
+            "reasoning_output_tokens": 0
+          },
+          "time_seconds": 1.249,
+          "thread_id": "01a1f3cf-6717-7651-ad1c-9fbb772891e9",
+          "status": "error",
+          "error": "PI_TURN_FAILED: provider did not finish a complete answer",
+          "finished_at": "2026-11-19T12:36:59.151Z"
         }
       ],
       "original_group_id": "2027-math-geometry"
@@ -2749,6 +2935,30 @@
         "2027-math-geometry--split-1",
         "2027-math-geometry--split-2"
       ]
+    },
+    {
+      "iteration": 1,
+      "started_at": "2026-11-19T12:36:55.369Z",
+      "pending_groups": [
+        "2027-math-geometry--split-1",
+        "2027-math-geometry--split-2"
+      ]
+    },
+    {
+      "iteration": 2,
+      "started_at": "2026-11-19T12:36:56.737Z",
+      "pending_groups": [
+        "2027-math-geometry--split-1",
+        "2027-math-geometry--split-2"
+      ]
+    },
+    {
+      "iteration": 3,
+      "started_at": "2026-11-19T12:36:57.880Z",
+      "pending_groups": [
+        "2027-math-geometry--split-1",
+        "2027-math-geometry--split-2"
+      ]
     }
   ],
   "usage": {
@@ -2758,7 +2968,7 @@
     "output_tokens": 16642,
     "reasoning_output_tokens": 0
   },
-  "wall_time_seconds": 4566.085,
+  "wall_time_seconds": 4569.876,
   "prompt_hash": "8516ead6f5815329fcbea9ae6072c55f72fa318f47528b77bf4e0ecbd76613e0",
   "source_hashes": {
     "exams/pdf/2027/국어영역_문제지.pdf": "6d9560b193a4e68d61a356215447f5268408793615ba013f777ac309ce109b84",
@@ -2766,7 +2976,7 @@
     "exams/pdf/2027/영어영역_문제지.pdf": "139f0f9e0a746948a982ff1b37418f808130132000b5435e6a9c101a81a4ec2f",
     "exams/pdf/2027/영어영역듣기평가대본.pdf": "bc481f077e4f80fa06ed26b10d1e2cfbc8e443e756148411f5824fda8b3a3725"
   },
-  "updated_at": "2026-11-19T11:06:14.371Z",
+  "updated_at": "2026-11-19T12:36:59.159Z",
   "billing": {
     "method": "pi_api",
     "api_key_used": true,
@@ -2777,7 +2987,7 @@
     "reference_cost_is_invoice": false
   },
   "completed": false,
-  "finished_at": "2026-11-19T11:06:14.371Z",
+  "finished_at": "2026-11-19T12:36:59.159Z",
   "protocol_history": [
     {
       "protocol": {
@@ -2808,9 +3018,23 @@
       "cause": "output_limit_or_timeout_split_recovery"
     }
   ],
+  "user_retries": [
+    {
+      "index": 1,
+      "group": "2027-math-geometry",
+      "authorized_at": "2026-11-19T12:36:55.361Z",
+      "note": "2026-11-19 사용자 지시: 기하 묶음 재시도(직전 복구에서 429 요청 한도로 미제출)",
+      "answers_before": 139,
+      "finalization_before": {
+        "state": "finished_with_errors",
+        "reason": "실행 종료: 139/147문항 제출. 1-3회차의 미제출은 Pi HTTP 유휴 제한(300초) 초과였고, 유휴 제한을 900초로 늘린 1회 분할 복구에서 131문항을 추가 제출했습니다. 기하 8문항은 복구 중 API 요청 한도(429)에 걸려 미제출 상태입니다.",
+        "recorded_at": "2026-11-19T11:06:44.544Z"
+      }
+    }
+  ],
   "finalization": {
-    "state": "finished_with_errors",
-    "reason": "실행 종료: 139/147문항 제출. 1-3회차의 미제출은 Pi HTTP 유휴 제한(300초) 초과였고, 유휴 제한을 900초로 늘린 1회 분할 복구에서 131문항을 추가 제출했습니다. 기하 8문항은 복구 중 API 요청 한도(429)에 걸려 미제출 상태입니다.",
-    "recorded_at": "2026-11-19T11:06:44.544Z"
+    "state": "in_progress_rate_limited",
+    "reason": "진행 중: 139/147문항 제출. 기하 8문항은 Gemini API 일일 호출 한도에 걸려 대기 중이며, 한도가 회복되는 2026-11-20에 다시 시도합니다.",
+    "recorded_at": "2026-11-19T12:43:57.500Z"
   }
 }
