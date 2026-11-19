@@ -32,6 +32,90 @@
   },
   "dataset_hash": "4c69e03b69b31b050d595a2b9905e1c2f7a1e425f2a90ed9cce44315833bd086",
   "answers": {
+    "2027-korean-language_media-q37": {
+      "question_id": "2027-korean-language_media-q37",
+      "decision": "answered",
+      "answer": 5,
+      "explanation": "ㄱ의 안긴절 '우리 언니가 보낸'에서는 피수식어 '선물'이 목적어 구실을 할 뿐이고, '아주 유명한'에서는 주어가 생략된 것이므로 ㄱ에는 부사어가 생략된 안긴절이 없다. 나머지 행(주어·목적어·부사어에 안긴절이 있는 문장, 주어가 생략된 안긴절이 있는 문장)의 표기는 문장 분석과 부합하므로, '부사어가 생략된 안긴절이 있는 문장'을 ㄱ로 정한 ⑤가 적절하지 않다.",
+      "abstain_reason": null
+    },
+    "2027-korean-language_media-q39": {
+      "question_id": "2027-korean-language_media-q39",
+      "decision": "answered",
+      "answer": 4,
+      "explanation": "자료에 따르면 15세기 이중모음 'ㅐ'(ㅏ+ㅣ)는 현대 국어에서 단모음으로 변화했으므로 '고개 > 고개'에서는 ㄴ이 확인되고, 15세기의 단모음(ㅣ 등)은 현대에서도 단모음으로 남아 있으므로 '쉬이' 계열 예에서는 ㄱ이 확인된다. 반면 '귀'의 ㅟ는 이중모음 그대로라 ㄴ이 확인되지 않고, '거의'의 '의'도 이중모음이 유지되어 ㄴ이 확인되지 않으며, '고'의 ㅗ는 양 시기 모두 단모음이므로 '고개 > 고개'에서 ㄱ이 확인되지 않는다는 ①은 옳지 않다.",
+      "abstain_reason": null
+    },
+    "2027-korean-language_media-q40": {
+      "question_id": "2027-korean-language_media-q40",
+      "decision": "answered",
+      "answer": 4,
+      "explanation": "(가)에서는 진행자가 전문가의 설명을 듣고 질문하며 화제를 제시하고, 자료 화면에 상자형과 원통형 이미지를 함께 보여주며, 원통형 보관함의 끈 부분을 확대해 유용성을 설명하고, 마지막에 교체 준비 관련 문헌 내용을 자막으로 제공한다. 그러나 진행자가 향을 맡고 감상을 표현하는 장면은 방송에 나타나지 않으므로 ④는 적절하지 않다.",
+      "abstain_reason": null
+    },
+    "2027-korean-language_media-q38": {
+      "question_id": "2027-korean-language_media-q38",
+      "decision": "answered",
+      "answer": 3,
+      "explanation": "두 번째 해석에서 '희수'는 누나의 동생 이름(ㄴ)이고, '한 장의 사진에 자신과 친구들의 모습을 담고 싶어 했다'는 사진에 함께 찍히고자 한 의미(ㄷ)를 포함한다. 또 '친구들이 모두 참석하지는 않았다'는 일부가 참석했음을 의미하므로 모임에 참석한 친구가 있다(ㅁ)는 의미도 포함된다.",
+      "abstain_reason": null
+    },
+    "2027-korean-language_media-q36": {
+      "question_id": "2027-korean-language_media-q36",
+      "decision": "abstained",
+      "answer": null,
+      "explanation": "보기 표의 인공어 표기('멀찙검치', '다랄-이', '패-털' 등)와 선택지의 ⊫ 기호가 지시하는 대상(지문 예시 항목)이 제공된 이미지에서 판독되지 않아, 각 복수 표준어 쌍의 직접 구성 요소 구조(단일어/복합어/파생어 여부, 하이픈 경계)를 확정할 수 없습니다. 이 상태로는 오답 가능성이 높은 선택지를 특정할 수 없어 기권합니다.",
+      "abstain_reason": "unreadable"
+    },
+    "2027-korean-language_media-q35": {
+      "question_id": "2027-korean-language_media-q35",
+      "decision": "answered",
+      "answer": 3,
+      "explanation": "글에서 조사 '가'를 문장을 이루는 단어로 따로 확인하므로, '밤이'는 단어 '밤'과 '이' 두 개, '깊었네'는 활용형 단어 하나로 이루어져 단어의 개수가 서로 다르다. ①은 '새벽이'가 단어 두 개(새벽+이)의 결합이므로, ②는 '눈이'(2 형태소)와 '내렸군'(내리-, -았-, -군의 3 형태소)이 개수가 달라, ④는 실질 형태소가 1개와 2개로 달라, ⑤는 의존 형태소 개수가 동일하게 분석되어 각각 적절하지 않다.",
+      "abstain_reason": null
+    },
+    "2027-korean-common-q21": {
+      "question_id": "2027-korean-common-q21",
+      "decision": "answered",
+      "answer": 5,
+      "explanation": "보기는 소설의 일반 과정에서 발견되지 않던 선행 인물의 섬세한 관심과 행동이 위엄의 근거가 되고, 이 과정에서 발견된 상징적 인물의 부패가 '확대될 수 있어' 위엄을 고조한다고 제시한다. 그러나 ⑤는 부패가 위엄을 고조하는 현상으로서 독자에게 발견되는 것이라는 보기의 논리와 달리, 변한이 화진을 죽여 목을 벤 결과를 변한 자신의 의도적 행위로 제시하며 위엄을 '지속'하려는 것으로 서술하고 있어 보기의 내용과 맞지 않다.",
+      "abstain_reason": null
+    },
+    "2027-korean-common-q20": {
+      "question_id": "2027-korean-common-q20",
+      "decision": "answered",
+      "answer": 5,
+      "explanation": "⑤은 [18~21] 제시문에는 존재하지 않는 '검', 'A', '모욕적·경멸적 발언', '책임의 유형' 등 다른 지문(17번 문항)의 내용을 인용하고 있어 ⓐ~ⓔ에 대한 이해로 적절하지 않다. 반면 ①~④는 각각 성 부인의 결심(ⓐ), 화친의 '어머니 말씀이 옳습니다'(ⓑ), 범한의 획책 관련 발언(ⓒ), 화친이 거짓 자백을 택한 심경(ⓓ)을 제시문 내용에 맞게 설명한다.",
+      "abstain_reason": null
+    },
+    "2027-korean-common-q24": {
+      "question_id": "2027-korean-common-q24",
+      "decision": "answered",
+      "answer": 1,
+      "explanation": "①은 '만 이십사 년 일 개월을 무모한 기쁨을 바라 살아왔던가'라는 회고적 자문을 통해, 그 기간 동안 무모한 행위(삶)가 지속되었음을 드러내는 설명으로 적절하다. ②는 '즐거운 날'이 앞으로 참회록을 쓸 날을 가리키는 것이지 행위가 이루어진 때가 아니므로 옳지 않고, ③~⑤도 추억, 동침 요청, '어느 왕조'/'밤마다'의 인용 등 ①, ②의 내용과 맞지 않다.",
+      "abstain_reason": null
+    },
+    "2027-korean-common-q23": {
+      "question_id": "2027-korean-common-q23",
+      "decision": "answered",
+      "answer": 4,
+      "explanation": "(다)에서 '수은'으로 닫힌 거울의 '배면'은 거울이 빛을 반사하여 대상을 비추게 하는 장치일 뿐, 거울에 비친 형상을 보려는 주체의 시선을 가로막는 것이 아니므로 ④의 해석은 부적절하다. 나머지 ①, ②, ③, ⑤는 거울의 반영적 속성과 유리의 투과적 속성에 근거한 적절한 감상이다.",
+      "abstain_reason": null
+    },
+    "2027-korean-common-q22": {
+      "question_id": "2027-korean-common-q22",
+      "decision": "answered",
+      "answer": 1,
+      "explanation": "(가)는 ‘욕될까’, ‘살아왔던가’, ‘왜 그런 부끄런 고백을 했던가’ 등 물음의 형식을 활용해 자신의 삶과 과거를 돌아보는 자세를 드러내므로 ①이 적절하다. (나)는 자연과 인간의 병치를 통한 화해 가능성 제시가 아니라 전어의 모습을 ‘시의 몸부림’에 빗대어 시의 상황을 우회적으로 드러내는 것이고, (가)는 관조적 태도가 아닌 자기 성찰·참회의 태도를 보이므로 ②④⑤는 부적절하다.",
+      "abstain_reason": null
+    },
+    "2027-korean-common-q19": {
+      "question_id": "2027-korean-common-q19",
+      "decision": "answered",
+      "answer": 1,
+      "explanation": "㉠은 성 태수가 어머니의 생각을 바꾸도록 애절하게 간곡히 호소하는 마음을, ㉡은 화춘의 간절한 권유를 받아들여 허락하려는 성 부인의 마음을 드러낸다. 나머지 보기들은 ㉠의 '원망', ㉡의 '후회', ㉣(일이 어그러질까 염려하며 움직임)의 '뉘우침', ㉢의 '포부·체념' 등으로 정황과 맞지 않다.",
+      "abstain_reason": null
+    },
     "2027-math-geometry-q23": {
       "question_id": "2027-math-geometry-q23",
       "decision": "answered",
@@ -978,56 +1062,7 @@
       "abstain_reason": null
     }
   },
-  "errors": {
-    "2027-korean-common-q19": {
-      "status": "error",
-      "message": "PI_ABORTED: request cancelled or timed out"
-    },
-    "2027-korean-common-q20": {
-      "status": "error",
-      "message": "PI_ABORTED: request cancelled or timed out"
-    },
-    "2027-korean-common-q21": {
-      "status": "error",
-      "message": "PI_ABORTED: request cancelled or timed out"
-    },
-    "2027-korean-common-q22": {
-      "status": "error",
-      "message": "PI_ABORTED: request cancelled or timed out"
-    },
-    "2027-korean-common-q23": {
-      "status": "error",
-      "message": "PI_ABORTED: request cancelled or timed out"
-    },
-    "2027-korean-common-q24": {
-      "status": "error",
-      "message": "PI_ABORTED: request cancelled or timed out"
-    },
-    "2027-korean-language_media-q35": {
-      "status": "error",
-      "message": "PI_ABORTED: request cancelled or timed out"
-    },
-    "2027-korean-language_media-q36": {
-      "status": "error",
-      "message": "PI_ABORTED: request cancelled or timed out"
-    },
-    "2027-korean-language_media-q37": {
-      "status": "error",
-      "message": "PI_ABORTED: request cancelled or timed out"
-    },
-    "2027-korean-language_media-q38": {
-      "status": "error",
-      "message": "PI_ABORTED: request cancelled or timed out"
-    },
-    "2027-korean-language_media-q39": {
-      "status": "error",
-      "message": "PI_ABORTED: request cancelled or timed out"
-    },
-    "2027-korean-language_media-q40": {
-      "status": "error",
-      "message": "PI_ABORTED: request cancelled or timed out"
-    }
-  },
+  "errors": {},
   "groups": {
     "2027-korean-common": {
       "attempts": [
@@ -2408,6 +2443,587 @@
         }
       ],
       "original_group_id": "2027-math-geometry"
+    },
+    "2027-korean-common--retry1-q19": {
+      "attempts": [
+        {
+          "iteration": 1,
+          "started_at": "2026-11-19T13:48:25.220Z",
+          "question_ids": [
+            "2027-korean-common-q19"
+          ],
+          "http_idle_timeout_ms": 900000,
+          "user_retry": 1,
+          "image_encoding": "lossless WebP, original 200 DPI pixels",
+          "image_hashes": [
+            "354d77b1dbc3877d47f08fe17d8b71ada7bfef86fcc0f56571dfb3d2fdf7cedb",
+            "b1be861eb63a67f7ea3aac367c808660569eb91dfde3a66e9c7e0f47aef8c6ff",
+            "52fcd160aba78ef2be37aa86a006b957cdcb69d8d7547d1009b6c3749b126da2",
+            "372f5ef0ab087a0313d08be64ba792f707e9aa913f6c9cfd2cc7681e5675ea84",
+            "b3003a333a53a2c44544571f9c409e665afed84d39757ff828391c0a050fa526",
+            "a8409aa8db0e2b4b76b4936930284a24d90c6322f2d310a11872bf63e62125c3",
+            "33331a1e4bc9c0d3397f25b11288d77d1b2593fad692dbb1ae2661768bf4e897",
+            "c6050f606340d585ea5e1a28fa10c9d5ff49eea20fd912428ad6ecc7ba30f79d",
+            "b13bf230264be37233a56aa58ca531d8210b5fff162e7374347c4cacaf7d1a14",
+            "3e4d93d6d786455743370afad2a5598a97da29011d742c11d816f8dd984db400",
+            "8100c36d7521c3cedc02b467b476b970b418f1bf804702de26cf7829c0d812e1",
+            "c8dd83460f911e43aed496ea459ef5431c53010181fa384500053923f2fcb781"
+          ],
+          "usage": {
+            "input_tokens": 96796,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 3283,
+            "reasoning_output_tokens": 2770
+          },
+          "time_seconds": 70.826,
+          "thread_id": "01a1f410-d2e5-7515-973f-4b174303cb72",
+          "status": "completed",
+          "estimated_cost_usd": 0.0161609,
+          "response": "{\"answers\":[{\"question_id\":\"2027-korean-common-q19\",\"decision\":\"answered\",\"answer\":1,\"explanation\":\"㉠은 성 태수가 어머니의 생각을 바꾸도록 애절하게 간곡히 호소하는 마음을, ㉡은 화춘의 간절한 권유를 받아들여 허락하려는 성 부인의 마음을 드러낸다. 나머지 보기들은 ㉠의 '원망', ㉡의 '후회', ㉣(일이 어그러질까 염려하며 움직임)의 '뉘우침', ㉢의 '포부·체념' 등으로 정황과 맞지 않다.\",\"abstain_reason\":null}]}",
+          "finished_at": "2026-11-19T13:49:36.046Z"
+        }
+      ],
+      "original_group_id": "2027-korean-common"
+    },
+    "2027-korean-common--retry1-q20": {
+      "attempts": [
+        {
+          "iteration": 1,
+          "started_at": "2026-11-19T13:48:25.241Z",
+          "question_ids": [
+            "2027-korean-common-q20"
+          ],
+          "http_idle_timeout_ms": 900000,
+          "user_retry": 1,
+          "image_encoding": "lossless WebP, original 200 DPI pixels",
+          "image_hashes": [
+            "354d77b1dbc3877d47f08fe17d8b71ada7bfef86fcc0f56571dfb3d2fdf7cedb",
+            "b1be861eb63a67f7ea3aac367c808660569eb91dfde3a66e9c7e0f47aef8c6ff",
+            "52fcd160aba78ef2be37aa86a006b957cdcb69d8d7547d1009b6c3749b126da2",
+            "372f5ef0ab087a0313d08be64ba792f707e9aa913f6c9cfd2cc7681e5675ea84",
+            "b3003a333a53a2c44544571f9c409e665afed84d39757ff828391c0a050fa526",
+            "a8409aa8db0e2b4b76b4936930284a24d90c6322f2d310a11872bf63e62125c3",
+            "33331a1e4bc9c0d3397f25b11288d77d1b2593fad692dbb1ae2661768bf4e897",
+            "c6050f606340d585ea5e1a28fa10c9d5ff49eea20fd912428ad6ecc7ba30f79d",
+            "b13bf230264be37233a56aa58ca531d8210b5fff162e7374347c4cacaf7d1a14",
+            "3e4d93d6d786455743370afad2a5598a97da29011d742c11d816f8dd984db400",
+            "8100c36d7521c3cedc02b467b476b970b418f1bf804702de26cf7829c0d812e1",
+            "c8dd83460f911e43aed496ea459ef5431c53010181fa384500053923f2fcb781"
+          ],
+          "usage": {
+            "input_tokens": 96792,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 65536,
+            "reasoning_output_tokens": 65535
+          },
+          "time_seconds": 707.998,
+          "thread_id": "01a1f410-d2e5-7260-97e8-6d4e765d0011",
+          "status": "error",
+          "estimated_cost_usd": 0.0472868,
+          "error": "PI_TURN_FAILED: response reached output token limit",
+          "finished_at": "2026-11-19T14:00:13.239Z"
+        },
+        {
+          "iteration": 2,
+          "started_at": "2026-11-19T14:09:09.962Z",
+          "question_ids": [
+            "2027-korean-common-q20"
+          ],
+          "http_idle_timeout_ms": 900000,
+          "user_retry": 1,
+          "image_encoding": "lossless WebP, original 200 DPI pixels",
+          "image_hashes": [
+            "354d77b1dbc3877d47f08fe17d8b71ada7bfef86fcc0f56571dfb3d2fdf7cedb",
+            "b1be861eb63a67f7ea3aac367c808660569eb91dfde3a66e9c7e0f47aef8c6ff",
+            "52fcd160aba78ef2be37aa86a006b957cdcb69d8d7547d1009b6c3749b126da2",
+            "372f5ef0ab087a0313d08be64ba792f707e9aa913f6c9cfd2cc7681e5675ea84",
+            "b3003a333a53a2c44544571f9c409e665afed84d39757ff828391c0a050fa526",
+            "a8409aa8db0e2b4b76b4936930284a24d90c6322f2d310a11872bf63e62125c3",
+            "33331a1e4bc9c0d3397f25b11288d77d1b2593fad692dbb1ae2661768bf4e897",
+            "c6050f606340d585ea5e1a28fa10c9d5ff49eea20fd912428ad6ecc7ba30f79d",
+            "b13bf230264be37233a56aa58ca531d8210b5fff162e7374347c4cacaf7d1a14",
+            "3e4d93d6d786455743370afad2a5598a97da29011d742c11d816f8dd984db400",
+            "8100c36d7521c3cedc02b467b476b970b418f1bf804702de26cf7829c0d812e1",
+            "c8dd83460f911e43aed496ea459ef5431c53010181fa384500053923f2fcb781"
+          ],
+          "usage": {
+            "input_tokens": 96790,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 31478,
+            "reasoning_output_tokens": 28444
+          },
+          "time_seconds": 487.516,
+          "thread_id": "01a1f423-d0e7-71bc-a593-f0edc7a41f82",
+          "status": "completed",
+          "estimated_cost_usd": 0.0302575,
+          "response": "{\"answers\":[{\"question_id\":\"2027-korean-common-q20\",\"decision\":\"answered\",\"answer\":5,\"explanation\":\"⑤은 [18~21] 제시문에는 존재하지 않는 '검', 'A', '모욕적·경멸적 발언', '책임의 유형' 등 다른 지문(17번 문항)의 내용을 인용하고 있어 ⓐ~ⓔ에 대한 이해로 적절하지 않다. 반면 ①~④는 각각 성 부인의 결심(ⓐ), 화친의 '어머니 말씀이 옳습니다'(ⓑ), 범한의 획책 관련 발언(ⓒ), 화친이 거짓 자백을 택한 심경(ⓓ)을 제시문 내용에 맞게 설명한다.\",\"abstain_reason\":null}]}",
+          "finished_at": "2026-11-19T14:17:17.478Z"
+        }
+      ],
+      "original_group_id": "2027-korean-common"
+    },
+    "2027-korean-common--retry1-q21": {
+      "attempts": [
+        {
+          "iteration": 1,
+          "started_at": "2026-11-19T14:00:13.256Z",
+          "question_ids": [
+            "2027-korean-common-q21"
+          ],
+          "http_idle_timeout_ms": 900000,
+          "user_retry": 1,
+          "image_encoding": "lossless WebP, original 200 DPI pixels",
+          "image_hashes": [
+            "354d77b1dbc3877d47f08fe17d8b71ada7bfef86fcc0f56571dfb3d2fdf7cedb",
+            "b1be861eb63a67f7ea3aac367c808660569eb91dfde3a66e9c7e0f47aef8c6ff",
+            "52fcd160aba78ef2be37aa86a006b957cdcb69d8d7547d1009b6c3749b126da2",
+            "372f5ef0ab087a0313d08be64ba792f707e9aa913f6c9cfd2cc7681e5675ea84",
+            "b3003a333a53a2c44544571f9c409e665afed84d39757ff828391c0a050fa526",
+            "a8409aa8db0e2b4b76b4936930284a24d90c6322f2d310a11872bf63e62125c3",
+            "33331a1e4bc9c0d3397f25b11288d77d1b2593fad692dbb1ae2661768bf4e897",
+            "c6050f606340d585ea5e1a28fa10c9d5ff49eea20fd912428ad6ecc7ba30f79d",
+            "b13bf230264be37233a56aa58ca531d8210b5fff162e7374347c4cacaf7d1a14",
+            "3e4d93d6d786455743370afad2a5598a97da29011d742c11d816f8dd984db400",
+            "8100c36d7521c3cedc02b467b476b970b418f1bf804702de26cf7829c0d812e1",
+            "c8dd83460f911e43aed496ea459ef5431c53010181fa384500053923f2fcb781"
+          ],
+          "usage": {
+            "input_tokens": 96790,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 24951,
+            "reasoning_output_tokens": 23461
+          },
+          "time_seconds": 433.039,
+          "thread_id": "01a1f41b-a09d-71d2-bbee-690817204b40",
+          "status": "error",
+          "estimated_cost_usd": 0.026993999999999997,
+          "error": "Invalid answer: 2027-korean-common-q21",
+          "finished_at": "2026-11-19T14:07:26.295Z"
+        },
+        {
+          "iteration": 2,
+          "started_at": "2026-11-19T14:09:09.982Z",
+          "question_ids": [
+            "2027-korean-common-q21"
+          ],
+          "http_idle_timeout_ms": 900000,
+          "user_retry": 1,
+          "image_encoding": "lossless WebP, original 200 DPI pixels",
+          "image_hashes": [
+            "354d77b1dbc3877d47f08fe17d8b71ada7bfef86fcc0f56571dfb3d2fdf7cedb",
+            "b1be861eb63a67f7ea3aac367c808660569eb91dfde3a66e9c7e0f47aef8c6ff",
+            "52fcd160aba78ef2be37aa86a006b957cdcb69d8d7547d1009b6c3749b126da2",
+            "372f5ef0ab087a0313d08be64ba792f707e9aa913f6c9cfd2cc7681e5675ea84",
+            "b3003a333a53a2c44544571f9c409e665afed84d39757ff828391c0a050fa526",
+            "a8409aa8db0e2b4b76b4936930284a24d90c6322f2d310a11872bf63e62125c3",
+            "33331a1e4bc9c0d3397f25b11288d77d1b2593fad692dbb1ae2661768bf4e897",
+            "c6050f606340d585ea5e1a28fa10c9d5ff49eea20fd912428ad6ecc7ba30f79d",
+            "b13bf230264be37233a56aa58ca531d8210b5fff162e7374347c4cacaf7d1a14",
+            "3e4d93d6d786455743370afad2a5598a97da29011d742c11d816f8dd984db400",
+            "8100c36d7521c3cedc02b467b476b970b418f1bf804702de26cf7829c0d812e1",
+            "c8dd83460f911e43aed496ea459ef5431c53010181fa384500053923f2fcb781"
+          ],
+          "usage": {
+            "input_tokens": 96790,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 58641,
+            "reasoning_output_tokens": 58416
+          },
+          "time_seconds": 563.785,
+          "thread_id": "01a1f423-d0e7-7419-af57-11c5bd5957b7",
+          "status": "completed",
+          "estimated_cost_usd": 0.043839,
+          "response": "{\"answers\":[{\"question_id\":\"2027-korean-common-q21\",\"decision\":\"answered\",\"answer\":5,\"explanation\":\"보기는 소설의 일반 과정에서 발견되지 않던 선행 인물의 섬세한 관심과 행동이 위엄의 근거가 되고, 이 과정에서 발견된 상징적 인물의 부패가 '확대될 수 있어' 위엄을 고조한다고 제시한다. 그러나 ⑤는 부패가 위엄을 고조하는 현상으로서 독자에게 발견되는 것이라는 보기의 논리와 달리, 변한이 화진을 죽여 목을 벤 결과를 변한 자신의 의도적 행위로 제시하며 위엄을 '지속'하려는 것으로 서술하고 있어 보기의 내용과 맞지 않다.\",\"abstain_reason\":null}]}",
+          "finished_at": "2026-11-19T14:18:33.767Z"
+        }
+      ],
+      "original_group_id": "2027-korean-common"
+    },
+    "2027-korean-common--retry1-q22": {
+      "attempts": [
+        {
+          "iteration": 1,
+          "started_at": "2026-11-19T14:00:13.273Z",
+          "question_ids": [
+            "2027-korean-common-q22"
+          ],
+          "http_idle_timeout_ms": 900000,
+          "user_retry": 1,
+          "image_encoding": "lossless WebP, original 200 DPI pixels",
+          "image_hashes": [
+            "354d77b1dbc3877d47f08fe17d8b71ada7bfef86fcc0f56571dfb3d2fdf7cedb",
+            "b1be861eb63a67f7ea3aac367c808660569eb91dfde3a66e9c7e0f47aef8c6ff",
+            "52fcd160aba78ef2be37aa86a006b957cdcb69d8d7547d1009b6c3749b126da2",
+            "372f5ef0ab087a0313d08be64ba792f707e9aa913f6c9cfd2cc7681e5675ea84",
+            "b3003a333a53a2c44544571f9c409e665afed84d39757ff828391c0a050fa526",
+            "a8409aa8db0e2b4b76b4936930284a24d90c6322f2d310a11872bf63e62125c3",
+            "33331a1e4bc9c0d3397f25b11288d77d1b2593fad692dbb1ae2661768bf4e897",
+            "c6050f606340d585ea5e1a28fa10c9d5ff49eea20fd912428ad6ecc7ba30f79d",
+            "b13bf230264be37233a56aa58ca531d8210b5fff162e7374347c4cacaf7d1a14",
+            "3e4d93d6d786455743370afad2a5598a97da29011d742c11d816f8dd984db400",
+            "8100c36d7521c3cedc02b467b476b970b418f1bf804702de26cf7829c0d812e1",
+            "c8dd83460f911e43aed496ea459ef5431c53010181fa384500053923f2fcb781"
+          ],
+          "usage": {
+            "input_tokens": 96792,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 1290,
+            "reasoning_output_tokens": 1013
+          },
+          "time_seconds": 37.783,
+          "thread_id": "01a1f41b-a09d-73e9-bbc4-dbb01d547c90",
+          "status": "completed",
+          "estimated_cost_usd": 0.0151638,
+          "response": "{\"answers\":[{\"question_id\":\"2027-korean-common-q22\",\"decision\":\"answered\",\"answer\":1,\"explanation\":\"(가)는 ‘욕될까’, ‘살아왔던가’, ‘왜 그런 부끄런 고백을 했던가’ 등 물음의 형식을 활용해 자신의 삶과 과거를 돌아보는 자세를 드러내므로 ①이 적절하다. (나)는 자연과 인간의 병치를 통한 화해 가능성 제시가 아니라 전어의 모습을 ‘시의 몸부림’에 빗대어 시의 상황을 우회적으로 드러내는 것이고, (가)는 관조적 태도가 아닌 자기 성찰·참회의 태도를 보이므로 ②④⑤는 부적절하다.\",\"abstain_reason\":null}]}",
+          "finished_at": "2026-11-19T14:00:51.056Z"
+        }
+      ],
+      "original_group_id": "2027-korean-common"
+    },
+    "2027-korean-common--retry1-q23": {
+      "attempts": [
+        {
+          "iteration": 1,
+          "started_at": "2026-11-19T14:07:26.307Z",
+          "question_ids": [
+            "2027-korean-common-q23"
+          ],
+          "http_idle_timeout_ms": 900000,
+          "user_retry": 1,
+          "image_encoding": "lossless WebP, original 200 DPI pixels",
+          "image_hashes": [
+            "354d77b1dbc3877d47f08fe17d8b71ada7bfef86fcc0f56571dfb3d2fdf7cedb",
+            "b1be861eb63a67f7ea3aac367c808660569eb91dfde3a66e9c7e0f47aef8c6ff",
+            "52fcd160aba78ef2be37aa86a006b957cdcb69d8d7547d1009b6c3749b126da2",
+            "372f5ef0ab087a0313d08be64ba792f707e9aa913f6c9cfd2cc7681e5675ea84",
+            "b3003a333a53a2c44544571f9c409e665afed84d39757ff828391c0a050fa526",
+            "a8409aa8db0e2b4b76b4936930284a24d90c6322f2d310a11872bf63e62125c3",
+            "33331a1e4bc9c0d3397f25b11288d77d1b2593fad692dbb1ae2661768bf4e897",
+            "c6050f606340d585ea5e1a28fa10c9d5ff49eea20fd912428ad6ecc7ba30f79d",
+            "b13bf230264be37233a56aa58ca531d8210b5fff162e7374347c4cacaf7d1a14",
+            "3e4d93d6d786455743370afad2a5598a97da29011d742c11d816f8dd984db400",
+            "8100c36d7521c3cedc02b467b476b970b418f1bf804702de26cf7829c0d812e1",
+            "c8dd83460f911e43aed496ea459ef5431c53010181fa384500053923f2fcb781"
+          ],
+          "usage": {
+            "input_tokens": 96794,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 2064,
+            "reasoning_output_tokens": 1787
+          },
+          "time_seconds": 45.917,
+          "thread_id": "01a1f422-3be3-775e-a91c-0ea10059e025",
+          "status": "completed",
+          "estimated_cost_usd": 0.0155511,
+          "response": "{\"answers\":[{\"question_id\":\"2027-korean-common-q23\",\"decision\":\"answered\",\"answer\":4,\"explanation\":\"(다)에서 '수은'으로 닫힌 거울의 '배면'은 거울이 빛을 반사하여 대상을 비추게 하는 장치일 뿐, 거울에 비친 형상을 보려는 주체의 시선을 가로막는 것이 아니므로 ④의 해석은 부적절하다. 나머지 ①, ②, ③, ⑤는 거울의 반영적 속성과 유리의 투과적 속성에 근거한 적절한 감상이다.\",\"abstain_reason\":null}]}",
+          "finished_at": "2026-11-19T14:08:12.224Z"
+        }
+      ],
+      "original_group_id": "2027-korean-common"
+    },
+    "2027-korean-common--retry1-q24": {
+      "attempts": [
+        {
+          "iteration": 1,
+          "started_at": "2026-11-19T14:07:26.323Z",
+          "question_ids": [
+            "2027-korean-common-q24"
+          ],
+          "http_idle_timeout_ms": 900000,
+          "user_retry": 1,
+          "image_encoding": "lossless WebP, original 200 DPI pixels",
+          "image_hashes": [
+            "354d77b1dbc3877d47f08fe17d8b71ada7bfef86fcc0f56571dfb3d2fdf7cedb",
+            "b1be861eb63a67f7ea3aac367c808660569eb91dfde3a66e9c7e0f47aef8c6ff",
+            "52fcd160aba78ef2be37aa86a006b957cdcb69d8d7547d1009b6c3749b126da2",
+            "372f5ef0ab087a0313d08be64ba792f707e9aa913f6c9cfd2cc7681e5675ea84",
+            "b3003a333a53a2c44544571f9c409e665afed84d39757ff828391c0a050fa526",
+            "a8409aa8db0e2b4b76b4936930284a24d90c6322f2d310a11872bf63e62125c3",
+            "33331a1e4bc9c0d3397f25b11288d77d1b2593fad692dbb1ae2661768bf4e897",
+            "c6050f606340d585ea5e1a28fa10c9d5ff49eea20fd912428ad6ecc7ba30f79d",
+            "b13bf230264be37233a56aa58ca531d8210b5fff162e7374347c4cacaf7d1a14",
+            "3e4d93d6d786455743370afad2a5598a97da29011d742c11d816f8dd984db400",
+            "8100c36d7521c3cedc02b467b476b970b418f1bf804702de26cf7829c0d812e1",
+            "c8dd83460f911e43aed496ea459ef5431c53010181fa384500053923f2fcb781"
+          ],
+          "usage": {
+            "input_tokens": 96790,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 5466,
+            "reasoning_output_tokens": 4918
+          },
+          "time_seconds": 103.623,
+          "thread_id": "01a1f422-3be3-740c-b866-daf12c43fef8",
+          "status": "completed",
+          "estimated_cost_usd": 0.0172515,
+          "response": "{\"answers\":[{\"question_id\":\"2027-korean-common-q24\",\"decision\":\"answered\",\"answer\":1,\"explanation\":\"①은 '만 이십사 년 일 개월을 무모한 기쁨을 바라 살아왔던가'라는 회고적 자문을 통해, 그 기간 동안 무모한 행위(삶)가 지속되었음을 드러내는 설명으로 적절하다. ②는 '즐거운 날'이 앞으로 참회록을 쓸 날을 가리키는 것이지 행위가 이루어진 때가 아니므로 옳지 않고, ③~⑤도 추억, 동침 요청, '어느 왕조'/'밤마다'의 인용 등 ①, ②의 내용과 맞지 않다.\",\"abstain_reason\":null}]}",
+          "finished_at": "2026-11-19T14:09:09.946Z"
+        }
+      ],
+      "original_group_id": "2027-korean-common"
+    },
+    "2027-korean-language_media--retry2-q35": {
+      "attempts": [
+        {
+          "iteration": 1,
+          "started_at": "2026-11-19T14:18:33.972Z",
+          "question_ids": [
+            "2027-korean-language_media-q35"
+          ],
+          "http_idle_timeout_ms": 900000,
+          "user_retry": 2,
+          "image_encoding": "lossless WebP, original 200 DPI pixels",
+          "image_hashes": [
+            "3f6d50f91ce2b59af95e6b6f7ffa5a9a60b07789f8967b4d127ba3b30efc2d6d",
+            "ad5bc6d0a78ee43846fa54a4747d8d49986b30d0b21693f2d071f1915fd969a0",
+            "29e603dc8977f7c69bab2ef73e19779f1f2b0f6805e23b9864810a9f00aad0a1",
+            "6cee2c908b141f970a0faf7e74677a291f1270862bd41b47c088c166af0c487b"
+          ],
+          "usage": {
+            "input_tokens": 32810,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 17244,
+            "reasoning_output_tokens": 17009
+          },
+          "time_seconds": 182.88,
+          "thread_id": "01a1f42c-6c02-7622-ac93-70bdbe7af626",
+          "status": "completed",
+          "estimated_cost_usd": 0.0135435,
+          "response": "{\"answers\":[{\"question_id\":\"2027-korean-language_media-q35\",\"decision\":\"answered\",\"answer\":3,\"explanation\":\"글에서 조사 '가'를 문장을 이루는 단어로 따로 확인하므로, '밤이'는 단어 '밤'과 '이' 두 개, '깊었네'는 활용형 단어 하나로 이루어져 단어의 개수가 서로 다르다. ①은 '새벽이'가 단어 두 개(새벽+이)의 결합이므로, ②는 '눈이'(2 형태소)와 '내렸군'(내리-, -았-, -군의 3 형태소)이 개수가 달라, ④는 실질 형태소가 1개와 2개로 달라, ⑤는 의존 형태소 개수가 동일하게 분석되어 각각 적절하지 않다.\",\"abstain_reason\":null}]}",
+          "finished_at": "2026-11-19T14:21:36.852Z"
+        }
+      ],
+      "original_group_id": "2027-korean-language_media"
+    },
+    "2027-korean-language_media--retry2-q36": {
+      "attempts": [
+        {
+          "iteration": 1,
+          "started_at": "2026-11-19T14:18:33.989Z",
+          "question_ids": [
+            "2027-korean-language_media-q36"
+          ],
+          "http_idle_timeout_ms": 900000,
+          "user_retry": 2,
+          "image_encoding": "lossless WebP, original 200 DPI pixels",
+          "image_hashes": [
+            "3f6d50f91ce2b59af95e6b6f7ffa5a9a60b07789f8967b4d127ba3b30efc2d6d",
+            "ad5bc6d0a78ee43846fa54a4747d8d49986b30d0b21693f2d071f1915fd969a0",
+            "29e603dc8977f7c69bab2ef73e19779f1f2b0f6805e23b9864810a9f00aad0a1",
+            "6cee2c908b141f970a0faf7e74677a291f1270862bd41b47c088c166af0c487b"
+          ],
+          "usage": {
+            "input_tokens": 32810,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 49365,
+            "reasoning_output_tokens": 43315
+          },
+          "time_seconds": 755.893,
+          "thread_id": "01a1f42c-6c02-737f-bed8-44baab9541db",
+          "status": "completed",
+          "estimated_cost_usd": 0.029604,
+          "response": "{\"answers\":[{\"question_id\":\"2027-korean-language_media-q36\",\"decision\":\"abstained\",\"answer\":null,\"explanation\":\"보기 표의 인공어 표기('멀찙검치', '다랄-이', '패-털' 등)와 선택지의 ⊫ 기호가 지시하는 대상(지문 예시 항목)이 제공된 이미지에서 판독되지 않아, 각 복수 표준어 쌍의 직접 구성 요소 구조(단일어/복합어/파생어 여부, 하이픈 경계)를 확정할 수 없습니다. 이 상태로는 오답 가능성이 높은 선택지를 특정할 수 없어 기권합니다.\",\"abstain_reason\":\"unreadable\"}]}",
+          "finished_at": "2026-11-19T14:31:09.882Z"
+        }
+      ],
+      "original_group_id": "2027-korean-language_media"
+    },
+    "2027-korean-language_media--retry2-q37": {
+      "attempts": [
+        {
+          "iteration": 1,
+          "started_at": "2026-11-19T14:31:09.894Z",
+          "question_ids": [
+            "2027-korean-language_media-q37"
+          ],
+          "http_idle_timeout_ms": 900000,
+          "user_retry": 2,
+          "image_encoding": "lossless WebP, original 200 DPI pixels",
+          "image_hashes": [
+            "3f6d50f91ce2b59af95e6b6f7ffa5a9a60b07789f8967b4d127ba3b30efc2d6d",
+            "ad5bc6d0a78ee43846fa54a4747d8d49986b30d0b21693f2d071f1915fd969a0",
+            "29e603dc8977f7c69bab2ef73e19779f1f2b0f6805e23b9864810a9f00aad0a1",
+            "6cee2c908b141f970a0faf7e74677a291f1270862bd41b47c088c166af0c487b"
+          ],
+          "usage": {},
+          "time_seconds": 900.076,
+          "thread_id": "01a1f437-f4da-765b-ac65-8ca50d5b3a3a",
+          "status": "error",
+          "error": "PI_ABORTED: request cancelled or timed out",
+          "finished_at": "2026-11-19T14:46:09.970Z"
+        },
+        {
+          "iteration": 2,
+          "started_at": "2026-11-19T14:57:29.010Z",
+          "question_ids": [
+            "2027-korean-language_media-q37"
+          ],
+          "http_idle_timeout_ms": 900000,
+          "user_retry": 2,
+          "image_encoding": "lossless WebP, original 200 DPI pixels",
+          "image_hashes": [
+            "3f6d50f91ce2b59af95e6b6f7ffa5a9a60b07789f8967b4d127ba3b30efc2d6d",
+            "ad5bc6d0a78ee43846fa54a4747d8d49986b30d0b21693f2d071f1915fd969a0",
+            "29e603dc8977f7c69bab2ef73e19779f1f2b0f6805e23b9864810a9f00aad0a1",
+            "6cee2c908b141f970a0faf7e74677a291f1270862bd41b47c088c166af0c487b"
+          ],
+          "usage": {
+            "input_tokens": 32810,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 29169,
+            "reasoning_output_tokens": 27849
+          },
+          "time_seconds": 471.748,
+          "thread_id": "01a1f450-0d37-740a-90b8-b64aaafba010",
+          "status": "completed",
+          "estimated_cost_usd": 0.019506,
+          "response": "{\"answers\":[{\"question_id\":\"2027-korean-language_media-q37\",\"decision\":\"answered\",\"answer\":5,\"explanation\":\"ㄱ의 안긴절 '우리 언니가 보낸'에서는 피수식어 '선물'이 목적어 구실을 할 뿐이고, '아주 유명한'에서는 주어가 생략된 것이므로 ㄱ에는 부사어가 생략된 안긴절이 없다. 나머지 행(주어·목적어·부사어에 안긴절이 있는 문장, 주어가 생략된 안긴절이 있는 문장)의 표기는 문장 분석과 부합하므로, '부사어가 생략된 안긴절이 있는 문장'을 ㄱ로 정한 ⑤가 적절하지 않다.\",\"abstain_reason\":null}]}",
+          "finished_at": "2026-11-19T15:05:20.758Z"
+        }
+      ],
+      "original_group_id": "2027-korean-language_media"
+    },
+    "2027-korean-language_media--retry2-q38": {
+      "attempts": [
+        {
+          "iteration": 1,
+          "started_at": "2026-11-19T14:31:09.905Z",
+          "question_ids": [
+            "2027-korean-language_media-q38"
+          ],
+          "http_idle_timeout_ms": 900000,
+          "user_retry": 2,
+          "image_encoding": "lossless WebP, original 200 DPI pixels",
+          "image_hashes": [
+            "3f6d50f91ce2b59af95e6b6f7ffa5a9a60b07789f8967b4d127ba3b30efc2d6d",
+            "ad5bc6d0a78ee43846fa54a4747d8d49986b30d0b21693f2d071f1915fd969a0",
+            "29e603dc8977f7c69bab2ef73e19779f1f2b0f6805e23b9864810a9f00aad0a1",
+            "6cee2c908b141f970a0faf7e74677a291f1270862bd41b47c088c166af0c487b"
+          ],
+          "usage": {
+            "input_tokens": 32814,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 3327,
+            "reasoning_output_tokens": 3077
+          },
+          "time_seconds": 57.053,
+          "thread_id": "01a1f437-f4da-7253-a5d7-704d816d02a6",
+          "status": "completed",
+          "estimated_cost_usd": 0.0065856,
+          "response": "{\"answers\":[{\"question_id\":\"2027-korean-language_media-q38\",\"decision\":\"answered\",\"answer\":3,\"explanation\":\"두 번째 해석에서 '희수'는 누나의 동생 이름(ㄴ)이고, '한 장의 사진에 자신과 친구들의 모습을 담고 싶어 했다'는 사진에 함께 찍히고자 한 의미(ㄷ)를 포함한다. 또 '친구들이 모두 참석하지는 않았다'는 일부가 참석했음을 의미하므로 모임에 참석한 친구가 있다(ㅁ)는 의미도 포함된다.\",\"abstain_reason\":null}]}",
+          "finished_at": "2026-11-19T14:32:06.958Z"
+        }
+      ],
+      "original_group_id": "2027-korean-language_media"
+    },
+    "2027-korean-language_media--retry2-q39": {
+      "attempts": [
+        {
+          "iteration": 1,
+          "started_at": "2026-11-19T14:46:09.987Z",
+          "question_ids": [
+            "2027-korean-language_media-q39"
+          ],
+          "http_idle_timeout_ms": 900000,
+          "user_retry": 2,
+          "image_encoding": "lossless WebP, original 200 DPI pixels",
+          "image_hashes": [
+            "3f6d50f91ce2b59af95e6b6f7ffa5a9a60b07789f8967b4d127ba3b30efc2d6d",
+            "ad5bc6d0a78ee43846fa54a4747d8d49986b30d0b21693f2d071f1915fd969a0",
+            "29e603dc8977f7c69bab2ef73e19779f1f2b0f6805e23b9864810a9f00aad0a1",
+            "6cee2c908b141f970a0faf7e74677a291f1270862bd41b47c088c166af0c487b"
+          ],
+          "usage": {
+            "input_tokens": 32808,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 65536,
+            "reasoning_output_tokens": 65535
+          },
+          "time_seconds": 679.003,
+          "thread_id": "01a1f445-b0e6-769f-8caf-3327891e512c",
+          "status": "error",
+          "estimated_cost_usd": 0.0376892,
+          "error": "PI_TURN_FAILED: response reached output token limit",
+          "finished_at": "2026-11-19T14:57:28.990Z"
+        },
+        {
+          "iteration": 2,
+          "started_at": "2026-11-19T14:57:29.024Z",
+          "question_ids": [
+            "2027-korean-language_media-q39"
+          ],
+          "http_idle_timeout_ms": 900000,
+          "user_retry": 2,
+          "image_encoding": "lossless WebP, original 200 DPI pixels",
+          "image_hashes": [
+            "3f6d50f91ce2b59af95e6b6f7ffa5a9a60b07789f8967b4d127ba3b30efc2d6d",
+            "ad5bc6d0a78ee43846fa54a4747d8d49986b30d0b21693f2d071f1915fd969a0",
+            "29e603dc8977f7c69bab2ef73e19779f1f2b0f6805e23b9864810a9f00aad0a1",
+            "6cee2c908b141f970a0faf7e74677a291f1270862bd41b47c088c166af0c487b"
+          ],
+          "usage": {
+            "input_tokens": 32810,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 24830,
+            "reasoning_output_tokens": 22007
+          },
+          "time_seconds": 432.923,
+          "thread_id": "01a1f450-0d3f-74be-97de-1bbcf62b9bf7",
+          "status": "completed",
+          "estimated_cost_usd": 0.017336499999999998,
+          "response": "{\"answers\":[{\"question_id\":\"2027-korean-language_media-q39\",\"decision\":\"answered\",\"answer\":4,\"explanation\":\"자료에 따르면 15세기 이중모음 'ㅐ'(ㅏ+ㅣ)는 현대 국어에서 단모음으로 변화했으므로 '고개 > 고개'에서는 ㄴ이 확인되고, 15세기의 단모음(ㅣ 등)은 현대에서도 단모음으로 남아 있으므로 '쉬이' 계열 예에서는 ㄱ이 확인된다. 반면 '귀'의 ㅟ는 이중모음 그대로라 ㄴ이 확인되지 않고, '거의'의 '의'도 이중모음이 유지되어 ㄴ이 확인되지 않으며, '고'의 ㅗ는 양 시기 모두 단모음이므로 '고개 > 고개'에서 ㄱ이 확인되지 않는다는 ①은 옳지 않다.\",\"abstain_reason\":null}]}",
+          "finished_at": "2026-11-19T15:04:41.947Z"
+        }
+      ],
+      "original_group_id": "2027-korean-language_media"
+    },
+    "2027-korean-language_media--retry2-q40": {
+      "attempts": [
+        {
+          "iteration": 1,
+          "started_at": "2026-11-19T14:46:10.004Z",
+          "question_ids": [
+            "2027-korean-language_media-q40"
+          ],
+          "http_idle_timeout_ms": 900000,
+          "user_retry": 2,
+          "image_encoding": "lossless WebP, original 200 DPI pixels",
+          "image_hashes": [
+            "3f6d50f91ce2b59af95e6b6f7ffa5a9a60b07789f8967b4d127ba3b30efc2d6d",
+            "ad5bc6d0a78ee43846fa54a4747d8d49986b30d0b21693f2d071f1915fd969a0",
+            "29e603dc8977f7c69bab2ef73e19779f1f2b0f6805e23b9864810a9f00aad0a1",
+            "6cee2c908b141f970a0faf7e74677a291f1270862bd41b47c088c166af0c487b"
+          ],
+          "usage": {
+            "input_tokens": 32810,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 703,
+            "reasoning_output_tokens": 521
+          },
+          "time_seconds": 18.549,
+          "thread_id": "01a1f445-b0e5-70fe-939a-423d3b510eb2",
+          "status": "completed",
+          "estimated_cost_usd": 0.005273,
+          "response": "{\"answers\":[{\"question_id\":\"2027-korean-language_media-q40\",\"decision\":\"answered\",\"answer\":4,\"explanation\":\"(가)에서는 진행자가 전문가의 설명을 듣고 질문하며 화제를 제시하고, 자료 화면에 상자형과 원통형 이미지를 함께 보여주며, 원통형 보관함의 끈 부분을 확대해 유용성을 설명하고, 마지막에 교체 준비 관련 문헌 내용을 자막으로 제공한다. 그러나 진행자가 향을 맡고 감상을 표현하는 장면은 방송에 나타나지 않으므로 ④는 적절하지 않다.\",\"abstain_reason\":null}]}",
+          "finished_at": "2026-11-19T14:46:28.553Z"
+        }
+      ],
+      "original_group_id": "2027-korean-language_media"
     }
   },
   "iterations": [
@@ -2480,16 +3096,56 @@
         "2027-korean-language_media--split-1",
         "2027-math-geometry--split-1"
       ]
+    },
+    {
+      "iteration": 1,
+      "started_at": "2026-11-19T13:48:25.207Z",
+      "pending_groups": [
+        "2027-korean-common--retry1-q19",
+        "2027-korean-common--retry1-q20",
+        "2027-korean-common--retry1-q21",
+        "2027-korean-common--retry1-q22",
+        "2027-korean-common--retry1-q23",
+        "2027-korean-common--retry1-q24"
+      ]
+    },
+    {
+      "iteration": 2,
+      "started_at": "2026-11-19T14:09:09.951Z",
+      "pending_groups": [
+        "2027-korean-common--retry1-q20",
+        "2027-korean-common--retry1-q21"
+      ]
+    },
+    {
+      "iteration": 1,
+      "started_at": "2026-11-19T14:18:33.958Z",
+      "pending_groups": [
+        "2027-korean-language_media--retry2-q35",
+        "2027-korean-language_media--retry2-q36",
+        "2027-korean-language_media--retry2-q37",
+        "2027-korean-language_media--retry2-q38",
+        "2027-korean-language_media--retry2-q39",
+        "2027-korean-language_media--retry2-q40"
+      ]
+    },
+    {
+      "iteration": 2,
+      "started_at": "2026-11-19T14:57:28.996Z",
+      "pending_groups": [
+        "2027-korean-language_media--retry2-q37",
+        "2027-korean-language_media--retry2-q39"
+      ]
     }
   ],
   "usage": {
-    "input_tokens": 1097615,
+    "input_tokens": 2101621,
     "cached_input_tokens": 0,
     "cache_write_input_tokens": 0,
-    "output_tokens": 410731,
-    "reasoning_output_tokens": 380955
+    "output_tokens": 793614,
+    "reasoning_output_tokens": 746612
   },
-  "wall_time_seconds": 11160.923,
+  "wall_time_seconds": 15776.298000000003,
   "prompt_hash": "8516ead6f5815329fcbea9ae6072c55f72fa318f47528b77bf4e0ecbd76613e0",
   "source_hashes": {
     "exams/pdf/2027/국어영역_문제지.pdf": "6d9560b193a4e68d61a356215447f5268408793615ba013f777ac309ce109b84",
@@ -2497,7 +3153,7 @@
     "exams/pdf/2027/영어영역_문제지.pdf": "139f0f9e0a746948a982ff1b37418f808130132000b5435e6a9c101a81a4ec2f",
     "exams/pdf/2027/영어영역듣기평가대본.pdf": "bc481f077e4f80fa06ed26b10d1e2cfbc8e443e756148411f5824fda8b3a3725"
   },
-  "updated_at": "2026-11-19T12:56:04.919Z",
+  "updated_at": "2026-11-19T15:05:20.767Z",
   "billing": {
     "method": "pi_api",
     "api_key_used": true,
@@ -2507,8 +3163,8 @@
     "api_endpoint": "https://api.z.ai/api/paas/v4",
     "reference_cost_is_invoice": false
   },
-  "completed": false,
-  "finished_at": "2026-11-19T12:56:04.919Z",
+  "completed": true,
+  "finished_at": "2026-11-19T15:05:20.767Z",
   "protocol_history": [
     {
       "protocol": {
@@ -2539,9 +3195,28 @@
       "cause": "output_limit_or_timeout_split_recovery"
     }
   ],
-  "finalization": {
-    "state": "finished_with_errors",
-    "reason": "실행 종료: 135/147문항 제출. 국어 공통 19-24번과 언어와 매체 35-40번 12문항은 최대 3회 시도와 1회 분할 복구 후에도 900초 제한 시간을 넘겨 미제출 상태입니다.",
-    "recorded_at": "2026-11-19T12:56:14.918Z"
-  }
+  "user_retries": [
+    {
+      "index": 1,
+      "group": "2027-korean-common",
+      "authorized_at": "2026-11-19T13:48:25.199Z",
+      "note": "2026-11-19 사용자 지시: 900초 시간 초과로 미제출된 문항을 1문항씩 재시도",
+      "answers_before": 135,
+      "finalization_before": {
+        "state": "finished_with_errors",
+        "reason": "실행 종료: 135/147문항 제출. 국어 공통 19-24번과 언어와 매체 35-40번 12문항은 최대 3회 시도와 1회 분할 복구 후에도 900초 제한 시간을 넘겨 미제출 상태입니다.",
+        "recorded_at": "2026-11-19T12:56:14.918Z"
+      },
+      "batch_max_questions": 1
+    },
+    {
+      "index": 2,
+      "group": "2027-korean-language_media",
+      "authorized_at": "2026-11-19T14:18:33.949Z",
+      "note": "2026-11-19 사용자 지시: 900초 시간 초과로 미제출된 문항을 1문항씩 재시도",
+      "answers_before": 141,
+      "finalization_before": null,
+      "batch_max_questions": 1
+    }
+  ]
 }
