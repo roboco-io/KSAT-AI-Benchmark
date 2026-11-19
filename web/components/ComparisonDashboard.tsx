@@ -96,7 +96,11 @@ export function ComparisonDashboard({ data }: { data: BenchmarkComparison }) {
     if (av === null) return bv === null ? 0 : 1;
     if (bv === null) return -1;
     const difference = typeof av === 'string' && typeof bv === 'string' ? av.localeCompare(bv, 'en') : Number(av) - Number(bv);
-    return sort.direction === 'asc' ? difference : -difference;
+    if (difference !== 0) return sort.direction === 'asc' ? difference : -difference;
+    // Ties (e.g. equal accuracy) go to the shorter total run time.
+    const at = data.models.find(item => item.model === a.id)?.summary.wall_time_seconds;
+    const bt = data.models.find(item => item.model === b.id)?.summary.wall_time_seconds;
+    return sort.key === 'time' || at == null || bt == null ? 0 : at - bt;
   });
   const gradingPolicy = data.models.find(model => model.grading_policy)?.grading_policy;
   const piApiModels = data.billing_policy.pi_api_models ?? [];
