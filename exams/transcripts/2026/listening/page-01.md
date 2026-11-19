@@ -1,0 +1,3 @@
+1. 다음을 듣고, 남자가 하는 말의 목적으로 가장 적절한 것을 고르시오.
+
+> M: Hello, viewers. It’s Ryan. Welcome back to *Only4Health Channel*. Do you want to have good sleep? Then, the app Nightly Journey is perfect for you. This app provides a variety of aids that help you sleep well, such as calming sounds, peaceful and quiet music, and bedtime stories. It also offers audio exercises that teach you how to breathe in order to sleep better. Next time when you go to bed, consider Nightly Journey. Then, you’ll wake up feeling refreshed the next morning. Why don’t you try this app and get some good sleep tonight? Thank you for watching.

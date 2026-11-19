@@ -1,0 +1,3 @@
+3. 다음을 듣고, 남자가 하는 말의 요지로 가장 적절한 것을 고르시오.
+
+> M: Good afternoon, students. I’m Mr. Flynn, your school counselor. If you become anxious when facing an important job interview or presentation, I have a useful tip for you. Making a big pose can relieve your anxiety. For example, you can stretch out your arms in a V-shape and hold that pose. Also, you could make a big pose as your favorite superhero does in the movies. When you make a big pose, you’ll occupy more space. Then, your body will send a message to your brain saying that you’re powerful, which will ease your anxiety. Next time you want to feel less anxious, try to make a big pose.

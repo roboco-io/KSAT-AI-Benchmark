@@ -1,0 +1,313 @@
+{
+  "academic_year": 2026,
+  "format_version": 1,
+  "frozen_at": "2026-11-19T05:44:13.173Z",
+  "method": "Pages transcribed from the original PDF by a Claude Code session without access to answer keys, checked against the PDF text layer and by a second independent read; see exams/transcripts/README.md",
+  "sources": {
+    "exams/pdf/2026/국어영역_문제지.pdf": {
+      "sha256": "ddb1ede52e317cb67c94172b39aad24b0150bf888455be33f8e333010ce16a0a",
+      "pages": {
+        "1": {
+          "path": "exams/transcripts/2026/korean/page-01.md",
+          "sha256": "80ca24c53110bb2ed902b78720937d1dfb7e4edd5d4b6f60168f39e3c058b9aa"
+        },
+        "2": {
+          "path": "exams/transcripts/2026/korean/page-02.md",
+          "sha256": "599d09c9f8a949ae330ced1f58337f0531b01743fcd3cf3566ad278c0624d68f"
+        },
+        "3": {
+          "path": "exams/transcripts/2026/korean/page-03.md",
+          "sha256": "224bae500c13cf3092ffe69e6171c804575e98499a91223602dd176d0ef7ee19"
+        },
+        "4": {
+          "path": "exams/transcripts/2026/korean/page-04.md",
+          "sha256": "f2cb98e21ba3fd5127c92a89685fd107838576909768a79ecb7f82024b52597c"
+        },
+        "5": {
+          "path": "exams/transcripts/2026/korean/page-05.md",
+          "sha256": "4492ae1d5557f28578fefe0596e4580ecedfd8c2dccbb41044c05ab3bc8ba786"
+        },
+        "6": {
+          "path": "exams/transcripts/2026/korean/page-06.md",
+          "sha256": "40f9c9a62bd602b298c9fc2c1d680ec6bb7aa4a0f64ffc36de66a9cf2995501f"
+        },
+        "7": {
+          "path": "exams/transcripts/2026/korean/page-07.md",
+          "sha256": "427f7b25c904ab6ecbd2381ddf2d177a88441f6f36596751d192cc6b0e6c3feb"
+        },
+        "8": {
+          "path": "exams/transcripts/2026/korean/page-08.md",
+          "sha256": "85eb3a5f169df6d22900f475e97a802abd0ec5ec558b13db7d111a2428b50109"
+        },
+        "9": {
+          "path": "exams/transcripts/2026/korean/page-09.md",
+          "sha256": "4f4cc9e449d007ecac8b4dbfb7ccbcf468fb316459c84d8462b556978751b27f"
+        },
+        "10": {
+          "path": "exams/transcripts/2026/korean/page-10.md",
+          "sha256": "d1aea9045d676fddc17369637fde49a4676203daa33ac721e5a0d9940454baa9"
+        },
+        "11": {
+          "path": "exams/transcripts/2026/korean/page-11.md",
+          "sha256": "95fdb0a6253c1609c3bc11383e440e04122386aa7df4c4e5da4776e86f200918"
+        },
+        "12": {
+          "path": "exams/transcripts/2026/korean/page-12.md",
+          "sha256": "b9710e7148d810ffbf2335d497d43187a399ac2bb3e1f5a4bd84dbeac8012233"
+        },
+        "13": {
+          "path": "exams/transcripts/2026/korean/page-13.md",
+          "sha256": "bfea61e94350451186b10013710b368ce491a12deedf8990f54bca78503be6dd"
+        },
+        "14": {
+          "path": "exams/transcripts/2026/korean/page-14.md",
+          "sha256": "ffd91531b08305af2fec9dfac6c0cb4bc0a1653faac21b4f6a92b946824e9d24"
+        },
+        "15": {
+          "path": "exams/transcripts/2026/korean/page-15.md",
+          "sha256": "6842665154500b0a0273bdcd1ee85fcb64db89cd749ec0f2df86f7e33c06a255"
+        },
+        "16": {
+          "path": "exams/transcripts/2026/korean/page-16.md",
+          "sha256": "6b33e3421ae320a6c09092c20d47a9d95e5a7bad7471f587dc8a61cd0f88ceca"
+        },
+        "17": {
+          "path": "exams/transcripts/2026/korean/page-17.md",
+          "sha256": "597844bdb07c854829def074a61af0110cfe925bfede708516745dc9e459d731"
+        },
+        "18": {
+          "path": "exams/transcripts/2026/korean/page-18.md",
+          "sha256": "11a637b951f553acb35fa5189e4fe03d92e81775002f79d754b696fd1a084811"
+        },
+        "19": {
+          "path": "exams/transcripts/2026/korean/page-19.md",
+          "sha256": "09dc717ba880989990ddbf459c2477358ade191f2d5ed51d1ccf8a6defe06d9b"
+        },
+        "20": {
+          "path": "exams/transcripts/2026/korean/page-20.md",
+          "sha256": "6a8ec7531078b18e4fa080ef1d53c26121bfeb517db37a7c3455ce0c8ff400d2"
+        }
+      }
+    },
+    "exams/pdf/2026/수학영역_문제지.pdf": {
+      "sha256": "74e7e4a614559c3a94618e568d00b0392b12e25b6f5caa5e86334768f080d850",
+      "pages": {
+        "1": {
+          "path": "exams/transcripts/2026/math/page-01.md",
+          "sha256": "8443c14ef55903b669e11837beb997737c20185a6a2a791e94a612efe9f31c7a"
+        },
+        "2": {
+          "path": "exams/transcripts/2026/math/page-02.md",
+          "sha256": "386f4b8f867c1dc131cabebbff022a50cc36289e9967fcff75666abc8324d6a4"
+        },
+        "3": {
+          "path": "exams/transcripts/2026/math/page-03.md",
+          "sha256": "bdaaaf8e764a69b2af8d2d02f94b2f7ca1ce85d36b1925bd782c7c47b84085eb"
+        },
+        "4": {
+          "path": "exams/transcripts/2026/math/page-04.md",
+          "sha256": "185bde9d0e1db4ceac7b2b94103ef72f432d34abd5a2e466ca249c8c43dcac0b"
+        },
+        "5": {
+          "path": "exams/transcripts/2026/math/page-05.md",
+          "sha256": "72bad5d11bbe437d79c3481e5a05027099c9dc6dee8a637c2bcd10e076659808"
+        },
+        "6": {
+          "path": "exams/transcripts/2026/math/page-06.md",
+          "sha256": "2cfbaa65728ecb63e8b74a57631aed247e1b98c00a19feee66d3417b8fe96dc9"
+        },
+        "7": {
+          "path": "exams/transcripts/2026/math/page-07.md",
+          "sha256": "f1314ef9f14e29741536969d5c6873455fc95ff94cda98001685c9ede452b2e6"
+        },
+        "8": {
+          "path": "exams/transcripts/2026/math/page-08.md",
+          "sha256": "46fc87f675fd93e5c076d22c8f3ddcca492e08bf5bf485a2e8ac7e34576cae56"
+        },
+        "9": {
+          "path": "exams/transcripts/2026/math/page-09.md",
+          "sha256": "055b45e8d6eee9bdcf523fddda147cfa699acd15d1f12a17523c32fdeb9a5310"
+        },
+        "10": {
+          "path": "exams/transcripts/2026/math/page-10.md",
+          "sha256": "272c547760649254035fbfc0247f8e7562627948c21059245d76b99986a4a843"
+        },
+        "11": {
+          "path": "exams/transcripts/2026/math/page-11.md",
+          "sha256": "8c0611d305bc22735c7f4c71103a04c47311c6ae057fd5074a28e3ca8fdb8429"
+        },
+        "12": {
+          "path": "exams/transcripts/2026/math/page-12.md",
+          "sha256": "30b87a50d2765ed8b23f37da911816e4db33104fd9c2ca7e9e990c88720484ce"
+        },
+        "13": {
+          "path": "exams/transcripts/2026/math/page-13.md",
+          "sha256": "e08f57f850ea422029d25b295998ebb08199083dc9b916cad9040ba4f36502a6"
+        },
+        "14": {
+          "path": "exams/transcripts/2026/math/page-14.md",
+          "sha256": "e77f9e124bac3953d2d53fbdc37cf2c2fd6f84515af607f517f56411de29c102"
+        },
+        "15": {
+          "path": "exams/transcripts/2026/math/page-15.md",
+          "sha256": "edfb018120d3abcd084c94f52c5495dcce89ef662297096563eb9248ed3baf30"
+        },
+        "16": {
+          "path": "exams/transcripts/2026/math/page-16.md",
+          "sha256": "01cf9531f4c66d58786b328d70ce0ca609b883f947d0c630e35a81b7d38c8d95"
+        },
+        "17": {
+          "path": "exams/transcripts/2026/math/page-17.md",
+          "sha256": "b817e776f35e87064e748b50963ed2076e41c417618ea8658a2f12ed6f0629fd"
+        },
+        "18": {
+          "path": "exams/transcripts/2026/math/page-18.md",
+          "sha256": "07fe588f9ea8cb5513923f503b1d90048e67c9897d38acc8f448af339bc824fc"
+        },
+        "19": {
+          "path": "exams/transcripts/2026/math/page-19.md",
+          "sha256": "8de9ebba0c65a6a5a5f831023243fadb26c81e9748e1938b4ea18e8c94e115e2"
+        },
+        "20": {
+          "path": "exams/transcripts/2026/math/page-20.md",
+          "sha256": "0b147af53f2c2a4170beb81349bc79376e614dcfdcfd5b866e11a515025c514b"
+        }
+      }
+    },
+    "exams/pdf/2026/영어영역_문제지.pdf": {
+      "sha256": "788830081bb2a3adef1014c1625b7cc9562ad0af4438edafb8449782595af88a",
+      "pages": {
+        "1": {
+          "path": "exams/transcripts/2026/english/page-01.md",
+          "sha256": "d258bc7de1b5e94433d54a146c2d4e47be50322098a40a5c649fbed2fc8a114d"
+        },
+        "2": {
+          "path": "exams/transcripts/2026/english/page-02.md",
+          "sha256": "ae6927e9390ac26cbeb9941824e081b024bb490f61f7baadd1cec677cfe69a79"
+        },
+        "3": {
+          "path": "exams/transcripts/2026/english/page-03.md",
+          "sha256": "2ab35dacada4f5fc4ede4bf249f46ace374e47d956b20196c865ae8f658c8c83"
+        },
+        "4": {
+          "path": "exams/transcripts/2026/english/page-04.md",
+          "sha256": "9695463f8eaf557cdc299ae5c3a8fffc83c178bae337d688822bafc20d667658"
+        },
+        "5": {
+          "path": "exams/transcripts/2026/english/page-05.md",
+          "sha256": "2e73818da3c57dc89544b3d9caeb914b4770340d53869edf4da11a0dbcad2bfa"
+        },
+        "6": {
+          "path": "exams/transcripts/2026/english/page-06.md",
+          "sha256": "baccb9e57067bdc39a709ed2d0ea0db647dda6986a535976cc03d3c92e498048"
+        },
+        "7": {
+          "path": "exams/transcripts/2026/english/page-07.md",
+          "sha256": "0cdd36f16cf5e205f6e49d6e121b9b970c9adaa1235ca6036c60e5482d8edade"
+        },
+        "8": {
+          "path": "exams/transcripts/2026/english/page-08.md",
+          "sha256": "f79b912f998e611f421d3b808809c34957e8c4c97777426810fe699c74df0883"
+        }
+      }
+    },
+    "exams/pdf/2026/영어영역듣기평가대본.pdf": {
+      "sha256": "2b042ba7c4d0e672bda6ffd7f01b162591938210df7efed2e919a1963bca83a4",
+      "pages": {
+        "1": {
+          "path": "exams/transcripts/2026/listening/page-01.md",
+          "sha256": "544fe9b68f1fd7130dd01b6088837a24e5b3c1f6febb65150318e8c85085a4fe"
+        },
+        "2": {
+          "path": "exams/transcripts/2026/listening/page-02.md",
+          "sha256": "180b449619ef5edeb582c95f9f34a4edc2139eab2a00a5d24bf47c7e39ddd035"
+        },
+        "3": {
+          "path": "exams/transcripts/2026/listening/page-03.md",
+          "sha256": "178959ccaa9bb49c6e982473749feaf7c15984384fe137c4cb1a569a59b13644"
+        },
+        "4": {
+          "path": "exams/transcripts/2026/listening/page-04.md",
+          "sha256": "a30f7dd86cacea7bfaa39e77d96c9e86c028d77be837981a44eb751f5cba026e"
+        },
+        "5": {
+          "path": "exams/transcripts/2026/listening/page-05.md",
+          "sha256": "6d780989b8768346df4597a7e259e3538a00ec4094841bea2873b1ef4db60e97"
+        },
+        "6": {
+          "path": "exams/transcripts/2026/listening/page-06.md",
+          "sha256": "d08274179f87a9f2e81fadcc333388087a4693d2e1dd442c216d9fe971e588db"
+        },
+        "7": {
+          "path": "exams/transcripts/2026/listening/page-07.md",
+          "sha256": "78ccd9ff690126b4fd9cf1f0f17dfca149c040f98015d9d93d948f1b42be3dde"
+        },
+        "8": {
+          "path": "exams/transcripts/2026/listening/page-08.md",
+          "sha256": "a42efd2e3af782c8df9a0163e16d4b92d4f38103ceb938caaf0ecacad9069edd"
+        },
+        "9": {
+          "path": "exams/transcripts/2026/listening/page-09.md",
+          "sha256": "536f5ed3562cc31d551741120c2c608ae8e415a2d2e6f7f6fc125c605c04a3f0"
+        },
+        "10": {
+          "path": "exams/transcripts/2026/listening/page-10.md",
+          "sha256": "fb2899046a58acf815585933aadc374cd1101b01a8eb7ab504f6c52abf3a5826"
+        },
+        "11": {
+          "path": "exams/transcripts/2026/listening/page-11.md",
+          "sha256": "6b6168d4db7f1eaa64c51c8506ec1e24b0a8303ab96b94cc8bec8849522462e7"
+        },
+        "12": {
+          "path": "exams/transcripts/2026/listening/page-12.md",
+          "sha256": "55b785186983f28b8be8eb7a0d2153e4abd885519a94841b9ebed55c9a32f08f"
+        },
+        "13": {
+          "path": "exams/transcripts/2026/listening/page-13.md",
+          "sha256": "c49e022b790fc995c133809f8191e502ee47365d173034b0ba68c90f3637ec8c"
+        },
+        "14": {
+          "path": "exams/transcripts/2026/listening/page-14.md",
+          "sha256": "208cd24d2ecdc15f2a5f59ea3d69263c634add96df05b7ebc282ea9144163cef"
+        },
+        "15": {
+          "path": "exams/transcripts/2026/listening/page-15.md",
+          "sha256": "114920f2161632dbb6dd2753ad492798e07db87fce3866ca05daf58fceb2385d"
+        },
+        "16": {
+          "path": "exams/transcripts/2026/listening/page-16.md",
+          "sha256": "c2a49fafa80fa754395cf32d7cbd075ab6b4d779c52d63c085cace8270b2fb1b"
+        },
+        "17": {
+          "path": "exams/transcripts/2026/listening/page-17.md",
+          "sha256": "fbfdf9e745805723af64196c95566e902dbd7c403e50674d613d2f6ac8dddcbe"
+        }
+      },
+      "page_count": 17
+    }
+  },
+  "figure_dependent": [
+    "2026-english-english-q04",
+    "2026-english-english-q25",
+    "2026-korean-common-q10",
+    "2026-korean-common-q11",
+    "2026-korean-common-q12",
+    "2026-korean-common-q13",
+    "2026-korean-hwajak-q36",
+    "2026-korean-hwajak-q45",
+    "2026-korean-language_media-q40",
+    "2026-korean-language_media-q41",
+    "2026-korean-language_media-q42",
+    "2026-korean-language_media-q43",
+    "2026-korean-language_media-q44",
+    "2026-korean-language_media-q45",
+    "2026-math-calculus-q26",
+    "2026-math-common-q07",
+    "2026-math-common-q14",
+    "2026-math-geometry-q27",
+    "2026-math-geometry-q28",
+    "2026-math-geometry-q29",
+    "2026-math-probability-q25",
+    "2026-math-probability-q28"
+  ]
+}
