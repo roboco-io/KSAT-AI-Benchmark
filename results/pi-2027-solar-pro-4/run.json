@@ -31,6 +31,62 @@
   },
   "dataset_hash": "4c69e03b69b31b050d595a2b9905e1c2f7a1e425f2a90ed9cce44315833bd086",
   "answers": {
+    "2027-math-calculus-q23": {
+      "question_id": "2027-math-calculus-q23",
+      "decision": "answered",
+      "answer": 1,
+      "explanation": "$\\lim_{x\\to 0}\\frac{\\ln(1-3x)}{x}$에서 $u=-3x$로 치환하면 $\\lim_{u\\to 0}\\frac{\\ln(1+u)}{-u/3}=-3\\cdot 1=-3$이므로 ①이다.",
+      "abstain_reason": null
+    },
+    "2027-math-calculus-q24": {
+      "question_id": "2027-math-calculus-q24",
+      "decision": "answered",
+      "answer": 4,
+      "explanation": "부분적분법으로 $\\int x\\sin 4x\\,dx=-\\frac{x}{4}\\cos 4x+\\frac{1}{16}\\sin 4x+C$를 얻고, $0$부터 $\\pi$까지 대입하면 $-\\frac{\\pi}{4}$가 되어 ④이다.",
+      "abstain_reason": null
+    },
+    "2027-math-calculus-q25": {
+      "question_id": "2027-math-calculus-q25",
+      "decision": "answered",
+      "answer": 1,
+      "explanation": "등비수열의 극한을 분석하면 공비 $r=2$, 첫째항 $a_1=3/2$일 때 극한이 1이 된다. $a_4=a_1 r^3=(3/2)\\cdot 8=12$로 ①이다.",
+      "abstain_reason": null
+    },
+    "2027-math-calculus-q26": {
+      "question_id": "2027-math-calculus-q26",
+      "decision": "answered",
+      "answer": 5,
+      "explanation": "정삼각형 단면의 넓이는 $\\frac{\\sqrt{3}}{4}y^2$이고 $y^2=(2x+1)e^x+\\sin\\pi x$이다. $\\int_0^2 (2x+1)e^x dx=3e^2+1$, $\\int_0^2 \\sin\\pi x dx=0$이므로 부피는 $\\frac{\\sqrt{3}(3e^2+1)}{4}$로 ⑤이다.",
+      "abstain_reason": null
+    },
+    "2027-math-calculus-q27": {
+      "question_id": "2027-math-calculus-q27",
+      "decision": "answered",
+      "answer": 3,
+      "explanation": "두 점 P, Q는 $y=1$ 위에 있고 접선의 교점은 $R(-\\frac{14}{3a},\\frac{28}{3})$이다. 밑변 길이는 $\\frac{5}{a}$, 높이는 $\\frac{25}{3}$이므로 넓이 $\\frac{125}{6a}=5$에서 $a=\\frac{25}{6}$으로 ③이다.",
+      "abstain_reason": null
+    },
+    "2027-math-calculus-q28": {
+      "question_id": "2027-math-calculus-q28",
+      "decision": "answered",
+      "answer": 4,
+      "explanation": "조건 (가)에서 $g(x)=x-f^{-1}(x)$이고 (나)에서 $a=e$, $b=2/e$를 얻는다. $k=e$일 때 $g(k)=e/2$, $g'(k+1)=-1/(e-1)$이므로 합은 $\\frac{(e+1)(e-2)}{2(e-1)}$로 ④이다.",
+      "abstain_reason": null
+    },
+    "2027-math-calculus-q29": {
+      "question_id": "2027-math-calculus-q29",
+      "decision": "answered",
+      "answer": 12,
+      "explanation": "급수가 발산하려면 $b_n=1$이 무한히 많아야 한다. $a_n$의 극한이 $(-1,1)$에 있거나 $1$로 수렴하며 $a_n<1$인 경우 등이다. $k=5$일 때 $a_n\\to 1$이고 $a_n<1$이며, $k=7$일 때 $a_n\\to -1$이고 $a_n>-1$이다. 합은 $5+7=12$이다.",
+      "abstain_reason": null
+    },
+    "2027-math-calculus-q30": {
+      "question_id": "2027-math-calculus-q30",
+      "decision": "answered",
+      "answer": 75,
+      "explanation": "함수의 미분가능성과 적분 조건으로부터 $f(x)=g(x)$ on $(0,\\pi/2)$, $f(x)=-g(x)$ on $(\\pi/2,3\\pi/2)$, $f(x)=-g(x)$ on $(3\\pi/2,2\\pi)$를 얻는다. $\\int_0^{2\\pi}f\\cos=\\frac{5}{9}$, $\\int_{\\pi/2}^\\pi f\\cos=\\frac{5}{18}$이므로 $\\alpha=\\frac{5}{6}$, $90\\alpha=75$이다.",
+      "abstain_reason": null
+    },
     "2027-math-probability-q23": {
       "question_id": "2027-math-probability-q23",
       "decision": "answered",
@@ -1005,40 +1061,7 @@
       "abstain_reason": null
     }
   },
-  "errors": {
-    "2027-math-calculus-q23": {
-      "status": "error",
-      "message": "PI_OUTPUT_INVALID: response did not contain a complete JSON answer array"
-    },
-    "2027-math-calculus-q24": {
-      "status": "error",
-      "message": "PI_OUTPUT_INVALID: response did not contain a complete JSON answer array"
-    },
-    "2027-math-calculus-q25": {
-      "status": "error",
-      "message": "PI_OUTPUT_INVALID: response did not contain a complete JSON answer array"
-    },
-    "2027-math-calculus-q26": {
-      "status": "error",
-      "message": "PI_OUTPUT_INVALID: response did not contain a complete JSON answer array"
-    },
-    "2027-math-calculus-q27": {
-      "status": "error",
-      "message": "PI_OUTPUT_INVALID: response did not contain a complete JSON answer array"
-    },
-    "2027-math-calculus-q28": {
-      "status": "error",
-      "message": "PI_OUTPUT_INVALID: response did not contain a complete JSON answer array"
-    },
-    "2027-math-calculus-q29": {
-      "status": "error",
-      "message": "PI_OUTPUT_INVALID: response did not contain a complete JSON answer array"
-    },
-    "2027-math-calculus-q30": {
-      "status": "error",
-      "message": "PI_OUTPUT_INVALID: response did not contain a complete JSON answer array"
-    }
-  },
+  "errors": {},
   "groups": {
     "2027-korean-common": {
       "attempts": [
@@ -1469,6 +1492,42 @@
           "estimated_cost_usd": 0.01411545,
           "error": "PI_OUTPUT_INVALID: response did not contain a complete JSON answer array",
           "finished_at": "2026-11-19T12:17:51.217Z"
+        },
+        {
+          "iteration": 1,
+          "started_at": "2026-11-19T12:44:27.474Z",
+          "question_ids": [
+            "2027-math-calculus-q23",
+            "2027-math-calculus-q24",
+            "2027-math-calculus-q25",
+            "2027-math-calculus-q26",
+            "2027-math-calculus-q27",
+            "2027-math-calculus-q28",
+            "2027-math-calculus-q29",
+            "2027-math-calculus-q30"
+          ],
+          "http_idle_timeout_ms": 900000,
+          "user_retry": 1,
+          "input_encoding": "UTF-8 Markdown transcript, format version 1",
+          "transcript_hashes": [
+            "f481adc2ea0d254311542ee4a0cf50d82ab811d17c082dd3f97735a83c7cbf2b",
+            "44658c925c2eed6281cd8683a83478b27ea15daee64a072b33c1e96c0ded2ec3",
+            "56ce986f837c1958d6f51b8bbf19e8938b47b4df1ff3a06c58f3b2de3cc58c5b",
+            "fba75843f7d5316666c1e30317a2eb8dba7c865786915420a8b9339165a60c03"
+          ],
+          "usage": {
+            "input_tokens": 2447,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 29631,
+            "reasoning_output_tokens": 28540
+          },
+          "time_seconds": 489.343,
+          "thread_id": "01a1f3d6-434e-746e-ad13-3f2c97c4a941",
+          "status": "completed",
+          "estimated_cost_usd": 0.01814565,
+          "response": "{\"answers\":[{\"question_id\":\"2027-math-calculus-q23\",\"decision\":\"answered\",\"answer\":1,\"explanation\":\"$\\\\lim_{x\\\\to 0}\\\\frac{\\\\ln(1-3x)}{x}$에서 $u=-3x$로 치환하면 $\\\\lim_{u\\\\to 0}\\\\frac{\\\\ln(1+u)}{-u/3}=-3\\\\cdot 1=-3$이므로 ①이다.\",\"abstain_reason\":null},{\"question_id\":\"2027-math-calculus-q24\",\"decision\":\"answered\",\"answer\":4,\"explanation\":\"부분적분법으로 $\\\\int x\\\\sin 4x\\\\,dx=-\\\\frac{x}{4}\\\\cos 4x+\\\\frac{1}{16}\\\\sin 4x+C$를 얻고, $0$부터 $\\\\pi$까지 대입하면 $-\\\\frac{\\\\pi}{4}$가 되어 ④이다.\",\"abstain_reason\":null},{\"question_id\":\"2027-math-calculus-q25\",\"decision\":\"answered\",\"answer\":1,\"explanation\":\"등비수열의 극한을 분석하면 공비 $r=2$, 첫째항 $a_1=3/2$일 때 극한이 1이 된다. $a_4=a_1 r^3=(3/2)\\\\cdot 8=12$로 ①이다.\",\"abstain_reason\":null},{\"question_id\":\"2027-math-calculus-q26\",\"decision\":\"answered\",\"answer\":5,\"explanation\":\"정삼각형 단면의 넓이는 $\\\\frac{\\\\sqrt{3}}{4}y^2$이고 $y^2=(2x+1)e^x+\\\\sin\\\\pi x$이다. $\\\\int_0^2 (2x+1)e^x dx=3e^2+1$, $\\\\int_0^2 \\\\sin\\\\pi x dx=0$이므로 부피는 $\\\\frac{\\\\sqrt{3}(3e^2+1)}{4}$로 ⑤이다.\",\"abstain_reason\":null},{\"question_id\":\"2027-math-calculus-q27\",\"decision\":\"answered\",\"answer\":3,\"explanation\":\"두 점 P, Q는 $y=1$ 위에 있고 접선의 교점은 $R(-\\\\frac{14}{3a},\\\\frac{28}{3})$이다. 밑변 길이는 $\\\\frac{5}{a}$, 높이는 $\\\\frac{25}{3}$이므로 넓이 $\\\\frac{125}{6a}=5$에서 $a=\\\\frac{25}{6}$으로 ③이다.\",\"abstain_reason\":null},{\"question_id\":\"2027-math-calculus-q28\",\"decision\":\"answered\",\"answer\":4,\"explanation\":\"조건 (가)에서 $g(x)=x-f^{-1}(x)$이고 (나)에서 $a=e$, $b=2/e$를 얻는다. $k=e$일 때 $g(k)=e/2$, $g'(k+1)=-1/(e-1)$이므로 합은 $\\\\frac{(e+1)(e-2)}{2(e-1)}$로 ④이다.\",\"abstain_reason\":null},{\"question_id\":\"2027-math-calculus-q29\",\"decision\":\"answered\",\"answer\":12,\"explanation\":\"급수가 발산하려면 $b_n=1$이 무한히 많아야 한다. $a_n$의 극한이 $(-1,1)$에 있거나 $1$로 수렴하며 $a_n<1$인 경우 등이다. $k=5$일 때 $a_n\\\\to 1$이고 $a_n<1$이며, $k=7$일 때 $a_n\\\\to -1$이고 $a_n>-1$이다. 합은 $5+7=12$이다.\",\"abstain_reason\":null},{\"question_id\":\"2027-math-calculus-q30\",\"decision\":\"answered\",\"answer\":75,\"explanation\":\"함수의 미분가능성과 적분 조건으로부터 $f(x)=g(x)$ on $(0,\\\\pi/2)$, $f(x)=-g(x)$ on $(\\\\pi/2,3\\\\pi/2)$, $f(x)=-g(x)$ on $(3\\\\pi/2,2\\\\pi)$를 얻는다. $\\\\int_0^{2\\\\pi}f\\\\cos=\\\\frac{5}{9}$, $\\\\int_{\\\\pi/2}^\\\\pi f\\\\cos=\\\\frac{5}{18}$이므로 $\\\\alpha=\\\\frac{5}{6}$, $90\\\\alpha=75$이다.\",\"abstain_reason\":null}]}",
+          "finished_at": "2026-11-19T12:52:36.817Z"
         }
       ]
     },
@@ -1639,16 +1698,23 @@
         "2027-math-probability",
         "2027-math-calculus"
       ]
+    },
+    {
+      "iteration": 1,
+      "started_at": "2026-11-19T12:44:27.464Z",
+      "pending_groups": [
+        "2027-math-calculus"
+      ]
     }
   ],
   "usage": {
-    "input_tokens": 62527,
+    "input_tokens": 64974,
     "cached_input_tokens": 0,
     "cache_write_input_tokens": 0,
-    "output_tokens": 281238,
-    "reasoning_output_tokens": 261657
+    "output_tokens": 310869,
+    "reasoning_output_tokens": 290197
   },
-  "wall_time_seconds": 2062.198,
+  "wall_time_seconds": 2551.558,
   "prompt_hash": "96142492dbd76df7e0b5e0a00cfd38408be94b1d9579dbc8576d6b85fa16de5a",
   "source_hashes": {
     "exams/pdf/2027/국어영역_문제지.pdf": "6d9560b193a4e68d61a356215447f5268408793615ba013f777ac309ce109b84",
@@ -1656,7 +1722,7 @@
     "exams/pdf/2027/영어영역_문제지.pdf": "139f0f9e0a746948a982ff1b37418f808130132000b5435e6a9c101a81a4ec2f",
     "exams/pdf/2027/영어영역듣기평가대본.pdf": "bc481f077e4f80fa06ed26b10d1e2cfbc8e443e756148411f5824fda8b3a3725"
   },
-  "updated_at": "2026-11-19T12:17:51.224Z",
+  "updated_at": "2026-11-19T12:52:36.824Z",
   "billing": {
     "method": "pi_api",
     "api_key_used": true,
@@ -1666,11 +1732,20 @@
     "api_endpoint": "https://api.upstage.ai/v1",
     "reference_cost_is_invoice": false
   },
-  "completed": false,
-  "finished_at": "2026-11-19T12:17:51.224Z",
-  "finalization": {
-    "state": "finished_with_errors",
-    "reason": "실행 종료: 139/147문항 제출. 수학 미적분 8문항은 최대 3회 시도에서 모두 출력 형식 오류(완전한 JSON 답안 배열 없음)로 미제출 상태입니다. 분할 복구는 시간 초과·전송 실패에만 허용되어 적용하지 않았습니다.",
-    "recorded_at": "2026-11-19T12:18:16.014Z"
-  }
+  "completed": true,
+  "finished_at": "2026-11-19T12:52:36.824Z",
+  "user_retries": [
+    {
+      "index": 1,
+      "group": "2027-math-calculus",
+      "authorized_at": "2026-11-19T12:44:27.458Z",
+      "note": "2026-11-19 사용자 지시: 미적분 재시도(3회 모두 출력 형식 오류, 진단 요청에서는 정상 JSON 확인)",
+      "answers_before": 139,
+      "finalization_before": {
+        "state": "finished_with_errors",
+        "reason": "실행 종료: 139/147문항 제출. 수학 미적분 8문항은 최대 3회 시도에서 모두 출력 형식 오류(완전한 JSON 답안 배열 없음)로 미제출 상태입니다. 분할 복구는 시간 초과·전송 실패에만 허용되어 적용하지 않았습니다.",
+        "recorded_at": "2026-11-19T12:18:16.014Z"
+      }
+    }
+  ]
 }
