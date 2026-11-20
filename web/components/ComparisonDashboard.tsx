@@ -36,13 +36,15 @@ function complete(model: RequestedModel, result?: BenchmarkData) {
 export function ComparisonDashboard({ data }: { data: BenchmarkComparison }) {
   const defaultModel = data.models[0]?.model ?? data.requested_models[0]?.id ?? '';
   const [selected, setSelected] = useState(defaultModel);
+  // Highlight a row only after a user or a shared ?model= link picks it, not for the implicit default.
+  const [picked, setPicked] = useState(false);
   const [expandedModel, setExpandedModel] = useState<string | null>(null);
   const [showRecords, setShowRecords] = useState(false);
   const [recordNavigation, setRecordNavigation] = useState(0);
   useEffect(() => {
     const syncSelection = () => {
       const model = modelFromSearch(window.location.search, data.requested_models.map(model => model.id));
-      setSelected(model ?? defaultModel); setExpandedModel(model);
+      setSelected(model ?? defaultModel); setPicked(model !== null); setExpandedModel(model);
       setShowRecords(window.location.hash === '#model-records');
     };
     syncSelection();
@@ -50,7 +52,7 @@ export function ComparisonDashboard({ data }: { data: BenchmarkComparison }) {
     return () => window.removeEventListener('popstate', syncSelection);
   }, [data.requested_models, defaultModel]);
   function selectModel(modelId: string) {
-    setSelected(modelId);
+    setSelected(modelId); setPicked(true);
     const url = modelShareUrl(window.location.href, modelId);
     if (url !== window.location.href) window.history.pushState(null, '', url);
   }
@@ -124,7 +126,7 @@ export function ComparisonDashboard({ data }: { data: BenchmarkComparison }) {
           const isComplete = complete(model, result);
           const measured = result && result.questions.some(q => q.status !== 'pending') && (model.state === 'complete' || model.state === 'partial');
           const effectiveState = model.state === 'complete' && !isComplete ? 'partial' : model.state;
-          return <Fragment key={model.id}><tr onClick={() => toggleModel(model.id)} className={`${selected === model.id ? 'selected-row' : ''} ${effectiveState}`}><th scope="row" className="model-cell"><button aria-pressed={selected === model.id} type="button" aria-controls={`analysis-${model.id}`} aria-expanded={expandedModel === model.id}>{model.label}<span className="accordion-indicator" aria-hidden="true">{expandedModel === model.id ? '−' : '+'}</span></button><GradingMark adjusted={result?.summary.adjusted_correct} /><small>{providerLabels[model.provider] || model.provider}</small>{model.input_mode === 'text_transcript' && <span className="model-reason">텍스트 전사본 입력{measured && result?.figure_dependent ? ` · 그림 의존 ${result.figure_dependent.excluded_question_ids.length}문항 제외 정답률 ${percent(result.figure_dependent.accuracy)}` : ''}</span>}{model.reason && <span className="model-reason">{model.reason}</span>}</th><td data-label="평가 상태"><span className={`comparison-state ${effectiveState}`}>{states[effectiveState]}</span></td><td data-label="정답률" className="comparison-accuracy">{measured ? <>{percent(result.summary.accuracy)}<GradingMark adjusted={result.summary.adjusted_correct} /></> : '—'}{measured && !!result.summary.adjusted_correct && result.official_summary && <small>공식 {percent(result.official_summary.accuracy)}</small>}{measured && !isComplete && <small>중간 집계</small>}</td><td data-label="기권 횟수">{measured ? `${result.summary.abstained}회` : '—'}</td><td data-label="원점수 / 100점" className="track-column"><div className="subject-score-groups">{scoreSubjects.map(subject => <div className="subject-score-group" key={subject.id}><strong className="score-subject-label">{subject.label}</strong><div className="track-scores" style={{gridTemplateColumns: `repeat(${subject.columns}, 1fr)`}}>{tracks.filter(track => track.subject === subject.id).map(track => {
+          return <Fragment key={model.id}><tr onClick={() => toggleModel(model.id)} className={`${picked && selected === model.id ? 'selected-row' : ''} ${effectiveState}`}><th scope="row" className="model-cell"><button aria-pressed={picked && selected === model.id} type="button" aria-controls={`analysis-${model.id}`} aria-expanded={expandedModel === model.id}>{model.label}<span className="accordion-indicator" aria-hidden="true">{expandedModel === model.id ? '−' : '+'}</span></button><GradingMark adjusted={result?.summary.adjusted_correct} /><small>{providerLabels[model.provider] || model.provider}</small>{model.input_mode === 'text_transcript' && <span className="model-reason">텍스트 전사본 입력{measured && result?.figure_dependent ? ` · 그림 의존 ${result.figure_dependent.excluded_question_ids.length}문항 제외 정답률 ${percent(result.figure_dependent.accuracy)}` : ''}</span>}{model.reason && <span className="model-reason">{model.reason}</span>}</th><td data-label="평가 상태"><span className={`comparison-state ${effectiveState}`}>{states[effectiveState]}</span></td><td data-label="정답률" className="comparison-accuracy">{measured ? <>{percent(result.summary.accuracy)}<GradingMark adjusted={result.summary.adjusted_correct} /></> : '—'}{measured && !!result.summary.adjusted_correct && result.official_summary && <small>공식 {percent(result.official_summary.accuracy)}</small>}{measured && !isComplete && <small>중간 집계</small>}</td><td data-label="기권 횟수">{measured ? `${result.summary.abstained}회` : '—'}</td><td data-label="원점수 / 100점" className="track-column"><div className="subject-score-groups">{scoreSubjects.map(subject => <div className="subject-score-group" key={subject.id}><strong className="score-subject-label">{subject.label}</strong><div className="track-scores" style={{gridTemplateColumns: `repeat(${subject.columns}, 1fr)`}}>{tracks.filter(track => track.subject === subject.id).map(track => {
             const exam = measured ? result.exams.find(item => item.subject === track.subject && (item.track === track.track || track.subject === 'english')) : undefined;
             const scored = exam && exam.summary.total_questions > exam.summary.pending;
             return <span key={track.track}><small>{track.label}</small><b>{scored ? <>{exam.summary.score}<GradingMark adjusted={exam.summary.adjusted_correct} /></> : '—'}</b>{scored && !!exam.summary.adjusted_correct && <small>공식 {exam.official_summary?.score}</small>}</span>;
