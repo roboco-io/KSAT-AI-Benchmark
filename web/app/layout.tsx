@@ -19,20 +19,20 @@ const socialImage = {
 export const metadata: Metadata = {
   metadataBase: new URL('https://roboco.io'),
   title: 'KSAT AI Benchmark - 수능 기반 AI 모델 평가',
-  description: '2027학년도 수능 국어·수학·영어 147문항으로 15개 AI 모델을 시험 당일 비교합니다. 정답률, 기권률, 풀이 시간과 토큰 사용량·API 환산 비용을 공개합니다.',
+  description: '2027학년도 수능 국어·수학·영어 147문항으로 16개 AI 모델을 시험 당일 비교합니다. 정답률, 기권률, 풀이 시간과 토큰 사용량·API 환산 비용을 공개합니다.',
   openGraph: {
     type: 'website',
     locale: 'ko_KR',
     url: siteUrl,
     siteName: 'KSAT AI Benchmark',
     title: 'AI가 2027 수능을 풀면? — KSAT AI Benchmark',
-    description: '2027학년도 수능 국어·수학·영어 · 15개 AI 모델의 답안과 평가 기록을 확인하세요.',
+    description: '2027학년도 수능 국어·수학·영어 · 16개 AI 모델의 답안과 평가 기록을 확인하세요.',
     images: [socialImage],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'AI가 2027 수능을 풀면? — KSAT AI Benchmark',
-    description: '2027학년도 수능 국어·수학·영어 · 15개 AI 모델 비교',
+    description: '2027학년도 수능 국어·수학·영어 · 16개 AI 모델 비교',
     images: [socialImage.url],
   },
 };
