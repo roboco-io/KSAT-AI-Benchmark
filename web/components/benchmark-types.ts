@@ -3,7 +3,7 @@ export type Summary = {
   score: number; max_score: number;
   total_questions: number; correct: number; incorrect: number; abstained: number;
   errors: number; pending: number; accuracy: number; abstention_rate: number;
-  attempt_accuracy: number | null; wall_time_seconds: number; solver_time_seconds: number; solve_time_seconds?: number;
+  attempt_accuracy: number | null; wall_time_seconds: number; solver_time_seconds: number; solve_time_seconds?: number; solve_time_basis?: 'model_stream' | 'attempt' | 'mixed' | null;
   usage: Usage; estimated_cost_usd: number;
   adjusted_correct?: number;
 };

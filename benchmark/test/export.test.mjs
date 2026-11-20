@@ -81,4 +81,15 @@ test('solve time counts only the request that submitted each answer, not failed 
  assert.deepEqual(report.questions.map(q=>q.solve_time_seconds),[30,30,30]);
  assert.equal(report.exams[0].summary.solve_time_seconds,90);
  assert.equal(report.summary.wall_time_seconds,2000);
+ assert.equal(report.summary.solve_time_basis,'attempt');
+});
+test('solve time uses model stream time when recorded and excludes auth, pacing and startup',()=>{
+ const questions=[{id:'a',kind:'multiple_choice',correct_answer:1,points:2},{id:'b',kind:'multiple_choice',correct_answer:2,points:2}];
+ const dataset={academic_year:2027,questions,solver_groups:[{id:'g',question_ids:['a']},{id:'h',question_ids:['b']}],exams:[{id:'e',question_ids:['a','b'],max_score:4}]};
+ const run={run_id:'t',academic_year:2027,protocol:{model:'fixture'},completed:true,wall_time_seconds:100,usage:{},errors:{},answers:{a:{decision:'answered',answer:1},b:{decision:'answered',answer:2}},
+  groups:{g:{attempts:[{started_at:'1',status:'completed',time_seconds:50,model_time_seconds:44.5,question_ids:['a'],usage:{}}]},h:{attempts:[{started_at:'2',status:'completed',time_seconds:20,question_ids:['b'],usage:{}}]}}};
+ const report=buildReport(dataset,run,[],{input_per_million:0,cached_input_per_million:0,cache_write_per_million:0,output_per_million:0},'fixture');
+ assert.equal(report.summary.solve_time_seconds,64.5);
+ assert.equal(report.summary.solve_time_basis,'mixed');
+ assert.deepEqual(report.questions.map(q=>q.solve_time_seconds),[44.5,20]);
 });

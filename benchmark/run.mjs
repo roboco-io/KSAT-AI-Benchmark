@@ -122,13 +122,14 @@ async function solveGroup(group,iteration) {
  state.groups[group.id]??={attempts:[]};
  if(group.original_id)state.groups[group.id].original_group_id=group.original_id;state.groups[group.id].attempts.push(attempt);save();
  console.log(`[iteration ${iteration}] ${group.id}: ${questions.length} questions, ${text?`${text.hashes.length} transcript pages`:`${images.length} images`}`);
- let final='';
+ let final='';let modelStart=null,modelEnd=null;
  try {
   await pace(); // provider per-second request limit; waiting is not counted against the group timeout
   const signal=AbortSignal.any([AbortSignal.timeout(protocol.group_timeout_seconds*1000),invocationController.signal]);
   const events=thread?(await thread.runStreamed(input,{outputSchema:schema,signal})).events:selected.pi?piEvents({model:selected,prompt:input[0].text,images,schema,signal,apiKey:readPiSecret(selected.pi.secret_name)}):claudeEvents({model:selected.id,prompt:input[0].text,images,schema,signal});
   for await(const event of events) {
    appendFileSync(logPath,JSON.stringify(event)+'\n');
+   modelStart??=Date.now();if(event.type==='turn.completed'||(event.type==='item.completed'&&event.item?.type==='agent_message'))modelEnd=Date.now();
    if(event.type==='thread.started'){attempt.thread_id=event.thread_id;save();}
    if(event.type==='turn.completed'){attempt.usage=addUsage(attempt.usage,event.usage);state.usage=addUsage(state.usage,event.usage);if(Number.isFinite(event.estimated_cost_usd))attempt.estimated_cost_usd=event.estimated_cost_usd;save();}
    if(event.type==='item.completed'&&event.item.type==='agent_message')final=event.item.text;
@@ -151,7 +152,7 @@ async function solveGroup(group,iteration) {
   }
   console.log(`${group.id}: execution error: ${attempt.error.slice(0,200)}`);
   if(/^(SUBSCRIPTION_BLOCKED|PI_BLOCKED|MODEL_MISMATCH|TOOL_BLOCKED)/.test(attempt.error)){state.blocked_reason=attempt.error;invocationController.abort(error);}
- } finally {attempt.time_seconds=(Date.now()-started)/1000;attempt.finished_at=new Date().toISOString();save();}
+ } finally {attempt.time_seconds=(Date.now()-started)/1000;if(modelStart!==null&&modelEnd!==null)attempt.model_time_seconds=(modelEnd-modelStart)/1000;attempt.finished_at=new Date().toISOString();save();}
 }
 const userRetry=userRetryNote!==null?openUserRetry(state,requestedGroup,{note:userRetryNote,batchSize:retryPerQuestion?1:undefined}):null;if(userRetry!==null)save();
 // Per-question retry: each unsubmitted question of the group becomes its own request (ids never reuse earlier split ids).
