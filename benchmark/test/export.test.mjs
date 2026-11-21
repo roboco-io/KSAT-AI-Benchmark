@@ -102,3 +102,10 @@ test('provider usage audit replaces the response-based cost and keeps per-questi
  assert.deepEqual(report.questions.map(q=>q.estimated_cost_usd),[1.75,5.25]);
  assert.equal(report.limitations.length,1);
 });
+test('Gemini profiles accept the native route that reports thinking tokens, and reject mismatched routes',async()=>{
+ const {validateProfile}=await import('../profiles.mjs');
+ const base={id:'gemini-x',label:'Gemini X',provider:'google',agent:'pi',directory:'results/pi-2026-gemini-x',pricing:{input_per_million:1,cached_input_per_million:0.1,cache_write_per_million:0,output_per_million:5,currency:'USD',as_of:'2026-11-21',basis:'test',source:'https://ai.google.dev/gemini-api/docs/pricing'},pi:{provider:'ksat-pi',model_id:'gemini-x',secret_name:'GEMINI_API_KEY',context_window:1000,max_tokens:100}};
+ assert.ok(validateProfile({...base,pi:{...base.pi,api:'google-generative-ai',base_url:'https://generativelanguage.googleapis.com/v1beta'}}));
+ assert.ok(validateProfile({...base,pi:{...base.pi,base_url:'https://generativelanguage.googleapis.com/v1beta/openai/'}}));
+ assert.throws(()=>validateProfile({...base,pi:{...base.pi,api:'google-generative-ai',base_url:'https://generativelanguage.googleapis.com/v1beta/openai/'}}),/official Gemini API route/);
+});

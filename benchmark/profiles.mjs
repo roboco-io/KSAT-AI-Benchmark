@@ -22,7 +22,9 @@ export function validateProfile(model) {
  if(agent==='pi') {
   const p=model.pi;let url;try{url=new URL(p?.base_url);}catch{}
   if(!p||p.provider!=='ksat-pi'||typeof p.model_id!=='string'||!p.model_id||!url||url.protocol!=='https:'||url.username||url.password||url.search||url.hash||!/^[A-Z][A-Z0-9_]*$/.test(p.secret_name)||![p.context_window,p.max_tokens].every(n=>Number.isSafeInteger(n)&&n>0)||p.max_tokens>p.context_window)throw new Error('MODEL_PROFILE_INVALID: explicit Pi image-capable route and credential variable required');
-  if(model.provider==='google'&&(p.base_url!=='https://generativelanguage.googleapis.com/v1beta/openai/'||p.model_id!==model.id||p.secret_name!=='GEMINI_API_KEY'||(p.api&&p.api!=='openai-completions')))throw new Error('MODEL_PROFILE_INVALID: Google Pi requires its explicit official Gemini API route');
+  // Gemini routes: the OpenAI-compatible endpoint (omits thinking tokens from usage) or the native API (reports thoughtsTokenCount).
+  const googleRoutes={'openai-completions':'https://generativelanguage.googleapis.com/v1beta/openai/','google-generative-ai':'https://generativelanguage.googleapis.com/v1beta'};
+  if(model.provider==='google'&&(googleRoutes[p.api??'openai-completions']!==p.base_url||p.model_id!==model.id||p.secret_name!=='GEMINI_API_KEY'))throw new Error('MODEL_PROFILE_INVALID: Google Pi requires its explicit official Gemini API route');
   fields(p,['provider','model_id','base_url','secret_name','context_window','max_tokens','compat','effort_semantics','thinking_level_map','api','min_request_interval_ms']);
   if(p.min_request_interval_ms!==undefined&&!(Number.isSafeInteger(p.min_request_interval_ms)&&p.min_request_interval_ms>0&&p.min_request_interval_ms<=60000))throw new Error('MODEL_PROFILE_INVALID: request interval must be 1-60000 ms');
   if(p.compat)fields(p.compat,['thinkingFormat','supportsReasoningEffort','supportsDeveloperRole','supportsStore','maxTokensField','supportsUsageInStreaming','supportsFinishReason','requiresReasoningContentOnAssistantMessages','supportsStrictMode','supportsThinkingTokenBudget','thinkingTokenBudgetField']);
