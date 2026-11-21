@@ -128,7 +128,8 @@ export function ComparisonDashboard({ data, period4Data, onOpenPeriod4 }: { data
     if (sort.key === 'model') return model.label;
     if (sort.key === 'state') return ['complete', 'partial', 'blocked', 'pending'].indexOf(model.state);
     const result = data.models.find(item => item.model === model.id);
-    if (!complete(model, result) || !result) return null;
+    // Partial runs sort together with complete ones on their current (interim) numbers; only unmeasured models go last.
+    if (!result || !(model.state === 'complete' || model.state === 'partial') || !result.questions.some(q => q.status !== 'pending')) return null;
     const summary = result.summary;
     switch (sort.key) {
       case 'accuracy': return summary.accuracy;
@@ -163,7 +164,7 @@ export function ComparisonDashboard({ data, period4Data, onOpenPeriod4 }: { data
     <header className="site-header"><RobocoBrand /><nav aria-label="주요 메뉴"><a href={data.repository_url} target="_blank" rel="noreferrer" className="repository-link">GitHub 저장소 ↗</a>{data.academic_year === 2026 && <a href={`${basePath}/debates/english-q37.html`}>영어 37번 정답 토론</a>}<a href={`${basePath}/archive.html`}>기존 평가</a><a className="download" href={`${basePath}/data/${comparisonFile}`} download={comparisonFile}>비교 JSON 다운로드</a><ThemeControl /></nav></header>
     <main>
       <section className="comparison-heading" aria-labelledby="comparison-title"><div><p className="year-label">{data.academic_year}학년도 대학수학능력시험 · 모델 평가</p><h1 id="comparison-title">{period4 ? '모델별 4교시 성적표' : '모델별 수능 성적표'}</h1><p className="intro">{period4 ? '한국사와 사회·과학탐구 17과목, 360문항을 모든 모델이 풀었습니다.' : '같은 국어·수학·영어 문제로 비교합니다.'} 모델을 누르면 실행 내역과 총평을 펼쳐 볼 수 있습니다.</p></div><div className="comparison-count"><strong>{completed}<span> / {data.requested_models.length}</span></strong><span>모델 평가 완료</span><small>{formatKst(data.generated_at)} (KST)</small></div></section>
-      <section id="comparison" aria-labelledby="comparison-table-title"><div className="section-title"><h2 id="comparison-table-title">모델 비교</h2><span>{sortLabels[sort.key]} {sort.direction === 'desc' ? '내림차순' : '오름차순'} · 불완전 실행은 지표 순위에서 제외</span></div>
+      <section id="comparison" aria-labelledby="comparison-table-title"><div className="section-title"><h2 id="comparison-table-title">모델 비교</h2><span>{sortLabels[sort.key]} {sort.direction === 'desc' ? '내림차순' : '오름차순'} · 평가 불완전은 중간 집계로 함께 정렬 · 평가 대기는 맨 뒤</span></div>
         {data.requested_models.some(model => model.input_mode === 'text_transcript') && <p className="comparison-note"><strong>입력 조건의 차이:</strong> ‘텍스트 전사본 입력’으로 표시한 모델은 이미지 입력을 받지 않아, 문제지 이미지 대신 원본을 쪽 단위로 옮겨 적은 고정 텍스트로 평가했습니다. 다른 모델은 문제지 이미지를 직접 판독하므로 두 결과는 같은 입력 조건의 비교가 아닙니다. 그림·그래프·도표는 글로 기술해 전달했고, 해당 문항을 제외한 정답률을 함께 표시합니다.</p>}
         {gradingPolicy && <p className="grading-policy-note"><strong>채점 기준:</strong> 영어 37번 ④·⑤ 인정 · 보정 점수 * 표시 · 공식 점수 병기. <a href={`${basePath}/debates/english-q37.html#grading-policy`}>보정 근거·정책 보기 →</a></p>}
         {showPeriod4 && <div className="period4-callout" role="note"><span className="new-badge">NEW</span><p><strong>4교시 결과 추가:</strong> 한국사와 사회·과학탐구 17과목, 360문항을 웹 검색 없이 모델의 지식만으로 풀었습니다. 현재 {period4Done}/{period4Data!.requested_models.length}개 모델 채점 완료 · 표의 ‘4교시’ 열에서 정답률을 함께 볼 수 있습니다.</p><button type="button" onClick={onOpenPeriod4}>4교시 성적표 보기 →</button></div>}
