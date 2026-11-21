@@ -16,14 +16,16 @@ export const modelSeconds=attempt=>Number.isFinite(attempt.model_time_seconds)?a
 // included). Per-question and per-exam costs keep their shares of the run and are scaled to the audited total.
 export function applyProviderUsage(report,audit,pricing) {
  if(!audit)return report;
- const cost=Number(((audit.input_tokens*pricing.input_per_million+audit.output_tokens_including_thinking*pricing.output_per_million)/1e6).toFixed(8));
+ // The input quota metric can lag or miss samples; never count fewer input tokens than the responses reported.
+ const input=Math.max(audit.input_tokens,report.summary.usage?.input_tokens??0);
+ const cost=Number(((input*pricing.input_per_million+audit.output_tokens_including_thinking*pricing.output_per_million)/1e6).toFixed(8));
  const recorded=report.summary.estimated_cost_usd,factor=recorded>0?cost/recorded:0;
  for(const q of report.questions)q.estimated_cost_usd*=factor;
  for(const exam of report.exams)exam.summary.estimated_cost_usd*=factor;
  report.summary.response_estimated_cost_usd=recorded;report.summary.estimated_cost_usd=cost;report.summary.cost_basis='provider_usage_metrics';
- report.summary.provider_usage={source:audit.source,input_tokens:audit.input_tokens,output_tokens_including_thinking:audit.output_tokens_including_thinking,window:audit.window,queried_at:audit.queried_at};
+ report.summary.provider_usage={source:audit.source,input_tokens:input,metric_input_tokens:audit.input_tokens,output_tokens_including_thinking:audit.output_tokens_including_thinking,window:audit.window,queried_at:audit.queried_at};
  const fmt=n=>n.toLocaleString('en-US');
- report.limitations=[...(report.limitations??[]),'비용은 Google Cloud 사용량 지표('+audit.queried_at.slice(0,10)+' 조회)의 입력 '+fmt(audit.input_tokens)+'토큰과 추론 포함 출력 '+fmt(audit.output_tokens_including_thinking)+'토큰으로 다시 계산했습니다. Gemini 호환 API는 추론 토큰을 응답 사용량에서 빼고 보고하므로, 응답 기준 추정(US$'+recorded.toFixed(4)+')은 실제보다 작습니다. 청구서 금액은 아닙니다.'];
+ report.limitations=[...(report.limitations??[]),'비용은 Google Cloud 사용량 지표('+audit.queried_at.slice(0,10)+' 조회)의 입력 '+fmt(input)+'토큰과 추론 포함 출력 '+fmt(audit.output_tokens_including_thinking)+'토큰으로 다시 계산했습니다. Gemini 호환 API는 추론 토큰을 응답 사용량에서 빼고 보고하므로, 응답 기준 추정(US$'+recorded.toFixed(4)+')은 실제보다 작습니다. 청구서 금액은 아닙니다.'];
  return report;
 }
 export function buildReport(dataset,run,sources,pricing,engine,figureDependent=[]) {
