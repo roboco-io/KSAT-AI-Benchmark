@@ -10,8 +10,8 @@ import { QuestionNote } from './QuestionNote';
 import { MathContent } from './MathContent';
 
 const labels: Record<QuestionStatus, string> = { correct: '정답', incorrect: '오답', abstained: '기권', error: '실행 오류', pending: '평가 대기' };
-const subjects: Record<string, string> = { korean: '국어', math: '수학', english: '영어' };
-const sections: Record<string, string> = { common: '공통', hwajak: '화법과 작문', language_media: '언어와 매체', probability: '확률과 통계', calculus: '미적분', geometry: '기하', english: '영어' };
+const subjects: Record<string, string> = { korean: '국어', math: '수학', english: '영어', korean_history: '한국사', social: '사회탐구', science: '과학탐구' };
+const sections: Record<string, string> = { common: '공통', hwajak: '화법과 작문', language_media: '언어와 매체', probability: '확률과 통계', calculus: '미적분', geometry: '기하', english: '영어', korean_history: '한국사', ethics_life: '생활과 윤리', ethics_thought: '윤리와 사상', korean_geography: '한국지리', world_geography: '세계지리', east_asian_history: '동아시아사', world_history: '세계사', economics: '경제', politics_law: '정치와 법', society_culture: '사회·문화', physics1: '물리학Ⅰ', chemistry1: '화학Ⅰ', life_science1: '생명과학Ⅰ', earth_science1: '지구과학Ⅰ', physics2: '물리학Ⅱ', chemistry2: '화학Ⅱ', life_science2: '생명과학Ⅱ', earth_science2: '지구과학Ⅱ' };
 const abstainReasons: Record<string, string> = { uncertain: '정답 확신 부족', unreadable: '문제 판독 불가', budget_exhausted: '실행 예산 소진', unsupported_input: '지원하지 않는 입력' };
 const number = (value: number) => value.toLocaleString('ko-KR');
 const percent = (value: number) => `${value.toFixed(1)}%`;

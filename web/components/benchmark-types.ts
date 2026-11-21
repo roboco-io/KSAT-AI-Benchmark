@@ -28,7 +28,7 @@ export type BenchmarkData = {
   execution_notes?: string[];
   input_mode?: 'text_transcript';
   figure_dependent?: { excluded_question_ids: string[]; total_questions: number; correct: number; accuracy: number; score: number; max_score: number; exams: { id: string; excluded: number; score: number; max_score: number; correct: number; total_questions: number }[] };
-  exams: { id: string; title: string; subject: 'korean' | 'math' | 'english'; track: string; question_ids: string[]; max_score: number; summary: Summary & {score: number}; official_summary?: Summary }[];
+  exams: { id: string; title: string; subject: 'korean' | 'math' | 'english' | 'korean_history' | 'social' | 'science'; track: string; question_ids: string[]; max_score: number; summary: Summary & {score: number}; official_summary?: Summary }[];
   questions: Question[]; sources: { subject: string; url: string }[]; limitations: string[];
 };
 
@@ -39,6 +39,7 @@ export type RequestedModel = {
 };
 export type BenchmarkComparison = {
   schema_version: 3; generated_at: string; academic_year: number; repository_url: string;
+  session?: 'period4'; knowledge_policy?: 'closed_book';
   models: BenchmarkData[]; requested_models: RequestedModel[];
   billing_policy: { subscription_only: boolean; api_key_fallback: boolean; pi_api_models?: string[] };
 };

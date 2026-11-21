@@ -11,3 +11,11 @@ test('year changes clear model and question state while preserving unrelated sha
  assert.equal(academicYearUrl('https://roboco.io/KSAT-AI-Benchmark/?model=gemini-4-argon&campaign=sns&subject=english&question=37#model-records',2025),'https://roboco.io/KSAT-AI-Benchmark/?campaign=sns&year=2025');
  assert.throws(()=>academicYearUrl('https://roboco.io/KSAT-AI-Benchmark/',2028),/unavailable/);
 });
+test('2027 exam session follows ?session=period4 and resets on year change',async()=>{
+ const {examSessionFromSearch,examSessionUrl}=await import('../../web/lib/academic-year.mjs');
+ assert.equal(examSessionFromSearch('?year=2027&session=period4'),'period4');
+ assert.equal(examSessionFromSearch('?session=other'),'main');
+ assert.equal(examSessionUrl('https://x.test/?year=2027&model=a#q','period4'),'https://x.test/?year=2027&session=period4');
+ assert.equal(examSessionUrl('https://x.test/?year=2027&session=period4','main'),'https://x.test/?year=2027');
+ assert.equal(academicYearUrl('https://x.test/?year=2027&session=period4',2026),'https://x.test/?year=2026');
+});

@@ -1,4 +1,7 @@
-export function buildSolverPrompt(year,version=2) {
+// Period 4 (Korean history, social/science inquiry) is closed-book: the model answers from its own trained knowledge only.
+export const CLOSED_BOOK_NOTE='\n이 시험은 외부 정보 없이 모델이 이미 가진 지식만으로 풉니다. 웹 검색, 외부 문서, 데이터베이스 조회는 제공되지 않으며 시도하지 마세요.';
+export function buildSolverPrompt(year,version=2,session='main') {
+ if(session!=='main')return buildSolverPrompt(year,version)+CLOSED_BOOK_NOTE;
  if(![1,2,3].includes(version))throw new Error('Unsupported solver prompt version');
  const legacy=`당신은 ${year}학년도 수능 문제를 푸는 AI입니다. 제공한 원본 이미지와 요청한 문항 정보만 사용하세요. 검색, 파일 읽기, 정답표, 다른 모델, 도구는 사용하지 마세요.
 문제를 직접 풀고 최종 답과 짧은 한국어 설명을 제출하세요. 잘 모르거나 입력을 읽을 수 없으면 억지로 추측하지 않고 기권할 수 있습니다. 기권은 decision=abstained, answer=null로 제출하세요. 기권 사유는 uncertain, unreadable, budget_exhausted, unsupported_input 중 하나입니다.

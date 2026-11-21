@@ -22,11 +22,14 @@ import {loadTranscriptManifest,groupTranscript,verifyTranscripts,TRANSCRIPT_FORM
 const root=resolve(import.meta.dirname,'..');
 const yearIndex=process.argv.indexOf('--year');
 const year=yearIndex>=0?Number(process.argv[yearIndex+1]):2026;
-const paths=yearPaths(year);
+const sessionIndex=process.argv.indexOf('--session');
+const session=sessionIndex>=0?process.argv[sessionIndex+1]:'main';
+const paths=yearPaths(year,session);
 const dataset=JSON.parse(readFileSync(join(root,paths.dataset),'utf8'));
-if(dataset.academic_year!==year)throw new Error('Dataset academic year mismatch');
+if(dataset.academic_year!==year||(dataset.session??'main')!==session)throw new Error('Dataset academic year or session mismatch');
+const runTag=`${year}${session==='main'?'':`-${session}`}`;
 const hash=s=>createHash('sha256').update(s).digest('hex');
-const modelArg=process.argv.indexOf('--model');const selected=modelForYear(modelById(modelArg>=0?process.argv[modelArg+1]:'gpt-6.1-sol'),year);
+const modelArg=process.argv.indexOf('--model');const selected=modelForYear(modelById(modelArg>=0?process.argv[modelArg+1]:'gpt-6.1-sol'),year,session);
 const groupArg=process.argv.indexOf('--group');const requestedGroup=groupArg>=0?process.argv[groupArg+1]:null;
 const retryArg=process.argv.indexOf('--user-retry');const userRetryNote=retryArg>=0?process.argv[retryArg+1]:null;
 if(userRetryNote!==null&&!requestedGroup)throw new Error('RETRY_BLOCKED: --user-retry requires --group');
@@ -44,7 +47,7 @@ if(!['openai','anthropic'].includes(selected.provider)&&!selected.pi)throw new E
 const runDir=join(root,selected.directory);mkdirSync(runDir,{recursive:true});
 const statePath=join(runDir,'run.json');
 if(existsSync(statePath)&&JSON.parse(readFileSync(statePath,'utf8')).completed){console.log(`ALREADY COMPLETE: ${selected.id}; preserving locked answers`);process.exit(0);}
-const releaseLock=acquireRunLock(join(root,'.runtime/locks',(year===2026?selected.id:`${year}-${selected.id}`)+'.json'),existsSync(statePath)?JSON.parse(readFileSync(statePath,'utf8')):{});
+const releaseLock=acquireRunLock(join(root,'.runtime/locks',(year===2026&&session==='main'?selected.id:`${runTag}-${selected.id}`)+'.json'),existsSync(statePath)?JSON.parse(readFileSync(statePath,'utf8')):{});
 process.once('exit',releaseLock);
 const protocol={model:selected.id,provider:selected.provider,effort:'high',sdk_version:selected.pi?'Pi CLI 0.87.1':selected.provider==='openai'?'0.162.1':'0.3.296',tools:'disabled',input:textInput?`frozen text transcription of the original PDF, format version ${TRANSCRIPT_FORMAT_VERSION}`:'original PDF rendered at 200 DPI',english_listening:textInput?'official transcript transcribed as text':'official transcript rendered as images',max_iterations:3,group_timeout_seconds:selected.pi||selected.provider==='openai'?900:600,concurrency:2,cost_limit_usd:25,subscription_only:!selected.pi,api_key_fallback:false};
 if(selected.pi) {
@@ -63,9 +66,9 @@ const sourcePaths=[...new Set(dataset.solver_groups.flatMap(g=>[g.pdf_path,g.tra
 const sourceHashes=Object.fromEntries(sourcePaths.map(p=>[p,hash(readFileSync(sourcePath(root,p)))]));
 const sourceManifest=JSON.parse(readFileSync(join(root,paths.manifest),'utf8'));
 for(const p of sourcePaths)if(sourceManifest.files.find(f=>f.path===p)?.sha256!==sourceHashes[p])throw new Error(`Source integrity check failed: ${p}`);
-const transcript=textInput?loadTranscriptManifest(root,year):null;
+const transcript=textInput?loadTranscriptManifest(root,year,session):null;
 if(transcript){verifyTranscripts(root,transcript.manifest,dataset.solver_groups,sourceHashes);protocol.transcript_manifest_hash=transcript.hash;}
-let state=existsSync(statePath)?JSON.parse(readFileSync(statePath,'utf8')):{schema_version:2,prompt_version:textInput?3:2,run_id:`${year}-pre-exam-${selected.pi?'pi':selected.provider==='openai'?'codex':'claude'}-${selected.id}`,academic_year:year,phase:'pre_exam',started_at:new Date().toISOString(),protocol,dataset_hash:datasetHash,answers:{},errors:{},groups:{},iterations:[],usage:{},wall_time_seconds:0};
+let state=existsSync(statePath)?JSON.parse(readFileSync(statePath,'utf8')):{schema_version:2,prompt_version:textInput?3:2,run_id:`${runTag}-pre-exam-${selected.pi?'pi':selected.provider==='openai'?'codex':'claude'}-${selected.id}`,academic_year:year,...(session==='main'?{}:{session}),phase:'pre_exam',started_at:new Date().toISOString(),protocol,dataset_hash:datasetHash,answers:{},errors:{},groups:{},iterations:[],usage:{},wall_time_seconds:0};
 if(state.dataset_hash!==datasetHash)throw new Error('Resume refused: input changed. Preserve existing run and start a new run directory.');
 const batchSize=requestedBatchSize??state.protocol.batch_max_questions;
 if(batchSize!==undefined&&batchSize!==null) {
@@ -85,7 +88,7 @@ function render(pdf,pages) {
  return renderPages({root,renderDir,pdf,pages,sourceHashes});
 }
 
-const prompt=buildSolverPrompt(year,state.prompt_version??1);
+const prompt=buildSolverPrompt(year,state.prompt_version??1,session);
 const schema={type:'object',properties:{answers:{type:'array',items:{type:'object',properties:{question_id:{type:'string'},decision:{type:'string',enum:['answered','abstained']},answer:{type:['integer','null']},explanation:{type:'string'},abstain_reason:{type:['string','null'],enum:[null,'uncertain','unreadable','budget_exhausted','unsupported_input']}},required:['question_id','decision','answer','explanation','abstain_reason'],additionalProperties:false}}},required:['answers'],additionalProperties:false};
 verifyResume(state,protocol,datasetHash,hash(prompt),sourceHashes);
 state.prompt_hash=hash(prompt);state.source_hashes=sourceHashes;save();

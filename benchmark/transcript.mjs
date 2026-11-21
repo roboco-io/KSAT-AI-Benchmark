@@ -5,15 +5,15 @@ import {createHash} from 'node:crypto';
 // Frozen text transcription of the exam PDFs, used only by models that cannot take image input.
 export const TRANSCRIPT_FORMAT_VERSION=1;
 const sha=data=>createHash('sha256').update(data).digest('hex');
-const PAGE_PATH=/^exams\/transcripts\/\d{4}\/[a-z]+\/page-\d{2}\.md$/;
-export const transcriptManifestPath=year=>`exams/transcripts/${year}/manifest.json`;
+const PAGE_PATH=/^exams\/transcripts\/\d{4}(?:-period4)?\/[a-z][a-z0-9_]*\/page-\d{2}\.md$/;
+export const transcriptManifestPath=(year,session='main')=>`exams/transcripts/${year}${session==='main'?'':`-${session}`}/manifest.json`;
 
-export function loadTranscriptManifest(root,year) {
- const path=join(root,transcriptManifestPath(year));
+export function loadTranscriptManifest(root,year,session='main') {
+ const path=join(root,transcriptManifestPath(year,session));
  if(!existsSync(path))throw new Error('TRANSCRIPT_BLOCKED: frozen transcript manifest is missing for this academic year');
  const raw=readFileSync(path);
  let manifest;try{manifest=JSON.parse(raw);}catch{throw new Error('TRANSCRIPT_BLOCKED: transcript manifest is not valid JSON');}
- if(manifest?.academic_year!==year||manifest.format_version!==TRANSCRIPT_FORMAT_VERSION||!manifest.sources||typeof manifest.sources!=='object'||!Array.isArray(manifest.figure_dependent)||manifest.figure_dependent.some(id=>typeof id!=='string'))throw new Error('TRANSCRIPT_BLOCKED: transcript manifest is invalid');
+ if(manifest?.academic_year!==year||(manifest.session??'main')!==session||manifest.format_version!==TRANSCRIPT_FORMAT_VERSION||!manifest.sources||typeof manifest.sources!=='object'||!Array.isArray(manifest.figure_dependent)||manifest.figure_dependent.some(id=>typeof id!=='string'))throw new Error('TRANSCRIPT_BLOCKED: transcript manifest is invalid');
  return {manifest,hash:sha(raw)};
 }
 

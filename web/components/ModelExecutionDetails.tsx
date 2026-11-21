@@ -4,11 +4,12 @@ function analysis(data:BenchmarkData) {
   const summary=data.summary;
   const finished=data.completed&&summary.pending===0&&summary.errors===0;
   const paragraphs=[finished?`이번 시험에서 ${summary.total_questions}문항 중 ${summary.correct}문항을 맞혔고, 기권은 ${summary.abstained}회입니다.`:`미제출·실행 오류가 ${summary.pending+summary.errors}문항 남은 불완전 실행입니다. 현재 성적만으로 모델의 전체 성능을 판단하기 어렵습니다.`];
-  const subjects=[['korean','국어'],['math','수학'],['english','영어']].map(([id,label])=>({label,scores:data.exams.filter(exam=>exam.subject===id).map(exam=>exam.summary.score/exam.max_score*100)})).filter(subject=>subject.scores.length);
+  const period4=data.exams.some(exam=>exam.subject==='korean_history');
+  const subjects=(period4?[['korean_history','한국사'],['social','사회탐구'],['science','과학탐구']]:[['korean','국어'],['math','수학'],['english','영어']]).map(([id,label])=>({label,scores:data.exams.filter(exam=>exam.subject===id).map(exam=>exam.summary.score/exam.max_score*100)})).filter(subject=>subject.scores.length);
   if(finished&&subjects.length) {
     const minimum=Math.min(...subjects.flatMap(subject=>subject.scores));
     const maximum=Math.max(...subjects.flatMap(subject=>subject.scores));
-    if(minimum===100)paragraphs.push('국어·수학의 모든 선택과목과 영어에서 만점을 기록했습니다.');
+    if(minimum===100)paragraphs.push(period4?'한국사와 모든 탐구 과목에서 만점을 기록했습니다.':'국어·수학의 모든 선택과목과 영어에서 만점을 기록했습니다.');
     else if(minimum<maximum)paragraphs.push(`이번 평가에서는 ${subjects.filter(subject=>Math.min(...subject.scores)===minimum).map(subject=>subject.label).join('·')}의 원점수가 상대적으로 낮았습니다. 영역별 점수와 문항별 풀이를 함께 확인할 수 있습니다.`);
   }
   if(data.execution_stats)paragraphs.push(data.execution_stats.retry_count>0?(finished?'재시도가 있었지만 최종적으로 모든 문항에 답 또는 기권을 제출했습니다.':'재시도 후에도 미제출 문항이 남았습니다.'):'기록된 묶음 재시도는 없습니다.');
