@@ -24,7 +24,7 @@ export type BenchmarkData = {
   official_summary?: Summary;
   grading_policy?: { id: string; effective_date: string; question_id: string; official_answer: number; accepted_answers: number[]; annotation: string; rationale: string };
   execution_stats?: { refusal_count: number; timeout_count: number; retry_count: number };
-  protocol?: { effort?: string; tools?: string; input?: string; english_listening?: string };
+  protocol?: { effort?: string; effort_semantics?: string; agent?: string; sdk_version?: string; tools?: string; input?: string; english_listening?: string };
   execution_notes?: string[];
   input_mode?: 'text_transcript';
   figure_dependent?: { excluded_question_ids: string[]; total_questions: number; correct: number; accuracy: number; score: number; max_score: number; exams: { id: string; excluded: number; score: number; max_score: number; correct: number; total_questions: number }[] };

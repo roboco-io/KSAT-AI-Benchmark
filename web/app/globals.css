@@ -1004,3 +1004,6 @@ td.period4-column { background:var(--neon-soft); }
 @media (prefers-reduced-motion: reduce) { .period4-callout { animation:none; } }
 .track-count { display:block; font-size:10px; font-weight:500; color:var(--muted); white-space:nowrap; }
 .comparison-accuracy .track-count { font-size:11px; margin-top:2px; }
+.run-setup { display:block; font-size:10px; line-height:1.5; color:var(--muted); margin-top:3px; }
+@media (max-width: 760px) { .run-setup { font-size:12px; } }
+.run-setup { font-weight:400; } .run-setup > span { display:block; white-space:nowrap; }
