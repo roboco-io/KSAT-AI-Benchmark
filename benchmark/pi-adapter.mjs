@@ -100,7 +100,7 @@ export async function* piEvents({model,prompt,images=[],schema,signal,apiKey,piE
  assertRoute(model,apiKey);
  if (typeof prompt!=='string' || !prompt || !schema || typeof schema!=='object' || !Array.isArray(images)) throw new Error('PI_BLOCKED: prompt, image paths, and JSON schema are required');
  if (model.input==='text' && images.length) throw new Error('PI_BLOCKED: this model takes the frozen text transcript only; images must not be sent');
- if (!Number.isFinite(timeoutMs) || timeoutMs<=0 || timeoutMs>900000) throw new Error('PI_BLOCKED: request timeout must be within fifteen minutes');
+ if (!Number.isFinite(timeoutMs) || timeoutMs<=0 || timeoutMs>3600000) throw new Error('PI_BLOCKED: request timeout must be within one hour'); // Z.ai allows requests up to 1 hour
  if (signal?.aborted) throw new Error('PI_ABORTED: request cancelled');
  const dir=await mkdtemp(join(tmpdir(),'ksat-pi-'));
  const agentDir=join(dir,'agent');const cwd=join(dir,'work');
