@@ -9,6 +9,8 @@ export function claudeAccountFingerprint() {
 }
 export function assertFreshClaudeProof(proof,fingerprint,now=Date.now()) {
  const age=now-Date.parse(proof?.verified_at);
+ // A standing confirmation (the user said Usage credits stay OFF; do not ask each time) has no expiry but stays account-bound.
+ if(proof?.standing===true&&proof.extra_usage_disabled===true&&proof.account_fingerprint===fingerprint&&Number.isFinite(age)&&age>=0)return;
  if(proof?.extra_usage_disabled!==true||proof.account_fingerprint!==fingerprint||!Number.isFinite(age)||age<0||age>30*60*1000)throw new Error('SUBSCRIPTION_BLOCKED: refresh live Claude Usage credits OFF confirmation for this account (within30minutes)');
 }
 export function subscriptionEnvironment(env=process.env) {

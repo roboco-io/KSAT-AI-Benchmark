@@ -21,3 +21,9 @@ test('expired or changed-account OFF proof cannot authorize a new prompt',()=>{
  assert.throws(()=>assertFreshClaudeProof(proof,'same',Date.parse('2026-10-12T10:31:00Z')));
  assert.throws(()=>assertFreshClaudeProof({...proof,extra_usage_disabled:false},'same',now));
 });
+test('a standing Usage credits OFF confirmation does not expire but stays account-bound',()=>{
+ const proof={standing:true,extra_usage_disabled:true,account_fingerprint:'same',verified_at:'2026-11-21T00:00:00Z'};
+ assert.doesNotThrow(()=>assertFreshClaudeProof(proof,'same',Date.parse('2027-01-01T00:00:00Z')));
+ assert.throws(()=>assertFreshClaudeProof(proof,'other',Date.parse('2027-01-01T00:00:00Z')));
+ assert.throws(()=>assertFreshClaudeProof({...proof,extra_usage_disabled:false},'same',Date.parse('2026-11-21T01:00:00Z')));
+});

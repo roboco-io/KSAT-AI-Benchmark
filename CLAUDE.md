@@ -9,7 +9,7 @@ The active 2026 evaluation uses `benchmark/run.mjs`, `models.mjs`, provider SDK 
 - Codex/Claude remain subscription-only: no API key, paid provider, purchased-credit fallback or automatic billing route.
 - User explicitly authorized Pi CLI API use only for DeepSeek V4.1 Flash, GLM 5.3 Flash, Qwen3.8-27B and Kimi K3. Read only selected literal credentials from `~/.zsh_secrets`; never source the file or publish credentials. Require the private per-model API authorization list, exact routes and no fallback.
 - Codex: verify ChatGPT included allowance and no purchased credits before each request.
-- Claude: require first-party OAuth subscription plus fresh, account-bound confirmation that Settings → Usage credits is OFF. Confirmation is private and expires in30minutes.
+- Claude: require first-party OAuth subscription plus fresh, account-bound confirmation that Settings → Usage credits is OFF. Confirmation is private and account-bound. Since 2026-11-21 the user gave a standing confirmation that Usage credits stay OFF (`standing:true` in `.runtime/claude-subscription-only.json`, no expiry; do not ask each run). Without a standing record, a confirmation expires in 30 minutes. Remove the standing record if the user turns Usage credits on.
 - Authenticate before releasing prompts; never pass answer keys or other model answers to a solver.
 - Preserve submitted answers and abstentions; grade separately. A billing/quota violation cancels siblings and stops future batches.
 - `benchmark/export.mjs` creates version3 comparison data; Next.js imports it at build time for GitHub Pages at `https://roboco.io/KSAT-AI-Benchmark/`.
