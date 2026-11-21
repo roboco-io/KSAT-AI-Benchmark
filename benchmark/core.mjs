@@ -25,9 +25,9 @@ export function validateAnswers(items,questions) {
 }
 export function mergeSubmitted(existing,incoming) {return {...incoming,...existing};}
 export function attemptsRemaining(attempts=[],limit=3,userRetry=null) {return Math.max(0,limit-(userRetry===null?attempts:attempts.filter(a=>a.user_retry===userRetry)).length);}
-// A user-authorized retry reopens one finished Pi group for up to `limit` new attempts; it is recorded in state.user_retries.
+// A user-authorized retry reopens one finished Pi or agy group for up to `limit` new attempts; it is recorded in state.user_retries.
 export function openUserRetry(state,group,{note,at=new Date().toISOString(),batchSize}={}) {
- if(!state.finished_at||!state.protocol||state.protocol.agent!=='Pi')throw new Error('RETRY_BLOCKED: only a finished Pi run can be retried with user authorization');
+ if(!state.finished_at||!state.protocol||!['Pi','Antigravity CLI'].includes(state.protocol.agent))throw new Error('RETRY_BLOCKED: only a finished Pi or agy run can be retried with user authorization');
  if(!group||typeof note!=='string'||!note.trim())throw new Error('RETRY_BLOCKED: a solver group and the user authorization note are required');
  const retries=state.user_retries??[];
  const record={index:retries.length+1,group,authorized_at:at,note,answers_before:Object.keys(state.answers??{}).length,finalization_before:state.finalization??null,...(batchSize?{batch_max_questions:batchSize}:{})};

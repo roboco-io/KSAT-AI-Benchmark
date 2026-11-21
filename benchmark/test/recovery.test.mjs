@@ -84,6 +84,7 @@ test('a user-authorized retry reopens one finished Pi group with a fresh attempt
  const state={protocol:{agent:'Pi'},finished_at:'2026-11-19T12:00:00Z',answers:{a:{}},finalization:{state:'finished_with_errors'}};
  assert.throws(()=>openUserRetry({...state,finished_at:undefined},'g',{note:'x'}),/RETRY_BLOCKED/);
  assert.throws(()=>openUserRetry({...state,protocol:{agent:'Codex'}},'g',{note:'x'}),/RETRY_BLOCKED/);
+ assert.equal(openUserRetry({...structuredClone(state),protocol:{agent:'Antigravity CLI'}},'g',{note:'agy timeout'}),(state.user_retries?.length??0)+1);
  assert.throws(()=>openUserRetry(structuredClone(state),'g',{note:' '}),/RETRY_BLOCKED/);
  const index=openUserRetry(state,'g',{note:'user asked',at:'2026-11-19T13:00:00Z'});
  assert.equal(index,1);assert.equal(state.finalization,undefined);
