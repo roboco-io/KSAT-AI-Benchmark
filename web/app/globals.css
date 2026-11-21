@@ -1002,3 +1002,5 @@ td.period4-column { background:var(--neon-soft); }
 .period4-link:hover { color:var(--neon); }
 @keyframes period4-pulse { 0%,100% { box-shadow:0 0 6px rgba(255,45,85,.6),0 0 14px rgba(255,45,85,.3); } 50% { box-shadow:0 0 10px rgba(255,45,85,.95),0 0 28px rgba(255,45,85,.55); } }
 @media (prefers-reduced-motion: reduce) { .period4-callout { animation:none; } }
+.track-count { display:block; font-size:10px; font-weight:500; color:var(--muted); white-space:nowrap; }
+.comparison-accuracy .track-count { font-size:11px; margin-top:2px; }
