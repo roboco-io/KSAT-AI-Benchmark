@@ -25,7 +25,8 @@ export function validateProfile(model) {
   // Gemini routes: the OpenAI-compatible endpoint (omits thinking tokens from usage) or the native API (reports thoughtsTokenCount).
   const googleRoutes={'openai-completions':'https://generativelanguage.googleapis.com/v1beta/openai/','google-generative-ai':'https://generativelanguage.googleapis.com/v1beta'};
   if(model.provider==='google'&&(googleRoutes[p.api??'openai-completions']!==p.base_url||p.model_id!==model.id||p.secret_name!=='GEMINI_API_KEY'))throw new Error('MODEL_PROFILE_INVALID: Google Pi requires its explicit official Gemini API route');
-  fields(p,['provider','model_id','base_url','secret_name','context_window','max_tokens','compat','effort_semantics','thinking_level_map','api','min_request_interval_ms']);
+  fields(p,['provider','model_id','base_url','secret_name','context_window','max_tokens','compat','effort_semantics','thinking_level_map','api','min_request_interval_ms','group_timeout_seconds']);
+  if(p.group_timeout_seconds!==undefined&&!(Number.isSafeInteger(p.group_timeout_seconds)&&p.group_timeout_seconds>=60&&p.group_timeout_seconds<=3600))throw new Error('MODEL_PROFILE_INVALID: group timeout must be 60-3600 seconds');
   if(p.min_request_interval_ms!==undefined&&!(Number.isSafeInteger(p.min_request_interval_ms)&&p.min_request_interval_ms>0&&p.min_request_interval_ms<=60000))throw new Error('MODEL_PROFILE_INVALID: request interval must be 1-60000 ms');
   if(p.compat)fields(p.compat,['thinkingFormat','supportsReasoningEffort','supportsDeveloperRole','supportsStore','maxTokensField','supportsUsageInStreaming','supportsFinishReason','requiresReasoningContentOnAssistantMessages','supportsStrictMode','supportsThinkingTokenBudget','thinkingTokenBudgetField']);
   if(p.thinking_level_map) {

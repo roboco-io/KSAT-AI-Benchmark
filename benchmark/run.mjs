@@ -49,7 +49,7 @@ const statePath=join(runDir,'run.json');
 if(existsSync(statePath)&&JSON.parse(readFileSync(statePath,'utf8')).completed){console.log(`ALREADY COMPLETE: ${selected.id}; preserving locked answers`);process.exit(0);}
 const releaseLock=acquireRunLock(join(root,'.runtime/locks',(year===2026&&session==='main'?selected.id:`${runTag}-${selected.id}`)+'.json'),existsSync(statePath)?JSON.parse(readFileSync(statePath,'utf8')):{});
 process.once('exit',releaseLock);
-const protocol={model:selected.id,provider:selected.provider,effort:'high',sdk_version:selected.pi?'Pi CLI 0.87.1':selected.provider==='openai'?'0.162.1':'0.3.296',tools:'disabled',input:textInput?`frozen text transcription of the original PDF, format version ${TRANSCRIPT_FORMAT_VERSION}`:'original PDF rendered at 200 DPI',english_listening:textInput?'official transcript transcribed as text':'official transcript rendered as images',max_iterations:3,group_timeout_seconds:selected.pi||selected.provider==='openai'?900:600,concurrency:2,cost_limit_usd:25,subscription_only:!selected.pi,api_key_fallback:false};
+const protocol={model:selected.id,provider:selected.provider,effort:'high',sdk_version:selected.pi?'Pi CLI 0.87.1':selected.provider==='openai'?'0.162.1':'0.3.296',tools:'disabled',input:textInput?`frozen text transcription of the original PDF, format version ${TRANSCRIPT_FORMAT_VERSION}`:'original PDF rendered at 200 DPI',english_listening:textInput?'official transcript transcribed as text':'official transcript rendered as images',max_iterations:3,group_timeout_seconds:selected.pi?.group_timeout_seconds??(selected.pi||selected.provider==='openai'?900:600),concurrency:2,cost_limit_usd:25,subscription_only:!selected.pi,api_key_fallback:false};
 if(selected.pi) {
  const authorization=join(root,'.runtime/pi-api-authorization.json');
  if(!existsSync(authorization)||!JSON.parse(readFileSync(authorization,'utf8')).allowed_models?.includes(selected.id))throw new Error('PI_BLOCKED: this model has not been authorized for API billing');
@@ -129,7 +129,7 @@ async function solveGroup(group,iteration) {
  try {
   await pace(); // provider per-second request limit; waiting is not counted against the group timeout
   const signal=AbortSignal.any([AbortSignal.timeout(protocol.group_timeout_seconds*1000),invocationController.signal]);
-  const events=thread?(await thread.runStreamed(input,{outputSchema:schema,signal})).events:selected.pi?piEvents({model:selected,prompt:input[0].text,images,schema,signal,apiKey:readPiSecret(selected.pi.secret_name)}):claudeEvents({model:selected.id,prompt:input[0].text,images,schema,signal});
+  const events=thread?(await thread.runStreamed(input,{outputSchema:schema,signal})).events:selected.pi?piEvents({model:selected,prompt:input[0].text,images,schema,signal,timeoutMs:protocol.group_timeout_seconds*1000,apiKey:readPiSecret(selected.pi.secret_name)}):claudeEvents({model:selected.id,prompt:input[0].text,images,schema,signal});
   for await(const event of events) {
    appendFileSync(logPath,JSON.stringify(event)+'\n');
    modelStart??=Date.now();if(event.type==='turn.completed'||(event.type==='item.completed'&&event.item?.type==='agent_message'))modelEnd=Date.now();
