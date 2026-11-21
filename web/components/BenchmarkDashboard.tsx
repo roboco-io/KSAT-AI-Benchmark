@@ -9,7 +9,7 @@ import { GradingMark } from './GradingMark';
 import { QuestionNote } from './QuestionNote';
 import { MathContent } from './MathContent';
 
-const labels: Record<QuestionStatus, string> = { correct: '정답', incorrect: '오답', abstained: '기권', error: '실행 오류', pending: '평가 대기' };
+const labels: Record<QuestionStatus, string> = { correct: '정답', incorrect: '오답', abstained: '기권', unsolved: '풀이 실패', error: '실행 오류', pending: '평가 대기' };
 const subjects: Record<string, string> = { korean: '국어', math: '수학', english: '영어', korean_history: '한국사', social: '사회탐구', science: '과학탐구' };
 const sections: Record<string, string> = { common: '공통', hwajak: '화법과 작문', language_media: '언어와 매체', probability: '확률과 통계', calculus: '미적분', geometry: '기하', english: '영어', korean_history: '한국사', ethics_life: '생활과 윤리', ethics_thought: '윤리와 사상', korean_geography: '한국지리', world_geography: '세계지리', east_asian_history: '동아시아사', world_history: '세계사', economics: '경제', politics_law: '정치와 법', society_culture: '사회·문화', physics1: '물리학Ⅰ', chemistry1: '화학Ⅰ', life_science1: '생명과학Ⅰ', earth_science1: '지구과학Ⅰ', physics2: '물리학Ⅱ', chemistry2: '화학Ⅱ', life_science2: '생명과학Ⅱ', earth_science2: '지구과학Ⅱ' };
 const abstainReasons: Record<string, string> = { uncertain: '정답 확신 부족', unreadable: '문제 판독 불가', budget_exhausted: '실행 예산 소진', unsupported_input: '지원하지 않는 입력' };
@@ -62,7 +62,7 @@ export function BenchmarkDashboard({ data, embedded = false }: { data: Benchmark
           <div className="metric"><span>풀이 시간</span><strong>{hasResults ? duration(summary.solve_time_seconds ?? summary.wall_time_seconds) : '—'}</strong><small>{summary.solve_time_basis === 'model_stream' ? '답안을 제출한 요청의 모델 응답 시간만 합산(인증·대기·기동 제외)' : '답안을 제출한 요청만 합산(일부 기록은 요청 전체 시간)'} · 재시도 포함 총 실행 시간 {duration(summary.wall_time_seconds)}</small></div>
           <div className="metric"><span>API 환산 비용</span><strong>{hasResults ? money(summary.estimated_cost_usd) : '—'}</strong><small>{data.usage_complete === false ? '일부 실패 사용량 미보고 · 하한 추정' : 'USD 추정값 · 실제 청구액과 다름'}</small></div>
         </div>
-        <div className="summary-strip"><div className="status-counts">{(Object.keys(labels) as QuestionStatus[]).map(key => <span key={key}><i className={`dot ${key}`} />{labels[key]} <b>{number(key === 'error' ? summary.errors : key === 'abstained' ? summary.abstained : summary[key])}</b></span>)}</div><span>응답 문항 정답률 <b>{summary.attempt_accuracy === null ? '—' : percent(summary.attempt_accuracy)}</b></span></div>
+        <div className="summary-strip"><div className="status-counts">{(Object.keys(labels) as QuestionStatus[]).map(key => <span key={key}><i className={`dot ${key}`} />{labels[key]} <b>{number(key === 'error' ? summary.errors : key === 'abstained' ? summary.abstained : summary[key] ?? 0)}</b></span>)}</div><span>응답 문항 정답률 <b>{summary.attempt_accuracy === null ? '—' : percent(summary.attempt_accuracy)}</b></span></div>
         {data.grading_policy && <p className="grading-policy-note">* {data.grading_policy.annotation} ④번 제출은 정답*으로 표시합니다. <a href={`${basePath}/debates/english-q37.html#grading-policy`}>보정 근거·정책 보기 →</a></p>}
         {data.execution_stats && <p className="comparison-note">답변 거부 {data.execution_stats.refusal_count}회 · 타임아웃 {data.execution_stats.timeout_count}회 · 재시도를 포함한 요청 횟수</p>}
         <div className="token-summary"><strong>토큰 사용량</strong><Tokens usage={summary.usage} /><span>캐시 토큰은 입력 토큰에 포함됩니다.</span></div>

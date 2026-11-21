@@ -109,3 +109,9 @@ test('Gemini profiles accept the native route that reports thinking tokens, and 
  assert.ok(validateProfile({...base,pi:{...base.pi,base_url:'https://generativelanguage.googleapis.com/v1beta/openai/'}}));
  assert.throws(()=>validateProfile({...base,pi:{...base.pi,api:'google-generative-ai',base_url:'https://generativelanguage.googleapis.com/v1beta/openai/'}}),/official Gemini API route/);
 });
+test('a confirmed unsolved question scores 0 and is not counted as an execution error',async()=>{
+ const {summarize}=await import('../core.mjs');
+ const qs=[{id:'a',kind:'multiple_choice',correct_answer:1,points:2},{id:'b',kind:'multiple_choice',correct_answer:2,points:3}];
+ const s=summarize(qs,{a:{decision:'answered',answer:1}},{b:{status:'error',unsolved:true}},{},0,0);
+ assert.equal(s.unsolved,1);assert.equal(s.errors,0);assert.equal(s.pending,0);assert.equal(s.score,2);assert.equal(s.accuracy,50);assert.equal(s.attempt_accuracy,50);
+});

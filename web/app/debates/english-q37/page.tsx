@@ -29,7 +29,7 @@ const otherAnswers = existingResults.requested_models.filter(model => !models.so
   question: existingResults.models.find(result => result.model === model.id)?.questions.find(question => question.id === '2026-english-english-q37'),
 }));
 const answerCounts = Object.entries(choices).map(([answer, label]) => ({ label, count: otherAnswers.filter(entry => entry.question?.answer === Number(answer)).length })).filter(entry => entry.count > 0);
-const gradingLabels = { correct: '정답', incorrect: '오답', abstained: '기권', error: '실행 오류', pending: '미제출' };
+const gradingLabels = { correct: '정답', incorrect: '오답', abstained: '기권', unsolved: '풀이 실패', error: '실행 오류', pending: '미제출' };
 const basePath = process.env.NODE_ENV === 'production' ? '/KSAT-AI-Benchmark' : '';
 const sources = questionNotes['2026-english-english-q37'].sources;
 

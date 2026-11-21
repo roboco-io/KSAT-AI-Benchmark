@@ -2548,7 +2548,9 @@
   "errors": {
     "2027-p4-physics2-q14": {
       "status": "error",
-      "message": "PI_TURN_FAILED: response reached output token limit"
+      "message": "PI_TURN_FAILED: response reached output token limit",
+      "unsolved": true,
+      "detail": "물리학Ⅱ 14번은 같은 조건으로 6번 풀이를 시도했지만 매번 추론이 출력 상한 65,536토큰을 모두 써서 답을 내지 못했습니다. 실행 장애가 아니라 이 모델이 현재 조건에서 풀지 못하는 문제로 판단했습니다."
     }
   },
   "groups": {
@@ -12598,7 +12600,7 @@
     "api_endpoint": "https://generativelanguage.googleapis.com/v1beta/openai/",
     "reference_cost_is_invoice": false
   },
-  "completed": false,
+  "completed": true,
   "finished_at": "2026-11-21T13:29:47.349Z",
   "user_retries": [
     {
@@ -12769,8 +12771,11 @@
     }
   ],
   "finalization": {
-    "state": "finished_with_errors",
-    "reason": "실행 종료: 359/360문항 제출. 물리학Ⅱ 14번은 1문항씩 재시도에서 실제 풀이 시도 6회가 모두 출력 상한(65,536토큰)에 도달해 미제출 상태입니다.",
-    "recorded_at": "2026-11-21T13:29:57.330070+00:00"
+    "state": "completed_with_unsolved",
+    "unsolved_question_ids": [
+      "2027-p4-physics2-q14"
+    ],
+    "reason": "359/360문항 제출. 물리학Ⅱ 14번은 6회 시도가 모두 출력 상한에 도달해 풀이 실패(0점)로 확정했습니다. 2026-11-21 사용자 결정.",
+    "recorded_at": "2026-11-21T13:32:11.345674+00:00"
   }
 }

@@ -1,13 +1,13 @@
 export type Usage = { input_tokens: number; cached_input_tokens: number; output_tokens: number };
 export type Summary = {
   score: number; max_score: number;
-  total_questions: number; correct: number; incorrect: number; abstained: number;
+  total_questions: number; correct: number; incorrect: number; abstained: number; unsolved?: number;
   errors: number; pending: number; accuracy: number; abstention_rate: number;
   attempt_accuracy: number | null; wall_time_seconds: number; solver_time_seconds: number; solve_time_seconds?: number; solve_time_basis?: 'model_stream' | 'attempt' | 'mixed' | null; cost_basis?: 'provider_usage_metrics'; response_estimated_cost_usd?: number; provider_usage?: { source: string; input_tokens: number; output_tokens_including_thinking: number; window: { start: string; end: string }; queried_at: string };
   usage: Usage; estimated_cost_usd: number;
   adjusted_correct?: number;
 };
-export type QuestionStatus = 'correct' | 'incorrect' | 'abstained' | 'error' | 'pending';
+export type QuestionStatus = 'correct' | 'incorrect' | 'abstained' | 'unsolved' | 'error' | 'pending';
 export type Question = {
   id: string; number: number; subject: string; section: string;
   kind: 'multiple_choice' | 'short_answer'; points: number; status: QuestionStatus;

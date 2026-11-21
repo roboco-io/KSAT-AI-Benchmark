@@ -12,7 +12,9 @@ function analysis(data:BenchmarkData) {
     if(minimum===100)paragraphs.push(period4?'한국사와 모든 탐구 과목에서 만점을 기록했습니다.':'국어·수학의 모든 선택과목과 영어에서 만점을 기록했습니다.');
     else if(minimum<maximum)paragraphs.push(`이번 평가에서는 ${subjects.filter(subject=>Math.min(...subject.scores)===minimum).map(subject=>subject.label).join('·')}의 원점수가 상대적으로 낮았습니다. 영역별 점수와 문항별 풀이를 함께 확인할 수 있습니다.`);
   }
-  if(data.execution_stats)paragraphs.push(data.execution_stats.retry_count>0?(finished?'재시도가 있었지만 최종적으로 모든 문항에 답 또는 기권을 제출했습니다.':'재시도 후에도 미제출 문항이 남았습니다.'):'기록된 묶음 재시도는 없습니다.');
+  const unsolved=data.questions.filter(q=>q.status==='unsolved');
+  if(unsolved.length)paragraphs.push(`${unsolved.length}문항은 이 모델이 풀지 못한 문제로 확정해 0점 처리했습니다. ${[...new Set(unsolved.map(q=>q.explanation))].join(' ')}`);
+  if(data.execution_stats)paragraphs.push(data.execution_stats.retry_count>0?(finished?(unsolved.length?`재시도가 있었고, 풀이 실패로 확정한 ${unsolved.length}문항을 뺀 모든 문항에 답 또는 기권을 제출했습니다.`:'재시도가 있었지만 최종적으로 모든 문항에 답 또는 기권을 제출했습니다.'):'재시도 후에도 미제출 문항이 남았습니다.'):'기록된 묶음 재시도는 없습니다.');
   if(summary.adjusted_correct&&data.official_summary)paragraphs.push(`영어 37번 ④번을 인정한 보정 점수입니다. 공식 기준 정답률은 ${data.official_summary.accuracy.toFixed(1)}%입니다.`);
   return paragraphs;
 }
