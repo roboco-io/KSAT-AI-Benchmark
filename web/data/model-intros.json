@@ -1,0 +1,402 @@
+{
+ "gpt-6.2-sol": {
+  "summary_ko": "2026-11-17 공개된 일상 업무·에이전트용 효율형 모델. 컨텍스트 105만, 최대 출력 12.8만 토큰.",
+  "released": "2026-11-17",
+  "context_window": 1050000,
+  "max_output_tokens": 128000,
+  "inputs": [
+   "text",
+   "image"
+  ],
+  "tier": "중간 티어(범용·효율)",
+  "sources": [
+   "https://openai.com/index/introducing-gpt-6-2-astra-sol/",
+   "https://developers.openai.com/api/docs/models",
+   "https://help.openai.com/en/articles/9624314-model-release-notes"
+  ],
+  "parameters": "비공개",
+  "open_weights": null
+ },
+ "gpt-6.2-astra": {
+  "summary_ko": "2026-11-17 공개된 OpenAI 최상위 모델로, 가장 어려운 프로젝트용. 입력 $8, 출력 $40(100만 토큰당).",
+  "released": "2026-11-17",
+  "context_window": 1050000,
+  "max_output_tokens": 128000,
+  "inputs": [
+   "text",
+   "image"
+  ],
+  "tier": "플래그십",
+  "sources": [
+   "https://openai.com/index/introducing-gpt-6-2-astra-sol/",
+   "https://developers.openai.com/api/docs/models",
+   "https://help.openai.com/en/articles/9624314-model-release-notes"
+  ],
+  "parameters": "비공개",
+  "open_weights": null
+ },
+ "gpt-6.1-sol": {
+  "summary_ko": "GPT-6 Sol의 개선판으로, 공식 소개문은 Astra에 근접한 성능을 5분의 1 가격으로 제공한다고 설명한다.",
+  "released": null,
+  "context_window": null,
+  "max_output_tokens": null,
+  "inputs": [
+   "text",
+   "image"
+  ],
+  "tier": "중간 티어(범용·효율)",
+  "sources": [
+   "https://openai.com/index/introducing-gpt-6-1-sol/",
+   "https://developers.openai.com/api/docs/models"
+  ],
+  "parameters": "비공개",
+  "open_weights": null
+ },
+ "gpt-6.1-terra": {
+  "summary_ko": "2026-10-26 공개. 시각 추론, 정밀한 컴퓨터 사용, 자연스러운 글쓰기에 맞춘 빠르고 효율적인 모델.",
+  "released": "2026-10-26",
+  "context_window": 1050000,
+  "max_output_tokens": 128000,
+  "inputs": [
+   "text",
+   "image"
+  ],
+  "tier": "경량·고속",
+  "sources": [
+   "https://openai.com/index/introducing-gpt-6-1-terra/",
+   "https://developers.openai.com/api/docs/models",
+   "https://help.openai.com/en/articles/9624314-model-release-notes"
+  ],
+  "parameters": "비공개",
+  "open_weights": null
+ },
+ "gpt-6-astra": {
+  "summary_ko": "OpenAI가 최고 지능·정렬 모델로 소개한 GPT-6 세대 플래그십. 컴퓨터 사용·코딩·사이버 분야 강조.",
+  "released": null,
+  "context_window": null,
+  "max_output_tokens": null,
+  "inputs": [
+   "text",
+   "image"
+  ],
+  "tier": "플래그십(이전 세대)",
+  "sources": [
+   "https://openai.com/index/gpt-6-astra/",
+   "https://developers.openai.com/api/docs/models"
+  ],
+  "parameters": "비공개",
+  "open_weights": null
+ },
+ "gpt-6-luna": {
+  "summary_ko": "GPT-6 계열 중 가장 저렴한 티어로, 집중적이고 대량·비용 민감 작업용. 입력 $0.10, 출력 $0.50.",
+  "released": "2026-09-22",
+  "context_window": 1050000,
+  "max_output_tokens": 128000,
+  "inputs": [
+   "text",
+   "image"
+  ],
+  "tier": "경량·저비용",
+  "sources": [
+   "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+   "https://developers.openai.com/api/docs/models"
+  ],
+  "parameters": "비공개",
+  "open_weights": null
+ },
+ "claude-fable-5-2": {
+  "summary_ko": "2026-11-09 공개된 Anthropic 최상위 모델로, 고난도 추론과 장시간 에이전트 작업용. 컨텍스트 100만 토큰.",
+  "released": "2026-11-09",
+  "context_window": 1000000,
+  "max_output_tokens": 128000,
+  "inputs": [
+   "text",
+   "image"
+  ],
+  "tier": "플래그십",
+  "sources": [
+   "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+   "https://platform.claude.com/docs/en/about-claude/models/overview",
+   "https://platform.claude.com/docs/en/release-notes/overview"
+  ],
+  "parameters": "비공개",
+  "open_weights": null
+ },
+ "claude-fable-5-1": {
+  "summary_ko": "2026-09-01 공개된 Fable 계열 모델이며 Fable 5.2의 이전 버전. 컨텍스트 100만 토큰.",
+  "released": "2026-09-01",
+  "context_window": 1000000,
+  "max_output_tokens": 128000,
+  "inputs": [
+   "text",
+   "image"
+  ],
+  "tier": "플래그십(이전 버전)",
+  "sources": [
+   "https://platform.claude.com/docs/en/about-claude/models/overview",
+   "https://platform.claude.com/docs/en/release-notes/overview"
+  ],
+  "parameters": "비공개",
+  "open_weights": null
+ },
+ "claude-opus-5-5": {
+  "summary_ko": "2026-09-22 공개. 장시간 에이전트형 코딩과 지식 업무용이며 Anthropic이 대부분의 워크로드에 권장.",
+  "released": "2026-09-22",
+  "context_window": 1000000,
+  "max_output_tokens": 128000,
+  "inputs": [
+   "text",
+   "image"
+  ],
+  "tier": "고성능(Opus)",
+  "sources": [
+   "https://platform.claude.com/docs/en/about-claude/models/overview",
+   "https://platform.claude.com/docs/en/release-notes/overview"
+  ],
+  "parameters": "비공개",
+  "open_weights": null
+ },
+ "claude-sonnet-5-5": {
+  "summary_ko": "2026-09-28 공개. 속도와 지능의 균형을 내세운 중간 티어. 입력 $2, 출력 $10(100만 토큰당).",
+  "released": "2026-09-28",
+  "context_window": 1000000,
+  "max_output_tokens": 128000,
+  "inputs": [
+   "text",
+   "image"
+  ],
+  "tier": "중간 티어(균형)",
+  "sources": [
+   "https://platform.claude.com/docs/en/about-claude/models/overview",
+   "https://platform.claude.com/docs/en/release-notes/overview"
+  ],
+  "parameters": "비공개",
+  "open_weights": null
+ },
+ "claude-haiku-5-5": {
+  "summary_ko": "2026-10-07 공개. 분류·추출·라우팅 같은 대량·저지연 작업용 가장 빠른 모델.",
+  "released": "2026-10-07",
+  "context_window": 1000000,
+  "max_output_tokens": 128000,
+  "inputs": [
+   "text",
+   "image"
+  ],
+  "tier": "경량·저비용",
+  "sources": [
+   "https://platform.claude.com/docs/en/about-claude/models/overview",
+   "https://platform.claude.com/docs/en/release-notes/overview"
+  ],
+  "parameters": "비공개",
+  "open_weights": null
+ },
+ "gemini-4-neon": {
+  "summary_ko": "2026-11-18 공개. Carbon에서 파생된 중간 티어로 코딩·지식 업무용. 기본 사고 수준에서 Carbon보다 작업당 비용 32% 낮음.",
+  "released": "2026-11-18",
+  "context_window": 1000000,
+  "max_output_tokens": 64000,
+  "inputs": [
+   "text",
+   "image",
+   "audio",
+   "video",
+   "pdf"
+  ],
+  "tier": "중간 티어(깊이·효율 균형)",
+  "sources": [
+   "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/",
+   "https://deepmind.google/models/model-cards/gemini-4-neon/",
+   "https://aistudio.google.com/docs/models"
+  ],
+  "parameters": "비공개",
+  "open_weights": null
+ },
+ "gemini-4-carbon": {
+  "summary_ko": "2026-10-28 공개된 Google 최강 추론 모델로, 사이버 보안과 장기 과제에 특화. 초기엔 일부 방어 인력에 제한 공개.",
+  "released": "2026-10-28",
+  "context_window": 1000000,
+  "max_output_tokens": 64000,
+  "inputs": [
+   "text",
+   "image",
+   "audio",
+   "video",
+   "pdf"
+  ],
+  "tier": "플래그십",
+  "sources": [
+   "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
+   "https://aistudio.google.com/docs/models"
+  ],
+  "parameters": "비공개",
+  "open_weights": null
+ },
+ "gemini-4-argon": {
+  "summary_ko": "2026-09-30 공개된 프런티어 추론 모델로 코딩·기업 지식 업무·사이버 방어용. Carbon보다 효율적.",
+  "released": "2026-09-30",
+  "context_window": 1000000,
+  "max_output_tokens": 64000,
+  "inputs": [
+   "text",
+   "image",
+   "audio",
+   "video",
+   "pdf"
+  ],
+  "tier": "고성능(효율형 프런티어)",
+  "sources": [
+   "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+   "https://aistudio.google.com/docs/models"
+  ],
+  "parameters": "비공개",
+  "open_weights": null
+ },
+ "deepseek-v4.1-flash": {
+  "summary_ko": "DeepSeek의 MoE 모델. 백본 552B, 토큰당 활성 8B(prefill)/16B(decode), 이미지·텍스트 입력, 1M 컨텍스트, MIT 가중치 공개.",
+  "released": null,
+  "parameters": "백본 552B / 활성 8B(prefill), 16B(decode)",
+  "context_window": 1000000,
+  "max_output_tokens": 384000,
+  "inputs": [
+   "text",
+   "image"
+  ],
+  "open_weights": true,
+  "tier": "저가형 Flash 모델",
+  "sources": [
+   "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
+   "https://api-docs.deepseek.com/quick_start/pricing"
+  ]
+ },
+ "glm-5.3-flash": {
+  "summary_ko": "Z.ai의 GLM-5 계열 첫 네이티브 멀티모달 모델. 320B 총/18B 활성, 희소·선형 하이브리드 어텐션, 1M 컨텍스트.",
+  "released": null,
+  "parameters": "총 320B / 활성 18B",
+  "context_window": 1000000,
+  "max_output_tokens": 128000,
+  "inputs": [
+   "text",
+   "image",
+   "video",
+   "file"
+  ],
+  "open_weights": true,
+  "tier": "저가형 Flash 멀티모달 모델",
+  "sources": [
+   "https://docs.z.ai/guides/llm/glm-5.3-flash"
+  ]
+ },
+ "qwen4-max": {
+  "summary_ko": "알리바바 Qwen4 시리즈 플래그십. 총 2.4T/활성 약 71B 희소 MoE, 네이티브 비전, 1M 컨텍스트, API로 제공.",
+  "released": "2026-11-16",
+  "parameters": "총 2.4T / 활성 약 71B",
+  "context_window": 1000000,
+  "max_output_tokens": null,
+  "inputs": [
+   "text",
+   "image"
+  ],
+  "open_weights": false,
+  "tier": "플래그십(최상위)",
+  "sources": [
+   "https://www.alibabacloud.com/press-room/alibaba-unveils-qwen4-max"
+  ]
+ },
+ "qwen3.8-27b": {
+  "summary_ko": "Qwen의 27B 밀집 비전-언어 모델. 기본 262K(최대 1M) 컨텍스트, 추론 강도 조절, Apache-2.0 공개.",
+  "released": null,
+  "parameters": "27B (밀집)",
+  "context_window": 262144,
+  "max_output_tokens": null,
+  "inputs": [
+   "text",
+   "image",
+   "video"
+  ],
+  "open_weights": true,
+  "tier": "중형 오픈웨이트",
+  "sources": [
+   "https://huggingface.co/Qwen/Qwen3.8-27B"
+  ]
+ },
+ "kimi-k3.1-pro": {
+  "summary_ko": "Moonshot AI가 K3를 후속 학습해 낸 K3.1 시리즈 첫 모델. 총 2.8T/활성 104B, 텍스트·이미지 입력, 1M 컨텍스트.",
+  "released": null,
+  "parameters": "총 2.8T / 활성 104B",
+  "context_window": 1048576,
+  "max_output_tokens": null,
+  "inputs": [
+   "text",
+   "image"
+  ],
+  "open_weights": true,
+  "tier": "플래그십",
+  "sources": [
+   "https://kimi.com/en/blog/kimi-k3-1-pro",
+   "https://huggingface.co/moonshotai/Kimi-K3.1-Pro"
+  ]
+ },
+ "kimi-k3": {
+  "summary_ko": "Moonshot AI의 오픈웨이트 모델. 총 2.8T/활성 104B, 텍스트·이미지 입력, 1M 컨텍스트, Kimi K3 라이선스.",
+  "released": null,
+  "parameters": "총 2.8T / 활성 104B",
+  "context_window": 1048576,
+  "max_output_tokens": null,
+  "inputs": [
+   "text",
+   "image"
+  ],
+  "open_weights": true,
+  "tier": "플래그십",
+  "sources": [
+   "https://huggingface.co/moonshotai/Kimi-K3"
+  ]
+ },
+ "solar-pro-4": {
+  "summary_ko": "Upstage의 에이전트용 플래그십 모델. 512K 컨텍스트, 최대 출력 128K, 영어·한국어·일본어 텍스트, 추론 모드 지원.",
+  "released": "2026-08-06",
+  "parameters": "비공개",
+  "context_window": 524288,
+  "max_output_tokens": 131072,
+  "inputs": [
+   "text"
+  ],
+  "open_weights": false,
+  "tier": "플래그십",
+  "sources": [
+   "https://console.upstage.ai/docs/models/solar-pro-4",
+   "https://console.upstage.ai/docs/models"
+  ]
+ },
+ "solar-mini-4-5-preview": {
+  "summary_ko": "Upstage의 프리뷰 모델로, 공식 문서에 사양이 없다. 이 벤치마크의 시험 호출에서는 이미지 입력이 거부되어 텍스트만 받는 것을 확인했다.",
+  "released": null,
+  "parameters": "비공개",
+  "context_window": null,
+  "max_output_tokens": null,
+  "inputs": [
+   "text"
+  ],
+  "open_weights": null,
+  "tier": "프리뷰(문서 없음)",
+  "sources": [
+   "https://console.upstage.ai/docs/models"
+  ]
+ },
+ "k-exaone-2.5": {
+  "summary_ko": "LG AI연구원의 에이전틱 기술검증 모델. 750B 총/31B 활성, 512K 컨텍스트, 텍스트 전용, EXAONE API로 무료 제공.",
+  "released": "2026-11-09",
+  "parameters": "총 750B / 활성 31B",
+  "context_window": 524288,
+  "max_output_tokens": 524288,
+  "inputs": [
+   "text"
+  ],
+  "open_weights": false,
+  "tier": "국산 플래그십 에이전틱(검증 모델)",
+  "sources": [
+   "https://docs.exaone.ai/ko/docs/k-exaone-2.5",
+   "https://lg.co.kr/media/release/30760"
+  ]
+ }
+}
