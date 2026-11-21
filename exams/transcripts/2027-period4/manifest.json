@@ -1,0 +1,578 @@
+{
+  "academic_year": 2027,
+  "session": "period4",
+  "format_version": 1,
+  "frozen_at": "2026-11-21T01:00:54.055Z",
+  "method": "Pages transcribed from the original PDF by a Claude Code session without access to answer keys, checked against the PDF text layer and by a second independent read; see exams/transcripts/README.md",
+  "sources": {
+    "exams/pdf/2027/period4/한국사영역_문제지.pdf": {
+      "sha256": "d1f8e1fea1ae2fd2d52caf531fd4a0ac55b4220a386c4f405edd52298664ede8",
+      "pages": {
+        "1": {
+          "path": "exams/transcripts/2027-period4/korean_history/page-01.md",
+          "sha256": "88cad4515f550c888b8b6b2721ea9ca909dcd1c4e8fe102cd1cdf83f035f73d7"
+        },
+        "2": {
+          "path": "exams/transcripts/2027-period4/korean_history/page-02.md",
+          "sha256": "5cedc305e343dee0498ea23cfb8c6552bdeefb0ec5c30328413e83bdcb8cae0c"
+        },
+        "3": {
+          "path": "exams/transcripts/2027-period4/korean_history/page-03.md",
+          "sha256": "c9ec00647dde913d0710b27969c6cc0bd43761f823bff8911af2170eb8171aa5"
+        },
+        "4": {
+          "path": "exams/transcripts/2027-period4/korean_history/page-04.md",
+          "sha256": "61adc529e9123d6b7daaf30f46768cf3854a04b6a287a5aa4e54df338a5330ef"
+        }
+      }
+    },
+    "exams/pdf/2027/period4/사회탐구_생활과윤리_문제지.pdf": {
+      "sha256": "05368742acddf5a5602bcd373c57dc035ec47a8202285268bc9ab69af85ff4d6",
+      "pages": {
+        "1": {
+          "path": "exams/transcripts/2027-period4/ethics_life/page-01.md",
+          "sha256": "3d7eb87bb9674e9dde4daad15b7175e956662771ee5f3adc2fa071939655afec"
+        },
+        "2": {
+          "path": "exams/transcripts/2027-period4/ethics_life/page-02.md",
+          "sha256": "91640b6b27309c5c28c8d627d90ee830faa429fc4e9f95f4bc5ed2413a08e395"
+        },
+        "3": {
+          "path": "exams/transcripts/2027-period4/ethics_life/page-03.md",
+          "sha256": "eb9c9d103030ed3681c1bda9a4f8074443fa3be8d88de9ea36bb156168d36efe"
+        },
+        "4": {
+          "path": "exams/transcripts/2027-period4/ethics_life/page-04.md",
+          "sha256": "7f9f1b378969e17c77db0e64172b9be4ce47a313a8363e2ca6254e8e7438dd6f"
+        }
+      }
+    },
+    "exams/pdf/2027/period4/사회탐구_윤리와사상_문제지.pdf": {
+      "sha256": "4a7433a4a5fa0841922313e6217f8e8d1f63f08edcd31da9a3d59afdf6c5d7d7",
+      "pages": {
+        "1": {
+          "path": "exams/transcripts/2027-period4/ethics_thought/page-01.md",
+          "sha256": "bb75f7d91c7cc94e96ad5893b6483179137cc89dd0f315c97471051a926ca520"
+        },
+        "2": {
+          "path": "exams/transcripts/2027-period4/ethics_thought/page-02.md",
+          "sha256": "f309466973e44de57a7f6bbc977af9eee23b9d13ed36f5a541a28cda4ea9ae1c"
+        },
+        "3": {
+          "path": "exams/transcripts/2027-period4/ethics_thought/page-03.md",
+          "sha256": "a6be7fa34166f6753d146ac7f05a93f24391b7f86fd7265e9ab217081d6f2290"
+        },
+        "4": {
+          "path": "exams/transcripts/2027-period4/ethics_thought/page-04.md",
+          "sha256": "41166d8b13cc9cd700b4741316eb88999a5287f708e54dd3c2fcc2f8f7679945"
+        }
+      }
+    },
+    "exams/pdf/2027/period4/사회탐구_한국지리_문제지.pdf": {
+      "sha256": "e25c10f2c27695d99d8319473cf7d71c75792448af4b17659185a856b0fd5bf7",
+      "pages": {
+        "1": {
+          "path": "exams/transcripts/2027-period4/korean_geography/page-01.md",
+          "sha256": "5b4e0d75ddbc004ca944e8eeebb6e9125f5edc2590f7c21c2169d9ab4bf7c2a6"
+        },
+        "2": {
+          "path": "exams/transcripts/2027-period4/korean_geography/page-02.md",
+          "sha256": "42b643f1c6c8a174d7198a423292d0b07f355550980bfe0195336d5c75e445ab"
+        },
+        "3": {
+          "path": "exams/transcripts/2027-period4/korean_geography/page-03.md",
+          "sha256": "972fdd68c7364dc65eeb3fabe2c097ea5ffb23905fcd5454e2493b33066004dc"
+        },
+        "4": {
+          "path": "exams/transcripts/2027-period4/korean_geography/page-04.md",
+          "sha256": "0b523a576f06519ec5df9eee685fd0bab37da8f6f64a2dc72382f6c6ac86edac"
+        }
+      }
+    },
+    "exams/pdf/2027/period4/사회탐구_세계지리_문제지.pdf": {
+      "sha256": "623b1fed75f2469872266fd81f611c231b9d81a6214ae04727879287ae8f7a10",
+      "pages": {
+        "1": {
+          "path": "exams/transcripts/2027-period4/world_geography/page-01.md",
+          "sha256": "97b7e75c5d96dc50bf6a3287134516226a470736f695ef2ee61ac244c3dc3fa3"
+        },
+        "2": {
+          "path": "exams/transcripts/2027-period4/world_geography/page-02.md",
+          "sha256": "fdb2e69aad7560c635b0966c1f98a9ac3215cf470949c2cdb53bb6d48e4ff223"
+        },
+        "3": {
+          "path": "exams/transcripts/2027-period4/world_geography/page-03.md",
+          "sha256": "6026766f08a0fb95092a7fa0a64492304b7e2f6fdf355903ef5257daee928fc6"
+        },
+        "4": {
+          "path": "exams/transcripts/2027-period4/world_geography/page-04.md",
+          "sha256": "1543be44276b0b3c5277ab383a6e13a287a1428b5c48816a472e86cfbf780c3f"
+        }
+      }
+    },
+    "exams/pdf/2027/period4/사회탐구_동아시아사_문제지.pdf": {
+      "sha256": "a7707400aeefb9b177d588c39263cff696155eab4dd7746072273cca622146a6",
+      "pages": {
+        "1": {
+          "path": "exams/transcripts/2027-period4/east_asian_history/page-01.md",
+          "sha256": "e6da1def1b1c9ac325451847336bc57da877a9df5bbe94af489700731950f994"
+        },
+        "2": {
+          "path": "exams/transcripts/2027-period4/east_asian_history/page-02.md",
+          "sha256": "6107839aa04572c0e561108945d599fc56e55f2ebe808cd0d689590f3be22866"
+        },
+        "3": {
+          "path": "exams/transcripts/2027-period4/east_asian_history/page-03.md",
+          "sha256": "606e6faf3d98daa64bc4a60b4c76965e33e385aafd06c8a580cd0e4a04d1290c"
+        },
+        "4": {
+          "path": "exams/transcripts/2027-period4/east_asian_history/page-04.md",
+          "sha256": "8ad7d1eef22a5c4afbacba3f9e756b48a867297a40c0f41bfac93714774b5b0f"
+        }
+      }
+    },
+    "exams/pdf/2027/period4/사회탐구_세계사_문제지.pdf": {
+      "sha256": "8f9f7fef69732c9434e8f9d4c6d036110e0fc0175b540f94d5929220f8ddbb19",
+      "pages": {
+        "1": {
+          "path": "exams/transcripts/2027-period4/world_history/page-01.md",
+          "sha256": "8346042d16a065080cd195b706e92c690bf773ee4c116839f472850ec883b84e"
+        },
+        "2": {
+          "path": "exams/transcripts/2027-period4/world_history/page-02.md",
+          "sha256": "9f439140789edfaf04f267394200b304e8db112441141ef69a9bbe8e4f30fa30"
+        },
+        "3": {
+          "path": "exams/transcripts/2027-period4/world_history/page-03.md",
+          "sha256": "23f1b38c4a1768c81cb79b7a3ac7d03a03b7bdc1121b9d12e3a62362f02152c0"
+        },
+        "4": {
+          "path": "exams/transcripts/2027-period4/world_history/page-04.md",
+          "sha256": "e3ce0042fcb09a2c849bd1427ae8b7728258382d8f60c6c064114c89039e0158"
+        }
+      }
+    },
+    "exams/pdf/2027/period4/사회탐구_경제_문제지.pdf": {
+      "sha256": "fa28b14ffbeb309ff4269c68fd57afbb0606f98fa0b57044ce8603f3b30af4e2",
+      "pages": {
+        "1": {
+          "path": "exams/transcripts/2027-period4/economics/page-01.md",
+          "sha256": "e2e7641977d0a93add0ad0f3c69771eb381968fc45e1713ee9f88d0f02c90d4e"
+        },
+        "2": {
+          "path": "exams/transcripts/2027-period4/economics/page-02.md",
+          "sha256": "bbcd0703067f73ffc7f6e64345fe2c545975f9172bd7446204f603efd449dd22"
+        },
+        "3": {
+          "path": "exams/transcripts/2027-period4/economics/page-03.md",
+          "sha256": "fe36b245867896c19233d78d6013d59980dc0b92cff11ca8ac624549d7ec2012"
+        },
+        "4": {
+          "path": "exams/transcripts/2027-period4/economics/page-04.md",
+          "sha256": "5451342b32b9da302d3f25ed2e5c36b1bce3aeda8cd5a41973d06d1db6c3c90f"
+        }
+      }
+    },
+    "exams/pdf/2027/period4/사회탐구_정치와법_문제지.pdf": {
+      "sha256": "56814f06a14f618df3e44faba1113f427b5673a6b9e7a8be0e11ee71775c810d",
+      "pages": {
+        "1": {
+          "path": "exams/transcripts/2027-period4/politics_law/page-01.md",
+          "sha256": "cf83d72373ed92cf55e0dac557db6aa6583a732021db0f937262a7b18126782e"
+        },
+        "2": {
+          "path": "exams/transcripts/2027-period4/politics_law/page-02.md",
+          "sha256": "11954611f59851b9ac0345919e4ab4f6153f6667d2ac18a065f8e88326546491"
+        },
+        "3": {
+          "path": "exams/transcripts/2027-period4/politics_law/page-03.md",
+          "sha256": "bafc20d37249910858bb39b1ea4f548bca1aa3e1f2269296a66ae4704b832759"
+        },
+        "4": {
+          "path": "exams/transcripts/2027-period4/politics_law/page-04.md",
+          "sha256": "49d55f5e7a1c97340fc7107649cadb0468e523ca83b8eafd59d2cf7c1360bcbe"
+        }
+      }
+    },
+    "exams/pdf/2027/period4/사회탐구_사회문화_문제지.pdf": {
+      "sha256": "af8e6af1873eb6bb3cd96658a5c694253aa6283bb88c0ec3cd0d7bc463621b36",
+      "pages": {
+        "1": {
+          "path": "exams/transcripts/2027-period4/society_culture/page-01.md",
+          "sha256": "09cb8028adfb551bc89c8c3d47196b88c77281fedcf678d5ec98324aa6ad1976"
+        },
+        "2": {
+          "path": "exams/transcripts/2027-period4/society_culture/page-02.md",
+          "sha256": "56374211abb300adff0dc6b91fc5cd861a8d67eb9f89afc9f4be349be37ff08b"
+        },
+        "3": {
+          "path": "exams/transcripts/2027-period4/society_culture/page-03.md",
+          "sha256": "fd1a108ae5b9a34693b5d7e14fcb4d238a2479935bef1b29f83f2d4b10976803"
+        },
+        "4": {
+          "path": "exams/transcripts/2027-period4/society_culture/page-04.md",
+          "sha256": "09858272b19f1a2de954857d48db4323db99063097c1c8fc652bc9729215f6f7"
+        }
+      }
+    },
+    "exams/pdf/2027/period4/과학탐구_물리학Ⅰ_문제지.pdf": {
+      "sha256": "5f42a2d432cf8e101d78a3f27d817fc29683830f3894d94ff9eb910272cedd0f",
+      "pages": {
+        "1": {
+          "path": "exams/transcripts/2027-period4/physics1/page-01.md",
+          "sha256": "3bfb747fd08bc0d0a6cbb093180d3913a6286bcf066c9d5f0d44430cb66389d4"
+        },
+        "2": {
+          "path": "exams/transcripts/2027-period4/physics1/page-02.md",
+          "sha256": "c03f92902622636cbe540f72950c7370a143ea947ef313f2725eb81f046d5239"
+        },
+        "3": {
+          "path": "exams/transcripts/2027-period4/physics1/page-03.md",
+          "sha256": "5d637f7a93083efa112febd4a426d99855ef3b7a17caf9ac3c0cd5ad630a840b"
+        },
+        "4": {
+          "path": "exams/transcripts/2027-period4/physics1/page-04.md",
+          "sha256": "d1b5c73495c89789e2c71d4aae2d87ea971aeccf46389922288dd6e52e2398e9"
+        }
+      }
+    },
+    "exams/pdf/2027/period4/과학탐구_화학Ⅰ_문제지.pdf": {
+      "sha256": "7667a6ba4025844198565e2952732d92f807ccc551f78cf617cd1f29cac2c32d",
+      "pages": {
+        "1": {
+          "path": "exams/transcripts/2027-period4/chemistry1/page-01.md",
+          "sha256": "1e95b338a0e9917ca394ff463adde1bae5465300fd4e8e89eb7f7dee4109ee24"
+        },
+        "2": {
+          "path": "exams/transcripts/2027-period4/chemistry1/page-02.md",
+          "sha256": "c7a6b2b36a5454db8e5a3732328de57b8ba0eff9be55199cae1d6bfd6ae435d3"
+        },
+        "3": {
+          "path": "exams/transcripts/2027-period4/chemistry1/page-03.md",
+          "sha256": "7b3ea1c07862e9f8a2e8787989696211da31d0856caffacda7f9e20380b8c2f2"
+        },
+        "4": {
+          "path": "exams/transcripts/2027-period4/chemistry1/page-04.md",
+          "sha256": "f7c6442c7be4379ec029cbd5101a73f9520d17bcb20dac2397a762334de526f6"
+        }
+      }
+    },
+    "exams/pdf/2027/period4/과학탐구_생명과학Ⅰ_문제지.pdf": {
+      "sha256": "f57fe7a67564af11898d1989c4aae5fc7cda408c3f4f4980dbcf1f27bc4d51b6",
+      "pages": {
+        "1": {
+          "path": "exams/transcripts/2027-period4/life_science1/page-01.md",
+          "sha256": "f7e85ee7475ca8a350c160569e535a2112ab5b05af25969c131e8a6fc3ece39c"
+        },
+        "2": {
+          "path": "exams/transcripts/2027-period4/life_science1/page-02.md",
+          "sha256": "2ef84c8c0c807c45911907be5bae466352af320d02c127dbbf30e90b41e21864"
+        },
+        "3": {
+          "path": "exams/transcripts/2027-period4/life_science1/page-03.md",
+          "sha256": "5aaf3065cdad0a8f05dcb11f3c75a2a1841db59cb823a4852f3f90c324d9b3f5"
+        },
+        "4": {
+          "path": "exams/transcripts/2027-period4/life_science1/page-04.md",
+          "sha256": "c7da42285f39d610c447df6a11913d4da37420705504f5ba41b54800758f5258"
+        }
+      }
+    },
+    "exams/pdf/2027/period4/과학탐구_지구과학Ⅰ_문제지.pdf": {
+      "sha256": "6d96ca46e1f98cbe6210c512431a89a23143ad887facc23d07201ecd43b1a977",
+      "pages": {
+        "1": {
+          "path": "exams/transcripts/2027-period4/earth_science1/page-01.md",
+          "sha256": "1d19d54c45ff65c573041b54f5489205bf4f54ae2be54cadc55dc43cd22e9956"
+        },
+        "2": {
+          "path": "exams/transcripts/2027-period4/earth_science1/page-02.md",
+          "sha256": "8c2cd7c0a2e3f57d7e6d73dee71eb586728aa4b19323ccdfc67f333b734f9367"
+        },
+        "3": {
+          "path": "exams/transcripts/2027-period4/earth_science1/page-03.md",
+          "sha256": "9fc383589f9ba6be5f98b7e609de50787feba5de50910c4e508dc3e83adca062"
+        },
+        "4": {
+          "path": "exams/transcripts/2027-period4/earth_science1/page-04.md",
+          "sha256": "447b53e070c1677ddff1c7071540c19519ce5e502469ee0b8c780d80ed814da2"
+        }
+      }
+    },
+    "exams/pdf/2027/period4/과학탐구_물리학Ⅱ_문제지.pdf": {
+      "sha256": "52057a30fae2b2d37b5c52000a5ee427487b5eadf52414de7c935289091502e4",
+      "pages": {
+        "1": {
+          "path": "exams/transcripts/2027-period4/physics2/page-01.md",
+          "sha256": "83eeebfd6d8b83f408f3dd954475ca28bfbb1379386b56d68050ba1d1a6997d4"
+        },
+        "2": {
+          "path": "exams/transcripts/2027-period4/physics2/page-02.md",
+          "sha256": "bc231423637f57163992554fd3ff875d7519f8a7bec55894f3e55e00ef17ff8d"
+        },
+        "3": {
+          "path": "exams/transcripts/2027-period4/physics2/page-03.md",
+          "sha256": "6662283d1f132149ffde10ef3704a6a8543a1e0015da5e5c4372bd64f5ebda77"
+        },
+        "4": {
+          "path": "exams/transcripts/2027-period4/physics2/page-04.md",
+          "sha256": "ea7b1d2c32f618951828e1e48b9c1f8c6e4e93cb7363d435dc28c99581e1e357"
+        }
+      }
+    },
+    "exams/pdf/2027/period4/과학탐구_화학Ⅱ_문제지.pdf": {
+      "sha256": "44bb8ef49c21b628731ce2619db61938d1d310cec86ce9e1ffa0079fdf3246b6",
+      "pages": {
+        "1": {
+          "path": "exams/transcripts/2027-period4/chemistry2/page-01.md",
+          "sha256": "f315a1dd894da03e3e642fe4a51f5624f81629d2101f77cb9360240bce680c06"
+        },
+        "2": {
+          "path": "exams/transcripts/2027-period4/chemistry2/page-02.md",
+          "sha256": "1d45f6c927af99d1cb98712d2aed1c17d25e0e93b8c0d33f1be23816432f1d61"
+        },
+        "3": {
+          "path": "exams/transcripts/2027-period4/chemistry2/page-03.md",
+          "sha256": "ef94d5def50b76927ed6d92a176edfe758d26aad51bf7d31f6dfeb1e900e5dc7"
+        },
+        "4": {
+          "path": "exams/transcripts/2027-period4/chemistry2/page-04.md",
+          "sha256": "01725e2823497b46c53a1c03f5eebd10ef9572e15a7f93490eadf9a0c395507f"
+        }
+      }
+    },
+    "exams/pdf/2027/period4/과학탐구_생명과학Ⅱ_문제지.pdf": {
+      "sha256": "b5a8be5c2f96f6f8a915389304805d60b9a2d10af40576a0cf0b2acd85ded899",
+      "pages": {
+        "1": {
+          "path": "exams/transcripts/2027-period4/life_science2/page-01.md",
+          "sha256": "5d8156326343057086e8238102377a5b1c0f9be969d80d2010eb559a01cdf39a"
+        },
+        "2": {
+          "path": "exams/transcripts/2027-period4/life_science2/page-02.md",
+          "sha256": "59651d593259e5d56cc9e1dc0e41fe90d0aeac72f0a171ca1c059f276b81f894"
+        },
+        "3": {
+          "path": "exams/transcripts/2027-period4/life_science2/page-03.md",
+          "sha256": "3073dc109a1bc355f244276d9c873cc91af4f81e80a4314df1b53a3206631d0c"
+        },
+        "4": {
+          "path": "exams/transcripts/2027-period4/life_science2/page-04.md",
+          "sha256": "c47423d79d3f82fdb74237cae09c115e7e63a8cf79e80e0a0c17a8318250dd69"
+        }
+      }
+    },
+    "exams/pdf/2027/period4/과학탐구_지구과학Ⅱ_문제지.pdf": {
+      "sha256": "cf51bb90d9922be24954bacc1670a45d87f777eea46c6e3e0c7746178500ba28",
+      "pages": {
+        "1": {
+          "path": "exams/transcripts/2027-period4/earth_science2/page-01.md",
+          "sha256": "61b6aa55d1f2d8a7fb9c06a5a8996eb6fdc6e202c0048c2974f9eb4b9b1ae414"
+        },
+        "2": {
+          "path": "exams/transcripts/2027-period4/earth_science2/page-02.md",
+          "sha256": "a98f4970a78217201998fb493ba5ea960ff3b1c2298534548567060f98a4bc4c"
+        },
+        "3": {
+          "path": "exams/transcripts/2027-period4/earth_science2/page-03.md",
+          "sha256": "86b09f689b3a6ea5668d893c565c74ce89e57924f8b6187fc982bb2426c9a0a9"
+        },
+        "4": {
+          "path": "exams/transcripts/2027-period4/earth_science2/page-04.md",
+          "sha256": "ca10fcceb6598b4cf178bccced017eea9259b35766d523db90705420b11f36cc"
+        }
+      }
+    }
+  },
+  "figure_dependent": [
+    "2027-p4-chemistry1-q01",
+    "2027-p4-chemistry1-q02",
+    "2027-p4-chemistry1-q03",
+    "2027-p4-chemistry1-q06",
+    "2027-p4-chemistry1-q13",
+    "2027-p4-chemistry1-q16",
+    "2027-p4-chemistry1-q17",
+    "2027-p4-chemistry2-q02",
+    "2027-p4-chemistry2-q03",
+    "2027-p4-chemistry2-q04",
+    "2027-p4-chemistry2-q10",
+    "2027-p4-chemistry2-q11",
+    "2027-p4-chemistry2-q15",
+    "2027-p4-chemistry2-q17",
+    "2027-p4-chemistry2-q18",
+    "2027-p4-chemistry2-q19",
+    "2027-p4-chemistry2-q20",
+    "2027-p4-earth_science1-q01",
+    "2027-p4-earth_science1-q02",
+    "2027-p4-earth_science1-q03",
+    "2027-p4-earth_science1-q04",
+    "2027-p4-earth_science1-q05",
+    "2027-p4-earth_science1-q06",
+    "2027-p4-earth_science1-q07",
+    "2027-p4-earth_science1-q09",
+    "2027-p4-earth_science1-q10",
+    "2027-p4-earth_science1-q12",
+    "2027-p4-earth_science1-q13",
+    "2027-p4-earth_science1-q15",
+    "2027-p4-earth_science1-q16",
+    "2027-p4-earth_science1-q17",
+    "2027-p4-earth_science1-q18",
+    "2027-p4-earth_science2-q01",
+    "2027-p4-earth_science2-q03",
+    "2027-p4-earth_science2-q04",
+    "2027-p4-earth_science2-q05",
+    "2027-p4-earth_science2-q06",
+    "2027-p4-earth_science2-q07",
+    "2027-p4-earth_science2-q08",
+    "2027-p4-earth_science2-q09",
+    "2027-p4-earth_science2-q10",
+    "2027-p4-earth_science2-q11",
+    "2027-p4-earth_science2-q12",
+    "2027-p4-earth_science2-q13",
+    "2027-p4-earth_science2-q14",
+    "2027-p4-earth_science2-q15",
+    "2027-p4-earth_science2-q16",
+    "2027-p4-earth_science2-q17",
+    "2027-p4-earth_science2-q19",
+    "2027-p4-earth_science2-q20",
+    "2027-p4-east_asian_history-q01",
+    "2027-p4-east_asian_history-q07",
+    "2027-p4-east_asian_history-q09",
+    "2027-p4-east_asian_history-q11",
+    "2027-p4-east_asian_history-q14",
+    "2027-p4-east_asian_history-q20",
+    "2027-p4-economics-q02",
+    "2027-p4-economics-q04",
+    "2027-p4-economics-q08",
+    "2027-p4-economics-q09",
+    "2027-p4-economics-q10",
+    "2027-p4-economics-q11",
+    "2027-p4-economics-q17",
+    "2027-p4-ethics_life-q03",
+    "2027-p4-ethics_life-q07",
+    "2027-p4-ethics_life-q11",
+    "2027-p4-ethics_life-q13",
+    "2027-p4-ethics_thought-q01",
+    "2027-p4-ethics_thought-q07",
+    "2027-p4-ethics_thought-q11",
+    "2027-p4-ethics_thought-q12",
+    "2027-p4-ethics_thought-q19",
+    "2027-p4-korean_geography-q01",
+    "2027-p4-korean_geography-q02",
+    "2027-p4-korean_geography-q03",
+    "2027-p4-korean_geography-q04",
+    "2027-p4-korean_geography-q05",
+    "2027-p4-korean_geography-q07",
+    "2027-p4-korean_geography-q08",
+    "2027-p4-korean_geography-q09",
+    "2027-p4-korean_geography-q10",
+    "2027-p4-korean_geography-q11",
+    "2027-p4-korean_geography-q12",
+    "2027-p4-korean_geography-q13",
+    "2027-p4-korean_geography-q14",
+    "2027-p4-korean_geography-q15",
+    "2027-p4-korean_geography-q16",
+    "2027-p4-korean_geography-q17",
+    "2027-p4-korean_geography-q18",
+    "2027-p4-korean_geography-q19",
+    "2027-p4-korean_history-q01",
+    "2027-p4-korean_history-q02",
+    "2027-p4-korean_history-q04",
+    "2027-p4-korean_history-q06",
+    "2027-p4-korean_history-q09",
+    "2027-p4-korean_history-q10",
+    "2027-p4-korean_history-q11",
+    "2027-p4-korean_history-q17",
+    "2027-p4-korean_history-q18",
+    "2027-p4-korean_history-q19",
+    "2027-p4-life_science1-q01",
+    "2027-p4-life_science1-q03",
+    "2027-p4-life_science1-q05",
+    "2027-p4-life_science1-q06",
+    "2027-p4-life_science1-q07",
+    "2027-p4-life_science1-q09",
+    "2027-p4-life_science1-q10",
+    "2027-p4-life_science1-q11",
+    "2027-p4-life_science1-q13",
+    "2027-p4-life_science1-q15",
+    "2027-p4-life_science1-q18",
+    "2027-p4-life_science1-q19",
+    "2027-p4-life_science2-q05",
+    "2027-p4-life_science2-q06",
+    "2027-p4-life_science2-q10",
+    "2027-p4-life_science2-q11",
+    "2027-p4-life_science2-q12",
+    "2027-p4-life_science2-q15",
+    "2027-p4-life_science2-q17",
+    "2027-p4-life_science2-q18",
+    "2027-p4-life_science2-q20",
+    "2027-p4-physics1-q01",
+    "2027-p4-physics1-q02",
+    "2027-p4-physics1-q04",
+    "2027-p4-physics1-q05",
+    "2027-p4-physics1-q06",
+    "2027-p4-physics1-q07",
+    "2027-p4-physics1-q08",
+    "2027-p4-physics1-q09",
+    "2027-p4-physics1-q10",
+    "2027-p4-physics1-q11",
+    "2027-p4-physics1-q12",
+    "2027-p4-physics1-q13",
+    "2027-p4-physics1-q14",
+    "2027-p4-physics1-q15",
+    "2027-p4-physics1-q16",
+    "2027-p4-physics1-q17",
+    "2027-p4-physics1-q18",
+    "2027-p4-physics1-q19",
+    "2027-p4-physics1-q20",
+    "2027-p4-physics2-q02",
+    "2027-p4-physics2-q03",
+    "2027-p4-physics2-q04",
+    "2027-p4-physics2-q05",
+    "2027-p4-physics2-q06",
+    "2027-p4-physics2-q07",
+    "2027-p4-physics2-q08",
+    "2027-p4-physics2-q09",
+    "2027-p4-physics2-q10",
+    "2027-p4-physics2-q11",
+    "2027-p4-physics2-q12",
+    "2027-p4-physics2-q13",
+    "2027-p4-physics2-q14",
+    "2027-p4-physics2-q15",
+    "2027-p4-physics2-q16",
+    "2027-p4-physics2-q17",
+    "2027-p4-physics2-q18",
+    "2027-p4-physics2-q19",
+    "2027-p4-physics2-q20",
+    "2027-p4-politics_law-q01",
+    "2027-p4-society_culture-q06",
+    "2027-p4-society_culture-q10",
+    "2027-p4-society_culture-q11",
+    "2027-p4-society_culture-q14",
+    "2027-p4-world_geography-q01",
+    "2027-p4-world_geography-q02",
+    "2027-p4-world_geography-q03",
+    "2027-p4-world_geography-q04",
+    "2027-p4-world_geography-q06",
+    "2027-p4-world_geography-q08",
+    "2027-p4-world_geography-q11",
+    "2027-p4-world_geography-q12",
+    "2027-p4-world_geography-q13",
+    "2027-p4-world_geography-q14",
+    "2027-p4-world_geography-q15",
+    "2027-p4-world_geography-q16",
+    "2027-p4-world_geography-q17",
+    "2027-p4-world_geography-q19",
+    "2027-p4-world_geography-q20",
+    "2027-p4-world_history-q01",
+    "2027-p4-world_history-q02",
+    "2027-p4-world_history-q05",
+    "2027-p4-world_history-q07",
+    "2027-p4-world_history-q11",
+    "2027-p4-world_history-q12",
+    "2027-p4-world_history-q14",
+    "2027-p4-world_history-q17",
+    "2027-p4-world_history-q19",
+    "2027-p4-world_history-q20"
+  ]
+}
