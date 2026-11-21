@@ -115,9 +115,12 @@ export async function* piEvents({model,prompt,images=[],schema,signal,apiKey,piE
  try {
   await mkdir(agentDir,{mode:0o700});await mkdir(cwd,{mode:0o700});
   const env=piEnvironment(apiKey,agentDir);
-  let version;
-  try {({stdout:version}=await promisify(execFile)(piExecutable,['--version'],{env:piEnvironment('',agentDir),cwd,timeout:10000,signal,maxBuffer:1024}));}
-  catch {throw new Error(signal?.aborted?'PI_ABORTED: request cancelled':'PI_BLOCKED: Pi version preflight failed');}
+  // The version preflight occasionally returns empty or partial output when many Pi processes start at once; try it up to 3 times.
+  let version='';
+  for (let attempt=0;attempt<3&&version.trim()!==PI_VERSION;attempt++) {
+   try {({stdout:version}=await promisify(execFile)(piExecutable,['--version'],{env:piEnvironment('',agentDir),cwd,timeout:20000,signal,maxBuffer:1024}));}
+   catch {if(signal?.aborted)throw new Error('PI_ABORTED: request cancelled');version='';}
+  }
   if (version.trim()!==PI_VERSION) throw new Error('PI_BLOCKED: benchmark requires Pi 0.87.1');
   const settings={compaction:{enabled:false},retry:{enabled:false,maxRetries:0,provider:{maxRetries:0,timeoutMs}},cacheWarming:'off',images:{autoResize:false},enableInstallTelemetry:false,httpIdleTimeoutMs:PI_HTTP_IDLE_TIMEOUT_MS};
   const promptPath=join(cwd,'prompt.txt');
