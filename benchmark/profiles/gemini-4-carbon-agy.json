@@ -15,6 +15,7 @@
     "currency": "USD"
   },
   "google": {
-    "model_id": "gemini-4-carbon-high"
+    "model_id": "gemini-4-carbon-high",
+    "group_timeout_seconds": 3600
   }
 }

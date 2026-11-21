@@ -35,7 +35,7 @@ export function validateProfile(model) {
    if(Object.values(p.thinking_level_map).some(v=>v!==null&&!levels.includes(v)&&!(Number.isSafeInteger(v)&&v>=0)))throw new Error('MODEL_PROFILE_INVALID: thinking mappings must be levels or numeric budgets');
   }
  }else if(model.pi)throw new Error('MODEL_PROFILE_INVALID: SDK or Google models cannot be routed through Pi');
- if(model.google)fields(model.google,['model_id']);
+ if(model.google){fields(model.google,['model_id','group_timeout_seconds']);if(model.google.group_timeout_seconds!==undefined&&!(Number.isSafeInteger(model.google.group_timeout_seconds)&&model.google.group_timeout_seconds>=60&&model.google.group_timeout_seconds<=3600))throw new Error('MODEL_PROFILE_INVALID: group timeout must be 60-3600 seconds');}
  return model;
 }
 export function loadProfiles(directory) {
