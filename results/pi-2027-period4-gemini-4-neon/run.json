@@ -11838,6 +11838,101 @@
         }
       ],
       "original_group_id": "2027-p4-physics2"
+    },
+    "2027-p4-physics2--retry18-q14": {
+      "attempts": [
+        {
+          "iteration": 1,
+          "started_at": "2026-11-21T13:00:19.544Z",
+          "question_ids": [
+            "2027-p4-physics2-q14"
+          ],
+          "http_idle_timeout_ms": 900000,
+          "user_retry": 18,
+          "image_encoding": "lossless WebP, original 200 DPI pixels",
+          "image_hashes": [
+            "f2ced7bee1424f37530002ea19a495c67b18af09df32cd5ff2e9a32a5b5975f7",
+            "5ef8e6bdc94d699f62e6983efb123dde2c8e6049ce86db442bc2922191e09e96",
+            "33b60796b4752363f7c87c996b1386a24b69d4c956fe34326210e94e7d537d4e",
+            "0bb0eeafae6bf394ffb902a549bda2ff112d94dedb8ac15ca672e717c55b02a8"
+          ],
+          "usage": {
+            "input_tokens": 5371,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 3,
+            "reasoning_output_tokens": 0
+          },
+          "time_seconds": 581.592,
+          "thread_id": "01a1fe31-826b-77b7-af38-936fc9be51dc",
+          "status": "error",
+          "estimated_cost_usd": 0.016158,
+          "error": "PI_TURN_FAILED: response reached output token limit",
+          "model_time_seconds": 581.108,
+          "finished_at": "2026-11-21T13:10:01.136Z"
+        },
+        {
+          "iteration": 2,
+          "started_at": "2026-11-21T13:10:01.173Z",
+          "question_ids": [
+            "2027-p4-physics2-q14"
+          ],
+          "http_idle_timeout_ms": 900000,
+          "user_retry": 18,
+          "image_encoding": "lossless WebP, original 200 DPI pixels",
+          "image_hashes": [
+            "f2ced7bee1424f37530002ea19a495c67b18af09df32cd5ff2e9a32a5b5975f7",
+            "5ef8e6bdc94d699f62e6983efb123dde2c8e6049ce86db442bc2922191e09e96",
+            "33b60796b4752363f7c87c996b1386a24b69d4c956fe34326210e94e7d537d4e",
+            "0bb0eeafae6bf394ffb902a549bda2ff112d94dedb8ac15ca672e717c55b02a8"
+          ],
+          "usage": {
+            "input_tokens": 5371,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 3,
+            "reasoning_output_tokens": 0
+          },
+          "time_seconds": 612.889,
+          "thread_id": "01a1fe3a-62fe-71ba-88f3-ba8f0b73bcef",
+          "status": "error",
+          "estimated_cost_usd": 0.016158,
+          "error": "PI_TURN_FAILED: response reached output token limit",
+          "model_time_seconds": 612.253,
+          "finished_at": "2026-11-21T13:20:14.062Z"
+        },
+        {
+          "iteration": 3,
+          "started_at": "2026-11-21T13:20:14.089Z",
+          "question_ids": [
+            "2027-p4-physics2-q14"
+          ],
+          "http_idle_timeout_ms": 900000,
+          "user_retry": 18,
+          "image_encoding": "lossless WebP, original 200 DPI pixels",
+          "image_hashes": [
+            "f2ced7bee1424f37530002ea19a495c67b18af09df32cd5ff2e9a32a5b5975f7",
+            "5ef8e6bdc94d699f62e6983efb123dde2c8e6049ce86db442bc2922191e09e96",
+            "33b60796b4752363f7c87c996b1386a24b69d4c956fe34326210e94e7d537d4e",
+            "0bb0eeafae6bf394ffb902a549bda2ff112d94dedb8ac15ca672e717c55b02a8"
+          ],
+          "usage": {
+            "input_tokens": 5369,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 3,
+            "reasoning_output_tokens": 0
+          },
+          "time_seconds": 573.251,
+          "thread_id": "01a1fe43-bc90-7572-a08a-d1ffaa1b42bc",
+          "status": "error",
+          "estimated_cost_usd": 0.016152,
+          "error": "PI_TURN_FAILED: response reached output token limit",
+          "model_time_seconds": 572.776,
+          "finished_at": "2026-11-21T13:29:47.340Z"
+        }
+      ],
+      "original_group_id": "2027-p4-physics2"
     }
   },
   "iterations": [
@@ -12441,16 +12536,37 @@
       "pending_groups": [
         "2027-p4-physics2--retry17-q14"
       ]
+    },
+    {
+      "iteration": 1,
+      "started_at": "2026-11-21T13:00:19.526Z",
+      "pending_groups": [
+        "2027-p4-physics2--retry18-q14"
+      ]
+    },
+    {
+      "iteration": 2,
+      "started_at": "2026-11-21T13:10:01.147Z",
+      "pending_groups": [
+        "2027-p4-physics2--retry18-q14"
+      ]
+    },
+    {
+      "iteration": 3,
+      "started_at": "2026-11-21T13:20:14.072Z",
+      "pending_groups": [
+        "2027-p4-physics2--retry18-q14"
+      ]
     }
   ],
   "usage": {
-    "input_tokens": 604483,
+    "input_tokens": 620594,
     "cached_input_tokens": 0,
     "cache_write_input_tokens": 0,
-    "output_tokens": 61708,
+    "output_tokens": 61717,
     "reasoning_output_tokens": 0
   },
-  "wall_time_seconds": 23871.799,
+  "wall_time_seconds": 25639.622,
   "prompt_hash": "737b5f5c60caa8f1600026837e29a887fec6b6e317a11ebc80c90af2fb63e8a2",
   "source_hashes": {
     "exams/pdf/2027/period4/과학탐구_물리학Ⅰ_문제지.pdf": "5f42a2d432cf8e101d78a3f27d817fc29683830f3894d94ff9eb910272cedd0f",
@@ -12472,7 +12588,7 @@
     "exams/pdf/2027/period4/사회탐구_한국지리_문제지.pdf": "e25c10f2c27695d99d8319473cf7d71c75792448af4b17659185a856b0fd5bf7",
     "exams/pdf/2027/period4/한국사영역_문제지.pdf": "d1f8e1fea1ae2fd2d52caf531fd4a0ac55b4220a386c4f405edd52298664ede8"
   },
-  "updated_at": "2026-11-21T11:16:27.942Z",
+  "updated_at": "2026-11-21T13:29:47.349Z",
   "billing": {
     "method": "pi_api",
     "api_key_used": true,
@@ -12483,7 +12599,7 @@
     "reference_cost_is_invoice": false
   },
   "completed": false,
-  "finished_at": "2026-11-21T11:16:27.942Z",
+  "finished_at": "2026-11-21T13:29:47.349Z",
   "user_retries": [
     {
       "index": 1,
@@ -12637,11 +12753,24 @@
       "answers_before": 340,
       "finalization_before": null,
       "batch_max_questions": 1
+    },
+    {
+      "index": 18,
+      "group": "2027-p4-physics2",
+      "authorized_at": "2026-11-21T13:00:19.516Z",
+      "note": "2026-11-21 사용자 지시: 출력 상한에 걸린 물리학Ⅱ 14번을 같은 조건으로 3회 더 재시도",
+      "answers_before": 359,
+      "finalization_before": {
+        "state": "finished_with_errors",
+        "reason": "실행 종료: 359/360문항 제출. 물리학Ⅱ 14번은 1문항씩 재시도에서도 매번 출력 상한(65,536토큰)에 도달해 미제출 상태입니다.",
+        "recorded_at": "2026-11-21T11:31:43.480968+00:00"
+      },
+      "batch_max_questions": 1
     }
   ],
   "finalization": {
     "state": "finished_with_errors",
-    "reason": "실행 종료: 359/360문항 제출. 물리학Ⅱ 14번은 1문항씩 재시도에서도 매번 출력 상한(65,536토큰)에 도달해 미제출 상태입니다.",
-    "recorded_at": "2026-11-21T11:31:43.480968+00:00"
+    "reason": "실행 종료: 359/360문항 제출. 물리학Ⅱ 14번은 1문항씩 재시도에서 실제 풀이 시도 6회가 모두 출력 상한(65,536토큰)에 도달해 미제출 상태입니다.",
+    "recorded_at": "2026-11-21T13:29:57.330070+00:00"
   }
 }

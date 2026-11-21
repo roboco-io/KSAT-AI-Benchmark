@@ -9,10 +9,10 @@
   "model": "gemini-4-neon",
   "window": {
     "start": "2026-11-21T00:00:00.000Z",
-    "end": "2026-11-21T12:00:00.000Z"
+    "end": "2026-11-21T14:00:00.000Z"
   },
   "input_tokens": 173444,
-  "output_tokens_including_thinking": 2241900,
-  "queried_at": "2026-11-21T11:32:02.870Z",
+  "output_tokens_including_thinking": 2372982,
+  "queried_at": "2026-11-21T13:30:02.637Z",
   "note": "Provider-side token counts for this model in whole hours around the run; includes interrupted requests and thinking tokens; not an invoice. Requests to the same model outside this benchmark in the window would also be counted."
 }
