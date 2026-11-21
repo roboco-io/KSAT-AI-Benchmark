@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "source": "google_cloud_monitoring",
+  "project_number": "411978937523",
+  "metrics": {
+    "input": "generativelanguage.googleapis.com/quota/generate_content_paid_tier_input_token_count/usage",
+    "output": "generativelanguage.googleapis.com/generate_content_usage_output_token_count"
+  },
+  "model": "gemini-4-argon",
+  "window": {
+    "start": "2026-10-17T02:00:00.000Z",
+    "end": "2026-10-17T03:00:00.000Z"
+  },
+  "input_tokens": 83964,
+  "output_tokens_including_thinking": 108033,
+  "queried_at": "2026-11-21T02:11:30.483Z",
+  "note": "Provider-side token counts for this model in whole hours around the run; includes interrupted requests and thinking tokens; not an invoice. Requests to the same model outside this benchmark in the window would also be counted."
+}

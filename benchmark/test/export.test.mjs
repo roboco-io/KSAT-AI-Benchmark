@@ -93,3 +93,12 @@ test('solve time uses model stream time when recorded and excludes auth, pacing 
  assert.equal(report.summary.solve_time_basis,'mixed');
  assert.deepEqual(report.questions.map(q=>q.solve_time_seconds),[44.5,20]);
 });
+test('provider usage audit replaces the response-based cost and keeps per-question shares',async()=>{
+ const {applyProviderUsage}=await import('../report.mjs');
+ const report={summary:{estimated_cost_usd:1},questions:[{estimated_cost_usd:0.25},{estimated_cost_usd:0.75}],exams:[{summary:{estimated_cost_usd:1}}],limitations:[]};
+ applyProviderUsage(report,{source:'google_cloud_monitoring',input_tokens:1_000_000,output_tokens_including_thinking:500_000,window:{start:'a',end:'b'},queried_at:'2026-11-21T00:00:00Z'},{input_per_million:2,output_per_million:10});
+ assert.equal(report.summary.estimated_cost_usd,7);assert.equal(report.summary.response_estimated_cost_usd,1);
+ assert.equal(report.summary.cost_basis,'provider_usage_metrics');
+ assert.deepEqual(report.questions.map(q=>q.estimated_cost_usd),[1.75,5.25]);
+ assert.equal(report.limitations.length,1);
+});

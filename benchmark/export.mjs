@@ -1,7 +1,7 @@
 import {readFileSync,writeFileSync,mkdirSync,existsSync} from 'node:fs';
 import {resolve,join} from 'node:path';
 import {modelsForYear,yearPaths} from './academic-years.mjs';
-import {buildReport} from './report.mjs';
+import {buildReport,applyProviderUsage} from './report.mjs';
 import {transcriptManifestPath,loadTranscriptManifest} from './transcript.mjs';
 const root=resolve(import.meta.dirname,'..');
 const dir=join(root,'web/public/data');mkdirSync(dir,{recursive:true});
@@ -27,6 +27,8 @@ for(const [year,session] of [[2027,'period4'],[2027,'main'],[2026,'main'],[2025,
   if(run.academic_year!==year||(run.session??'main')!==session)throw new Error('Result academic year or session mismatch');
   if(run.protocol?.transcript_manifest_hash&&run.protocol.transcript_manifest_hash!==transcript?.hash)throw new Error(`Transcript manifest changed after the run: ${model.id}`);
   const report=buildReport(dataset,run,sources,model.pricing,model.pi?'Pi CLI 0.87.1 / Ralph loop':model.provider==='openai'?'Codex SDK / Ralph loop':'Claude Agent SDK / Ralph loop',figureDependent);
+  const auditPath=join(root,model.directory,'provider-usage.json'); // provider-side usage audit (benchmark/audit-google-usage.mjs)
+  applyProviderUsage(report,existsSync(auditPath)?JSON.parse(readFileSync(auditPath,'utf8')):null,model.pricing);
   reports.push(report);requested.push({id:model.id,label:model.label,provider:model.provider,...inputMode(model),state:run.completed?'complete':run.blocked_reason?'blocked':'partial',reason:run.blocked_reason||run.finalization?.reason||(!run.completed?'아직 모든 문항이 제출되지 않았습니다.':null)});
  }
  const comparison={schema_version:3,generated_at:new Date().toISOString(),academic_year:year,...(session==='main'?{}:{session,knowledge_policy:'closed_book'}),repository_url:'https://github.com/roboco-io/KSAT-AI-Benchmark',models:reports,requested_models:requested,billing_policy:{subscription_only:!models.some(m=>m.pi),api_key_fallback:false,pi_api_models:models.filter(m=>m.pi).map(m=>m.id)}};

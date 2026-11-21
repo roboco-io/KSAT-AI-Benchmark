@@ -3,7 +3,7 @@ export type Summary = {
   score: number; max_score: number;
   total_questions: number; correct: number; incorrect: number; abstained: number;
   errors: number; pending: number; accuracy: number; abstention_rate: number;
-  attempt_accuracy: number | null; wall_time_seconds: number; solver_time_seconds: number; solve_time_seconds?: number; solve_time_basis?: 'model_stream' | 'attempt' | 'mixed' | null;
+  attempt_accuracy: number | null; wall_time_seconds: number; solver_time_seconds: number; solve_time_seconds?: number; solve_time_basis?: 'model_stream' | 'attempt' | 'mixed' | null; cost_basis?: 'provider_usage_metrics'; response_estimated_cost_usd?: number; provider_usage?: { source: string; input_tokens: number; output_tokens_including_thinking: number; window: { start: string; end: string }; queried_at: string };
   usage: Usage; estimated_cost_usd: number;
   adjusted_correct?: number;
 };
