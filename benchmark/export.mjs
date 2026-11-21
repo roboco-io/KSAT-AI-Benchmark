@@ -14,19 +14,19 @@ for(const [year,session] of [[2027,'period4'],[2027,'main'],[2026,'main'],[2025,
  const transcriptPath=join(root,transcriptManifestPath(year,session));
  const transcript=existsSync(transcriptPath)?loadTranscriptManifest(root,year,session):null;
  const figureDependent=transcript?.manifest.figure_dependent??[];
- const inputMode=model=>model.input==='text'?{input_mode:'text_transcript'}:{};
+ const inputMode=model=>({...(model.input==='text'?{input_mode:'text_transcript'}:{}),...(model.agent==='antigravity'?{agent:'antigravity'}:{})});
  const reports=[],requested=[];
  for(const model of models) {
   const path=join(root,model.directory,'run.json'),statusPath=join(root,model.directory,'status.json');
   if(!existsSync(path)) {
    const status=existsSync(statusPath)?JSON.parse(readFileSync(statusPath,'utf8')):null;
-   requested.push({id:model.id,label:model.label,provider:model.provider,...inputMode(model),state:status?.state||(model.provider==='google'&&!model.pi?'blocked':'pending'),reason:status?.reason||(!dataset?'공식 데이터셋 검증 준비 중':model.provider==='google'&&!model.pi?'Antigravity CLI headless 네이티브 이미지 입력 미지원':model.pi?'Pi API 인증·실행 준비 중':model.provider==='anthropic'?'Claude 구독의 추가 유료 사용 OFF 확인 후 실행':'구독 포함 사용량으로 실행 예정')});continue;
+   requested.push({id:model.id,label:model.label,provider:model.provider,...inputMode(model),state:status?.state||'pending',reason:status?.reason||(!dataset?'공식 데이터셋 검증 준비 중':model.agent==='antigravity'?'Google AI Ultra 구독(agy) 실행 준비 중':model.pi?'Pi API 인증·실행 준비 중':model.provider==='anthropic'?'Claude 구독의 추가 유료 사용 OFF 확인 후 실행':'구독 포함 사용량으로 실행 예정')});continue;
   }
   if(!dataset)throw new Error(`Verified dataset is missing for ${year}`);
   const run=JSON.parse(readFileSync(path,'utf8'));
   if(run.academic_year!==year||(run.session??'main')!==session)throw new Error('Result academic year or session mismatch');
   if(run.protocol?.transcript_manifest_hash&&run.protocol.transcript_manifest_hash!==transcript?.hash)throw new Error(`Transcript manifest changed after the run: ${model.id}`);
-  const report=buildReport(dataset,run,sources,model.pricing,model.pi?'Pi CLI 0.87.1 / Ralph loop':model.provider==='openai'?'Codex SDK / Ralph loop':'Claude Agent SDK / Ralph loop',figureDependent);
+  const report=buildReport(dataset,run,sources,model.pricing,model.pi?'Pi CLI 0.87.1 / Ralph loop':model.agent==='antigravity'?'Antigravity CLI (agy ACP) / Ralph loop':model.provider==='openai'?'Codex SDK / Ralph loop':'Claude Agent SDK / Ralph loop',figureDependent);
   const auditPath=join(root,model.directory,'provider-usage.json'); // provider-side usage audit (benchmark/audit-google-usage.mjs)
   applyProviderUsage(report,existsSync(auditPath)?JSON.parse(readFileSync(auditPath,'utf8')):null,model.pricing);
   reports.push(report);requested.push({id:model.id,label:model.label,provider:model.provider,...inputMode(model),state:run.completed?'complete':run.blocked_reason?'blocked':'partial',reason:run.blocked_reason||run.finalization?.reason||(!run.completed?'아직 모든 문항이 제출되지 않았습니다.':null)});

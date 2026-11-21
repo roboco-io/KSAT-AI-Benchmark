@@ -398,5 +398,46 @@
    "https://docs.exaone.ai/ko/docs/k-exaone-2.5",
    "https://lg.co.kr/media/release/30760"
   ]
+ },
+ "gemini-4-hydrogen": {
+  "summary_ko": "일상적 코딩과 에이전트 워크플로에 맞춘 빠르고 저렴한 Gemini 4 모델. 100만 토큰 컨텍스트를 지원한다.",
+  "released": "2026-11-12",
+  "parameters": "비공개",
+  "context_window": 1000000,
+  "max_output_tokens": 64000,
+  "inputs": [
+   "text",
+   "image",
+   "audio",
+   "video",
+   "pdf"
+  ],
+  "open_weights": false,
+  "tier": "경량",
+  "sources": [
+   "https://aistudio.google.com/docs/pricing",
+   "https://aistudio.google.com/docs/models",
+   "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/"
+  ]
+ },
+ "gemini-4-carbon-agy": {
+  "summary_ko": "2026-10-28 공개된 Google 최강 추론 모델로, 사이버 보안과 장기 과제에 특화. 초기엔 일부 방어 인력에 제한 공개.",
+  "released": "2026-10-28",
+  "context_window": 1000000,
+  "max_output_tokens": 64000,
+  "inputs": [
+   "text",
+   "image",
+   "audio",
+   "video",
+   "pdf"
+  ],
+  "tier": "플래그십",
+  "sources": [
+   "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
+   "https://aistudio.google.com/docs/models"
+  ],
+  "parameters": "비공개",
+  "open_weights": null
  }
 }

@@ -1016,3 +1016,4 @@ td.period4-column { background:var(--neon-soft); }
 .model-intro-sources { margin:8px 0 0; font-size:11px; color:var(--muted); }
 .model-intro-sources a { margin-right:6px; }
 .dot.unsolved { background:#c2410c }
+.agy-constraint { color:#b45309; }

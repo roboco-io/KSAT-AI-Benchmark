@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {join} from 'node:path';
-import {yearPaths,modelsForYear,MODELS_2027} from '../academic-years.mjs';
+import {yearPaths,modelsForYear,MODELS_2027_PERIOD4} from '../academic-years.mjs';
 import {buildSolverPrompt,CLOSED_BOOK_NOTE} from '../solver-prompt.mjs';
 const root=join(import.meta.dirname,'../..');
 test('2027 period 4 dataset covers Korean history and 17 social/science inquiry subjects with 50-point keys',()=>{
@@ -21,7 +21,9 @@ test('2027 period 4 dataset covers Korean history and 17 social/science inquiry 
  assert.equal(q['2027-p4-korean_history-q01'].correct_answer,3);assert.equal(q['2027-p4-ethics_life-q06'].correct_answer,2);
 });
 test('period 4 runs keep separate result directories and a closed-book prompt',()=>{
- assert.deepEqual(modelsForYear(2027,'period4').map(m=>m.id),MODELS_2027);
+ assert.deepEqual(modelsForYear(2027,'period4').map(m=>m.id),MODELS_2027_PERIOD4);
+ assert.ok(MODELS_2027_PERIOD4.includes('gemini-4-carbon-agy')&&!MODELS_2027_PERIOD4.includes('gemini-4-carbon'));
+ assert.equal(modelsForYear(2027,'period4').find(m=>m.id==='gemini-4-hydrogen').directory,'results/antigravity-2027-period4-gemini-4-hydrogen');
  assert.equal(modelsForYear(2027,'period4').find(m=>m.id==='glm-5.3-flash').directory,'results/pi-2027-period4-glm-5.3-flash');
  assert.equal(yearPaths(2027,'period4').comparison,'benchmark-comparison-2027-period4.json');
  assert.throws(()=>yearPaths(2026,'period4'),/session not supported/i);

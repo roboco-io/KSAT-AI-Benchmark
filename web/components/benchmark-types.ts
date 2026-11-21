@@ -35,7 +35,7 @@ export type BenchmarkData = {
 export type RequestedModel = {
   id: string; label: string; provider: string;
   state: 'complete' | 'partial' | 'pending' | 'blocked'; reason?: string | null;
-  input_mode?: 'text_transcript';
+  input_mode?: 'text_transcript'; agent?: 'antigravity';
 };
 export type BenchmarkComparison = {
   schema_version: 3; generated_at: string; academic_year: number; repository_url: string;

@@ -11,6 +11,7 @@ import {modelForYear,yearPaths} from './academic-years.mjs';
 import {codexSubscriptionStatus,subscriptionEnvironment,claudeAccountFingerprint,assertFreshClaudeProof} from './subscription.mjs';
 import {claudeEvents} from './claude-adapter.mjs';
 import {piEvents,PI_HTTP_IDLE_TIMEOUT_MS} from './pi-adapter.mjs';
+import {agyEvents,assertAgySubscription,AGY_MIN_VERSION,AGY_IMAGE_MAX_SIDE_PX} from './agy-adapter.mjs';
 import {readPiSecret} from './pi-env.mjs';
 import {splitSolverGroups,applySplitRecovery} from './recovery.mjs';
 import {sourcePath} from './source-path.mjs';
@@ -42,14 +43,16 @@ const once=process.argv.includes('--once');
 const textInput=selected.input==='text';
 const recoveryIndex=process.argv.indexOf('--recover-with-batches');
 const requestedBatchSize=recoveryIndex>=0?Number(process.argv[recoveryIndex+1]):null;
-if((selected.provider==='google'&&!selected.pi)||selected.agent==='antigravity')throw new Error('ANTIGRAVITY_BLOCKED: agy 1.3.2 headless native image input is unsupported; no substitute agent');
-if(!['openai','anthropic'].includes(selected.provider)&&!selected.pi)throw new Error('RUNTIME_BLOCKED: this provider requires a verified Pi profile');
+// Google without Pi runs on the Google AI Ultra subscription through agy ACP (see benchmark/agy-adapter.mjs).
+const agy=selected.agent==='antigravity';
+if(agy&&(selected.provider!=='google'||!selected.google?.model_id||textInput))throw new Error('ANTIGRAVITY_BLOCKED: agy route needs an explicit Gemini model id and image input');
+if(!['openai','anthropic'].includes(selected.provider)&&!selected.pi&&!agy)throw new Error('RUNTIME_BLOCKED: this provider requires a verified Pi profile');
 const runDir=join(root,selected.directory);mkdirSync(runDir,{recursive:true});
 const statePath=join(runDir,'run.json');
 if(existsSync(statePath)&&JSON.parse(readFileSync(statePath,'utf8')).completed){console.log(`ALREADY COMPLETE: ${selected.id}; preserving locked answers`);process.exit(0);}
 const releaseLock=acquireRunLock(join(root,'.runtime/locks',(year===2026&&session==='main'?selected.id:`${runTag}-${selected.id}`)+'.json'),existsSync(statePath)?JSON.parse(readFileSync(statePath,'utf8')):{});
 process.once('exit',releaseLock);
-const protocol={model:selected.id,provider:selected.provider,effort:'high',sdk_version:selected.pi?'Pi CLI 0.87.1':selected.provider==='openai'?'0.162.1':'0.3.296',tools:'disabled',input:textInput?`frozen text transcription of the original PDF, format version ${TRANSCRIPT_FORMAT_VERSION}`:'original PDF rendered at 200 DPI',english_listening:textInput?'official transcript transcribed as text':'official transcript rendered as images',max_iterations:3,group_timeout_seconds:selected.pi?.group_timeout_seconds??(selected.pi||selected.provider==='openai'?900:600),concurrency:2,cost_limit_usd:25,subscription_only:!selected.pi,api_key_fallback:false};
+const protocol={model:selected.id,provider:selected.provider,effort:'high',sdk_version:selected.pi?'Pi CLI 0.87.1':agy?`agy ${AGY_MIN_VERSION}+ (ACP)`:selected.provider==='openai'?'0.162.1':'0.3.296',tools:agy?'agy built-in tools present and cannot be disabled; any tool call invalidates the attempt':'disabled',input:textInput?`frozen text transcription of the original PDF, format version ${TRANSCRIPT_FORMAT_VERSION}`:'original PDF rendered at 200 DPI',english_listening:textInput?'official transcript transcribed as text':'official transcript rendered as images',max_iterations:3,group_timeout_seconds:selected.pi?.group_timeout_seconds??(selected.pi||agy||selected.provider==='openai'?900:600),concurrency:2,cost_limit_usd:25,subscription_only:!selected.pi,api_key_fallback:false,...(agy?{agent:'Antigravity CLI',api_model:selected.google.model_id,image_max_side_px:AGY_IMAGE_MAX_SIDE_PX}:{})};
 if(selected.pi) {
  const authorization=join(root,'.runtime/pi-api-authorization.json');
  if(!existsSync(authorization)||!JSON.parse(readFileSync(authorization,'utf8')).allowed_models?.includes(selected.id))throw new Error('PI_BLOCKED: this model has not been authorized for API billing');
@@ -68,7 +71,7 @@ const sourceManifest=JSON.parse(readFileSync(join(root,paths.manifest),'utf8'));
 for(const p of sourcePaths)if(sourceManifest.files.find(f=>f.path===p)?.sha256!==sourceHashes[p])throw new Error(`Source integrity check failed: ${p}`);
 const transcript=textInput?loadTranscriptManifest(root,year,session):null;
 if(transcript){verifyTranscripts(root,transcript.manifest,dataset.solver_groups,sourceHashes);protocol.transcript_manifest_hash=transcript.hash;}
-let state=existsSync(statePath)?JSON.parse(readFileSync(statePath,'utf8')):{schema_version:2,prompt_version:textInput?3:2,run_id:`${runTag}-pre-exam-${selected.pi?'pi':selected.provider==='openai'?'codex':'claude'}-${selected.id}`,academic_year:year,...(session==='main'?{}:{session}),phase:'pre_exam',started_at:new Date().toISOString(),protocol,dataset_hash:datasetHash,answers:{},errors:{},groups:{},iterations:[],usage:{},wall_time_seconds:0};
+let state=existsSync(statePath)?JSON.parse(readFileSync(statePath,'utf8')):{schema_version:2,prompt_version:textInput?3:2,run_id:`${runTag}-pre-exam-${selected.pi?'pi':agy?'antigravity':selected.provider==='openai'?'codex':'claude'}-${selected.id}`,academic_year:year,...(session==='main'?{}:{session}),phase:'pre_exam',started_at:new Date().toISOString(),protocol,dataset_hash:datasetHash,answers:{},errors:{},groups:{},iterations:[],usage:{},wall_time_seconds:0};
 if(state.dataset_hash!==datasetHash)throw new Error('Resume refused: input changed. Preserve existing run and start a new run directory.');
 const batchSize=requestedBatchSize??state.protocol.batch_max_questions;
 if(batchSize!==undefined&&batchSize!==null) {
@@ -106,6 +109,9 @@ async function solveGroup(group,iteration) {
  if(selected.provider==='openai') {
   try{const proof=await codexSubscriptionStatus();state.billing={method:proof.method,api_key_used:false,purchased_credits_available:false,included_usage_verified:true,verified_at:proof.verified_at};save();}
   catch(error){state.blocked_reason=error.message;save();invocationController.abort(error);throw error;}
+ }else if(agy) {
+  try{const proof=assertAgySubscription();state.billing={method:'google_ai_ultra_subscription_agy',api_key_used:false,ai_credits_fallback:false,agy_version:proof.version,verified_at:new Date().toISOString()};save();}
+  catch(error){state.blocked_reason=error.message;save();invocationController.abort(error);throw error;}
  }else if(selected.pi) {
   state.billing={method:'pi_api',api_key_used:true,subscription_only:false,user_authorized:true,api_model:selected.pi.model_id,api_endpoint:selected.pi.base_url,reference_cost_is_invoice:false};
   readPiSecret(selected.pi.secret_name);save();
@@ -129,7 +135,7 @@ async function solveGroup(group,iteration) {
  try {
   await pace(); // provider per-second request limit; waiting is not counted against the group timeout
   const signal=AbortSignal.any([AbortSignal.timeout(protocol.group_timeout_seconds*1000),invocationController.signal]);
-  const events=thread?(await thread.runStreamed(input,{outputSchema:schema,signal})).events:selected.pi?piEvents({model:selected,prompt:input[0].text,images,schema,signal,timeoutMs:protocol.group_timeout_seconds*1000,apiKey:readPiSecret(selected.pi.secret_name)}):claudeEvents({model:selected.id,prompt:input[0].text,images,schema,signal});
+  const events=thread?(await thread.runStreamed(input,{outputSchema:schema,signal})).events:agy?agyEvents({model:selected,prompt:input[0].text,images,signal,timeoutMs:protocol.group_timeout_seconds*1000}):selected.pi?piEvents({model:selected,prompt:input[0].text,images,schema,signal,timeoutMs:protocol.group_timeout_seconds*1000,apiKey:readPiSecret(selected.pi.secret_name)}):claudeEvents({model:selected.id,prompt:input[0].text,images,schema,signal});
   for await(const event of events) {
    appendFileSync(logPath,JSON.stringify(event)+'\n');
    modelStart??=Date.now();if(event.type==='turn.completed'||(event.type==='item.completed'&&event.item?.type==='agent_message'))modelEnd=Date.now();
@@ -154,7 +160,9 @@ async function solveGroup(group,iteration) {
    for(const q of questions)state.errors[q.id].detail=`제공자 ${scope==='output'?'출력':scope==='input'?'입력':'콘텐츠'} 검사 차단 반복으로 재시도 종료. 모델 기권과 구분한 실행 오류입니다.`;
   }
   console.log(`${group.id}: execution error: ${attempt.error.slice(0,200)}`);
-  if(/^(SUBSCRIPTION_BLOCKED|PI_BLOCKED|MODEL_MISMATCH|TOOL_BLOCKED)/.test(attempt.error)){state.blocked_reason=attempt.error;invocationController.abort(error);}
+  // agy cannot turn its tools off, so a tool call only invalidates that attempt (retried); elsewhere it stops the run.
+  if(agy&&/^TOOL_BLOCKED/.test(attempt.error))attempt.invalidated_reason='agy_tool_call';
+  else if(/^(SUBSCRIPTION_BLOCKED|PI_BLOCKED|AGY_BLOCKED|MODEL_MISMATCH|TOOL_BLOCKED)/.test(attempt.error)){state.blocked_reason=attempt.error;invocationController.abort(error);}
  } finally {attempt.time_seconds=(Date.now()-started)/1000;if(modelStart!==null&&modelEnd!==null)attempt.model_time_seconds=(modelEnd-modelStart)/1000;attempt.finished_at=new Date().toISOString();save();}
 }
 const userRetry=userRetryNote!==null?openUserRetry(state,requestedGroup,{note:userRetryNote,batchSize:retryPerQuestion?1:undefined}):null;if(userRetry!==null)save();

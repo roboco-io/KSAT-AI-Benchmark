@@ -115,3 +115,10 @@ test('a confirmed unsolved question scores 0 and is not counted as an execution 
  const s=summarize(qs,{a:{decision:'answered',answer:1}},{b:{status:'error',unsolved:true}},{},0,0);
  assert.equal(s.unsolved,1);assert.equal(s.errors,0);assert.equal(s.pending,0);assert.equal(s.score,2);assert.equal(s.accuracy,50);assert.equal(s.attempt_accuracy,50);
 });
+test('agy route strips API keys, keeps AI credits off and counts thinking in output tokens',async()=>{
+ const {agyEnvironment,normalizeAgyUsage,AGY_SETTINGS}=await import('../agy-adapter.mjs');
+ const env=agyEnvironment({PATH:'/bin',GEMINI_API_KEY:'x',GOOGLE_API_KEY:'y',HOME:'/h'});
+ assert.deepEqual(Object.keys(env).sort(),['HOME','PATH']);
+ assert.equal(AGY_SETTINGS.useG1Credits,false);
+ assert.deepEqual(normalizeAgyUsage({inputTokens:26926,outputTokens:1758,cachedReadTokens:12557,thoughtTokens:244}),{input_tokens:39483,cached_input_tokens:12557,cache_write_input_tokens:0,output_tokens:1758,reasoning_output_tokens:244});
+});
