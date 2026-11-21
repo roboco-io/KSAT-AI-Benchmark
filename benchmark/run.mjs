@@ -135,7 +135,7 @@ async function solveGroup(group,iteration) {
  try {
   await pace(); // provider per-second request limit; waiting is not counted against the group timeout
   const signal=AbortSignal.any([AbortSignal.timeout(protocol.group_timeout_seconds*1000),invocationController.signal]);
-  const events=thread?(await thread.runStreamed(input,{outputSchema:schema,signal})).events:agy?agyEvents({model:selected,prompt:input[0].text,images,signal,timeoutMs:protocol.group_timeout_seconds*1000}):selected.pi?piEvents({model:selected,prompt:input[0].text,images,schema,signal,timeoutMs:protocol.group_timeout_seconds*1000,apiKey:readPiSecret(selected.pi.secret_name)}):claudeEvents({model:selected.id,prompt:input[0].text,images,schema,signal});
+  const events=thread?(await thread.runStreamed(input,{outputSchema:schema,signal})).events:agy?agyEvents({model:selected,prompt:input[0].text,images,schema,signal,timeoutMs:protocol.group_timeout_seconds*1000}):selected.pi?piEvents({model:selected,prompt:input[0].text,images,schema,signal,timeoutMs:protocol.group_timeout_seconds*1000,apiKey:readPiSecret(selected.pi.secret_name)}):claudeEvents({model:selected.id,prompt:input[0].text,images,schema,signal});
   for await(const event of events) {
    appendFileSync(logPath,JSON.stringify(event)+'\n');
    modelStart??=Date.now();if(event.type==='turn.completed'||(event.type==='item.completed'&&event.item?.type==='agent_message'))modelEnd=Date.now();

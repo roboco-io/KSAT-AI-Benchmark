@@ -5,7 +5,7 @@
 //   Any tool call invalidates the attempt: the session is cancelled and its output is discarded.
 // - agy downscales images to at most 2,000 px per side before sending them to the model.
 import {spawn,execFileSync} from 'node:child_process';
-import {mkdtemp,readFile} from 'node:fs/promises';
+import {mkdtemp,readFile,mkdir,writeFile} from 'node:fs/promises';
 import {tmpdir} from 'node:os';
 import {join,extname} from 'node:path';
 import {parsePiAnswers} from './pi-adapter.mjs';
@@ -37,11 +37,14 @@ export function normalizeAgyUsage(usage) {
  return {input_tokens:n('inputTokens')+n('cachedReadTokens'),cached_input_tokens:n('cachedReadTokens'),cache_write_input_tokens:n('cachedWriteTokens'),output_tokens:Math.max(n('outputTokens'),n('thoughtTokens')),reasoning_output_tokens:n('thoughtTokens')};
 }
 
-export async function* agyEvents({model,prompt,images=[],signal,timeoutMs=900000,executable='agy'}) {
+// Same instructions as the Pi route: the system line and the JSON schema are appended to the user prompt.
+export const AGY_PREAMBLE='You are taking the KSAT exam. Solve only from the supplied question images and text. Do not use any tools, search, code execution, or outside sources. Return only the requested JSON answer object.';
+export async function* agyEvents({model,prompt,images=[],schema,signal,timeoutMs=900000,executable='agy'}) {
  const modelId=model?.google?.model_id;
  if(!modelId)throw new Error('AGY_BLOCKED: explicit agy model id is required');
  const cwd=await mkdtemp(join(tmpdir(),'ksat-agy-')); // empty workspace: nothing for file tools to read
- const blocks=[{type:'text',text:prompt}];
+ if(!schema||typeof schema!=='object')throw new Error('AGY_BLOCKED: JSON schema is required');
+ const blocks=[{type:'text',text:AGY_PREAMBLE+'\n\n'+prompt+'\n\nReturn only one JSON object matching this schema:\n'+JSON.stringify(schema)}];
  for(const path of images){const mimeType=MIME[extname(path).toLowerCase()];if(!mimeType)throw new Error('AGY_BLOCKED: unsupported image type');blocks.push({type:'image',mimeType,data:(await readFile(path)).toString('base64')});}
  const child=spawn(executable,['--settings',JSON.stringify(AGY_SETTINGS),'acp'],{env:agyEnvironment(),cwd,stdio:['pipe','pipe','ignore']});
  let id=0,buffer='',failure=null,sessionId=null;const pending=new Map(),queue=[];let wake=null;
@@ -72,7 +75,11 @@ export async function* agyEvents({model,prompt,images=[],signal,timeoutMs=900000
   if(failure)throw failure;
   yield {type:'turn.completed',usage:normalizeAgyUsage(result?.usage)};
   if(result?.stopReason!=='end_turn')throw new Error(result?.stopReason==='max_tokens'?'AGY_TURN_FAILED: response reached output token limit':`AGY_TURN_FAILED: stop reason ${result?.stopReason}`);
-  let output;try{output=parsePiAnswers(text);}catch{throw new Error('AGY_OUTPUT_INVALID: response did not contain a complete JSON answer array');}
+  let output;try{output=parsePiAnswers(text);}catch{
+   // Keep the unparsable response privately for diagnosis (never published).
+   const folder=join(process.cwd(),'.runtime/agy-diagnostics');await mkdir(folder,{recursive:true});
+   await writeFile(join(folder,`${modelId}-${Date.now()}.txt`),text);
+   throw new Error('AGY_OUTPUT_INVALID: response did not contain a complete JSON answer array');}
   yield {type:'item.completed',item:{type:'agent_message',text:JSON.stringify(output)}};
  } catch(error) {throw failure??error;}
  finally {clearTimeout(timer);signal?.removeEventListener('abort',onAbort);if(child.exitCode===null)child.kill('SIGTERM');}
