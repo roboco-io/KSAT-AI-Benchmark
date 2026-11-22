@@ -988,7 +988,7 @@ html body {
 .period4-link small { font-weight:500; color:var(--muted); }
 
 /* 2027 period 4 highlight: plain site accent (no glow or animation) */
-.new-badge { background:var(--indigo); color:var(--surface); }
+.new-badge { background:#ff2d55; color:#fff; box-shadow:0 0 6px rgba(255,45,85,.75),0 0 18px rgba(255,45,85,.45); }
 .period4-notice { padding:8px 12px; border:1px solid var(--line); border-radius:6px; background:var(--selection); }
 .period4-notice strong, .period4-callout strong { color:var(--indigo); }
 .period4-notice button, .period4-callout button { color:var(--indigo); }
