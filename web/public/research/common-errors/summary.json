@@ -1,0 +1,23 @@
+{
+  "title": "고득점 AI들은 같은 수능 문제에서 틀리는가?",
+  "publishedAt": "2026-11-22",
+  "questionsPerYear": 147,
+  "years": [
+    {
+      "year": 2025,
+      "models": 9,
+      "bestSingle": 146,
+      "plurality": 146,
+      "strictMajority": 146,
+      "oracle": 147
+    },
+    {
+      "year": 2026,
+      "models": 10,
+      "bestSingle": 147,
+      "plurality": 146,
+      "strictMajority": 145,
+      "oracle": 147
+    }
+  ]
+}

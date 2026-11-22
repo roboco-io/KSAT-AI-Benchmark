@@ -1,0 +1,206 @@
+[
+  {
+    "file": "REPORT.md",
+    "sha256": "64be8b4e7e64748f77e205ae08e3194c902ed4eeed376065cdedcf39eb7b6f94"
+  },
+  {
+    "file": "README.md",
+    "sha256": "ebfe95d7d2089a4217db1ddacdaba299049d90e277c775261086b9f7f40f1974"
+  },
+  {
+    "file": "ledger.json",
+    "sha256": "9ab5678b42ce972741849faa83922e88560ad4263f0592199292ab6d18816276"
+  },
+  {
+    "file": "analyze.py",
+    "sha256": "71346901ba3f95dabdbc27997d288b876caf15d80bac03b3c2d31e3cafcac549"
+  },
+  {
+    "file": "verify.py",
+    "sha256": "e874a80e6701c1935eab14dbc6da3e227cdfe74f3655d0023b6ff128596e1d5d"
+  },
+  {
+    "file": "test_analyze.py",
+    "sha256": "ade3072a147445d607c2f615970134c4a546b12fc4b7f6426d040d645c144051"
+  },
+  {
+    "file": "plot.py",
+    "sha256": "6529f9d2c162e82ea30d7daddb4bd8239bc9c058a13e3b7f0ce3b4f661946b2b"
+  },
+  {
+    "file": "render_report.py",
+    "sha256": "ad53b9aa3e505973af76b6687ae990c4da09e3fc7a1ce405685bd3d566d7dea6"
+  },
+  {
+    "file": "publish.mjs",
+    "sha256": "f006469501d6186b91476028117c8b444f673853506952e1729d268535c5116c"
+  },
+  {
+    "file": "publication.test.mjs",
+    "sha256": "78392c8594e4584e1b7ccd51a9cfd0694d98844a6ac5b73d0e6777c8a9197e45"
+  },
+  {
+    "file": "inputs/2025-answers.json",
+    "sha256": "fe8843515f10f6e3fe37fc733c9145188ac7199a2e61b9f2b98303a8c42a5e94"
+  },
+  {
+    "file": "inputs/2025-ksat.json",
+    "sha256": "0b885a2f36bdca9059bb47a61caa00b18d15e542ad15e0e4ffdebb555bc9bca3"
+  },
+  {
+    "file": "inputs/2026-answers.json",
+    "sha256": "f9cd141630947d4384f60be489bf7a0b8fe13795fa1cf1c3d23557ac8386cb32"
+  },
+  {
+    "file": "inputs/2026-ksat.json",
+    "sha256": "de418de072e11d96364548de1113a6ad33c6f29fbe28ebfe259a8ff85c453074"
+  },
+  {
+    "file": "inputs/manifest.json",
+    "sha256": "3ac6b538b93c15da6fc15429a16f558e4160a30b1b55d399749d605bd155ddb3"
+  },
+  {
+    "file": "outputs/2025-frozen_2025_triple-items.csv",
+    "sha256": "48f8a2115a0ad1347702d1f32448a2abe7006b5f577799cf70fe3893e375d97b"
+  },
+  {
+    "file": "outputs/2025-frozen_2025_triple-pairs.csv",
+    "sha256": "2528300f576e6d864f4ed40973a61de66ca2db63dcbd21750b8576a33c720238"
+  },
+  {
+    "file": "outputs/2025-frozen_2025_triple-triples.csv",
+    "sha256": "8accfd494fcddfeb146bdd81eae3b156b50dde70ec67b7c641249920a034cce3"
+  },
+  {
+    "file": "outputs/2025-high95_descriptive-items.csv",
+    "sha256": "770fcee028039fe7eab3920917183c7b8cdb474982aeabfe78c70625bb97e773"
+  },
+  {
+    "file": "outputs/2025-high95_descriptive-pairs.csv",
+    "sha256": "33abd12d90eb44c22259a82e142049c81375c86863c033861f283b7aa8bd571e"
+  },
+  {
+    "file": "outputs/2025-high95_descriptive-triples.csv",
+    "sha256": "96335e2106da98541403a54212a9cc5eca5ce1f12b8a606ef61385c0ac301d20"
+  },
+  {
+    "file": "outputs/2025-image_all-items.csv",
+    "sha256": "ad9d4d65b1592717954e11814da750d19eef420bad0f6aabf6e6ccf01a5d97c2"
+  },
+  {
+    "file": "outputs/2025-image_all-pairs.csv",
+    "sha256": "ab5c2399b4badf7f12f02dd5af5e6df039b320bff1f7fcffb2e7ef50bd9aec10"
+  },
+  {
+    "file": "outputs/2025-image_all-triples.csv",
+    "sha256": "c461263ddb4bfb3cfb4c37300c710595778061dcaa11c23752cd5acdfccc45ac"
+  },
+  {
+    "file": "outputs/2025-matched-items.csv",
+    "sha256": "ad9d4d65b1592717954e11814da750d19eef420bad0f6aabf6e6ccf01a5d97c2"
+  },
+  {
+    "file": "outputs/2025-matched-pairs.csv",
+    "sha256": "ab5c2399b4badf7f12f02dd5af5e6df039b320bff1f7fcffb2e7ef50bd9aec10"
+  },
+  {
+    "file": "outputs/2025-matched-triples.csv",
+    "sha256": "c461263ddb4bfb3cfb4c37300c710595778061dcaa11c23752cd5acdfccc45ac"
+  },
+  {
+    "file": "outputs/2026-all_inputs_sensitivity-items.csv",
+    "sha256": "0caa15253dbe7999625fbe16bea0869ebaf581e661a11264bd4d2da756a4c108"
+  },
+  {
+    "file": "outputs/2026-all_inputs_sensitivity-pairs.csv",
+    "sha256": "fd7fc15e88a81b39a38963e5731f8ddb4e79187149ad3010bc555ec9782772fb"
+  },
+  {
+    "file": "outputs/2026-all_inputs_sensitivity-triples.csv",
+    "sha256": "c0a6d42432ea6503a371a0d3d578038beb4cd132831f4f912269c8abbcd8552f"
+  },
+  {
+    "file": "outputs/2026-frozen_2025_triple-items.csv",
+    "sha256": "8708ed9cbbfe79b62c31adc776b6fbefe308a042c87a44d12b827b4f332c8d1d"
+  },
+  {
+    "file": "outputs/2026-frozen_2025_triple-pairs.csv",
+    "sha256": "a89ab165b21880c4798c69e2108be34de9282e0bbacb30a4ba5b847eb40aeba7"
+  },
+  {
+    "file": "outputs/2026-frozen_2025_triple-triples.csv",
+    "sha256": "8b67d7817825a4f6225719c1c578961a411a64ac0ac39ccfd5d11a20755ff35e"
+  },
+  {
+    "file": "outputs/2026-high95_descriptive-items.csv",
+    "sha256": "4f807f431cc83d4ba539df1e629d3b7c358bcc0e4307d47251aff7b568d5e115"
+  },
+  {
+    "file": "outputs/2026-high95_descriptive-pairs.csv",
+    "sha256": "535867d0849319990f9b337a8cf0540c8c7c9f09294af1f360ac47965ad95e3a"
+  },
+  {
+    "file": "outputs/2026-high95_descriptive-triples.csv",
+    "sha256": "36464b768ddfc89b6e4546af1ca23a4037767c995443fc0c6ae3b37521c51b5c"
+  },
+  {
+    "file": "outputs/2026-image_all-items.csv",
+    "sha256": "9eb1ceb42e4032f91ba293dd7c31bcd6504f11d6a4d67f6386f082a858cfc08f"
+  },
+  {
+    "file": "outputs/2026-image_all-pairs.csv",
+    "sha256": "af309fb3b68633e11a0770de0817adbd3c6b9f309c7be72b6d8a0eb174456d07"
+  },
+  {
+    "file": "outputs/2026-image_all-triples.csv",
+    "sha256": "6fcda6272a1d2face06a28eac0e715efaefcfbfa1621bd287f2b06e07b19a02b"
+  },
+  {
+    "file": "outputs/2026-incomplete_image_sensitivity-items.csv",
+    "sha256": "0173ae8d5aa33eae3a46fd441e115304273ea688c74b17d5f6a752f7e9749821"
+  },
+  {
+    "file": "outputs/2026-incomplete_image_sensitivity-pairs.csv",
+    "sha256": "2d2d1ee774f9b4b5da91d59e967dac2f47838c1ffc92d401d2f90dbef99d0224"
+  },
+  {
+    "file": "outputs/2026-incomplete_image_sensitivity-triples.csv",
+    "sha256": "b81251ab449ebddaca7f8b45364001559cda8cc62c5bcdd574d37644a5ba2ad5"
+  },
+  {
+    "file": "outputs/2026-matched-items.csv",
+    "sha256": "18ecb0f19060aa4dc555689d2e62bd6e3faa2294b24848793cacedf8fa6f9030"
+  },
+  {
+    "file": "outputs/2026-matched-pairs.csv",
+    "sha256": "16f0ec6f272620f54dc7ed1d2291c70d53c1729c80b565c2e8e6f79bd785dfca"
+  },
+  {
+    "file": "outputs/2026-matched-triples.csv",
+    "sha256": "f69a627ee96ad76d6665e044fa8c43aaa9a8916428dce84a16bb4273e5c1c98c"
+  },
+  {
+    "file": "outputs/analysis.json",
+    "sha256": "3a8e519213e2f4363f11b8dcb681bf82cdcf84841a2534ae78e7c95ab7b5ea86"
+  },
+  {
+    "file": "outputs/error-overlap.png",
+    "sha256": "8361f14453adf90b0e5a824188898ee464e52e09afb2ded57521fadc8e03221b"
+  },
+  {
+    "file": "outputs/error-overlap.svg",
+    "sha256": "17f93f2bbbdd593cb4a53ffff62ae28c564b70816d9ff5a19fe10f170cff127e"
+  },
+  {
+    "file": "outputs/verification.json",
+    "sha256": "4088031258acb3cd6dc07b97eaa0e3abadaef99d0a60b0318146e3e173353328"
+  },
+  {
+    "file": "outputs/voting-performance.png",
+    "sha256": "f4c823f031f6dbb0ff3df5b7be0ead6d573aa1e0f8e8d366f3a3969a782d8994"
+  },
+  {
+    "file": "outputs/voting-performance.svg",
+    "sha256": "7699049eef01987bf95ac95e8b5dc6d8f681b371d07a5991c6ce40abb70c67ee"
+  }
+]

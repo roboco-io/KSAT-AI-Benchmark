@@ -1,0 +1,28 @@
+[
+  {
+    "source": "web/public/data/benchmark-comparison-2025.json",
+    "sha256": "f40eba52ad6a86feb04115c419917a9b8f93eeb9436a3919b474dc8f2fb8d712",
+    "snapshot": "research/common-errors/inputs/2025-answers.json",
+    "snapshot_sha256": "fe8843515f10f6e3fe37fc733c9145188ac7199a2e61b9f2b98303a8c42a5e94",
+    "note": "작업 트리의 현재 공개 JSON. 미커밋 변경을 포함할 수 있음. 해설·비용 필드는 제외."
+  },
+  {
+    "source": "exams/datasets/2025-ksat.json",
+    "sha256": "0b885a2f36bdca9059bb47a61caa00b18d15e542ad15e0e4ffdebb555bc9bca3",
+    "snapshot": "research/common-errors/inputs/2025-ksat.json",
+    "snapshot_sha256": "0b885a2f36bdca9059bb47a61caa00b18d15e542ad15e0e4ffdebb555bc9bca3"
+  },
+  {
+    "source": "web/public/data/benchmark-comparison.json",
+    "sha256": "f4d7a472d194fbb2f1a86e2a0f0423134456e650b364a026a3616c05a478c03b",
+    "snapshot": "research/common-errors/inputs/2026-answers.json",
+    "snapshot_sha256": "f9cd141630947d4384f60be489bf7a0b8fe13795fa1cf1c3d23557ac8386cb32",
+    "note": "작업 트리의 현재 공개 JSON. 미커밋 변경을 포함할 수 있음. 해설·비용 필드는 제외."
+  },
+  {
+    "source": "exams/datasets/2026-ksat.json",
+    "sha256": "de418de072e11d96364548de1113a6ad33c6f29fbe28ebfe259a8ff85c453074",
+    "snapshot": "research/common-errors/inputs/2026-ksat.json",
+    "snapshot_sha256": "de418de072e11d96364548de1113a6ad33c6f29fbe28ebfe259a8ff85c453074"
+  }
+]

@@ -11,6 +11,7 @@ on:
       - 'results/**'
       - 'exams/parsed/**'
       - 'web/**'
+      - 'research/common-errors/**'
       - 'scripts/export_data.py'
       - 'benchmark/**'
       - 'exams/datasets/**'
@@ -68,6 +69,9 @@ jobs:
         run: npm run build
         env:
           NODE_ENV: production
+
+      - name: Verify published research
+        run: node --test research/common-errors/publication.test.mjs
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

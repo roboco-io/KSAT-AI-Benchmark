@@ -1,0 +1,21 @@
+members,correct,n,accuracy,no_decision,points,max_points,gain_over_best_member
+"[""claude-fable-5-1"", ""claude-opus-5-5"", ""claude-sonnet-5-5""]",146,147,0.9931972789115646,0,373,376,0
+"[""claude-fable-5-1"", ""claude-opus-5-5"", ""gemini-4-argon""]",146,147,0.9931972789115646,0,373,376,0
+"[""claude-fable-5-1"", ""claude-opus-5-5"", ""gpt-6-astra""]",146,147,0.9931972789115646,0,373,376,-1
+"[""claude-fable-5-1"", ""claude-opus-5-5"", ""gpt-6.1-sol""]",146,147,0.9931972789115646,0,373,376,0
+"[""claude-fable-5-1"", ""claude-sonnet-5-5"", ""gemini-4-argon""]",146,147,0.9931972789115646,0,373,376,0
+"[""claude-fable-5-1"", ""claude-sonnet-5-5"", ""gpt-6-astra""]",146,147,0.9931972789115646,1,373,376,-1
+"[""claude-fable-5-1"", ""gemini-4-argon"", ""gpt-6-astra""]",146,147,0.9931972789115646,0,373,376,-1
+"[""claude-fable-5-1"", ""gemini-4-argon"", ""gpt-6.1-sol""]",146,147,0.9931972789115646,0,373,376,0
+"[""claude-fable-5-1"", ""gpt-6-astra"", ""gpt-6.1-sol""]",146,147,0.9931972789115646,0,373,376,-1
+"[""claude-opus-5-5"", ""claude-sonnet-5-5"", ""gemini-4-argon""]",146,147,0.9931972789115646,0,373,376,0
+"[""claude-opus-5-5"", ""claude-sonnet-5-5"", ""gpt-6-astra""]",146,147,0.9931972789115646,1,373,376,-1
+"[""claude-opus-5-5"", ""gemini-4-argon"", ""gpt-6-astra""]",146,147,0.9931972789115646,0,373,376,-1
+"[""claude-opus-5-5"", ""gemini-4-argon"", ""gpt-6.1-sol""]",146,147,0.9931972789115646,0,373,376,0
+"[""claude-opus-5-5"", ""gpt-6-astra"", ""gpt-6.1-sol""]",146,147,0.9931972789115646,0,373,376,-1
+"[""claude-sonnet-5-5"", ""gemini-4-argon"", ""gpt-6-astra""]",146,147,0.9931972789115646,1,373,376,-1
+"[""gemini-4-argon"", ""gpt-6-astra"", ""gpt-6.1-sol""]",146,147,0.9931972789115646,0,373,376,-1
+"[""claude-fable-5-1"", ""claude-sonnet-5-5"", ""gpt-6.1-sol""]",145,147,0.9863945578231292,0,371,376,-1
+"[""claude-opus-5-5"", ""claude-sonnet-5-5"", ""gpt-6.1-sol""]",145,147,0.9863945578231292,0,371,376,-1
+"[""claude-sonnet-5-5"", ""gemini-4-argon"", ""gpt-6.1-sol""]",145,147,0.9863945578231292,0,371,376,-1
+"[""claude-sonnet-5-5"", ""gpt-6-astra"", ""gpt-6.1-sol""]",145,147,0.9863945578231292,1,371,376,-2
