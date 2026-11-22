@@ -9,7 +9,7 @@ export default function HomePage() {
   const view = views.find((v) => v.year === year) ?? views[views.length - 1];
   return (
     <>
-      <LegacyRedirect />
+      <LegacyRedirect fallbackYear={year} />
       <YearOverview view={view} home />
     </>
   );

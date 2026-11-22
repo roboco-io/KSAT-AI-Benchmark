@@ -85,7 +85,7 @@ export type SubjectKey = 'korean' | 'math' | 'english' | 'korean_history' | 'soc
 export interface SubjectScore { pct: number; tracks: { id: string; title: string; score: number; max: number }[] }
 export interface ModelSummary {
   id: string; engine: string; effort: string | null; inputMode: string | null;
-  score: number | null; maxScore: number | null; period4: { score: number; max: number } | null;
+  score: number | null; maxScore: number | null; period4: { score: number; max: number; correct: number; incorrect: number; abstained: number; errors: number; total: number; costUsd: number | null; wallSeconds: number | null } | null;
   correct: number; incorrect: number; abstained: number; errors: number; total: number;
   costUsd: number | null; wallSeconds: number | null;
   subjects: Partial<Record<SubjectKey, SubjectScore>>;
@@ -102,12 +102,12 @@ export interface PlacedPoint { id: string; x: number; y: number; labelX: number;
 export type { BenchmarkComparison, Question, QuestionStatus };
 ```
 
-`ModelView.id` 는 데이터의 `model` 값이다. `score` 와 `maxScore` 는 국어·수학·영어 결과가 없으면 null이다. `SubjectScore.pct` 는 그 과목 시험들(선택과목 포함)의 100점 환산 점수 평균을 반올림한 값이다. 모델 순서는 `score` 내림차순, 같으면 `costUsd` 오름차순, `score` 가 null이면 뒤에 `period4` 득점률 내림차순으로 둔다.
+`ModelView.id` 는 데이터의 `model` 값이다. `score` 와 `maxScore` 는 국어·수학·영어 결과가 없으면 null이다. `SubjectScore.pct` 는 그 과목 시험들(선택과목 포함)의 100점 환산 점수 평균을 반올림한 값이다. 모델 순서는 `score` 내림차순, 같으면 `costUsd` 오름차순, `score` 가 null이면 뒤에 `period4` 득점률 내림차순으로 둔다. `score`, `maxScore`, `correct`, `incorrect`, `abstained`, `errors`, `total`, `costUsd`, `wallSeconds` 와 토큰 수는 모두 1-3교시(국어·수학·영어) 기준이다. 4교시(한국사·사회·과학) 결과는 `period4` 묶음에 따로 담는다. 4교시만 치른 모델은 `score`, `maxScore`, `costUsd`, `wallSeconds` 와 토큰 수가 null이고 정답 수 계열은 0이며, 4교시 값은 모두 `period4` 에 있다. `questions` 와 `subjects` 는 두 결과를 합친 값이다.
 
 탐색 설정과 지표에 쓰는 선언은 다음과 같다. 이것도 `site-types.d.mts` 에 둔다. `ModelSummary` 에는 `provider: string`, `inputTokens: number | null`, `outputTokens: number | null` 을, `CompareData.questions` 의 각 항목에는 `kind: string` 을 추가한다.
 
 ```ts
-export type MetricKey = 'score' | 'accuracy' | 'cost' | 'wall' | 'costPerPoint' | 'secPerQuestion' | 'abstention' | 'errors' | 'tokens'
+export type MetricKey = 'score' | 'accuracy' | 'cost' | 'wall' | 'costPerPoint' | 'secPerQuestion' | 'abstention' | 'errors' | 'tokens' | 'period4'
   | 'fAccuracy' | 'fPoints' | `subj:${SubjectKey}`;
 export interface Metric { key: MetricKey; label: string; unit: string; scale: 'linear' | 'log'; better: 'high' | 'low' }
 export interface QuestionFilter { subjects: SubjectKey[]; minPoints: number | null; kind: 'multiple_choice' | 'short_answer' | null; minMissShare: number | null }

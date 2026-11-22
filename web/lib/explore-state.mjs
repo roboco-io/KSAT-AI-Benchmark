@@ -1,5 +1,5 @@
 const SUBJECTS=['korean','math','english','korean_history','social','science'];
-const METRICS=['score','accuracy','cost','wall','costPerPoint','secPerQuestion','abstention','errors','tokens','fAccuracy','fPoints',...SUBJECTS.map(s=>`subj:${s}`)];
+const METRICS=['score','accuracy','cost','wall','costPerPoint','secPerQuestion','abstention','errors','tokens','period4','fAccuracy','fPoints',...SUBJECTS.map(s=>`subj:${s}`)];
 const KINDS=['multiple_choice','short_answer'];
 const MAX_COLS=8, MAX_PICKED=50, MAX_ID=200;
 

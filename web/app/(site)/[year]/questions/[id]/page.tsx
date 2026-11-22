@@ -1,3 +1,4 @@
+import { sectionTag } from '@/lib/section-labels.mjs';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
@@ -50,7 +51,7 @@ function load(p: Params) {
 
 export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {
   const { year, detail } = load(await params);
-  return { title: `${SUBJECT_LABEL[detail.subject as SubjectKey] ?? detail.subject} ${detail.number}번 · ${year}학년도` };
+  return { title: `${SUBJECT_LABEL[detail.subject as SubjectKey] ?? detail.subject} ${sectionTag(detail.section) ? `${sectionTag(detail.section)} ` : ''}${detail.number}번 · ${year}학년도` };
 }
 
 export default async function QuestionPage({ params }: { params: Promise<Params> }) {
@@ -69,7 +70,7 @@ export default async function QuestionPage({ params }: { params: Promise<Params>
       <nav aria-label="경로">
         <Link href={questionsPath(year, subject)}>{year}학년도 문항별 결과</Link> / {label}
       </nav>
-      <h1>{label} {detail.section !== 'common' ? `${detail.section} ` : ''}{detail.number}번</h1>
+      <h1>{label} {sectionTag(detail.section) ? `${sectionTag(detail.section)} ` : ''}{detail.number}번</h1>
       <dl style={{ display: 'flex', flexWrap: 'wrap', gap: 'var(--s4)', margin: 0 }}>
         <div><dt>배점</dt><dd style={{ margin: 0 }}>{detail.points}점</dd></div>
         <div><dt>정답</dt><dd style={{ margin: 0 }}>{detail.correctAnswer ?? '없음'}</dd></div>

@@ -3,7 +3,7 @@ export type SubjectKey = 'korean' | 'math' | 'english' | 'korean_history' | 'soc
 export interface SubjectScore { pct: number; tracks: { id: string; title: string; score: number; max: number }[] }
 export interface ModelSummary {
   id: string; engine: string; effort: string | null; inputMode: string | null;
-  score: number | null; maxScore: number | null; period4: { score: number; max: number } | null;
+  score: number | null; maxScore: number | null; period4: { score: number; max: number; correct: number; incorrect: number; abstained: number; errors: number; total: number; costUsd: number | null; wallSeconds: number | null } | null;
   correct: number; incorrect: number; abstained: number; errors: number; total: number;
   costUsd: number | null; wallSeconds: number | null;
   subjects: Partial<Record<SubjectKey, SubjectScore>>;
@@ -19,7 +19,7 @@ export interface QuestionDetail { id: string; number: number; subject: string; s
 export interface CompareData { models: ModelSummary[]; questions: { id: string; subject: string; section: string; number: number; points: number; kind: string; answers: Record<string, [QuestionStatus, number | string | null]> }[] }
 export interface PlacedPoint { id: string; x: number; y: number; labelX: number; labelY: number; anchor: 'start' | 'end' | 'middle' }
 export type { BenchmarkComparison, Question, QuestionStatus };
-export type MetricKey = 'score' | 'accuracy' | 'cost' | 'wall' | 'costPerPoint' | 'secPerQuestion' | 'abstention' | 'errors' | 'tokens'
+export type MetricKey = 'score' | 'accuracy' | 'cost' | 'wall' | 'costPerPoint' | 'secPerQuestion' | 'abstention' | 'errors' | 'tokens' | 'period4'
   | 'fAccuracy' | 'fPoints' | `subj:${SubjectKey}`;
 export interface Metric { key: MetricKey; label: string; unit: string; scale: 'linear' | 'log'; better: 'high' | 'low' }
 export interface QuestionFilter { subjects: SubjectKey[]; minPoints: number | null; kind: 'multiple_choice' | 'short_answer' | null; minMissShare: number | null }

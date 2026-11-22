@@ -56,7 +56,11 @@ export function buildYearView(main, period4) {
   for (const m of period4?.models ?? []) {
     const score = num(m.summary?.score);
     const max = num(m.summary?.max_score);
-    const p4 = score !== null && max !== null ? {score, max} : null;
+    const t = baseView(m);
+    const p4 = score !== null && max !== null
+      ? {score, max, correct: t.correct, incorrect: t.incorrect, abstained: t.abstained, errors: t.errors,
+        total: t.total, costUsd: t.costUsd, wallSeconds: t.wallSeconds}
+      : null;
     const existing = byId.get(m.model);
     if (existing) {
       existing.period4 = p4;
@@ -64,7 +68,10 @@ export function buildYearView(main, period4) {
       existing.questions = [...existing.questions, ...(m.questions ?? [])];
     } else {
       const v = baseView(m);
-      v.period4 = p4;
+      Object.assign(v, {
+        period4: p4, score: null, maxScore: null, costUsd: null, wallSeconds: null,
+        inputTokens: null, outputTokens: null, correct: 0, incorrect: 0, abstained: 0, errors: 0, total: 0,
+      });
       byId.set(v.id, v);
     }
   }

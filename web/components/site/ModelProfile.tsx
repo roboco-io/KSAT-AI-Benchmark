@@ -3,6 +3,7 @@ import { OutcomeBar, SubjectBars, SUBJECT_LABEL } from './primitives';
 import { RecordList, type RecordItem } from './RecordList';
 import { comparePath, yearPath } from '@/lib/site-routes.mjs';
 import { formatMetric, metricValue } from '@/lib/metrics.mjs';
+import { sectionTag, trackName } from '@/lib/section-labels.mjs';
 import type { MetricKey, ModelSummary, SubjectKey, Trait } from '@/lib/site-types.mjs';
 import styles from './ModelProfile.module.css';
 
@@ -36,7 +37,7 @@ function tally(records: RecordItem[], keyOf: (r: RecordItem) => string) {
 export function ModelProfile({ year, model, traits, subjects, limitations, records }: Props) {
   const figure = (key: MetricKey) => formatMetric(key, metricValue(model, key, null));
   const tracks = subjects.flatMap((s) => (model.subjects[s]?.tracks ?? []).map((t) => ({ ...t, subject: s })));
-  const bySection = tally(records, (r) => `${SUBJECT_LABEL[r.subject as SubjectKey] ?? r.subject} · ${r.section}`);
+  const bySection = tally(records, (r) => [SUBJECT_LABEL[r.subject as SubjectKey] ?? r.subject, sectionTag(r.section)].filter(Boolean).join(' · '));
   const byKind = tally(records, (r) => KIND_LABEL[r.kind] ?? r.kind);
 
   return (
@@ -47,6 +48,8 @@ export function ModelProfile({ year, model, traits, subjects, limitations, recor
         <p className={styles.sub}>{model.provider} · {model.engine}</p>
       </header>
 
+      {model.period4 && <h2>1-3교시 (국어·수학·영어)</h2>}
+      {model.score === null && model.period4 && <p>1-3교시 결과가 없다.</p>}
       <dl className={styles.figures}>
         <div><dt>총점</dt><dd>{model.score ?? '–'} / {model.maxScore ?? '–'}</dd></div>
         <div><dt>정답률</dt><dd>{figure('accuracy')}</dd></div>
@@ -56,8 +59,18 @@ export function ModelProfile({ year, model, traits, subjects, limitations, recor
           <dt>토큰 사용량</dt><dd>{figure('tokens')}</dd>
           <dd className={styles.note}>제공사에 따라 추론 토큰이 출력에 포함되지 않았을 수 있다.</dd>
         </div>
-        {model.period4 && <div><dt>4교시 점수</dt><dd>{model.period4.score} / {model.period4.max}</dd></div>}
       </dl>
+      {model.period4 && (
+        <>
+          <h2>4교시 (한국사·탐구)</h2>
+          <dl className={styles.figures}>
+            <div><dt>점수</dt><dd>{model.period4.score} / {model.period4.max}</dd></div>
+            <div><dt>정답</dt><dd>{model.period4.correct} / {model.period4.total}</dd></div>
+            <div><dt>추정 비용</dt><dd>{formatMetric('cost', model.period4.costUsd)}</dd></div>
+            <div><dt>소요 시간</dt><dd>{formatMetric('wall', model.period4.wallSeconds)}</dd></div>
+          </dl>
+        </>
+      )}
 
       <section className={styles.section}>
         <h2>특징</h2>
@@ -75,7 +88,7 @@ export function ModelProfile({ year, model, traits, subjects, limitations, recor
           <table className={styles.table}>
             <thead><tr><th>트랙</th><th>점수</th></tr></thead>
             <tbody>
-              {tracks.map((t) => <tr key={`${t.subject}-${t.id}`}><td>{t.title}</td><td>{t.score} / {t.max}</td></tr>)}
+              {tracks.map((t) => <tr key={`${t.subject}-${t.id}`}><td>{trackName(t.title, SUBJECT_LABEL[t.subject as SubjectKey] ?? t.subject)}</td><td>{t.score} / {t.max}</td></tr>)}
             </tbody>
           </table>
         </div>
@@ -96,7 +109,7 @@ export function ModelProfile({ year, model, traits, subjects, limitations, recor
       </section>
 
       <section className={styles.section}>
-        <h2>결과 구성</h2>
+        <h2>결과 구성{model.period4 ? ' · 1-3교시 (국어·수학·영어)' : ''}</h2>
         <OutcomeBar correct={model.correct} incorrect={model.incorrect} abstained={model.abstained} errors={model.errors} />
       </section>
 
@@ -105,7 +118,7 @@ export function ModelProfile({ year, model, traits, subjects, limitations, recor
         <ul className={styles.plain}>
           <li>엔진: {model.engine}</li>
           <li>effort: {model.effort ?? '–'}</li>
-          <li>입력 방식: {model.inputMode ?? '–'}</li>
+          <li>입력 방식: {model.inputMode === 'text_transcript' ? '텍스트 전사본 입력' : model.inputMode ?? '문제지 이미지 입력'}</li>
         </ul>
         {limitations.length > 0 && (
           <>

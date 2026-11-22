@@ -67,3 +67,17 @@ test('format', () => {
   assert.equal(formatMetric('score', 367.6), '368');
   assert.equal(formatMetric('subj:math', 91), '91');
 });
+
+test('period4_metric', () => {
+  const ks = metricsFor(['korean', 'social'], false).map(m => m.key);
+  assert.ok(ks.includes('period4'));
+  assert.ok(!metricsFor(['korean', 'math'], false).some(m => m.key === 'period4'));
+  const p = metricsFor(['science'], false).find(m => m.key === 'period4');
+  assert.equal(p.label, '4교시 득점률'); assert.equal(p.better, 'high');
+  assert.equal(metricValue({...base, period4: {score: 37, max: 50}}, 'period4', null), 74);
+  assert.equal(metricValue({...base, period4: null}, 'period4', null), null);
+  const empty = {...base, total: 0, correct: 0, abstained: 0, wallSeconds: null};
+  assert.equal(metricValue(empty, 'accuracy', null), null);
+  assert.equal(metricValue(empty, 'abstention', null), null);
+  assert.equal(metricValue({...base, total: 0}, 'secPerQuestion', null), null);
+});

@@ -15,11 +15,15 @@ const FILTERED = [
   {key: 'fPoints', label: '조건 득점', unit: '점', scale: 'linear', better: 'high'},
 ];
 
+const PERIOD4_METRIC = {key: 'period4', label: '4교시 득점률', unit: '%', scale: 'linear', better: 'high'};
+const PERIOD4_SUBJECTS = ['korean_history', 'social', 'science'];
+
 const SUBJECT_NAMES = {korean: '국어', math: '수학', english: '영어', korean_history: '한국사', social: '사회탐구', science: '과학탐구'};
 
 export function metricsFor(subjects, filtered) {
   const subj = subjects.map(s => ({key: `subj:${s}`, label: `${SUBJECT_NAMES[s] ?? s} 점수`, unit: '점', scale: 'linear', better: 'high'}));
-  return [...(filtered ? FILTERED : []), ...FIXED, ...subj];
+  const p4 = subjects.some(s => PERIOD4_SUBJECTS.includes(s)) ? [PERIOD4_METRIC] : [];
+  return [...(filtered ? FILTERED : []), ...FIXED, ...p4, ...subj];
 }
 
 const num = v => (typeof v === 'number' && Number.isFinite(v) ? v : null);
@@ -36,6 +40,7 @@ export function metricValue(m, key, rescored) {
     case 'abstention': return pct(m.abstained, m.total);
     case 'errors': return num(m.errors);
     case 'tokens': return num(m.inputTokens) === null || num(m.outputTokens) === null ? null : m.inputTokens + m.outputTokens;
+    case 'period4': return m.period4 ? pct(m.period4.score, m.period4.max) : null;
     case 'fAccuracy': return rescored ? pct(rescored.correct, rescored.total) : null;
     case 'fPoints': return rescored ? num(rescored.points) : null;
     default:

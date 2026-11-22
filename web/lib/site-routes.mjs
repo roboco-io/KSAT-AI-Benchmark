@@ -39,10 +39,12 @@ export function parseCompare(search) {
 // Maps the old query-string URLs (?year=Y, ?year=Y&model=M) to the new paths.
 // Returns null for every other input, so explore-state queries and plain anchors are left alone.
 // The hash argument is accepted for the call shape in the contract; the mapping does not read it.
-export function legacyRedirect(search, hash) {
+export function legacyRedirect(search, hash, fallbackYear) {
  const params = new URLSearchParams(search);
  const year = params.get('year');
- if (!year || !/^\d{4}$/.test(year)) return null;
  const model = params.get('model');
+ if (!year || !/^\d{4}$/.test(year)) {
+  return model && fallbackYear ? modelPath(fallbackYear, model) : null;
+ }
  return model ? modelPath(year, model) : yearPath(year);
 }

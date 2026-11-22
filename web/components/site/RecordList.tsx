@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { MathContent } from '@/components/MathContent';
 import { StatusMark, SUBJECT_LABEL } from './primitives';
 import { questionPath } from '@/lib/site-routes.mjs';
+import { sectionTag } from '@/lib/section-labels.mjs';
 import type { QuestionStatus, SubjectKey } from '@/lib/site-types.mjs';
 import styles from './RecordList.module.css';
 
@@ -51,7 +52,7 @@ export function RecordList({ year, records }: { year: number; records: RecordIte
           <h3 className={styles.subjectHead}>{label(g.subject)}</h3>
           {g.sections.map((s) => (
             <div key={s.section}>
-              <h4 className={styles.sectionHead}>{s.section}</h4>
+              {sectionTag(s.section) && <h4 className={styles.sectionHead}>{sectionTag(s.section)}</h4>}
               {s.items.map((r) => (
                 <details key={r.id} className={styles.rec}>
                   <summary className={styles.summary}>

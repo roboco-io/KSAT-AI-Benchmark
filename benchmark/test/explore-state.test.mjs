@@ -55,3 +55,8 @@ test('hostile_values: invalid input never throws and yields defaults or plain st
  assert.equal(parseExplore(undefined).x,'cost');
  assert.equal(parseExplore(null).x,'cost');
 });
+
+test('period4_is_a_valid_metric_key',()=>{
+ const s=parseExplore(serializeExplore({...DEFAULT_EXPLORE,y:'period4',cols:['score','period4']}));
+ assert.equal(s.y,'period4');assert.deepEqual(s.cols,['score','period4']);
+});

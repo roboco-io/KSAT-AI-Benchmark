@@ -33,4 +33,6 @@ test('legacy redirect leaves explore-state queries and plain anchors alone',()=>
  assert.equal(legacyRedirect('?x=cost',''),null);
  assert.equal(legacyRedirect('','#research'),null);
  assert.equal(legacyRedirect('?year=26&model=x',''),null);
+ assert.equal(legacyRedirect('?model=x','#model-records',2027),'/2027/models/x');
+ assert.equal(legacyRedirect('?model=x',''),null);
 });

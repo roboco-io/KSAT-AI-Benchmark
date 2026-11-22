@@ -5,6 +5,7 @@ import { useSearchParams } from 'next/navigation';
 import { useCallback, useMemo, useState } from 'react';
 import type { Matrix, SubjectKey } from '@/lib/site-types.mjs';
 import { modelPath, questionPath } from '@/lib/site-routes.mjs';
+import { sectionTag } from '@/lib/section-labels.mjs';
 import { StatusMark, SUBJECT_LABEL } from './primitives';
 import styles from './QuestionGrid.module.css';
 
@@ -78,7 +79,7 @@ export function QuestionGrid({ year, subjects, matrices }: Props) {
                 >
                   <span className={styles.thInner}>
                     <span className={styles.num}>{c.number}</span>
-                    {c.section !== 'common' && <span className={styles.sub}>{c.section}</span>}
+                    {sectionTag(c.section) && <span className={styles.sub}>{sectionTag(c.section)}</span>}
                     <span className={styles.sub}>{c.points}점</span>
                     <span className={styles.miss}>{c.missCount > 0 ? `×${c.missCount}` : ''}</span>
                   </span>

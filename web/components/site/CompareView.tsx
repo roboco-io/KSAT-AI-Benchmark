@@ -5,6 +5,7 @@ import { useCallback, useEffect, useMemo, useState } from 'react';
 import { disagreements } from '@/lib/question-matrix.mjs';
 import { modelPath, parseCompare, questionPath, yearPath } from '@/lib/site-routes.mjs';
 import { formatMetric, metricValue } from '@/lib/metrics.mjs';
+import { sectionTag } from '@/lib/section-labels.mjs';
 import type { CompareData, MetricKey, SubjectKey, Trait } from '@/lib/site-types.mjs';
 import { StatusMark, SUBJECT_LABEL, TraitTags } from './primitives';
 import styles from './CompareView.module.css';
@@ -12,11 +13,11 @@ import styles from './CompareView.module.css';
 
 const MAX = 4;
 const BETTER: Partial<Record<string, 'high' | 'low'>> = {
-  score: 'high', accuracy: 'high', cost: 'low', wall: 'low', costPerPoint: 'low', abstention: 'low', errors: 'low', tokens: 'low',
+  score: 'high', period4: 'high', accuracy: 'high', cost: 'low', wall: 'low', costPerPoint: 'low', abstention: 'low', errors: 'low', tokens: 'low',
 };
 const LABEL: Record<string, string> = {
   score: '총점', accuracy: '정답률', cost: '추정 비용', wall: '소요 시간', costPerPoint: '1점당 비용',
-  abstention: '기권율', errors: '실행 오류', tokens: '토큰 사용량',
+  abstention: '기권율', errors: '실행 오류', tokens: '토큰 사용량', period4: '4교시 득점률',
 };
 
 interface Props { year: number; subjects: SubjectKey[]; data: CompareData; traits: Record<string, Trait[]> }
@@ -56,7 +57,7 @@ export function CompareView({ year, subjects, data, traits }: Props) {
   const selected = data.models.filter((m) => picked.includes(m.id));
   const ready = selected.length >= 2;
 
-  const rows: MetricKey[] = ['score', 'accuracy', ...subjects.map((s) => `subj:${s}` as MetricKey), 'cost', 'wall', 'costPerPoint', 'abstention', 'errors', 'tokens'];
+  const rows: MetricKey[] = ['score', 'accuracy', ...subjects.map((s) => `subj:${s}` as MetricKey), 'cost', 'wall', 'costPerPoint', 'abstention', 'errors', 'tokens', ...(selected.some((m) => m.period4) ? (['period4'] as MetricKey[]) : [])];
   const rowLabel = (k: MetricKey) => (k.startsWith('subj:') ? `${SUBJECT_LABEL[k.slice(5) as SubjectKey] ?? k.slice(5)} 점수` : LABEL[k]);
   const rowBetter = (k: MetricKey) => (k.startsWith('subj:') ? 'high' : BETTER[k] ?? 'high');
 
@@ -162,7 +163,7 @@ export function CompareView({ year, subjects, data, traits }: Props) {
                           <th scope="row" className={styles.stick}>
                             <Link href={questionPath(year, q.id)}>
                               {SUBJECT_LABEL[q.subject as SubjectKey] ?? q.subject}
-                              {q.section ? ` · ${q.section}` : ''} · {q.number}번 · {q.points}점
+                              {sectionTag(q.section) ? ` · ${sectionTag(q.section)}` : ''} · {q.number}번 · {q.points}점
                             </Link>
                           </th>
                           {selected.map((m) => {

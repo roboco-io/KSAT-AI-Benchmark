@@ -63,7 +63,9 @@ export function MetricScatter({ points, xMetric, yMetric, picked, onPick }: Prop
   const valid = points.filter(
     (p): p is { id: string; x: number; y: number } => drawable(p.x, xLog) && drawable(p.y, yLog),
   );
-  const dropped = points.length - valid.length;
+  const hasValue = (v: number | null) => v !== null && Number.isFinite(v);
+  const missing = points.filter((p) => !hasValue(p.x) || !hasValue(p.y)).length;
+  const nonPositive = points.length - valid.length - missing;
 
   if (valid.length === 0) {
     return <div className={styles.empty}>표시할 모델이 없다.</div>;
@@ -196,7 +198,8 @@ export function MetricScatter({ points, xMetric, yMetric, picked, onPick }: Prop
           </div>
         </div>
       )}
-      {dropped > 0 && <p className={styles.note}>값이 없는 모델 {dropped}개는 표시하지 않았다.</p>}
+      {missing > 0 && <p className={styles.note}>값이 없는 모델 {missing}개는 표시하지 않았다.</p>}
+      {nonPositive > 0 && <p className={styles.note}>값이 0인 모델 {nonPositive}개는 로그 눈금에 표시할 수 없어 뺐다.</p>}
     </div>
   );
 }

@@ -118,3 +118,20 @@ test('null cost or time gives no value/fast/slow', () => {
   const k = keys(a, [a, mk('b')]);
   assert.ok(!k.includes('value') && !k.includes('fast') && !k.includes('slow'));
 });
+
+test('period4_only_model_has_no_main_traits_and_is_excluded_from_medians', () => {
+  const p = mk('p', { score: null, maxScore: null, costUsd: null, wallSeconds: null, correct: 0, incorrect: 0, abstained: 0, errors: 0, total: 0,
+    period4: { score: 10, max: 50 }, subjects: { social: { pct: 20, tracks: [] }, science: { pct: 90, tracks: [] } } });
+  const a = mk('a', { score: 400, costUsd: 1, wallSeconds: 10 });
+  const c = [a, p, mk('b', { costUsd: 4, wallSeconds: 100 }), mk('d', { costUsd: 4, wallSeconds: 100 })];
+  assert.deepEqual(keys(p, c), ['weak-social']);
+  assert.ok(keys(a, c).includes('value') && keys(a, c).includes('fast'));
+});
+
+test('solo_wrong_ignores_models_lacking_the_question', () => {
+  const a = mk('a', { questions: qs('incorrect', 'incorrect', 'incorrect') });
+  const b = mk('b', { questions: qs('correct', 'correct', 'correct') });
+  const p = mk('p', { questions: [{ id: 'z1', status: 'correct', answer: 1 }] });
+  assert.deepEqual(soloWrong(a, [a, b, p]), ['q1', 'q2', 'q3']);
+  assert.deepEqual(soloWrong(a, [a, p]), []);
+});
