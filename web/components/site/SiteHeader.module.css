@@ -130,3 +130,12 @@
   .logoMark { width: 34px; height: 26px; }
   .logo { min-width: 38px; }
 }
+
+.themeIconButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  padding-left: 0;
+  padding-right: 0;
+}
