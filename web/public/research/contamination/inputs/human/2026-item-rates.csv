@@ -1,0 +1,63 @@
+year,subject,section,number,metric,value_pct,population,source_name,source_url,basis,published,retrieved
+2026,korean,common,12,wrong_rate,77.7,EBS 분석 (베리타스알파 인용),Veritas Alpha (EBS/Daeseong cited),https://www.veritas-a.com/news/articleView.html?idxno=583659,preliminary,2025-11-18,2026-11-22
+2026,korean,common,12,wrong_rate,78.7,대성 분석 (베리타스알파 인용),Veritas Alpha (EBS/Daeseong cited),https://www.veritas-a.com/news/articleView.html?idxno=583659,preliminary,2025-11-18,2026-11-22
+2026,korean,common,6,wrong_rate,69.7,EBS 분석 (베리타스알파 인용),Veritas Alpha (EBS/Daeseong cited),https://www.veritas-a.com/news/articleView.html?idxno=583659,preliminary,2025-11-18,2026-11-22
+2026,korean,common,6,wrong_rate,68.6,대성 분석 (베리타스알파 인용),Veritas Alpha (EBS/Daeseong cited),https://www.veritas-a.com/news/articleView.html?idxno=583659,preliminary,2025-11-18,2026-11-22
+2026,math,common,21,wrong_rate,97.6,EBS 분석 (베리타스알파 인용; 선택과목 표 3곳 동일값),Veritas Alpha (EBS/Daeseong cited),https://www.veritas-a.com/news/articleView.html?idxno=583659,preliminary,2025-11-18,2026-11-22
+2026,math,common,22,wrong_rate,96.7,EBS 분석 (베리타스알파 인용; 선택과목 표 3곳 동일값),Veritas Alpha (EBS/Daeseong cited),https://www.veritas-a.com/news/articleView.html?idxno=583659,preliminary,2025-11-18,2026-11-22
+2026,math,common,21,wrong_rate,98.9,"대성 분석, 확률과통계 선택자 표 (베리타스알파 인용)",Veritas Alpha (EBS/Daeseong cited),https://www.veritas-a.com/news/articleView.html?idxno=583659,preliminary,2025-11-18,2026-11-22
+2026,math,common,22,wrong_rate,99,"대성 분석, 확률과통계 선택자 표 (베리타스알파 인용)",Veritas Alpha (EBS/Daeseong cited),https://www.veritas-a.com/news/articleView.html?idxno=583659,preliminary,2025-11-18,2026-11-22
+2026,math,common,21,wrong_rate,88.7,"대성 분석, 미적분 선택자 표 (베리타스알파 인용)",Veritas Alpha (EBS/Daeseong cited),https://www.veritas-a.com/news/articleView.html?idxno=583659,preliminary,2025-11-18,2026-11-22
+2026,math,common,22,wrong_rate,86.4,"대성 분석, 미적분 선택자 표 (베리타스알파 인용)",Veritas Alpha (EBS/Daeseong cited),https://www.veritas-a.com/news/articleView.html?idxno=583659,preliminary,2025-11-18,2026-11-22
+2026,math,common,21,wrong_rate,95.4,"대성 분석, 기하 선택자 표 (베리타스알파 인용)",Veritas Alpha (EBS/Daeseong cited),https://www.veritas-a.com/news/articleView.html?idxno=583659,preliminary,2025-11-18,2026-11-22
+2026,math,common,22,wrong_rate,92.9,"대성 분석, 기하 선택자 표 (베리타스알파 인용)",Veritas Alpha (EBS/Daeseong cited),https://www.veritas-a.com/news/articleView.html?idxno=583659,preliminary,2025-11-18,2026-11-22
+2026,math,probability,30,wrong_rate,97.6,"대성 분석, 확률과통계 선택자 (베리타스알파 인용)",Veritas Alpha (EBS/Daeseong cited),https://www.veritas-a.com/news/articleView.html?idxno=583659,preliminary,2025-11-18,2026-11-22
+2026,math,probability,30,wrong_rate,98.5,"EBS 분석, 확률과통계 선택자 (베리타스알파 인용)",Veritas Alpha (EBS/Daeseong cited),https://www.veritas-a.com/news/articleView.html?idxno=583659,preliminary,2025-11-18,2026-11-22
+2026,math,calculus,30,wrong_rate,94.9,"대성 분석, 미적분 선택자 (베리타스알파 인용)",Veritas Alpha (EBS/Daeseong cited),https://www.veritas-a.com/news/articleView.html?idxno=583659,preliminary,2025-11-18,2026-11-22
+2026,math,calculus,30,wrong_rate,96.9,"EBS 분석, 미적분 선택자 (베리타스알파 인용)",Veritas Alpha (EBS/Daeseong cited),https://www.veritas-a.com/news/articleView.html?idxno=583659,preliminary,2025-11-18,2026-11-22
+2026,math,geometry,30,wrong_rate,92.9,"대성 분석, 기하 선택자 (베리타스알파 인용)",Veritas Alpha (EBS/Daeseong cited),https://www.veritas-a.com/news/articleView.html?idxno=583659,preliminary,2025-11-18,2026-11-22
+2026,math,geometry,30,wrong_rate,96,"EBS 분석, 기하 선택자 (베리타스알파 인용)",Veritas Alpha (EBS/Daeseong cited),https://www.veritas-a.com/news/articleView.html?idxno=583659,preliminary,2025-11-18,2026-11-22
+2026,english,english,34,wrong_rate,80.3,대성 분석 (베리타스알파 인용),Veritas Alpha (EBS/Daeseong cited),https://www.veritas-a.com/news/articleView.html?idxno=583659,preliminary,2025-11-18,2026-11-22
+2026,english,english,34,wrong_rate,80.5,EBS 분석 (베리타스알파 인용),Veritas Alpha (EBS/Daeseong cited),https://www.veritas-a.com/news/articleView.html?idxno=583659,preliminary,2025-11-18,2026-11-22
+2026,english,english,33,wrong_rate,79.8,대성 분석 (베리타스알파 인용),Veritas Alpha (EBS/Daeseong cited),https://www.veritas-a.com/news/articleView.html?idxno=583659,preliminary,2025-11-18,2026-11-22
+2026,english,english,33,wrong_rate,81.6,EBS 분석 (베리타스알파 인용),Veritas Alpha (EBS/Daeseong cited),https://www.veritas-a.com/news/articleView.html?idxno=583659,preliminary,2025-11-18,2026-11-22
+2026,english,english,34,wrong_rate,79,메가스터디 집계 (기사에 '79%에 육박'으로 표기),교육을 비추다(kyobit),https://www.kyobit.com/news/articleView.html?idxno=2388,preliminary,2025-11-15,2026-11-22
+2026,korean,common,12,correct_rate,24,메가스터디 예측 정답률 (공식 통계 아님),인사이트,https://www.insight.co.kr/news/529030,preliminary,2025-11-14,2026-11-22
+2026,korean,common,1,correct_rate,96,"오르비 [Crux] 환동 글 서술 기준 언어와매체 선택자 (원문 표는 이미지, 본문 서술값만 기록)",오르비 '2026 수능 국어 정답률 관찰 결과',https://orbi.kr/00075677104,preliminary,2025-11-19,2026-11-22
+2026,korean,common,2,correct_rate,95,"오르비 [Crux] 환동 글 서술 기준 언어와매체 선택자 (원문 표는 이미지, 본문 서술값만 기록)",오르비 '2026 수능 국어 정답률 관찰 결과',https://orbi.kr/00075677104,preliminary,2025-11-19,2026-11-22
+2026,korean,common,3,correct_rate,79,"오르비 [Crux] 환동 글 서술 기준 언어와매체 선택자 (원문 표는 이미지, 본문 서술값만 기록)",오르비 '2026 수능 국어 정답률 관찰 결과',https://orbi.kr/00075677104,preliminary,2025-11-19,2026-11-22
+2026,korean,common,4,correct_rate,86,"오르비 [Crux] 환동 글 서술 기준 언어와매체 선택자 (원문 표는 이미지, 본문 서술값만 기록)",오르비 '2026 수능 국어 정답률 관찰 결과',https://orbi.kr/00075677104,preliminary,2025-11-19,2026-11-22
+2026,korean,common,5,correct_rate,79,"오르비 [Crux] 환동 글 서술 기준 언어와매체 선택자 (원문 표는 이미지, 본문 서술값만 기록)",오르비 '2026 수능 국어 정답률 관찰 결과',https://orbi.kr/00075677104,preliminary,2025-11-19,2026-11-22
+2026,korean,common,6,correct_rate,42,"오르비 [Crux] 환동 글 서술 기준 언어와매체 선택자 (원문 표는 이미지, 본문 서술값만 기록)",오르비 '2026 수능 국어 정답률 관찰 결과',https://orbi.kr/00075677104,preliminary,2025-11-19,2026-11-22
+2026,korean,common,7,correct_rate,58,"오르비 [Crux] 환동 글 서술 기준 언어와매체 선택자 (원문 표는 이미지, 본문 서술값만 기록)",오르비 '2026 수능 국어 정답률 관찰 결과',https://orbi.kr/00075677104,preliminary,2025-11-19,2026-11-22
+2026,korean,common,8,correct_rate,60,"오르비 [Crux] 환동 글 서술 기준 언어와매체 선택자 (원문 표는 이미지, 본문 서술값만 기록)",오르비 '2026 수능 국어 정답률 관찰 결과',https://orbi.kr/00075677104,preliminary,2025-11-19,2026-11-22
+2026,korean,common,9,correct_rate,94,"오르비 [Crux] 환동 글 서술 기준 언어와매체 선택자 (원문 표는 이미지, 본문 서술값만 기록)",오르비 '2026 수능 국어 정답률 관찰 결과',https://orbi.kr/00075677104,preliminary,2025-11-19,2026-11-22
+2026,korean,common,10,correct_rate,75,"오르비 [Crux] 환동 글 서술 기준 언어와매체 선택자 (원문 표는 이미지, 본문 서술값만 기록)",오르비 '2026 수능 국어 정답률 관찰 결과',https://orbi.kr/00075677104,preliminary,2025-11-19,2026-11-22
+2026,korean,common,11,correct_rate,60,"오르비 [Crux] 환동 글 서술 기준 언어와매체 선택자 (원문 표는 이미지, 본문 서술값만 기록)",오르비 '2026 수능 국어 정답률 관찰 결과',https://orbi.kr/00075677104,preliminary,2025-11-19,2026-11-22
+2026,korean,common,12,correct_rate,35,"오르비 [Crux] 환동 글 서술 기준 언어와매체 선택자 (원문 표는 이미지, 본문 서술값만 기록)",오르비 '2026 수능 국어 정답률 관찰 결과',https://orbi.kr/00075677104,preliminary,2025-11-19,2026-11-22
+2026,korean,common,13,correct_rate,89,"오르비 [Crux] 환동 글 서술 기준 언어와매체 선택자 (원문 표는 이미지, 본문 서술값만 기록)",오르비 '2026 수능 국어 정답률 관찰 결과',https://orbi.kr/00075677104,preliminary,2025-11-19,2026-11-22
+2026,korean,common,14,correct_rate,71,"오르비 [Crux] 환동 글 서술 기준 언어와매체 선택자 (원문 표는 이미지, 본문 서술값만 기록)",오르비 '2026 수능 국어 정답률 관찰 결과',https://orbi.kr/00075677104,preliminary,2025-11-19,2026-11-22
+2026,korean,common,15,correct_rate,52,"오르비 [Crux] 환동 글 서술 기준 언어와매체 선택자 (원문 표는 이미지, 본문 서술값만 기록)",오르비 '2026 수능 국어 정답률 관찰 결과',https://orbi.kr/00075677104,preliminary,2025-11-19,2026-11-22
+2026,korean,common,16,correct_rate,62,"오르비 [Crux] 환동 글 서술 기준 언어와매체 선택자 (원문 표는 이미지, 본문 서술값만 기록)",오르비 '2026 수능 국어 정답률 관찰 결과',https://orbi.kr/00075677104,preliminary,2025-11-19,2026-11-22
+2026,korean,common,17,correct_rate,50,"오르비 [Crux] 환동 글 서술 기준 언어와매체 선택자 (원문 표는 이미지, 본문 서술값만 기록)",오르비 '2026 수능 국어 정답률 관찰 결과',https://orbi.kr/00075677104,preliminary,2025-11-19,2026-11-22
+2026,korean,common,21,correct_rate,62,"오르비 [Crux] 환동 글 서술 기준 언어와매체 선택자 (원문 표는 이미지, 본문 서술값만 기록)",오르비 '2026 수능 국어 정답률 관찰 결과',https://orbi.kr/00075677104,preliminary,2025-11-19,2026-11-22
+2026,korean,common,22,correct_rate,80,"오르비 [Crux] 환동 글 서술 기준 언어와매체 선택자 (원문 표는 이미지, 본문 서술값만 기록)",오르비 '2026 수능 국어 정답률 관찰 결과',https://orbi.kr/00075677104,preliminary,2025-11-19,2026-11-22
+2026,korean,common,23,correct_rate,72,"오르비 [Crux] 환동 글 서술 기준 언어와매체 선택자 (원문 표는 이미지, 본문 서술값만 기록)",오르비 '2026 수능 국어 정답률 관찰 결과',https://orbi.kr/00075677104,preliminary,2025-11-19,2026-11-22
+2026,korean,common,24,correct_rate,73,"오르비 [Crux] 환동 글 서술 기준 언어와매체 선택자 (원문 표는 이미지, 본문 서술값만 기록)",오르비 '2026 수능 국어 정답률 관찰 결과',https://orbi.kr/00075677104,preliminary,2025-11-19,2026-11-22
+2026,korean,common,25,correct_rate,85,"오르비 [Crux] 환동 글 서술 기준 언어와매체 선택자 (원문 표는 이미지, 본문 서술값만 기록)",오르비 '2026 수능 국어 정답률 관찰 결과',https://orbi.kr/00075677104,preliminary,2025-11-19,2026-11-22
+2026,korean,common,26,correct_rate,78,"오르비 [Crux] 환동 글 서술 기준 언어와매체 선택자 (원문 표는 이미지, 본문 서술값만 기록)",오르비 '2026 수능 국어 정답률 관찰 결과',https://orbi.kr/00075677104,preliminary,2025-11-19,2026-11-22
+2026,korean,common,27,correct_rate,89,"오르비 [Crux] 환동 글 서술 기준 언어와매체 선택자 (원문 표는 이미지, 본문 서술값만 기록)",오르비 '2026 수능 국어 정답률 관찰 결과',https://orbi.kr/00075677104,preliminary,2025-11-19,2026-11-22
+2026,korean,common,28,correct_rate,85,"오르비 [Crux] 환동 글 서술 기준 언어와매체 선택자 (원문 표는 이미지, 본문 서술값만 기록)",오르비 '2026 수능 국어 정답률 관찰 결과',https://orbi.kr/00075677104,preliminary,2025-11-19,2026-11-22
+2026,korean,common,29,correct_rate,65,"오르비 [Crux] 환동 글 서술 기준 언어와매체 선택자 (원문 표는 이미지, 본문 서술값만 기록)",오르비 '2026 수능 국어 정답률 관찰 결과',https://orbi.kr/00075677104,preliminary,2025-11-19,2026-11-22
+2026,korean,common,30,correct_rate,83,"오르비 [Crux] 환동 글 서술 기준 언어와매체 선택자 (원문 표는 이미지, 본문 서술값만 기록)",오르비 '2026 수능 국어 정답률 관찰 결과',https://orbi.kr/00075677104,preliminary,2025-11-19,2026-11-22
+2026,korean,common,31,correct_rate,73,"오르비 [Crux] 환동 글 서술 기준 언어와매체 선택자 (원문 표는 이미지, 본문 서술값만 기록)",오르비 '2026 수능 국어 정답률 관찰 결과',https://orbi.kr/00075677104,preliminary,2025-11-19,2026-11-22
+2026,korean,common,32,correct_rate,81,"오르비 [Crux] 환동 글 서술 기준 언어와매체 선택자 (원문 표는 이미지, 본문 서술값만 기록)",오르비 '2026 수능 국어 정답률 관찰 결과',https://orbi.kr/00075677104,preliminary,2025-11-19,2026-11-22
+2026,korean,common,33,correct_rate,82,"오르비 [Crux] 환동 글 서술 기준 언어와매체 선택자 (원문 표는 이미지, 본문 서술값만 기록)",오르비 '2026 수능 국어 정답률 관찰 결과',https://orbi.kr/00075677104,preliminary,2025-11-19,2026-11-22
+2026,korean,common,34,correct_rate,63,"오르비 [Crux] 환동 글 서술 기준 언어와매체 선택자 (원문 표는 이미지, 본문 서술값만 기록)",오르비 '2026 수능 국어 정답률 관찰 결과',https://orbi.kr/00075677104,preliminary,2025-11-19,2026-11-22
+2026,korean,language_media,35,correct_rate,44,"오르비 [Crux] 환동 글 서술 기준 언어와매체 선택자 (원문 표는 이미지, 본문 서술값만 기록)",오르비 '2026 수능 국어 정답률 관찰 결과',https://orbi.kr/00075677104,preliminary,2025-11-19,2026-11-22
+2026,korean,language_media,36,correct_rate,36,"오르비 [Crux] 환동 글 서술 기준 언어와매체 선택자 (원문 표는 이미지, 본문 서술값만 기록)",오르비 '2026 수능 국어 정답률 관찰 결과',https://orbi.kr/00075677104,preliminary,2025-11-19,2026-11-22
+2026,korean,language_media,37,correct_rate,66,"오르비 [Crux] 환동 글 서술 기준 언어와매체 선택자 (원문 표는 이미지, 본문 서술값만 기록)",오르비 '2026 수능 국어 정답률 관찰 결과',https://orbi.kr/00075677104,preliminary,2025-11-19,2026-11-22
+2026,korean,language_media,38,correct_rate,89,"오르비 [Crux] 환동 글 서술 기준 언어와매체 선택자 (원문 표는 이미지, 본문 서술값만 기록)",오르비 '2026 수능 국어 정답률 관찰 결과',https://orbi.kr/00075677104,preliminary,2025-11-19,2026-11-22
+2026,korean,language_media,39,correct_rate,37,"오르비 [Crux] 환동 글 서술 기준 언어와매체 선택자 (원문 표는 이미지, 본문 서술값만 기록)",오르비 '2026 수능 국어 정답률 관찰 결과',https://orbi.kr/00075677104,preliminary,2025-11-19,2026-11-22
+2026,korean,language_media,41,correct_rate,79,"오르비 [Crux] 환동 글 서술 기준 언어와매체 선택자 (원문 표는 이미지, 본문 서술값만 기록)",오르비 '2026 수능 국어 정답률 관찰 결과',https://orbi.kr/00075677104,preliminary,2025-11-19,2026-11-22
+2026,korean,language_media,42,correct_rate,68,"오르비 [Crux] 환동 글 서술 기준 언어와매체 선택자 (원문 표는 이미지, 본문 서술값만 기록)",오르비 '2026 수능 국어 정답률 관찰 결과',https://orbi.kr/00075677104,preliminary,2025-11-19,2026-11-22

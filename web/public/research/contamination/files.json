@@ -1,0 +1,70 @@
+[
+  {
+    "file": "README.md",
+    "sha256": "4f94e8ef7c1b8c8ac62f0fcdad972a8242eece9902659e50ef411ee741e78be2"
+  },
+  {
+    "file": "analyze.py",
+    "sha256": "ac6b08b38cc95376ec83f4dd5eb9ba1a6accdc6020d03c478d320a4242dcf19e"
+  },
+  {
+    "file": "logit.py",
+    "sha256": "3d105fbd31eed52fd5dde77b09f75737aa81189e23706b1319e118af3f503c72"
+  },
+  {
+    "file": "snapshot.mjs",
+    "sha256": "3ed4a7c61cbc5403e389b6dd1178c8ac005ef5f33fcb18e7c0ab3b4030e15022"
+  },
+  {
+    "file": "publish.mjs",
+    "sha256": "fc61d62773762a66950989937a87870a65d9fc2d259196ea8079871e7e4f724e"
+  },
+  {
+    "file": "publication.test.mjs",
+    "sha256": "62f9d9b6a0b56da3b85377e75d9b0883d42023730f0eb9d80fed7e543adcd8b0"
+  },
+  {
+    "file": "inputs/2025-answers.json",
+    "sha256": "a53def343f976957afc959c6b236a55f3c40c06b663449bc9baade54355df0b9"
+  },
+  {
+    "file": "inputs/2026-answers.json",
+    "sha256": "5186ef8b4c4da45bd634009f87e9c10830ca57b46a90fd254523bbe3a346b030"
+  },
+  {
+    "file": "inputs/2027-answers.json",
+    "sha256": "2a71e6c62fd9951354c68d095a613ee24983dae3172cccaec311e4411c39bd6c"
+  },
+  {
+    "file": "inputs/manifest.json",
+    "sha256": "49c3811ad5324c1863531ef4a7c5d014a15e0da5d33a5bffc53aab13f3dbcfc1"
+  },
+  {
+    "file": "inputs/human/2025-item-rates.csv",
+    "sha256": "bd2dd52803f3a54fb501ebac38d15e639016ac147b657396743211566cd1c8ae"
+  },
+  {
+    "file": "inputs/human/2026-item-rates.csv",
+    "sha256": "eff5342388597521fb4d76ba2032c4b048088d2b2e8a0fb6b62b7ade36c25653"
+  },
+  {
+    "file": "inputs/human/2027-item-rates.csv",
+    "sha256": "ddacbe18118fe915d67f51f7389e8e506bcaa6446bb03d3410bcecd63ba100e8"
+  },
+  {
+    "file": "inputs/human/exam-level.csv",
+    "sha256": "fc88279e3608b9f4fa511eeb45abb5708545ac57549ad738939edda9215652bc"
+  },
+  {
+    "file": "outputs/contrasts.csv",
+    "sha256": "8f55c6833b7969def52aee5d50b85ca236e93dc4f1eed12ddf947b3d1043c0a3"
+  },
+  {
+    "file": "outputs/panel.csv",
+    "sha256": "183de6ac77a1e3399cd5bfd316309e0875222ec9bce574fc0fc20581c89f23a7"
+  },
+  {
+    "file": "outputs/summary.json",
+    "sha256": "f1006f72335d6af2d25ca2b1c08b37b6f41b5e0013c833bbd38b58c18bee2746"
+  }
+]

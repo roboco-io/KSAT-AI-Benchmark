@@ -1,0 +1,292 @@
+{
+ "positions_with_kind_change_across_years": [],
+ "positions_with_points_change_across_years": 22,
+ "seed": 20261122,
+ "replicates": 10000,
+ "panel": [
+  "claude-haiku-5-5",
+  "claude-opus-5-5",
+  "claude-sonnet-5-5",
+  "deepseek-v4.1-flash",
+  "gpt-6-luna",
+  "solar-pro-4"
+ ],
+ "pooled_2026_minus_2027": {
+  "models": [
+   "claude-haiku-5-5",
+   "claude-opus-5-5",
+   "claude-sonnet-5-5",
+   "deepseek-v4.1-flash",
+   "gpt-6-luna",
+   "solar-pro-4"
+  ],
+  "n_models": 6,
+  "delta_pp": -0.34,
+  "ci95_pp": [
+   -3.4,
+   2.72
+  ]
+ },
+ "pooled_2025_minus_2027": {
+  "models": [
+   "claude-haiku-5-5",
+   "claude-opus-5-5",
+   "claude-sonnet-5-5",
+   "gpt-6-luna"
+  ],
+  "n_models": 4,
+  "delta_pp": -2.55,
+  "ci95_pp": [
+   -5.95,
+   0.85
+  ]
+ },
+ "placebo_2025_minus_2026_both_public": {
+  "models": [
+   "claude-fable-5-1",
+   "claude-haiku-5-5",
+   "claude-opus-5-5",
+   "claude-sonnet-5-5",
+   "gemini-4-argon",
+   "gpt-6-astra",
+   "gpt-6-luna",
+   "gpt-6.1-sol",
+   "kimi-k3"
+  ],
+  "n_models": 9,
+  "delta_pp": -0.3,
+  "ci95_pp": [
+   -2.19,
+   1.51
+  ]
+ },
+ "ceiling_models_at_or_above_98pct": {
+  "2025": 6,
+  "2026": 4,
+  "2027": 8
+ },
+ "completed_models": {
+  "2025": 9,
+  "2026": 11,
+  "2027": 17
+ },
+ "pooled_2026_minus_2027_below_ceiling": {
+  "models": [
+   "claude-haiku-5-5",
+   "claude-sonnet-5-5",
+   "deepseek-v4.1-flash",
+   "gpt-6-luna",
+   "solar-pro-4"
+  ],
+  "n_models": 5,
+  "delta_pp": -0.54,
+  "ci95_pp": [
+   -4.22,
+   3.13
+  ]
+ },
+ "difficulty_adjusted": {
+  "note": "public_effect_pp > 0 means higher accuracy on public exams after adjustment. Exam-level human indicators only; 2027 indicators are preliminary.",
+  "unadjusted_same_model": {
+   "n_models": 6,
+   "n_obs": 2352,
+   "public_log_odds": -0.113,
+   "public_effect_pp": -0.83,
+   "public_log_odds_ci95": [
+    -0.49,
+    0.22
+   ],
+   "public_effect_pp_ci95": [
+    -3.48,
+    1.67
+   ]
+  },
+  "adjusted_position_fe": {
+   "n_models": 6,
+   "n_obs": 2352,
+   "public_log_odds": -0.038,
+   "public_effect_pp": -0.22,
+   "slope_cutoff_per_10_points": 0.413,
+   "slope_english_logit_share": -0.078,
+   "public_log_odds_ci95": [
+    -0.69,
+    0.45
+   ],
+   "public_effect_pp_ci95": [
+    -3.39,
+    2.23
+   ],
+   "slope_cutoff_ci95": [
+    -0.69,
+    1.48
+   ]
+  },
+  "adjusted_coarse_fe": {
+   "n_models": 6,
+   "n_obs": 2352,
+   "public_log_odds": 0.114,
+   "public_effect_pp": 0.84,
+   "slope_cutoff_per_10_points": 0.842,
+   "slope_english_logit_share": 0.099,
+   "public_log_odds_ci95": [
+    -0.38,
+    0.54
+   ],
+   "public_effect_pp_ci95": [
+    -2.71,
+    3.93
+   ],
+   "slope_cutoff_ci95": [
+    0.12,
+    1.58
+   ]
+  },
+  "adjusted_position_fe_2027_cutoffs_low": {
+   "n_models": 6,
+   "n_obs": 2352,
+   "public_log_odds": -0.048,
+   "public_effect_pp": -0.28,
+   "slope_cutoff_per_10_points": 0.486,
+   "slope_english_logit_share": -0.089
+  },
+  "adjusted_position_fe_2027_cutoffs_high": {
+   "n_models": 6,
+   "n_obs": 2352,
+   "public_log_odds": -0.044,
+   "public_effect_pp": -0.25,
+   "slope_cutoff_per_10_points": 0.325,
+   "slope_english_logit_share": -0.078
+  },
+  "ceiling_models_excluded": [
+   "claude-opus-5-5"
+  ],
+  "adjusted_position_fe_without_ceiling_models": {
+   "n_models": 5,
+   "n_obs": 1911,
+   "public_log_odds": -0.01,
+   "public_effect_pp": -0.07,
+   "slope_cutoff_per_10_points": 0.458,
+   "slope_english_logit_share": 0.131,
+   "public_log_odds_ci95": [
+    -0.66,
+    0.48
+   ],
+   "public_effect_pp_ci95": [
+    -3.81,
+    2.78
+   ],
+   "slope_cutoff_ci95": [
+    -0.62,
+    1.5
+   ]
+  }
+ },
+ "by_points_tier": {
+  "easy_2pt": {
+   "n_questions_per_year": {
+    "2025": 84,
+    "2026": 84,
+    "2027": 84
+   },
+   "public_minus_2027_pp": -0.3,
+   "ci95_pp": [
+    -3.95,
+    3.56
+   ]
+  },
+  "medium_3pt": {
+   "n_questions_per_year": {
+    "2025": 44,
+    "2026": 44,
+    "2027": 44
+   },
+   "public_minus_2027_pp": -3.03,
+   "ci95_pp": [
+    -8.9,
+    3.09
+   ]
+  },
+  "hard_4pt_math_only": {
+   "n_questions_per_year": {
+    "2025": 19,
+    "2026": 19,
+    "2027": 19
+   },
+   "public_minus_2027_pp": 4.39,
+   "ci95_pp": [
+    -4.13,
+    13.33
+   ]
+  }
+ },
+ "human_item_rate_coverage": {
+  "2025-korean": {
+   "questions_with_human_rate": 9,
+   "questions_total": 56
+  },
+  "2025-math": {
+   "questions_with_human_rate": 46,
+   "questions_total": 46
+  },
+  "2025-english": {
+   "questions_with_human_rate": 22,
+   "questions_total": 45
+  },
+  "2026-korean": {
+   "questions_with_human_rate": 38,
+   "questions_total": 56
+  },
+  "2026-math": {
+   "questions_with_human_rate": 5,
+   "questions_total": 46
+  },
+  "2026-english": {
+   "questions_with_human_rate": 2,
+   "questions_total": 45
+  },
+  "2027-korean": {
+   "questions_with_human_rate": 5,
+   "questions_total": 56
+  },
+  "2027-math": {
+   "questions_with_human_rate": 1,
+   "questions_total": 46
+  },
+  "2027-english": {
+   "questions_with_human_rate": 0,
+   "questions_total": 45
+  }
+ },
+ "item_level_human_difficulty_predicts_model": {
+  "2025-math": {
+   "n_questions": 46,
+   "n_models": 9,
+   "model_errors": 10,
+   "slope_model_log_odds_per_human_logit": 0.508,
+   "ci95": [
+    0.15,
+    1.22
+   ]
+  },
+  "2025-english": {
+   "n_questions": 22,
+   "n_models": 9,
+   "model_errors": 10,
+   "slope_model_log_odds_per_human_logit": 1.688,
+   "ci95": [
+    0.51,
+    6.19
+   ]
+  },
+  "2026-korean": {
+   "n_questions": 38,
+   "n_models": 11,
+   "model_errors": 69,
+   "slope_model_log_odds_per_human_logit": 0.083,
+   "ci95": [
+    -0.36,
+    0.52
+   ]
+  }
+ }
+}

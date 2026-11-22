@@ -1,0 +1,41 @@
+model,year,completed,started_at,prompt_version,input,score,max_score,correct,abstained,errors,korean_acc,math_acc,english_acc,acc
+claude-fable-5-1,2025,True,2026-10-17,1,original PDF rendered at 200 DPI,370,376,145,0,0,0.9821,0.9783,1.0,0.9864
+claude-fable-5-1,2026,True,2026-10-12,1,original PDF rendered at 200 DPI,376,376,147,0,0,1.0,1.0,1.0,1.0
+claude-fable-5-2,2027,True,2026-11-19,2,original PDF rendered at 200 DPI,376,376,147,0,0,1.0,1.0,1.0,1.0
+claude-haiku-5-5,2025,True,2026-10-17,1,original PDF rendered at 200 DPI,337,376,132,5,0,0.8393,0.9783,0.8889,0.898
+claude-haiku-5-5,2026,True,2026-10-12,1,original PDF rendered at 200 DPI,333,376,130,10,0,0.75,1.0,0.9333,0.8844
+claude-haiku-5-5,2027,True,2026-11-19,2,original PDF rendered at 200 DPI,348,376,135,6,0,0.7857,1.0,1.0,0.9184
+claude-opus-5-5,2025,True,2026-10-17,1,original PDF rendered at 200 DPI,372,376,145,0,0,0.9821,1.0,0.9778,0.9864
+claude-opus-5-5,2026,True,2026-10-12,1,original PDF rendered at 200 DPI,376,376,147,0,0,1.0,1.0,1.0,1.0
+claude-opus-5-5,2027,True,2026-11-19,2,original PDF rendered at 200 DPI,374,376,146,0,0,1.0,1.0,0.9778,0.9932
+claude-sonnet-5-5,2025,True,2026-10-17,1,original PDF rendered at 200 DPI,370,376,145,0,0,0.9821,1.0,0.9778,0.9864
+claude-sonnet-5-5,2026,True,2026-10-12,1,original PDF rendered at 200 DPI,361,376,141,0,0,0.9107,1.0,0.9778,0.9592
+claude-sonnet-5-5,2027,True,2026-11-19,2,original PDF rendered at 200 DPI,369,376,144,0,0,0.9464,1.0,1.0,0.9796
+deepseek-v4.1-flash,2026,True,2026-10-12,1,original PDF rendered at 200 DPI,281,376,109,3,0,0.4643,0.8261,1.0,0.7415
+deepseek-v4.1-flash,2027,True,2026-11-19,2,original PDF rendered at 200 DPI,259,376,101,2,0,0.4464,0.7174,0.9556,0.6871
+gemini-4-argon,2025,True,2026-10-17,1,original PDF rendered at 200 DPI,374,376,146,0,0,0.9821,1.0,1.0,0.9932
+gemini-4-argon,2026,True,2026-10-16,1,original PDF rendered at 200 DPI,376,376,147,0,0,1.0,1.0,1.0,1.0
+gemini-4-carbon,2027,True,2026-11-19,2,original PDF rendered at 200 DPI,376,376,147,0,0,1.0,1.0,1.0,1.0
+gemini-4-hydrogen,2027,True,2026-11-21,2,original PDF rendered at 200 DPI,376,376,147,0,0,1.0,1.0,1.0,1.0
+gemini-4-neon,2027,True,2026-11-19,2,original PDF rendered at 200 DPI,376,376,147,0,0,1.0,1.0,1.0,1.0
+glm-5.3-flash,2026,False,2026-10-12,1,original PDF rendered at 200 DPI,233,376,84,0,56,0.0,0.9348,0.9111,0.5714
+glm-5.3-flash,2027,True,2026-11-19,2,original PDF rendered at 200 DPI,301,376,116,1,0,0.8393,0.8913,0.6222,0.7891
+gpt-6-astra,2025,True,2026-10-17,1,original PDF rendered at 200 DPI,374,376,146,0,0,0.9821,1.0,1.0,0.9932
+gpt-6-astra,2026,True,2026-10-12,1,original PDF rendered at 200 DPI,376,376,147,0,0,1.0,1.0,1.0,1.0
+gpt-6-luna,2025,True,2026-10-17,1,original PDF rendered at 200 DPI,269,376,105,5,0,0.4643,0.8478,0.8889,0.7143
+gpt-6-luna,2026,True,2026-10-12,1,original PDF rendered at 200 DPI,292,376,112,2,0,0.5,0.9348,0.9111,0.7619
+gpt-6-luna,2027,True,2026-11-19,2,original PDF rendered at 200 DPI,298,376,117,4,0,0.5893,0.8696,0.9778,0.7959
+gpt-6.1-sol,2025,True,2026-10-17,1,original PDF rendered at 200 DPI,372,376,145,0,0,0.9643,1.0,1.0,0.9864
+gpt-6.1-sol,2026,True,2026-10-12,1,original PDF rendered at 200 DPI,368,376,143,0,0,0.9286,1.0,1.0,0.9728
+gpt-6.1-terra,2027,True,2026-11-19,2,original PDF rendered at 200 DPI,372,376,146,1,0,1.0,0.9783,1.0,0.9932
+gpt-6.2-astra,2027,True,2026-11-19,2,original PDF rendered at 200 DPI,376,376,147,0,0,1.0,1.0,1.0,1.0
+gpt-6.2-sol,2027,True,2026-11-19,2,original PDF rendered at 200 DPI,376,376,147,0,0,1.0,1.0,1.0,1.0
+k-exaone-2.5,2026,False,2026-11-19,3,"frozen text transcription of the original PDF, format version 1",150,376,64,0,83,0.1964,0.1739,1.0,0.4354
+kimi-k3,2025,True,2026-10-17,1,original PDF rendered at 200 DPI,357,376,139,0,0,0.8929,0.9783,0.9778,0.9456
+kimi-k3,2026,True,2026-10-12,1,original PDF rendered at 200 DPI,354,376,138,1,0,0.8571,0.9783,1.0,0.9388
+kimi-k3.1-pro,2027,True,2026-11-19,2,original PDF rendered at 200 DPI,357,376,140,0,0,0.9107,0.9565,1.0,0.9524
+qwen3.8-27b,2026,False,2026-10-12,1,original PDF rendered at 200 DPI,305,376,116,5,16,0.4821,0.9783,0.9778,0.7891
+qwen4-max,2027,True,2026-11-19,2,original PDF rendered at 200 DPI,365,376,142,0,0,0.9107,1.0,1.0,0.966
+solar-mini-4-5-preview,2027,True,2026-11-20,3,"frozen text transcription of the original PDF, format version 1",359,376,140,1,0,0.9107,0.9783,0.9778,0.9524
+solar-pro-4,2026,True,2026-11-19,3,"frozen text transcription of the original PDF, format version 1",360,376,141,0,0,0.9286,0.9783,0.9778,0.9592
+solar-pro-4,2027,True,2026-11-19,3,"frozen text transcription of the original PDF, format version 1",355,376,140,0,0,0.9464,0.9565,0.9556,0.9524

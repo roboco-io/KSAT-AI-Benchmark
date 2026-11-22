@@ -1,0 +1,35 @@
+{
+  "title": "AI는 이미 공개된 수능에서 점수가 더 높은가?",
+  "publishedAt": "2026-11-22",
+  "panelModels": 6,
+  "questionsPerYear": 147,
+  "rows": [
+    {
+      "label": "보정 없음",
+      "models": 6,
+      "effectPp": -0.83,
+      "ci95Pp": [
+        -3.48,
+        1.67
+      ]
+    },
+    {
+      "label": "난이도 보정",
+      "models": 6,
+      "effectPp": -0.22,
+      "ci95Pp": [
+        -3.39,
+        2.23
+      ]
+    },
+    {
+      "label": "천장 모델 제외",
+      "models": 5,
+      "effectPp": -0.07,
+      "ci95Pp": [
+        -3.81,
+        2.78
+      ]
+    }
+  ]
+}

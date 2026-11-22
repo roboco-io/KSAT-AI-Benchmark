@@ -1,0 +1,163 @@
+year,subject,section,number,metric,value_pct,population,source_name,source_url,basis,published,retrieved
+2025,korean,common,8,correct_rate,21.9,종로학원 가채점 화작 선택자,종로학원 가채점 예측치 (베리타스알파 보도),https://www.veritas-a.com/news/articleView.html?idxno=530387,preliminary,2024-11-19,2026-11-22
+2025,korean,common,8,correct_rate,19.5,종로학원 가채점 언매 선택자,종로학원 가채점 예측치 (베리타스알파 보도),https://www.veritas-a.com/news/articleView.html?idxno=530387,preliminary,2024-11-19,2026-11-22
+2025,korean,common,7,correct_rate,28.1,종로학원 가채점 화작 선택자,종로학원 가채점 예측치 (베리타스알파 보도),https://www.veritas-a.com/news/articleView.html?idxno=530387,preliminary,2024-11-19,2026-11-22
+2025,korean,common,7,correct_rate,33.3,종로학원 가채점 언매 선택자,종로학원 가채점 예측치 (베리타스알파 보도),https://www.veritas-a.com/news/articleView.html?idxno=530387,preliminary,2024-11-19,2026-11-22
+2025,korean,common,21,correct_rate,34.4,종로학원 가채점 화작 선택자,종로학원 가채점 예측치 (베리타스알파 보도),https://www.veritas-a.com/news/articleView.html?idxno=530387,preliminary,2024-11-19,2026-11-22
+2025,korean,common,16,correct_rate,37.9,종로학원 가채점 언매 선택자,종로학원 가채점 예측치 (베리타스알파 보도),https://www.veritas-a.com/news/articleView.html?idxno=530387,preliminary,2024-11-19,2026-11-22
+2025,korean,hwajak,45,correct_rate,50,종로학원 가채점 화작 선택자,종로학원 가채점 예측치 (베리타스알파 보도),https://www.veritas-a.com/news/articleView.html?idxno=530387,preliminary,2024-11-19,2026-11-22
+2025,korean,language_media,44,correct_rate,50.6,종로학원 가채점 언매 선택자,종로학원 가채점 예측치 (베리타스알파 보도),https://www.veritas-a.com/news/articleView.html?idxno=530387,preliminary,2024-11-19,2026-11-22
+2025,math,common,22,correct_rate,4.9,종로학원 가채점 확통 선택자,종로학원 가채점 예측치 (베리타스알파 보도),https://www.veritas-a.com/news/articleView.html?idxno=530387,preliminary,2024-11-19,2026-11-22
+2025,math,common,22,correct_rate,11.4,종로학원 가채점 미적 선택자,종로학원 가채점 예측치 (베리타스알파 보도),https://www.veritas-a.com/news/articleView.html?idxno=530387,preliminary,2024-11-19,2026-11-22
+2025,math,common,21,correct_rate,7.3,종로학원 가채점 확통 선택자,종로학원 가채점 예측치 (베리타스알파 보도),https://www.veritas-a.com/news/articleView.html?idxno=530387,preliminary,2024-11-19,2026-11-22
+2025,math,common,21,correct_rate,30,종로학원 가채점 미적 선택자,종로학원 가채점 예측치 (베리타스알파 보도),https://www.veritas-a.com/news/articleView.html?idxno=530387,preliminary,2024-11-19,2026-11-22
+2025,math,common,20,correct_rate,9.8,종로학원 가채점 확통 선택자,종로학원 가채점 예측치 (베리타스알파 보도),https://www.veritas-a.com/news/articleView.html?idxno=530387,preliminary,2024-11-19,2026-11-22
+2025,math,common,20,correct_rate,31.4,종로학원 가채점 미적 선택자,종로학원 가채점 예측치 (베리타스알파 보도),https://www.veritas-a.com/news/articleView.html?idxno=530387,preliminary,2024-11-19,2026-11-22
+2025,math,probability,30,correct_rate,7.3,종로학원 가채점 확통 선택자,종로학원 가채점 예측치 (베리타스알파 보도),https://www.veritas-a.com/news/articleView.html?idxno=530387,preliminary,2024-11-19,2026-11-22
+2025,math,probability,29,correct_rate,14.6,종로학원 가채점 확통 선택자,종로학원 가채점 예측치 (베리타스알파 보도),https://www.veritas-a.com/news/articleView.html?idxno=530387,preliminary,2024-11-19,2026-11-22
+2025,math,probability,25,correct_rate,19.5,종로학원 가채점 확통 선택자,종로학원 가채점 예측치 (베리타스알파 보도),https://www.veritas-a.com/news/articleView.html?idxno=530387,preliminary,2024-11-19,2026-11-22
+2025,math,calculus,29,correct_rate,11.4,종로학원 가채점 미적 선택자,종로학원 가채점 예측치 (베리타스알파 보도),https://www.veritas-a.com/news/articleView.html?idxno=530387,preliminary,2024-11-19,2026-11-22
+2025,math,calculus,30,correct_rate,18.6,종로학원 가채점 미적 선택자,종로학원 가채점 예측치 (베리타스알파 보도),https://www.veritas-a.com/news/articleView.html?idxno=530387,preliminary,2024-11-19,2026-11-22
+2025,math,calculus,28,correct_rate,21.4,종로학원 가채점 미적 선택자,종로학원 가채점 예측치 (베리타스알파 보도),https://www.veritas-a.com/news/articleView.html?idxno=530387,preliminary,2024-11-19,2026-11-22
+2025,english,english,32,correct_rate,34.7,종로학원 가채점,종로학원 가채점 예측치 (베리타스알파 보도),https://www.veritas-a.com/news/articleView.html?idxno=530387,preliminary,2024-11-19,2026-11-22
+2025,korean,common,3,wrong_rate,39.3,"나무위키 서술, 집계 주체 미명시",나무위키 2025학년도 수능/의견 (집계 주체 미명시),https://namu.wiki/w/2025%ED%95%99%EB%85%84%EB%8F%84%20%EB%8C%80%ED%95%99%EC%88%98%ED%95%99%EB%8A%A5%EB%A0%A5%EC%8B%9C%ED%97%98/%EC%9D%98%EA%B2%AC,preliminary,,2026-11-22
+2025,korean,common,7,wrong_rate,72.7,"나무위키 서술, 집계 주체 미명시",나무위키 2025학년도 수능/의견 (집계 주체 미명시),https://namu.wiki/w/2025%ED%95%99%EB%85%84%EB%8F%84%20%EB%8C%80%ED%95%99%EC%88%98%ED%95%99%EB%8A%A5%EB%A0%A5%EC%8B%9C%ED%97%98/%EC%9D%98%EA%B2%AC,preliminary,,2026-11-22
+2025,korean,common,8,wrong_rate,81.3,"나무위키 서술, 집계 주체 미명시",나무위키 2025학년도 수능/의견 (집계 주체 미명시),https://namu.wiki/w/2025%ED%95%99%EB%85%84%EB%8F%84%20%EB%8C%80%ED%95%99%EC%88%98%ED%95%99%EB%8A%A5%EB%A0%A5%EC%8B%9C%ED%97%98/%EC%9D%98%EA%B2%AC,preliminary,,2026-11-22
+2025,korean,common,16,wrong_rate,69.4,"나무위키 서술, 집계 주체 미명시",나무위키 2025학년도 수능/의견 (집계 주체 미명시),https://namu.wiki/w/2025%ED%95%99%EB%85%84%EB%8F%84%20%EB%8C%80%ED%95%99%EC%88%98%ED%95%99%EB%8A%A5%EB%A0%A5%EC%8B%9C%ED%97%98/%EC%9D%98%EA%B2%AC,preliminary,,2026-11-22
+2025,korean,hwajak,45,wrong_rate,48.4,화작 선택자 기준; 집계 주체 미명시,나무위키 2025학년도 수능/의견 (집계 주체 미명시),https://namu.wiki/w/2025%ED%95%99%EB%85%84%EB%8F%84%20%EB%8C%80%ED%95%99%EC%88%98%ED%95%99%EB%8A%A5%EB%A0%A5%EC%8B%9C%ED%97%98/%EC%9D%98%EA%B2%AC,preliminary,,2026-11-22
+2025,math,common,15,correct_rate,36.6,"나무위키 서술, 집계 주체 미명시",나무위키 2025학년도 수능/의견 (집계 주체 미명시),https://namu.wiki/w/2025%ED%95%99%EB%85%84%EB%8F%84%20%EB%8C%80%ED%95%99%EC%88%98%ED%95%99%EB%8A%A5%EB%A0%A5%EC%8B%9C%ED%97%98/%EC%9D%98%EA%B2%AC,preliminary,,2026-11-22
+2025,math,common,21,correct_rate,12.4,"나무위키 서술, 집계 주체 미명시",나무위키 2025학년도 수능/의견 (집계 주체 미명시),https://namu.wiki/w/2025%ED%95%99%EB%85%84%EB%8F%84%20%EB%8C%80%ED%95%99%EC%88%98%ED%95%99%EB%8A%A5%EB%A0%A5%EC%8B%9C%ED%97%98/%EC%9D%98%EA%B2%AC,preliminary,,2026-11-22
+2025,math,common,22,correct_rate,5.6,재집계 후 값(나무위키 주석상 이전 4.0); 집계 주체 미명시,나무위키 2025학년도 수능/의견 (집계 주체 미명시),https://namu.wiki/w/2025%ED%95%99%EB%85%84%EB%8F%84%20%EB%8C%80%ED%95%99%EC%88%98%ED%95%99%EB%8A%A5%EB%A0%A5%EC%8B%9C%ED%97%98/%EC%9D%98%EA%B2%AC,preliminary,,2026-11-22
+2025,math,probability,29,correct_rate,23.2,EBSi 기준(나무위키 명시),나무위키 2025학년도 수능/의견 (집계 주체 미명시),https://namu.wiki/w/2025%ED%95%99%EB%85%84%EB%8F%84%20%EB%8C%80%ED%95%99%EC%88%98%ED%95%99%EB%8A%A5%EB%A0%A5%EC%8B%9C%ED%97%98/%EC%9D%98%EA%B2%AC,preliminary,,2026-11-22
+2025,math,probability,30,correct_rate,20.2,"나무위키 서술, 집계 주체 미명시",나무위키 2025학년도 수능/의견 (집계 주체 미명시),https://namu.wiki/w/2025%ED%95%99%EB%85%84%EB%8F%84%20%EB%8C%80%ED%95%99%EC%88%98%ED%95%99%EB%8A%A5%EB%A0%A5%EC%8B%9C%ED%97%98/%EC%9D%98%EA%B2%AC,preliminary,,2026-11-22
+2025,math,geometry,26,wrong_rate,49.5,"나무위키 서술, 집계 주체 미명시",나무위키 2025학년도 수능/의견 (집계 주체 미명시),https://namu.wiki/w/2025%ED%95%99%EB%85%84%EB%8F%84%20%EB%8C%80%ED%95%99%EC%88%98%ED%95%99%EB%8A%A5%EB%A0%A5%EC%8B%9C%ED%97%98/%EC%9D%98%EA%B2%AC,preliminary,,2026-11-22
+2025,math,geometry,27,wrong_rate,65.5,"나무위키 서술, 집계 주체 미명시",나무위키 2025학년도 수능/의견 (집계 주체 미명시),https://namu.wiki/w/2025%ED%95%99%EB%85%84%EB%8F%84%20%EB%8C%80%ED%95%99%EC%88%98%ED%95%99%EB%8A%A5%EB%A0%A5%EC%8B%9C%ED%97%98/%EC%9D%98%EA%B2%AC,preliminary,,2026-11-22
+2025,math,geometry,30,correct_rate,5.9,EBSi 기준(나무위키 명시),나무위키 2025학년도 수능/의견 (집계 주체 미명시),https://namu.wiki/w/2025%ED%95%99%EB%85%84%EB%8F%84%20%EB%8C%80%ED%95%99%EC%88%98%ED%95%99%EB%8A%A5%EB%A0%A5%EC%8B%9C%ED%97%98/%EC%9D%98%EA%B2%AC,preliminary,,2026-11-22
+2025,english,english,15,correct_rate,37.8,"나무위키 서술, 집계 주체 미명시",나무위키 2025학년도 수능/의견 (집계 주체 미명시),https://namu.wiki/w/2025%ED%95%99%EB%85%84%EB%8F%84%20%EB%8C%80%ED%95%99%EC%88%98%ED%95%99%EB%8A%A5%EB%A0%A5%EC%8B%9C%ED%97%98/%EC%9D%98%EA%B2%AC,preliminary,,2026-11-22
+2025,english,english,24,wrong_rate,63.8,"나무위키 서술, 집계 주체 미명시",나무위키 2025학년도 수능/의견 (집계 주체 미명시),https://namu.wiki/w/2025%ED%95%99%EB%85%84%EB%8F%84%20%EB%8C%80%ED%95%99%EC%88%98%ED%95%99%EB%8A%A5%EB%A0%A5%EC%8B%9C%ED%97%98/%EC%9D%98%EA%B2%AC,preliminary,,2026-11-22
+2025,english,english,32,wrong_rate,84.3,"나무위키 서술, 집계 주체 미명시",나무위키 2025학년도 수능/의견 (집계 주체 미명시),https://namu.wiki/w/2025%ED%95%99%EB%85%84%EB%8F%84%20%EB%8C%80%ED%95%99%EC%88%98%ED%95%99%EB%8A%A5%EB%A0%A5%EC%8B%9C%ED%97%98/%EC%9D%98%EA%B2%AC,preliminary,,2026-11-22
+2025,english,english,37,wrong_rate,69.7,"나무위키 서술, 집계 주체 미명시",나무위키 2025학년도 수능/의견 (집계 주체 미명시),https://namu.wiki/w/2025%ED%95%99%EB%85%84%EB%8F%84%20%EB%8C%80%ED%95%99%EC%88%98%ED%95%99%EB%8A%A5%EB%A0%A5%EC%8B%9C%ED%97%98/%EC%9D%98%EA%B2%AC,preliminary,,2026-11-22
+2025,korean,common,7,correct_rate,28,화작 선택자,오르비 '2025 수능 국어 정답률 관찰 결과' (집계 출처 미명시),https://orbi.kr/00070041579,preliminary,2024-11-19,2026-11-22
+2025,korean,common,7,correct_rate,37,언매 선택자,오르비 '2025 수능 국어 정답률 관찰 결과' (집계 출처 미명시),https://orbi.kr/00070041579,preliminary,2024-11-19,2026-11-22
+2025,korean,common,8,correct_rate,18,화작 선택자,오르비 '2025 수능 국어 정답률 관찰 결과' (집계 출처 미명시),https://orbi.kr/00070041579,preliminary,2024-11-19,2026-11-22
+2025,korean,common,8,correct_rate,26,언매 선택자,오르비 '2025 수능 국어 정답률 관찰 결과' (집계 출처 미명시),https://orbi.kr/00070041579,preliminary,2024-11-19,2026-11-22
+2025,korean,common,16,correct_rate,31,화작 선택자,오르비 '2025 수능 국어 정답률 관찰 결과' (집계 출처 미명시),https://orbi.kr/00070041579,preliminary,2024-11-19,2026-11-22
+2025,korean,common,16,correct_rate,42,언매 선택자,오르비 '2025 수능 국어 정답률 관찰 결과' (집계 출처 미명시),https://orbi.kr/00070041579,preliminary,2024-11-19,2026-11-22
+2025,korean,common,18,correct_rate,46,화작 선택자,오르비 '2025 수능 국어 정답률 관찰 결과' (집계 출처 미명시),https://orbi.kr/00070041579,preliminary,2024-11-19,2026-11-22
+2025,korean,common,18,correct_rate,60,언매 선택자,오르비 '2025 수능 국어 정답률 관찰 결과' (집계 출처 미명시),https://orbi.kr/00070041579,preliminary,2024-11-19,2026-11-22
+2025,korean,common,21,correct_rate,50,화작 선택자,오르비 '2025 수능 국어 정답률 관찰 결과' (집계 출처 미명시),https://orbi.kr/00070041579,preliminary,2024-11-19,2026-11-22
+2025,korean,common,21,correct_rate,65,언매 선택자,오르비 '2025 수능 국어 정답률 관찰 결과' (집계 출처 미명시),https://orbi.kr/00070041579,preliminary,2024-11-19,2026-11-22
+2025,korean,common,20,correct_rate,50,화작 선택자,오르비 '2025 수능 국어 정답률 관찰 결과' (집계 출처 미명시),https://orbi.kr/00070041579,preliminary,2024-11-19,2026-11-22
+2025,korean,common,20,correct_rate,69,언매 선택자,오르비 '2025 수능 국어 정답률 관찰 결과' (집계 출처 미명시),https://orbi.kr/00070041579,preliminary,2024-11-19,2026-11-22
+2025,english,english,24,correct_rate,42,"메가스터디 정답률 기준(오르비 글 명시, 집계 시점 미상)",오르비 '2025학년도 수능 영어 총평' TOP7 (메가스터디 기준 명시),https://orbi.kr/00069944995,preliminary,2024-11-15,2026-11-22
+2025,english,english,31,correct_rate,38,"메가스터디 정답률 기준(오르비 글 명시, 집계 시점 미상)",오르비 '2025학년도 수능 영어 총평' TOP7 (메가스터디 기준 명시),https://orbi.kr/00069944995,preliminary,2024-11-15,2026-11-22
+2025,english,english,32,correct_rate,23,"메가스터디 정답률 기준(오르비 글 명시, 집계 시점 미상)",오르비 '2025학년도 수능 영어 총평' TOP7 (메가스터디 기준 명시),https://orbi.kr/00069944995,preliminary,2024-11-15,2026-11-22
+2025,english,english,33,correct_rate,41,"메가스터디 정답률 기준(오르비 글 명시, 집계 시점 미상)",오르비 '2025학년도 수능 영어 총평' TOP7 (메가스터디 기준 명시),https://orbi.kr/00069944995,preliminary,2024-11-15,2026-11-22
+2025,english,english,34,correct_rate,34,"메가스터디 정답률 기준(오르비 글 명시, 집계 시점 미상)",오르비 '2025학년도 수능 영어 총평' TOP7 (메가스터디 기준 명시),https://orbi.kr/00069944995,preliminary,2024-11-15,2026-11-22
+2025,english,english,37,correct_rate,34,"메가스터디 정답률 기준(오르비 글 명시, 집계 시점 미상)",오르비 '2025학년도 수능 영어 총평' TOP7 (메가스터디 기준 명시),https://orbi.kr/00069944995,preliminary,2024-11-15,2026-11-22
+2025,english,english,38,correct_rate,50,"메가스터디 정답률 기준(오르비 글 명시, 집계 시점 미상)",오르비 '2025학년도 수능 영어 총평' TOP7 (메가스터디 기준 명시),https://orbi.kr/00069944995,preliminary,2024-11-15,2026-11-22
+2025,english,english,12,correct_rate,80,"괄호 수치, 정답률 라벨/출처 미명시(문맥상 정답률로 해석)",오르비 '2025학년도 수능 영어 총평' 괄호 수치,https://orbi.kr/00069944995,preliminary,2024-11-15,2026-11-22
+2025,english,english,13,correct_rate,78,"괄호 수치, 정답률 라벨/출처 미명시(문맥상 정답률로 해석)",오르비 '2025학년도 수능 영어 총평' 괄호 수치,https://orbi.kr/00069944995,preliminary,2024-11-15,2026-11-22
+2025,english,english,14,correct_rate,77,"괄호 수치, 정답률 라벨/출처 미명시(문맥상 정답률로 해석)",오르비 '2025학년도 수능 영어 총평' 괄호 수치,https://orbi.kr/00069944995,preliminary,2024-11-15,2026-11-22
+2025,english,english,15,correct_rate,52,"괄호 수치, 정답률 라벨/출처 미명시(문맥상 정답률로 해석)",오르비 '2025학년도 수능 영어 총평' 괄호 수치,https://orbi.kr/00069944995,preliminary,2024-11-15,2026-11-22
+2025,english,english,21,correct_rate,52,"괄호 수치, 정답률 라벨/출처 미명시(문맥상 정답률로 해석)",오르비 '2025학년도 수능 영어 총평' 괄호 수치,https://orbi.kr/00069944995,preliminary,2024-11-15,2026-11-22
+2025,english,english,22,correct_rate,93,"괄호 수치, 정답률 라벨/출처 미명시(문맥상 정답률로 해석)",오르비 '2025학년도 수능 영어 총평' 괄호 수치,https://orbi.kr/00069944995,preliminary,2024-11-15,2026-11-22
+2025,english,english,23,correct_rate,71,"괄호 수치, 정답률 라벨/출처 미명시(문맥상 정답률로 해석)",오르비 '2025학년도 수능 영어 총평' 괄호 수치,https://orbi.kr/00069944995,preliminary,2024-11-15,2026-11-22
+2025,english,english,29,correct_rate,60,"괄호 수치, 정답률 라벨/출처 미명시(문맥상 정답률로 해석)",오르비 '2025학년도 수능 영어 총평' 괄호 수치,https://orbi.kr/00069944995,preliminary,2024-11-15,2026-11-22
+2025,english,english,30,correct_rate,61,"괄호 수치, 정답률 라벨/출처 미명시(문맥상 정답률로 해석)",오르비 '2025학년도 수능 영어 총평' 괄호 수치,https://orbi.kr/00069944995,preliminary,2024-11-15,2026-11-22
+2025,english,english,35,correct_rate,66,"괄호 수치, 정답률 라벨/출처 미명시(문맥상 정답률로 해석)",오르비 '2025학년도 수능 영어 총평' 괄호 수치,https://orbi.kr/00069944995,preliminary,2024-11-15,2026-11-22
+2025,english,english,36,correct_rate,57,"괄호 수치, 정답률 라벨/출처 미명시(문맥상 정답률로 해석)",오르비 '2025학년도 수능 영어 총평' 괄호 수치,https://orbi.kr/00069944995,preliminary,2024-11-15,2026-11-22
+2025,english,english,39,correct_rate,59,"괄호 수치, 정답률 라벨/출처 미명시(문맥상 정답률로 해석)",오르비 '2025학년도 수능 영어 총평' 괄호 수치,https://orbi.kr/00069944995,preliminary,2024-11-15,2026-11-22
+2025,english,english,40,correct_rate,68,"괄호 수치, 정답률 라벨/출처 미명시(문맥상 정답률로 해석)",오르비 '2025학년도 수능 영어 총평' 괄호 수치,https://orbi.kr/00069944995,preliminary,2024-11-15,2026-11-22
+2025,english,english,41,correct_rate,69,"괄호 수치, 정답률 라벨/출처 미명시(문맥상 정답률로 해석)",오르비 '2025학년도 수능 영어 총평' 괄호 수치,https://orbi.kr/00069944995,preliminary,2024-11-15,2026-11-22
+2025,english,english,42,correct_rate,70,"괄호 수치, 정답률 라벨/출처 미명시(문맥상 정답률로 해석)",오르비 '2025학년도 수능 영어 총평' 괄호 수치,https://orbi.kr/00069944995,preliminary,2024-11-15,2026-11-22
+2025,math,common,1,correct_rate,94,확통 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,common,1,correct_rate,97,기하 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,common,1,correct_rate,98,미적 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,common,2,correct_rate,92,확통 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,common,2,correct_rate,96,기하 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,common,2,correct_rate,97,미적 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,common,3,correct_rate,88,확통 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,common,3,correct_rate,95,기하 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,common,3,correct_rate,97,미적 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,common,4,correct_rate,92,확통 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,common,4,correct_rate,95,기하 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,common,4,correct_rate,97,미적 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,common,5,correct_rate,89,확통 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,common,5,correct_rate,93,기하 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,common,5,correct_rate,94,미적 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,common,6,correct_rate,73,확통 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,common,6,correct_rate,83,기하 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,common,6,correct_rate,90,미적 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,common,7,correct_rate,89,확통 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,common,7,correct_rate,93,기하 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,common,7,correct_rate,97,미적 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,common,8,correct_rate,76,확통 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,common,8,correct_rate,89,기하 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,common,8,correct_rate,94,미적 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,common,9,correct_rate,83,확통 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,common,9,correct_rate,91,기하 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,common,9,correct_rate,95,미적 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,common,10,correct_rate,71,확통 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,common,10,correct_rate,85,기하 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,common,10,correct_rate,92,미적 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,common,11,correct_rate,79,확통 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,common,11,correct_rate,90,기하 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,common,11,correct_rate,93,미적 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,common,12,correct_rate,64,확통 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,common,12,correct_rate,79,기하 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,common,12,correct_rate,87,미적 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,common,13,correct_rate,52,확통 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,common,13,correct_rate,75,기하 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,common,13,correct_rate,84,미적 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,common,14,correct_rate,31,확통 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,common,14,correct_rate,52,기하 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,common,14,correct_rate,60,미적 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,common,15,correct_rate,33,확통 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,common,15,correct_rate,48,기하 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,common,15,correct_rate,60,미적 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,common,16,correct_rate,85,확통 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,common,16,correct_rate,92,기하 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,common,16,correct_rate,95,미적 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,common,17,correct_rate,86,확통 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,common,17,correct_rate,91,기하 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,common,17,correct_rate,94,미적 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,common,18,correct_rate,70,확통 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,common,18,correct_rate,83,기하 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,common,18,correct_rate,88,미적 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,common,19,correct_rate,72,확통 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,common,19,correct_rate,82,기하 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,common,19,correct_rate,90,미적 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,common,20,correct_rate,6,확통 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,common,20,correct_rate,16,기하 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,common,20,correct_rate,34,미적 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,common,21,correct_rate,8,확통 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,common,21,correct_rate,16,기하 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,common,21,correct_rate,30,미적 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,common,22,correct_rate,4,확통 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,common,22,correct_rate,8,기하 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,common,22,correct_rate,13,미적 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,probability,23,correct_rate,85,확통 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,probability,24,correct_rate,76,확통 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,probability,25,correct_rate,68,확통 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,probability,26,correct_rate,83,확통 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,probability,27,correct_rate,29,확통 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,probability,28,correct_rate,60,확통 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,probability,29,correct_rate,42,확통 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,probability,30,correct_rate,34,확통 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,geometry,23,correct_rate,94,기하 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,geometry,24,correct_rate,89,기하 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,geometry,25,correct_rate,83,기하 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,geometry,26,correct_rate,62,기하 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,geometry,27,correct_rate,49,기하 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,geometry,28,correct_rate,33,기하 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,geometry,29,correct_rate,49,기하 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,geometry,30,correct_rate,7,기하 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,calculus,23,correct_rate,96,미적 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,calculus,24,correct_rate,92,미적 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,calculus,25,correct_rate,90,미적 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,calculus,26,correct_rate,83,미적 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,calculus,27,correct_rate,49,미적 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,calculus,28,correct_rate,31,미적 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,calculus,29,correct_rate,21,미적 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
+2025,math,calculus,30,correct_rate,18,미적 선택자,오르비 '2025수능 수학 선택과목 집단별 정답률' (출처 미명시),https://orbi.kr/00069935353,preliminary,2024-11-14,2026-11-22
