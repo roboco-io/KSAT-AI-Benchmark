@@ -13,7 +13,9 @@ function analysis(data:BenchmarkData) {
     else if(minimum<maximum)paragraphs.push(`이번 평가에서는 ${subjects.filter(subject=>Math.min(...subject.scores)===minimum).map(subject=>subject.label).join('·')}의 원점수가 상대적으로 낮았습니다. 영역별 점수와 문항별 풀이를 함께 확인할 수 있습니다.`);
   }
   const unsolved=data.questions.filter(q=>q.status==='unsolved');
-  if(unsolved.length)paragraphs.push(`${unsolved.length}문항은 이 모델이 풀지 못한 문제로 확정해 0점 처리했습니다. ${[...new Set(unsolved.map(q=>q.explanation))].join(' ')}`);
+  // With many unsolved questions the per-question reasons differ; the summary then points to the question records.
+  const unsolvedReasons=[...new Set(unsolved.map(q=>q.explanation))];
+  if(unsolved.length)paragraphs.push(`${unsolved.length}문항은 이 모델이 풀지 못한 문제로 확정해 0점 처리했습니다. ${unsolvedReasons.length<=2?unsolvedReasons.join(' '):`${unsolved.map(q=>q.id.replace(/^\d{4}-(p4-)?/,'')).join(', ')} 문항이며, 문항별 시도 횟수와 실패 원인은 문항 기록에 적었습니다.`}`);
   const failed=data.summary.failed_requests;
   if(failed?.total)paragraphs.push(`실패한 요청은 ${failed.total}건입니다. 이 중 ${failed.with_usage}건은 제공자가 사용량을 보고해 API 환산 비용에 포함했습니다(약 $${failed.recorded_cost_usd.toFixed(2)}).${failed.rejected_before_processing?` ${failed.rejected_before_processing}건은 인증·한도·결제 문제 등으로 처리 전에 거절되어 과금되지 않았을 가능성이 높습니다.`:''}${failed.usage_unknown?` ${failed.usage_unknown}건은 시간 초과나 연결 오류로 사용량이 보고되지 않아 비용에 빠져 있습니다. 같은 요청의 입력 토큰으로 추정한 입력 비용은 약 $${failed.unknown_estimated_input_cost_usd.toFixed(2)}이며, 추론·출력 토큰은 알 수 없어 실제 청구액은 이보다 클 수 있습니다.`:''}`);
   if(data.execution_stats)paragraphs.push(data.execution_stats.retry_count>0?(finished?(unsolved.length?`재시도가 있었고, 풀이 실패로 확정한 ${unsolved.length}문항을 뺀 모든 문항에 답 또는 기권을 제출했습니다.`:'재시도가 있었지만 최종적으로 모든 문항에 답 또는 기권을 제출했습니다.'):'재시도 후에도 미제출 문항이 남았습니다.'):'기록된 묶음 재시도는 없습니다.');
