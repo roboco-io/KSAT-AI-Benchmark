@@ -987,21 +987,16 @@ html body {
 .period4-link:hover { color:var(--indigo); text-decoration:underline; }
 .period4-link small { font-weight:500; color:var(--muted); }
 
-/* 2027 period 4 highlight: neon red accent on the first screen */
-:root { --neon:#ff2d55; --neon-soft:rgba(255,45,85,.12); --neon-glow:0 0 6px rgba(255,45,85,.75),0 0 18px rgba(255,45,85,.45); }
-.new-badge { background:var(--neon); color:#fff; box-shadow:var(--neon-glow); }
-.period4-notice { padding:8px 12px; border:1px solid var(--neon); border-radius:6px; background:var(--neon-soft); box-shadow:var(--neon-glow); }
-.period4-notice strong { color:var(--neon); }
-.period4-notice button, .period4-callout button { color:var(--neon); }
-.period4-callout { border:2px solid var(--neon); background:var(--neon-soft); box-shadow:var(--neon-glow); animation:period4-pulse 2.4s ease-in-out infinite; }
-.period4-callout strong { color:var(--neon); }
-.exam-session-tabs button:has(.new-badge) { border-color:var(--neon); box-shadow:var(--neon-glow); }
-th.period4-column { color:var(--neon); background:var(--neon-soft); box-shadow:inset 0 -2px 0 var(--neon); }
-td.period4-column { background:var(--neon-soft); }
-.period4-link { color:var(--neon); text-shadow:0 0 8px rgba(255,45,85,.45); }
-.period4-link:hover { color:var(--neon); }
-@keyframes period4-pulse { 0%,100% { box-shadow:0 0 6px rgba(255,45,85,.6),0 0 14px rgba(255,45,85,.3); } 50% { box-shadow:0 0 10px rgba(255,45,85,.95),0 0 28px rgba(255,45,85,.55); } }
-@media (prefers-reduced-motion: reduce) { .period4-callout { animation:none; } }
+/* 2027 period 4 highlight: plain site accent (no glow or animation) */
+.new-badge { background:var(--indigo); color:var(--surface); }
+.period4-notice { padding:8px 12px; border:1px solid var(--line); border-radius:6px; background:var(--selection); }
+.period4-notice strong, .period4-callout strong { color:var(--indigo); }
+.period4-notice button, .period4-callout button { color:var(--indigo); }
+.period4-callout { border:1px solid var(--line); background:var(--selection); }
+.exam-session-tabs button:has(.new-badge) { border-color:var(--indigo); }
+th.period4-column { background:var(--accent-fill); }
+td.period4-column { background:var(--surface-soft); }
+.period4-link, .period4-link:hover { color:var(--indigo); }
 .track-count { display:block; font-size:10px; font-weight:500; color:var(--muted); white-space:nowrap; }
 .comparison-accuracy .track-count { font-size:11px; margin-top:2px; }
 .run-setup { display:block; font-size:10px; line-height:1.5; color:var(--muted); margin-top:3px; }
