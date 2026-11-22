@@ -59,7 +59,7 @@ test('Q37 policy does not credit other fourth-choice answers or change usage and
  const questions=ids.map(id=>({id,kind:'multiple_choice',correct_answer:5,points:3}));
  const dataset={academic_year:2026,questions,solver_groups:[{id:'group',question_ids:ids}],exams:[{id:'exam',question_ids:ids,max_score:9}]};
  const run={protocol:{model:'fixture'},groups:{group:{attempts:[{usage:{input_tokens:100,output_tokens:20},time_seconds:9}]}},answers:Object.fromEntries(ids.map(id=>[id,{decision:'answered',answer:4,explanation:'original'}])),errors:{},usage:{input_tokens:100,output_tokens:20},wall_time_seconds:7};
- const report=buildReport(dataset,run,[],{input_per_million:2,output_per_million:10},'fixture');
+ const report=buildReport(dataset,run,[],{input_per_million:2,cached_input_per_million:0.1,cache_write_per_million:0,output_per_million:10},'fixture');
  assert.deepEqual(report.questions.map(q=>q.status),['correct','incorrect','incorrect']);
  assert.equal(report.summary.correct,1);
  assert.equal(report.summary.incorrect,2);
@@ -96,7 +96,7 @@ test('solve time uses model stream time when recorded and excludes auth, pacing 
 test('provider usage audit replaces the response-based cost and keeps per-question shares',async()=>{
  const {applyProviderUsage}=await import('../report.mjs');
  const report={summary:{estimated_cost_usd:1},questions:[{estimated_cost_usd:0.25},{estimated_cost_usd:0.75}],exams:[{summary:{estimated_cost_usd:1}}],limitations:[]};
- applyProviderUsage(report,{source:'google_cloud_monitoring',input_tokens:1_000_000,output_tokens_including_thinking:500_000,window:{start:'a',end:'b'},queried_at:'2026-11-21T00:00:00Z'},{input_per_million:2,output_per_million:10});
+ applyProviderUsage(report,{source:'google_cloud_monitoring',input_tokens:1_000_000,output_tokens_including_thinking:500_000,window:{start:'a',end:'b'},queried_at:'2026-11-21T00:00:00Z'},{input_per_million:2,cached_input_per_million:0.1,cache_write_per_million:0,output_per_million:10});
  assert.equal(report.summary.estimated_cost_usd,7);assert.equal(report.summary.response_estimated_cost_usd,1);
  assert.equal(report.summary.cost_basis,'provider_usage_metrics');
  assert.deepEqual(report.questions.map(q=>q.estimated_cost_usd),[1.75,5.25]);
@@ -121,4 +121,17 @@ test('agy route strips API keys, keeps AI credits off and counts thinking in out
  assert.deepEqual(Object.keys(env).sort(),['HOME','PATH']);
  assert.equal(AGY_SETTINGS.useG1Credits,false);
  assert.deepEqual(normalizeAgyUsage({inputTokens:26926,outputTokens:1758,cachedReadTokens:12557,thoughtTokens:244}),{input_tokens:39483,cached_input_tokens:12557,cache_write_input_tokens:0,output_tokens:1758,reasoning_output_tokens:244});
+});
+
+test('failed requests separate reported usage from unknown usage', async () => {
+ const {failedRequests}=await import('../report.mjs');
+ const run={groups:{g:{attempts:[
+  {status:'completed',usage:{input_tokens:1000,output_tokens:10}},
+  {status:'error',usage:{input_tokens:1000,output_tokens:5000}},
+  {status:'error',error:'PI_ABORTED: request cancelled or timed out',time_seconds:900,api_usage_unknown:true,estimated_input_tokens:1000},
+  {status:'error',error:'AGY_ABORTED: request cancelled',time_seconds:900,question_ids:['x'],api_usage_unknown:true},
+  {status:'error',error:'PI_TURN_FAILED: provider did not finish a complete answer',time_seconds:2}]}}};
+ const f=failedRequests(run,{input_per_million:2,cached_input_per_million:0.1,cache_write_per_million:0,output_per_million:10});
+ assert.equal(f.total,4);assert.equal(f.with_usage,1);assert.equal(f.rejected_before_processing,1);assert.equal(f.usage_unknown,2);
+ assert.equal(f.recorded_cost_usd,0.052);assert.equal(f.unknown_estimated_input_tokens,1000);assert.equal(f.unknown_estimated_input_cost_usd,0.002);
 });

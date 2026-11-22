@@ -153,6 +153,12 @@ async function solveGroup(group,iteration) {
   console.log(`${group.id}: submitted ${Object.keys(answers).length}, abstained ${Object.values(answers).filter(a=>a.decision==='abstained').length}`);
  } catch(error) {
   attempt.status='error';attempt.error=String(error.message);
+  if(!(attempt.usage?.input_tokens>0||attempt.usage?.output_tokens>0)){
+   // Failed request without reported usage: the provider may still bill input and reasoning tokens.
+   attempt.api_usage_unknown=true;
+   const same=(state.groups[group.id].attempts||[]).filter(a=>a!==attempt&&a.usage?.input_tokens>0&&JSON.stringify(a.question_ids)===JSON.stringify(attempt.question_ids));
+   if(same.length)attempt.estimated_input_tokens=Math.max(...same.map(a=>a.usage.input_tokens));
+  }
   for(const q of questions)state.errors[q.id]={status:'error',message:attempt.error};
   if(repeatedInspectionBlock(state.groups[group.id].attempts)) {
    const scope=inspectionScope(attempt.error)||'unspecified';

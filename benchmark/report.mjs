@@ -28,6 +28,22 @@ export function applyProviderUsage(report,audit,pricing) {
  report.limitations=[...(report.limitations??[]),'비용은 Google Cloud 사용량 지표('+audit.queried_at.slice(0,10)+' 조회)의 입력 '+fmt(input)+'토큰과 추론 포함 출력 '+fmt(audit.output_tokens_including_thinking)+'토큰으로 다시 계산했습니다. Gemini 호환 API는 추론 토큰을 응답 사용량에서 빼고 보고하므로, 응답 기준 추정(US$'+recorded.toFixed(4)+')은 실제보다 작습니다. 청구서 금액은 아닙니다.'];
  return report;
 }
+// Failed requests: how many there were, how many reported usage (already in the cost) and how many did not.
+// For unreported ones only the input of an identical request can be estimated; reasoning/output stays unknown.
+export function failedRequests(run,pricing) {
+ const all=Object.values(run.groups||{}).flatMap(g=>g.attempts||[]),failed=all.filter(a=>a.status==='error');
+ // Older runs have no estimated_input_tokens: use the largest reported input of a request with the same questions.
+ const inputOf=a=>Number.isSafeInteger(a.estimated_input_tokens)?a.estimated_input_tokens:Math.max(0,...all.filter(b=>b.usage?.input_tokens>0&&JSON.stringify(b.question_ids)===JSON.stringify(a.question_ids)).map(b=>b.usage.input_tokens));
+ const known=failed.filter(a=>a.usage?.input_tokens>0||a.usage?.output_tokens>0);
+ // A request refused before processing (auth/quota/billing block, or a provider error within 10 s with no usage) is most likely not billed.
+ const refused=a=>/^(PI_BLOCKED|AGY_BLOCKED|SUBSCRIPTION_BLOCKED|MODEL_MISMATCH)/.test(a.error||'')||/^AGY_TURN_FAILED: Failed to start/.test(a.error||'')||(/^PI_TURN_FAILED: provider did not finish/.test(a.error||'')&&!/RequestTimeout/.test(a.error||'')&&(a.time_seconds??0)<10);
+ const rejected=failed.filter(a=>!known.includes(a)&&refused(a));
+ const unknown=failed.filter(a=>!known.includes(a)&&!rejected.includes(a));
+ const estimatedInput=unknown.reduce((s,a)=>s+inputOf(a),0);
+ return {total:failed.length,with_usage:known.length,rejected_before_processing:rejected.length,usage_unknown:unknown.length,
+  recorded_cost_usd:Number(known.reduce((s,a)=>s+(Number.isFinite(a.estimated_cost_usd)&&a.estimated_cost_usd>0?a.estimated_cost_usd:estimateCost(a.usage,pricing)),0).toFixed(8)),
+  unknown_estimated_input_tokens:estimatedInput,unknown_estimated_input_cost_usd:Number(estimateCost({input_tokens:estimatedInput},pricing).toFixed(8))};
+}
 export function buildReport(dataset,run,sources,pricing,engine,figureDependent=[]) {
  const textInput=/^frozen text transcription/.test(run.protocol.input||'');
  const stats={};
@@ -62,6 +78,7 @@ export function buildReport(dataset,run,sources,pricing,engine,figureDependent=[
  const summary=summarize(dataset.questions,run.answers,run.errors,run.usage,run.wall_time_seconds,totalSeconds,pricing);
  summary.solve_time_seconds=solveTotal;summary.solve_time_basis=bases.size===1?[...bases][0]:bases.size?'mixed':null;
  summary.estimated_cost_usd=Number(Object.values(stats).reduce((s,g)=>s+g.cost,0).toFixed(8));
+ summary.failed_requests=failedRequests(run,pricing);
  const report=applyBenchmarkGrading({schema_version:2,generated_at:new Date().toISOString(),run_id:run.run_id,model:run.protocol.model,engine,academic_year:dataset.academic_year||2026,execution_stats:executionStats(run),execution_notes:run.execution_notes??[],execution_stats_evidence:executionEvidence(run),phase:run.phase,pricing,summary,exams,questions,sources,completed:run.completed===true,protocol:run.protocol,protocol_history:run.protocol_history||[],billing:run.billing||{method:'previous_record'},usage_complete:Object.values(run.groups).every(g=>g.attempts.every(a=>Number.isFinite(a.usage?.input_tokens)&&Number.isFinite(a.usage?.output_tokens)&&!a.api_usage_unknown&&(run.protocol.agent!=='Pi'||a.usage.input_tokens+a.usage.output_tokens>0))),limitations:[...(run.protocol.batch_max_questions?[`기존 묶음 실행 오류 후 미제출 문항을 최대 ${run.protocol.batch_max_questions}문항씩 한 차례 복구했습니다. 이전 실행 조건·실패 사용량·답안은 protocol_history와 원본 실행 기록에 보존합니다.`]:[]),...(run.protocol.agent==='Pi'?[
   'Pi 모델은 사용자 승인 API 인증으로 실행합니다. Codex·Claude 구독 결과와 인증 경로가 다릅니다.',
   `Pi CLI 0.87.1, 도구·확장·자동 재시도·문맥 압축${textInput?'':'·이미지 자동 축소'} 비활성, 묶음당 출력 상한 ${(run.protocol.max_output_tokens??65536).toLocaleString('en-US')}토큰입니다.`,

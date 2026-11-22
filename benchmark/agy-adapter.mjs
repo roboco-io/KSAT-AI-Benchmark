@@ -72,8 +72,10 @@ export async function* agyEvents({model,prompt,images=[],schema,signal,timeoutMs
   yield {type:'thread.started',thread_id:sessionId};
   await send('session/set_model',{sessionId,modelId});
   const result=await send('session/prompt',{sessionId,prompt:blocks});
+  // Usage is recorded even when the attempt failed (cancelled, tool call): the provider may still bill those tokens.
+  if(result?.usage)yield {type:'turn.completed',usage:normalizeAgyUsage(result.usage)};
   if(failure)throw failure;
-  yield {type:'turn.completed',usage:normalizeAgyUsage(result?.usage)};
+  if(!result?.usage)yield {type:'turn.completed',usage:normalizeAgyUsage(undefined)};
   if(result?.stopReason!=='end_turn')throw new Error(result?.stopReason==='max_tokens'?'AGY_TURN_FAILED: response reached output token limit':`AGY_TURN_FAILED: stop reason ${result?.stopReason}`);
   let output;try{output=parsePiAnswers(text);}catch{
    // Keep the unparsable response privately for diagnosis (never published).

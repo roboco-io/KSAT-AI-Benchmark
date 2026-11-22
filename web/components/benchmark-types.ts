@@ -1,5 +1,7 @@
 export type Usage = { input_tokens: number; cached_input_tokens: number; output_tokens: number };
+export type FailedRequests = { total: number; with_usage: number; rejected_before_processing: number; usage_unknown: number; recorded_cost_usd: number; unknown_estimated_input_tokens: number; unknown_estimated_input_cost_usd: number };
 export type Summary = {
+  failed_requests?: FailedRequests;
   score: number; max_score: number;
   total_questions: number; correct: number; incorrect: number; abstained: number; unsolved?: number;
   errors: number; pending: number; accuracy: number; abstention_rate: number;
