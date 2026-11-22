@@ -10,28 +10,19 @@
     "postbuild": "node scripts/postbuild-index.mjs"
   },
   "dependencies": {
-    "@mantine/charts": "^7.13.5",
     "@mantine/core": "^7.13.5",
     "@mantine/hooks": "^7.13.5",
-    "@types/katex": "^0.16.7",
-    "clsx": "^2.1.1",
-    "js-yaml": "^4.1.0",
     "katex": "^0.18.2",
     "next": "15.5.4",
     "react": "19.1.0",
-    "react-dom": "19.1.0",
-    "react-katex": "^3.1.0",
-    "recharts": "^2.15.4"
+    "react-dom": "19.1.0"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4",
-    "@types/js-yaml": "^4.0.9",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "postcss-preset-mantine": "^1.18.0",
     "postcss-simple-vars": "^7.0.1",
-    "tailwindcss": "^4",
     "typescript": "^5"
   }
 }

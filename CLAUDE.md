@@ -155,10 +155,13 @@ cd web && npm run dev
 # or
 make web-dev
 
-# Build for production
+# Build for production (out/ 생성, postbuild로 X/index.html 복사)
 cd web && npm run build
 # or
 make web-build
+
+# Verify built output (build 이후)
+node --test web/test/site-output.test.mjs
 ```
 
 ### Results Analysis & Summary
@@ -247,10 +250,13 @@ YAML Exam → Evaluator.load_exam() → Build passages_map
 - Configuration in `models/models.json` specifies model_id, provider, api_key_env, max_tokens, etc.
 
 **4. Web Interface** (`web/`)
-- Next.js 15 with App Router
-- Mantine UI v7 for components
-- Reads YAML files from `results/` and `exams/parsed/`
-- Static site generation for GitHub Pages deployment
+- Next.js 15 App Router, 정적 export(`output: 'export'`)로 GitHub Pages에 배포한다.
+- 경로: 홈 `/`(최신 학년도 개요), 학년도별 `/{year}`, 모델 `/{year}/models/{id}`, 문항 `/{year}/questions`와 `/{year}/questions/{id}`, 비교 `/{year}/compare`. 이 경로는 `web/app/(site)/`에 있다.
+- 레거시 경로(`/archive`, `/debates/english-q37`, `/research/*`)는 `web/app/(legacy)/` 라우트 그룹에 남아 있고, `web/app/globals.css`는 이 그룹의 레이아웃만 불러온다.
+- 화면 계산(순위, 문항 행렬, 산점도 배치, 탐색 상태, 경로 생성 등)은 `web/lib/*.mjs`의 순수 함수로 두고 `benchmark/test/*.test.mjs`에서 `node --test`로 검증한다. 타입 선언은 같은 이름의 `.d.mts`에 둔다.
+- 스타일은 CSS Modules와 `web/app/(site)/tokens.css`의 디자인 토큰을 쓴다. Mantine은 레거시 화면과 일부 기본 컴포넌트에만 남아 있다.
+- 데이터는 `web/public/data/benchmark-comparison*.json`(`benchmark/export.mjs`가 생성)을 빌드 시점에 import한다.
+- 빌드 후 `web/scripts/postbuild-index.mjs`가 `out/X.html`을 `out/X/index.html`로도 복사한다. `node --test web/test/site-output.test.mjs`는 `web/out`의 경로, 홈 앵커, 방법 노트, 홈 용량, 레거시 페이지를 확인한다(`web/out`이 없으면 건너뛴다).
 
 ### Data Formats
 
@@ -501,9 +507,9 @@ results:
   - `.github/workflows/deploy-pages.yml` triggers on `results/**` changes
   - Runs `scripts/export_data.py` to convert YAML → JSON
   - Builds Next.js website with updated data
+  - Runs `node --test web/test/site-output.test.mjs` against `web/out` after the build
   - Deploys to GitHub Pages automatically
-- **Zero frontend maintenance**: Subject tabs, leaderboards, stats auto-update from `results/`
-- **Subject-based leaderboards**: Auto-generated for korean, math, english from YAML metadata
+- **Zero frontend maintenance**: Year overview, model pages, question pages and comparison update from `web/public/data/benchmark-comparison*.json`
 
 ## Environment Variables
 
