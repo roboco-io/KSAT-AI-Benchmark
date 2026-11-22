@@ -57,7 +57,7 @@ export function ModelProfile({ year, model, traits, subjects, limitations, recor
         <div><dt>소요 시간</dt><dd>{figure('wall')}</dd></div>
         <div>
           <dt>토큰 사용량</dt><dd>{figure('tokens')}</dd>
-          <dd className={styles.note}>제공사에 따라 추론 토큰이 출력에 포함되지 않았을 수 있다.</dd>
+          <dd className={styles.note}>입력과 출력(추론 포함)의 합이다. Gemini는 Google Cloud 사용량 지표의 값이고, 다른 모델은 응답에 보고된 사용량이다.</dd>
         </div>
       </dl>
       {model.period4 && (

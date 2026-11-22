@@ -112,7 +112,8 @@ export function CompareView({ year, subjects, data, traits }: Props) {
                         <th scope="row" className={styles.stick}>{rowLabel(k)}</th>
                         {selected.map((m, i) => {
                           const v = vals[i];
-                          const isBest = v !== null && v === best && nums.length > 1;
+                          // 토큰 수는 제공사마다 집계 방식이 달라 우열을 표시하지 않는다.
+                          const isBest = k !== 'tokens' && v !== null && v === best && nums.length > 1;
                           return (
                             <td key={m.id} className={styles.num}>
                               {formatMetric(k, v)}
@@ -126,6 +127,8 @@ export function CompareView({ year, subjects, data, traits }: Props) {
                 </tbody>
               </table>
             </div>
+            {selected.some((m) => m.period4) && <p className={styles.hint}>총점·정답률·추정 비용·소요 시간·1점당 비용·기권율·실행 오류·토큰 사용량은 1-3교시(국어·수학·영어) 기준이다. 4교시(한국사·탐구)는 과목 점수와 4교시 득점률로 비교한다.</p>}
+            <p className={styles.hint}>토큰 사용량은 입력과 출력(추론 포함)의 합이다. Gemini는 Google Cloud 사용량 지표의 값을 쓰고, 다른 모델은 응답에 보고된 사용량을 쓴다. 집계 방식이 달라 우열은 표시하지 않는다.</p>
             <ul className={styles.traits}>
               {selected.map((m) => (
                 <li key={m.id}>

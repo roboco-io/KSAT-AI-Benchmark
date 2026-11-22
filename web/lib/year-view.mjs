@@ -29,8 +29,11 @@ function subjectsOf(exams) {
 
 function baseView(m) {
   const s = m.summary ?? {};
-  const input = num(s.usage?.input_tokens);
-  const output = num(s.usage?.output_tokens);
+  // 제공사 사용량 지표가 있으면 그 값을 쓴다. Gemini 호환 API는 추론 토큰을 응답 사용량에서 빼고
+  // 보고하므로, 응답 사용량만 쓰면 출력 토큰이 실제보다 훨씬 적게 나온다.
+  const metered = s.provider_usage;
+  const input = num(metered?.input_tokens) ?? num(s.usage?.input_tokens);
+  const output = num(metered?.output_tokens_including_thinking) ?? num(s.usage?.output_tokens);
   return {
     id: m.model, provider: providerOf(m.model), engine: m.engine ?? '',
     effort: m.protocol?.effort ?? null, inputMode: m.input_mode ?? null,

@@ -124,3 +124,15 @@ test('period4_route_variant_merges_into_base_model', () => {
   assert.equal(neon.period4.engine, null);
   assert.equal(view.models[2].score, null);
 });
+
+test('tokens_prefer_provider_usage_metrics', () => {
+  const model = (name, summary) => ({model: name, engine: 'e', summary: {score: 1, max_score: 1, total_questions: 1, correct: 1, ...summary},
+    exams: [{id: name, title: 't', subject: 'english', track: 'english', max_score: 1, summary: {score: 1}}], questions: []});
+  const view = buildYearView({academic_year: 2027, requested_models: [], models: [
+    model('gemini-x', {usage: {input_tokens: 100, output_tokens: 10}, provider_usage: {input_tokens: 150, output_tokens_including_thinking: 900}}),
+    model('other', {usage: {input_tokens: 100, output_tokens: 10}}),
+  ]}, null);
+  const byId = Object.fromEntries(view.models.map((m) => [m.id, m]));
+  assert.deepEqual([byId['gemini-x'].inputTokens, byId['gemini-x'].outputTokens], [150, 900]);
+  assert.deepEqual([byId.other.inputTokens, byId.other.outputTokens], [100, 10]);
+});
