@@ -1,0 +1,635 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-11-22T01:44:02.070957+00:00",
+  "sources": {
+    "dataset:2025:period1-3": {
+      "path": "exams/datasets/2025-ksat.json",
+      "sha256": "0b885a2f36bdca9059bb47a61caa00b18d15e542ad15e0e4ffdebb555bc9bca3",
+      "question_count": 147
+    },
+    "dataset:2026:period1-3": {
+      "path": "exams/datasets/2026-ksat.json",
+      "sha256": "de418de072e11d96364548de1113a6ad33c6f29fbe28ebfe259a8ff85c453074",
+      "question_count": 147
+    },
+    "dataset:2027:period1-3": {
+      "path": "exams/datasets/2027-ksat.json",
+      "sha256": "4c69e03b69b31b050d595a2b9905e1c2f7a1e425f2a90ed9cce44315833bd086",
+      "question_count": 147
+    },
+    "dataset:2027:period4": {
+      "path": "exams/datasets/2027-ksat-period4.json",
+      "sha256": "ada9fa7a68d54389ea00bda30ada34c86c3ceaf6486c5053ec7fea102330973e",
+      "question_count": 360
+    },
+    "transcript_manifest:2026:period1-3": {
+      "path": "exams/transcripts/2026/manifest.json",
+      "sha256": "5225588a1c72863539296a0f88acb33c50a70e7fbc2342e98ef0d3352249a06e",
+      "figure_dependent_count": 22
+    },
+    "transcript_manifest:2027:period1-3": {
+      "path": "exams/transcripts/2027/manifest.json",
+      "sha256": "a5d46d79a703d2e59b4d08e616e82a96203413d6a7535f1878ecaa48d76556df",
+      "figure_dependent_count": 18
+    },
+    "transcript_manifest:2027:period4": {
+      "path": "exams/transcripts/2027-period4/manifest.json",
+      "sha256": "e4b4270c8633c8d28ff6da901a4d24a4ea06c9bde483be002b1a5fb1bea27d1c",
+      "figure_dependent_count": 189
+    },
+    "run:antigravity-2027-gemini-4-hydrogen": {
+      "path": "results/antigravity-2027-gemini-4-hydrogen/run.json",
+      "sha256": "7106122451c448ba1adec690e704b99829801672fbdd391d3d01b79e84432875",
+      "panel": "2027:period1-3",
+      "model": "gemini-4-hydrogen",
+      "input_mode": "image",
+      "answer_count": 147,
+      "expected_count": 147,
+      "is_complete": true
+    },
+    "run:antigravity-2027-period4-gemini-4-carbon-agy": {
+      "path": "results/antigravity-2027-period4-gemini-4-carbon-agy/run.json",
+      "sha256": "ed9e698884c457ee6e1b197c41331a14a840658292d5c6d2037578555f0e2767",
+      "panel": "2027:period4",
+      "model": "gemini-4-carbon-agy",
+      "input_mode": "image",
+      "answer_count": 260,
+      "expected_count": 360,
+      "is_complete": false
+    },
+    "run:antigravity-2027-period4-gemini-4-hydrogen": {
+      "path": "results/antigravity-2027-period4-gemini-4-hydrogen/run.json",
+      "sha256": "1a50445d9594c7d55fb246b0b4f0e038ad1ba43b4e36a2c7e1ed065e6192ff8c",
+      "panel": "2027:period4",
+      "model": "gemini-4-hydrogen",
+      "input_mode": "image",
+      "answer_count": 360,
+      "expected_count": 360,
+      "is_complete": true
+    },
+    "run:claude-2025-claude-fable-5-1": {
+      "path": "results/claude-2025-claude-fable-5-1/run.json",
+      "sha256": "47567ba3a30e565a37f8c1729187ee0f8df1eca6484e609f2fe632dc8c5e1e9f",
+      "panel": "2025:period1-3",
+      "model": "claude-fable-5-1",
+      "input_mode": "image",
+      "answer_count": 147,
+      "expected_count": 147,
+      "is_complete": true
+    },
+    "run:claude-2025-claude-haiku-5-5": {
+      "path": "results/claude-2025-claude-haiku-5-5/run.json",
+      "sha256": "79ecbe1ff49cc224a73573d955ee34f30fbeeeb1efa50272c6ccaac7dc6a339c",
+      "panel": "2025:period1-3",
+      "model": "claude-haiku-5-5",
+      "input_mode": "image",
+      "answer_count": 147,
+      "expected_count": 147,
+      "is_complete": true
+    },
+    "run:claude-2025-claude-opus-5-5": {
+      "path": "results/claude-2025-claude-opus-5-5/run.json",
+      "sha256": "1b10445bf1b022ba826fb92e128aae950c6dbb2099dd0cb395b6f9bbc3f55160",
+      "panel": "2025:period1-3",
+      "model": "claude-opus-5-5",
+      "input_mode": "image",
+      "answer_count": 147,
+      "expected_count": 147,
+      "is_complete": true
+    },
+    "run:claude-2025-claude-sonnet-5-5": {
+      "path": "results/claude-2025-claude-sonnet-5-5/run.json",
+      "sha256": "725d58d39c1fce16ccd9df2f08bbc761773f8f69df24f30a93350311dc6f95c9",
+      "panel": "2025:period1-3",
+      "model": "claude-sonnet-5-5",
+      "input_mode": "image",
+      "answer_count": 147,
+      "expected_count": 147,
+      "is_complete": true
+    },
+    "run:claude-2026-fable-5-1": {
+      "path": "results/claude-2026-fable-5-1/run.json",
+      "sha256": "e656c8e9d684f3bce82bb4ca8bb4dd4b1b64015e040cb99ab3e5ffb560c9ff45",
+      "panel": "2026:period1-3",
+      "model": "claude-fable-5-1",
+      "input_mode": "image",
+      "answer_count": 147,
+      "expected_count": 147,
+      "is_complete": true
+    },
+    "run:claude-2026-haiku-5-5": {
+      "path": "results/claude-2026-haiku-5-5/run.json",
+      "sha256": "a9b4abb051a0efe05d905dc4231dadefd01550eedc6992813ab7fcb42d97e744",
+      "panel": "2026:period1-3",
+      "model": "claude-haiku-5-5",
+      "input_mode": "image",
+      "answer_count": 147,
+      "expected_count": 147,
+      "is_complete": true
+    },
+    "run:claude-2026-opus-5-5": {
+      "path": "results/claude-2026-opus-5-5/run.json",
+      "sha256": "ab111a4139aee24070caf232b814f3e4856a00dabeed855826235b38cc9c33f5",
+      "panel": "2026:period1-3",
+      "model": "claude-opus-5-5",
+      "input_mode": "image",
+      "answer_count": 147,
+      "expected_count": 147,
+      "is_complete": true
+    },
+    "run:claude-2026-sonnet-5-5": {
+      "path": "results/claude-2026-sonnet-5-5/run.json",
+      "sha256": "066a308a934f38716bd92f07ee083532a99afe16d3dca575e488c13b47adfc2f",
+      "panel": "2026:period1-3",
+      "model": "claude-sonnet-5-5",
+      "input_mode": "image",
+      "answer_count": 147,
+      "expected_count": 147,
+      "is_complete": true
+    },
+    "run:claude-2027-claude-fable-5-2": {
+      "path": "results/claude-2027-claude-fable-5-2/run.json",
+      "sha256": "9fadd07618df1f6eaf44b42617be9c80a24897b0fba3a9b31c0802fb24e217cf",
+      "panel": "2027:period1-3",
+      "model": "claude-fable-5-2",
+      "input_mode": "image",
+      "answer_count": 147,
+      "expected_count": 147,
+      "is_complete": true
+    },
+    "run:claude-2027-claude-haiku-5-5": {
+      "path": "results/claude-2027-claude-haiku-5-5/run.json",
+      "sha256": "ad4c49816612c41a6798f5a97be414dd119f8e0bfafd57550adb42f8e320c5f8",
+      "panel": "2027:period1-3",
+      "model": "claude-haiku-5-5",
+      "input_mode": "image",
+      "answer_count": 147,
+      "expected_count": 147,
+      "is_complete": true
+    },
+    "run:claude-2027-claude-opus-5-5": {
+      "path": "results/claude-2027-claude-opus-5-5/run.json",
+      "sha256": "c534ae1bdc35e6f5cbca8530bf6f52fa2edf76876d030d063ce93afb435c2733",
+      "panel": "2027:period1-3",
+      "model": "claude-opus-5-5",
+      "input_mode": "image",
+      "answer_count": 147,
+      "expected_count": 147,
+      "is_complete": true
+    },
+    "run:claude-2027-claude-sonnet-5-5": {
+      "path": "results/claude-2027-claude-sonnet-5-5/run.json",
+      "sha256": "afe49d06765f4e06b81089f5fa27d49100914363ee2d5f73cc7241d2e63db2f1",
+      "panel": "2027:period1-3",
+      "model": "claude-sonnet-5-5",
+      "input_mode": "image",
+      "answer_count": 147,
+      "expected_count": 147,
+      "is_complete": true
+    },
+    "run:claude-2027-period4-claude-fable-5-2": {
+      "path": "results/claude-2027-period4-claude-fable-5-2/run.json",
+      "sha256": "5666dc5a454c0d17846f314b646561a46c37ed56a6245a082da3cbcfc18559be",
+      "panel": "2027:period4",
+      "model": "claude-fable-5-2",
+      "input_mode": "image",
+      "answer_count": 360,
+      "expected_count": 360,
+      "is_complete": true
+    },
+    "run:claude-2027-period4-claude-haiku-5-5": {
+      "path": "results/claude-2027-period4-claude-haiku-5-5/run.json",
+      "sha256": "ac3a9dab1c02badbf3a68fce1c26c85242e4f0609f782ca2628d43cf71f3bc97",
+      "panel": "2027:period4",
+      "model": "claude-haiku-5-5",
+      "input_mode": "image",
+      "answer_count": 360,
+      "expected_count": 360,
+      "is_complete": true
+    },
+    "run:claude-2027-period4-claude-opus-5-5": {
+      "path": "results/claude-2027-period4-claude-opus-5-5/run.json",
+      "sha256": "0232925af4df869edb5e7a1c07847c08f52df9d7feb45f9761274f07e684a39f",
+      "panel": "2027:period4",
+      "model": "claude-opus-5-5",
+      "input_mode": "image",
+      "answer_count": 360,
+      "expected_count": 360,
+      "is_complete": true
+    },
+    "run:claude-2027-period4-claude-sonnet-5-5": {
+      "path": "results/claude-2027-period4-claude-sonnet-5-5/run.json",
+      "sha256": "7908f8b3d24cd7985b104aa5847aabef4d5ee4b7ad55db88153f0f1b30ca43db",
+      "panel": "2027:period4",
+      "model": "claude-sonnet-5-5",
+      "input_mode": "image",
+      "answer_count": 360,
+      "expected_count": 360,
+      "is_complete": true
+    },
+    "run:codex-2025-gpt-6-astra": {
+      "path": "results/codex-2025-gpt-6-astra/run.json",
+      "sha256": "cb5fb28d01b64d8c4f6ab3c072873fd4a689075ddde36ddcea6cb5d2039ce726",
+      "panel": "2025:period1-3",
+      "model": "gpt-6-astra",
+      "input_mode": "image",
+      "answer_count": 147,
+      "expected_count": 147,
+      "is_complete": true
+    },
+    "run:codex-2025-gpt-6-luna": {
+      "path": "results/codex-2025-gpt-6-luna/run.json",
+      "sha256": "a6ca6234bfea46ad43e10520bb5aa3e960487f398d2c15157361ea8084439f02",
+      "panel": "2025:period1-3",
+      "model": "gpt-6-luna",
+      "input_mode": "image",
+      "answer_count": 147,
+      "expected_count": 147,
+      "is_complete": true
+    },
+    "run:codex-2025-gpt-6.1-sol": {
+      "path": "results/codex-2025-gpt-6.1-sol/run.json",
+      "sha256": "3de935efa1738b2e38ee6e0ce31a0cc6859069cb6cb43b6c4e131bc90bdc98ca",
+      "panel": "2025:period1-3",
+      "model": "gpt-6.1-sol",
+      "input_mode": "image",
+      "answer_count": 147,
+      "expected_count": 147,
+      "is_complete": true
+    },
+    "run:codex-2026": {
+      "path": "results/codex-2026/run.json",
+      "sha256": "024d4a88fde89608305990e1e13a09a56c1c07a4a22fbf5d1a7f861e98aa6be7",
+      "panel": "2026:period1-3",
+      "model": "gpt-6.1-sol",
+      "input_mode": "image",
+      "answer_count": 147,
+      "expected_count": 147,
+      "is_complete": true
+    },
+    "run:codex-2026-gpt-6-astra": {
+      "path": "results/codex-2026-gpt-6-astra/run.json",
+      "sha256": "f23650befcaf2306b84c063551414ace0d04165e33bc66f67538f7266d9d1154",
+      "panel": "2026:period1-3",
+      "model": "gpt-6-astra",
+      "input_mode": "image",
+      "answer_count": 147,
+      "expected_count": 147,
+      "is_complete": true
+    },
+    "run:codex-2026-gpt-6-luna": {
+      "path": "results/codex-2026-gpt-6-luna/run.json",
+      "sha256": "924ef48b19c54b82985c13cd1170645223be95a7d9fc9d8ab019ae1ae0175b55",
+      "panel": "2026:period1-3",
+      "model": "gpt-6-luna",
+      "input_mode": "image",
+      "answer_count": 147,
+      "expected_count": 147,
+      "is_complete": true
+    },
+    "run:codex-2027-gpt-6-luna": {
+      "path": "results/codex-2027-gpt-6-luna/run.json",
+      "sha256": "bbe3b0b18d0ad34a596cdc771ae5eb3af140fd1f3f87255dcf320d4c90cefd69",
+      "panel": "2027:period1-3",
+      "model": "gpt-6-luna",
+      "input_mode": "image",
+      "answer_count": 147,
+      "expected_count": 147,
+      "is_complete": true
+    },
+    "run:codex-2027-gpt-6.1-terra": {
+      "path": "results/codex-2027-gpt-6.1-terra/run.json",
+      "sha256": "0c488ed4c6c3f6fdd701e2e5b28f01565e0d753fa705dd1a38458bfe72ef98fa",
+      "panel": "2027:period1-3",
+      "model": "gpt-6.1-terra",
+      "input_mode": "image",
+      "answer_count": 147,
+      "expected_count": 147,
+      "is_complete": true
+    },
+    "run:codex-2027-gpt-6.2-astra": {
+      "path": "results/codex-2027-gpt-6.2-astra/run.json",
+      "sha256": "0df9edcf8cbf51684d26c486143599dd89921df2ccbcd05ba30e4ae703b4945a",
+      "panel": "2027:period1-3",
+      "model": "gpt-6.2-astra",
+      "input_mode": "image",
+      "answer_count": 147,
+      "expected_count": 147,
+      "is_complete": true
+    },
+    "run:codex-2027-gpt-6.2-sol": {
+      "path": "results/codex-2027-gpt-6.2-sol/run.json",
+      "sha256": "97bf67e0a405d55cf03a69e17541a8f28d3422fe200db602d9d2add507ce4caa",
+      "panel": "2027:period1-3",
+      "model": "gpt-6.2-sol",
+      "input_mode": "image",
+      "answer_count": 147,
+      "expected_count": 147,
+      "is_complete": true
+    },
+    "run:codex-2027-period4-gpt-6-luna": {
+      "path": "results/codex-2027-period4-gpt-6-luna/run.json",
+      "sha256": "bdeb1f9fbbb830e0acd815aebb176bedbab380857f58be69d84705e40695774d",
+      "panel": "2027:period4",
+      "model": "gpt-6-luna",
+      "input_mode": "image",
+      "answer_count": 360,
+      "expected_count": 360,
+      "is_complete": true
+    },
+    "run:codex-2027-period4-gpt-6.1-terra": {
+      "path": "results/codex-2027-period4-gpt-6.1-terra/run.json",
+      "sha256": "0626f37d5aeb2d3a144f23e52ee8721b2bfaba52a576c2c532407a491a9947d1",
+      "panel": "2027:period4",
+      "model": "gpt-6.1-terra",
+      "input_mode": "image",
+      "answer_count": 360,
+      "expected_count": 360,
+      "is_complete": true
+    },
+    "run:codex-2027-period4-gpt-6.2-astra": {
+      "path": "results/codex-2027-period4-gpt-6.2-astra/run.json",
+      "sha256": "9cbab711352e67b64ecda0248968f9e3133690582fd02f5814aaef2e47747749",
+      "panel": "2027:period4",
+      "model": "gpt-6.2-astra",
+      "input_mode": "image",
+      "answer_count": 360,
+      "expected_count": 360,
+      "is_complete": true
+    },
+    "run:codex-2027-period4-gpt-6.2-sol": {
+      "path": "results/codex-2027-period4-gpt-6.2-sol/run.json",
+      "sha256": "b391be889376fabb0c921b85c1cfe988aa87303c71bc3c66e0fbe4c0c57ea2f6",
+      "panel": "2027:period4",
+      "model": "gpt-6.2-sol",
+      "input_mode": "image",
+      "answer_count": 360,
+      "expected_count": 360,
+      "is_complete": true
+    },
+    "run:pi-2025-gemini-4-argon": {
+      "path": "results/pi-2025-gemini-4-argon/run.json",
+      "sha256": "8a5f2d77f8b828cde671f5ae8d0a7d568046fb8826f2efb1c2f3b01ca37ccb51",
+      "panel": "2025:period1-3",
+      "model": "gemini-4-argon",
+      "input_mode": "image",
+      "answer_count": 147,
+      "expected_count": 147,
+      "is_complete": true
+    },
+    "run:pi-2025-kimi-k3": {
+      "path": "results/pi-2025-kimi-k3/run.json",
+      "sha256": "cf1c3ca58b328548c4e41df4e0d10839c2c8e799908b580605485c6aa939c00d",
+      "panel": "2025:period1-3",
+      "model": "kimi-k3",
+      "input_mode": "image",
+      "answer_count": 147,
+      "expected_count": 147,
+      "is_complete": true
+    },
+    "run:pi-2026-deepseek-v4-1-flash": {
+      "path": "results/pi-2026-deepseek-v4-1-flash/run.json",
+      "sha256": "7bbb95f718c45b7c7a14e62e4f113e654bc5fe2218c63313253e649b32949b5b",
+      "panel": "2026:period1-3",
+      "model": "deepseek-v4.1-flash",
+      "input_mode": "image",
+      "answer_count": 147,
+      "expected_count": 147,
+      "is_complete": true
+    },
+    "run:pi-2026-gemini-4-argon": {
+      "path": "results/pi-2026-gemini-4-argon/run.json",
+      "sha256": "4f35ca8e2daa8dc2bd11e9427f8495e72fe3bede71fb4495948ed61046135117",
+      "panel": "2026:period1-3",
+      "model": "gemini-4-argon",
+      "input_mode": "image",
+      "answer_count": 147,
+      "expected_count": 147,
+      "is_complete": true
+    },
+    "run:pi-2026-glm-5-3-flash": {
+      "path": "results/pi-2026-glm-5-3-flash/run.json",
+      "sha256": "a6fbf15716f82df15e0ef705aadead30d771208fca0754e885a7aa80620b279c",
+      "panel": "2026:period1-3",
+      "model": "glm-5.3-flash",
+      "input_mode": "image",
+      "answer_count": 91,
+      "expected_count": 147,
+      "is_complete": false
+    },
+    "run:pi-2026-k-exaone-2.5": {
+      "path": "results/pi-2026-k-exaone-2.5/run.json",
+      "sha256": "7b1786164bfc37258e9549098570926046b181a579f1394b67f97ffe8a6f6cd3",
+      "panel": "2026:period1-3",
+      "model": "k-exaone-2.5",
+      "input_mode": "text_transcript",
+      "answer_count": 64,
+      "expected_count": 147,
+      "is_complete": false
+    },
+    "run:pi-2026-kimi-k3": {
+      "path": "results/pi-2026-kimi-k3/run.json",
+      "sha256": "e7567358acc5df1ecc0d186a25912d0c25d2b05b6a32f4300509d7df9172241b",
+      "panel": "2026:period1-3",
+      "model": "kimi-k3",
+      "input_mode": "image",
+      "answer_count": 147,
+      "expected_count": 147,
+      "is_complete": true
+    },
+    "run:pi-2026-qwen3-8-27b": {
+      "path": "results/pi-2026-qwen3-8-27b/run.json",
+      "sha256": "2a2f44bfc9c97f9db7657ae77a5fac9f46ee86b79a6625f02f247d991291bff8",
+      "panel": "2026:period1-3",
+      "model": "qwen3.8-27b",
+      "input_mode": "image",
+      "answer_count": 131,
+      "expected_count": 147,
+      "is_complete": false
+    },
+    "run:pi-2026-solar-pro-4": {
+      "path": "results/pi-2026-solar-pro-4/run.json",
+      "sha256": "b43ba8cf8990efbb066afecf00d6ec83de90c5845a6bfe0291211583713e6b2f",
+      "panel": "2026:period1-3",
+      "model": "solar-pro-4",
+      "input_mode": "text_transcript",
+      "answer_count": 147,
+      "expected_count": 147,
+      "is_complete": true
+    },
+    "run:pi-2027-deepseek-v4.1-flash": {
+      "path": "results/pi-2027-deepseek-v4.1-flash/run.json",
+      "sha256": "c510315a1dcca3a7be5ade5b0047364eeebe50c586a57202df110b1306e43435",
+      "panel": "2027:period1-3",
+      "model": "deepseek-v4.1-flash",
+      "input_mode": "image",
+      "answer_count": 147,
+      "expected_count": 147,
+      "is_complete": true
+    },
+    "run:pi-2027-gemini-4-carbon": {
+      "path": "results/pi-2027-gemini-4-carbon/run.json",
+      "sha256": "ebdd268ac0909867b665147ebe04f2120787cfba2d47ed17e0b39c0c03647783",
+      "panel": "2027:period1-3",
+      "model": "gemini-4-carbon",
+      "input_mode": "image",
+      "answer_count": 147,
+      "expected_count": 147,
+      "is_complete": true
+    },
+    "run:pi-2027-gemini-4-neon": {
+      "path": "results/pi-2027-gemini-4-neon/run.json",
+      "sha256": "e8c3d486e184954a12e83bf1ade378c83bcad787b66ae689893864cf31379b12",
+      "panel": "2027:period1-3",
+      "model": "gemini-4-neon",
+      "input_mode": "image",
+      "answer_count": 147,
+      "expected_count": 147,
+      "is_complete": true
+    },
+    "run:pi-2027-glm-5.3-flash": {
+      "path": "results/pi-2027-glm-5.3-flash/run.json",
+      "sha256": "063ddaa41ffe55ed943fea9fe1353cb934a042ed9c779d180438240251cd50b6",
+      "panel": "2027:period1-3",
+      "model": "glm-5.3-flash",
+      "input_mode": "image",
+      "answer_count": 147,
+      "expected_count": 147,
+      "is_complete": true
+    },
+    "run:pi-2027-kimi-k3.1-pro": {
+      "path": "results/pi-2027-kimi-k3.1-pro/run.json",
+      "sha256": "617b242923da5bb76bac92dc6a0c54a654c55f3dac523cb9fb14a16325ae195b",
+      "panel": "2027:period1-3",
+      "model": "kimi-k3.1-pro",
+      "input_mode": "image",
+      "answer_count": 147,
+      "expected_count": 147,
+      "is_complete": true
+    },
+    "run:pi-2027-period4-deepseek-v4.1-flash": {
+      "path": "results/pi-2027-period4-deepseek-v4.1-flash/run.json",
+      "sha256": "e90902a395098b4229560e25cbf0252d4434be030b4ceca8fcb38808982739ff",
+      "panel": "2027:period4",
+      "model": "deepseek-v4.1-flash",
+      "input_mode": "image",
+      "answer_count": 360,
+      "expected_count": 360,
+      "is_complete": true
+    },
+    "run:pi-2027-period4-gemini-4-carbon": {
+      "path": "results/pi-2027-period4-gemini-4-carbon/run.json",
+      "sha256": "d1604e5fcf7de749df7a2ae21f87c0b2e5c3ea045bac2608e6c06c23b816f652",
+      "panel": "2027:period4",
+      "model": "gemini-4-carbon",
+      "input_mode": "image",
+      "answer_count": 131,
+      "expected_count": 360,
+      "is_complete": false
+    },
+    "run:pi-2027-period4-gemini-4-neon": {
+      "path": "results/pi-2027-period4-gemini-4-neon/run.json",
+      "sha256": "29b3f565499780f3ed3b6b2bc65341d94bfd181764e92f4b743efbfb898abffe",
+      "panel": "2027:period4",
+      "model": "gemini-4-neon",
+      "input_mode": "image",
+      "answer_count": 359,
+      "expected_count": 360,
+      "is_complete": false
+    },
+    "run:pi-2027-period4-glm-5.3-flash": {
+      "path": "results/pi-2027-period4-glm-5.3-flash/run.json",
+      "sha256": "68cb03a3d8c15ba7e13a6d3f7d83d18f5636785dc68c627ea2b0c118e6053e40",
+      "panel": "2027:period4",
+      "model": "glm-5.3-flash",
+      "input_mode": "image",
+      "answer_count": 291,
+      "expected_count": 360,
+      "is_complete": false
+    },
+    "run:pi-2027-period4-kimi-k3.1-pro": {
+      "path": "results/pi-2027-period4-kimi-k3.1-pro/run.json",
+      "sha256": "c8796741e6c9d4fa5ef540246ae3c9cf53143864401e70631ce95db7d261fd4e",
+      "panel": "2027:period4",
+      "model": "kimi-k3.1-pro",
+      "input_mode": "image",
+      "answer_count": 360,
+      "expected_count": 360,
+      "is_complete": true
+    },
+    "run:pi-2027-period4-qwen4-max": {
+      "path": "results/pi-2027-period4-qwen4-max/run.json",
+      "sha256": "ccebc4a5ca8fb9558fb5299c51e5315ef7d7a3cb41d2e87955425178bbeb63ee",
+      "panel": "2027:period4",
+      "model": "qwen4-max",
+      "input_mode": "image",
+      "answer_count": 360,
+      "expected_count": 360,
+      "is_complete": true
+    },
+    "run:pi-2027-period4-solar-mini-4-5-preview": {
+      "path": "results/pi-2027-period4-solar-mini-4-5-preview/run.json",
+      "sha256": "940ab4035c11a51d4e1c2a0117c7a57c686767034e8f0226c74589c083370e95",
+      "panel": "2027:period4",
+      "model": "solar-mini-4-5-preview",
+      "input_mode": "text_transcript",
+      "answer_count": 360,
+      "expected_count": 360,
+      "is_complete": true
+    },
+    "run:pi-2027-period4-solar-pro-4": {
+      "path": "results/pi-2027-period4-solar-pro-4/run.json",
+      "sha256": "4f81c47735d4c8ad3d1478f98c977f5b242954f03631a64501aed73dc35e3ae2",
+      "panel": "2027:period4",
+      "model": "solar-pro-4",
+      "input_mode": "text_transcript",
+      "answer_count": 360,
+      "expected_count": 360,
+      "is_complete": true
+    },
+    "run:pi-2027-qwen4-max": {
+      "path": "results/pi-2027-qwen4-max/run.json",
+      "sha256": "4ad043ec3987b55876a3118e5f41e27639b29a07a258055c66613601cc38efc0",
+      "panel": "2027:period1-3",
+      "model": "qwen4-max",
+      "input_mode": "image",
+      "answer_count": 147,
+      "expected_count": 147,
+      "is_complete": true
+    },
+    "run:pi-2027-solar-mini-4-5-preview": {
+      "path": "results/pi-2027-solar-mini-4-5-preview/run.json",
+      "sha256": "bd04fe97e46b263c63e9aa0e598561198d73b61649d8ed0d95a2f48cdce43bb4",
+      "panel": "2027:period1-3",
+      "model": "solar-mini-4-5-preview",
+      "input_mode": "text_transcript",
+      "answer_count": 147,
+      "expected_count": 147,
+      "is_complete": true
+    },
+    "run:pi-2027-solar-pro-4": {
+      "path": "results/pi-2027-solar-pro-4/run.json",
+      "sha256": "094904c910509838c169ecece25ac78c089e77a4f7aefbca753933c4f99dfb4f",
+      "panel": "2027:period1-3",
+      "model": "solar-pro-4",
+      "input_mode": "text_transcript",
+      "answer_count": 147,
+      "expected_count": 147,
+      "is_complete": true
+    }
+  },
+  "snapshots": {
+    "datasets/2025-ksat.json": "85ccf57a2efa43310749f665b9fc000183dfeb87fe8222afb0a4fb849340d16e",
+    "datasets/2026-ksat.json": "de418de072e11d96364548de1113a6ad33c6f29fbe28ebfe259a8ff85c453074",
+    "datasets/2027-ksat.json": "4c69e03b69b31b050d595a2b9905e1c2f7a1e425f2a90ed9cce44315833bd086",
+    "datasets/2027-ksat-period4.json": "d23044d2e95b71f644bb9503ecd85796dfb629b8ceb1060ec913ba2be69b8eb5",
+    "figure_dependent.json": "639ec4872eea764eb0f20500c7d6614df2194550ade9f6350b6bbfaf6dbe4a43",
+    "runs.json": "22ba4b30b6e2f9ebe65a141881bda763e241af9cf96ae0a51c9d6931baaee19a"
+  },
+  "excluded_archive_dirs": [
+    "antigravity-2027-period4-gemini-4-carbon-agy.timeout900-20261122",
+    "pi-2026-k-exaone-2.5.interrupted-20261119",
+    "pi-2027-period4-glm-5.3-flash.guard-blocked-20261121",
+    "pi-2027-period4-glm-5.3-flash.timeout900-20261121"
+  ]
+}
