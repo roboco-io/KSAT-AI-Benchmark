@@ -1,0 +1,123 @@
+.wrap {
+  position: relative;
+  width: 100%;
+}
+
+.svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.grid {
+  stroke: var(--line);
+  stroke-width: 1;
+  shape-rendering: crispEdges;
+}
+
+.axis {
+  stroke: var(--line);
+  stroke-width: 1;
+}
+
+.tick {
+  fill: var(--muted);
+  font-size: var(--t-xs);
+  font-variant-numeric: tabular-nums;
+}
+
+.title {
+  fill: var(--muted);
+  font-size: var(--t-xs);
+}
+
+.point {
+  cursor: pointer;
+  outline: none;
+  opacity: 1;
+  transition: opacity 0.15s;
+}
+
+.dim {
+  opacity: 0.35;
+}
+
+.hit {
+  fill: transparent;
+}
+
+.dot {
+  fill: var(--muted);
+  stroke: var(--surface);
+  stroke-width: 2;
+}
+
+.picked .dot {
+  fill: var(--accent);
+}
+
+.label {
+  fill: var(--ink);
+  font-size: var(--t-xs);
+  pointer-events: none;
+}
+
+.picked .label {
+  font-weight: 700;
+}
+
+.point:focus-visible .dot,
+.point:hover .dot {
+  stroke: var(--focus);
+}
+
+.point:focus-visible .ring {
+  stroke: var(--focus);
+  stroke-width: 2;
+  fill: none;
+}
+
+.ring {
+  fill: none;
+  stroke: none;
+}
+
+.tip {
+  position: absolute;
+  z-index: 2;
+  pointer-events: none;
+  background: var(--surface);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: var(--s1) var(--s2);
+  font-size: var(--t-xs);
+  line-height: 1.5;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.tipId {
+  font-weight: 650;
+}
+
+.note {
+  margin-top: var(--s2);
+  font-size: var(--t-sm);
+  color: var(--muted);
+}
+
+.empty {
+  padding: var(--s5) var(--s4);
+  text-align: center;
+  color: var(--muted);
+  background: var(--soft);
+  border-radius: var(--radius);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .point {
+    transition: none;
+  }
+}

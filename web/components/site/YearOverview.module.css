@@ -1,0 +1,51 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s6);
+  min-width: 0;
+}
+
+.head h1 {
+  max-width: 40ch;
+  line-height: 1.4;
+}
+
+.sub {
+  margin: var(--s2) 0 0;
+  font-size: var(--t-md);
+  color: var(--muted);
+}
+
+.lede {
+  margin: var(--s3) 0 0;
+  font-size: var(--t-md);
+  color: var(--muted);
+}
+
+.section {
+  min-width: 0;
+  scroll-margin-top: var(--s5);
+}
+
+.section > h2 { margin-bottom: var(--s3); }
+
+.pending {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--s2);
+}
+
+.pending li {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--s3);
+  padding: var(--s2) var(--s3);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  font-size: var(--t-sm);
+}
+
+.pending span:last-child { color: var(--muted); }

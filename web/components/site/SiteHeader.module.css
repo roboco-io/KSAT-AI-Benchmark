@@ -1,0 +1,104 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+}
+
+.inner {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 var(--s4);
+  min-height: 52px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s2) var(--s4);
+}
+
+.brand {
+  font-weight: 700;
+  color: var(--ink) !important;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.years {
+  display: flex;
+  gap: var(--s1);
+}
+
+.year,
+.link {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 var(--s3);
+  border-radius: var(--radius);
+  color: var(--muted) !important;
+  font-size: var(--t-sm);
+  font-variant-numeric: tabular-nums;
+}
+
+.year[aria-current="page"] {
+  background: var(--accent-soft);
+  color: var(--accent) !important;
+  font-weight: 600;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: var(--s1);
+  margin-left: auto;
+}
+
+.link:hover,
+.year:hover {
+  background: var(--soft);
+  text-decoration: none !important;
+}
+
+.themeButton,
+.menuButton {
+  min-height: 44px;
+  padding: 0 var(--s3);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--ink);
+  font-size: var(--t-sm);
+  cursor: pointer;
+}
+
+.themeButton:hover,
+.menuButton:hover {
+  background: var(--soft);
+}
+
+.menuButton {
+  display: none;
+  margin-left: auto;
+}
+
+@media (max-width: 639px) {
+  .menuButton {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .links {
+    display: none;
+    flex-basis: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    margin-left: 0;
+    padding-bottom: var(--s3);
+  }
+
+  .linksOpen {
+    display: flex;
+  }
+}

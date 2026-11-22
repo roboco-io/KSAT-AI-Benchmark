@@ -1,0 +1,22 @@
+.root { display: grid; gap: var(--s5); }
+.back { display: inline-flex; align-items: center; min-height: 44px; color: var(--accent); }
+.title { margin: 0; font-size: var(--t-xl); overflow-wrap: anywhere; }
+.sub { margin: var(--s1) 0 0; color: var(--muted); }
+.figures { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: var(--s3); margin: 0; }
+.figures > div { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: var(--s3); }
+.figures dt { font-size: var(--t-sm); color: var(--muted); }
+.figures dd { margin: var(--s1) 0 0; font-size: var(--t-lg); font-variant-numeric: tabular-nums; }
+.figures dd.note { font-size: var(--t-xs); color: var(--muted); }
+.note { font-size: var(--t-xs); color: var(--muted); }
+.section { display: grid; gap: var(--s3); }
+.section h2 { margin: 0; font-size: var(--t-lg); }
+.section h3 { margin: 0; font-size: var(--t-md); }
+.traits, .plain { margin: 0; padding-left: var(--s5); display: grid; gap: var(--s2); }
+.scroll { overflow-x: auto; max-width: 100%; border: 1px solid var(--line); border-radius: var(--radius); }
+.table { width: 100%; border-collapse: collapse; font-size: var(--t-sm); font-variant-numeric: tabular-nums; }
+.table th, .table td { text-align: left; padding: var(--s2) var(--s3); border-bottom: 1px solid var(--line); white-space: nowrap; }
+.cta { display: inline-flex; align-items: center; min-height: 44px; padding: 0 var(--s4); border-radius: var(--radius); background: var(--accent); color: var(--on-accent); text-decoration: none; }
+.cta:focus-visible, .back:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+@media (max-width: 640px) {
+  .figures { grid-template-columns: repeat(2, 1fr); }
+}

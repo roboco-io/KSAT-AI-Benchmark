@@ -1,0 +1,28 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s4);
+  min-width: 0;
+}
+
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: var(--s3);
+  min-width: 0;
+}
+
+.caption {
+  margin: 0 0 var(--s2);
+  font-size: var(--t-sm);
+  color: var(--muted);
+}
+
+.tableHead {
+  margin: var(--s2) 0 var(--s3);
+}
+
+@media (min-width: 640px) {
+  .panel { padding: var(--s4); }
+}

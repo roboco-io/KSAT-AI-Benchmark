@@ -1,0 +1,36 @@
+.root { max-width: var(--maxw); margin: 0 auto; padding: var(--s5) var(--s4); color: var(--ink); }
+.h1 { font-size: var(--t-xl); margin: 0 0 var(--s2); }
+.h2 { font-size: var(--t-lg); margin: var(--s6) 0 var(--s3); }
+.picker, .filters { display: flex; flex-wrap: wrap; gap: var(--s2); margin: var(--s3) 0; }
+.pick {
+  min-height: 44px; padding: 0 var(--s4); font: inherit; font-size: var(--t-sm);
+  background: var(--surface); color: var(--ink); border: 1px solid var(--line); border-radius: var(--radius); cursor: pointer;
+}
+.pick[aria-pressed="true"] { background: var(--accent); color: var(--on-accent); border-color: var(--accent); }
+.pick:disabled { opacity: 0.45; cursor: not-allowed; }
+.pick:focus-visible, .copy:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.bar { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s3); }
+.hint { margin: 0; color: var(--muted); font-size: var(--t-sm); }
+.copy {
+  min-height: 44px; padding: 0 var(--s4); font: inherit; font-size: var(--t-sm);
+  background: var(--accent-soft); color: var(--accent); border: 1px solid var(--line); border-radius: var(--radius); cursor: pointer;
+}
+.scroll { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+.table { border-collapse: collapse; width: 100%; font-size: var(--t-sm); }
+.table th, .table td { padding: var(--s2) var(--s3); border-bottom: 1px solid var(--line); text-align: left; white-space: nowrap; vertical-align: middle; }
+.table thead th { background: var(--soft); }
+.stick { position: sticky; left: 0; background: var(--surface); z-index: 1; }
+.table thead .stick { background: var(--soft); }
+.num { font-variant-numeric: tabular-nums; }
+.best {
+  margin-left: var(--s2); padding: 1px var(--s2); font-size: var(--t-xs);
+  background: var(--good-soft); color: var(--good); border-radius: var(--radius);
+}
+.traits { list-style: none; margin: var(--s4) 0 0; padding: 0; display: grid; gap: var(--s3); }
+.traits li { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s2) var(--s3); }
+.traits a, .table a { min-height: 44px; display: inline-flex; align-items: center; color: var(--accent); }
+.cell { display: inline-flex; align-items: center; gap: var(--s2); }
+@media (max-width: 640px) {
+  .root { padding: var(--s4) var(--s3); }
+  .table th, .table td { padding: var(--s2); }
+}

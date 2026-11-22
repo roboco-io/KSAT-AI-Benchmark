@@ -6,7 +6,8 @@
     "prebuild": "node ../research/common-errors/publish.mjs && node ../research/contamination/publish.mjs && node ../research/metacognitive-abstention/publish.mjs",
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "postbuild": "node scripts/postbuild-index.mjs"
   },
   "dependencies": {
     "@mantine/charts": "^7.13.5",

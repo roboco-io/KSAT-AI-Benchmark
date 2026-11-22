@@ -1,8 +1,4 @@
-import '@mantine/core/styles.css';
-import './globals.css';
-import 'katex/dist/katex.min.css';
-
-import { ColorSchemeScript, MantineProvider } from '@mantine/core';
+import { ColorSchemeScript } from '@mantine/core';
 import type { Metadata } from 'next';
 import Script from 'next/script';
 
@@ -46,9 +42,7 @@ export default function RootLayout({
     <html lang="ko" suppressHydrationWarning>
       <head><ColorSchemeScript defaultColorScheme="auto" /></head>
       <body>
-        <MantineProvider defaultColorScheme="auto">
-          {children}
-        </MantineProvider>
+        {children}
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
           strategy="afterInteractive"
