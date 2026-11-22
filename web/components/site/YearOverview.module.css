@@ -49,3 +49,10 @@
 }
 
 .pending span:last-child { color: var(--muted); }
+
+.official {
+  margin: var(--s2) 0 0;
+  font-size: var(--t-sm);
+  color: var(--muted);
+}
+.official a { display: inline-block; padding: 4px 0; }

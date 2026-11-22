@@ -6,7 +6,30 @@ import { siteData } from '@/lib/site-data';
 import { Explorer } from './Explorer';
 import { MethodNotes } from './MethodNotes';
 import { ResearchLinks } from './ResearchLinks';
+import { SUBJECT_LABEL } from './primitives';
 import styles from './YearOverview.module.css';
+
+// 공식 문제지와 정답이 공개된 페이지로 연결한다. 주소가 과목마다 다르면 과목별 링크로 나눈다.
+function OfficialLinks({ year }: { year: number }) {
+  const sources = siteData.getOfficialSources(year);
+  if (sources.length === 0) return null;
+  const name = (subjects: string[]) => subjects.map((s) => SUBJECT_LABEL[s as keyof typeof SUBJECT_LABEL] ?? s).join('·');
+  return (
+    <p className={styles.official}>
+      공식 시험 공개 페이지(문제지·정답):{' '}
+      {sources.length === 1 ? (
+        <a href={sources[0].url} target="_blank" rel="noreferrer">한국교육과정평가원 {year}학년도 수능 ↗</a>
+      ) : (
+        sources.map((s, i) => (
+          <span key={s.url}>
+            {i > 0 && ' · '}
+            <a href={s.url} target="_blank" rel="noreferrer">{name(s.subjects)} ↗</a>
+          </span>
+        ))
+      )}
+    </p>
+  );
+}
 
 const usd = (v: number) => `$${v.toFixed(2)}`;
 
@@ -40,6 +63,7 @@ export function YearOverview({ view, home = false }: { view: YearView; home?: bo
         {h.sub && <p className={styles.sub}>{h.sub}</p>}
         {p4Only > 0 && <p className={styles.sub}>4교시만 응시한 모델 {p4Only}개는 순위표 아래쪽에 따로 둔다.</p>}
         <p className={styles.lede}>{year}학년도 대학수학능력시험 문항을 AI 모델에게 그대로 풀게 한 결과다.</p>
+        <OfficialLinks year={year} />
       </header>
       {models.length > 0 && (
         <section id="comparison" className={styles.section} aria-label="모델 비교">

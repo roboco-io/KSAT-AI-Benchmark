@@ -10,27 +10,13 @@ import { QuestionNote } from '@/components/QuestionNote';
 import { questionNotes } from '@/lib/question-notes';
 import { QuestionAnswers } from '@/components/site/QuestionAnswers';
 import { SUBJECT_LABEL } from '@/components/site/primitives';
-import main2026 from '@/public/data/benchmark-comparison.json';
-import main2025 from '@/public/data/benchmark-comparison-2025.json';
-import main2027 from '@/public/data/benchmark-comparison-2027.json';
 
 export const dynamicParams = false;
 
 type Params = { year: string; id: string };
 
-const SOURCES: Record<number, { models: { sources?: { subject: string; url: string }[] }[] }> = {
-  2025: main2025 as never,
-  2026: main2026 as never,
-  2027: main2027 as never,
-};
-
-function sourceUrl(year: number, subject: string): string | null {
-  for (const m of SOURCES[year]?.models ?? []) {
-    const s = m.sources?.find((x) => x.subject === subject);
-    if (s?.url && /^https?:\/\//.test(s.url)) return s.url;
-  }
-  return null;
-}
+// 공식 출처는 1-3교시와 4교시 데이터 모두에서 찾는다.
+const sourceUrl = (year: number, subject: string) => siteData.getOfficialSourceUrl(year, subject);
 
 export function generateStaticParams() {
   return siteData.yearViews().flatMap((v) => {
@@ -79,7 +65,7 @@ export default async function QuestionPage({ params }: { params: Promise<Params>
       </dl>
       <p style={{ color: 'var(--muted)' }}>
         문항 본문은 이 사이트에 싣지 않는다. 공식 문제지에서 확인할 수 있다.
-        {src && <> <a href={src} target="_blank" rel="noreferrer">공식 출처 ↗</a></>}
+        {src && <> <a href={src} target="_blank" rel="noreferrer">공식 시험 공개 페이지 ↗</a></>}
       </p>
       {questionNotes[detail.id] && <QuestionNote questionId={detail.id} />}
       <p style={{ display: 'flex', justifyContent: 'space-between', gap: 'var(--s3)' }}>

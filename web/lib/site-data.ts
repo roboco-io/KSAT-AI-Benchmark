@@ -55,4 +55,26 @@ function getMethodFacts(year: number): MethodFacts {
   };
 }
 
-export const siteData = { yearViews, getYear, getMethodFacts };
+export interface OfficialSource { subjects: string[]; url: string }
+
+// 공식 문제지·정답 공개 페이지. export 데이터의 `sources` 에서 읽고, 주소가 같은 과목은 한 항목으로 묶는다.
+function getOfficialSources(year: number): OfficialSource[] {
+  const byUrl = new Map<string, string[]>();
+  for (const file of rawByYear[year] ?? []) {
+    for (const model of file.models) {
+      for (const source of model.sources ?? []) {
+        if (!/^https?:\/\//.test(source.url)) continue;
+        const subjects = byUrl.get(source.url) ?? [];
+        if (!subjects.includes(source.subject)) subjects.push(source.subject);
+        byUrl.set(source.url, subjects);
+      }
+    }
+  }
+  return [...byUrl].map(([url, subjects]) => ({ url, subjects }));
+}
+
+function getOfficialSourceUrl(year: number, subject: string): string | null {
+  return getOfficialSources(year).find((s) => s.subjects.includes(subject))?.url ?? null;
+}
+
+export const siteData = { yearViews, getYear, getMethodFacts, getOfficialSources, getOfficialSourceUrl };
