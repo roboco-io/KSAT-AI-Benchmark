@@ -102,3 +102,31 @@
     display: flex;
   }
 }
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  margin-left: -4px;
+  border-radius: var(--radius);
+}
+.logo:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.logoMark {
+  display: block;
+  width: 42px;
+  height: 32px;
+  background-color: var(--ink);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+}
+.logo:hover .logoMark { background-color: var(--accent); }
+@media (max-width: 419.98px) {
+  .logoMark { width: 34px; height: 26px; }
+  .logo { min-width: 38px; }
+}

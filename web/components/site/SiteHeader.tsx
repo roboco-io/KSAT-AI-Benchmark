@@ -7,6 +7,9 @@ import { yearPath, questionsPath, comparePath } from '@/lib/site-routes.mjs';
 import { ThemeToggle } from './ThemeToggle';
 import styles from './SiteHeader.module.css';
 
+// 로고는 단색 SVG라서 마스크로 그려 테마의 글자색을 따르게 한다.
+const logoSrc = `${process.env.NODE_ENV === 'production' ? '/KSAT-AI-Benchmark' : ''}/images/roboco-logo.svg`;
+
 export function SiteHeader({ years, latestYear }: { years: number[]; latestYear: number }) {
   const pathname = usePathname() ?? '/';
   const [open, setOpen] = useState(false);
@@ -17,6 +20,9 @@ export function SiteHeader({ years, latestYear }: { years: number[]; latestYear:
   return (
     <header className={styles.header}>
       <div className={styles.inner}>
+        <a href="https://roboco.io" className={styles.logo} aria-label="로보코 홈페이지(roboco.io)로 이동">
+          <span className={styles.logoMark} style={{ maskImage: `url(${logoSrc})`, WebkitMaskImage: `url(${logoSrc})` }} aria-hidden="true" />
+        </a>
         <Link href="/" className={styles.brand} onClick={close}>KSAT AI Benchmark</Link>
         <nav className={styles.years} aria-label="학년도">
           {years.map((y) => (
