@@ -1,0 +1,84 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {buildYearView, slimModel, latestYearWithResults} from '../../web/lib/year-view.mjs';
+
+const exam=(subject,track,score,max=100)=>({id:`2026-${subject}-${track}`,title:`${subject} ${track}`,subject,track,max_score:max,summary:{score}});
+const model=(id,score,cost,extra={})=>({
+ model:id,engine:'E',protocol:{effort:'high'},input_mode:'pdf',
+ summary:{score,max_score:376,correct:1,incorrect:2,abstained:3,errors:4,total_questions:10,
+  ...(cost===undefined?{}:{estimated_cost_usd:cost}),wall_time_seconds:12,usage:{input_tokens:10,output_tokens:5}},
+ exams:[exam('korean','a',score>>1,100)],questions:[{id:'q'}],limitations:[],...extra});
+const data=(models,requested=[])=>({academic_year:2026,models,requested_models:requested});
+
+test('sorts_by_score_then_cost',()=>{
+ const v=buildYearView(data([model('c',300,1),model('b',376,4),model('a',376,3)]),null);
+ assert.deepEqual(v.models.map(m=>m.id),['a','b','c']);
+ assert.equal(v.year,2026);
+});
+
+test('subject_pct_averages_tracks',()=>{
+ const m=model('a',376,1,{exams:[exam('korean','x',92),exam('korean','y',100),exam('math','z',100)]});
+ const v=buildYearView(data([m]),null).models[0];
+ assert.equal(v.subjects.korean.pct,96);
+ assert.equal(v.subjects.korean.tracks.length,2);
+ assert.deepEqual(v.subjects.korean.tracks[0],{id:'2026-korean-x',title:'korean x',score:92,max:100});
+ assert.equal(v.score,376);assert.equal(v.maxScore,376);assert.equal(v.period4,null);
+ const r=buildYearView(data([model('a',1,1,{exams:[exam('math','p',1,3),exam('math','q',1,3)]})]),null).models[0];
+ assert.equal(r.subjects.math.pct,33);
+});
+
+test('period4_only_model_listed_last',()=>{
+ const p4=data([{...model('p',50,1),exams:[exam('social','s',40,50)]},model('a',376,1,{exams:[exam('korean','k',90)]})]);
+ p4.models[1].summary.score=10;p4.models[1].summary.max_score=50;
+ const v=buildYearView(data([model('a',376,1)]),p4);
+ assert.deepEqual(v.models.map(m=>m.id),['a','p']);
+ const p=v.models[1];
+ assert.equal(p.score,null);assert.equal(p.maxScore,null);
+ assert.deepEqual(p.period4,{score:50,max:376});
+ assert.equal(v.models[0].period4.score,10);
+ assert.ok(v.subjects.includes('social'));
+});
+
+test('pending_from_requested',()=>{
+ const v=buildYearView(data([model('a',1,1)],[{id:'a',state:'complete'},{id:'z',state:'pending'}]),null);
+ assert.deepEqual(v.pending,[{model:'z',state:'pending'}]);
+});
+
+test('provider_prefixes',()=>{
+ const v=buildYearView(data([model('gpt-x',4,1),model('claude-x',3,1),model('gemini-x',2,1),model('zzz',1,1),model('glm-5',0,1)]),null);
+ const by=Object.fromEntries(v.models.map(m=>[m.id,m.provider]));
+ assert.deepEqual(by,{'gpt-x':'OpenAI','claude-x':'Anthropic','gemini-x':'Google',zzz:'기타','glm-5':'Zhipu'});
+});
+
+test('tokens_sum',()=>{
+ const m=buildYearView(data([model('a',1,1)]),null).models[0];
+ assert.equal(m.inputTokens,10);assert.equal(m.outputTokens,5);
+});
+
+test('slim_drops_questions',()=>{
+ const m=buildYearView(data([model('a',1,1)]),null).models[0];
+ assert.ok(m.questions.length===1);
+ const s=slimModel(m);
+ assert.equal('questions' in s,false);assert.equal('limitations' in s,false);
+ assert.equal(s.id,'a');
+});
+
+test('missing_summary_fields_null',()=>{
+ const m=model('a',1);
+ delete m.summary.wall_time_seconds;delete m.summary.usage;delete m.protocol;delete m.input_mode;
+ const v=buildYearView(data([m]),null).models[0];
+ assert.equal(v.costUsd,null);assert.equal(v.wallSeconds,null);
+ assert.equal(v.inputTokens,null);assert.equal(v.outputTokens,null);
+ assert.equal(v.effort,null);assert.equal(v.inputMode,null);
+ const e=buildYearView(data([]),null);
+ assert.deepEqual(e.models,[]);assert.deepEqual(e.pending,[]);
+ assert.equal(buildYearView(data([model('a',1,1)]),data([])).models[0].period4,null);
+ assert.equal(buildYearView(data([model('a',1,1)]),null).models[0].costUsd,1);
+});
+
+test('latestYearWithResults',()=>{
+ const m={id:'a'};
+ assert.equal(latestYearWithResults([{year:2026,models:[m]},{year:2027,models:[]}]),2026);
+ assert.equal(latestYearWithResults([{year:2026,models:[m]},{year:2027,models:[m]}]),2027);
+ assert.equal(latestYearWithResults([]),0);
+});
