@@ -63,6 +63,7 @@ export function ModelProfile({ year, model, traits, subjects, limitations, recor
       {model.period4 && (
         <>
           <h2>4교시 (한국사·탐구)</h2>
+          {model.period4.sourceId && <p>4교시는 다른 실행 경로로 풀었다{model.period4.engine ? `: ${model.period4.engine}` : ''} (실행 이름 {model.period4.sourceId}).</p>}
           <dl className={styles.figures}>
             <div><dt>점수</dt><dd>{model.period4.score} / {model.period4.max}</dd></div>
             <div><dt>정답</dt><dd>{model.period4.correct} / {model.period4.total}</dd></div>

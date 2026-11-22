@@ -43,6 +43,19 @@ function baseView(m) {
   };
 }
 
+const ROUTE_SUFFIXES = ['-agy'];
+
+function routeBaseId(id, period4, byId) {
+  if (byId.has(id)) return id;
+  const requested = (period4?.requested_models ?? []).find((r) => r.id === id);
+  if (!requested?.agent) return id;
+  const suffix = ROUTE_SUFFIXES.find((x) => id.endsWith(x));
+  if (!suffix) return id;
+  const base = id.slice(0, -suffix.length);
+  const baseAlsoInPeriod4 = (period4?.models ?? []).some((m) => m.model === base);
+  return byId.has(base) && !baseAlsoInPeriod4 ? base : id;
+}
+
 export function buildYearView(main, period4) {
   const byId = new Map();
   for (const m of main?.models ?? []) {
@@ -61,7 +74,14 @@ export function buildYearView(main, period4) {
       ? {score, max, correct: t.correct, incorrect: t.incorrect, abstained: t.abstained, errors: t.errors,
         total: t.total, costUsd: t.costUsd, wallSeconds: t.wallSeconds}
       : null;
-    const existing = byId.get(m.model);
+    // 4교시를 다른 실행 경로로 푼 모델은 요청 목록에 `<모델>-agy` 처럼 경로 접미사가 붙은 id로 올라온다
+    // (benchmark/academic-years.mjs 의 MODELS_2027_PERIOD4). 같은 모델이므로 1-3교시 결과에 합친다.
+    const baseId = routeBaseId(m.model, period4, byId);
+    const existing = byId.get(baseId);
+    if (p4) {
+      p4.sourceId = baseId === m.model ? null : m.model;
+      p4.engine = existing && existing.engine !== t.engine ? t.engine : null;
+    }
     if (existing) {
       existing.period4 = p4;
       Object.assign(existing.subjects, subjectsOf(m.exams));

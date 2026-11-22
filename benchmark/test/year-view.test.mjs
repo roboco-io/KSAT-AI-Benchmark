@@ -34,7 +34,7 @@ test('period4_only_model_listed_last',()=>{
  assert.deepEqual(v.models.map(m=>m.id),['a','p']);
  const p=v.models[1];
  assert.equal(p.score,null);assert.equal(p.maxScore,null);
- assert.deepEqual(p.period4,{score:50,max:376,correct:1,incorrect:2,abstained:3,errors:4,total:10,costUsd:1,wallSeconds:12});
+ assert.deepEqual(p.period4,{score:50,max:376,correct:1,incorrect:2,abstained:3,errors:4,total:10,costUsd:1,wallSeconds:12,sourceId:null,engine:null});
  assert.equal(p.costUsd,null);assert.equal(p.correct,0);
  assert.equal(v.models[0].period4.score,10);
  assert.ok(v.subjects.includes('social'));
@@ -92,8 +92,35 @@ test('period4_group_separate_from_main_aggregates',()=>{
  const v=buildYearView(data([model('both',300,1)]),data([p4m,only]));
  const b=v.models.find(m=>m.id==='both');
  assert.equal(b.correct,1);assert.equal(b.total,10);assert.equal(b.costUsd,1);assert.equal(b.wallSeconds,12);
- assert.deepEqual(b.period4,{score:40,max:50,correct:7,incorrect:1,abstained:0,errors:0,total:8,costUsd:9,wallSeconds:99});
+ assert.deepEqual(b.period4,{score:40,max:50,correct:7,incorrect:1,abstained:0,errors:0,total:8,costUsd:9,wallSeconds:99,sourceId:null,engine:null});
  const o=v.models.find(m=>m.id==='only');
  assert.equal(o.costUsd,null);assert.equal(o.wallSeconds,null);assert.equal(o.inputTokens,null);
  assert.equal(o.correct,0);assert.equal(o.total,0);assert.equal(o.period4.correct,5);assert.equal(o.period4.costUsd,2);
+});
+
+test('period4_route_variant_merges_into_base_model', () => {
+  const report = (model, engine, subject, score, max) => ({
+    model, engine, summary: {score, max_score: max, correct: 1, incorrect: 0, abstained: 0, errors: 0, total_questions: 1, estimated_cost_usd: 1, wall_time_seconds: 10, usage: {input_tokens: 1, output_tokens: 1}},
+    exams: [{id: `${model}-${subject}`, title: subject, subject, track: subject, max_score: max, summary: {score}}],
+    questions: [{id: `${model}-${subject}-q1`, subject, status: 'correct'}],
+  });
+  const main = {academic_year: 2027, requested_models: [], models: [report('m-carbon', 'Pi CLI', 'english', 100, 100), report('m-neon', 'Pi CLI', 'english', 90, 100)]};
+  const p4 = {
+    academic_year: 2027,
+    requested_models: [{id: 'm-carbon-agy', agent: 'antigravity', state: 'complete'}, {id: 'm-neon', state: 'complete'}, {id: 'x-agy', state: 'complete'}],
+    models: [report('m-carbon-agy', 'Antigravity CLI', 'korean_history', 48, 50), report('m-neon', 'Pi CLI', 'korean_history', 40, 50), report('x-agy', 'Other', 'korean_history', 30, 50)],
+  };
+  const view = buildYearView(main, p4);
+  assert.deepEqual(view.models.map((m) => m.id), ['m-carbon', 'm-neon', 'x-agy']);
+  const carbon = view.models[0];
+  assert.equal(carbon.period4.score, 48);
+  assert.equal(carbon.period4.sourceId, 'm-carbon-agy');
+  assert.equal(carbon.period4.engine, 'Antigravity CLI');
+  assert.equal(carbon.questions.length, 2);
+  assert.ok(carbon.subjects.korean_history);
+  assert.equal(carbon.engine, 'Pi CLI');
+  const neon = view.models[1];
+  assert.equal(neon.period4.sourceId, null);
+  assert.equal(neon.period4.engine, null);
+  assert.equal(view.models[2].score, null);
 });

@@ -62,6 +62,7 @@ export function ModelPanel({ year, row, subjects }: { year: number; row: RankRow
         {row.period4 && (
           <>
             <h4 className={styles.h}>4교시 (한국사·탐구)</h4>
+          {row.period4.sourceId && <p>4교시는 다른 실행 경로로 풀었다{row.period4.engine ? `: ${row.period4.engine}` : ''} (실행 이름 {row.period4.sourceId}).</p>}
             <dl className={styles.dl}>
               <dt>점수</dt>
               <dd className={styles.num}>{row.period4.score} / {row.period4.max}</dd>
