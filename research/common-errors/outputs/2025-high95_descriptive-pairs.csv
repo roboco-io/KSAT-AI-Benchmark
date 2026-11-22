@@ -1,0 +1,16 @@
+a,b,noncorrect_a,noncorrect_b,joint_noncorrect,error_jaccard,valid_wrong_jaccard,independence_expected_joint_noncorrect,both_valid_wrong,same_wrong,same_wrong_given_both_wrong,oracle_correct
+claude-fable-5-1,claude-opus-5-5,2,2,1,0.3333333333333333,0.3333333333333333,0.027210884353741496,1,1,1.0,146
+claude-fable-5-1,claude-sonnet-5-5,2,2,0,0.0,0.0,0.027210884353741496,0,0,,147
+claude-fable-5-1,gemini-4-argon,2,1,1,0.5,0.5,0.013605442176870748,1,1,1.0,146
+claude-fable-5-1,gpt-6-astra,2,1,0,0.0,0.0,0.013605442176870748,0,0,,147
+claude-fable-5-1,gpt-6.1-sol,2,2,0,0.0,0.0,0.027210884353741496,0,0,,147
+claude-opus-5-5,claude-sonnet-5-5,2,2,0,0.0,0.0,0.027210884353741496,0,0,,147
+claude-opus-5-5,gemini-4-argon,2,1,1,0.5,0.5,0.013605442176870748,1,1,1.0,146
+claude-opus-5-5,gpt-6-astra,2,1,0,0.0,0.0,0.013605442176870748,0,0,,147
+claude-opus-5-5,gpt-6.1-sol,2,2,0,0.0,0.0,0.027210884353741496,0,0,,147
+claude-sonnet-5-5,gemini-4-argon,2,1,0,0.0,0.0,0.013605442176870748,0,0,,147
+claude-sonnet-5-5,gpt-6-astra,2,1,0,0.0,0.0,0.013605442176870748,0,0,,147
+claude-sonnet-5-5,gpt-6.1-sol,2,2,0,0.0,0.0,0.027210884353741496,0,0,,147
+gemini-4-argon,gpt-6-astra,1,1,0,0.0,0.0,0.006802721088435374,0,0,,147
+gemini-4-argon,gpt-6.1-sol,1,2,0,0.0,0.0,0.013605442176870748,0,0,,147
+gpt-6-astra,gpt-6.1-sol,1,2,1,0.5,0.5,0.013605442176870748,1,1,1.0,146

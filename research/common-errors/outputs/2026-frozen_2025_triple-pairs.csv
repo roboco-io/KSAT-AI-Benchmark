@@ -1,0 +1,4 @@
+a,b,noncorrect_a,noncorrect_b,joint_noncorrect,error_jaccard,valid_wrong_jaccard,independence_expected_joint_noncorrect,both_valid_wrong,same_wrong,same_wrong_given_both_wrong,oracle_correct
+claude-fable-5-1,claude-haiku-5-5,1,18,1,0.05555555555555555,0.125,0.12244897959183673,1,1,1.0,146
+claude-fable-5-1,gpt-6-astra,1,0,0,0.0,0.0,0.0,0,0,,147
+claude-haiku-5-5,gpt-6-astra,18,0,0,0.0,0.0,0.0,0,0,,147
