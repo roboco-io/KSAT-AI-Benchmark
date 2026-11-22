@@ -1,0 +1,19 @@
+year,subject,track,indicator,value,value_low,value_high,basis,source_name,source_url,published,retrieved
+2025,korean,hwajak,raw_grade1_cut,92,92,92,preliminary,EBSi 가채점 (뉴시스 보도),https://www.newsis.com/view/NISX20241114_0002959918,2024-11-14,2026-11-22
+2025,korean,language_media,raw_grade1_cut,90,90,90,preliminary,EBSi 가채점 (뉴시스 보도),https://www.newsis.com/view/NISX20241114_0002959918,2024-11-14,2026-11-22
+2025,math,probability,raw_grade1_cut,92,92,92,preliminary,EBSi 가채점 (뉴시스 보도),https://www.newsis.com/view/NISX20241114_0002959918,2024-11-14,2026-11-22
+2025,math,calculus,raw_grade1_cut,85,85,85,preliminary,EBSi 가채점 (뉴시스 보도),https://www.newsis.com/view/NISX20241114_0002959918,2024-11-14,2026-11-22
+2025,math,geometry,raw_grade1_cut,88,88,88,preliminary,EBSi 가채점 (뉴시스 보도),https://www.newsis.com/view/NISX20241114_0002959918,2024-11-14,2026-11-22
+2025,english,english,grade1_share_pct,6.22,6.22,6.22,official,평가원 채점 결과 (뉴시스 보도),https://mobile.newsis.com/view/NISX20241205_0002985300,2024-12-05,2026-11-22
+2026,korean,hwajak,raw_grade1_cut,88,88,88,preliminary,송원학원 가채점 (다음 뉴스),https://v.daum.net/v/20251116154942823,2025-11-16,2026-11-22
+2026,korean,language_media,raw_grade1_cut,85,85,85,preliminary,송원학원 가채점 (다음 뉴스),https://v.daum.net/v/20251116154942823,2025-11-16,2026-11-22
+2026,math,probability,raw_grade1_cut,92,92,92,preliminary,송원학원 가채점 (다음 뉴스),https://v.daum.net/v/20251116154942823,2025-11-16,2026-11-22
+2026,math,calculus,raw_grade1_cut,88,88,88,preliminary,송원학원 가채점 (다음 뉴스),https://v.daum.net/v/20251116154942823,2025-11-16,2026-11-22
+2026,math,geometry,raw_grade1_cut,89,89,89,preliminary,송원학원 가채점 (다음 뉴스),https://v.daum.net/v/20251116154942823,2025-11-16,2026-11-22
+2026,english,english,grade1_share_pct,3.11,3.11,3.11,official,평가원 채점 결과 (뉴시스 보도),https://mobile.newsis.com/view/NISX20251204_0003428272,2025-12-04,2026-11-22
+2027,korean,hwajak,raw_grade1_cut,94.5,94,95,preliminary,EBSi·메가스터디·종로학원 가채점 (스페셜타임스),https://www.specialtimes.co.kr/news/articleView.html?idxno=487953,2026-11-20,2026-11-22
+2027,korean,language_media,raw_grade1_cut,90.5,90,91,preliminary,EBSi·메가스터디·종로학원 가채점 (스페셜타임스),https://www.specialtimes.co.kr/news/articleView.html?idxno=487953,2026-11-20,2026-11-22
+2027,math,probability,raw_grade1_cut,89,88,90,preliminary,EBSi·메가스터디·종로학원 가채점 (스페셜타임스),https://www.specialtimes.co.kr/news/articleView.html?idxno=487953,2026-11-20,2026-11-22
+2027,math,calculus,raw_grade1_cut,85,84,86,preliminary,EBSi·메가스터디·종로학원 가채점 (스페셜타임스),https://www.specialtimes.co.kr/news/articleView.html?idxno=487953,2026-11-20,2026-11-22
+2027,math,geometry,raw_grade1_cut,87.5,86,89,preliminary,EBSi·메가스터디·종로학원 가채점 (스페셜타임스),https://www.specialtimes.co.kr/news/articleView.html?idxno=487953,2026-11-20,2026-11-22
+2027,english,english,grade1_share_pct,8.0,8.0,8.0,preliminary,추정 주체 불명 (스페셜타임스),https://www.specialtimes.co.kr/news/articleView.html?idxno=487953,2026-11-20,2026-11-22

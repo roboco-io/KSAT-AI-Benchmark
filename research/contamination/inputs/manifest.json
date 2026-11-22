@@ -1,0 +1,174 @@
+[
+ {
+  "source": "exams/datasets/2025-ksat.json",
+  "sha256": "0b885a2f36bdca9059bb47a61caa00b18d15e542ad15e0e4ffdebb555bc9bca3"
+ },
+ {
+  "source": "results/codex-2025-gpt-6-luna/run.json",
+  "sha256": "a6ca6234bfea46ad43e10520bb5aa3e960487f398d2c15157361ea8084439f02"
+ },
+ {
+  "source": "results/codex-2025-gpt-6.1-sol/run.json",
+  "sha256": "3de935efa1738b2e38ee6e0ce31a0cc6859069cb6cb43b6c4e131bc90bdc98ca"
+ },
+ {
+  "source": "results/codex-2025-gpt-6-astra/run.json",
+  "sha256": "cb5fb28d01b64d8c4f6ab3c072873fd4a689075ddde36ddcea6cb5d2039ce726"
+ },
+ {
+  "source": "results/claude-2025-claude-haiku-5-5/run.json",
+  "sha256": "79ecbe1ff49cc224a73573d955ee34f30fbeeeb1efa50272c6ccaac7dc6a339c"
+ },
+ {
+  "source": "results/claude-2025-claude-sonnet-5-5/run.json",
+  "sha256": "725d58d39c1fce16ccd9df2f08bbc761773f8f69df24f30a93350311dc6f95c9"
+ },
+ {
+  "source": "results/claude-2025-claude-opus-5-5/run.json",
+  "sha256": "1b10445bf1b022ba826fb92e128aae950c6dbb2099dd0cb395b6f9bbc3f55160"
+ },
+ {
+  "source": "results/claude-2025-claude-fable-5-1/run.json",
+  "sha256": "47567ba3a30e565a37f8c1729187ee0f8df1eca6484e609f2fe632dc8c5e1e9f"
+ },
+ {
+  "source": "results/pi-2025-gemini-4-argon/run.json",
+  "sha256": "8a5f2d77f8b828cde671f5ae8d0a7d568046fb8826f2efb1c2f3b01ca37ccb51"
+ },
+ {
+  "source": "results/pi-2025-kimi-k3/run.json",
+  "sha256": "cf1c3ca58b328548c4e41df4e0d10839c2c8e799908b580605485c6aa939c00d"
+ },
+ {
+  "source": "exams/datasets/2026-ksat.json",
+  "sha256": "de418de072e11d96364548de1113a6ad33c6f29fbe28ebfe259a8ff85c453074"
+ },
+ {
+  "source": "results/codex-2026/run.json",
+  "sha256": "024d4a88fde89608305990e1e13a09a56c1c07a4a22fbf5d1a7f861e98aa6be7"
+ },
+ {
+  "source": "results/codex-2026-gpt-6-astra/run.json",
+  "sha256": "f23650befcaf2306b84c063551414ace0d04165e33bc66f67538f7266d9d1154"
+ },
+ {
+  "source": "results/codex-2026-gpt-6-luna/run.json",
+  "sha256": "924ef48b19c54b82985c13cd1170645223be95a7d9fc9d8ab019ae1ae0175b55"
+ },
+ {
+  "source": "results/claude-2026-sonnet-5-5/run.json",
+  "sha256": "066a308a934f38716bd92f07ee083532a99afe16d3dca575e488c13b47adfc2f"
+ },
+ {
+  "source": "results/claude-2026-opus-5-5/run.json",
+  "sha256": "ab111a4139aee24070caf232b814f3e4856a00dabeed855826235b38cc9c33f5"
+ },
+ {
+  "source": "results/claude-2026-haiku-5-5/run.json",
+  "sha256": "a9b4abb051a0efe05d905dc4231dadefd01550eedc6992813ab7fcb42d97e744"
+ },
+ {
+  "source": "results/claude-2026-fable-5-1/run.json",
+  "sha256": "e656c8e9d684f3bce82bb4ca8bb4dd4b1b64015e040cb99ab3e5ffb560c9ff45"
+ },
+ {
+  "source": "results/pi-2026-deepseek-v4-1-flash/run.json",
+  "sha256": "7bbb95f718c45b7c7a14e62e4f113e654bc5fe2218c63313253e649b32949b5b"
+ },
+ {
+  "source": "results/pi-2026-glm-5-3-flash/run.json",
+  "sha256": "a6fbf15716f82df15e0ef705aadead30d771208fca0754e885a7aa80620b279c"
+ },
+ {
+  "source": "results/pi-2026-qwen3-8-27b/run.json",
+  "sha256": "2a2f44bfc9c97f9db7657ae77a5fac9f46ee86b79a6625f02f247d991291bff8"
+ },
+ {
+  "source": "results/pi-2026-kimi-k3/run.json",
+  "sha256": "e7567358acc5df1ecc0d186a25912d0c25d2b05b6a32f4300509d7df9172241b"
+ },
+ {
+  "source": "results/pi-2026-gemini-4-argon/run.json",
+  "sha256": "4f35ca8e2daa8dc2bd11e9427f8495e72fe3bede71fb4495948ed61046135117"
+ },
+ {
+  "source": "results/pi-2026-k-exaone-2.5/run.json",
+  "sha256": "7b1786164bfc37258e9549098570926046b181a579f1394b67f97ffe8a6f6cd3"
+ },
+ {
+  "source": "results/pi-2026-solar-pro-4/run.json",
+  "sha256": "b43ba8cf8990efbb066afecf00d6ec83de90c5845a6bfe0291211583713e6b2f"
+ },
+ {
+  "source": "exams/datasets/2027-ksat.json",
+  "sha256": "4c69e03b69b31b050d595a2b9905e1c2f7a1e425f2a90ed9cce44315833bd086"
+ },
+ {
+  "source": "results/codex-2027-gpt-6.2-sol/run.json",
+  "sha256": "97bf67e0a405d55cf03a69e17541a8f28d3422fe200db602d9d2add507ce4caa"
+ },
+ {
+  "source": "results/codex-2027-gpt-6.2-astra/run.json",
+  "sha256": "0df9edcf8cbf51684d26c486143599dd89921df2ccbcd05ba30e4ae703b4945a"
+ },
+ {
+  "source": "results/codex-2027-gpt-6-luna/run.json",
+  "sha256": "bbe3b0b18d0ad34a596cdc771ae5eb3af140fd1f3f87255dcf320d4c90cefd69"
+ },
+ {
+  "source": "results/codex-2027-gpt-6.1-terra/run.json",
+  "sha256": "0c488ed4c6c3f6fdd701e2e5b28f01565e0d753fa705dd1a38458bfe72ef98fa"
+ },
+ {
+  "source": "results/claude-2027-claude-fable-5-2/run.json",
+  "sha256": "9fadd07618df1f6eaf44b42617be9c80a24897b0fba3a9b31c0802fb24e217cf"
+ },
+ {
+  "source": "results/claude-2027-claude-opus-5-5/run.json",
+  "sha256": "c534ae1bdc35e6f5cbca8530bf6f52fa2edf76876d030d063ce93afb435c2733"
+ },
+ {
+  "source": "results/claude-2027-claude-sonnet-5-5/run.json",
+  "sha256": "afe49d06765f4e06b81089f5fa27d49100914363ee2d5f73cc7241d2e63db2f1"
+ },
+ {
+  "source": "results/claude-2027-claude-haiku-5-5/run.json",
+  "sha256": "ad4c49816612c41a6798f5a97be414dd119f8e0bfafd57550adb42f8e320c5f8"
+ },
+ {
+  "source": "results/pi-2027-gemini-4-neon/run.json",
+  "sha256": "e8c3d486e184954a12e83bf1ade378c83bcad787b66ae689893864cf31379b12"
+ },
+ {
+  "source": "results/pi-2027-gemini-4-carbon/run.json",
+  "sha256": "ebdd268ac0909867b665147ebe04f2120787cfba2d47ed17e0b39c0c03647783"
+ },
+ {
+  "source": "results/pi-2027-deepseek-v4.1-flash/run.json",
+  "sha256": "c510315a1dcca3a7be5ade5b0047364eeebe50c586a57202df110b1306e43435"
+ },
+ {
+  "source": "results/pi-2027-glm-5.3-flash/run.json",
+  "sha256": "063ddaa41ffe55ed943fea9fe1353cb934a042ed9c779d180438240251cd50b6"
+ },
+ {
+  "source": "results/pi-2027-qwen4-max/run.json",
+  "sha256": "4ad043ec3987b55876a3118e5f41e27639b29a07a258055c66613601cc38efc0"
+ },
+ {
+  "source": "results/pi-2027-kimi-k3.1-pro/run.json",
+  "sha256": "617b242923da5bb76bac92dc6a0c54a654c55f3dac523cb9fb14a16325ae195b"
+ },
+ {
+  "source": "results/pi-2027-solar-pro-4/run.json",
+  "sha256": "094904c910509838c169ecece25ac78c089e77a4f7aefbca753933c4f99dfb4f"
+ },
+ {
+  "source": "results/pi-2027-solar-mini-4-5-preview/run.json",
+  "sha256": "bd04fe97e46b263c63e9aa0e598561198d73b61649d8ed0d95a2f48cdce43bb4"
+ },
+ {
+  "source": "results/antigravity-2027-gemini-4-hydrogen/run.json",
+  "sha256": "7106122451c448ba1adec690e704b99829801672fbdd391d3d01b79e84432875"
+ }
+]
