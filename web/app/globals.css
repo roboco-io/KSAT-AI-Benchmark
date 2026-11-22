@@ -1017,3 +1017,28 @@ td.period4-column { background:var(--neon-soft); }
 .model-intro-sources a { margin-right:6px; }
 .dot.unsolved { background:#c2410c }
 .agy-constraint { color:#b45309; }
+/* Period 4 per-subject score matrix */
+.subject-matrix-section { margin-top:28px; }
+.subject-matrix-wrap { background:var(--surface); border:1px solid var(--line); border-radius:8px; overflow-x:auto; }
+.subject-matrix { border-collapse:collapse; width:100%; min-width:900px; font-size:11px; font-variant-numeric:tabular-nums; text-align:center; }
+.subject-matrix thead { background:var(--strong-bg); color:var(--on-strong); }
+.subject-matrix th,.subject-matrix td { padding:6px 4px; border-bottom:1px solid var(--line); }
+.subject-matrix thead th { font-weight:600; white-space:nowrap; }
+.subject-matrix .matrix-group { border-left:1px solid var(--line); font-size:10px; letter-spacing:.02em; }
+.subject-matrix thead button { all:unset; cursor:pointer; padding:2px 4px; border-radius:4px; }
+.subject-matrix thead button:hover,.subject-matrix thead button:focus-visible { background:var(--accent-fill); }
+.subject-matrix thead button.active { background:var(--accent-fill); text-decoration:underline; }
+.subject-matrix .matrix-model { position:sticky; left:0; z-index:1; text-align:left; min-width:140px; background:var(--surface); white-space:nowrap; }
+.subject-matrix thead .matrix-model { background:var(--strong-bg); }
+.subject-matrix .matrix-model small { margin-left:6px; color:var(--badge-warn-text); font-size:9px; font-weight:600; }
+.subject-matrix td b { display:block; font-size:12px; }
+.subject-matrix td small { display:block; font-size:9px; opacity:.75; }
+.subject-matrix td.b5 { background:color-mix(in srgb, var(--teal) 42%, var(--surface)); }
+.subject-matrix td.b4 { background:color-mix(in srgb, var(--teal) 24%, var(--surface)); }
+.subject-matrix td.b3 { background:color-mix(in srgb, var(--teal) 10%, var(--surface)); }
+.subject-matrix td.b2 { background:var(--badge-warn-bg); }
+.subject-matrix td.b1 { background:var(--badge-bad-bg); }
+.subject-matrix td.empty { color:var(--muted); }
+.subject-matrix tfoot th,.subject-matrix tfoot td { font-weight:600; background:var(--surface-soft); border-bottom:0; }
+.subject-matrix td small.missing { color:var(--badge-warn-text); opacity:1; white-space:nowrap; }
+.subject-matrix tfoot .matrix-model small { color:var(--muted); }
