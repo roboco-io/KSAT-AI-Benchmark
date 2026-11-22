@@ -1,0 +1,29 @@
+{
+  "verified": true,
+  "checks_passed": true,
+  "errors": [],
+  "independent_recheck": {
+    "primary_image_abstentions_all_panels": 187,
+    "p4_primary_complete_image_runs": 12,
+    "p4_nonfigure_sci_vs_soc": [
+      [
+        22,
+        19
+      ],
+      [
+        4,
+        99
+      ]
+    ],
+    "p4_figure_sci_vs_soc": [
+      [
+        97,
+        76
+      ],
+      [
+        24,
+        77
+      ]
+    ]
+  }
+}

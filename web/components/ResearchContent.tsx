@@ -25,11 +25,23 @@ export function ResearchContent({ text, assetRoot, sectionId }: { text: string; 
   const blocks = text.split(/\n\s*\n/);
   return <>{blocks.map((block, index) => {
     if (block.startsWith('## ')) return <h2 id={sectionId} key={index}>{block.slice(3)}</h2>;
+    if (block.startsWith('### ')) return <h3 key={index}>{block.slice(4)}</h3>;
+    if (block.startsWith('> ')) {
+      const content = block.split('\n').map(line => line.replace(/^>\s?/, '')).join(' ');
+      return <blockquote key={index}><p>{inline(content, assetRoot)}</p></blockquote>;
+    }
     const image = /^!\[([^\]]*)\]\(([^)]+)\)$/.exec(block);
     if (image) return <figure key={index}><a href={`${assetRoot}/${image[2]}`}><img src={`${assetRoot}/${image[2]}`} alt={image[1]} loading="lazy" /></a><figcaption>{image[1]} · 이미지를 선택하면 원본 크기로 볼 수 있습니다.</figcaption></figure>;
     if (block.startsWith('|')) {
       const rows = block.split('\n').filter(line => !/^\|[\s:|-]+\|$/.test(line)).map(line => line.slice(1, -1).split('|').map(cell => cell.trim()));
       return <div className="research-table-wrap" key={index}><table><thead><tr>{rows[0].map((cell, i) => <th scope="col" key={i}>{inline(cell, assetRoot)}</th>)}</tr></thead><tbody>{rows.slice(1).map((row, i) => <tr key={i}>{row.map((cell, j) => j === 0 ? <th scope="row" key={j}>{inline(cell, assetRoot)}</th> : <td key={j}>{inline(cell, assetRoot)}</td>)}</tr>)}</tbody></table></div>;
+    }
+    const lines = block.split('\n');
+    if (lines.every(line => /^[-*]\s+/.test(line))) {
+      return <ul key={index}>{lines.map((line, i) => <li key={i}>{inline(line.replace(/^[-*]\s+/, ''), assetRoot)}</li>)}</ul>;
+    }
+    if (lines.every(line => /^\d+\.\s+/.test(line))) {
+      return <ol key={index}>{lines.map((line, i) => <li key={i}>{inline(line.replace(/^\d+\.\s+/, ''), assetRoot)}</li>)}</ol>;
     }
     return <Fragment key={index}><p>{inline(block, assetRoot)}</p></Fragment>;
   })}</>;

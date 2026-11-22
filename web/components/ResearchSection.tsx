@@ -1,5 +1,6 @@
 import summary from '@/public/research/common-errors/summary.json';
 import contamination from '@/public/research/contamination/summary.json';
+import abstention from '@/public/research/metacognitive-abstention/summary.json';
 import styles from './ResearchSection.module.css';
 
 const basePath = process.env.NODE_ENV === 'production' ? '/KSAT-AI-Benchmark' : '';
@@ -7,6 +8,7 @@ const basePath = process.env.NODE_ENV === 'production' ? '/KSAT-AI-Benchmark' : 
 const signed = (value: number) => `${value > 0 ? '+' : value < 0 ? '−' : ''}${Math.abs(value).toFixed(2)}`;
 
 export function ResearchSection() {
+  const f = abstention.factorial2x2;
   return <section id="research" className={styles.section} aria-labelledby="research-title">
     <div className={styles.heading}><h2 id="research-title">연구</h2><span>2025-2027학년도 저장 답안 분석</span></div>
     <article className={styles.study}>
@@ -28,6 +30,19 @@ export function ResearchSection() {
         <thead><tr><th scope="col">분석</th><th scope="col">효과</th><th scope="col">95% 신뢰구간</th></tr></thead>
         <tbody>{contamination.rows.map(row => <tr key={row.label}><th scope="row">{row.label}</th><td>{signed(row.effectPp)}%p</td><td>{signed(row.ci95Pp[0])}에서 {signed(row.ci95Pp[1])}</td></tr>)}</tbody>
       </table><p>양수이면 공개 시험에서 더 높다는 뜻입니다. 난이도는 시험 단위 가채점 지표로 보정했고, 약 3-4%p보다 작은 효과는 검출할 수 없는 탐색 연구입니다.</p></div>
+    </article>
+    <article className={styles.study}>
+      <div><h3><a href={`${basePath}/research/metacognitive-abstention.html`}>{abstention.title}</a></h3>
+        <p>완료 이미지 실행 {abstention.primaryImageRuns}건의 기권 {abstention.primaryAbstentions}건을 전수 분석했습니다. 과학탐구는 비도표 문항에서도 오답의 {f.scienceNonFigure.ecr.toFixed(1)}%를 기권으로 포착했지만, 비도표 사회탐구에서는 {f.socialNonFigure.ecr.toFixed(1)}%에 그쳤고 순수 사실 기억 부족 기권은 1.6%뿐이었습니다.</p>
+        <a className={styles.read} href={`${basePath}/research/metacognitive-abstention.html`}>연구 보고서 읽기</a>
+      </div>
+      <div className={styles.evidence}><table><caption>2027 4교시 오답 포착률(ECR) · 기권 8모델 통합</caption>
+        <thead><tr><th scope="col">영역</th><th scope="col">비도표</th><th scope="col">도표·지도</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">사회탐구</th><td>{f.socialNonFigure.ecr.toFixed(1)}%</td><td>{f.socialFigure.ecr.toFixed(1)}%</td></tr>
+          <tr><th scope="row">과학탐구</th><td>{f.scienceNonFigure.ecr.toFixed(1)}%</td><td>{f.scienceFigure.ecr.toFixed(1)}%</td></tr>
+        </tbody>
+      </table><p>2027 4교시 {abstention.p4Questions}문항(완료 이미지 {abstention.p4PrimaryModels}모델). 비도표 과탐 vs 사탐 OR={f.orNonFigureSciVsSoc.toFixed(1)}.</p></div>
     </article>
   </section>;
 }

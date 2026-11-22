@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "prebuild": "node ../research/common-errors/publish.mjs && node ../research/contamination/publish.mjs",
+    "prebuild": "node ../research/common-errors/publish.mjs && node ../research/contamination/publish.mjs && node ../research/metacognitive-abstention/publish.mjs",
     "dev": "next dev",
     "build": "next build",
     "start": "next start"

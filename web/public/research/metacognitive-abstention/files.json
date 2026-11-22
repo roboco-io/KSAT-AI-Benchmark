@@ -1,0 +1,122 @@
+[
+  {
+    "file": "REPORT.md",
+    "sha256": "45b32058c27b4c85bfc12725753e675ccf33482391acb7b47b1f36ab2a8ee2ae"
+  },
+  {
+    "file": "README.md",
+    "sha256": "6f314eea0da732aa5f25c363e5e5a91b55a0118da29f69444fbf04cf3a81f706"
+  },
+  {
+    "file": "snapshot.py",
+    "sha256": "6183c2607cd3226a73a3c9ec05e90082edb4feea2d88dab3a89943e032284245"
+  },
+  {
+    "file": "analyze.py",
+    "sha256": "8467148693a3a4cddfdb3ff6419a683b374916288059402f1e15709de887b444"
+  },
+  {
+    "file": "plot.py",
+    "sha256": "f4b0b7f9c06b2cc94fad20f7a06333f866357036bf0870c548c894a0d501b4a3"
+  },
+  {
+    "file": "test_analyze.py",
+    "sha256": "e46deb1dc2dcfa0658e9b75755bc67afa8df470de606996e7cd2296b8cccb36c"
+  },
+  {
+    "file": "verify.py",
+    "sha256": "2899571357c42d7b05abc787bb9841a7dac04be3f92c24c2a361c4ebeee8e017"
+  },
+  {
+    "file": "publish.mjs",
+    "sha256": "b33874cc516bef617f732c3428e7b8c82efbfee7b3038522c55d256ba67af6b9"
+  },
+  {
+    "file": "publication.test.mjs",
+    "sha256": "02987c3f1a2a9dfa5d9da7a26a6ac608a288f8f40d60825ca01af41dae2ce970"
+  },
+  {
+    "file": "inputs/datasets/2025-ksat.json",
+    "sha256": "85ccf57a2efa43310749f665b9fc000183dfeb87fe8222afb0a4fb849340d16e"
+  },
+  {
+    "file": "inputs/datasets/2026-ksat.json",
+    "sha256": "de418de072e11d96364548de1113a6ad33c6f29fbe28ebfe259a8ff85c453074"
+  },
+  {
+    "file": "inputs/datasets/2027-ksat-period4.json",
+    "sha256": "d23044d2e95b71f644bb9503ecd85796dfb629b8ceb1060ec913ba2be69b8eb5"
+  },
+  {
+    "file": "inputs/datasets/2027-ksat.json",
+    "sha256": "4c69e03b69b31b050d595a2b9905e1c2f7a1e425f2a90ed9cce44315833bd086"
+  },
+  {
+    "file": "inputs/figure_dependent.json",
+    "sha256": "639ec4872eea764eb0f20500c7d6614df2194550ade9f6350b6bbfaf6dbe4a43"
+  },
+  {
+    "file": "inputs/manifest.json",
+    "sha256": "e20bf438e4030421c946b9beb96918d442eac933ff652a441bf93c99298fee1e"
+  },
+  {
+    "file": "inputs/runs.json",
+    "sha256": "22ba4b30b6e2f9ebe65a141881bda763e241af9cf96ae0a51c9d6931baaee19a"
+  },
+  {
+    "file": "outputs/abstention_cases.csv",
+    "sha256": "3b0fee5affe05f3e114781d74f2af348977675bf01045a929a4065016c13b56d"
+  },
+  {
+    "file": "outputs/analysis.json",
+    "sha256": "b293e808ae973d923e4989f48b8a2abead5ac37545e6b9947053e016df7bf149"
+  },
+  {
+    "file": "outputs/domain_asymmetry_p4.csv",
+    "sha256": "8c470303464a0cf402e9c0ad0e922c3840631c23f5c35047d4454408e0323431"
+  },
+  {
+    "file": "outputs/fig1_selective_tradeoff.png",
+    "sha256": "7eeff51357dd0d8f1e1e2b390290a936c3f1010c1a1228acdba8a6eaa693c810"
+  },
+  {
+    "file": "outputs/fig1_selective_tradeoff.svg",
+    "sha256": "207bfbf5aebfe28d9b14ae2a2d69bb75ce604de43ae80a1284cfa048ba3c474f"
+  },
+  {
+    "file": "outputs/fig2_domain_asymmetry.png",
+    "sha256": "7ffea2e299306aa52c793f95bf3bce7e90b1da43c8a946363f70013c267b7f30"
+  },
+  {
+    "file": "outputs/fig2_domain_asymmetry.svg",
+    "sha256": "c5246145d9bfbee8cd94ada3206dc2a1fb01f585cfbaebf6894f5207a4810de4"
+  },
+  {
+    "file": "outputs/fig3_difficulty_calibration.png",
+    "sha256": "497374d3d4926a5ec271df06b40620b3d7c3f3b0a4ad0ba5f2a91be131eb9731"
+  },
+  {
+    "file": "outputs/fig3_difficulty_calibration.svg",
+    "sha256": "3f37af5419a9b23bad38957b9bc30e6de74f6a37b63709c88a1fdd9d87250a08"
+  },
+  {
+    "file": "outputs/fig4_abstention_taxonomy.png",
+    "sha256": "810c099f30d7d0c9c925e4bc13aa6550db69d12eb35a55db3cb717800ecb60e7"
+  },
+  {
+    "file": "outputs/fig4_abstention_taxonomy.svg",
+    "sha256": "b50a8101c8ae23c59cc6be7226c805200e04fcec4d2110f396e746c0e578f212"
+  },
+  {
+    "file": "outputs/model_summary.csv",
+    "sha256": "05ca9f02c7c0ae774e0c24d3312c434f892165480bcc9adc4f63c5b771dbf949"
+  },
+  {
+    "file": "outputs/subject_breakdown_p4.csv",
+    "sha256": "37e4179223d545c635ba54f00915e7dd394f28b3f436e2cf5e18cd67a990d159"
+  },
+  {
+    "file": "outputs/verification.json",
+    "sha256": "832fdee1425787d8ef949d831798f933dfc39b9a0ad6b3b3af86efa4b2ed7d08"
+  }
+]

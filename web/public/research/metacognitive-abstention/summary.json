@@ -1,0 +1,45 @@
+{
+  "title": "고난도 다학제 시험에서 LLM은 \"자신이 모르는 것\"을 아는가?",
+  "publishedAt": "2026-11-22",
+  "primaryImageRuns": 46,
+  "primaryAbstentions": 187,
+  "p4Questions": 360,
+  "p4PrimaryModels": 12,
+  "factorial2x2": {
+    "socialNonFigure": {
+      "abstained": 4,
+      "wrong": 99,
+      "ecr": 3.9
+    },
+    "socialFigure": {
+      "abstained": 24,
+      "wrong": 77,
+      "ecr": 23.8
+    },
+    "scienceNonFigure": {
+      "abstained": 22,
+      "wrong": 19,
+      "ecr": 53.7
+    },
+    "scienceFigure": {
+      "abstained": 97,
+      "wrong": 76,
+      "ecr": 56.1
+    },
+    "orScienceVsSocial": 7.8737,
+    "pScienceVsSocial": 1.7606233006373202e-12,
+    "orNonFigureSciVsSoc": 28.6579,
+    "pNonFigureSciVsSoc": 3.8064141118500274e-11,
+    "orSocialFigVsNonFig": 7.7143,
+    "pSocialFigVsNonFig": 0.00002856921830081624,
+    "orScienceFigVsNonFig": 1.1023,
+    "pScienceFigVsNonFig": 0.8616506413930276
+  },
+  "taxonomy": {
+    "no_explanation": 11,
+    "option_elimination_ambiguity": 14,
+    "deductive_derivation_block": 82,
+    "visual_spatial_grounding": 77,
+    "factual_knowledge_gap": 3
+  }
+}

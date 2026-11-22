@@ -12,6 +12,7 @@ on:
       - 'exams/parsed/**'
       - 'web/**'
       - 'research/common-errors/**'
+      - 'research/metacognitive-abstention/**'
       - 'research/contamination/**'
       - 'scripts/export_data.py'
       - 'benchmark/**'
@@ -72,7 +73,9 @@ jobs:
           NODE_ENV: production
 
       - name: Verify published research
-        run: node --test research/common-errors/publication.test.mjs research/contamination/publication.test.mjs
+        run: |
+          node --test research/common-errors/publication.test.mjs
+          node --test research/metacognitive-abstention/publication.test.mjs research/contamination/publication.test.mjs
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

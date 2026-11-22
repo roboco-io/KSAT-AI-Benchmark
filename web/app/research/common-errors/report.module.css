@@ -13,7 +13,12 @@
 .prose { min-width:0; max-width:880px; line-height:1.9; overflow-wrap:anywhere; }
 .prose section { margin-bottom:32px; }
 .prose h2 { font-size:26px; line-height:1.4; letter-spacing:-.5px; margin:0 0 20px; scroll-margin-top:28px; }
+.prose h3 { font-size:20px; line-height:1.45; letter-spacing:-.3px; margin:28px 0 14px; }
 .prose p { margin:0 0 20px; }
+.prose ul,.prose ol { margin:0 0 22px; padding-left:24px; }
+.prose li { margin:0 0 10px; }
+.prose blockquote { margin:24px 0; padding:16px 20px; background:var(--surface); border-left:4px solid var(--teal); border-radius:4px; }
+.prose blockquote p { margin:0; }
 .prose figure { margin:28px 0; }
 .prose img { display:block; width:100%; height:auto; background:#fff; border:1px solid var(--line); }
 .prose figcaption { color:var(--muted); font-size:14px; line-height:1.6; margin-top:10px; }
