@@ -6,7 +6,7 @@ import { GradingMark } from './GradingMark';
 import { ThemeControl } from './ThemeControl';
 import { BenchmarkDashboard } from './BenchmarkDashboard';
 import { ModelIntro } from './ModelIntro';
-import { Period4SubjectMatrix } from './Period4SubjectMatrix';
+import { SubjectScoreMatrix } from './SubjectScoreMatrix';
 import type { BenchmarkComparison, BenchmarkData, RequestedModel } from './benchmark-types';
 import { formatKst } from '@/lib/format-date.mjs';
 import { RobocoBrand } from './RobocoBrand';
@@ -185,7 +185,7 @@ export function ComparisonDashboard({ data, period4Data, onOpenPeriod4 }: { data
             return <span key={track.track}><small>{track.label}</small><b>{scored ? <>{track.average ? scored.score.toFixed(1) : scored.score}<GradingMark adjusted={exam?.summary.adjusted_correct} /></> : '—'}</b>{scored && <small className="track-count">{scored.correct}/{scored.total} · {+(scored.correct / scored.total * 100).toFixed(1)}%</small>}{exam && !!exam.summary.adjusted_correct && <small>공식 {exam.official_summary?.score}</small>}</span>;
           })}</div></div>)}</div></td><td data-label="풀이 시간">{measured ? elapsed(result.summary.solve_time_seconds ?? result.summary.wall_time_seconds) : '—'}</td><td data-label="API 환산 USD">{measured ? `$${result.summary.estimated_cost_usd.toFixed(4)}` : '—'}{measured && result.summary.cost_basis === 'provider_usage_metrics' ? <small>Google 사용량 지표 기준 · 추론 포함</small> : measured && result.usage_complete === false && <small>보고된 사용량 기준</small>}</td></tr>{expandedModel === model.id && <tr className="model-analysis-row" id={`analysis-${model.id}`}><td colSpan={showPeriod4 ? 8 : 7}><ModelIntro modelId={model.id} label={model.label} />{result ? <ModelExecutionDetails data={result} label={model.label} onShowAnswers={() => showModelRecords(model.id)} /> : <p role="status">{model.reason || '아직 실행 기록이 없습니다.'}</p>}</td></tr>}</Fragment>;
         })}</tbody></table></div>
-        {period4 && <Period4SubjectMatrix data={data} order={comparisonModels} />}
+        <SubjectScoreMatrix data={data} order={comparisonModels} session={period4 ? 'period4' : 'main'} />
         <p className="comparison-note"><strong>API 환산 비용:</strong> 모든 모델의 비용은 추론(thinking) 토큰을 출력 토큰에 포함해 계산한 참고 추정이며 청구서 금액이 아닙니다. Gemini는 호환 API가 추론 토큰을 응답 사용량에서 빼고 보고해, Google Cloud 사용량 지표의 실제 토큰 수로 다시 계산했습니다(2026-11-21 보정). 다른 Pi 모델은 응답 사용량에 추론 토큰이 포함됨을 확인했고, Codex·Claude는 SDK가 보고한 출력 토큰(추론 포함)을 사용합니다.</p>
         <p className="comparison-note">기권 횟수는 기권을 확정한 문항 수입니다. 모델을 누르면 재시도·거부·타임아웃과 사용량을 확인할 수 있습니다.</p>
         <details className="comparison-method"><summary>실행·비용 산정 기준</summary><p className="comparison-note">{executionPolicy} 비용은 토큰 사용량을 API 단가로 환산한 추정값이며 실제 청구액이 아닙니다. 캐시 토큰은 입력에 포함됩니다. 화작·언매는 국어, 확통·미적·기하는 수학 선택과목입니다.</p></details>

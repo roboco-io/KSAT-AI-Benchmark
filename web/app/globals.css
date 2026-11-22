@@ -1042,3 +1042,4 @@ td.period4-column { background:var(--neon-soft); }
 .subject-matrix tfoot th,.subject-matrix tfoot td { font-weight:600; background:var(--surface-soft); border-bottom:0; }
 .subject-matrix td small.missing { color:var(--badge-warn-text); opacity:1; white-space:nowrap; }
 .subject-matrix tfoot .matrix-model small { color:var(--muted); }
+.subject-matrix .matrix-max { display:block; font-size:9px; font-weight:500; opacity:.75; }
