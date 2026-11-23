@@ -45,7 +45,7 @@ export function ModelPanel({ year, row, subjects }: { year: number; row: RankRow
         )}
       </section>
       <section className={styles.block}>
-        <h4 className={styles.h}>채점 결과{row.period4 ? ' · 1-3교시 (국어·수학·영어)' : ''}</h4>
+        <h4 className={styles.h}>채점 결과{row.main ? ' · 전체 (1-4교시)' : row.period4Pending ? ' · 1-3교시 (국어·수학·영어)' : ''}</h4>
         {row.score === null && row.period4 ? (
           <p className={styles.none}>1-3교시 결과가 없다.</p>
         ) : (
@@ -59,6 +59,21 @@ export function ModelPanel({ year, row, subjects }: { year: number; row: RankRow
           <dt>입력 방식</dt>
           <dd>{row.inputMode === 'text_transcript' ? '텍스트 전사본 입력' : row.inputMode ?? '문제지 이미지 입력'}</dd>
         </dl>
+        {row.main && (
+          <>
+            <h4 className={styles.h}>1-3교시 (국어·수학·영어)</h4>
+            <dl className={styles.dl}>
+              <dt>점수</dt>
+              <dd className={styles.num}>{row.main.score} / {row.main.max ?? '–'}</dd>
+              <dt>정답</dt>
+              <dd className={styles.num}>{row.main.correct} / {row.main.total}</dd>
+              <dt>추정 비용</dt>
+              <dd className={styles.num}>{formatMetric('cost', row.main.costUsd)}</dd>
+              <dt>소요 시간</dt>
+              <dd className={styles.num}>{formatMetric('wall', row.main.wallSeconds)}</dd>
+            </dl>
+          </>
+        )}
         {row.period4Pending && (
           <>
             <h4 className={styles.h}>4교시 (한국사·탐구)</h4>

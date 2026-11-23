@@ -127,7 +127,7 @@ export function CompareView({ year, subjects, data, traits }: Props) {
                 </tbody>
               </table>
             </div>
-            {selected.some((m) => m.period4) && <p className={styles.hint}>총점·정답률·추정 비용·소요 시간·1점당 비용·기권율·실행 오류·토큰 사용량은 1-3교시(국어·수학·영어) 기준이다. 4교시(한국사·탐구)는 과목 점수와 4교시 득점률로 비교한다.</p>}
+            {selected.some((m) => m.main) && <p className={styles.hint}>총점·정답률·추정 비용·소요 시간·1점당 비용·기권율·실행 오류·토큰 사용량은 1-3교시(국어·수학·영어)와 4교시(한국사·탐구)를 합한 값이다.{selected.some((m) => !m.main && m.score !== null) ? ' 4교시가 끝나지 않은 모델은 1-3교시만 집계해 만점이 다르므로 총점을 직접 비교할 수 없다.' : ''}</p>}
             <p className={styles.hint}>토큰 사용량은 입력과 출력(추론 포함)의 합이다. Gemini는 Google Cloud 사용량 지표의 값을 쓰고, 다른 모델은 응답에 보고된 사용량을 쓴다. 집계 방식이 달라 우열은 표시하지 않는다.</p>
             <ul className={styles.traits}>
               {selected.map((m) => (

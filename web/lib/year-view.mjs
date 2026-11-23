@@ -38,7 +38,7 @@ function baseView(m) {
   return {
     id: m.model, provider: providerOf(m.model), engine: m.engine ?? '',
     effort: m.protocol?.effort ?? null, inputMode: m.input_mode ?? null,
-    score: null, maxScore: null, period4: null, period4Pending: false,
+    score: null, maxScore: null, main: null, period4: null, period4Pending: false,
     correct: num(s.correct) ?? 0, incorrect: num(s.incorrect) ?? 0, abstained: num(s.abstained) ?? 0,
     errors: num(s.errors) ?? 0, total: num(s.total_questions) ?? 0,
     costUsd: num(s.estimated_cost_usd), wallSeconds: num(s.wall_time_seconds),
@@ -70,6 +70,7 @@ export function buildYearView(main, period4) {
     }
     byId.set(v.id, v);
   }
+  const p4Tokens = new Map();
   for (const m of period4?.models ?? []) {
     // 4교시 풀이가 끝나지 않은 모델은 일부 문항만 채점된 점수를 싣지 않고 진행 중으로만 표시한다.
     if (m.completed === false) {
@@ -94,6 +95,7 @@ export function buildYearView(main, period4) {
     }
     if (existing) {
       existing.period4 = p4;
+      p4Tokens.set(baseId, {input: t.inputTokens, output: t.outputTokens});
       Object.assign(existing.subjects, subjectsOf(m.exams));
       existing.questions = [...existing.questions, ...(m.questions ?? [])];
     } else {
@@ -111,10 +113,28 @@ export function buildYearView(main, period4) {
     const main = byId.get(routeBaseId(r.id, period4, byId));
     if (main && !main.period4) main.period4Pending = true;
   }
+  // 1-3교시와 4교시를 모두 마친 모델은 총점·정답 수·비용·시간·토큰을 두 회차의 합으로 집계하고,
+  // 1-3교시만의 값은 `main` 에 남긴다. 4교시가 없는 모델의 집계는 1-3교시 값 그대로다.
+  const add = (a, b) => (a === null || b === null ? null : a + b);
+  for (const [id, v] of byId) {
+    const p = v.period4;
+    if (v.score === null || !p) continue;
+    v.main = {score: v.score, max: v.maxScore, correct: v.correct, incorrect: v.incorrect, abstained: v.abstained,
+      errors: v.errors, total: v.total, costUsd: v.costUsd, wallSeconds: v.wallSeconds};
+    v.score += p.score; v.maxScore = add(v.maxScore, p.max);
+    for (const k of ['correct', 'incorrect', 'abstained', 'errors', 'total']) v[k] += p[k];
+    v.costUsd = add(v.costUsd, p.costUsd); v.wallSeconds = add(v.wallSeconds, p.wallSeconds);
+    const tokens = p4Tokens.get(id) ?? {input: null, output: null};
+    v.inputTokens = add(v.inputTokens, tokens.input); v.outputTokens = add(v.outputTokens, tokens.output);
+  }
   const p4Rate = (m) => (m.period4 && m.period4.max ? m.period4.score / m.period4.max : -1);
+  // 4교시가 있는 학년도에서 1-3교시만 집계된 모델은 만점이 달라 총점을 비교할 수 없으므로 전체 집계 모델 뒤에 둔다.
+  const anyCombined = [...byId.values()].some((m) => m.main);
+  const mainOnly = (m) => anyCombined && m.score !== null && !m.main;
   const models = [...byId.values()].sort((a, b) => {
     if ((a.score === null) !== (b.score === null)) return a.score === null ? 1 : -1;
     if (a.score === null) return p4Rate(b) - p4Rate(a);
+    if (mainOnly(a) !== mainOnly(b)) return mainOnly(a) ? 1 : -1;
     if (a.score !== b.score) return b.score - a.score;
     return (a.costUsd ?? Infinity) - (b.costUsd ?? Infinity);
   });

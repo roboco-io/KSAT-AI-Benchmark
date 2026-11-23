@@ -48,7 +48,8 @@ export function ModelProfile({ year, model, traits, subjects, limitations, recor
         <p className={styles.sub}>{model.provider} · {model.engine}</p>
       </header>
 
-      {model.period4 && <h2>1-3교시 (국어·수학·영어)</h2>}
+      {model.main && <h2>전체 (1-4교시)</h2>}
+      {model.period4Pending && <p>4교시가 끝나지 않아 아래 수치는 1-3교시(국어·수학·영어)만 집계한 값이다.</p>}
       {model.score === null && model.period4 && <p>1-3교시 결과가 없다.</p>}
       <dl className={styles.figures}>
         <div><dt>총점</dt><dd>{model.score ?? '–'} / {model.maxScore ?? '–'}</dd></div>
@@ -60,6 +61,17 @@ export function ModelProfile({ year, model, traits, subjects, limitations, recor
           <dd className={styles.note}>입력과 출력(추론 포함)의 합이다. Gemini는 Google Cloud 사용량 지표의 값이고, 다른 모델은 응답에 보고된 사용량이다.</dd>
         </div>
       </dl>
+      {model.main && (
+        <>
+          <h2>1-3교시 (국어·수학·영어)</h2>
+          <dl className={styles.figures}>
+            <div><dt>점수</dt><dd>{model.main.score} / {model.main.max ?? '–'}</dd></div>
+            <div><dt>정답</dt><dd>{model.main.correct} / {model.main.total}</dd></div>
+            <div><dt>추정 비용</dt><dd>{formatMetric('cost', model.main.costUsd)}</dd></div>
+            <div><dt>소요 시간</dt><dd>{formatMetric('wall', model.main.wallSeconds)}</dd></div>
+          </dl>
+        </>
+      )}
       {model.period4Pending && (
         <>
           <h2>4교시 (한국사·탐구)</h2>
@@ -116,7 +128,7 @@ export function ModelProfile({ year, model, traits, subjects, limitations, recor
       </section>
 
       <section className={styles.section}>
-        <h2>결과 구성{model.period4 ? ' · 1-3교시 (국어·수학·영어)' : ''}</h2>
+        <h2>결과 구성{model.main ? ' · 전체 (1-4교시)' : model.period4Pending ? ' · 1-3교시 (국어·수학·영어)' : ''}</h2>
         <OutcomeBar correct={model.correct} incorrect={model.incorrect} abstained={model.abstained} errors={model.errors} />
       </section>
 

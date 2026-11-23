@@ -4,6 +4,7 @@ export interface SubjectScore { pct: number; tracks: { id: string; title: string
 export interface ModelSummary {
   id: string; engine: string; effort: string | null; inputMode: string | null;
   score: number | null; maxScore: number | null; period4: { score: number; max: number; correct: number; incorrect: number; abstained: number; errors: number; total: number; costUsd: number | null; wallSeconds: number | null; engine: string | null; sourceId: string | null } | null; period4Pending: boolean;
+  main: { score: number; max: number | null; correct: number; incorrect: number; abstained: number; errors: number; total: number; costUsd: number | null; wallSeconds: number | null } | null;
   correct: number; incorrect: number; abstained: number; errors: number; total: number;
   costUsd: number | null; wallSeconds: number | null;
   subjects: Partial<Record<SubjectKey, SubjectScore>>;

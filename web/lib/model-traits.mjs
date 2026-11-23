@@ -30,21 +30,24 @@ export function soloWrong(model, cohort) {
 export function modelTraits(model, cohort) {
   const traits = [];
   const add = (key, tone, label, sentence) => traits.push({ key, tone, label, sentence });
-  const scoredCohort = cohort.filter((m) => m.score != null);
+  // 1-4교시를 합산하는 학년도에서 1-3교시만 집계된 모델은 비용·시간의 범위가 달라 중앙값 비교에서 뺀다.
+  const combinedYear = cohort.some((m) => m.main);
+  const comparable = (m) => !combinedYear || !!m.main;
+  const scoredCohort = cohort.filter((m) => m.score != null && comparable(m));
   const hasScore = model.score != null && model.maxScore != null && model.maxScore > 0;
   const perfect = hasScore && model.score === model.maxScore;
 
   if (perfect) add('perfect', 'good', '만점', `${model.correct}문항을 모두 맞혔다.`);
 
   const costMed = median(scoredCohort.map((m) => m.costUsd));
-  if (hasScore && model.score >= 0.9 * model.maxScore && model.costUsd != null && costMed != null
+  if (comparable(model) && hasScore && model.score >= 0.9 * model.maxScore && model.costUsd != null && costMed != null
       && model.costUsd <= costMed / 2) {
     add('value', 'good', '저비용 고득점',
       `총점 ${model.score}점(만점 ${model.maxScore}점)을 비용 $${num(model.costUsd)}로 얻었다. 같은 학년도 비용 중앙값은 $${num(costMed)}다.`);
   }
 
   const timeMed = median(scoredCohort.map((m) => m.wallSeconds));
-  if (model.score != null && model.wallSeconds != null && timeMed != null) {
+  if (comparable(model) && model.score != null && model.wallSeconds != null && timeMed != null) {
     if (model.wallSeconds <= timeMed / 2) {
       add('fast', 'good', '빠름', `소요 시간은 ${num(model.wallSeconds)}초로 중앙값 ${num(timeMed)}초의 절반 이하다.`);
     } else if (model.wallSeconds >= timeMed * 3) {

@@ -135,3 +135,13 @@ test('solo_wrong_ignores_models_lacking_the_question', () => {
   assert.deepEqual(soloWrong(a, [a, b, p]), ['q1', 'q2', 'q3']);
   assert.deepEqual(soloWrong(a, [a, p]), []);
 });
+
+test('main_only_model_in_a_combined_year_gets_no_cost_or_time_comparison', () => {
+  const full = (id) => mk(id, { main: { score: 300 }, costUsd: 10, wallSeconds: 1000 });
+  const partial = mk('p', { score: 390, costUsd: 1, wallSeconds: 10 });
+  const cohort = [full('a'), full('b'), full('c'), partial];
+  const k = keys(partial, cohort);
+  assert.ok(!k.includes('value') && !k.includes('fast'));
+  assert.ok(!keys(full('a'), cohort).includes('slow'));
+  assert.ok(keys(partial, [mk('a', { costUsd: 10, wallSeconds: 1000 }), mk('b', { costUsd: 10, wallSeconds: 1000 }), partial]).includes('value'));
+});

@@ -84,18 +84,22 @@ test('latestYearWithResults',()=>{
  assert.equal(latestYearWithResults([]),0);
 });
 
-test('period4_group_separate_from_main_aggregates',()=>{
+test('period4_adds_into_total_and_main_keeps_periods_1_to_3',()=>{
  const p4m=model('both',10,5,{exams:[exam('social','s',40,50)]});
  p4m.summary={...p4m.summary,score:40,max_score:50,correct:7,incorrect:1,abstained:0,errors:0,total_questions:8,estimated_cost_usd:9,wall_time_seconds:99};
  const only=model('only',10,2,{exams:[exam('science','s',20,50)]});
  only.summary={...only.summary,score:20,max_score:50,correct:5,total_questions:6};
  const v=buildYearView(data([model('both',300,1)]),data([p4m,only]));
  const b=v.models.find(m=>m.id==='both');
- assert.equal(b.correct,1);assert.equal(b.total,10);assert.equal(b.costUsd,1);assert.equal(b.wallSeconds,12);
+ assert.equal(b.score,340);assert.equal(b.maxScore,426);
+ assert.equal(b.correct,8);assert.equal(b.total,18);assert.equal(b.costUsd,10);assert.equal(b.wallSeconds,111);
+ assert.equal(b.inputTokens,20);assert.equal(b.outputTokens,10);
+ assert.deepEqual(b.main,{score:300,max:376,correct:1,incorrect:2,abstained:3,errors:4,total:10,costUsd:1,wallSeconds:12});
  assert.deepEqual(b.period4,{score:40,max:50,correct:7,incorrect:1,abstained:0,errors:0,total:8,costUsd:9,wallSeconds:99,sourceId:null,engine:null});
  const o=v.models.find(m=>m.id==='only');
  assert.equal(o.costUsd,null);assert.equal(o.wallSeconds,null);assert.equal(o.inputTokens,null);
  assert.equal(o.correct,0);assert.equal(o.total,0);assert.equal(o.period4.correct,5);assert.equal(o.period4.costUsd,2);
+ assert.equal(o.main,null);assert.equal(buildYearView(data([model('x',300,1)]),null).models[0].main,null);
 });
 
 test('period4_route_variant_merges_into_base_model', () => {
@@ -145,6 +149,8 @@ test('unfinished_period4_run_is_marked_in_progress_without_partial_scores',()=>{
  assert.equal(a.period4,null);assert.equal(a.period4Pending,true);
  assert.equal(a.subjects.history,undefined);assert.deepEqual(a.questions,[{id:'q'}]);
  assert.equal(b.period4.score,45);assert.equal(b.period4Pending,false);
+ assert.equal(b.score,245);assert.equal(a.score,300);assert.equal(a.maxScore,376);
+ assert.deepEqual(v.models.map(m=>m.id),['b','a']);
  const noRecord=buildYearView(main,{...p4,models:[p4.models[1]],requested_models:[{id:'a',state:'pending'},{id:'b',state:'complete'}]});
  assert.equal(noRecord.models.find(m=>m.id==='a').period4Pending,true);
  assert.equal(noRecord.models.find(m=>m.id==='b').period4Pending,false);
