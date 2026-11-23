@@ -60,6 +60,12 @@ export function ModelProfile({ year, model, traits, subjects, limitations, recor
           <dd className={styles.note}>입력과 출력(추론 포함)의 합이다. Gemini는 Google Cloud 사용량 지표의 값이고, 다른 모델은 응답에 보고된 사용량이다.</dd>
         </div>
       </dl>
+      {model.period4Pending && (
+        <>
+          <h2>4교시 (한국사·탐구)</h2>
+          <p>4교시는 풀이가 진행 중이다. 모든 문항이 제출되면 결과를 싣는다.</p>
+        </>
+      )}
       {model.period4 && (
         <>
           <h2>4교시 (한국사·탐구)</h2>

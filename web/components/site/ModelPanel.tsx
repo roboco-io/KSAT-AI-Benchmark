@@ -59,6 +59,12 @@ export function ModelPanel({ year, row, subjects }: { year: number; row: RankRow
           <dt>입력 방식</dt>
           <dd>{row.inputMode === 'text_transcript' ? '텍스트 전사본 입력' : row.inputMode ?? '문제지 이미지 입력'}</dd>
         </dl>
+        {row.period4Pending && (
+          <>
+            <h4 className={styles.h}>4교시 (한국사·탐구)</h4>
+            <p>4교시는 풀이가 진행 중이다. 모든 문항이 제출되면 결과를 싣는다.</p>
+          </>
+        )}
         {row.period4 && (
           <>
             <h4 className={styles.h}>4교시 (한국사·탐구)</h4>

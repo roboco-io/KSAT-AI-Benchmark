@@ -3,6 +3,7 @@ const SUBJECT_ORDER = ['korean', 'math', 'english', 'korean_history', 'social', 
 const PROVIDERS = [
   ['gpt', 'OpenAI'], ['claude', 'Anthropic'], ['gemini', 'Google'], ['deepseek', 'DeepSeek'],
   ['glm', 'Zhipu'], ['qwen', 'Alibaba'], ['kimi', 'Moonshot'], ['solar', 'Upstage'], ['exaone', 'LG'],
+  ['midm', 'KT'], ['motif', 'Motif Technologies'],
 ];
 
 const num = (v) => (typeof v === 'number' && Number.isFinite(v) ? v : null);
@@ -37,7 +38,7 @@ function baseView(m) {
   return {
     id: m.model, provider: providerOf(m.model), engine: m.engine ?? '',
     effort: m.protocol?.effort ?? null, inputMode: m.input_mode ?? null,
-    score: null, maxScore: null, period4: null,
+    score: null, maxScore: null, period4: null, period4Pending: false,
     correct: num(s.correct) ?? 0, incorrect: num(s.incorrect) ?? 0, abstained: num(s.abstained) ?? 0,
     errors: num(s.errors) ?? 0, total: num(s.total_questions) ?? 0,
     costUsd: num(s.estimated_cost_usd), wallSeconds: num(s.wall_time_seconds),
@@ -70,6 +71,12 @@ export function buildYearView(main, period4) {
     byId.set(v.id, v);
   }
   for (const m of period4?.models ?? []) {
+    // 4교시 풀이가 끝나지 않은 모델은 일부 문항만 채점된 점수를 싣지 않고 진행 중으로만 표시한다.
+    if (m.completed === false) {
+      const main = byId.get(routeBaseId(m.model, period4, byId));
+      if (main) main.period4Pending = true;
+      continue;
+    }
     const score = num(m.summary?.score);
     const max = num(m.summary?.max_score);
     const t = baseView(m);
@@ -97,6 +104,12 @@ export function buildYearView(main, period4) {
       });
       byId.set(v.id, v);
     }
+  }
+  // 4교시 실행 기록이 아직 없거나 끝나지 않은 모델도 요청 목록의 상태로 진행 중임을 표시한다.
+  for (const r of period4?.requested_models ?? []) {
+    if (r.state === 'complete') continue;
+    const main = byId.get(routeBaseId(r.id, period4, byId));
+    if (main && !main.period4) main.period4Pending = true;
   }
   const p4Rate = (m) => (m.period4 && m.period4.max ? m.period4.score / m.period4.max : -1);
   const models = [...byId.values()].sort((a, b) => {

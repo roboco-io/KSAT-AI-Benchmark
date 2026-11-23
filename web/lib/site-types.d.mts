@@ -3,7 +3,7 @@ export type SubjectKey = 'korean' | 'math' | 'english' | 'korean_history' | 'soc
 export interface SubjectScore { pct: number; tracks: { id: string; title: string; score: number; max: number }[] }
 export interface ModelSummary {
   id: string; engine: string; effort: string | null; inputMode: string | null;
-  score: number | null; maxScore: number | null; period4: { score: number; max: number; correct: number; incorrect: number; abstained: number; errors: number; total: number; costUsd: number | null; wallSeconds: number | null; engine: string | null; sourceId: string | null } | null;
+  score: number | null; maxScore: number | null; period4: { score: number; max: number; correct: number; incorrect: number; abstained: number; errors: number; total: number; costUsd: number | null; wallSeconds: number | null; engine: string | null; sourceId: string | null } | null; period4Pending: boolean;
   correct: number; incorrect: number; abstained: number; errors: number; total: number;
   costUsd: number | null; wallSeconds: number | null;
   subjects: Partial<Record<SubjectKey, SubjectScore>>;

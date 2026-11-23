@@ -136,3 +136,16 @@ test('tokens_prefer_provider_usage_metrics', () => {
   assert.deepEqual([byId['gemini-x'].inputTokens, byId['gemini-x'].outputTokens], [150, 900]);
   assert.deepEqual([byId.other.inputTokens, byId.other.outputTokens], [100, 10]);
 });
+
+test('unfinished_period4_run_is_marked_in_progress_without_partial_scores',()=>{
+ const main=data([model('a',300,1),model('b',200,1)]);
+ const p4={academic_year:2026,session:'period4',models:[model('a',40,2,{completed:false,exams:[exam('history','h',40,50)],questions:[{id:'p'}]}),model('b',45,2,{completed:true,exams:[exam('history','h',45,50)]})],requested_models:[{id:'a',state:'partial'},{id:'b',state:'complete'}]};
+ const v=buildYearView(main,p4);
+ const a=v.models.find(m=>m.id==='a'),b=v.models.find(m=>m.id==='b');
+ assert.equal(a.period4,null);assert.equal(a.period4Pending,true);
+ assert.equal(a.subjects.history,undefined);assert.deepEqual(a.questions,[{id:'q'}]);
+ assert.equal(b.period4.score,45);assert.equal(b.period4Pending,false);
+ const noRecord=buildYearView(main,{...p4,models:[p4.models[1]],requested_models:[{id:'a',state:'pending'},{id:'b',state:'complete'}]});
+ assert.equal(noRecord.models.find(m=>m.id==='a').period4Pending,true);
+ assert.equal(noRecord.models.find(m=>m.id==='b').period4Pending,false);
+});
