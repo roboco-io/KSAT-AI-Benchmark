@@ -155,3 +155,11 @@ test('unfinished_period4_run_is_marked_in_progress_without_partial_scores',()=>{
  assert.equal(noRecord.models.find(m=>m.id==='a').period4Pending,true);
  assert.equal(noRecord.models.find(m=>m.id==='b').period4Pending,false);
 });
+
+test('subject_pct_shows_100_only_when_every_track_is_perfect',()=>{
+ const tracks=[...Array.from({length:8},(_,i)=>exam('social',`t${i}`,50,50)),exam('social','geo',48,50)];
+ const v=buildYearView(data([model('a',376,1,{exams:tracks})]),null).models[0];
+ assert.equal(v.subjects.social.pct,99);
+ const all=buildYearView(data([model('a',376,1,{exams:tracks.slice(0,8)})]),null).models[0];
+ assert.equal(all.subjects.social.pct,100);
+});
