@@ -3,7 +3,7 @@ const SUBJECT_ORDER = ['korean', 'math', 'english', 'korean_history', 'social', 
 const PROVIDERS = [
   ['gpt', 'OpenAI'], ['claude', 'Anthropic'], ['gemini', 'Google'], ['deepseek', 'DeepSeek'],
   ['glm', 'Zhipu'], ['qwen', 'Alibaba'], ['kimi', 'Moonshot'], ['solar', 'Upstage'], ['exaone', 'LG'],
-  ['midm', 'KT'], ['motif', 'Motif Technologies'],
+  ['midm', 'KT'], ['motif', 'Motif Technologies'], ['muse', 'Meta'],
 ];
 
 const num = (v) => (typeof v === 'number' && Number.isFinite(v) ? v : null);
