@@ -24,7 +24,7 @@ test('subject_pct_averages_tracks',()=>{
  assert.deepEqual(v.subjects.korean.tracks[0],{id:'2026-korean-x',title:'korean x',score:92,max:100});
  assert.equal(v.score,376);assert.equal(v.maxScore,376);assert.equal(v.period4,null);
  const r=buildYearView(data([model('a',1,1,{exams:[exam('math','p',1,3),exam('math','q',1,3)]})]),null).models[0];
- assert.equal(r.subjects.math.pct,33);
+ assert.equal(r.subjects.math.pct,33.3);
 });
 
 test('period4_only_model_listed_last',()=>{
@@ -156,10 +156,12 @@ test('unfinished_period4_run_is_marked_in_progress_without_partial_scores',()=>{
  assert.equal(noRecord.models.find(m=>m.id==='b').period4Pending,false);
 });
 
-test('subject_pct_shows_100_only_when_every_track_is_perfect',()=>{
+test('subject_pct_keeps_one_decimal_and_shows_100_only_when_every_track_is_perfect',()=>{
  const tracks=[...Array.from({length:8},(_,i)=>exam('social',`t${i}`,50,50)),exam('social','geo',48,50)];
  const v=buildYearView(data([model('a',376,1,{exams:tracks})]),null).models[0];
- assert.equal(v.subjects.social.pct,99);
+ assert.equal(v.subjects.social.pct,99.6);
+ const many=[...Array.from({length:59},(_,i)=>exam('social',`m${i}`,50,50)),exam('social','geo',49,50)];
+ assert.equal(buildYearView(data([model('a',376,1,{exams:many})]),null).models[0].subjects.social.pct,99.9);
  const all=buildYearView(data([model('a',376,1,{exams:tracks.slice(0,8)})]),null).models[0];
  assert.equal(all.subjects.social.pct,100);
 });

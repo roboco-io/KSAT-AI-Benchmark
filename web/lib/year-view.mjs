@@ -23,9 +23,9 @@ function subjectsOf(exams) {
     (subjects[e.subject] ??= {pct: 0, tracks: []}).tracks.push({id: e.id, title: e.title, score, max});
   }
   for (const s of Object.values(subjects)) {
-    const pct = Math.round(s.tracks.reduce((sum, t) => sum + (t.score / t.max) * 100, 0) / s.tracks.length);
-    // 여러 선택과목의 평균을 반올림하면 한 문항만 틀려도 100이 될 수 있다. 100은 모든 과목이 만점일 때만 쓴다.
-    s.pct = pct === 100 && s.tracks.some((t) => t.score < t.max) ? 99 : pct;
+    // 선택과목 득점률의 평균을 소수 첫째 자리까지 둔다. 반올림으로 100이 되더라도 만점이 아닌 과목이 있으면 99.9로 둔다.
+    const pct = Math.round((s.tracks.reduce((sum, t) => sum + (t.score / t.max) * 100, 0) / s.tracks.length) * 10) / 10;
+    s.pct = pct === 100 && s.tracks.some((t) => t.score < t.max) ? 99.9 : pct;
   }
   return subjects;
 }
