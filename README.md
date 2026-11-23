@@ -127,3 +127,22 @@ Next.js는 결과 JSON을 빌드 시 읽고 `web/out/`에 정적 HTML을 생성�
 - 이전 방식의 문서: [이전 README](docs/LEGACY_README.md)
 
 원본 이벤트와 렌더 이미지는 `.runtime/`에 두며 git·웹에 공개하지 않습니다. 과거 방식의 결과는 대시보드의 기존 평가 기록에서 별도로 볼 수 있습니다.
+
+## 라이선스
+
+이 저장소는 출처를 표기하는 비영리 이용만 허락합니다. 상업적 목적으로 이용하려면 ROBOCO의 사전 허가가 필요하며, 문의는 [roboco.io](https://roboco.io)로 받습니다.
+
+| 대상 | 라이선스 |
+| --- | --- |
+| 소스 코드 (`benchmark/`, `web/`, `scripts/`, `src/` 등) | [PolyForm Noncommercial 1.0.0](LICENSE-CODE) |
+| 평가 결과, 공개 데이터, 문서, 연구 자료 | [CC BY-NC 4.0](LICENSE-CONTENT) |
+
+대학수학능력시험 문제지와 정답표의 저작권은 한국교육과정평가원에 있으므로, `exams/` 아래의 원본 파일과 시험 문제 내용에는 위 라이선스가 적용되지 않습니다. 적용 범위, 출처 표기 방법, 상업적 이용 조건은 [LICENSE](LICENSE)에 있습니다.
+
+출처는 다음과 같이 표기합니다.
+
+```text
+KSAT AI Benchmark, ROBOCO (https://roboco.io)
+https://github.com/roboco-io/KSAT-AI-Benchmark
+코드: PolyForm Noncommercial 1.0.0 / 자료: CC BY-NC 4.0
+```

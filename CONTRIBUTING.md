@@ -182,7 +182,7 @@ Closes #123
 
 ## 라이선스
 
-기여하신 내용은 프로젝트의 [CC BY-NC 4.0 라이선스](LICENSE)를 따릅니다.
+기여하신 내용에는 이 프로젝트의 [라이선스](LICENSE)가 적용됩니다. 코드에는 [PolyForm Noncommercial 1.0.0](LICENSE-CODE), 문서·평가 결과 등 그 밖의 자료에는 [CC BY-NC 4.0](LICENSE-CONTENT)이 적용됩니다. 기여자는 ROBOCO가 기여 내용을 이 조건으로 배포하고, 상업적 이용 허가 요청에 대해 별도 조건으로 허락할 수 있다는 데 동의합니다.
 
 ---
 

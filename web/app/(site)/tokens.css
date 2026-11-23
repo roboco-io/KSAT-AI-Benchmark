@@ -153,6 +153,12 @@
   font-size: var(--t-sm);
 }
 
+.site-footer-license {
+  max-width: var(--maxw);
+  margin: var(--s3) auto 0;
+  line-height: 1.6;
+}
+
 .site-footer-inner {
   max-width: var(--maxw);
   margin: 0 auto;
