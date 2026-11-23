@@ -1,4 +1,5 @@
 import type { QuestionStatus, SubjectKey, SubjectScore, Trait } from '@/lib/site-types.mjs';
+import { scoreBand } from '@/lib/metrics.mjs';
 import styles from './primitives.module.css';
 
 export const SUBJECT_LABEL: Record<SubjectKey, string> = {
@@ -53,10 +54,10 @@ export function SubjectBars({
             <span className={styles.subjectLabel} title={SUBJECT_LABEL[key]}>{SUBJECT_SHORT[key]}</span>
             <span className={styles.track} aria-hidden="true">
               {pct !== null && (
-                <span className={`${styles.fill} ${pct < 60 ? styles.fillBad : ''}`} style={{ width: `${pct}%` }} />
+                <span className={styles.fill} style={{ width: `${pct}%`, background: `var(--band-${scoreBand(pct)})` }} />
               )}
             </span>
-            <span className={styles.subjectNum}>{pct === null ? '–' : Math.round(pct)}</span>
+            <span className={styles.subjectNum}>{pct === null ? '–' : pct.toFixed(1)}</span>
           </div>
         );
       })}

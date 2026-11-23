@@ -52,6 +52,12 @@ export function metricValue(m, key, rescored) {
   }
 }
 
+// 득점률을 10% 구간 번호로 바꾼다: 0 은 10% 미만, 9 는 90% 이상(100% 포함)이다.
+export function scoreBand(pct) {
+  if (!Number.isFinite(pct)) return null;
+  return Math.max(0, Math.min(9, Math.floor(pct / 10)));
+}
+
 function duration(sec) {
   const s = Math.round(sec);
   if (s < 60) return `${s}초`;
@@ -72,6 +78,7 @@ export function formatMetric(key, value) {
     case 'abstention':
     case 'fAccuracy': return `${value.toFixed(1)}%`;
     case 'tokens': return Math.round(value).toLocaleString('en-US');
-    default: return String(Math.round(value));
+    case 'period4': return value.toFixed(1);
+    default: return key.startsWith('subj:') ? value.toFixed(1) : String(Math.round(value));
   }
 }

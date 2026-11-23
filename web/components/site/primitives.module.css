@@ -29,7 +29,7 @@
 
 .subjectRow {
   display: grid;
-  grid-template-columns: 3.2em minmax(40px, 1fr) 2.4em;
+  grid-template-columns: 3.2em minmax(40px, 1fr) 3.2em;
   align-items: center;
   gap: var(--s2);
 }
@@ -51,7 +51,6 @@
   background: var(--accent);
 }
 
-.fillBad { background: var(--bad); }
 
 .subjectsCompact {
   width: 140px;

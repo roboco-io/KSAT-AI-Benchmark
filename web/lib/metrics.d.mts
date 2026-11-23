@@ -2,3 +2,4 @@ import type { Metric, MetricKey, ModelSummary, Rescore, SubjectKey } from './sit
 export declare function metricsFor(subjects: SubjectKey[], filtered: boolean): Metric[];
 export declare function metricValue(m: ModelSummary, key: MetricKey, rescored: Rescore | null): number | null;
 export declare function formatMetric(key: MetricKey, value: number | null): string;
+export declare function scoreBand(pct: number): number | null;

@@ -65,7 +65,7 @@ test('format', () => {
   assert.equal(formatMetric('accuracy', 88.4), '88.4%');
   assert.equal(formatMetric('tokens', 1234567), '1,234,567');
   assert.equal(formatMetric('score', 367.6), '368');
-  assert.equal(formatMetric('subj:math', 91), '91');
+  assert.equal(formatMetric('subj:math', 91), '91.0');
 });
 
 test('period4_metric', () => {
@@ -80,4 +80,17 @@ test('period4_metric', () => {
   assert.equal(metricValue(empty, 'accuracy', null), null);
   assert.equal(metricValue(empty, 'abstention', null), null);
   assert.equal(metricValue({...base, total: 0}, 'secPerQuestion', null), null);
+});
+
+test('subject and period4 scores keep one decimal', () => {
+  assert.equal(formatMetric('subj:social', 99.6), '99.6');
+  assert.equal(formatMetric('subj:korean', 100), '100.0');
+  assert.equal(formatMetric('period4', 99.8), '99.8');
+  assert.equal(formatMetric('score', 1274), '1274');
+});
+
+test('score band splits the rate into 10 percent steps', async () => {
+  const {scoreBand} = await import('../../web/lib/metrics.mjs');
+  assert.deepEqual([0, 9.9, 10, 59.9, 60, 89.9, 90, 99.6, 100].map(scoreBand), [0, 0, 1, 5, 6, 8, 9, 9, 9]);
+  assert.equal(scoreBand(-5), 0);assert.equal(scoreBand(120), 9);assert.equal(scoreBand(NaN), null);
 });
