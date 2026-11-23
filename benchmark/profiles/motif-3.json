@@ -1,0 +1,35 @@
+{
+  "id": "motif-3",
+  "label": "Motif 3",
+  "provider": "motif",
+  "agent": "pi",
+  "directory": "results/pi-2026-motif-3",
+  "input": "text",
+  "pricing": {
+    "input_per_million": 0.3,
+    "cached_input_per_million": 0.06,
+    "cache_write_per_million": 0,
+    "output_per_million": 1.2,
+    "currency": "USD",
+    "as_of": "2026-11-23",
+    "basis": "OpenRouter listed rates for the single KT-hosted endpoint; reasoning tokens are billed as output; excludes OpenRouter credit purchase fees; not an invoice",
+    "source": "https://openrouter.ai/motif-technologies/motif-3"
+  },
+  "pi": {
+    "provider": "ksat-pi",
+    "model_id": "motif-technologies/motif-3",
+    "base_url": "https://openrouter.ai/api/v1",
+    "secret_name": "OPENROUTER_API_KEY",
+    "context_window": 262144,
+    "max_tokens": 65536,
+    "api": "openai-completions",
+    "compat": {
+      "thinkingFormat": "openrouter",
+      "supportsReasoningEffort": true,
+      "supportsDeveloperRole": false,
+      "supportsStore": false,
+      "maxTokensField": "max_tokens"
+    },
+    "effort_semantics": "high (OpenRouter reasoning.effort)"
+  }
+}

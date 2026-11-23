@@ -1,0 +1,35 @@
+{
+  "id": "midm-k-3.0-pro",
+  "label": "Mi:dm K 3.0 Pro",
+  "provider": "kt",
+  "agent": "pi",
+  "directory": "results/pi-2026-midm-k-3.0-pro",
+  "input": "text",
+  "pricing": {
+    "input_per_million": 0.2,
+    "cached_input_per_million": 0.04,
+    "cache_write_per_million": 0,
+    "output_per_million": 0.8,
+    "currency": "USD",
+    "as_of": "2026-11-23",
+    "basis": "OpenRouter listed rates for the single KT-hosted endpoint; reasoning tokens are billed as output; excludes OpenRouter credit purchase fees; not an invoice",
+    "source": "https://openrouter.ai/kt/midm-k-3.0-pro"
+  },
+  "pi": {
+    "provider": "ksat-pi",
+    "model_id": "kt/midm-k-3.0-pro",
+    "base_url": "https://openrouter.ai/api/v1",
+    "secret_name": "OPENROUTER_API_KEY",
+    "context_window": 261795,
+    "max_tokens": 65536,
+    "api": "openai-completions",
+    "compat": {
+      "thinkingFormat": "openrouter",
+      "supportsReasoningEffort": true,
+      "supportsDeveloperRole": false,
+      "supportsStore": false,
+      "maxTokensField": "max_tokens"
+    },
+    "effort_semantics": "high (OpenRouter reasoning.effort)"
+  }
+}
