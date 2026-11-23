@@ -33,7 +33,7 @@
   },
   {
     "file": "publication.test.mjs",
-    "sha256": "02987c3f1a2a9dfa5d9da7a26a6ac608a288f8f40d60825ca01af41dae2ce970"
+    "sha256": "df344420300a53e4521bab9d9950fd13a7437afb80739394458e1b20e2ff868d"
   },
   {
     "file": "inputs/datasets/2025-ksat.json",
@@ -110,6 +110,10 @@
   {
     "file": "outputs/model_summary.csv",
     "sha256": "05ca9f02c7c0ae774e0c24d3312c434f892165480bcc9adc4f63c5b771dbf949"
+  },
+  {
+    "file": "outputs/social-thumbnail.png",
+    "sha256": "5ca3162fb3fa61f2bd8303f5285bd5bddc03bff67f7fb46ae435a521662fd6ab"
   },
   {
     "file": "outputs/subject_breakdown_p4.csv",

@@ -22,17 +22,17 @@ export const metadata: Metadata = {
     url,
     publishedTime: '2026-11-22T00:00:00+09:00',
     images: [{
-      url: 'https://roboco.io/KSAT-AI-Benchmark/research/metacognitive-abstention/outputs/fig2_domain_asymmetry.png',
-      width: 2800,
-      height: 1200,
-      alt: '2027학년도 4교시 도메인×도표 2×2 오답 포착률 분해 및 18과목별 오답 포착률',
+      url: 'https://roboco.io/KSAT-AI-Benchmark/images/research-metacognitive-abstention-social.png',
+      width: 1376,
+      height: 768,
+      alt: 'AI는 자신이 모르는 것을 아는가? — 2025-2027 수능 AI 연구, 비도표 문항 오답 포착률 과학탐구 53.7% vs 사회탐구 3.9%',
     }],
   },
   twitter: {
     card: 'summary_large_image',
     title: summary.title,
     description,
-    images: ['https://roboco.io/KSAT-AI-Benchmark/research/metacognitive-abstention/outputs/fig2_domain_asymmetry.png'],
+    images: ['https://roboco.io/KSAT-AI-Benchmark/images/research-metacognitive-abstention-social.png'],
   },
 };
 

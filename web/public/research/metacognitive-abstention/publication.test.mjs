@@ -26,6 +26,7 @@ test('publication preserves frozen inputs, outputs, and scripts byte-for-byte', 
     'outputs/fig2_domain_asymmetry.png',
     'outputs/fig3_difficulty_calibration.png',
     'outputs/fig4_abstention_taxonomy.png',
+    'outputs/social-thumbnail.png',
   ]) {
     assert.deepEqual(
       readFileSync(new URL(file, publication)),
@@ -74,4 +75,6 @@ test('static export contains the metacognitive-abstention report and resolves al
       `unresolved asset link: ${link}`
     );
   }
+  assert.match(html, /https:\/\/roboco\.io\/KSAT-AI-Benchmark\/images\/research-metacognitive-abstention-social\.png/);
+  assert.ok(existsSync(new URL('web/out/images/research-metacognitive-abstention-social.png', root)), 'missing exported social thumbnail');
 });
