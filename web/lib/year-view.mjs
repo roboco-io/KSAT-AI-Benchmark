@@ -2,7 +2,7 @@ const MAIN_SUBJECTS = ['korean', 'math', 'english'];
 const SUBJECT_ORDER = ['korean', 'math', 'english', 'korean_history', 'social', 'science'];
 const PROVIDERS = [
   ['gpt', 'OpenAI'], ['claude', 'Anthropic'], ['gemini', 'Google'], ['deepseek', 'DeepSeek'],
-  ['glm', 'Zhipu'], ['qwen', 'Alibaba'], ['kimi', 'Moonshot'], ['solar', 'Upstage'], ['exaone', 'LG'],
+  ['glm', 'Zhipu'], ['qwen', 'Alibaba'], ['kimi', 'Moonshot'], ['solar', 'Upstage'], ['exaone', 'LG'], ['k-exaone', 'LG'],
   ['midm', 'KT'], ['motif', 'Motif Technologies'], ['muse', 'Meta'],
 ];
 

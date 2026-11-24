@@ -17,11 +17,10 @@ test('2025 selects the requested current models and isolates results from every 
  assert.throws(()=>yearPaths(2028),/not supported/);
 });
 
-test('2027 runs the newest model of each provider without K-EXAONE and isolates its results',async()=>{
+test('2027 runs the newest model of each provider and isolates its results',async()=>{
  const {MODELS_2027,MODELS_2026}=await import('../academic-years.mjs');
  const ids=modelsForYear(2027).map(m=>m.id);
  assert.deepEqual(ids,MODELS_2027);
- assert.ok(!ids.includes('k-exaone-2.5'));
  assert.ok(modelsForYear(2027).every(m=>m.directory.includes('-2027-')));
  assert.deepEqual(modelsForYear(2026).map(m=>m.id),MODELS_2026);
  assert.ok(!MODELS_2026.some(id=>['gpt-6.2-sol','claude-fable-5-2','qwen4-max'].includes(id)));

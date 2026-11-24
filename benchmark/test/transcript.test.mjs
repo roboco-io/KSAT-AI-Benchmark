@@ -79,7 +79,7 @@ test('text input may be declared only by Pi profiles and both text-only models a
   assert.equal(model.input,'text');assert.equal(model.pi.model_id,modelId);assert.equal(model.pi.secret_name,secret);
  }
  assert.equal(profiles.find(profile=>profile.id==='gemini-4-argon').input,undefined);
- assert.equal(profiles.find(profile=>profile.id==='k-exaone-2.5').publish,false);assert.equal(profiles.find(profile=>profile.id==='solar-pro-4').publish,undefined);
+ assert.equal(profiles.find(profile=>profile.id==='k-exaone-2.5').publish,undefined);assert.equal(profiles.find(profile=>profile.id==='solar-pro-4').publish,undefined);
  assert.equal(validateProfile({...base,publish:false}).publish,false);
  assert.throws(()=>validateProfile({...base,publish:true}),/publish may only be set to false/);
 });

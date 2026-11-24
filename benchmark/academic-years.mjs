@@ -1,9 +1,10 @@
 import {MODELS} from './models.mjs';
 import {routeAgent} from './profiles.mjs';
-export const MODELS_2026=['gpt-6.1-sol','gpt-6-astra','gpt-6-luna','claude-sonnet-5-5','claude-opus-5-5','claude-haiku-5-5','claude-fable-5-1','deepseek-v4.1-flash','glm-5.3-flash','qwen3.8-27b','kimi-k3','gemini-4-argon','k-exaone-2.5','solar-pro-4'];
-// 2027: newest model of each provider as of the exam day (2026-11-19); K-EXAONE excluded by user decision.
+// K-EXAONE 2.5 has no finished 2026 run (64/147 on 2026-11-19, never published), so it is not listed for 2026; its published run is 2027.
+export const MODELS_2026=['gpt-6.1-sol','gpt-6-astra','gpt-6-luna','claude-sonnet-5-5','claude-opus-5-5','claude-haiku-5-5','claude-fable-5-1','deepseek-v4.1-flash','glm-5.3-flash','qwen3.8-27b','kimi-k3','gemini-4-argon','solar-pro-4'];
+// 2027: newest model of each provider as of the exam day (2026-11-19); K-EXAONE was first excluded by user decision and added on 2026-11-24 at the user's request.
 // Mi:dm K 3.0 Pro and Motif 3 were added on 2026-11-23 through OpenRouter (text transcript track).
-export const MODELS_2027=['gpt-6.2-sol','gpt-6.2-astra','gpt-6-luna','gpt-6.1-terra','claude-fable-5-2','claude-opus-5-5','claude-sonnet-5-5','claude-haiku-5-5','gemini-4-neon','gemini-4-carbon','deepseek-v4.1-flash','glm-5.3-flash','qwen4-max','kimi-k3.1-pro','solar-pro-4','solar-mini-4-5-preview','gemini-4-hydrogen','midm-k-3.0-pro','motif-3','muse-ember'];
+export const MODELS_2027=['gpt-6.2-sol','gpt-6.2-astra','gpt-6-luna','gpt-6.1-terra','claude-fable-5-2','claude-opus-5-5','claude-sonnet-5-5','claude-haiku-5-5','gemini-4-neon','gemini-4-carbon','deepseek-v4.1-flash','glm-5.3-flash','qwen4-max','kimi-k3.1-pro','solar-pro-4','solar-mini-4-5-preview','gemini-4-hydrogen','midm-k-3.0-pro','motif-3','muse-ember','k-exaone-2.5'];
 // Period 4: Gemini 4 Carbon runs on the agy subscription route instead of the Pi API route (user decision 2026-11-21).
 export const MODELS_2027_PERIOD4=MODELS_2027.map(id=>id==='gemini-4-carbon'?'gemini-4-carbon-agy':id);
 export const MODELS_2025=['gpt-6-luna','gpt-6.1-sol','gpt-6-astra','claude-haiku-5-5','claude-sonnet-5-5','claude-opus-5-5','claude-fable-5-1','gemini-4-argon','kimi-k3'];
