@@ -76,6 +76,7 @@ test('static export contains the penalty-abstention report, social thumbnail, an
     );
   }
   assert.match(html, /https:\/\/roboco\.io\/KSAT-AI-Benchmark\/images\/research-penalty-abstention-social\.png/);
+  assert.match(html, /href="\/KSAT-AI-Benchmark\/research\/metacognitive-abstention\.html"/);
   assert.ok(
     existsSync(new URL('web/out/images/research-penalty-abstention-social.png', root)),
     'missing exported social thumbnail'

@@ -29,11 +29,11 @@
   },
   {
     "file": "publish.mjs",
-    "sha256": "30de2214e8b0b967fff482c66406487089143882a71a38e9b5ebb2b5b0273004"
+    "sha256": "cae93a0c7a466e3df297a71a5809deece47542069d89fd25a8f8040dfdd06cb6"
   },
   {
     "file": "publication.test.mjs",
-    "sha256": "1f4f35a232abba387580ade2af8ce7deab7fa6ff194015313f6fceb9127fe534"
+    "sha256": "a5fef1a04326601b36d9685fbe7bcbd639b2c493b2372dabe7dcbda52b01cf3d"
   },
   {
     "file": "runs/penalty_1__claude-haiku-5-5.json",

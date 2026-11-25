@@ -26,7 +26,7 @@ const STUDIES = [
   {
     href: '/research/penalty-abstention',
     title: penaltyAbstention.title,
-    summary: '기권 0점 · 오답 -1점/-3점 감점제를 2027 4교시 80문항에 적용해 무기권 모델의 잠재 메타인지 각성과 선택적 오답 회피 효과를 인과 검증했다.',
+    summary: '「LLM은 "자신이 모르는 것"을 아는가?」의 후속 인과 실험. 기권 0점 · 오답 -1점/-3점 감점제를 2027 4교시 80문항에 적용해 무기권 모델의 잠재 메타인지 각성과 선택적 오답 회피 효과를 검증했다.',
   },
 ];
 

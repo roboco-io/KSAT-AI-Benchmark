@@ -55,9 +55,12 @@ export default function PenaltyAbstentionPage() {
     </header>
     <main>
       <header className={styles.hero}>
-        <p className={styles.meta}>수능 AI Benchmark 후속 인과 실험 · <time dateTime={summary.publishedAt}>2026년 11월 25일</time></p>
+        <p className={styles.meta}>
+          수능 AI Benchmark 후속 인과 실험 · <time dateTime={summary.publishedAt}>2026년 11월 25일</time> ·{' '}
+          <a href={`${basePath}/research/metacognitive-abstention.html`}>선행 연구: LLM은 &ldquo;자신이 모르는 것&rdquo;을 아는가? ↗</a>
+        </p>
         <h1>{summary.title}</h1>
-        <p className={styles.lead}>기권 0점 · 오답 −3점 감점을 명시하자, 기본 시험에서 기권 0건이던 DeepSeek V4.1 Flash가 42문항(52.5%)을 기권하며 기존 오답의 63.6%를 골라 피했습니다.</p>
+        <p className={styles.lead}>선행 관찰 연구(「고난도 다학제 시험에서 LLM은 &ldquo;자신이 모르는 것&rdquo;을 아는가?」)의 후속 인과 실험입니다. 기권 0점 · 오답 −3점 감점을 명시하자, 기본 시험에서 기권 0건이던 DeepSeek V4.1 Flash가 42문항(52.5%)을 기권하며 기존 오답의 63.6%를 골라 피했습니다.</p>
         <p className={styles.scope}>2027학년도 4교시 4과목({summary.nQuestions}문항, Closed-Book) · {summary.nModels}개 대표 모델 × 3개 채점 조건(C0 기본 · C1 −1점 · C2 −3점) · 격리 통제 실험</p>
       </header>
       <div className={styles.layout}>
@@ -66,6 +69,7 @@ export default function PenaltyAbstentionPage() {
             <strong>이 보고서에서</strong>
             {contents.map(([id, label]) => <a key={id} href={`#${id}`}>{label}</a>)}
           </nav>
+          <p><a href={`${basePath}/research/metacognitive-abstention.html`}>← 선행 관찰 연구 보기</a></p>
           <a href={`${assets}/REPORT.md`} download>보고서 Markdown 다운로드</a>
         </aside>
         <article id="research-article" className={styles.prose}>

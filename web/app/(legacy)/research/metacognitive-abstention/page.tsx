@@ -55,7 +55,10 @@ export default function MetacognitiveAbstentionPage() {
     </header>
     <main>
       <header className={styles.hero}>
-        <p className={styles.meta}>수능 AI Benchmark 연구 · <time dateTime={summary.publishedAt}>2026년 11월 22일</time></p>
+        <p className={styles.meta}>
+          수능 AI Benchmark 연구 · <time dateTime={summary.publishedAt}>2026년 11월 22일</time> ·{' '}
+          <a href={`${basePath}/research/penalty-abstention.html`}>후속 인과 실험: 오답에 감점을 주면 AI는 기권할까? →</a>
+        </p>
         <h1>{summary.title}</h1>
         <p className={styles.lead}>과학탐구에서는 그림이 없어도 오답의 53.7%를 기권으로 걸러냈지만, 비도표 사회탐구에서는 96.1%를 기권 없이 틀렸습니다.</p>
         <p className={styles.scope}>2025–2027학년도 1–3교시(147문항) · 2027학년도 4교시 18과목(360문항, Closed-Book) · 완료 이미지 실행 {summary.primaryImageRuns}건 · 기권 {summary.primaryAbstentions}건 분석</p>
@@ -66,6 +69,7 @@ export default function MetacognitiveAbstentionPage() {
             <strong>이 보고서에서</strong>
             {contents.map(([id, label]) => <a key={id} href={`#${id}`}>{label}</a>)}
           </nav>
+          <p><a href={`${basePath}/research/penalty-abstention.html`}>후속 감점 인과 실험 보기 →</a></p>
           <a href={`${assets}/REPORT.md`} download>보고서 Markdown 다운로드</a>
         </aside>
         <article id="research-article" className={styles.prose}>
