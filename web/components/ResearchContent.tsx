@@ -11,7 +11,7 @@ function inline(text: string, assetRoot: string): ReactNode[] {
     parts.push(text.slice(start, index));
     if (match[1]) {
       const url = match[2];
-      const href = /^https:\/\//.test(url) || url.startsWith('#') ? url : `${assetRoot}/${url}`;
+      const href = /^https:\/\//.test(url) || url.startsWith('#') || url.startsWith('/') ? url : `${assetRoot}/${url}`;
       parts.push(<a key={index} href={href}>{match[1]}</a>);
     } else if (match[3]) parts.push(<code key={index}>{match[3]}</code>);
     else parts.push(<strong key={index}>{match[4]}</strong>);

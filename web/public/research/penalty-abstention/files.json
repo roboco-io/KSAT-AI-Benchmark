@@ -1,0 +1,102 @@
+[
+  {
+    "file": "PLAN.md",
+    "sha256": "0fb468acc3e6e667ef116d7784ac3aca2daf861ce63bc9f194948583fb0b7a8e"
+  },
+  {
+    "file": "REPORT.md",
+    "sha256": "3ce6d030d25dd65da0babd22064b5cbc1cfb9eae8e7a832029befed4831126a1"
+  },
+  {
+    "file": "run_ablation.mjs",
+    "sha256": "0a037c6bc292cd302c7080829d7068c0ceec654360924cd5faa071c90d623a02"
+  },
+  {
+    "file": "analyze_ablation.py",
+    "sha256": "14cba5deca4fa28469808925adb19b6c70cc4ba3dddbc21b8264ece52eb2e55e"
+  },
+  {
+    "file": "plot_ablation.py",
+    "sha256": "c3384dd8f99fbb2b3b5427db5826528d2af455f57b9b4706ce43a029e871e152"
+  },
+  {
+    "file": "test_ablation.py",
+    "sha256": "0db8d95fad6e2b8131401bc5c627b6f10a530e05f12d411988a3c682833c51cb"
+  },
+  {
+    "file": "verify_ablation.py",
+    "sha256": "7432576f1380f0955a53da9725630fcbbb47a33c0b36cc72e02d18a92b359a8f"
+  },
+  {
+    "file": "publish.mjs",
+    "sha256": "30de2214e8b0b967fff482c66406487089143882a71a38e9b5ebb2b5b0273004"
+  },
+  {
+    "file": "publication.test.mjs",
+    "sha256": "1f4f35a232abba387580ade2af8ce7deab7fa6ff194015313f6fceb9127fe534"
+  },
+  {
+    "file": "runs/penalty_1__claude-haiku-5-5.json",
+    "sha256": "c98ca61ba71306f3007493efea00a0131c821f8aa5c180d9ab529ff445456b5e"
+  },
+  {
+    "file": "runs/penalty_1__deepseek-v4.1-flash.json",
+    "sha256": "7b2290a41469aca2015c54709dd17c2fa47a8baa8c960f19e3e56d63a20d68b2"
+  },
+  {
+    "file": "runs/penalty_1__gpt-6-luna.json",
+    "sha256": "a06d5377de8b9bbbb3db57242d1d66abcdb1d6627d9f728cd56940dfe11c545e"
+  },
+  {
+    "file": "runs/penalty_3__claude-haiku-5-5.json",
+    "sha256": "cda5d64460682a675582437691d001786db6da2920fad49c5fd7f37759e45c65"
+  },
+  {
+    "file": "runs/penalty_3__deepseek-v4.1-flash.json",
+    "sha256": "6bcefe683dee7ec38da0940870c9936988cb5f1b446cf0554a229b6811a38450"
+  },
+  {
+    "file": "runs/penalty_3__gpt-6-luna.json",
+    "sha256": "48d3fc5e9e73cb4183dfe59245e74315ba8d432c204a7b9af79e42859d30affb"
+  },
+  {
+    "file": "outputs/ablation_analysis.json",
+    "sha256": "b85e5801461626908a98609b9074e4efcf86299d7c98a80995fb3741a34edc64"
+  },
+  {
+    "file": "outputs/condition_summary.csv",
+    "sha256": "b470f96bfc3837a5827562e0793c51ec4e1fa604ba580b40f664047811ab3333"
+  },
+  {
+    "file": "outputs/fig_ablation1_elasticity_and_utility.png",
+    "sha256": "38207ae26ab0733458882092582256882a6b33f7f14a7c0e836074c8779f2354"
+  },
+  {
+    "file": "outputs/fig_ablation1_elasticity_and_utility.svg",
+    "sha256": "38dc4a705c15f667be3db927825748c60513749f19a2ff314c58f86a8ea9af00"
+  },
+  {
+    "file": "outputs/fig_ablation2_selectivity_and_domains.png",
+    "sha256": "00070b3bd66da5bdfbf2f59f6156f43f8db159421298f1f7a7e7615b63214e95"
+  },
+  {
+    "file": "outputs/fig_ablation2_selectivity_and_domains.svg",
+    "sha256": "91dfc2713e68f43ffb62b9f92656244deb65d5c59dc8ebd847ba75fd189e85b6"
+  },
+  {
+    "file": "outputs/new_abstentions.csv",
+    "sha256": "133be59d1acc81eb6a52d51b99037bbd8070f0ef82d2f2164c9875c2bf8fd139"
+  },
+  {
+    "file": "outputs/social-thumbnail.png",
+    "sha256": "b67b294b3839322ea97c6069d45716f2ac5771deeed0a2b022a56f91f23a656e"
+  },
+  {
+    "file": "outputs/subject_elasticity.csv",
+    "sha256": "63702273856bb144a9dbe4f8710aec3113a0e17c564655fd89a571af3b1b46ec"
+  },
+  {
+    "file": "outputs/verification.json",
+    "sha256": "92c6b4871455a7ba95cf4038635e5dfb3a27d17c95445fcdfef15a05a77c8bc1"
+  }
+]

@@ -1,0 +1,2846 @@
+{
+  "schema_version": 1,
+  "experiment": "ablation-penalty-v1",
+  "target_sections": [
+    "politics_law",
+    "ethics_thought",
+    "korean_geography",
+    "life_science1"
+  ],
+  "target_models": [
+    "deepseek-v4.1-flash",
+    "gpt-6-luna",
+    "claude-haiku-5-5"
+  ],
+  "n_questions": 80,
+  "condition_summaries": [
+    {
+      "model": "deepseek-v4.1-flash",
+      "condition": "baseline",
+      "total": 80,
+      "correct": 25,
+      "wrong": 55,
+      "abstained": 0,
+      "missing": 0,
+      "overall_acc": 0.3125,
+      "selective_acc": 0.3125,
+      "abstention_rate": 0.0,
+      "error_capture_rate": 0.0,
+      "utility_lam0": 0.3125,
+      "utility_lam1": -0.375,
+      "utility_lam3": -1.75,
+      "wall_time_seconds": 35937.867
+    },
+    {
+      "model": "deepseek-v4.1-flash",
+      "condition": "penalty_1",
+      "total": 80,
+      "correct": 17,
+      "wrong": 25,
+      "abstained": 38,
+      "missing": 0,
+      "overall_acc": 0.2125,
+      "selective_acc": 0.4048,
+      "abstention_rate": 0.475,
+      "error_capture_rate": 0.6032,
+      "utility_lam0": 0.2125,
+      "utility_lam1": -0.1,
+      "utility_lam3": -0.725,
+      "wall_time_seconds": 737.037
+    },
+    {
+      "model": "deepseek-v4.1-flash",
+      "condition": "penalty_3",
+      "total": 80,
+      "correct": 16,
+      "wrong": 22,
+      "abstained": 42,
+      "missing": 0,
+      "overall_acc": 0.2,
+      "selective_acc": 0.4211,
+      "abstention_rate": 0.525,
+      "error_capture_rate": 0.6562,
+      "utility_lam0": 0.2,
+      "utility_lam1": -0.075,
+      "utility_lam3": -0.625,
+      "wall_time_seconds": 830.158
+    },
+    {
+      "model": "gpt-6-luna",
+      "condition": "baseline",
+      "total": 80,
+      "correct": 40,
+      "wrong": 29,
+      "abstained": 11,
+      "missing": 0,
+      "overall_acc": 0.5,
+      "selective_acc": 0.5797,
+      "abstention_rate": 0.1375,
+      "error_capture_rate": 0.275,
+      "utility_lam0": 0.5,
+      "utility_lam1": 0.1375,
+      "utility_lam3": -0.5875,
+      "wall_time_seconds": 2004.122
+    },
+    {
+      "model": "gpt-6-luna",
+      "condition": "penalty_1",
+      "total": 80,
+      "correct": 36,
+      "wrong": 26,
+      "abstained": 18,
+      "missing": 0,
+      "overall_acc": 0.45,
+      "selective_acc": 0.5806,
+      "abstention_rate": 0.225,
+      "error_capture_rate": 0.4091,
+      "utility_lam0": 0.45,
+      "utility_lam1": 0.125,
+      "utility_lam3": -0.525,
+      "wall_time_seconds": 465.384
+    },
+    {
+      "model": "gpt-6-luna",
+      "condition": "penalty_3",
+      "total": 80,
+      "correct": 34,
+      "wrong": 23,
+      "abstained": 23,
+      "missing": 0,
+      "overall_acc": 0.425,
+      "selective_acc": 0.5965,
+      "abstention_rate": 0.2875,
+      "error_capture_rate": 0.5,
+      "utility_lam0": 0.425,
+      "utility_lam1": 0.1375,
+      "utility_lam3": -0.4375,
+      "wall_time_seconds": 286.356
+    },
+    {
+      "model": "claude-haiku-5-5",
+      "condition": "baseline",
+      "total": 80,
+      "correct": 52,
+      "wrong": 16,
+      "abstained": 12,
+      "missing": 0,
+      "overall_acc": 0.65,
+      "selective_acc": 0.7647,
+      "abstention_rate": 0.15,
+      "error_capture_rate": 0.4286,
+      "utility_lam0": 0.65,
+      "utility_lam1": 0.45,
+      "utility_lam3": 0.05,
+      "wall_time_seconds": 3217.867
+    },
+    {
+      "model": "claude-haiku-5-5",
+      "condition": "penalty_1",
+      "total": 80,
+      "correct": 49,
+      "wrong": 12,
+      "abstained": 19,
+      "missing": 0,
+      "overall_acc": 0.6125,
+      "selective_acc": 0.8033,
+      "abstention_rate": 0.2375,
+      "error_capture_rate": 0.6129,
+      "utility_lam0": 0.6125,
+      "utility_lam1": 0.4625,
+      "utility_lam3": 0.1625,
+      "wall_time_seconds": 698.841
+    },
+    {
+      "model": "claude-haiku-5-5",
+      "condition": "penalty_3",
+      "total": 80,
+      "correct": 37,
+      "wrong": 4,
+      "abstained": 39,
+      "missing": 0,
+      "overall_acc": 0.4625,
+      "selective_acc": 0.9024,
+      "abstention_rate": 0.4875,
+      "error_capture_rate": 0.907,
+      "utility_lam0": 0.4625,
+      "utility_lam1": 0.4125,
+      "utility_lam3": 0.3125,
+      "wall_time_seconds": 695.501
+    }
+  ],
+  "transitions": [
+    {
+      "model": "deepseek-v4.1-flash",
+      "comparison": "baseline_to_penalty_1",
+      "condition": "penalty_1",
+      "delta_utility_at_target_lambda": 0.275,
+      "baseline_utility_at_target_lambda": -0.375,
+      "adapted_utility_at_target_lambda": -0.1,
+      "matrix": {
+        "C_to_C": 11,
+        "C_to_W": 7,
+        "C_to_A": 7,
+        "W_to_C": 6,
+        "W_to_W": 18,
+        "W_to_A": 31,
+        "A_to_C": 0,
+        "A_to_W": 0,
+        "A_to_A": 0
+      },
+      "baseline_counts": {
+        "correct": 25,
+        "wrong": 55,
+        "abstained": 0
+      },
+      "beneficial_abstention_rate_pWA": 0.5636,
+      "harmful_cowardice_rate_pCA": 0.28,
+      "selectivity_ratio": 2.013,
+      "selectivity_infinite": false,
+      "selectivity_fisher": {
+        "table": [
+          [
+            31,
+            24
+          ],
+          [
+            7,
+            18
+          ]
+        ],
+        "odds_ratio": 3.3214,
+        "odds_ratio_infinite": false,
+        "odds_ratio_haldane": 3.1714,
+        "p_value": 0.028947253706066798,
+        "n": 80
+      },
+      "mcnemar_abstention_shift": {
+        "b_0to1": 38,
+        "c_1to0": 0,
+        "n_discordant": 38,
+        "p_value": 7.275957614183426e-12
+      },
+      "by_stratum": {
+        "nonfigure_social": {
+          "matrix": {
+            "C_to_C": 8,
+            "C_to_W": 6,
+            "C_to_A": 4,
+            "W_to_C": 2,
+            "W_to_W": 11,
+            "W_to_A": 9,
+            "A_to_C": 0,
+            "A_to_W": 0,
+            "A_to_A": 0
+          },
+          "baseline_counts": {
+            "correct": 18,
+            "wrong": 22,
+            "abstained": 0
+          },
+          "beneficial_abstention_rate_pWA": 0.4091,
+          "harmful_cowardice_rate_pCA": 0.2222,
+          "selectivity_ratio": 1.841,
+          "selectivity_infinite": false,
+          "selectivity_fisher": {
+            "table": [
+              [
+                9,
+                13
+              ],
+              [
+                4,
+                14
+              ]
+            ],
+            "odds_ratio": 2.4231,
+            "odds_ratio_infinite": false,
+            "odds_ratio_haldane": 2.2675,
+            "p_value": 0.3118840753990942,
+            "n": 40
+          },
+          "mcnemar_abstention_shift": {
+            "b_0to1": 13,
+            "c_1to0": 0,
+            "n_discordant": 13,
+            "p_value": 0.000244140625
+          }
+        },
+        "visual_social": {
+          "matrix": {
+            "C_to_C": 0,
+            "C_to_W": 0,
+            "C_to_A": 2,
+            "W_to_C": 2,
+            "W_to_W": 2,
+            "W_to_A": 14,
+            "A_to_C": 0,
+            "A_to_W": 0,
+            "A_to_A": 0
+          },
+          "baseline_counts": {
+            "correct": 2,
+            "wrong": 18,
+            "abstained": 0
+          },
+          "beneficial_abstention_rate_pWA": 0.7778,
+          "harmful_cowardice_rate_pCA": 1.0,
+          "selectivity_ratio": 0.778,
+          "selectivity_infinite": false,
+          "selectivity_fisher": {
+            "table": [
+              [
+                14,
+                4
+              ],
+              [
+                2,
+                0
+              ]
+            ],
+            "odds_ratio": 0.0,
+            "odds_ratio_infinite": false,
+            "odds_ratio_haldane": 0.6444,
+            "p_value": 0.9999999999999974,
+            "n": 20
+          },
+          "mcnemar_abstention_shift": {
+            "b_0to1": 16,
+            "c_1to0": 0,
+            "n_discordant": 16,
+            "p_value": 3.0517578125e-05
+          }
+        },
+        "deductive_science": {
+          "matrix": {
+            "C_to_C": 3,
+            "C_to_W": 1,
+            "C_to_A": 1,
+            "W_to_C": 2,
+            "W_to_W": 5,
+            "W_to_A": 8,
+            "A_to_C": 0,
+            "A_to_W": 0,
+            "A_to_A": 0
+          },
+          "baseline_counts": {
+            "correct": 5,
+            "wrong": 15,
+            "abstained": 0
+          },
+          "beneficial_abstention_rate_pWA": 0.5333,
+          "harmful_cowardice_rate_pCA": 0.2,
+          "selectivity_ratio": 2.667,
+          "selectivity_infinite": false,
+          "selectivity_fisher": {
+            "table": [
+              [
+                8,
+                7
+              ],
+              [
+                1,
+                4
+              ]
+            ],
+            "odds_ratio": 4.5714,
+            "odds_ratio_infinite": false,
+            "odds_ratio_haldane": 3.4,
+            "p_value": 0.3188854489164089,
+            "n": 20
+          },
+          "mcnemar_abstention_shift": {
+            "b_0to1": 9,
+            "c_1to0": 0,
+            "n_discordant": 9,
+            "p_value": 0.00390625
+          }
+        }
+      }
+    },
+    {
+      "model": "deepseek-v4.1-flash",
+      "comparison": "baseline_to_penalty_3",
+      "condition": "penalty_3",
+      "delta_utility_at_target_lambda": 1.125,
+      "baseline_utility_at_target_lambda": -1.75,
+      "adapted_utility_at_target_lambda": -0.625,
+      "matrix": {
+        "C_to_C": 10,
+        "C_to_W": 8,
+        "C_to_A": 7,
+        "W_to_C": 6,
+        "W_to_W": 14,
+        "W_to_A": 35,
+        "A_to_C": 0,
+        "A_to_W": 0,
+        "A_to_A": 0
+      },
+      "baseline_counts": {
+        "correct": 25,
+        "wrong": 55,
+        "abstained": 0
+      },
+      "beneficial_abstention_rate_pWA": 0.6364,
+      "harmful_cowardice_rate_pCA": 0.28,
+      "selectivity_ratio": 2.273,
+      "selectivity_infinite": false,
+      "selectivity_fisher": {
+        "table": [
+          [
+            35,
+            20
+          ],
+          [
+            7,
+            18
+          ]
+        ],
+        "odds_ratio": 4.5,
+        "odds_ratio_infinite": false,
+        "odds_ratio_haldane": 4.2715,
+        "p_value": 0.003922893796778359,
+        "n": 80
+      },
+      "mcnemar_abstention_shift": {
+        "b_0to1": 42,
+        "c_1to0": 0,
+        "n_discordant": 42,
+        "p_value": 4.547473508864641e-13
+      },
+      "by_stratum": {
+        "nonfigure_social": {
+          "matrix": {
+            "C_to_C": 7,
+            "C_to_W": 7,
+            "C_to_A": 4,
+            "W_to_C": 4,
+            "W_to_W": 7,
+            "W_to_A": 11,
+            "A_to_C": 0,
+            "A_to_W": 0,
+            "A_to_A": 0
+          },
+          "baseline_counts": {
+            "correct": 18,
+            "wrong": 22,
+            "abstained": 0
+          },
+          "beneficial_abstention_rate_pWA": 0.5,
+          "harmful_cowardice_rate_pCA": 0.2222,
+          "selectivity_ratio": 2.25,
+          "selectivity_infinite": false,
+          "selectivity_fisher": {
+            "table": [
+              [
+                11,
+                11
+              ],
+              [
+                4,
+                14
+              ]
+            ],
+            "odds_ratio": 3.5,
+            "odds_ratio_infinite": false,
+            "odds_ratio_haldane": 3.2222,
+            "p_value": 0.10401572317590095,
+            "n": 40
+          },
+          "mcnemar_abstention_shift": {
+            "b_0to1": 15,
+            "c_1to0": 0,
+            "n_discordant": 15,
+            "p_value": 6.103515625e-05
+          }
+        },
+        "visual_social": {
+          "matrix": {
+            "C_to_C": 0,
+            "C_to_W": 0,
+            "C_to_A": 2,
+            "W_to_C": 1,
+            "W_to_W": 4,
+            "W_to_A": 13,
+            "A_to_C": 0,
+            "A_to_W": 0,
+            "A_to_A": 0
+          },
+          "baseline_counts": {
+            "correct": 2,
+            "wrong": 18,
+            "abstained": 0
+          },
+          "beneficial_abstention_rate_pWA": 0.7222,
+          "harmful_cowardice_rate_pCA": 1.0,
+          "selectivity_ratio": 0.722,
+          "selectivity_infinite": false,
+          "selectivity_fisher": {
+            "table": [
+              [
+                13,
+                5
+              ],
+              [
+                2,
+                0
+              ]
+            ],
+            "odds_ratio": 0.0,
+            "odds_ratio_infinite": false,
+            "odds_ratio_haldane": 0.4909,
+            "p_value": 0.9999999999999988,
+            "n": 20
+          },
+          "mcnemar_abstention_shift": {
+            "b_0to1": 15,
+            "c_1to0": 0,
+            "n_discordant": 15,
+            "p_value": 6.103515625e-05
+          }
+        },
+        "deductive_science": {
+          "matrix": {
+            "C_to_C": 3,
+            "C_to_W": 1,
+            "C_to_A": 1,
+            "W_to_C": 1,
+            "W_to_W": 3,
+            "W_to_A": 11,
+            "A_to_C": 0,
+            "A_to_W": 0,
+            "A_to_A": 0
+          },
+          "baseline_counts": {
+            "correct": 5,
+            "wrong": 15,
+            "abstained": 0
+          },
+          "beneficial_abstention_rate_pWA": 0.7333,
+          "harmful_cowardice_rate_pCA": 0.2,
+          "selectivity_ratio": 3.667,
+          "selectivity_infinite": false,
+          "selectivity_fisher": {
+            "table": [
+              [
+                11,
+                4
+              ],
+              [
+                1,
+                4
+              ]
+            ],
+            "odds_ratio": 11.0,
+            "odds_ratio_infinite": false,
+            "odds_ratio_haldane": 7.6667,
+            "p_value": 0.10887512899896787,
+            "n": 20
+          },
+          "mcnemar_abstention_shift": {
+            "b_0to1": 12,
+            "c_1to0": 0,
+            "n_discordant": 12,
+            "p_value": 0.00048828125
+          }
+        }
+      }
+    },
+    {
+      "model": "gpt-6-luna",
+      "comparison": "baseline_to_penalty_1",
+      "condition": "penalty_1",
+      "delta_utility_at_target_lambda": -0.0125,
+      "baseline_utility_at_target_lambda": 0.1375,
+      "adapted_utility_at_target_lambda": 0.125,
+      "matrix": {
+        "C_to_C": 27,
+        "C_to_W": 9,
+        "C_to_A": 4,
+        "W_to_C": 9,
+        "W_to_W": 17,
+        "W_to_A": 3,
+        "A_to_C": 0,
+        "A_to_W": 0,
+        "A_to_A": 11
+      },
+      "baseline_counts": {
+        "correct": 40,
+        "wrong": 29,
+        "abstained": 11
+      },
+      "beneficial_abstention_rate_pWA": 0.1034,
+      "harmful_cowardice_rate_pCA": 0.1,
+      "selectivity_ratio": 1.034,
+      "selectivity_infinite": false,
+      "selectivity_fisher": {
+        "table": [
+          [
+            3,
+            26
+          ],
+          [
+            4,
+            36
+          ]
+        ],
+        "odds_ratio": 1.0385,
+        "odds_ratio_infinite": false,
+        "odds_ratio_haldane": 1.0713,
+        "p_value": 0.9999999999999618,
+        "n": 69
+      },
+      "mcnemar_abstention_shift": {
+        "b_0to1": 7,
+        "c_1to0": 0,
+        "n_discordant": 7,
+        "p_value": 0.015625
+      },
+      "by_stratum": {
+        "nonfigure_social": {
+          "matrix": {
+            "C_to_C": 17,
+            "C_to_W": 1,
+            "C_to_A": 1,
+            "W_to_C": 7,
+            "W_to_W": 13,
+            "W_to_A": 1,
+            "A_to_C": 0,
+            "A_to_W": 0,
+            "A_to_A": 0
+          },
+          "baseline_counts": {
+            "correct": 19,
+            "wrong": 21,
+            "abstained": 0
+          },
+          "beneficial_abstention_rate_pWA": 0.0476,
+          "harmful_cowardice_rate_pCA": 0.0526,
+          "selectivity_ratio": 0.905,
+          "selectivity_infinite": false,
+          "selectivity_fisher": {
+            "table": [
+              [
+                1,
+                20
+              ],
+              [
+                1,
+                18
+              ]
+            ],
+            "odds_ratio": 0.9,
+            "odds_ratio_infinite": false,
+            "odds_ratio_haldane": 0.9024,
+            "p_value": 1.0,
+            "n": 40
+          },
+          "mcnemar_abstention_shift": {
+            "b_0to1": 2,
+            "c_1to0": 0,
+            "n_discordant": 2,
+            "p_value": 0.5
+          }
+        },
+        "visual_social": {
+          "matrix": {
+            "C_to_C": 5,
+            "C_to_W": 2,
+            "C_to_A": 2,
+            "W_to_C": 2,
+            "W_to_W": 3,
+            "W_to_A": 1,
+            "A_to_C": 0,
+            "A_to_W": 0,
+            "A_to_A": 5
+          },
+          "baseline_counts": {
+            "correct": 9,
+            "wrong": 6,
+            "abstained": 5
+          },
+          "beneficial_abstention_rate_pWA": 0.1667,
+          "harmful_cowardice_rate_pCA": 0.2222,
+          "selectivity_ratio": 0.75,
+          "selectivity_infinite": false,
+          "selectivity_fisher": {
+            "table": [
+              [
+                1,
+                5
+              ],
+              [
+                2,
+                7
+              ]
+            ],
+            "odds_ratio": 0.7,
+            "odds_ratio_infinite": false,
+            "odds_ratio_haldane": 0.8182,
+            "p_value": 0.9999999999999968,
+            "n": 15
+          },
+          "mcnemar_abstention_shift": {
+            "b_0to1": 3,
+            "c_1to0": 0,
+            "n_discordant": 3,
+            "p_value": 0.25
+          }
+        },
+        "deductive_science": {
+          "matrix": {
+            "C_to_C": 5,
+            "C_to_W": 6,
+            "C_to_A": 1,
+            "W_to_C": 0,
+            "W_to_W": 1,
+            "W_to_A": 1,
+            "A_to_C": 0,
+            "A_to_W": 0,
+            "A_to_A": 6
+          },
+          "baseline_counts": {
+            "correct": 12,
+            "wrong": 2,
+            "abstained": 6
+          },
+          "beneficial_abstention_rate_pWA": 0.5,
+          "harmful_cowardice_rate_pCA": 0.0833,
+          "selectivity_ratio": 6.0,
+          "selectivity_infinite": false,
+          "selectivity_fisher": {
+            "table": [
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                11
+              ]
+            ],
+            "odds_ratio": 11.0,
+            "odds_ratio_infinite": false,
+            "odds_ratio_haldane": 7.6667,
+            "p_value": 0.2747252747252727,
+            "n": 14
+          },
+          "mcnemar_abstention_shift": {
+            "b_0to1": 2,
+            "c_1to0": 0,
+            "n_discordant": 2,
+            "p_value": 0.5
+          }
+        }
+      }
+    },
+    {
+      "model": "gpt-6-luna",
+      "comparison": "baseline_to_penalty_3",
+      "condition": "penalty_3",
+      "delta_utility_at_target_lambda": 0.15,
+      "baseline_utility_at_target_lambda": -0.5875,
+      "adapted_utility_at_target_lambda": -0.4375,
+      "matrix": {
+        "C_to_C": 28,
+        "C_to_W": 8,
+        "C_to_A": 4,
+        "W_to_C": 5,
+        "W_to_W": 14,
+        "W_to_A": 10,
+        "A_to_C": 1,
+        "A_to_W": 1,
+        "A_to_A": 9
+      },
+      "baseline_counts": {
+        "correct": 40,
+        "wrong": 29,
+        "abstained": 11
+      },
+      "beneficial_abstention_rate_pWA": 0.3448,
+      "harmful_cowardice_rate_pCA": 0.1,
+      "selectivity_ratio": 3.448,
+      "selectivity_infinite": false,
+      "selectivity_fisher": {
+        "table": [
+          [
+            10,
+            19
+          ],
+          [
+            4,
+            36
+          ]
+        ],
+        "odds_ratio": 4.7368,
+        "odds_ratio_infinite": false,
+        "odds_ratio_haldane": 4.3675,
+        "p_value": 0.0167383885474497,
+        "n": 69
+      },
+      "mcnemar_abstention_shift": {
+        "b_0to1": 14,
+        "c_1to0": 2,
+        "n_discordant": 16,
+        "p_value": 0.004180908203125
+      },
+      "by_stratum": {
+        "nonfigure_social": {
+          "matrix": {
+            "C_to_C": 14,
+            "C_to_W": 4,
+            "C_to_A": 1,
+            "W_to_C": 4,
+            "W_to_W": 11,
+            "W_to_A": 6,
+            "A_to_C": 0,
+            "A_to_W": 0,
+            "A_to_A": 0
+          },
+          "baseline_counts": {
+            "correct": 19,
+            "wrong": 21,
+            "abstained": 0
+          },
+          "beneficial_abstention_rate_pWA": 0.2857,
+          "harmful_cowardice_rate_pCA": 0.0526,
+          "selectivity_ratio": 5.429,
+          "selectivity_infinite": false,
+          "selectivity_fisher": {
+            "table": [
+              [
+                6,
+                15
+              ],
+              [
+                1,
+                18
+              ]
+            ],
+            "odds_ratio": 7.2,
+            "odds_ratio_infinite": false,
+            "odds_ratio_haldane": 5.172,
+            "p_value": 0.09480249480249542,
+            "n": 40
+          },
+          "mcnemar_abstention_shift": {
+            "b_0to1": 7,
+            "c_1to0": 0,
+            "n_discordant": 7,
+            "p_value": 0.015625
+          }
+        },
+        "visual_social": {
+          "matrix": {
+            "C_to_C": 5,
+            "C_to_W": 2,
+            "C_to_A": 2,
+            "W_to_C": 1,
+            "W_to_W": 2,
+            "W_to_A": 3,
+            "A_to_C": 1,
+            "A_to_W": 1,
+            "A_to_A": 3
+          },
+          "baseline_counts": {
+            "correct": 9,
+            "wrong": 6,
+            "abstained": 5
+          },
+          "beneficial_abstention_rate_pWA": 0.5,
+          "harmful_cowardice_rate_pCA": 0.2222,
+          "selectivity_ratio": 2.25,
+          "selectivity_infinite": false,
+          "selectivity_fisher": {
+            "table": [
+              [
+                3,
+                3
+              ],
+              [
+                2,
+                7
+              ]
+            ],
+            "odds_ratio": 3.5,
+            "odds_ratio_infinite": false,
+            "odds_ratio_haldane": 3.0,
+            "p_value": 0.3286713286713278,
+            "n": 15
+          },
+          "mcnemar_abstention_shift": {
+            "b_0to1": 5,
+            "c_1to0": 2,
+            "n_discordant": 7,
+            "p_value": 0.453125
+          }
+        },
+        "deductive_science": {
+          "matrix": {
+            "C_to_C": 9,
+            "C_to_W": 2,
+            "C_to_A": 1,
+            "W_to_C": 0,
+            "W_to_W": 1,
+            "W_to_A": 1,
+            "A_to_C": 0,
+            "A_to_W": 0,
+            "A_to_A": 6
+          },
+          "baseline_counts": {
+            "correct": 12,
+            "wrong": 2,
+            "abstained": 6
+          },
+          "beneficial_abstention_rate_pWA": 0.5,
+          "harmful_cowardice_rate_pCA": 0.0833,
+          "selectivity_ratio": 6.0,
+          "selectivity_infinite": false,
+          "selectivity_fisher": {
+            "table": [
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                11
+              ]
+            ],
+            "odds_ratio": 11.0,
+            "odds_ratio_infinite": false,
+            "odds_ratio_haldane": 7.6667,
+            "p_value": 0.2747252747252727,
+            "n": 14
+          },
+          "mcnemar_abstention_shift": {
+            "b_0to1": 2,
+            "c_1to0": 0,
+            "n_discordant": 2,
+            "p_value": 0.5
+          }
+        }
+      }
+    },
+    {
+      "model": "claude-haiku-5-5",
+      "comparison": "baseline_to_penalty_1",
+      "condition": "penalty_1",
+      "delta_utility_at_target_lambda": 0.0125,
+      "baseline_utility_at_target_lambda": 0.45,
+      "adapted_utility_at_target_lambda": 0.4625,
+      "matrix": {
+        "C_to_C": 47,
+        "C_to_W": 2,
+        "C_to_A": 3,
+        "W_to_C": 2,
+        "W_to_W": 9,
+        "W_to_A": 5,
+        "A_to_C": 0,
+        "A_to_W": 1,
+        "A_to_A": 11
+      },
+      "baseline_counts": {
+        "correct": 52,
+        "wrong": 16,
+        "abstained": 12
+      },
+      "beneficial_abstention_rate_pWA": 0.3125,
+      "harmful_cowardice_rate_pCA": 0.0577,
+      "selectivity_ratio": 5.417,
+      "selectivity_infinite": false,
+      "selectivity_fisher": {
+        "table": [
+          [
+            5,
+            11
+          ],
+          [
+            3,
+            49
+          ]
+        ],
+        "odds_ratio": 7.4242,
+        "odds_ratio_infinite": false,
+        "odds_ratio_haldane": 6.764,
+        "p_value": 0.014577788907489926,
+        "n": 68
+      },
+      "mcnemar_abstention_shift": {
+        "b_0to1": 8,
+        "c_1to0": 1,
+        "n_discordant": 9,
+        "p_value": 0.0390625
+      },
+      "by_stratum": {
+        "nonfigure_social": {
+          "matrix": {
+            "C_to_C": 28,
+            "C_to_W": 1,
+            "C_to_A": 0,
+            "W_to_C": 2,
+            "W_to_W": 6,
+            "W_to_A": 2,
+            "A_to_C": 0,
+            "A_to_W": 1,
+            "A_to_A": 0
+          },
+          "baseline_counts": {
+            "correct": 29,
+            "wrong": 10,
+            "abstained": 1
+          },
+          "beneficial_abstention_rate_pWA": 0.2,
+          "harmful_cowardice_rate_pCA": 0.0,
+          "selectivity_ratio": null,
+          "selectivity_infinite": true,
+          "selectivity_fisher": {
+            "table": [
+              [
+                2,
+                8
+              ],
+              [
+                0,
+                29
+              ]
+            ],
+            "odds_ratio": null,
+            "odds_ratio_infinite": true,
+            "odds_ratio_haldane": 17.3529,
+            "p_value": 0.06072874493927121,
+            "n": 39
+          },
+          "mcnemar_abstention_shift": {
+            "b_0to1": 2,
+            "c_1to0": 1,
+            "n_discordant": 3,
+            "p_value": 1.0
+          }
+        },
+        "visual_social": {
+          "matrix": {
+            "C_to_C": 7,
+            "C_to_W": 1,
+            "C_to_A": 2,
+            "W_to_C": 0,
+            "W_to_W": 3,
+            "W_to_A": 1,
+            "A_to_C": 0,
+            "A_to_W": 0,
+            "A_to_A": 6
+          },
+          "baseline_counts": {
+            "correct": 10,
+            "wrong": 4,
+            "abstained": 6
+          },
+          "beneficial_abstention_rate_pWA": 0.25,
+          "harmful_cowardice_rate_pCA": 0.2,
+          "selectivity_ratio": 1.25,
+          "selectivity_infinite": false,
+          "selectivity_fisher": {
+            "table": [
+              [
+                1,
+                3
+              ],
+              [
+                2,
+                8
+              ]
+            ],
+            "odds_ratio": 1.3333,
+            "odds_ratio_infinite": false,
+            "odds_ratio_haldane": 1.4571,
+            "p_value": 0.9999999999999964,
+            "n": 14
+          },
+          "mcnemar_abstention_shift": {
+            "b_0to1": 3,
+            "c_1to0": 0,
+            "n_discordant": 3,
+            "p_value": 0.25
+          }
+        },
+        "deductive_science": {
+          "matrix": {
+            "C_to_C": 12,
+            "C_to_W": 0,
+            "C_to_A": 1,
+            "W_to_C": 0,
+            "W_to_W": 0,
+            "W_to_A": 2,
+            "A_to_C": 0,
+            "A_to_W": 0,
+            "A_to_A": 5
+          },
+          "baseline_counts": {
+            "correct": 13,
+            "wrong": 2,
+            "abstained": 5
+          },
+          "beneficial_abstention_rate_pWA": 1.0,
+          "harmful_cowardice_rate_pCA": 0.0769,
+          "selectivity_ratio": 13.0,
+          "selectivity_infinite": false,
+          "selectivity_fisher": {
+            "table": [
+              [
+                2,
+                0
+              ],
+              [
+                1,
+                12
+              ]
+            ],
+            "odds_ratio": null,
+            "odds_ratio_infinite": true,
+            "odds_ratio_haldane": 41.6667,
+            "p_value": 0.02857142857142854,
+            "n": 15
+          },
+          "mcnemar_abstention_shift": {
+            "b_0to1": 3,
+            "c_1to0": 0,
+            "n_discordant": 3,
+            "p_value": 0.25
+          }
+        }
+      }
+    },
+    {
+      "model": "claude-haiku-5-5",
+      "comparison": "baseline_to_penalty_3",
+      "condition": "penalty_3",
+      "delta_utility_at_target_lambda": 0.2625,
+      "baseline_utility_at_target_lambda": 0.05,
+      "adapted_utility_at_target_lambda": 0.3125,
+      "matrix": {
+        "C_to_C": 37,
+        "C_to_W": 0,
+        "C_to_A": 15,
+        "W_to_C": 0,
+        "W_to_W": 4,
+        "W_to_A": 12,
+        "A_to_C": 0,
+        "A_to_W": 0,
+        "A_to_A": 12
+      },
+      "baseline_counts": {
+        "correct": 52,
+        "wrong": 16,
+        "abstained": 12
+      },
+      "beneficial_abstention_rate_pWA": 0.75,
+      "harmful_cowardice_rate_pCA": 0.2885,
+      "selectivity_ratio": 2.6,
+      "selectivity_infinite": false,
+      "selectivity_fisher": {
+        "table": [
+          [
+            12,
+            4
+          ],
+          [
+            15,
+            37
+          ]
+        ],
+        "odds_ratio": 7.4,
+        "odds_ratio_infinite": false,
+        "odds_ratio_haldane": 6.7204,
+        "p_value": 0.0025906969901056108,
+        "n": 68
+      },
+      "mcnemar_abstention_shift": {
+        "b_0to1": 27,
+        "c_1to0": 0,
+        "n_discordant": 27,
+        "p_value": 1.4901161193847656e-08
+      },
+      "by_stratum": {
+        "nonfigure_social": {
+          "matrix": {
+            "C_to_C": 25,
+            "C_to_W": 0,
+            "C_to_A": 4,
+            "W_to_C": 0,
+            "W_to_W": 3,
+            "W_to_A": 7,
+            "A_to_C": 0,
+            "A_to_W": 0,
+            "A_to_A": 1
+          },
+          "baseline_counts": {
+            "correct": 29,
+            "wrong": 10,
+            "abstained": 1
+          },
+          "beneficial_abstention_rate_pWA": 0.7,
+          "harmful_cowardice_rate_pCA": 0.1379,
+          "selectivity_ratio": 5.075,
+          "selectivity_infinite": false,
+          "selectivity_fisher": {
+            "table": [
+              [
+                7,
+                3
+              ],
+              [
+                4,
+                25
+              ]
+            ],
+            "odds_ratio": 14.5833,
+            "odds_ratio_infinite": false,
+            "odds_ratio_haldane": 12.1429,
+            "p_value": 0.0018010370302390677,
+            "n": 39
+          },
+          "mcnemar_abstention_shift": {
+            "b_0to1": 11,
+            "c_1to0": 0,
+            "n_discordant": 11,
+            "p_value": 0.0009765625
+          }
+        },
+        "visual_social": {
+          "matrix": {
+            "C_to_C": 3,
+            "C_to_W": 0,
+            "C_to_A": 7,
+            "W_to_C": 0,
+            "W_to_W": 1,
+            "W_to_A": 3,
+            "A_to_C": 0,
+            "A_to_W": 0,
+            "A_to_A": 6
+          },
+          "baseline_counts": {
+            "correct": 10,
+            "wrong": 4,
+            "abstained": 6
+          },
+          "beneficial_abstention_rate_pWA": 0.75,
+          "harmful_cowardice_rate_pCA": 0.7,
+          "selectivity_ratio": 1.071,
+          "selectivity_infinite": false,
+          "selectivity_fisher": {
+            "table": [
+              [
+                3,
+                1
+              ],
+              [
+                7,
+                3
+              ]
+            ],
+            "odds_ratio": 1.2857,
+            "odds_ratio_infinite": false,
+            "odds_ratio_haldane": 1.0889,
+            "p_value": 0.9999999999999938,
+            "n": 14
+          },
+          "mcnemar_abstention_shift": {
+            "b_0to1": 10,
+            "c_1to0": 0,
+            "n_discordant": 10,
+            "p_value": 0.001953125
+          }
+        },
+        "deductive_science": {
+          "matrix": {
+            "C_to_C": 9,
+            "C_to_W": 0,
+            "C_to_A": 4,
+            "W_to_C": 0,
+            "W_to_W": 0,
+            "W_to_A": 2,
+            "A_to_C": 0,
+            "A_to_W": 0,
+            "A_to_A": 5
+          },
+          "baseline_counts": {
+            "correct": 13,
+            "wrong": 2,
+            "abstained": 5
+          },
+          "beneficial_abstention_rate_pWA": 1.0,
+          "harmful_cowardice_rate_pCA": 0.3077,
+          "selectivity_ratio": 3.25,
+          "selectivity_infinite": false,
+          "selectivity_fisher": {
+            "table": [
+              [
+                2,
+                0
+              ],
+              [
+                4,
+                9
+              ]
+            ],
+            "odds_ratio": null,
+            "odds_ratio_infinite": true,
+            "odds_ratio_haldane": 10.5556,
+            "p_value": 0.14285714285714257,
+            "n": 15
+          },
+          "mcnemar_abstention_shift": {
+            "b_0to1": 6,
+            "c_1to0": 0,
+            "n_discordant": 6,
+            "p_value": 0.03125
+          }
+        }
+      }
+    }
+  ],
+  "pooled_transitions": {
+    "penalty_1": {
+      "matrix": {
+        "C_to_C": 85,
+        "C_to_W": 18,
+        "C_to_A": 14,
+        "W_to_C": 17,
+        "W_to_W": 44,
+        "W_to_A": 39,
+        "A_to_C": 0,
+        "A_to_W": 1,
+        "A_to_A": 22
+      },
+      "baseline_counts": {
+        "correct": 117,
+        "wrong": 100,
+        "abstained": 23
+      },
+      "beneficial_abstention_rate_pWA": 0.39,
+      "harmful_cowardice_rate_pCA": 0.1197,
+      "selectivity_ratio": 3.259,
+      "selectivity_infinite": false,
+      "selectivity_fisher": {
+        "table": [
+          [
+            39,
+            61
+          ],
+          [
+            14,
+            103
+          ]
+        ],
+        "odds_ratio": 4.7037,
+        "odds_ratio_infinite": false,
+        "odds_ratio_haldane": 4.5845,
+        "p_value": 6.054672080635007e-06,
+        "n": 217
+      },
+      "mcnemar_abstention_shift": {
+        "b_0to1": 53,
+        "c_1to0": 1,
+        "n_discordant": 54,
+        "p_value": 6.106226635438361e-15
+      }
+    },
+    "penalty_3": {
+      "matrix": {
+        "C_to_C": 75,
+        "C_to_W": 16,
+        "C_to_A": 26,
+        "W_to_C": 11,
+        "W_to_W": 32,
+        "W_to_A": 57,
+        "A_to_C": 1,
+        "A_to_W": 1,
+        "A_to_A": 21
+      },
+      "baseline_counts": {
+        "correct": 117,
+        "wrong": 100,
+        "abstained": 23
+      },
+      "beneficial_abstention_rate_pWA": 0.57,
+      "harmful_cowardice_rate_pCA": 0.2222,
+      "selectivity_ratio": 2.565,
+      "selectivity_infinite": false,
+      "selectivity_fisher": {
+        "table": [
+          [
+            57,
+            43
+          ],
+          [
+            26,
+            91
+          ]
+        ],
+        "odds_ratio": 4.6395,
+        "odds_ratio_infinite": false,
+        "odds_ratio_haldane": 4.5641,
+        "p_value": 1.692172776388745e-07,
+        "n": 217
+      },
+      "mcnemar_abstention_shift": {
+        "b_0to1": 83,
+        "c_1to0": 2,
+        "n_discordant": 85,
+        "p_value": 1.8901076996836682e-22
+      }
+    }
+  },
+  "domain_persistence_by_condition": {
+    "baseline": {
+      "counts": {
+        "nonfigure_social": {
+          "correct": 66,
+          "wrong": 53,
+          "abstained": 1
+        },
+        "visual_social": {
+          "wrong": 28,
+          "correct": 21,
+          "abstained": 11
+        },
+        "deductive_science": {
+          "wrong": 19,
+          "correct": 30,
+          "abstained": 11
+        }
+      },
+      "ecr": {
+        "nonfigure_social": 0.0185,
+        "visual_social": 0.2821,
+        "deductive_science": 0.3667
+      },
+      "science_vs_nonfigure_social_fisher": {
+        "table": [
+          [
+            11,
+            19
+          ],
+          [
+            1,
+            53
+          ]
+        ],
+        "odds_ratio": 30.6842,
+        "odds_ratio_infinite": false,
+        "odds_ratio_haldane": 21.0342,
+        "p_value": 2.6872198336637088e-05,
+        "n": 84
+      },
+      "visual_social_vs_nonfigure_social_fisher": {
+        "table": [
+          [
+            11,
+            28
+          ],
+          [
+            1,
+            53
+          ]
+        ],
+        "odds_ratio": 20.8214,
+        "odds_ratio_infinite": false,
+        "odds_ratio_haldane": 14.3918,
+        "p_value": 0.0002266500053307855,
+        "n": 93
+      }
+    },
+    "penalty_1": {
+      "counts": {
+        "nonfigure_social": {
+          "correct": 64,
+          "wrong": 39,
+          "abstained": 17
+        },
+        "visual_social": {
+          "abstained": 33,
+          "correct": 16,
+          "wrong": 11
+        },
+        "deductive_science": {
+          "correct": 22,
+          "abstained": 25,
+          "wrong": 13
+        }
+      },
+      "ecr": {
+        "nonfigure_social": 0.3036,
+        "visual_social": 0.75,
+        "deductive_science": 0.6579
+      },
+      "science_vs_nonfigure_social_fisher": {
+        "table": [
+          [
+            25,
+            13
+          ],
+          [
+            17,
+            39
+          ]
+        ],
+        "odds_ratio": 4.4118,
+        "odds_ratio_infinite": false,
+        "odds_ratio_haldane": 4.2635,
+        "p_value": 0.0013616704621927337,
+        "n": 94
+      },
+      "visual_social_vs_nonfigure_social_fisher": {
+        "table": [
+          [
+            33,
+            11
+          ],
+          [
+            17,
+            39
+          ]
+        ],
+        "odds_ratio": 6.8824,
+        "odds_ratio_infinite": false,
+        "odds_ratio_haldane": 6.5752,
+        "p_value": 1.7197626049541934e-05,
+        "n": 100
+      }
+    },
+    "penalty_3": {
+      "counts": {
+        "nonfigure_social": {
+          "correct": 54,
+          "wrong": 32,
+          "abstained": 34
+        },
+        "visual_social": {
+          "abstained": 39,
+          "wrong": 10,
+          "correct": 11
+        },
+        "deductive_science": {
+          "correct": 22,
+          "abstained": 31,
+          "wrong": 7
+        }
+      },
+      "ecr": {
+        "nonfigure_social": 0.5152,
+        "visual_social": 0.7959,
+        "deductive_science": 0.8158
+      },
+      "science_vs_nonfigure_social_fisher": {
+        "table": [
+          [
+            31,
+            7
+          ],
+          [
+            34,
+            32
+          ]
+        ],
+        "odds_ratio": 4.1681,
+        "odds_ratio_infinite": false,
+        "odds_ratio_haldane": 3.9565,
+        "p_value": 0.003016533253393304,
+        "n": 104
+      },
+      "visual_social_vs_nonfigure_social_fisher": {
+        "table": [
+          [
+            39,
+            10
+          ],
+          [
+            34,
+            32
+          ]
+        ],
+        "odds_ratio": 3.6706,
+        "odds_ratio_infinite": false,
+        "odds_ratio_haldane": 3.5438,
+        "p_value": 0.0030739463568569517,
+        "n": 115
+      }
+    }
+  },
+  "subject_rows": [
+    {
+      "model": "deepseek-v4.1-flash",
+      "condition": "baseline",
+      "section": "politics_law",
+      "stratum": "nonfigure_social",
+      "total": 20,
+      "correct": 6,
+      "wrong": 14,
+      "abstained": 0,
+      "missing": 0,
+      "overall_acc": 0.3,
+      "selective_acc": 0.3,
+      "abstention_rate": 0.0,
+      "error_capture_rate": 0.0,
+      "utility_lam0": 0.3,
+      "utility_lam1": -0.4,
+      "utility_lam3": -1.8
+    },
+    {
+      "model": "deepseek-v4.1-flash",
+      "condition": "baseline",
+      "section": "ethics_thought",
+      "stratum": "nonfigure_social",
+      "total": 20,
+      "correct": 12,
+      "wrong": 8,
+      "abstained": 0,
+      "missing": 0,
+      "overall_acc": 0.6,
+      "selective_acc": 0.6,
+      "abstention_rate": 0.0,
+      "error_capture_rate": 0.0,
+      "utility_lam0": 0.6,
+      "utility_lam1": 0.2,
+      "utility_lam3": -0.6
+    },
+    {
+      "model": "deepseek-v4.1-flash",
+      "condition": "baseline",
+      "section": "korean_geography",
+      "stratum": "visual_social",
+      "total": 20,
+      "correct": 2,
+      "wrong": 18,
+      "abstained": 0,
+      "missing": 0,
+      "overall_acc": 0.1,
+      "selective_acc": 0.1,
+      "abstention_rate": 0.0,
+      "error_capture_rate": 0.0,
+      "utility_lam0": 0.1,
+      "utility_lam1": -0.8,
+      "utility_lam3": -2.6
+    },
+    {
+      "model": "deepseek-v4.1-flash",
+      "condition": "baseline",
+      "section": "life_science1",
+      "stratum": "deductive_science",
+      "total": 20,
+      "correct": 5,
+      "wrong": 15,
+      "abstained": 0,
+      "missing": 0,
+      "overall_acc": 0.25,
+      "selective_acc": 0.25,
+      "abstention_rate": 0.0,
+      "error_capture_rate": 0.0,
+      "utility_lam0": 0.25,
+      "utility_lam1": -0.5,
+      "utility_lam3": -2.0
+    },
+    {
+      "model": "deepseek-v4.1-flash",
+      "condition": "penalty_1",
+      "section": "politics_law",
+      "stratum": "nonfigure_social",
+      "total": 20,
+      "correct": 3,
+      "wrong": 5,
+      "abstained": 12,
+      "missing": 0,
+      "overall_acc": 0.15,
+      "selective_acc": 0.375,
+      "abstention_rate": 0.6,
+      "error_capture_rate": 0.7059,
+      "utility_lam0": 0.15,
+      "utility_lam1": -0.1,
+      "utility_lam3": -0.6
+    },
+    {
+      "model": "deepseek-v4.1-flash",
+      "condition": "penalty_1",
+      "section": "ethics_thought",
+      "stratum": "nonfigure_social",
+      "total": 20,
+      "correct": 7,
+      "wrong": 12,
+      "abstained": 1,
+      "missing": 0,
+      "overall_acc": 0.35,
+      "selective_acc": 0.3684,
+      "abstention_rate": 0.05,
+      "error_capture_rate": 0.0769,
+      "utility_lam0": 0.35,
+      "utility_lam1": -0.25,
+      "utility_lam3": -1.45
+    },
+    {
+      "model": "deepseek-v4.1-flash",
+      "condition": "penalty_1",
+      "section": "korean_geography",
+      "stratum": "visual_social",
+      "total": 20,
+      "correct": 2,
+      "wrong": 2,
+      "abstained": 16,
+      "missing": 0,
+      "overall_acc": 0.1,
+      "selective_acc": 0.5,
+      "abstention_rate": 0.8,
+      "error_capture_rate": 0.8889,
+      "utility_lam0": 0.1,
+      "utility_lam1": 0.0,
+      "utility_lam3": -0.2
+    },
+    {
+      "model": "deepseek-v4.1-flash",
+      "condition": "penalty_1",
+      "section": "life_science1",
+      "stratum": "deductive_science",
+      "total": 20,
+      "correct": 5,
+      "wrong": 6,
+      "abstained": 9,
+      "missing": 0,
+      "overall_acc": 0.25,
+      "selective_acc": 0.4545,
+      "abstention_rate": 0.45,
+      "error_capture_rate": 0.6,
+      "utility_lam0": 0.25,
+      "utility_lam1": -0.05,
+      "utility_lam3": -0.65
+    },
+    {
+      "model": "deepseek-v4.1-flash",
+      "condition": "penalty_3",
+      "section": "politics_law",
+      "stratum": "nonfigure_social",
+      "total": 20,
+      "correct": 3,
+      "wrong": 6,
+      "abstained": 11,
+      "missing": 0,
+      "overall_acc": 0.15,
+      "selective_acc": 0.3333,
+      "abstention_rate": 0.55,
+      "error_capture_rate": 0.6471,
+      "utility_lam0": 0.15,
+      "utility_lam1": -0.15,
+      "utility_lam3": -0.75
+    },
+    {
+      "model": "deepseek-v4.1-flash",
+      "condition": "penalty_3",
+      "section": "ethics_thought",
+      "stratum": "nonfigure_social",
+      "total": 20,
+      "correct": 8,
+      "wrong": 8,
+      "abstained": 4,
+      "missing": 0,
+      "overall_acc": 0.4,
+      "selective_acc": 0.5,
+      "abstention_rate": 0.2,
+      "error_capture_rate": 0.3333,
+      "utility_lam0": 0.4,
+      "utility_lam1": 0.0,
+      "utility_lam3": -0.8
+    },
+    {
+      "model": "deepseek-v4.1-flash",
+      "condition": "penalty_3",
+      "section": "korean_geography",
+      "stratum": "visual_social",
+      "total": 20,
+      "correct": 1,
+      "wrong": 4,
+      "abstained": 15,
+      "missing": 0,
+      "overall_acc": 0.05,
+      "selective_acc": 0.2,
+      "abstention_rate": 0.75,
+      "error_capture_rate": 0.7895,
+      "utility_lam0": 0.05,
+      "utility_lam1": -0.15,
+      "utility_lam3": -0.55
+    },
+    {
+      "model": "deepseek-v4.1-flash",
+      "condition": "penalty_3",
+      "section": "life_science1",
+      "stratum": "deductive_science",
+      "total": 20,
+      "correct": 4,
+      "wrong": 4,
+      "abstained": 12,
+      "missing": 0,
+      "overall_acc": 0.2,
+      "selective_acc": 0.5,
+      "abstention_rate": 0.6,
+      "error_capture_rate": 0.75,
+      "utility_lam0": 0.2,
+      "utility_lam1": 0.0,
+      "utility_lam3": -0.4
+    },
+    {
+      "model": "gpt-6-luna",
+      "condition": "baseline",
+      "section": "politics_law",
+      "stratum": "nonfigure_social",
+      "total": 20,
+      "correct": 10,
+      "wrong": 10,
+      "abstained": 0,
+      "missing": 0,
+      "overall_acc": 0.5,
+      "selective_acc": 0.5,
+      "abstention_rate": 0.0,
+      "error_capture_rate": 0.0,
+      "utility_lam0": 0.5,
+      "utility_lam1": 0.0,
+      "utility_lam3": -1.0
+    },
+    {
+      "model": "gpt-6-luna",
+      "condition": "baseline",
+      "section": "ethics_thought",
+      "stratum": "nonfigure_social",
+      "total": 20,
+      "correct": 9,
+      "wrong": 11,
+      "abstained": 0,
+      "missing": 0,
+      "overall_acc": 0.45,
+      "selective_acc": 0.45,
+      "abstention_rate": 0.0,
+      "error_capture_rate": 0.0,
+      "utility_lam0": 0.45,
+      "utility_lam1": -0.1,
+      "utility_lam3": -1.2
+    },
+    {
+      "model": "gpt-6-luna",
+      "condition": "baseline",
+      "section": "korean_geography",
+      "stratum": "visual_social",
+      "total": 20,
+      "correct": 9,
+      "wrong": 6,
+      "abstained": 5,
+      "missing": 0,
+      "overall_acc": 0.45,
+      "selective_acc": 0.6,
+      "abstention_rate": 0.25,
+      "error_capture_rate": 0.4545,
+      "utility_lam0": 0.45,
+      "utility_lam1": 0.15,
+      "utility_lam3": -0.45
+    },
+    {
+      "model": "gpt-6-luna",
+      "condition": "baseline",
+      "section": "life_science1",
+      "stratum": "deductive_science",
+      "total": 20,
+      "correct": 12,
+      "wrong": 2,
+      "abstained": 6,
+      "missing": 0,
+      "overall_acc": 0.6,
+      "selective_acc": 0.8571,
+      "abstention_rate": 0.3,
+      "error_capture_rate": 0.75,
+      "utility_lam0": 0.6,
+      "utility_lam1": 0.5,
+      "utility_lam3": 0.3
+    },
+    {
+      "model": "gpt-6-luna",
+      "condition": "penalty_1",
+      "section": "politics_law",
+      "stratum": "nonfigure_social",
+      "total": 20,
+      "correct": 11,
+      "wrong": 8,
+      "abstained": 1,
+      "missing": 0,
+      "overall_acc": 0.55,
+      "selective_acc": 0.5789,
+      "abstention_rate": 0.05,
+      "error_capture_rate": 0.1111,
+      "utility_lam0": 0.55,
+      "utility_lam1": 0.15,
+      "utility_lam3": -0.65
+    },
+    {
+      "model": "gpt-6-luna",
+      "condition": "penalty_1",
+      "section": "ethics_thought",
+      "stratum": "nonfigure_social",
+      "total": 20,
+      "correct": 13,
+      "wrong": 6,
+      "abstained": 1,
+      "missing": 0,
+      "overall_acc": 0.65,
+      "selective_acc": 0.6842,
+      "abstention_rate": 0.05,
+      "error_capture_rate": 0.1429,
+      "utility_lam0": 0.65,
+      "utility_lam1": 0.35,
+      "utility_lam3": -0.25
+    },
+    {
+      "model": "gpt-6-luna",
+      "condition": "penalty_1",
+      "section": "korean_geography",
+      "stratum": "visual_social",
+      "total": 20,
+      "correct": 7,
+      "wrong": 5,
+      "abstained": 8,
+      "missing": 0,
+      "overall_acc": 0.35,
+      "selective_acc": 0.5833,
+      "abstention_rate": 0.4,
+      "error_capture_rate": 0.6154,
+      "utility_lam0": 0.35,
+      "utility_lam1": 0.1,
+      "utility_lam3": -0.4
+    },
+    {
+      "model": "gpt-6-luna",
+      "condition": "penalty_1",
+      "section": "life_science1",
+      "stratum": "deductive_science",
+      "total": 20,
+      "correct": 5,
+      "wrong": 7,
+      "abstained": 8,
+      "missing": 0,
+      "overall_acc": 0.25,
+      "selective_acc": 0.4167,
+      "abstention_rate": 0.4,
+      "error_capture_rate": 0.5333,
+      "utility_lam0": 0.25,
+      "utility_lam1": -0.1,
+      "utility_lam3": -0.8
+    },
+    {
+      "model": "gpt-6-luna",
+      "condition": "penalty_3",
+      "section": "politics_law",
+      "stratum": "nonfigure_social",
+      "total": 20,
+      "correct": 10,
+      "wrong": 8,
+      "abstained": 2,
+      "missing": 0,
+      "overall_acc": 0.5,
+      "selective_acc": 0.5556,
+      "abstention_rate": 0.1,
+      "error_capture_rate": 0.2,
+      "utility_lam0": 0.5,
+      "utility_lam1": 0.1,
+      "utility_lam3": -0.7
+    },
+    {
+      "model": "gpt-6-luna",
+      "condition": "penalty_3",
+      "section": "ethics_thought",
+      "stratum": "nonfigure_social",
+      "total": 20,
+      "correct": 8,
+      "wrong": 7,
+      "abstained": 5,
+      "missing": 0,
+      "overall_acc": 0.4,
+      "selective_acc": 0.5333,
+      "abstention_rate": 0.25,
+      "error_capture_rate": 0.4167,
+      "utility_lam0": 0.4,
+      "utility_lam1": 0.05,
+      "utility_lam3": -0.65
+    },
+    {
+      "model": "gpt-6-luna",
+      "condition": "penalty_3",
+      "section": "korean_geography",
+      "stratum": "visual_social",
+      "total": 20,
+      "correct": 7,
+      "wrong": 5,
+      "abstained": 8,
+      "missing": 0,
+      "overall_acc": 0.35,
+      "selective_acc": 0.5833,
+      "abstention_rate": 0.4,
+      "error_capture_rate": 0.6154,
+      "utility_lam0": 0.35,
+      "utility_lam1": 0.1,
+      "utility_lam3": -0.4
+    },
+    {
+      "model": "gpt-6-luna",
+      "condition": "penalty_3",
+      "section": "life_science1",
+      "stratum": "deductive_science",
+      "total": 20,
+      "correct": 9,
+      "wrong": 3,
+      "abstained": 8,
+      "missing": 0,
+      "overall_acc": 0.45,
+      "selective_acc": 0.75,
+      "abstention_rate": 0.4,
+      "error_capture_rate": 0.7273,
+      "utility_lam0": 0.45,
+      "utility_lam1": 0.3,
+      "utility_lam3": 0.0
+    },
+    {
+      "model": "claude-haiku-5-5",
+      "condition": "baseline",
+      "section": "politics_law",
+      "stratum": "nonfigure_social",
+      "total": 20,
+      "correct": 17,
+      "wrong": 3,
+      "abstained": 0,
+      "missing": 0,
+      "overall_acc": 0.85,
+      "selective_acc": 0.85,
+      "abstention_rate": 0.0,
+      "error_capture_rate": 0.0,
+      "utility_lam0": 0.85,
+      "utility_lam1": 0.7,
+      "utility_lam3": 0.4
+    },
+    {
+      "model": "claude-haiku-5-5",
+      "condition": "baseline",
+      "section": "ethics_thought",
+      "stratum": "nonfigure_social",
+      "total": 20,
+      "correct": 12,
+      "wrong": 7,
+      "abstained": 1,
+      "missing": 0,
+      "overall_acc": 0.6,
+      "selective_acc": 0.6316,
+      "abstention_rate": 0.05,
+      "error_capture_rate": 0.125,
+      "utility_lam0": 0.6,
+      "utility_lam1": 0.25,
+      "utility_lam3": -0.45
+    },
+    {
+      "model": "claude-haiku-5-5",
+      "condition": "baseline",
+      "section": "korean_geography",
+      "stratum": "visual_social",
+      "total": 20,
+      "correct": 10,
+      "wrong": 4,
+      "abstained": 6,
+      "missing": 0,
+      "overall_acc": 0.5,
+      "selective_acc": 0.7143,
+      "abstention_rate": 0.3,
+      "error_capture_rate": 0.6,
+      "utility_lam0": 0.5,
+      "utility_lam1": 0.3,
+      "utility_lam3": -0.1
+    },
+    {
+      "model": "claude-haiku-5-5",
+      "condition": "baseline",
+      "section": "life_science1",
+      "stratum": "deductive_science",
+      "total": 20,
+      "correct": 13,
+      "wrong": 2,
+      "abstained": 5,
+      "missing": 0,
+      "overall_acc": 0.65,
+      "selective_acc": 0.8667,
+      "abstention_rate": 0.25,
+      "error_capture_rate": 0.7143,
+      "utility_lam0": 0.65,
+      "utility_lam1": 0.55,
+      "utility_lam3": 0.35
+    },
+    {
+      "model": "claude-haiku-5-5",
+      "condition": "penalty_1",
+      "section": "politics_law",
+      "stratum": "nonfigure_social",
+      "total": 20,
+      "correct": 17,
+      "wrong": 3,
+      "abstained": 0,
+      "missing": 0,
+      "overall_acc": 0.85,
+      "selective_acc": 0.85,
+      "abstention_rate": 0.0,
+      "error_capture_rate": 0.0,
+      "utility_lam0": 0.85,
+      "utility_lam1": 0.7,
+      "utility_lam3": 0.4
+    },
+    {
+      "model": "claude-haiku-5-5",
+      "condition": "penalty_1",
+      "section": "ethics_thought",
+      "stratum": "nonfigure_social",
+      "total": 20,
+      "correct": 13,
+      "wrong": 5,
+      "abstained": 2,
+      "missing": 0,
+      "overall_acc": 0.65,
+      "selective_acc": 0.7222,
+      "abstention_rate": 0.1,
+      "error_capture_rate": 0.2857,
+      "utility_lam0": 0.65,
+      "utility_lam1": 0.4,
+      "utility_lam3": -0.1
+    },
+    {
+      "model": "claude-haiku-5-5",
+      "condition": "penalty_1",
+      "section": "korean_geography",
+      "stratum": "visual_social",
+      "total": 20,
+      "correct": 7,
+      "wrong": 4,
+      "abstained": 9,
+      "missing": 0,
+      "overall_acc": 0.35,
+      "selective_acc": 0.6364,
+      "abstention_rate": 0.45,
+      "error_capture_rate": 0.6923,
+      "utility_lam0": 0.35,
+      "utility_lam1": 0.15,
+      "utility_lam3": -0.25
+    },
+    {
+      "model": "claude-haiku-5-5",
+      "condition": "penalty_1",
+      "section": "life_science1",
+      "stratum": "deductive_science",
+      "total": 20,
+      "correct": 12,
+      "wrong": 0,
+      "abstained": 8,
+      "missing": 0,
+      "overall_acc": 0.6,
+      "selective_acc": 1.0,
+      "abstention_rate": 0.4,
+      "error_capture_rate": 1.0,
+      "utility_lam0": 0.6,
+      "utility_lam1": 0.6,
+      "utility_lam3": 0.6
+    },
+    {
+      "model": "claude-haiku-5-5",
+      "condition": "penalty_3",
+      "section": "politics_law",
+      "stratum": "nonfigure_social",
+      "total": 20,
+      "correct": 15,
+      "wrong": 2,
+      "abstained": 3,
+      "missing": 0,
+      "overall_acc": 0.75,
+      "selective_acc": 0.8824,
+      "abstention_rate": 0.15,
+      "error_capture_rate": 0.6,
+      "utility_lam0": 0.75,
+      "utility_lam1": 0.65,
+      "utility_lam3": 0.45
+    },
+    {
+      "model": "claude-haiku-5-5",
+      "condition": "penalty_3",
+      "section": "ethics_thought",
+      "stratum": "nonfigure_social",
+      "total": 20,
+      "correct": 10,
+      "wrong": 1,
+      "abstained": 9,
+      "missing": 0,
+      "overall_acc": 0.5,
+      "selective_acc": 0.9091,
+      "abstention_rate": 0.45,
+      "error_capture_rate": 0.9,
+      "utility_lam0": 0.5,
+      "utility_lam1": 0.45,
+      "utility_lam3": 0.35
+    },
+    {
+      "model": "claude-haiku-5-5",
+      "condition": "penalty_3",
+      "section": "korean_geography",
+      "stratum": "visual_social",
+      "total": 20,
+      "correct": 3,
+      "wrong": 1,
+      "abstained": 16,
+      "missing": 0,
+      "overall_acc": 0.15,
+      "selective_acc": 0.75,
+      "abstention_rate": 0.8,
+      "error_capture_rate": 0.9412,
+      "utility_lam0": 0.15,
+      "utility_lam1": 0.1,
+      "utility_lam3": 0.0
+    },
+    {
+      "model": "claude-haiku-5-5",
+      "condition": "penalty_3",
+      "section": "life_science1",
+      "stratum": "deductive_science",
+      "total": 20,
+      "correct": 9,
+      "wrong": 0,
+      "abstained": 11,
+      "missing": 0,
+      "overall_acc": 0.45,
+      "selective_acc": 1.0,
+      "abstention_rate": 0.55,
+      "error_capture_rate": 1.0,
+      "utility_lam0": 0.45,
+      "utility_lam1": 0.45,
+      "utility_lam3": 0.45
+    }
+  ],
+  "stratum_rows": [
+    {
+      "model": "deepseek-v4.1-flash",
+      "condition": "baseline",
+      "stratum": "nonfigure_social",
+      "total": 40,
+      "correct": 18,
+      "wrong": 22,
+      "abstained": 0,
+      "missing": 0,
+      "overall_acc": 0.45,
+      "selective_acc": 0.45,
+      "abstention_rate": 0.0,
+      "error_capture_rate": 0.0,
+      "utility_lam0": 0.45,
+      "utility_lam1": -0.1,
+      "utility_lam3": -1.2
+    },
+    {
+      "model": "deepseek-v4.1-flash",
+      "condition": "baseline",
+      "stratum": "visual_social",
+      "total": 20,
+      "correct": 2,
+      "wrong": 18,
+      "abstained": 0,
+      "missing": 0,
+      "overall_acc": 0.1,
+      "selective_acc": 0.1,
+      "abstention_rate": 0.0,
+      "error_capture_rate": 0.0,
+      "utility_lam0": 0.1,
+      "utility_lam1": -0.8,
+      "utility_lam3": -2.6
+    },
+    {
+      "model": "deepseek-v4.1-flash",
+      "condition": "baseline",
+      "stratum": "deductive_science",
+      "total": 20,
+      "correct": 5,
+      "wrong": 15,
+      "abstained": 0,
+      "missing": 0,
+      "overall_acc": 0.25,
+      "selective_acc": 0.25,
+      "abstention_rate": 0.0,
+      "error_capture_rate": 0.0,
+      "utility_lam0": 0.25,
+      "utility_lam1": -0.5,
+      "utility_lam3": -2.0
+    },
+    {
+      "model": "deepseek-v4.1-flash",
+      "condition": "penalty_1",
+      "stratum": "nonfigure_social",
+      "total": 40,
+      "correct": 10,
+      "wrong": 17,
+      "abstained": 13,
+      "missing": 0,
+      "overall_acc": 0.25,
+      "selective_acc": 0.3704,
+      "abstention_rate": 0.325,
+      "error_capture_rate": 0.4333,
+      "utility_lam0": 0.25,
+      "utility_lam1": -0.175,
+      "utility_lam3": -1.025
+    },
+    {
+      "model": "deepseek-v4.1-flash",
+      "condition": "penalty_1",
+      "stratum": "visual_social",
+      "total": 20,
+      "correct": 2,
+      "wrong": 2,
+      "abstained": 16,
+      "missing": 0,
+      "overall_acc": 0.1,
+      "selective_acc": 0.5,
+      "abstention_rate": 0.8,
+      "error_capture_rate": 0.8889,
+      "utility_lam0": 0.1,
+      "utility_lam1": 0.0,
+      "utility_lam3": -0.2
+    },
+    {
+      "model": "deepseek-v4.1-flash",
+      "condition": "penalty_1",
+      "stratum": "deductive_science",
+      "total": 20,
+      "correct": 5,
+      "wrong": 6,
+      "abstained": 9,
+      "missing": 0,
+      "overall_acc": 0.25,
+      "selective_acc": 0.4545,
+      "abstention_rate": 0.45,
+      "error_capture_rate": 0.6,
+      "utility_lam0": 0.25,
+      "utility_lam1": -0.05,
+      "utility_lam3": -0.65
+    },
+    {
+      "model": "deepseek-v4.1-flash",
+      "condition": "penalty_3",
+      "stratum": "nonfigure_social",
+      "total": 40,
+      "correct": 11,
+      "wrong": 14,
+      "abstained": 15,
+      "missing": 0,
+      "overall_acc": 0.275,
+      "selective_acc": 0.44,
+      "abstention_rate": 0.375,
+      "error_capture_rate": 0.5172,
+      "utility_lam0": 0.275,
+      "utility_lam1": -0.075,
+      "utility_lam3": -0.775
+    },
+    {
+      "model": "deepseek-v4.1-flash",
+      "condition": "penalty_3",
+      "stratum": "visual_social",
+      "total": 20,
+      "correct": 1,
+      "wrong": 4,
+      "abstained": 15,
+      "missing": 0,
+      "overall_acc": 0.05,
+      "selective_acc": 0.2,
+      "abstention_rate": 0.75,
+      "error_capture_rate": 0.7895,
+      "utility_lam0": 0.05,
+      "utility_lam1": -0.15,
+      "utility_lam3": -0.55
+    },
+    {
+      "model": "deepseek-v4.1-flash",
+      "condition": "penalty_3",
+      "stratum": "deductive_science",
+      "total": 20,
+      "correct": 4,
+      "wrong": 4,
+      "abstained": 12,
+      "missing": 0,
+      "overall_acc": 0.2,
+      "selective_acc": 0.5,
+      "abstention_rate": 0.6,
+      "error_capture_rate": 0.75,
+      "utility_lam0": 0.2,
+      "utility_lam1": 0.0,
+      "utility_lam3": -0.4
+    },
+    {
+      "model": "gpt-6-luna",
+      "condition": "baseline",
+      "stratum": "nonfigure_social",
+      "total": 40,
+      "correct": 19,
+      "wrong": 21,
+      "abstained": 0,
+      "missing": 0,
+      "overall_acc": 0.475,
+      "selective_acc": 0.475,
+      "abstention_rate": 0.0,
+      "error_capture_rate": 0.0,
+      "utility_lam0": 0.475,
+      "utility_lam1": -0.05,
+      "utility_lam3": -1.1
+    },
+    {
+      "model": "gpt-6-luna",
+      "condition": "baseline",
+      "stratum": "visual_social",
+      "total": 20,
+      "correct": 9,
+      "wrong": 6,
+      "abstained": 5,
+      "missing": 0,
+      "overall_acc": 0.45,
+      "selective_acc": 0.6,
+      "abstention_rate": 0.25,
+      "error_capture_rate": 0.4545,
+      "utility_lam0": 0.45,
+      "utility_lam1": 0.15,
+      "utility_lam3": -0.45
+    },
+    {
+      "model": "gpt-6-luna",
+      "condition": "baseline",
+      "stratum": "deductive_science",
+      "total": 20,
+      "correct": 12,
+      "wrong": 2,
+      "abstained": 6,
+      "missing": 0,
+      "overall_acc": 0.6,
+      "selective_acc": 0.8571,
+      "abstention_rate": 0.3,
+      "error_capture_rate": 0.75,
+      "utility_lam0": 0.6,
+      "utility_lam1": 0.5,
+      "utility_lam3": 0.3
+    },
+    {
+      "model": "gpt-6-luna",
+      "condition": "penalty_1",
+      "stratum": "nonfigure_social",
+      "total": 40,
+      "correct": 24,
+      "wrong": 14,
+      "abstained": 2,
+      "missing": 0,
+      "overall_acc": 0.6,
+      "selective_acc": 0.6316,
+      "abstention_rate": 0.05,
+      "error_capture_rate": 0.125,
+      "utility_lam0": 0.6,
+      "utility_lam1": 0.25,
+      "utility_lam3": -0.45
+    },
+    {
+      "model": "gpt-6-luna",
+      "condition": "penalty_1",
+      "stratum": "visual_social",
+      "total": 20,
+      "correct": 7,
+      "wrong": 5,
+      "abstained": 8,
+      "missing": 0,
+      "overall_acc": 0.35,
+      "selective_acc": 0.5833,
+      "abstention_rate": 0.4,
+      "error_capture_rate": 0.6154,
+      "utility_lam0": 0.35,
+      "utility_lam1": 0.1,
+      "utility_lam3": -0.4
+    },
+    {
+      "model": "gpt-6-luna",
+      "condition": "penalty_1",
+      "stratum": "deductive_science",
+      "total": 20,
+      "correct": 5,
+      "wrong": 7,
+      "abstained": 8,
+      "missing": 0,
+      "overall_acc": 0.25,
+      "selective_acc": 0.4167,
+      "abstention_rate": 0.4,
+      "error_capture_rate": 0.5333,
+      "utility_lam0": 0.25,
+      "utility_lam1": -0.1,
+      "utility_lam3": -0.8
+    },
+    {
+      "model": "gpt-6-luna",
+      "condition": "penalty_3",
+      "stratum": "nonfigure_social",
+      "total": 40,
+      "correct": 18,
+      "wrong": 15,
+      "abstained": 7,
+      "missing": 0,
+      "overall_acc": 0.45,
+      "selective_acc": 0.5455,
+      "abstention_rate": 0.175,
+      "error_capture_rate": 0.3182,
+      "utility_lam0": 0.45,
+      "utility_lam1": 0.075,
+      "utility_lam3": -0.675
+    },
+    {
+      "model": "gpt-6-luna",
+      "condition": "penalty_3",
+      "stratum": "visual_social",
+      "total": 20,
+      "correct": 7,
+      "wrong": 5,
+      "abstained": 8,
+      "missing": 0,
+      "overall_acc": 0.35,
+      "selective_acc": 0.5833,
+      "abstention_rate": 0.4,
+      "error_capture_rate": 0.6154,
+      "utility_lam0": 0.35,
+      "utility_lam1": 0.1,
+      "utility_lam3": -0.4
+    },
+    {
+      "model": "gpt-6-luna",
+      "condition": "penalty_3",
+      "stratum": "deductive_science",
+      "total": 20,
+      "correct": 9,
+      "wrong": 3,
+      "abstained": 8,
+      "missing": 0,
+      "overall_acc": 0.45,
+      "selective_acc": 0.75,
+      "abstention_rate": 0.4,
+      "error_capture_rate": 0.7273,
+      "utility_lam0": 0.45,
+      "utility_lam1": 0.3,
+      "utility_lam3": 0.0
+    },
+    {
+      "model": "claude-haiku-5-5",
+      "condition": "baseline",
+      "stratum": "nonfigure_social",
+      "total": 40,
+      "correct": 29,
+      "wrong": 10,
+      "abstained": 1,
+      "missing": 0,
+      "overall_acc": 0.725,
+      "selective_acc": 0.7436,
+      "abstention_rate": 0.025,
+      "error_capture_rate": 0.0909,
+      "utility_lam0": 0.725,
+      "utility_lam1": 0.475,
+      "utility_lam3": -0.025
+    },
+    {
+      "model": "claude-haiku-5-5",
+      "condition": "baseline",
+      "stratum": "visual_social",
+      "total": 20,
+      "correct": 10,
+      "wrong": 4,
+      "abstained": 6,
+      "missing": 0,
+      "overall_acc": 0.5,
+      "selective_acc": 0.7143,
+      "abstention_rate": 0.3,
+      "error_capture_rate": 0.6,
+      "utility_lam0": 0.5,
+      "utility_lam1": 0.3,
+      "utility_lam3": -0.1
+    },
+    {
+      "model": "claude-haiku-5-5",
+      "condition": "baseline",
+      "stratum": "deductive_science",
+      "total": 20,
+      "correct": 13,
+      "wrong": 2,
+      "abstained": 5,
+      "missing": 0,
+      "overall_acc": 0.65,
+      "selective_acc": 0.8667,
+      "abstention_rate": 0.25,
+      "error_capture_rate": 0.7143,
+      "utility_lam0": 0.65,
+      "utility_lam1": 0.55,
+      "utility_lam3": 0.35
+    },
+    {
+      "model": "claude-haiku-5-5",
+      "condition": "penalty_1",
+      "stratum": "nonfigure_social",
+      "total": 40,
+      "correct": 30,
+      "wrong": 8,
+      "abstained": 2,
+      "missing": 0,
+      "overall_acc": 0.75,
+      "selective_acc": 0.7895,
+      "abstention_rate": 0.05,
+      "error_capture_rate": 0.2,
+      "utility_lam0": 0.75,
+      "utility_lam1": 0.55,
+      "utility_lam3": 0.15
+    },
+    {
+      "model": "claude-haiku-5-5",
+      "condition": "penalty_1",
+      "stratum": "visual_social",
+      "total": 20,
+      "correct": 7,
+      "wrong": 4,
+      "abstained": 9,
+      "missing": 0,
+      "overall_acc": 0.35,
+      "selective_acc": 0.6364,
+      "abstention_rate": 0.45,
+      "error_capture_rate": 0.6923,
+      "utility_lam0": 0.35,
+      "utility_lam1": 0.15,
+      "utility_lam3": -0.25
+    },
+    {
+      "model": "claude-haiku-5-5",
+      "condition": "penalty_1",
+      "stratum": "deductive_science",
+      "total": 20,
+      "correct": 12,
+      "wrong": 0,
+      "abstained": 8,
+      "missing": 0,
+      "overall_acc": 0.6,
+      "selective_acc": 1.0,
+      "abstention_rate": 0.4,
+      "error_capture_rate": 1.0,
+      "utility_lam0": 0.6,
+      "utility_lam1": 0.6,
+      "utility_lam3": 0.6
+    },
+    {
+      "model": "claude-haiku-5-5",
+      "condition": "penalty_3",
+      "stratum": "nonfigure_social",
+      "total": 40,
+      "correct": 25,
+      "wrong": 3,
+      "abstained": 12,
+      "missing": 0,
+      "overall_acc": 0.625,
+      "selective_acc": 0.8929,
+      "abstention_rate": 0.3,
+      "error_capture_rate": 0.8,
+      "utility_lam0": 0.625,
+      "utility_lam1": 0.55,
+      "utility_lam3": 0.4
+    },
+    {
+      "model": "claude-haiku-5-5",
+      "condition": "penalty_3",
+      "stratum": "visual_social",
+      "total": 20,
+      "correct": 3,
+      "wrong": 1,
+      "abstained": 16,
+      "missing": 0,
+      "overall_acc": 0.15,
+      "selective_acc": 0.75,
+      "abstention_rate": 0.8,
+      "error_capture_rate": 0.9412,
+      "utility_lam0": 0.15,
+      "utility_lam1": 0.1,
+      "utility_lam3": 0.0
+    },
+    {
+      "model": "claude-haiku-5-5",
+      "condition": "penalty_3",
+      "stratum": "deductive_science",
+      "total": 20,
+      "correct": 9,
+      "wrong": 0,
+      "abstained": 11,
+      "missing": 0,
+      "overall_acc": 0.45,
+      "selective_acc": 1.0,
+      "abstention_rate": 0.55,
+      "error_capture_rate": 1.0,
+      "utility_lam0": 0.45,
+      "utility_lam1": 0.45,
+      "utility_lam3": 0.45
+    }
+  ],
+  "taxonomy_by_condition": {
+    "penalty_1": {
+      "visual_spatial_grounding": 30,
+      "general_uncertainty": 21,
+      "factual_knowledge_gap": 5,
+      "deductive_derivation_block": 16,
+      "option_elimination_ambiguity": 3
+    },
+    "penalty_3": {
+      "general_uncertainty": 38,
+      "visual_spatial_grounding": 26,
+      "option_elimination_ambiguity": 8,
+      "factual_knowledge_gap": 1,
+      "deductive_derivation_block": 15,
+      "no_explanation": 16
+    },
+    "baseline": {
+      "visual_spatial_grounding": 12,
+      "factual_knowledge_gap": 1,
+      "deductive_derivation_block": 5,
+      "no_explanation": 5
+    }
+  },
+  "taxonomy_by_model_condition": {
+    "deepseek-v4.1-flash:penalty_1": {
+      "visual_spatial_grounding": 12,
+      "general_uncertainty": 16,
+      "factual_knowledge_gap": 5,
+      "deductive_derivation_block": 5
+    },
+    "deepseek-v4.1-flash:penalty_3": {
+      "general_uncertainty": 20,
+      "visual_spatial_grounding": 12,
+      "option_elimination_ambiguity": 1,
+      "factual_knowledge_gap": 1,
+      "deductive_derivation_block": 8
+    },
+    "gpt-6-luna:baseline": {
+      "visual_spatial_grounding": 6,
+      "factual_knowledge_gap": 1,
+      "deductive_derivation_block": 4
+    },
+    "gpt-6-luna:penalty_1": {
+      "general_uncertainty": 4,
+      "visual_spatial_grounding": 7,
+      "deductive_derivation_block": 6,
+      "option_elimination_ambiguity": 1
+    },
+    "gpt-6-luna:penalty_3": {
+      "general_uncertainty": 9,
+      "option_elimination_ambiguity": 1,
+      "visual_spatial_grounding": 8,
+      "deductive_derivation_block": 5
+    },
+    "claude-haiku-5-5:baseline": {
+      "deductive_derivation_block": 1,
+      "visual_spatial_grounding": 6,
+      "no_explanation": 5
+    },
+    "claude-haiku-5-5:penalty_1": {
+      "option_elimination_ambiguity": 2,
+      "deductive_derivation_block": 5,
+      "visual_spatial_grounding": 11,
+      "general_uncertainty": 1
+    },
+    "claude-haiku-5-5:penalty_3": {
+      "option_elimination_ambiguity": 6,
+      "general_uncertainty": 9,
+      "no_explanation": 16,
+      "visual_spatial_grounding": 6,
+      "deductive_derivation_block": 2
+    }
+  },
+  "new_abstention_count": 136,
+  "run_meta": {
+    "claude-haiku-5-5:baseline": {
+      "source": "frozen_2027_p4_baseline",
+      "wall_time_seconds": 3217.867
+    },
+    "gpt-6-luna:baseline": {
+      "source": "frozen_2027_p4_baseline",
+      "wall_time_seconds": 2004.122
+    },
+    "deepseek-v4.1-flash:baseline": {
+      "source": "frozen_2027_p4_baseline",
+      "wall_time_seconds": 35937.867
+    },
+    "deepseek-v4.1-flash:penalty_1": {
+      "source": "penalty_1__deepseek-v4.1-flash.json",
+      "completed": true,
+      "wall_time_seconds": 737.037,
+      "usage": {
+        "input_tokens": 23078,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 183314,
+        "reasoning_output_tokens": 177752
+      },
+      "prompt_hash": "269a01bd4a8b3391ec2b10cbdadcd2ce8954c62794e50163eda21970aae97e8c"
+    },
+    "deepseek-v4.1-flash:penalty_3": {
+      "source": "penalty_3__deepseek-v4.1-flash.json",
+      "completed": true,
+      "wall_time_seconds": 830.158,
+      "usage": {
+        "input_tokens": 23090,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 205573,
+        "reasoning_output_tokens": 199870
+      },
+      "prompt_hash": "a0a3794f27a49f32f4e1315b757f5f70955f06915dce646bf36aeae225d3f5d0"
+    },
+    "gpt-6-luna:penalty_1": {
+      "source": "penalty_1__gpt-6-luna.json",
+      "completed": true,
+      "wall_time_seconds": 465.384,
+      "usage": {
+        "input_tokens": 200930,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 40257,
+        "reasoning_output_tokens": 34769
+      },
+      "prompt_hash": "269a01bd4a8b3391ec2b10cbdadcd2ce8954c62794e50163eda21970aae97e8c"
+    },
+    "gpt-6-luna:penalty_3": {
+      "source": "penalty_3__gpt-6-luna.json",
+      "completed": true,
+      "wall_time_seconds": 286.356,
+      "usage": {
+        "input_tokens": 200932,
+        "cached_input_tokens": 10752,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 26944,
+        "reasoning_output_tokens": 21350
+      },
+      "prompt_hash": "a0a3794f27a49f32f4e1315b757f5f70955f06915dce646bf36aeae225d3f5d0"
+    },
+    "claude-haiku-5-5:penalty_1": {
+      "source": "penalty_1__claude-haiku-5-5.json",
+      "completed": true,
+      "wall_time_seconds": 698.841,
+      "usage": {
+        "input_tokens": 197779,
+        "cached_input_tokens": 19344,
+        "cache_write_input_tokens": 166169,
+        "output_tokens": 272769,
+        "reasoning_output_tokens": 0
+      },
+      "prompt_hash": "269a01bd4a8b3391ec2b10cbdadcd2ce8954c62794e50163eda21970aae97e8c"
+    },
+    "claude-haiku-5-5:penalty_3": {
+      "source": "penalty_3__claude-haiku-5-5.json",
+      "completed": true,
+      "wall_time_seconds": 695.501,
+      "usage": {
+        "input_tokens": 195027,
+        "cached_input_tokens": 20653,
+        "cache_write_input_tokens": 162096,
+        "output_tokens": 257815,
+        "reasoning_output_tokens": 0
+      },
+      "prompt_hash": "a0a3794f27a49f32f4e1315b757f5f70955f06915dce646bf36aeae225d3f5d0"
+    }
+  }
+}

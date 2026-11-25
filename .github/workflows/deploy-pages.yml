@@ -75,7 +75,7 @@ jobs:
       - name: Verify published research
         run: |
           node --test research/common-errors/publication.test.mjs
-          node --test research/metacognitive-abstention/publication.test.mjs research/contamination/publication.test.mjs
+          node --test research/metacognitive-abstention/publication.test.mjs research/metacognitive-abstention/ablation-penalty/publication.test.mjs research/contamination/publication.test.mjs
 
       - name: Verify built site output
         run: node --test web/test/site-output.test.mjs

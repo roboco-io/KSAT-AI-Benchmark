@@ -1,6 +1,7 @@
 import commonErrors from '@/public/research/common-errors/summary.json';
 import contamination from '@/public/research/contamination/summary.json';
 import abstention from '@/public/research/metacognitive-abstention/summary.json';
+import penaltyAbstention from '@/public/research/penalty-abstention/summary.json';
 import styles from './ResearchLinks.module.css';
 
 // 기존 페이지는 운영 빌드에서 .html 파일 주소로 연결한다(research/*/publication.test.mjs가 이 형식을 검사한다).
@@ -21,6 +22,11 @@ const STUDIES = [
     href: '/research/metacognitive-abstention',
     title: abstention.title,
     summary: '4교시 기권 전수를 분석해 모델이 자신이 틀릴 문항을 기권으로 얼마나 포착하는지 영역별로 비교했다.',
+  },
+  {
+    href: '/research/penalty-abstention',
+    title: penaltyAbstention.title,
+    summary: '기권 0점 · 오답 -1점/-3점 감점제를 2027 4교시 80문항에 적용해 무기권 모델의 잠재 메타인지 각성과 선택적 오답 회피 효과를 인과 검증했다.',
   },
 ];
 

@@ -1,0 +1,67 @@
+{
+  "title": "오답에 감점을 주면 AI는 기권할까?",
+  "subtitle": "기권 0점 · 오답 -1점 / -3점 통제 인과 실험 (2027 수능 4교시 80문항)",
+  "publishedAt": "2026-11-25",
+  "nQuestions": 80,
+  "nModels": 3,
+  "models": [
+    {
+      "model": "deepseek-v4.1-flash",
+      "c0Abstained": 0,
+      "c1Abstained": 38,
+      "c2Abstained": 42,
+      "c0AbstRatePct": 0,
+      "c2AbstRatePct": 52.5,
+      "c0SelAccPct": 31.3,
+      "c2SelAccPct": 42.1,
+      "c2SelectivityRatio": 2.273,
+      "c2SelectivityP": 0.003922893796778359,
+      "c2DeltaU3": 1.125
+    },
+    {
+      "model": "gpt-6-luna",
+      "c0Abstained": 11,
+      "c1Abstained": 18,
+      "c2Abstained": 23,
+      "c0AbstRatePct": 13.8,
+      "c2AbstRatePct": 28.7,
+      "c0SelAccPct": 58,
+      "c2SelAccPct": 59.7,
+      "c2SelectivityRatio": 3.448,
+      "c2SelectivityP": 0.0167383885474497,
+      "c2DeltaU3": 0.15
+    },
+    {
+      "model": "claude-haiku-5-5",
+      "c0Abstained": 12,
+      "c1Abstained": 19,
+      "c2Abstained": 39,
+      "c0AbstRatePct": 15,
+      "c2AbstRatePct": 48.8,
+      "c0SelAccPct": 76.5,
+      "c2SelAccPct": 90.2,
+      "c2SelectivityRatio": 2.6,
+      "c2SelectivityP": 0.0025906969901056108,
+      "c2DeltaU3": 0.2625
+    }
+  ],
+  "domainEcrPct": {
+    "baseline": {
+      "nonfigureSocial": 1.9,
+      "visualSocial": 28.2,
+      "deductiveScience": 36.7
+    },
+    "penalty1": {
+      "nonfigureSocial": 30.4,
+      "visualSocial": 75,
+      "deductiveScience": 65.8
+    },
+    "penalty3": {
+      "nonfigureSocial": 51.5,
+      "visualSocial": 79.6,
+      "deductiveScience": 81.6,
+      "orSciVsNonfigSoc": 4.1681,
+      "pSciVsNonfigSoc": 0.003016533253393304
+    }
+  }
+}

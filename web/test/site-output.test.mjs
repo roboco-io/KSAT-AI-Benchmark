@@ -43,7 +43,7 @@ test('legacy_pages_kept', { skip }, () => {
   for (const rel of [
     'archive.html', 'debates/english-q37.html',
     'research/common-errors.html', 'research/contamination.html',
-    'research/metacognitive-abstention.html',
+    'research/metacognitive-abstention.html', 'research/penalty-abstention.html',
   ]) assert.ok(existsSync(join(out, rel)), `${rel} 가 없습니다`);
 });
 
