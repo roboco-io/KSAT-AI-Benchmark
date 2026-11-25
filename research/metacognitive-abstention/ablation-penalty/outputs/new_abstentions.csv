@@ -1,0 +1,137 @@
+model,condition,question_id,section,stratum,figure_dependent,baseline_outcome,abstain_reason,mechanism,explanation
+deepseek-v4.1-flash,penalty_1,2027-p4-ethics_thought-q07,ethics_thought,nonfigure_social,True,wrong,uncertain,visual_spatial_grounding,제시된 도식의 A~C 대응과 보기 진위를 확정하기 어려워 기권한다.
+deepseek-v4.1-flash,penalty_1,2027-p4-korean_geography-q01,korean_geography,visual_social,True,wrong,uncertain,general_uncertainty,섬의 위치와 지질 특성 대응이 불확실하여 기권합니다.
+deepseek-v4.1-flash,penalty_1,2027-p4-korean_geography-q02,korean_geography,visual_social,True,wrong,uncertain,general_uncertainty,자료의 기후 현상과 보기 비교가 불확실하여 기권합니다.
+deepseek-v4.1-flash,penalty_1,2027-p4-korean_geography-q03,korean_geography,visual_social,True,correct,uncertain,general_uncertainty,지형 사진과 설명문의 대응이 불확실하여 기권합니다.
+deepseek-v4.1-flash,penalty_1,2027-p4-korean_geography-q05,korean_geography,visual_social,True,correct,uncertain,visual_spatial_grounding,인구 특성 그래프와 지역 대응이 불확실하여 기권합니다.
+deepseek-v4.1-flash,penalty_1,2027-p4-korean_geography-q06,korean_geography,visual_social,False,wrong,uncertain,factual_knowledge_gap,대화문의 지역 식별이 불확실하여 기권합니다.
+deepseek-v4.1-flash,penalty_1,2027-p4-korean_geography-q07,korean_geography,visual_social,True,wrong,uncertain,factual_knowledge_gap,발전 방식과 지역별 발전량 비교가 불확실하여 기권합니다.
+deepseek-v4.1-flash,penalty_1,2027-p4-korean_geography-q08,korean_geography,visual_social,True,wrong,uncertain,visual_spatial_grounding,고속국도 노선 식별이 불확실하여 기권합니다.
+deepseek-v4.1-flash,penalty_1,2027-p4-korean_geography-q09,korean_geography,visual_social,True,wrong,uncertain,visual_spatial_grounding,항만별 화물 비중과 지도 위치 대응이 불확실하여 기권합니다.
+deepseek-v4.1-flash,penalty_1,2027-p4-korean_geography-q11,korean_geography,visual_social,True,wrong,uncertain,factual_knowledge_gap,지역별 지형·기반암 대응이 불확실하여 기권합니다.
+deepseek-v4.1-flash,penalty_1,2027-p4-korean_geography-q12,korean_geography,visual_social,True,wrong,uncertain,visual_spatial_grounding,이동 경로와 지역 식별이 불확실하여 기권합니다.
+deepseek-v4.1-flash,penalty_1,2027-p4-korean_geography-q13,korean_geography,visual_social,True,wrong,uncertain,general_uncertainty,기사 속 현상과 보기의 대응이 불확실하여 기권합니다.
+deepseek-v4.1-flash,penalty_1,2027-p4-korean_geography-q14,korean_geography,visual_social,True,wrong,uncertain,factual_knowledge_gap,축제 지역과 지형 형성 과정의 대응이 불확실하여 기권합니다.
+deepseek-v4.1-flash,penalty_1,2027-p4-korean_geography-q16,korean_geography,visual_social,True,wrong,uncertain,visual_spatial_grounding,신문 기사와 지도 지역의 대응이 불확실하여 기권합니다.
+deepseek-v4.1-flash,penalty_1,2027-p4-korean_geography-q18,korean_geography,visual_social,True,wrong,uncertain,visual_spatial_grounding,하천 특성 도식의 판독이 불확실하여 기권합니다.
+deepseek-v4.1-flash,penalty_1,2027-p4-korean_geography-q19,korean_geography,visual_social,True,wrong,uncertain,visual_spatial_grounding,권역별 인구 구조와 그래프 대응이 불확실하여 기권합니다.
+deepseek-v4.1-flash,penalty_1,2027-p4-korean_geography-q20,korean_geography,visual_social,False,wrong,uncertain,visual_spatial_grounding,수도권 정책 관련 보기의 판독이 불확실하여 기권합니다.
+deepseek-v4.1-flash,penalty_1,2027-p4-politics_law-q01,politics_law,nonfigure_social,True,correct,uncertain,visual_spatial_grounding,자료의 세부 내용과 관점 구분을 확정하기 어려워 기권합니다.
+deepseek-v4.1-flash,penalty_1,2027-p4-politics_law-q05,politics_law,nonfigure_social,False,wrong,uncertain,factual_knowledge_gap,사례의 구체적 법률관계와 보기 내용을 확정하기 어려워 기권합니다.
+deepseek-v4.1-flash,penalty_1,2027-p4-politics_law-q06,politics_law,nonfigure_social,False,correct,uncertain,general_uncertainty,의석 분포와 정부 형태 변화를 연결한 판단 근거를 확정하기 어려워 기권합니다.
+deepseek-v4.1-flash,penalty_1,2027-p4-politics_law-q09,politics_law,nonfigure_social,False,wrong,uncertain,general_uncertainty,자료와 보기의 세부 내용을 확정하기 어려워 기권합니다.
+deepseek-v4.1-flash,penalty_1,2027-p4-politics_law-q13,politics_law,nonfigure_social,False,wrong,uncertain,general_uncertainty,국제법규 A~C의 구체적 내용을 확정하기 어려워 기권합니다.
+deepseek-v4.1-flash,penalty_1,2027-p4-politics_law-q14,politics_law,nonfigure_social,False,wrong,uncertain,general_uncertainty,사례의 계약 관계와 선택지 내용을 확정하기 어려워 기권합니다.
+deepseek-v4.1-flash,penalty_1,2027-p4-politics_law-q15,politics_law,nonfigure_social,False,wrong,uncertain,general_uncertainty,사례의 책임 관계와 판단 근거를 확정하기 어려워 기권합니다.
+deepseek-v4.1-flash,penalty_1,2027-p4-politics_law-q16,politics_law,nonfigure_social,False,wrong,uncertain,general_uncertainty,가족법적 사실관계와 선택지 내용을 확정하기 어려워 기권합니다.
+deepseek-v4.1-flash,penalty_1,2027-p4-politics_law-q17,politics_law,nonfigure_social,False,wrong,uncertain,general_uncertainty,형법 원칙 A~C의 구체적 대응을 확정하기 어려워 기권합니다.
+deepseek-v4.1-flash,penalty_1,2027-p4-politics_law-q18,politics_law,nonfigure_social,False,wrong,uncertain,general_uncertainty,사례의 죄명과 절차적 쟁점을 확정하기 어려워 기권합니다.
+deepseek-v4.1-flash,penalty_1,2027-p4-politics_law-q19,politics_law,nonfigure_social,False,correct,uncertain,general_uncertainty,사례와 보기의 형법적 판단 근거를 확정하기 어려워 기권합니다.
+deepseek-v4.1-flash,penalty_1,2027-p4-politics_law-q20,politics_law,nonfigure_social,False,correct,uncertain,general_uncertainty,선거구제와 표·의석 자료의 세부 내용을 확정하기 어려워 기권합니다.
+deepseek-v4.1-flash,penalty_1,2027-p4-life_science1-q03,life_science1,deductive_science,True,wrong,uncertain,visual_spatial_grounding,세포 주기 그림과 세포 ㉠의 단계를 확신 있게 판독하지 못해 기권합니다.
+deepseek-v4.1-flash,penalty_1,2027-p4-life_science1-q12,life_science1,deductive_science,False,wrong,uncertain,deductive_derivation_block,표의 DNA 상대량과 세포 Ⅰ~Ⅳ의 조건을 충분히 해석하지 못해 확신이 없어 기권합니다.
+deepseek-v4.1-flash,penalty_1,2027-p4-life_science1-q13,life_science1,deductive_science,True,correct,uncertain,visual_spatial_grounding,뉴런의 위치와 막전위 표를 정확히 판독·검증하지 못해 기권합니다.
+deepseek-v4.1-flash,penalty_1,2027-p4-life_science1-q14,life_science1,deductive_science,False,wrong,uncertain,general_uncertainty,방형구 조사 표의 값과 상대 밀도·빈도·우점도 계산을 확신 있게 검증하지 못해 기권합니다.
+deepseek-v4.1-flash,penalty_1,2027-p4-life_science1-q15,life_science1,deductive_science,True,wrong,uncertain,general_uncertainty,근육 원섬유 마디의 구조와 길이 조건을 정확히 해석하지 못해 기권합니다.
+deepseek-v4.1-flash,penalty_1,2027-p4-life_science1-q16,life_science1,deductive_science,False,wrong,uncertain,deductive_derivation_block,3가지 형질의 유전자형과 DNA 상대량 조건을 충분히 해석하지 못해 기권합니다.
+deepseek-v4.1-flash,penalty_1,2027-p4-life_science1-q17,life_science1,deductive_science,False,wrong,uncertain,deductive_derivation_block,가계의 DNA 상대량 표와 유전 형질 발현 여부를 확신 있게 해석하지 못해 기권합니다.
+deepseek-v4.1-flash,penalty_1,2027-p4-life_science1-q18,life_science1,deductive_science,True,wrong,uncertain,deductive_derivation_block,복대립유전과 가계 자료의 확률 계산을 확신 있게 검증하지 못해 기권합니다.
+deepseek-v4.1-flash,penalty_1,2027-p4-life_science1-q19,life_science1,deductive_science,True,wrong,uncertain,deductive_derivation_block,성염색체 유전과 가계도 조건을 충분히 해석하지 못해 기권합니다.
+deepseek-v4.1-flash,penalty_3,2027-p4-ethics_thought-q06,ethics_thought,nonfigure_social,False,correct,uncertain,general_uncertainty,제시문과 선택지의 세부 표현을 충분히 확신할 수 없어 기권한다.
+deepseek-v4.1-flash,penalty_3,2027-p4-ethics_thought-q07,ethics_thought,nonfigure_social,True,wrong,uncertain,visual_spatial_grounding,도식의 A~C 위치와 질문의 대응을 확신하기 어려워 기권한다.
+deepseek-v4.1-flash,penalty_3,2027-p4-ethics_thought-q12,ethics_thought,nonfigure_social,True,wrong,uncertain,general_uncertainty,사단칠정 논변의 세부 선택지 내용을 충분히 확신할 수 없어 기권한다.
+deepseek-v4.1-flash,penalty_3,2027-p4-ethics_thought-q17,ethics_thought,nonfigure_social,False,wrong,uncertain,general_uncertainty,아리스토텔레스 행복론에 대한 선택지의 세부 진위를 충분히 확신할 수 없어 기권한다.
+deepseek-v4.1-flash,penalty_3,2027-p4-korean_geography-q01,korean_geography,visual_social,True,wrong,uncertain,general_uncertainty,섬의 좌표와 표의 답안을 모두 확정하기 어려워 기권합니다.
+deepseek-v4.1-flash,penalty_3,2027-p4-korean_geography-q03,korean_geography,visual_social,True,correct,uncertain,option_elimination_ambiguity,지형 사진과 ①~⑤ 설명을 정확히 대응하기 어려워 기권합니다.
+deepseek-v4.1-flash,penalty_3,2027-p4-korean_geography-q05,korean_geography,visual_social,True,correct,uncertain,visual_spatial_grounding,그래프와 지역군 대응을 확신하기 어려워 기권합니다.
+deepseek-v4.1-flash,penalty_3,2027-p4-korean_geography-q06,korean_geography,visual_social,False,wrong,uncertain,factual_knowledge_gap,제시문의 지역·작물 대응이 불확실하여 기권합니다.
+deepseek-v4.1-flash,penalty_3,2027-p4-korean_geography-q08,korean_geography,visual_social,True,wrong,uncertain,visual_spatial_grounding,두 고속국도의 노선과 지도상 경유지를 확정하기 어려워 기권합니다.
+deepseek-v4.1-flash,penalty_3,2027-p4-korean_geography-q11,korean_geography,visual_social,True,wrong,uncertain,visual_spatial_grounding,지도 지역과 질문의 대응을 확신하기 어려워 기권합니다.
+deepseek-v4.1-flash,penalty_3,2027-p4-korean_geography-q12,korean_geography,visual_social,True,wrong,uncertain,visual_spatial_grounding,이동 경로와 (가)~(다) 지역을 정확히 연결하기 어려워 기권합니다.
+deepseek-v4.1-flash,penalty_3,2027-p4-korean_geography-q13,korean_geography,visual_social,True,wrong,uncertain,general_uncertainty,기상 특보의 종류와 보기 내용을 확정하기 어려워 기권합니다.
+deepseek-v4.1-flash,penalty_3,2027-p4-korean_geography-q14,korean_geography,visual_social,True,wrong,uncertain,general_uncertainty,축제와 지형 사진의 대응이 불확실하여 기권합니다.
+deepseek-v4.1-flash,penalty_3,2027-p4-korean_geography-q15,korean_geography,visual_social,True,wrong,uncertain,visual_spatial_grounding,기후 그래프와 지도상 지역 대응을 확신하기 어려워 기권합니다.
+deepseek-v4.1-flash,penalty_3,2027-p4-korean_geography-q16,korean_geography,visual_social,True,wrong,uncertain,visual_spatial_grounding,기사 내용과 지역 지표의 대응이 불확실하여 기권합니다.
+deepseek-v4.1-flash,penalty_3,2027-p4-korean_geography-q17,korean_geography,visual_social,True,wrong,uncertain,visual_spatial_grounding,지역 설명과 지도상 A~D 대응을 확정하기 어려워 기권합니다.
+deepseek-v4.1-flash,penalty_3,2027-p4-korean_geography-q18,korean_geography,visual_social,True,wrong,uncertain,visual_spatial_grounding,하천 지형 비교 그래프의 축과 지역 대응이 불확실하여 기권합니다.
+deepseek-v4.1-flash,penalty_3,2027-p4-korean_geography-q19,korean_geography,visual_social,True,wrong,uncertain,visual_spatial_grounding,인구 그래프와 권역 대응을 확신하기 어려워 기권합니다.
+deepseek-v4.1-flash,penalty_3,2027-p4-korean_geography-q20,korean_geography,visual_social,False,wrong,uncertain,general_uncertainty,㉠~㉣의 정확한 지칭과 보기 판단을 확신하기 어려워 기권합니다.
+deepseek-v4.1-flash,penalty_3,2027-p4-politics_law-q05,politics_law,nonfigure_social,False,wrong,uncertain,visual_spatial_grounding,제시된 이미지만으로는 국가배상과 관련된 <보기>의 내용을 정확히 판별하기 어렵다.
+deepseek-v4.1-flash,penalty_3,2027-p4-politics_law-q06,politics_law,nonfigure_social,False,correct,uncertain,general_uncertainty,정당 체계와 정부 형태에 관한 표와 조건을 충분히 읽어 확신하기 어렵다.
+deepseek-v4.1-flash,penalty_3,2027-p4-politics_law-q07,politics_law,nonfigure_social,False,wrong,uncertain,deductive_derivation_block,민법의 기본 원칙 A와 B가 무엇인지 자료만으로 단정하기 어려워 기권한다.
+deepseek-v4.1-flash,penalty_3,2027-p4-politics_law-q09,politics_law,nonfigure_social,False,wrong,uncertain,general_uncertainty,A~D의 조직 유형과 <보기>의 진술을 연결하여 확신하기 어렵다.
+deepseek-v4.1-flash,penalty_3,2027-p4-politics_law-q12,politics_law,nonfigure_social,False,wrong,uncertain,general_uncertainty,판결 요약과 선택지의 구체적 문구를 정확히 읽어 확신하기 어렵다.
+deepseek-v4.1-flash,penalty_3,2027-p4-politics_law-q13,politics_law,nonfigure_social,False,wrong,uncertain,general_uncertainty,국제법 기관 A~C의 정체와 선택지 내용을 충분히 확인하기 어렵다.
+deepseek-v4.1-flash,penalty_3,2027-p4-politics_law-q14,politics_law,nonfigure_social,False,wrong,uncertain,general_uncertainty,미성년자의 계약 취소와 최고권에 관한 구체적 사실관계를 확정하기 어렵다.
+deepseek-v4.1-flash,penalty_3,2027-p4-politics_law-q15,politics_law,nonfigure_social,False,wrong,uncertain,general_uncertainty,공작물 책임 등 불법행위 책임에 관한 사례의 구체적 내용을 확신하기 어렵다.
+deepseek-v4.1-flash,penalty_3,2027-p4-politics_law-q18,politics_law,nonfigure_social,False,wrong,uncertain,general_uncertainty,상해죄와 처벌불원 의사의 효력에 관한 사례의 세부 내용을 확신하기 어렵다.
+deepseek-v4.1-flash,penalty_3,2027-p4-politics_law-q19,politics_law,nonfigure_social,False,correct,uncertain,general_uncertainty,사례의 행위와 <보기>의 형법상 판단을 정확히 연결하기 어렵다.
+deepseek-v4.1-flash,penalty_3,2027-p4-politics_law-q20,politics_law,nonfigure_social,False,correct,uncertain,general_uncertainty,선거구제와 득표율·의석수 자료를 정확히 해석하여 확신하기 어렵다.
+deepseek-v4.1-flash,penalty_3,2027-p4-life_science1-q03,life_science1,deductive_science,True,wrong,uncertain,general_uncertainty,세포 주기와 관찰된 세포의 시기를 확실히 구분하기 어려워 확신이 부족하다.
+deepseek-v4.1-flash,penalty_3,2027-p4-life_science1-q07,life_science1,deductive_science,True,wrong,uncertain,visual_spatial_grounding,제시된 체온 변화 곡선과 구간별 열 발생량의 대응을 확실히 판단하기 어렵다.
+deepseek-v4.1-flash,penalty_3,2027-p4-life_science1-q08,life_science1,deductive_science,False,wrong,uncertain,general_uncertainty,응집 반응 표의 일부와 혈청·혈구의 대응을 정확히 읽기 어려워 확신이 부족하다.
+deepseek-v4.1-flash,penalty_3,2027-p4-life_science1-q11,life_science1,deductive_science,True,wrong,uncertain,deductive_derivation_block,호르몬 농도 그래프와 A·B의 원인을 연결하는 해석에 확신이 부족하다.
+deepseek-v4.1-flash,penalty_3,2027-p4-life_science1-q12,life_science1,deductive_science,False,wrong,uncertain,deductive_derivation_block,세포별 염색체 수와 성염색체 구성을 정확히 판별하기 어려워 확신이 부족하다.
+deepseek-v4.1-flash,penalty_3,2027-p4-life_science1-q13,life_science1,deductive_science,True,correct,uncertain,deductive_derivation_block,신경 흥분 전도 자료의 막전위 값과 지점 대응을 해석하기 어렵다.
+deepseek-v4.1-flash,penalty_3,2027-p4-life_science1-q14,life_science1,deductive_science,False,wrong,uncertain,general_uncertainty,우점종 판정에 필요한 상대 밀도·빈도·피도 값을 정확히 읽기 어려워 확신이 부족하다.
+deepseek-v4.1-flash,penalty_3,2027-p4-life_science1-q15,life_science1,deductive_science,True,wrong,uncertain,general_uncertainty,근육 원섬유 마디의 구간 길이와 수축 시점의 대응을 확실히 판단하기 어렵다.
+deepseek-v4.1-flash,penalty_3,2027-p4-life_science1-q16,life_science1,deductive_science,False,wrong,uncertain,deductive_derivation_block,복잡한 유전자형과 DNA 상대량 자료를 정확히 해석하기 어려워 확신이 부족하다.
+deepseek-v4.1-flash,penalty_3,2027-p4-life_science1-q17,life_science1,deductive_science,False,wrong,uncertain,deductive_derivation_block,가계 유전 표와 염색체 비분리 조건을 종합적으로 해석하기 어렵다.
+deepseek-v4.1-flash,penalty_3,2027-p4-life_science1-q18,life_science1,deductive_science,True,wrong,uncertain,deductive_derivation_block,다인자 유전 확률 계산에 필요한 조건을 확실히 정리하기 어렵다.
+deepseek-v4.1-flash,penalty_3,2027-p4-life_science1-q19,life_science1,deductive_science,True,wrong,uncertain,deductive_derivation_block,가계도와 X 염색체 유전 조건을 종합적으로 해석하기 어려워 확신이 부족하다.
+gpt-6-luna,penalty_1,2027-p4-ethics_thought-q11,ethics_thought,nonfigure_social,True,wrong,uncertain,general_uncertainty,갑·을의 독점 입장과 공통 입장을 구분하는 진술 조합을 확신하기 어렵다.
+gpt-6-luna,penalty_1,2027-p4-korean_geography-q08,korean_geography,visual_social,True,wrong,uncertain,visual_spatial_grounding,지도에 표시된 두 노선의 정확한 경로와 통과 지역을 확신하기 어렵습니다.
+gpt-6-luna,penalty_1,2027-p4-korean_geography-q11,korean_geography,visual_social,True,correct,uncertain,visual_spatial_grounding,지역 지도와 질문 흐름만으로 A~D와 세 질문의 답을 확실히 대응하기 어렵습니다.
+gpt-6-luna,penalty_1,2027-p4-korean_geography-q14,korean_geography,visual_social,True,correct,uncertain,general_uncertainty,사진 속 지형과 형성 과정을 선택지와 확실히 대응하기 어렵습니다.
+gpt-6-luna,penalty_1,2027-p4-politics_law-q06,politics_law,nonfigure_social,False,correct,uncertain,general_uncertainty,정부 형태의 변화와 정당별 의석 관계를 연결하는 선택지의 참·거짓을 확신하기 어렵다.
+gpt-6-luna,penalty_1,2027-p4-life_science1-q12,life_science1,deductive_science,False,wrong,uncertain,deductive_derivation_block,염색체별 DNA 상대량 표에서 기호를 확정하지 못해 선택지를 판단하기 어렵다.
+gpt-6-luna,penalty_1,2027-p4-life_science1-q14,life_science1,deductive_science,False,correct,uncertain,option_elimination_ambiguity,상대 밀도·빈도·피도와 종별 분포 자료를 대응해 선택지를 확정하지 못했다.
+gpt-6-luna,penalty_3,2027-p4-ethics_thought-q04,ethics_thought,nonfigure_social,False,wrong,uncertain,general_uncertainty,갑과 을의 사상 및 선택지의 주장 가운데 옳은 것을 확신 있게 가려내기 어렵다.
+gpt-6-luna,penalty_3,2027-p4-ethics_thought-q06,ethics_thought,nonfigure_social,False,wrong,uncertain,general_uncertainty,편지의 관점이 어느 한국 유교 사상가에 해당하는지 확신하기 어렵다.
+gpt-6-luna,penalty_3,2027-p4-ethics_thought-q08,ethics_thought,nonfigure_social,False,wrong,uncertain,general_uncertainty,갑과 을의 격물 및 수양 개념에 대한 선택지 해석을 확신하기 어렵다.
+gpt-6-luna,penalty_3,2027-p4-ethics_thought-q14,ethics_thought,nonfigure_social,False,wrong,uncertain,option_elimination_ambiguity,갑과 을의 돈오·점수 및 수양에 관한 선택지를 확신 있게 판별하기 어렵다.
+gpt-6-luna,penalty_3,2027-p4-ethics_thought-q17,ethics_thought,nonfigure_social,False,wrong,uncertain,general_uncertainty,아리스토텔레스의 행복과 덕에 관한 선택지 중 정답을 확신하기 어렵다.
+gpt-6-luna,penalty_3,2027-p4-korean_geography-q08,korean_geography,visual_social,True,wrong,uncertain,visual_spatial_grounding,지도에 표시된 노선의 경유 지역을 선명하게 판독하기 어려워 판단을 유보한다.
+gpt-6-luna,penalty_3,2027-p4-korean_geography-q11,korean_geography,visual_social,True,correct,uncertain,visual_spatial_grounding,지도 속 네 지역과 질문별 예·아니요 판정의 대응을 확실히 판독하지 못했다.
+gpt-6-luna,penalty_3,2027-p4-korean_geography-q12,korean_geography,visual_social,True,wrong,uncertain,visual_spatial_grounding,지도에서 (가)~(다)의 위치를 경로표와 정확히 대응시키기 어려워 판단을 유보한다.
+gpt-6-luna,penalty_3,2027-p4-korean_geography-q14,korean_geography,visual_social,True,correct,uncertain,general_uncertainty,사진 속 지형과 축제 지역을 확실하게 식별하지 못해 판단을 유보한다.
+gpt-6-luna,penalty_3,2027-p4-korean_geography-q19,korean_geography,visual_social,True,wrong,uncertain,visual_spatial_grounding,인구 변화 그래프와 권역별 막대그래프의 A~D 대응을 확실하게 판독하지 못했다.
+gpt-6-luna,penalty_3,2027-p4-politics_law-q07,politics_law,nonfigure_social,False,wrong,uncertain,general_uncertainty,민법 원칙 A와 B를 선택지의 설명에 정확히 대응시키기 어렵습니다.
+gpt-6-luna,penalty_3,2027-p4-politics_law-q20,politics_law,nonfigure_social,False,correct,uncertain,visual_spatial_grounding,선거구 제도와 의원 임기별 당선자 수 자료를 선택지에 확실히 대응시키기 어렵습니다.
+gpt-6-luna,penalty_3,2027-p4-life_science1-q12,life_science1,deductive_science,False,wrong,uncertain,deductive_derivation_block,표의 염색체 수와 세포의 분열 단계를 확실하게 연결하지 못했습니다.
+gpt-6-luna,penalty_3,2027-p4-life_science1-q14,life_science1,deductive_science,False,correct,uncertain,general_uncertainty,방형구 자료에서 종별 상대 밀도와 상대 빈도를 확실하게 계산하지 못했습니다.
+claude-haiku-5-5,penalty_1,2027-p4-ethics_thought-q17,ethics_thought,nonfigure_social,False,wrong,uncertain,option_elimination_ambiguity,"아리스토텔레스의 관조적 행복론임은 분명하지만, ②와 ④의 진위를 확실히 가리기 어렵다."
+claude-haiku-5-5,penalty_1,2027-p4-ethics_thought-q18,ethics_thought,nonfigure_social,False,wrong,uncertain,option_elimination_ambiguity,"갑은 흄, 을은 밀로 보이며 ①과 ③이 모두 그럴듯하여 하나를 확정하기 어렵다."
+claude-haiku-5-5,penalty_1,2027-p4-korean_geography-q14,korean_geography,visual_social,True,wrong,uncertain,general_uncertainty,(가)·(나) 형성 과정과 A~D 지형 위치를 근거 있게 확정하기 어렵다.
+claude-haiku-5-5,penalty_1,2027-p4-korean_geography-q16,korean_geography,visual_social,True,correct,uncertain,visual_spatial_grounding,(가)~(다) 지역을 지도에서 확정하기 어렵고 인구·성비·노령화 지표를 판단할 자료가 부족하다.
+claude-haiku-5-5,penalty_1,2027-p4-korean_geography-q19,korean_geography,visual_social,True,correct,uncertain,visual_spatial_grounding,인구 지수 그래프는 2005년 대비 지수일 뿐 절대 인구나 권역별 전출입 수치를 제공하지 않아 판단할 수 없다.
+claude-haiku-5-5,penalty_1,2027-p4-life_science1-q05,life_science1,deductive_science,True,wrong,unreadable,visual_spatial_grounding,생태계 그림의 ㉠~㉣ 위치와 화살표 방향을 확실히 판독하지 못해 ㄷ의 참·거짓을 확정할 수 없다.
+claude-haiku-5-5,penalty_1,2027-p4-life_science1-q09,life_science1,deductive_science,True,wrong,uncertain,visual_spatial_grounding,"(가), (나) 그래프에서 자극 전후 활동 전위 빈도 변화를 확실히 읽을 수 없어 A의 종류와 ㉠의 종류를 확정하지 못한다."
+claude-haiku-5-5,penalty_1,2027-p4-life_science1-q18,life_science1,deductive_science,True,correct,unreadable,visual_spatial_grounding,대립유전자 조합과 표현형 확률 계산을 위한 염색체 그림 판독이 불확실해 기권한다.
+claude-haiku-5-5,penalty_3,2027-p4-ethics_thought-q06,ethics_thought,nonfigure_social,False,wrong,uncertain,option_elimination_ambiguity,"편지의 심(心)·성(性) 논쟁과 기호 개념을 근거로 다산 정약용으로 보이나, 선택지 ②·④·⑤의 정확한 해석에 확신이 부족하다."
+claude-haiku-5-5,penalty_3,2027-p4-ethics_thought-q07,ethics_thought,nonfigure_social,True,correct,uncertain,general_uncertainty,"갑은 플라톤, 을은 스피노자로 보이나, 순서도의 A·B·C에 들어갈 질문이 ㄱ·ㄴ·ㄷ·ㄹ 중 어떤 조합인지 명확히 결정되지 않는다. ㄹ의 위치가 두 가지로 해석될 여지가 있다."
+claude-haiku-5-5,penalty_3,2027-p4-ethics_thought-q08,ethics_thought,nonfigure_social,False,wrong,uncertain,option_elimination_ambiguity,"갑은 육구연, 을은 주희로 보이지만 ①·②·③·④의 세부 해석에 확신이 부족하다."
+claude-haiku-5-5,penalty_3,2027-p4-ethics_thought-q10,ethics_thought,nonfigure_social,False,wrong,uncertain,option_elimination_ambiguity,"칸트의 입장임은 분명하지만, 선택지 ①·⑤ 등이 칸트의 실제 주장과 일치하는지 확신할 수 없다."
+claude-haiku-5-5,penalty_3,2027-p4-ethics_thought-q11,ethics_thought,nonfigure_social,True,correct,uncertain,general_uncertainty,"갑은 맹자, 을은 순자로 보이지만 ㄴ·ㄹ이 A·C 중 어느 영역에 해당하는지 명확하지 않아 정답 조합을 확정할 수 없다."
+claude-haiku-5-5,penalty_3,2027-p4-ethics_thought-q12,ethics_thought,nonfigure_social,True,wrong,uncertain,option_elimination_ambiguity,"갑은 이황, 을은 기대승으로 보이지만 ①~⑤ 중 을의 비판으로 가장 적절한 진술을 확정할 근거가 부족하다."
+claude-haiku-5-5,penalty_3,2027-p4-ethics_thought-q17,ethics_thought,nonfigure_social,False,wrong,uncertain,option_elimination_ambiguity,"아리스토텔레스의 관조적 행복론임은 분명하나, ②와 ④ 중 어느 진술이 옳은지 확신하기 어렵다."
+claude-haiku-5-5,penalty_3,2027-p4-ethics_thought-q18,ethics_thought,nonfigure_social,False,wrong,uncertain,option_elimination_ambiguity,"갑은 흄, 을은 밀로 보이나 ①과 ③ 모두 그럴듯해 하나의 정답을 확정하기 어렵다."
+claude-haiku-5-5,penalty_3,2027-p4-korean_geography-q02,korean_geography,visual_social,True,correct,uncertain,no_explanation,
+claude-haiku-5-5,penalty_3,2027-p4-korean_geography-q06,korean_geography,visual_social,False,correct,uncertain,no_explanation,
+claude-haiku-5-5,penalty_3,2027-p4-korean_geography-q07,korean_geography,visual_social,True,wrong,uncertain,no_explanation,
+claude-haiku-5-5,penalty_3,2027-p4-korean_geography-q10,korean_geography,visual_social,True,correct,uncertain,no_explanation,
+claude-haiku-5-5,penalty_3,2027-p4-korean_geography-q12,korean_geography,visual_social,True,correct,uncertain,no_explanation,
+claude-haiku-5-5,penalty_3,2027-p4-korean_geography-q13,korean_geography,visual_social,True,correct,uncertain,no_explanation,
+claude-haiku-5-5,penalty_3,2027-p4-korean_geography-q14,korean_geography,visual_social,True,wrong,uncertain,no_explanation,
+claude-haiku-5-5,penalty_3,2027-p4-korean_geography-q16,korean_geography,visual_social,True,correct,uncertain,no_explanation,
+claude-haiku-5-5,penalty_3,2027-p4-korean_geography-q17,korean_geography,visual_social,True,wrong,uncertain,no_explanation,
+claude-haiku-5-5,penalty_3,2027-p4-korean_geography-q19,korean_geography,visual_social,True,correct,uncertain,no_explanation,
+claude-haiku-5-5,penalty_3,2027-p4-politics_law-q12,politics_law,nonfigure_social,False,correct,uncertain,general_uncertainty,"판결 요약의 중간 부분이 생략되어 있고 원고와 피고, 중앙 노동 위원회의 판단 내용을 확정하기 어려워 정답을 확신할 수 없습니다."
+claude-haiku-5-5,penalty_3,2027-p4-politics_law-q14,politics_law,nonfigure_social,False,wrong,uncertain,general_uncertainty,"의사능력, 취소, 추인, 확답 촉구, 철회권, 기망에 따른 취소 제한 등이 얽혀 있어 선지를 확실히 판단할 수 없습니다."
+claude-haiku-5-5,penalty_3,2027-p4-politics_law-q16,politics_law,nonfigure_social,False,correct,uncertain,general_uncertainty,"임차료 연대 책임, 친족 범위, 재산분할 청구권 발생 시점, 친양자 입양과 상속권, 협의 이혼 숙려 기간의 순서 등 여러 쟁점이 얽혀 있어 확신할 수 없습니다."
+claude-haiku-5-5,penalty_3,2027-p4-life_science1-q03,life_science1,deductive_science,True,correct,unreadable,visual_spatial_grounding,세포 주기 그림에서 ㉠~㉣의 배치를 확실히 판독하기 어려워 ㉠이 G1기인지 확신할 수 없다.
+claude-haiku-5-5,penalty_3,2027-p4-life_science1-q05,life_science1,deductive_science,True,wrong,unreadable,visual_spatial_grounding,"ㄱ은 분해자가 생물 요인이므로 틀리지만, ㉡·㉢·㉣ 화살표의 위치를 판독하기 어려워 ㄷ의 참·거짓을 확정할 수 없다."
+claude-haiku-5-5,penalty_3,2027-p4-life_science1-q06,life_science1,deductive_science,True,correct,uncertain,general_uncertainty,"㉡이 Ⅱ인지와 ㄷ은 대체로 옳아 보이지만, ㄴ의 '형질 세포가 기억 세포로 분화'가 옳은지 확신하기 어렵다."
+claude-haiku-5-5,penalty_3,2027-p4-life_science1-q09,life_science1,deductive_science,True,wrong,uncertain,visual_spatial_grounding,"A가 교감 신경인지 부교감 신경인지와 ㉠의 종류를 그래프로 확정하기 어려워, ㄷ의 신경절 전후 뉴런 길이 판단도 불확실하다."
+claude-haiku-5-5,penalty_3,2027-p4-life_science1-q12,life_science1,deductive_science,False,correct,uncertain,general_uncertainty,표의 ?와 ⓐ 값이 많아 세포 구성과 핵상을 결정할 수 없어 추론의 신뢰도가 낮다.
+claude-haiku-5-5,penalty_3,2027-p4-life_science1-q18,life_science1,deductive_science,True,correct,unreadable,visual_spatial_grounding,염색체 그림의 대립유전자 배열을 확실히 판독할 수 없어 P와 Q의 유전자형을 확정하기 어렵다.

@@ -1,0 +1,10 @@
+model,condition,total,correct,wrong,abstained,missing,overall_acc,selective_acc,abstention_rate,error_capture_rate,utility_lam0,utility_lam1,utility_lam3,wall_time_seconds
+deepseek-v4.1-flash,baseline,80,25,55,0,0,0.3125,0.3125,0.0,0.0,0.3125,-0.375,-1.75,35937.867
+deepseek-v4.1-flash,penalty_1,80,17,25,38,0,0.2125,0.4048,0.475,0.6032,0.2125,-0.1,-0.725,737.037
+deepseek-v4.1-flash,penalty_3,80,16,22,42,0,0.2,0.4211,0.525,0.6562,0.2,-0.075,-0.625,830.158
+gpt-6-luna,baseline,80,40,29,11,0,0.5,0.5797,0.1375,0.275,0.5,0.1375,-0.5875,2004.122
+gpt-6-luna,penalty_1,80,36,26,18,0,0.45,0.5806,0.225,0.4091,0.45,0.125,-0.525,465.384
+gpt-6-luna,penalty_3,80,34,23,23,0,0.425,0.5965,0.2875,0.5,0.425,0.1375,-0.4375,286.356
+claude-haiku-5-5,baseline,80,52,16,12,0,0.65,0.7647,0.15,0.4286,0.65,0.45,0.05,3217.867
+claude-haiku-5-5,penalty_1,80,49,12,19,0,0.6125,0.8033,0.2375,0.6129,0.6125,0.4625,0.1625,698.841
+claude-haiku-5-5,penalty_3,80,37,4,39,0,0.4625,0.9024,0.4875,0.907,0.4625,0.4125,0.3125,695.501

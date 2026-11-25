@@ -1,0 +1,793 @@
+{
+  "schema_version": 1,
+  "experiment": "ablation-penalty-v1",
+  "condition": "penalty_3",
+  "penalty_lambda": 3,
+  "academic_year": 2027,
+  "session": "period4",
+  "started_at": "2026-11-25T05:49:39.627Z",
+  "protocol": {
+    "experiment": "ablation-penalty-v1",
+    "condition": "penalty_3",
+    "penalty_lambda": 3,
+    "target_groups": [
+      "2027-p4-politics_law",
+      "2027-p4-ethics_thought",
+      "2027-p4-korean_geography",
+      "2027-p4-life_science1"
+    ],
+    "model": "deepseek-v4.1-flash",
+    "provider": "deepseek",
+    "effort": "high",
+    "sdk_version": "Pi CLI 0.87.1",
+    "tools": "disabled",
+    "input": "original PDF rendered at 200 DPI",
+    "max_iterations": 2,
+    "group_timeout_seconds": 600,
+    "concurrency": 2,
+    "cost_limit_usd": 2,
+    "subscription_only": false,
+    "api_key_fallback": false,
+    "agent": "Pi",
+    "api_model": "deepseek-flash",
+    "api_base_url": "https://api.deepseek.com",
+    "max_output_tokens": 65536,
+    "effort_semantics": "high",
+    "output_format": "prompted JSON; no tools",
+    "image_resize": false
+  },
+  "dataset_hash": "ada9fa7a68d54389ea00bda30ada34c86c3ceaf6486c5053ec7fea102330973e",
+  "prompt_hash": "a0a3794f27a49f32f4e1315b757f5f70955f06915dce646bf36aeae225d3f5d0",
+  "prompt_text": "당신은 2027학년도 수능 문제를 푸는 AI입니다. 제공한 원본 이미지와 요청한 문항 정보만 사용하세요. 검색, 파일 읽기, 정답표, 다른 모델, 도구는 사용하지 마세요.\n문제를 직접 풀고 최종 답과 짧은 한국어 설명을 제출하세요. 잘 모르거나 입력을 읽을 수 없으면 억지로 추측하지 않고 기권할 수 있습니다. 기권은 decision=abstained, answer=null로 제출하세요. 기권 사유는 uncertain, unreadable, budget_exhausted, unsupported_input 중 하나입니다.\n객관식은 선택지 번호 1~5, 단답형은 정수 0~999를 answer에 넣으세요. answered이면 abstain_reason=null입니다. 이전에 제출한 답안은 변경하지 않습니다. 요청된 모든 문항에 대해 답 또는 기권을 제출하세요. 주어진 문제지에는 다른 선택과목이 있을 수 있으므로 요청한 section과 번호만 풀이하세요. 영어 듣기는 공식 대본 이미지가 추가로 제공되며 대본으로 풀이합니다.\n각 explanation은 핵심 근거를 1~3문장으로 적으세요. 내부 추론을 길게 출력할 필요가 없습니다. 답안 JSON 외의 출력은 하지 마세요.\n수학 문항의 explanation에서 모든 수식은 LaTeX로 작성하세요. 인라인 수식은 $...$, 독립된 수식은 $$...$$로 감싸고, 한국어 설명은 수식 구분자 밖에 적으세요. 분수·근호·지수·첨자·합·적분은 각각 \\frac, \\sqrt, ^{...}, _{...}, \\sum, \\int 표기를 사용하세요. JSON 문자열의 역슬래시는 JSON 규칙에 맞게 이스케이프하세요. answer는 기존 규칙의 정수 또는 null로 유지하며 LaTeX를 넣지 마세요.\n이 시험은 외부 정보 없이 모델이 이미 가진 지식만으로 풉니다. 웹 검색, 외부 문서, 데이터베이스 조회는 제공되지 않으며 시도하지 마세요.\n채점 규칙(중요): 정답은 +1점, 기권(decision=abstained, answer=null)은 0점, 오답은 -3점(큰 감점)입니다. 기댓값을 최대화하려면 정답 확신이 75% 이하인 문항에서는 추측하지 말고 반드시 기권하세요.",
+  "source_hashes": {
+    "exams/pdf/2027/period4/과학탐구_생명과학Ⅰ_문제지.pdf": "f57fe7a67564af11898d1989c4aae5fc7cda408c3f4f4980dbcf1f27bc4d51b6",
+    "exams/pdf/2027/period4/사회탐구_윤리와사상_문제지.pdf": "4a7433a4a5fa0841922313e6217f8e8d1f63f08edcd31da9a3d59afdf6c5d7d7",
+    "exams/pdf/2027/period4/사회탐구_정치와법_문제지.pdf": "56814f06a14f618df3e44faba1113f427b5673a6b9e7a8be0e11ee71775c810d",
+    "exams/pdf/2027/period4/사회탐구_한국지리_문제지.pdf": "e25c10f2c27695d99d8319473cf7d71c75792448af4b17659185a856b0fd5bf7"
+  },
+  "answers": {
+    "2027-p4-politics_law-q01": {
+      "question_id": "2027-p4-politics_law-q01",
+      "decision": "answered",
+      "answer": 2,
+      "explanation": "A를 국가 현상설, B를 사회 현상설로 볼 때 사회 현상설은 국가의 독자적 이익이나 공권력의 특수성을 설명하는 데 한계가 있다.",
+      "abstain_reason": null
+    },
+    "2027-p4-politics_law-q02": {
+      "question_id": "2027-p4-politics_law-q02",
+      "decision": "answered",
+      "answer": 1,
+      "explanation": "A는 형식적 법치주의로, 절차적 적법성만 갖추면 인권을 침해하는 통치도 정당화하는 논리로 악용될 수 있다.",
+      "abstain_reason": null
+    },
+    "2027-p4-politics_law-q03": {
+      "question_id": "2027-p4-politics_law-q03",
+      "decision": "answered",
+      "answer": 5,
+      "explanation": "동물 등록 의무와 생계 급여 확대는 모두 공공복리와 사회적 기본권 보장을 위한 국가의 적극적 개입을 보여 주며, 이는 자유주의와 사회국가 원리의 조화와 관련된다.",
+      "abstain_reason": null
+    },
+    "2027-p4-politics_law-q04": {
+      "question_id": "2027-p4-politics_law-q04",
+      "decision": "answered",
+      "answer": 3,
+      "explanation": "E를 국무총리로 보면, 국무총리는 행정 각부를 통할하지만 모든 행정 각부의 장이 국무총리인 것은 아니다.",
+      "abstain_reason": null
+    },
+    "2027-p4-politics_law-q05": {
+      "question_id": "2027-p4-politics_law-q05",
+      "decision": "abstained",
+      "answer": null,
+      "explanation": "제시된 이미지만으로는 국가배상과 관련된 <보기>의 내용을 정확히 판별하기 어렵다.",
+      "abstain_reason": "uncertain"
+    },
+    "2027-p4-politics_law-q06": {
+      "question_id": "2027-p4-politics_law-q06",
+      "decision": "abstained",
+      "answer": null,
+      "explanation": "정당 체계와 정부 형태에 관한 표와 조건을 충분히 읽어 확신하기 어렵다.",
+      "abstain_reason": "uncertain"
+    },
+    "2027-p4-politics_law-q07": {
+      "question_id": "2027-p4-politics_law-q07",
+      "decision": "abstained",
+      "answer": null,
+      "explanation": "민법의 기본 원칙 A와 B가 무엇인지 자료만으로 단정하기 어려워 기권한다.",
+      "abstain_reason": "uncertain"
+    },
+    "2027-p4-politics_law-q08": {
+      "question_id": "2027-p4-politics_law-q08",
+      "decision": "answered",
+      "answer": 2,
+      "explanation": "A를 현실주의, B를 자유주의로 볼 때 자유주의는 군사·안보 중심의 국제 정치를 설명하는 데 한계가 있다.",
+      "abstain_reason": null
+    },
+    "2027-p4-politics_law-q09": {
+      "question_id": "2027-p4-politics_law-q09",
+      "decision": "abstained",
+      "answer": null,
+      "explanation": "A~D의 조직 유형과 <보기>의 진술을 연결하여 확신하기 어렵다.",
+      "abstain_reason": "uncertain"
+    },
+    "2027-p4-politics_law-q10": {
+      "question_id": "2027-p4-politics_law-q10",
+      "decision": "answered",
+      "answer": 1,
+      "explanation": "(가)를 지방 의회로 보면 지방 의회는 지방자치단체장의 사무에 대한 행정사무감사권을 가진다.",
+      "abstain_reason": null
+    },
+    "2027-p4-politics_law-q11": {
+      "question_id": "2027-p4-politics_law-q11",
+      "decision": "answered",
+      "answer": 1,
+      "explanation": "의료기관의 진료 거부 금지는 생명권 보호와 관련되며, 생명권은 다른 기본권 보장의 전제가 되는 권리이다.",
+      "abstain_reason": null
+    },
+    "2027-p4-politics_law-q12": {
+      "question_id": "2027-p4-politics_law-q12",
+      "decision": "abstained",
+      "answer": null,
+      "explanation": "판결 요약과 선택지의 구체적 문구를 정확히 읽어 확신하기 어렵다.",
+      "abstain_reason": "uncertain"
+    },
+    "2027-p4-politics_law-q13": {
+      "question_id": "2027-p4-politics_law-q13",
+      "decision": "abstained",
+      "answer": null,
+      "explanation": "국제법 기관 A~C의 정체와 선택지 내용을 충분히 확인하기 어렵다.",
+      "abstain_reason": "uncertain"
+    },
+    "2027-p4-politics_law-q14": {
+      "question_id": "2027-p4-politics_law-q14",
+      "decision": "abstained",
+      "answer": null,
+      "explanation": "미성년자의 계약 취소와 최고권에 관한 구체적 사실관계를 확정하기 어렵다.",
+      "abstain_reason": "uncertain"
+    },
+    "2027-p4-politics_law-q15": {
+      "question_id": "2027-p4-politics_law-q15",
+      "decision": "abstained",
+      "answer": null,
+      "explanation": "공작물 책임 등 불법행위 책임에 관한 사례의 구체적 내용을 확신하기 어렵다.",
+      "abstain_reason": "uncertain"
+    },
+    "2027-p4-politics_law-q16": {
+      "question_id": "2027-p4-politics_law-q16",
+      "decision": "answered",
+      "answer": 5,
+      "explanation": "혼인 외 출생자인 A는 부모가 후에 혼인함으로써 혼인 중 출생자로 보게 되므로, 갑의 사망 당시 A는 갑의 상속인이 된다.",
+      "abstain_reason": null
+    },
+    "2027-p4-politics_law-q17": {
+      "question_id": "2027-p4-politics_law-q17",
+      "decision": "answered",
+      "answer": 2,
+      "explanation": "B는 소급효 금지의 원칙으로, 행위자에게 불리한 법률의 소급 적용을 금지한다.",
+      "abstain_reason": null
+    },
+    "2027-p4-politics_law-q18": {
+      "question_id": "2027-p4-politics_law-q18",
+      "decision": "abstained",
+      "answer": null,
+      "explanation": "상해죄와 처벌불원 의사의 효력에 관한 사례의 세부 내용을 확신하기 어렵다.",
+      "abstain_reason": "uncertain"
+    },
+    "2027-p4-politics_law-q19": {
+      "question_id": "2027-p4-politics_law-q19",
+      "decision": "abstained",
+      "answer": null,
+      "explanation": "사례의 행위와 <보기>의 형법상 판단을 정확히 연결하기 어렵다.",
+      "abstain_reason": "uncertain"
+    },
+    "2027-p4-politics_law-q20": {
+      "question_id": "2027-p4-politics_law-q20",
+      "decision": "abstained",
+      "answer": null,
+      "explanation": "선거구제와 득표율·의석수 자료를 정확히 해석하여 확신하기 어렵다.",
+      "abstain_reason": "uncertain"
+    },
+    "2027-p4-life_science1-q01": {
+      "question_id": "2027-p4-life_science1-q01",
+      "decision": "answered",
+      "answer": 5,
+      "explanation": "물거미는 세포로 구성된 생물이고, 먹이 섭취로 에너지를 얻는 과정과 공기방울을 이용하는 적응은 모두 생물의 특성과 진화에 해당한다.",
+      "abstain_reason": null
+    },
+    "2027-p4-life_science1-q02": {
+      "question_id": "2027-p4-life_science1-q02",
+      "decision": "answered",
+      "answer": 5,
+      "explanation": "(가)는 폐가 있는 호흡계, (나)는 오줌으로 노폐물을 배출하는 배설계이다. 요소 배출과 산소의 순환계 운반에 대한 설명도 옳다.",
+      "abstain_reason": null
+    },
+    "2027-p4-life_science1-q03": {
+      "question_id": "2027-p4-life_science1-q03",
+      "decision": "abstained",
+      "answer": null,
+      "explanation": "세포 주기와 관찰된 세포의 시기를 확실히 구분하기 어려워 확신이 부족하다.",
+      "abstain_reason": "uncertain"
+    },
+    "2027-p4-life_science1-q04": {
+      "question_id": "2027-p4-life_science1-q04",
+      "decision": "answered",
+      "answer": 4,
+      "explanation": "무좀의 병원체는 곰팡이이므로 ㄱ은 틀리고, 낭포성 섬유증과 세균성 질환에 대한 설명은 옳다.",
+      "abstain_reason": null
+    },
+    "2027-p4-life_science1-q05": {
+      "question_id": "2027-p4-life_science1-q05",
+      "decision": "answered",
+      "answer": 4,
+      "explanation": "분해자는 생물적 요인이므로 ㄱ은 틀리고, 같은 종 개체의 협력과 기온이 생물에 영향을 주는 것은 생태계 구성 요소의 상호 관계에 해당한다.",
+      "abstain_reason": null
+    },
+    "2027-p4-life_science1-q06": {
+      "question_id": "2027-p4-life_science1-q06",
+      "decision": "answered",
+      "answer": 2,
+      "explanation": "수면을 방해한 II의 항체량이 낮으므로 ㉠은 I이고, 수면 방해는 결론 도출이 아니라 실험 과정이다.",
+      "abstain_reason": null
+    },
+    "2027-p4-life_science1-q07": {
+      "question_id": "2027-p4-life_science1-q07",
+      "decision": "abstained",
+      "answer": null,
+      "explanation": "제시된 체온 변화 곡선과 구간별 열 발생량의 대응을 확실히 판단하기 어렵다.",
+      "abstain_reason": "uncertain"
+    },
+    "2027-p4-life_science1-q08": {
+      "question_id": "2027-p4-life_science1-q08",
+      "decision": "abstained",
+      "answer": null,
+      "explanation": "응집 반응 표의 일부와 혈청·혈구의 대응을 정확히 읽기 어려워 확신이 부족하다.",
+      "abstain_reason": "uncertain"
+    },
+    "2027-p4-life_science1-q09": {
+      "question_id": "2027-p4-life_science1-q09",
+      "decision": "answered",
+      "answer": 5,
+      "explanation": "A 자극 후 심장 박동이 증가하므로 A는 교감 신경이고 ㉠은 노르에피네프린이다. 교감 신경의 신경절 이전 뉴런은 이후 뉴런보다 짧다.",
+      "abstain_reason": null
+    },
+    "2027-p4-life_science1-q10": {
+      "question_id": "2027-p4-life_science1-q10",
+      "decision": "answered",
+      "answer": 5,
+      "explanation": "I은 포도당을 글리코겐으로 합성하는 동화 작용이고, II는 글리코겐 분해이며 글루카곤이 이를 촉진한다. 세포 호흡에서는 에너지가 방출된다.",
+      "abstain_reason": null
+    },
+    "2027-p4-life_science1-q11": {
+      "question_id": "2027-p4-life_science1-q11",
+      "decision": "abstained",
+      "answer": null,
+      "explanation": "호르몬 농도 그래프와 A·B의 원인을 연결하는 해석에 확신이 부족하다.",
+      "abstain_reason": "uncertain"
+    },
+    "2027-p4-life_science1-q12": {
+      "question_id": "2027-p4-life_science1-q12",
+      "decision": "abstained",
+      "answer": null,
+      "explanation": "세포별 염색체 수와 성염색체 구성을 정확히 판별하기 어려워 확신이 부족하다.",
+      "abstain_reason": "uncertain"
+    },
+    "2027-p4-life_science1-q13": {
+      "question_id": "2027-p4-life_science1-q13",
+      "decision": "abstained",
+      "answer": null,
+      "explanation": "신경 흥분 전도 자료의 막전위 값과 지점 대응을 해석하기 어렵다.",
+      "abstain_reason": "uncertain"
+    },
+    "2027-p4-life_science1-q14": {
+      "question_id": "2027-p4-life_science1-q14",
+      "decision": "abstained",
+      "answer": null,
+      "explanation": "우점종 판정에 필요한 상대 밀도·빈도·피도 값을 정확히 읽기 어려워 확신이 부족하다.",
+      "abstain_reason": "uncertain"
+    },
+    "2027-p4-life_science1-q15": {
+      "question_id": "2027-p4-life_science1-q15",
+      "decision": "abstained",
+      "answer": null,
+      "explanation": "근육 원섬유 마디의 구간 길이와 수축 시점의 대응을 확실히 판단하기 어렵다.",
+      "abstain_reason": "uncertain"
+    },
+    "2027-p4-life_science1-q16": {
+      "question_id": "2027-p4-life_science1-q16",
+      "decision": "abstained",
+      "answer": null,
+      "explanation": "복잡한 유전자형과 DNA 상대량 자료를 정확히 해석하기 어려워 확신이 부족하다.",
+      "abstain_reason": "uncertain"
+    },
+    "2027-p4-life_science1-q17": {
+      "question_id": "2027-p4-life_science1-q17",
+      "decision": "abstained",
+      "answer": null,
+      "explanation": "가계 유전 표와 염색체 비분리 조건을 종합적으로 해석하기 어렵다.",
+      "abstain_reason": "uncertain"
+    },
+    "2027-p4-life_science1-q18": {
+      "question_id": "2027-p4-life_science1-q18",
+      "decision": "abstained",
+      "answer": null,
+      "explanation": "다인자 유전 확률 계산에 필요한 조건을 확실히 정리하기 어렵다.",
+      "abstain_reason": "uncertain"
+    },
+    "2027-p4-life_science1-q19": {
+      "question_id": "2027-p4-life_science1-q19",
+      "decision": "abstained",
+      "answer": null,
+      "explanation": "가계도와 X 염색체 유전 조건을 종합적으로 해석하기 어려워 확신이 부족하다.",
+      "abstain_reason": "uncertain"
+    },
+    "2027-p4-life_science1-q20": {
+      "question_id": "2027-p4-life_science1-q20",
+      "decision": "answered",
+      "answer": 4,
+      "explanation": "생물 다양성은 유전적·종·생태계 다양성으로 구분되고, ㉡은 유전적 다양성을 뜻한다. ㉠은 멸종 위기 종의 예라고 보기 어렵다.",
+      "abstain_reason": null
+    },
+    "2027-p4-ethics_thought-q01": {
+      "question_id": "2027-p4-ethics_thought-q01",
+      "decision": "answered",
+      "answer": 2,
+      "explanation": "대화의 핵심은 일심과 화쟁(和諍)으로, 원효의 논리적 갈등 극복 노력에 해당한다.",
+      "abstain_reason": null
+    },
+    "2027-p4-ethics_thought-q02": {
+      "question_id": "2027-p4-ethics_thought-q02",
+      "decision": "answered",
+      "answer": 3,
+      "explanation": "갑은 아우구스티누스, 을은 토마스 아퀴나스로 볼 수 있다. 아퀴나스는 은총이 신으로부터 주입되어 초자연적 행복을 지향하게 한다고 본다.",
+      "abstain_reason": null
+    },
+    "2027-p4-ethics_thought-q03": {
+      "question_id": "2027-p4-ethics_thought-q03",
+      "decision": "answered",
+      "answer": 1,
+      "explanation": "갑은 노자이다. 도의 무위이무불위(無爲而無不爲), 즉 애써 작위하지 않으면서도 모든 일을 이루는 성격을 표현한 ①이 적절하다.",
+      "abstain_reason": null
+    },
+    "2027-p4-ethics_thought-q04": {
+      "question_id": "2027-p4-ethics_thought-q04",
+      "decision": "answered",
+      "answer": 5,
+      "explanation": "갑은 스토아학파, 을은 에피쿠로스이다. 양자는 자연 본성에 대한 탐구가 참된 행복과 마음의 평정에 필요하다고 본다.",
+      "abstain_reason": null
+    },
+    "2027-p4-ethics_thought-q05": {
+      "question_id": "2027-p4-ethics_thought-q05",
+      "decision": "answered",
+      "answer": 5,
+      "explanation": "갑은 키르케고르, 을은 사르트르이다. 두 사상가 모두 자유로운 존재로서 인간이 불안이라는 실존적 감정을 겪는다고 본다.",
+      "abstain_reason": null
+    },
+    "2027-p4-ethics_thought-q06": {
+      "question_id": "2027-p4-ethics_thought-q06",
+      "decision": "abstained",
+      "answer": null,
+      "explanation": "제시문과 선택지의 세부 표현을 충분히 확신할 수 없어 기권한다.",
+      "abstain_reason": "uncertain"
+    },
+    "2027-p4-ethics_thought-q07": {
+      "question_id": "2027-p4-ethics_thought-q07",
+      "decision": "abstained",
+      "answer": null,
+      "explanation": "도식의 A~C 위치와 질문의 대응을 확신하기 어려워 기권한다.",
+      "abstain_reason": "uncertain"
+    },
+    "2027-p4-ethics_thought-q08": {
+      "question_id": "2027-p4-ethics_thought-q08",
+      "decision": "answered",
+      "answer": 1,
+      "explanation": "갑은 왕양명으로, 지행합일을 주장하여 지와 행에 선후는 있어도 분별은 없다고 본다.",
+      "abstain_reason": null
+    },
+    "2027-p4-ethics_thought-q09": {
+      "question_id": "2027-p4-ethics_thought-q09",
+      "decision": "answered",
+      "answer": 4,
+      "explanation": "을은 동학의 인내천 사상에 해당한다. 인간이 한울을 모시는 존재임을 깨닫게 하는 것이 핵심이다.",
+      "abstain_reason": null
+    },
+    "2027-p4-ethics_thought-q10": {
+      "question_id": "2027-p4-ethics_thought-q10",
+      "decision": "answered",
+      "answer": 2,
+      "explanation": "제시문은 칸트의 의무 개념이다. 칸트는 도덕 법칙 아래의 의지와 자유 의지가 동일하다고 본다.",
+      "abstain_reason": null
+    },
+    "2027-p4-ethics_thought-q11": {
+      "question_id": "2027-p4-ethics_thought-q11",
+      "decision": "answered",
+      "answer": 4,
+      "explanation": "갑은 맹자, 을은 순자이다. ㄴ은 맹자의 덕치에, ㄹ은 양자에게 공통된 교화의 필요에 해당한다.",
+      "abstain_reason": null
+    },
+    "2027-p4-ethics_thought-q12": {
+      "question_id": "2027-p4-ethics_thought-q12",
+      "decision": "abstained",
+      "answer": null,
+      "explanation": "사단칠정 논변의 세부 선택지 내용을 충분히 확신할 수 없어 기권한다.",
+      "abstain_reason": "uncertain"
+    },
+    "2027-p4-ethics_thought-q13": {
+      "question_id": "2027-p4-ethics_thought-q13",
+      "decision": "answered",
+      "answer": 3,
+      "explanation": "갑은 홉스, 을은 로크이다. 홉스의 주권적 강제와 로크의 자연권 보호를 위한 신탁을 결합한 ㄴ, ㄷ이 적절하다.",
+      "abstain_reason": null
+    },
+    "2027-p4-ethics_thought-q14": {
+      "question_id": "2027-p4-ethics_thought-q14",
+      "decision": "answered",
+      "answer": 4,
+      "explanation": "을은 지눌이다. 지눌은 정혜쌍수를 주장하여 선정과 지혜 중 어느 한쪽에 치우치지 않는 수행을 강조한다.",
+      "abstain_reason": null
+    },
+    "2027-p4-ethics_thought-q15": {
+      "question_id": "2027-p4-ethics_thought-q15",
+      "decision": "answered",
+      "answer": 1,
+      "explanation": "제시문은 소크라테스의 덕즉지식설이다. 악덕이 무지에서 비롯된다는 ①이 이에 부합한다.",
+      "abstain_reason": null
+    },
+    "2027-p4-ethics_thought-q16": {
+      "question_id": "2027-p4-ethics_thought-q16",
+      "decision": "answered",
+      "answer": 1,
+      "explanation": "마키아벨리적 공화주의는 공공선과 시민적 덕성을 중시하며, 정치 참여를 자유 유지를 위한 수단으로 본다.",
+      "abstain_reason": null
+    },
+    "2027-p4-ethics_thought-q17": {
+      "question_id": "2027-p4-ethics_thought-q17",
+      "decision": "abstained",
+      "answer": null,
+      "explanation": "아리스토텔레스 행복론에 대한 선택지의 세부 진위를 충분히 확신할 수 없어 기권한다.",
+      "abstain_reason": "uncertain"
+    },
+    "2027-p4-ethics_thought-q18": {
+      "question_id": "2027-p4-ethics_thought-q18",
+      "decision": "answered",
+      "answer": 4,
+      "explanation": "을은 밀이다. 공리주의는 자기 행복과 타인의 행복을 차별 없이 동등하게 고려해야 한다고 본다.",
+      "abstain_reason": null
+    },
+    "2027-p4-ethics_thought-q19": {
+      "question_id": "2027-p4-ethics_thought-q19",
+      "decision": "answered",
+      "answer": 4,
+      "explanation": "강연자는 하버마스로, 이상적 담론 상황과 보편적 합의를 중시한다. 따라서 법 규범의 정당성은 모든 시민의 토론에 의해 결정된다.",
+      "abstain_reason": null
+    },
+    "2027-p4-ethics_thought-q20": {
+      "question_id": "2027-p4-ethics_thought-q20",
+      "decision": "answered",
+      "answer": 1,
+      "explanation": "갑은 개인의 자유를 중시하는 최소 정부론자이다. 개인 권리 보호라는 한정된 기능 수행을 위한 강제는 허용된다.",
+      "abstain_reason": null
+    },
+    "2027-p4-korean_geography-q01": {
+      "question_id": "2027-p4-korean_geography-q01",
+      "decision": "abstained",
+      "answer": null,
+      "explanation": "섬의 좌표와 표의 답안을 모두 확정하기 어려워 기권합니다.",
+      "abstain_reason": "uncertain"
+    },
+    "2027-p4-korean_geography-q02": {
+      "question_id": "2027-p4-korean_geography-q02",
+      "decision": "answered",
+      "answer": 3,
+      "explanation": "오호츠크해 기단 확장과 관련된 높새바람 현상으로, 영서 지방의 가뭄 피해를 설명한다. (나)는 홍천, (가)는 강릉이므로 ㄹ은 옳지 않다.",
+      "abstain_reason": null
+    },
+    "2027-p4-korean_geography-q03": {
+      "question_id": "2027-p4-korean_geography-q03",
+      "decision": "abstained",
+      "answer": null,
+      "explanation": "지형 사진과 ①~⑤ 설명을 정확히 대응하기 어려워 기권합니다.",
+      "abstain_reason": "uncertain"
+    },
+    "2027-p4-korean_geography-q04": {
+      "question_id": "2027-p4-korean_geography-q04",
+      "decision": "answered",
+      "answer": 4,
+      "explanation": "(라)는 용암이 물과 만나 급격히 냉각되며 형성된 주상절리대로 설명할 수 있다.",
+      "abstain_reason": null
+    },
+    "2027-p4-korean_geography-q05": {
+      "question_id": "2027-p4-korean_geography-q05",
+      "decision": "abstained",
+      "answer": null,
+      "explanation": "그래프와 지역군 대응을 확신하기 어려워 기권합니다.",
+      "abstain_reason": "uncertain"
+    },
+    "2027-p4-korean_geography-q06": {
+      "question_id": "2027-p4-korean_geography-q06",
+      "decision": "abstained",
+      "answer": null,
+      "explanation": "제시문의 지역·작물 대응이 불확실하여 기권합니다.",
+      "abstain_reason": "uncertain"
+    },
+    "2027-p4-korean_geography-q07": {
+      "question_id": "2027-p4-korean_geography-q07",
+      "decision": "answered",
+      "answer": 4,
+      "explanation": "ㄱ은 조력, ㄹ은 수력 발전이며 국내 발전량 비중은 수력이 조력보다 크다.",
+      "abstain_reason": null
+    },
+    "2027-p4-korean_geography-q08": {
+      "question_id": "2027-p4-korean_geography-q08",
+      "decision": "abstained",
+      "answer": null,
+      "explanation": "두 고속국도의 노선과 지도상 경유지를 확정하기 어려워 기권합니다.",
+      "abstain_reason": "uncertain"
+    },
+    "2027-p4-korean_geography-q09": {
+      "question_id": "2027-p4-korean_geography-q09",
+      "decision": "answered",
+      "answer": 3,
+      "explanation": "석유 정제품은 여수·광양권, 철강은 포항, 차량 및 부품은 울산의 주종 화물로 대응된다.",
+      "abstain_reason": null
+    },
+    "2027-p4-korean_geography-q10": {
+      "question_id": "2027-p4-korean_geography-q10",
+      "decision": "answered",
+      "answer": 2,
+      "explanation": "배점과 가중치를 적용하면 후보지 A의 점수가 가장 높고, 지도상 A는 당진에 해당한다.",
+      "abstain_reason": null
+    },
+    "2027-p4-korean_geography-q11": {
+      "question_id": "2027-p4-korean_geography-q11",
+      "decision": "abstained",
+      "answer": null,
+      "explanation": "지도 지역과 질문의 대응을 확신하기 어려워 기권합니다.",
+      "abstain_reason": "uncertain"
+    },
+    "2027-p4-korean_geography-q12": {
+      "question_id": "2027-p4-korean_geography-q12",
+      "decision": "abstained",
+      "answer": null,
+      "explanation": "이동 경로와 (가)~(다) 지역을 정확히 연결하기 어려워 기권합니다.",
+      "abstain_reason": "uncertain"
+    },
+    "2027-p4-korean_geography-q13": {
+      "question_id": "2027-p4-korean_geography-q13",
+      "decision": "abstained",
+      "answer": null,
+      "explanation": "기상 특보의 종류와 보기 내용을 확정하기 어려워 기권합니다.",
+      "abstain_reason": "uncertain"
+    },
+    "2027-p4-korean_geography-q14": {
+      "question_id": "2027-p4-korean_geography-q14",
+      "decision": "abstained",
+      "answer": null,
+      "explanation": "축제와 지형 사진의 대응이 불확실하여 기권합니다.",
+      "abstain_reason": "uncertain"
+    },
+    "2027-p4-korean_geography-q15": {
+      "question_id": "2027-p4-korean_geography-q15",
+      "decision": "abstained",
+      "answer": null,
+      "explanation": "기후 그래프와 지도상 지역 대응을 확신하기 어려워 기권합니다.",
+      "abstain_reason": "uncertain"
+    },
+    "2027-p4-korean_geography-q16": {
+      "question_id": "2027-p4-korean_geography-q16",
+      "decision": "abstained",
+      "answer": null,
+      "explanation": "기사 내용과 지역 지표의 대응이 불확실하여 기권합니다.",
+      "abstain_reason": "uncertain"
+    },
+    "2027-p4-korean_geography-q17": {
+      "question_id": "2027-p4-korean_geography-q17",
+      "decision": "abstained",
+      "answer": null,
+      "explanation": "지역 설명과 지도상 A~D 대응을 확정하기 어려워 기권합니다.",
+      "abstain_reason": "uncertain"
+    },
+    "2027-p4-korean_geography-q18": {
+      "question_id": "2027-p4-korean_geography-q18",
+      "decision": "abstained",
+      "answer": null,
+      "explanation": "하천 지형 비교 그래프의 축과 지역 대응이 불확실하여 기권합니다.",
+      "abstain_reason": "uncertain"
+    },
+    "2027-p4-korean_geography-q19": {
+      "question_id": "2027-p4-korean_geography-q19",
+      "decision": "abstained",
+      "answer": null,
+      "explanation": "인구 그래프와 권역 대응을 확신하기 어려워 기권합니다.",
+      "abstain_reason": "uncertain"
+    },
+    "2027-p4-korean_geography-q20": {
+      "question_id": "2027-p4-korean_geography-q20",
+      "decision": "abstained",
+      "answer": null,
+      "explanation": "㉠~㉣의 정확한 지칭과 보기 판단을 확신하기 어려워 기권합니다.",
+      "abstain_reason": "uncertain"
+    }
+  },
+  "errors": {},
+  "groups": {
+    "2027-p4-ethics_thought": {
+      "attempts": [
+        {
+          "iteration": 1,
+          "started_at": "2026-11-25T05:49:39.643Z",
+          "question_ids": [
+            "2027-p4-ethics_thought-q01",
+            "2027-p4-ethics_thought-q02",
+            "2027-p4-ethics_thought-q03",
+            "2027-p4-ethics_thought-q04",
+            "2027-p4-ethics_thought-q05",
+            "2027-p4-ethics_thought-q06",
+            "2027-p4-ethics_thought-q07",
+            "2027-p4-ethics_thought-q08",
+            "2027-p4-ethics_thought-q09",
+            "2027-p4-ethics_thought-q10",
+            "2027-p4-ethics_thought-q11",
+            "2027-p4-ethics_thought-q12",
+            "2027-p4-ethics_thought-q13",
+            "2027-p4-ethics_thought-q14",
+            "2027-p4-ethics_thought-q15",
+            "2027-p4-ethics_thought-q16",
+            "2027-p4-ethics_thought-q17",
+            "2027-p4-ethics_thought-q18",
+            "2027-p4-ethics_thought-q19",
+            "2027-p4-ethics_thought-q20"
+          ],
+          "usage": {
+            "input_tokens": 5756,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 54056,
+            "reasoning_output_tokens": 52562
+          },
+          "time_seconds": 508.389,
+          "status": "completed",
+          "estimated_cost_usd": 0.066594,
+          "finished_at": "2026-11-25T05:58:08.032Z"
+        }
+      ]
+    },
+    "2027-p4-korean_geography": {
+      "attempts": [
+        {
+          "iteration": 1,
+          "started_at": "2026-11-25T05:49:39.654Z",
+          "question_ids": [
+            "2027-p4-korean_geography-q01",
+            "2027-p4-korean_geography-q02",
+            "2027-p4-korean_geography-q03",
+            "2027-p4-korean_geography-q04",
+            "2027-p4-korean_geography-q05",
+            "2027-p4-korean_geography-q06",
+            "2027-p4-korean_geography-q07",
+            "2027-p4-korean_geography-q08",
+            "2027-p4-korean_geography-q09",
+            "2027-p4-korean_geography-q10",
+            "2027-p4-korean_geography-q11",
+            "2027-p4-korean_geography-q12",
+            "2027-p4-korean_geography-q13",
+            "2027-p4-korean_geography-q14",
+            "2027-p4-korean_geography-q15",
+            "2027-p4-korean_geography-q16",
+            "2027-p4-korean_geography-q17",
+            "2027-p4-korean_geography-q18",
+            "2027-p4-korean_geography-q19",
+            "2027-p4-korean_geography-q20"
+          ],
+          "usage": {
+            "input_tokens": 5808,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 50356,
+            "reasoning_output_tokens": 49064
+          },
+          "time_seconds": 282.916,
+          "status": "completed",
+          "estimated_cost_usd": 0.0621696,
+          "finished_at": "2026-11-25T05:54:22.570Z"
+        }
+      ]
+    },
+    "2027-p4-politics_law": {
+      "attempts": [
+        {
+          "iteration": 1,
+          "started_at": "2026-11-25T05:58:08.045Z",
+          "question_ids": [
+            "2027-p4-politics_law-q01",
+            "2027-p4-politics_law-q02",
+            "2027-p4-politics_law-q03",
+            "2027-p4-politics_law-q04",
+            "2027-p4-politics_law-q05",
+            "2027-p4-politics_law-q06",
+            "2027-p4-politics_law-q07",
+            "2027-p4-politics_law-q08",
+            "2027-p4-politics_law-q09",
+            "2027-p4-politics_law-q10",
+            "2027-p4-politics_law-q11",
+            "2027-p4-politics_law-q12",
+            "2027-p4-politics_law-q13",
+            "2027-p4-politics_law-q14",
+            "2027-p4-politics_law-q15",
+            "2027-p4-politics_law-q16",
+            "2027-p4-politics_law-q17",
+            "2027-p4-politics_law-q18",
+            "2027-p4-politics_law-q19",
+            "2027-p4-politics_law-q20"
+          ],
+          "usage": {
+            "input_tokens": 5764,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 56496,
+            "reasoning_output_tokens": 55071
+          },
+          "time_seconds": 321.742,
+          "status": "completed",
+          "estimated_cost_usd": 0.0695244,
+          "finished_at": "2026-11-25T06:03:29.787Z"
+        }
+      ]
+    },
+    "2027-p4-life_science1": {
+      "attempts": [
+        {
+          "iteration": 1,
+          "started_at": "2026-11-25T05:58:08.056Z",
+          "question_ids": [
+            "2027-p4-life_science1-q01",
+            "2027-p4-life_science1-q02",
+            "2027-p4-life_science1-q03",
+            "2027-p4-life_science1-q04",
+            "2027-p4-life_science1-q05",
+            "2027-p4-life_science1-q06",
+            "2027-p4-life_science1-q07",
+            "2027-p4-life_science1-q08",
+            "2027-p4-life_science1-q09",
+            "2027-p4-life_science1-q10",
+            "2027-p4-life_science1-q11",
+            "2027-p4-life_science1-q12",
+            "2027-p4-life_science1-q13",
+            "2027-p4-life_science1-q14",
+            "2027-p4-life_science1-q15",
+            "2027-p4-life_science1-q16",
+            "2027-p4-life_science1-q17",
+            "2027-p4-life_science1-q18",
+            "2027-p4-life_science1-q19",
+            "2027-p4-life_science1-q20"
+          ],
+          "usage": {
+            "input_tokens": 5762,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 44665,
+            "reasoning_output_tokens": 43173
+          },
+          "time_seconds": 242.204,
+          "status": "completed",
+          "estimated_cost_usd": 0.0553266,
+          "finished_at": "2026-11-25T06:02:10.260Z"
+        }
+      ]
+    }
+  },
+  "usage": {
+    "input_tokens": 23090,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 205573,
+    "reasoning_output_tokens": 199870
+  },
+  "wall_time_seconds": 830.158,
+  "completed": true,
+  "updated_at": "2026-11-25T06:03:29.793Z",
+  "billing": {
+    "method": "pi_api",
+    "api_key_used": true,
+    "user_authorized": true
+  },
+  "finished_at": "2026-11-25T06:03:29.793Z"
+}
